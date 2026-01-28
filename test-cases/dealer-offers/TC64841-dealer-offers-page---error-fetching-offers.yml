@@ -1,0 +1,38 @@
+metadata:
+  id: TC64841
+  name: Dealer Offers Page - Error fetching offers
+  feature: dealer-offers
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2026-01-28'
+  updated: '2026-01-28'
+  author: user_2
+  testmo_id: 64841
+description: This test case should coverOffers and Promotions card navigationError
+  fetching the offers modal
+preconditions:
+- description: The user is already logged in
+- description: The user has a valid vehicle selected
+- description: The user has a preferred dealer
+- description: The user is already in the Home Screen
+- description: The GetDealsByDealerId API should fail
+- description: 'The FF needs to be "EnableDealerOffers": "true"'
+steps:
+- id: 1
+  action: The user taps on the "Offers and Promotions" card
+  expected: The user should be taken to the "Dealer Offers" screen
+- id: 2
+  action: The GetDealsByDealerId API Fails
+  expected: 'Something went wrong modal | Title: Something Went Wrong | Description:
+    Sorry, something went wrong, please try again. | Cancel / Retry buttons'
+- id: 3
+  action: Tap on Retry
+  expected: The GetDealsByDealerId is triggered again
+- id: 4
+  action: Tan on Cancel
+  expected: The User stays on Dealer Offers page

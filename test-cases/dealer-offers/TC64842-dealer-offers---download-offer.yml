@@ -1,0 +1,31 @@
+metadata:
+  id: TC64842
+  name: Dealer Offers - Download Offer
+  feature: dealer-offers
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2026-01-28'
+  updated: '2026-01-28'
+  author: user_2
+  testmo_id: 64842
+description: This test case should coverDownloading an offer
+preconditions:
+- description: The user already selected one offer from the list
+- description: 'The FF needs to be "EnableDealerOffers": "true"'
+steps:
+- id: 1
+  action: The user selects one offer from the List
+  expected: The user should see the Offer Details screen
+- id: 2
+  action: The user clicks Download Offer link(blue color)
+  expected: The OS pop-up will show to give permissions to storage images in the phone
+    | The toast shows saying the image was saved correctlyImaged saved in the phone
+    | The offer was saved correctly in the phone storage
+- id: 3
+  action: The user opens the offer downloaded
+  expected: The details of the offer should display correctly

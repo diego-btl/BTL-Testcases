@@ -1,0 +1,26 @@
+metadata:
+  id: TC64837
+  name: Dealer Offers Page - No Preferred Dealer
+  feature: dealer-offers
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2026-01-28'
+  updated: '2026-01-28'
+  author: user_2
+  testmo_id: 64837
+description: This test case should cover:Offers and Promotions card navigation
+preconditions:
+- description: The user has a valid vehicle selected
+- description: The uses doesn't have a preferred dealer selected
+- description: The user is already in the Home Screen
+- description: 'The FF needs to be "EnableDealerOffers": "true"'
+steps:
+- id: 1
+  action: The user taps on the Offers and Promotions card
+  expected: The user should be taken to the empty Preferred Dealer page (Same as Vehicle
+    > Vehicle Profile > My Dealer)Preferred dealer not selected - Search Dealers

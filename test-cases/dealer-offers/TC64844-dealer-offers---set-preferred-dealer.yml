@@ -1,0 +1,29 @@
+metadata:
+  id: TC64844
+  name: Dealer Offers - Set Preferred dealer
+  feature: dealer-offers
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2026-01-28'
+  updated: '2026-01-28'
+  author: user_2
+  testmo_id: 64844
+description: This test case should coverSet Preferred dealer
+preconditions:
+- description: The user is on the Dealer Offers screen
+- description: 'The FF needs to be "EnableDealerOffers": "true"'
+steps:
+- id: 1
+  action: Tap on Search Dealers -> Enter a ZIP code - 37067 -> Select a result from
+    the list -> Click DONE(in iOS) -> Select Set as My Dealer
+  expected: If you have enable Sharing Data a pop-up should show to disable before
+    setting a dealer | If you have disable Sharing Data the dealer selected should
+    be the new one set | Toast message should be showing:New dealer set as default
+- id: 2
+  action: Wait 3 seconds after toast message appears
+  expected: Toast message auto-dismisses and user remains on dealer details screen
