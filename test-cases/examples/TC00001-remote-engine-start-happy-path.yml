@@ -1,0 +1,91 @@
+metadata:
+  id: TC00001
+  name: "Remote Engine Start - Happy Path"
+  feature: remote_services
+  priority: high
+  platforms:
+    - iOS
+    - Android
+  regions:
+    - USA
+    - Canada
+    - Mexico
+    - Brazil
+  tags:
+    - smoke
+    - critical-path
+    - telematics
+  created: 2024-01-15
+  updated: 2025-01-28
+  author: diego.garcia
+  testmo_id: null
+
+preconditions:
+  - description: "Vehicle enrolled and connected to telematics"
+    automation_id: "setup_enrolled_vehicle"
+  - description: "User authenticated with biometric"
+  - description: "Vehicle is in park with engine off"
+
+steps:
+  - id: 1
+    action: "Navigate to vehicle dashboard from home screen"
+    expected: "Dashboard loads showing vehicle status and available remote services"
+    element:
+      id: "vehicle_dashboard"
+      ios_identifier: "VehicleDashboardView"
+      android_identifier: "com.nissan.connect:id/vehicle_dashboard"
+      figma_link: "https://figma.com/file/ABC123"
+
+  - id: 2
+    action: "Tap 'Remote Start' button in the quick actions section"
+    expected: "Confirmation modal appears with climate settings and estimated start time"
+    element:
+      ios_identifier: "RemoteStartButton"
+      android_identifier: "btn_remote_start"
+    api_call:
+      mutation: "initiateRemoteStart"
+
+  - id: 3
+    action: "Review climate settings (default: 72°F) and tap 'Confirm'"
+    expected: "Success message displays within 3 seconds, button shows 'Starting...' state"
+
+  - id: 4
+    action: "Wait for vehicle confirmation"
+    expected: "Vehicle starts within 30 seconds, dashboard updates to show 'Engine Running' status"
+    timeout: 30s
+
+  - id: 5
+    action: "Verify push notification received"
+    expected: "Push notification shows 'Your Nissan has started' with current climate temperature"
+
+regional_variations:
+  Mexico:
+    - step: 3
+      note: "Temperature displayed in Celsius (default: 22°C)"
+  Brazil:
+    - step: 2
+      note: "Button text: 'Iniciar Remotamente'"
+    - step: 3
+      note: "Temperature in Celsius, confirmation text in Portuguese"
+
+automation:
+  framework: maestro
+  test_file: "tests/remote-services/remote-start-happy-path.yaml"
+  coverage: partial
+  notes: "Steps 1-3 automated. Steps 4-5 require manual verification of vehicle state and push notifications"
+
+traceability:
+  clickup_task: "https://app.clickup.com/t/86c7zvhwg"
+  user_story: "ONEAPP-1234"
+  figma_link: "https://figma.com/file/ABC123/Remote-Services"
+
+change_log:
+  - date: 2025-01-28
+    author: diego.garcia
+    change: "Added push notification verification step and regional variations for Brazil"
+  - date: 2024-12-20
+    author: diego.garcia
+    change: "Added Mexico regional temperature variation"
+  - date: 2024-01-15
+    author: diego.garcia
+    change: "Initial test case creation"

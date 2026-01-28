@@ -1,0 +1,109 @@
+name: Export from Testmo
+
+on:
+  workflow_dispatch:
+    inputs:
+      project_id:
+        description: 'Testmo Project ID'
+        required: true
+        default: '1'
+        type: string
+      folder_id:
+        description: 'Folder ID to export (optional)'
+        required: false
+        type: string
+      feature:
+        description: 'Feature name for categorization'
+        required: true
+        default: 'general'
+        type: string
+      limit:
+        description: 'Limit number of cases (for testing)'
+        required: false
+        type: string
+      create_pr:
+        description: 'Create a Pull Request with exported cases'
+        required: false
+        default: 'true'
+        type: boolean
+
+env:
+  TESTMO_URL: https://bethinklabs.testmo.net
+
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Export from Testmo
+        env:
+          TESTMO_API_KEY: ${{ secrets.TESTMO_API_KEY }}
+        run: |
+          FOLDER_FLAG=""
+          LIMIT_FLAG=""
+
+          if [[ -n "${{ github.event.inputs.folder_id }}" ]]; then
+            FOLDER_FLAG="--folder-id ${{ github.event.inputs.folder_id }}"
+          fi
+
+          if [[ -n "${{ github.event.inputs.limit }}" ]]; then
+            LIMIT_FLAG="--limit ${{ github.event.inputs.limit }}"
+          fi
+
+          python scripts/testmo_export.py \
+            --project-id ${{ github.event.inputs.project_id }} \
+            --feature ${{ github.event.inputs.feature }} \
+            $FOLDER_FLAG \
+            $LIMIT_FLAG
+
+      - name: Validate exported cases
+        run: python scripts/validate_yaml.py --format summary
+
+      - name: Create Pull Request
+        if: github.event.inputs.create_pr == 'true'
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "feat: Export test cases from Testmo (${{ github.event.inputs.feature }})"
+          title: "Import: Test cases from Testmo - ${{ github.event.inputs.feature }}"
+          body: |
+            ## Automated Export from Testmo
+
+            This PR contains test cases exported from Testmo.
+
+            **Details:**
+            - Project ID: ${{ github.event.inputs.project_id }}
+            - Feature: ${{ github.event.inputs.feature }}
+            - Folder ID: ${{ github.event.inputs.folder_id || 'All' }}
+
+            Please review the exported test cases before merging.
+          branch: testmo-export/${{ github.event.inputs.feature }}-${{ github.run_number }}
+          base: main
+          labels: |
+            testmo-export
+            automated
+
+      - name: Summary
+        run: |
+          echo "## Testmo Export Complete" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "- **Project ID:** ${{ github.event.inputs.project_id }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Feature:** ${{ github.event.inputs.feature }}" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### Exported Files" >> $GITHUB_STEP_SUMMARY
+          find test-cases -name "*.yml" -newer .git 2>/dev/null | head -20 >> $GITHUB_STEP_SUMMARY || echo "No new files" >> $GITHUB_STEP_SUMMARY

@@ -1,0 +1,263 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://bethinklabs.com/schemas/test-case.schema.json",
+  "title": "Test Case",
+  "description": "Schema for Git-first test case management YAML files",
+  "type": "object",
+  "required": ["metadata", "steps"],
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "required": ["id", "name", "feature", "priority", "platforms", "regions"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^TC[0-9]{5}$",
+          "description": "Unique test case ID (e.g., TC00001)"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 5,
+          "maxLength": 200,
+          "description": "Descriptive test case name"
+        },
+        "feature": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Feature category (e.g., remote_services, authentication)"
+        },
+        "priority": {
+          "type": "string",
+          "enum": ["critical", "high", "medium", "low"],
+          "description": "Test case priority level"
+        },
+        "platforms": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["iOS", "Android"]
+          },
+          "minItems": 1,
+          "uniqueItems": true,
+          "description": "Target platforms"
+        },
+        "regions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["USA", "Canada", "Mexico", "Brazil"]
+          },
+          "minItems": 1,
+          "uniqueItems": true,
+          "description": "Target regions"
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "description": "Tags for categorization (e.g., smoke, regression)"
+        },
+        "created": {
+          "type": "string",
+          "format": "date",
+          "description": "Creation date (YYYY-MM-DD)"
+        },
+        "updated": {
+          "type": "string",
+          "format": "date",
+          "description": "Last update date (YYYY-MM-DD)"
+        },
+        "author": {
+          "type": "string",
+          "description": "Author username"
+        },
+        "testmo_id": {
+          "type": ["integer", "null"],
+          "description": "Testmo case ID (auto-populated after sync)"
+        }
+      }
+    },
+    "preconditions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["description"],
+        "properties": {
+          "description": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Precondition description"
+          },
+          "automation_id": {
+            "type": "string",
+            "description": "Reference to automation setup function"
+          }
+        }
+      },
+      "description": "List of preconditions"
+    },
+    "steps": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "action", "expected"],
+        "properties": {
+          "id": {
+            "type": "integer",
+            "minimum": 1,
+            "description": "Step number"
+          },
+          "action": {
+            "type": "string",
+            "minLength": 5,
+            "description": "Action to perform"
+          },
+          "expected": {
+            "type": "string",
+            "minLength": 5,
+            "description": "Expected result"
+          },
+          "element": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "description": "Generic element ID"
+              },
+              "ios_identifier": {
+                "type": "string",
+                "description": "iOS accessibility identifier"
+              },
+              "android_identifier": {
+                "type": "string",
+                "description": "Android resource ID"
+              },
+              "figma_link": {
+                "type": "string",
+                "format": "uri",
+                "description": "Link to Figma design"
+              }
+            },
+            "description": "UI element information"
+          },
+          "api_call": {
+            "type": "object",
+            "properties": {
+              "mutation": {
+                "type": "string",
+                "description": "GraphQL mutation name"
+              },
+              "query": {
+                "type": "string",
+                "description": "GraphQL query name"
+              }
+            },
+            "description": "API call information"
+          },
+          "timeout": {
+            "type": "string",
+            "pattern": "^[0-9]+(s|m|ms)$",
+            "description": "Timeout value (e.g., 30s, 5m, 500ms)"
+          }
+        }
+      },
+      "description": "Test steps"
+    },
+    "regional_variations": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": ["step", "note"],
+          "properties": {
+            "step": {
+              "type": "integer",
+              "minimum": 1,
+              "description": "Step number with variation"
+            },
+            "note": {
+              "type": "string",
+              "description": "Description of the variation"
+            }
+          }
+        }
+      },
+      "description": "Regional differences by region name"
+    },
+    "automation": {
+      "type": "object",
+      "properties": {
+        "framework": {
+          "type": "string",
+          "enum": ["maestro", "restassured", "pytest", "xctest", "espresso", "appium"],
+          "description": "Automation framework"
+        },
+        "test_file": {
+          "type": "string",
+          "description": "Path to automation test file"
+        },
+        "coverage": {
+          "type": "string",
+          "enum": ["full", "partial", "none"],
+          "description": "Automation coverage level"
+        },
+        "notes": {
+          "type": "string",
+          "description": "Additional automation notes"
+        }
+      },
+      "description": "Automation information"
+    },
+    "traceability": {
+      "type": "object",
+      "properties": {
+        "clickup_task": {
+          "type": "string",
+          "format": "uri",
+          "description": "ClickUp task URL"
+        },
+        "user_story": {
+          "type": "string",
+          "description": "User story reference"
+        },
+        "figma_link": {
+          "type": "string",
+          "format": "uri",
+          "description": "Figma design link"
+        },
+        "jira_ticket": {
+          "type": "string",
+          "description": "JIRA ticket reference"
+        }
+      },
+      "description": "Traceability links"
+    },
+    "change_log": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["date", "author", "change"],
+        "properties": {
+          "date": {
+            "type": "string",
+            "format": "date",
+            "description": "Change date"
+          },
+          "author": {
+            "type": "string",
+            "description": "Author of the change"
+          },
+          "change": {
+            "type": "string",
+            "description": "Description of the change"
+          }
+        }
+      },
+      "description": "Change history"
+    }
+  }
+}

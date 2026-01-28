@@ -1,0 +1,32 @@
+metadata:
+  id: TC28574
+  name: Dealer Offers Page - Preferred Dealer Selected
+  feature: dealer-offers
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2024-11-30'
+  updated: '2025-12-19'
+  author: user_2
+  testmo_id: 28574
+description: This test case should coverOffers and Promotions card navigationDealer
+  Offers display
+preconditions:
+- description: The user has a valid vehicle selected
+- description: The user has a preferred dealer selected
+- description: The user has a valid set of dealer offers
+- description: The user is already in the Home Screen
+- description: 'The FF needs to be "EnableDealerOffers": "true"'
+steps:
+- id: 1
+  action: The user taps on the Offers and Promotions card
+  expected: The user should be taken to the Dealer Offers screen
+- id: 2
+  action: Validate the screen
+  expected: The app should display:Preferred dealer section at the top with only the
+    Header, Address, Directions Icon, Call Icon and Languages Spoken | The Dealer
+    Offers section | The offers returned from the middleware

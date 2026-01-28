@@ -1,0 +1,95 @@
+name: Sync to Testmo
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'test-cases/**'
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Dry run (no actual changes)'
+        required: false
+        default: 'false'
+        type: boolean
+      folder_name:
+        description: 'Target folder in Testmo'
+        required: false
+        default: ''
+        type: string
+
+env:
+  TESTMO_URL: https://bethinklabs.testmo.net
+  TESTMO_PROJECT_ID: ${{ vars.TESTMO_PROJECT_ID || '1' }}
+
+jobs:
+  validate-first:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Validate before sync
+        run: python scripts/validate_yaml.py --strict --format summary
+
+  sync:
+    needs: validate-first
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Get changed files
+        id: changed-files
+        uses: tj-actions/changed-files@v44
+        with:
+          files: test-cases/**/*.yml
+
+      - name: Sync to Testmo
+        if: steps.changed-files.outputs.any_changed == 'true' || github.event_name == 'workflow_dispatch'
+        env:
+          TESTMO_API_KEY: ${{ secrets.TESTMO_API_KEY }}
+        run: |
+          DRY_RUN_FLAG=""
+          FOLDER_FLAG=""
+
+          if [[ "${{ github.event.inputs.dry_run }}" == "true" ]]; then
+            DRY_RUN_FLAG="--dry-run"
+          fi
+
+          if [[ -n "${{ github.event.inputs.folder_name }}" ]]; then
+            FOLDER_FLAG="--folder-name '${{ github.event.inputs.folder_name }}'"
+          fi
+
+          python scripts/testmo_import.py \
+            --project-id ${{ env.TESTMO_PROJECT_ID }} \
+            --update-existing \
+            $DRY_RUN_FLAG \
+            $FOLDER_FLAG
+
+      - name: Summary
+        run: |
+          echo "## Testmo Sync Complete" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "- **Project ID:** ${{ env.TESTMO_PROJECT_ID }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Changed Files:** ${{ steps.changed-files.outputs.all_changed_files }}" >> $GITHUB_STEP_SUMMARY

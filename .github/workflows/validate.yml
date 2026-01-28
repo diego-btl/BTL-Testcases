@@ -1,0 +1,39 @@
+name: Validate Test Cases
+
+on:
+  push:
+    paths:
+      - 'test-cases/**'
+      - 'schemas/**'
+  pull_request:
+    paths:
+      - 'test-cases/**'
+      - 'schemas/**'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Validate YAML test cases
+        run: python scripts/validate_yaml.py --strict --format summary
+
+      - name: Upload validation report
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: validation-report
+          path: validation-report.json
+          retention-days: 7
