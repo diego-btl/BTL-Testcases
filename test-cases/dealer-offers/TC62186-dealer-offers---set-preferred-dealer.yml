@@ -24,3 +24,6 @@ steps:
   expected: If you have enable Sharing Data a pop-up should show to disable before
     setting a dealer | If you have disable Sharing Data the dealer selected should
     be the new one set | Toast message should be showing:New dealer set as default
+- id: 2
+  action: Wait 3 seconds after toast message appears
+  expected: Toast message auto-dismisses and user remains on dealer details screen
