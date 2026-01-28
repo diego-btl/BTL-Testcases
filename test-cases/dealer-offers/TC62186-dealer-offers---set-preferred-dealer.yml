@@ -26,4 +26,4 @@ steps:
     be the new one set | Toast message should be showing:New dealer set as default
 - id: 2
   action: Wait 3 seconds after toast message appears
-  expected: Toast message auto-dismisses and user remains on dealer details screen
+  expected: Toast message automatically dismisses and user remains on dealer details screen
