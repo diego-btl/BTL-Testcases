@@ -1,0 +1,30 @@
+metadata:
+  id: TC99999
+  name: Dealer Offers - Call Dealer Phone
+  feature: dealer-offers
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags:
+  - new-test
+  created: '2026-01-28'
+  updated: '2026-01-28'
+  author: user_diego
+  testmo_id: null
+
+description: This test case verifies the phone call functionality from dealer details
+
+preconditions:
+- description: User is on the Dealer Details screen
+- description: Dealer has a valid phone number
+
+steps:
+- id: 1
+  action: Tap on the phone icon next to dealer information
+  expected: System phone dialer opens with dealer's phone number pre-populated
+- id: 2
+  action: Verify phone number format
+  expected: Phone number displays as (XXX) XXX-XXXX format
