@@ -211,6 +211,7 @@ def import_to_testmo(project_id: int, input_dir: Path, folder_name: str, dry_run
         updated = 0
         failed = 0
         skipped = 0
+        files_updated = 0
 
         if update_existing:
             console.print("\n[cyan]UPDATE MODE[/cyan] - Will only update existing cases with testmo_id")
@@ -271,6 +272,8 @@ def import_to_testmo(project_id: int, input_dir: Path, folder_name: str, dry_run
             # CREATE mode - create all cases as new
             console.print("\n[cyan]CREATE MODE[/cyan] - Creating all cases as new\n")
 
+            created_mapping = []  # Track: [(yaml_file_path, testmo_id), ...]
+
             with Progress(
                 SpinnerColumn(),
                 TextColumn("[progress.description]{task.description}"),
@@ -281,6 +284,7 @@ def import_to_testmo(project_id: int, input_dir: Path, folder_name: str, dry_run
                 for case in testmo_cases:
                     try:
                         metadata = case.get("_yaml_metadata", {})
+                        source_file = case.get("_source_file")
 
                         # Remove internal fields before sending to API
                         case.pop("_yaml_metadata", None)
@@ -291,20 +295,55 @@ def import_to_testmo(project_id: int, input_dir: Path, folder_name: str, dry_run
                         result = client.create_case(project_id, case, folder_id)
                         created += 1
 
+                        # Track source file and assigned testmo_id
+                        if result and result.get('id') and source_file:
+                            created_mapping.append((source_file, result['id']))
+
                     except Exception as e:
                         console.print(f"[red]Failed to create {metadata.get('id', 'unknown')}: {e}[/red]")
                         failed += 1
 
                     progress.advance(task)
+
+            # Update YAML files with assigned testmo_ids
+            if created_mapping:
+                console.print("\n[blue]Updating YAML files with testmo_ids...[/blue]")
+
+                for yaml_file, testmo_id in created_mapping:
+                    try:
+                        # Read YAML
+                        with open(yaml_file, 'r') as f:
+                            data = yaml.safe_load(f)
+
+                        # Update testmo_id
+                        if 'metadata' not in data:
+                            data['metadata'] = {}
+                        data['metadata']['testmo_id'] = testmo_id
+
+                        # Write back
+                        with open(yaml_file, 'w') as f:
+                            yaml.dump(data, f, default_flow_style=False, sort_keys=False, allow_unicode=True)
+
+                        files_updated += 1
+                    except Exception as e:
+                        console.print(f"[yellow]Warning: Could not update {yaml_file}: {e}[/yellow]")
+
+                console.print(f"[green]✓[/green] Updated {files_updated} YAML files with testmo_ids")
         
         # Summary
         console.print(f"\n[bold green]Import Complete![/bold green]")
         console.print(f"  Created: {created}")
         console.print(f"  Updated: {updated}")
         console.print(f"  Failed: {failed}")
+        if files_updated > 0:
+            console.print(f"  YAML Files Updated: {files_updated}")
         if update_existing and skipped > 0:
             console.print(f"  Skipped: {skipped} (no testmo_id)")
             console.print(f"\n[yellow]⚠️  Use regular import mode (without --update-existing) to create new cases[/yellow]")
+
+        # Export sync readiness message
+        if files_updated > 0:
+            console.print(f"\n[blue]✓ YAML files updated with testmo_ids - ready for export sync[/blue]")
         
     except Exception as e:
         console.print(f"[bold red]Error:[/bold red] {str(e)}")
