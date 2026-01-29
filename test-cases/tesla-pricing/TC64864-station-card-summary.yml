@@ -1,6 +1,6 @@
 metadata:
   testmo_id: 64864
-  id: TC003
+  id: TC64864
   name: Tesla Pricing - Station Card Pricing Summary
   feature: tesla-pricing
   priority: medium

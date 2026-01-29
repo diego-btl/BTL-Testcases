@@ -1,6 +1,6 @@
 metadata:
   testmo_id: 64862
-  id: TC005
+  id: TC64862
   name: Tesla Pricing - Connector Pricing Time & Dynamic Fees
   feature: tesla-pricing
   priority: high

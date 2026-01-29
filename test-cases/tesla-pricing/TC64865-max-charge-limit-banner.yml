@@ -1,6 +1,6 @@
 metadata:
   testmo_id: 64865
-  id: TC001
+  id: TC64865
   name: Tesla Pricing - Max Charge Limit Warning Banner
   feature: tesla-pricing
   priority: high

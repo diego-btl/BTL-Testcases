@@ -1,6 +1,6 @@
 metadata:
   testmo_id: 64861
-  id: TC004
+  id: TC64861
   name: Tesla Pricing - Connector Pricing Base Fees
   feature: tesla-pricing
   priority: critical
