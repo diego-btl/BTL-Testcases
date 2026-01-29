@@ -1,0 +1,58 @@
+metadata:
+  testmo_id: null
+  id: TC004
+  name: "Tesla Pricing - Connector Pricing Base Fees"
+  feature: tesla-pricing
+  priority: critical
+  state: draft
+  platforms: [iOS, Android]
+  regions: [NNA]
+  tags: []
+  custom_references: "86b848n6q, 86b7uewfy"
+  created_at: "2026-01-29"
+
+description: |
+  Verify that the expanded connector pricing breakdown displays energy fees and session fees correctly, including flat rates, time-of-day pricing, tiered pricing structures, and proper rate unit display for each connector type
+
+preconditions:
+  - description: User is on Charge Station Details screen with expanded connector view
+  - description: Feature flag "EnableTeslaPricing" is enabled
+  - description: Tesla charging station has multiple connectors (CCS, NACS, J1772) with tariffPricing data
+  - description: Station has both energy fees and session fees configured
+
+steps:
+  - id: 1
+    action: View expanded connector pricing breakdown for a connector with flat rate energy pricing
+    expected: Energy fee section displays | Rate shows amount with unit (e.g., "$0.42/kWh" or "$0.15/minute") | "Energy Fee" or similar label is visible | Rate is clearly associated with connector type
+
+  - id: 2
+    action: Review connector with time-of-day pricing structure
+    expected: Multiple energy rates are displayed with time windows | Peak rate shows time range like Peak (2pm-8pm) $0.52/kWh | Off-peak rate shows time range like Off-Peak (8pm-2pm) $0.35/kWh | Current rate is highlighted or indicated | Time windows are clear and non-overlapping
+
+  - id: 3
+    action: Review connector with tiered pricing structure
+    expected: Multiple pricing tiers are displayed | First tier shows threshold like First 50 kWh at $0.40/kWh | Subsequent tier shows remaining pricing like After 50 kWh at $0.50/kWh | Tier structure is clear and properly formatted | Units are consistent
+
+  - id: 4
+    action: View session fee display on connector with energy fees
+    expected: Session fee section displays separately from energy fees | One-time session fee amount is shown like Session Fee $2.00 | Session Fee label is clear | Total estimated cost includes both energy and session fees
+
+  - id: 5
+    action: Test connector where session fee is null or zero
+    expected: Session fee section is hidden or shows "$0.00" | Energy fees display normally | No broken UI or empty sections | Total cost calculation excludes session fee
+
+  - id: 6
+    action: Compare pricing across different connector types (CCS vs NACS) on same station
+    expected: Each connector shows its respective pricing | CCS connector displays CCS pricing | NACS connector displays NACS pricing (may differ) | Pricing is clearly labeled per connector | User can distinguish which pricing applies to which connector
+
+  - id: 7
+    action: Test with connector where energyFee is null or missing
+    expected: Pricing section handles missing data gracefully | Error message or "Pricing unavailable" displays | No app crash or blank screen | Other connector info remains visible
+
+notes: |
+  Energy fee units can be $/kWh (per-energy) or $/minute (per-time)
+  Time-of-day pricing: Peak hours typically 2pm-8pm, but verify with actual data
+  Tiered pricing thresholds vary by operator (common: 50 kWh, 100 kWh)
+  Session fees are typically $1-5 one-time charges
+  Test with real tariffPricing V3 schema data from GraphQL
+  Performance: Pricing calculations should be instant
