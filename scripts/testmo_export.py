@@ -128,23 +128,29 @@ def export_from_testmo(project_id: int, folder_id: int, output_dir: Path, limit:
             task = progress.add_task("Writing YAML files...", total=len(yaml_cases))
             
             for feature_name, feature_cases in organized.items():
-                # Create feature directory
-                feature_dir = output_dir / feature_name
+                # Determine target directory
+                # If output_dir already ends with the feature name, write directly to it
+                # Otherwise, create a subdirectory
+                if Path(output_dir).name == feature_name:
+                    feature_dir = output_dir  # Write directly to test-cases/tesla-pricing/
+                else:
+                    feature_dir = output_dir / feature_name  # Write to test-cases/general/
+
                 feature_dir.mkdir(parents=True, exist_ok=True)
-                
+
                 for case in feature_cases:
                     metadata = case.get("metadata", {})
                     test_id = metadata.get("id", "TC00000")
                     test_name = metadata.get("name", "untitled")
-                    
+
                     # Generate filename
                     filename = f"{test_id}-{safe_filename(test_name)}.yml"
                     filepath = feature_dir / filename
-                    
+
                     # Write YAML file
                     with open(filepath, 'w') as f:
                         yaml.dump(case, f, default_flow_style=False, sort_keys=False, allow_unicode=True)
-                    
+
                     total_written += 1
                     progress.advance(task)
         
