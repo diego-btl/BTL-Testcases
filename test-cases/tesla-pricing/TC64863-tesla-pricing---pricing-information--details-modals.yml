@@ -1,23 +1,21 @@
 metadata:
-  testmo_id: 64863
   id: TC64863
   name: Tesla Pricing - Pricing Information & Details Modals
   feature: tesla-pricing
   priority: high
-  state: draft
   platforms:
   - iOS
   - Android
   regions:
-  - NNA
+  - USA
   tags: []
-  custom_references: 86b81ncag, 86b81q1hd, 86b81nexm, 86b81q1hv
-  created_at: '2026-01-29'
-description: 'Verify that the Pricing Information Modal and Additional Information
+  created: '2026-01-29'
+  updated: '2026-01-29'
+  author: user_2
+  testmo_id: 64863
+description: Verify that the Pricing Information Modal and Additional Information
   Modal display tariffPricing V3 data correctly, including pricing breakdown, fee
   explanations, and terms, with proper navigation between modals
-
-  '
 preconditions:
 - description: User is on Charge Station Details screen
 - description: Feature flag "EnableTeslaPricing" is enabled
@@ -52,13 +50,3 @@ steps:
   action: Test with station where tariffPricing.additionalInfo is null or empty
   expected: Pricing Information Modal displays normally | "Additional Information"
     link is hidden or disabled | No errors occur with missing additionalInfo
-notes: 'Test with various pricing scenarios: flat rate, time-of-day pricing, with/without
-  session fees
-
-  Verify modal overlay prevents interaction with background content
-
-  Test modal scroll behavior if content exceeds screen height
-
-  Additional Information content may vary by station operator
-
-  '

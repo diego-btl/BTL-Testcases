@@ -1,23 +1,21 @@
 metadata:
-  testmo_id: 64864
   id: TC64864
   name: Tesla Pricing - Station Card Pricing Summary
   feature: tesla-pricing
   priority: medium
-  state: draft
   platforms:
   - iOS
   - Android
   regions:
-  - NNA
+  - USA
   tags: []
-  custom_references: 86b7uevkg
-  created_at: '2026-01-29'
-description: 'Verify that the collapsed pricing summary displays correctly on charging
+  created: '2026-01-29'
+  updated: '2026-01-29'
+  author: user_2
+  testmo_id: 64864
+description: Verify that the collapsed pricing summary displays correctly on charging
   station cards in the station list view, showing the most relevant pricing information
   in a compact format
-
-  '
 preconditions:
 - description: User is on Charge screen with station list view
 - description: Feature flag "EnableTeslaPricing" is enabled
@@ -51,13 +49,3 @@ steps:
   action: Test with station that has multiple pricing tiers or time-of-day pricing
   expected: Collapsed summary shows most useful pricing indicator (e.g., "From $0.35/kWh"
     or lowest rate) | Summary is clear despite complex pricing structure
-notes: 'Pricing summary should prioritize user decision-making (typically lowest or
-  base rate)
-
-  Test with various pricing structures: flat rate, tiered, time-of-day
-
-  Verify pricing updates when list is refreshed
-
-  Performance: Pricing should not slow down list scrolling
-
-  '

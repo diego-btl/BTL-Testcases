@@ -149,7 +149,10 @@ def export_from_testmo(project_id: int, folder_id: int, output_dir: Path, limit:
         
         # Write YAML files
         total_written = 0
-        
+        files_created = 0
+        files_updated = 0
+        files_renamed = 0
+
         with Progress(
             SpinnerColumn(),
             TextColumn("[progress.description]{task.description}"),
@@ -174,37 +177,65 @@ def export_from_testmo(project_id: int, folder_id: int, output_dir: Path, limit:
                     test_id = metadata.get("id", "TC00000")
                     test_name = metadata.get("name", "untitled")
 
+                    # Generate expected filename based on Testmo ID
+                    expected_filename = f"{test_id}-{safe_filename(test_name)}.yml"
+                    expected_filepath = feature_dir / expected_filename
+
                     # Check if we're updating an existing file
                     existing_file = existing_files.get(testmo_id) if testmo_id else None
 
                     if existing_file and existing_file.exists():
-                        # UPDATE existing file (preserve filename)
-                        filepath = existing_file
+                        # File exists with this testmo_id
+                        # Check if it needs to be renamed
+                        if existing_file.name != expected_filename:
+                            # RENAME: Testmo ID changed or name changed
+                            console.print(f"[yellow]Renaming:[/yellow] {existing_file.name} → {expected_filename}")
+                            # Delete old file after we write the new one
+                            old_file_to_delete = existing_file
+                            filepath = expected_filepath
+                            files_renamed += 1
+                        else:
+                            # UPDATE in place
+                            filepath = existing_file
+                            old_file_to_delete = None
+                            files_updated += 1
                     else:
                         # CREATE new file
-                        filename = f"{test_id}-{safe_filename(test_name)}.yml"
-                        filepath = feature_dir / filename
+                        filepath = expected_filepath
+                        old_file_to_delete = None
+                        files_created += 1
 
                     # Write YAML file
                     with open(filepath, 'w') as f:
                         yaml.dump(case, f, default_flow_style=False, sort_keys=False, allow_unicode=True)
 
+                    # Remove old file if we renamed
+                    if old_file_to_delete and old_file_to_delete != filepath:
+                        old_file_to_delete.unlink()
+
                     total_written += 1
                     progress.advance(task)
         
         console.print(f"[green]✓[/green] Written {total_written} YAML files to {output_dir}")
-        
+
+        # File operation summary
+        console.print("\n[bold]File Operations:[/bold]")
+        console.print(f"  [green]Created:[/green] {files_created}")
+        console.print(f"  [blue]Updated:[/blue] {files_updated}")
+        console.print(f"  [yellow]Renamed:[/yellow] {files_renamed}")
+        console.print(f"  [cyan]Total:[/cyan] {total_written}")
+
         # Summary table
         table = Table(title="Export Summary")
         table.add_column("Feature", style="cyan")
         table.add_column("Test Cases", style="magenta", justify="right")
-        
+
         for feature_name, feature_cases in sorted(organized.items()):
             table.add_row(feature_name, str(len(feature_cases)))
-        
+
         console.print("\n")
         console.print(table)
-        
+
         # Next steps
         console.print("\n[bold green]Export Complete![/bold green]")
         console.print("\n[bold]Next steps:[/bold]")

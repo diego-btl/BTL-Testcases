@@ -119,17 +119,11 @@ class YAMLConverter:
         - custom_priority: Integer (1=critical, 2=high, 3=medium, 4=low)
         - custom_notes: Optional HTML string
         """
-        # Generate test ID
+        # Generate test ID from Testmo ID
         testmo_id = testmo_case.get("id", 0)
 
-        # If updating existing file, preserve the original test ID
-        if existing_file:
-            # Extract TC001 from "TC001-max-charge-limit-banner.yml"
-            match = re.match(r'^(TC\d+)', existing_file.stem)
-            test_id = match.group(1) if match else f"TC{testmo_id:05d}"
-        else:
-            # New file - use Testmo ID
-            test_id = f"TC{testmo_id:05d}"
+        # ALWAYS use Testmo ID as the test_id (Testmo is source of truth)
+        test_id = f"TC{testmo_id:05d}"
 
         # Priority mapping
         priority_map = {1: "critical", 2: "high", 3: "medium", 4: "low"}

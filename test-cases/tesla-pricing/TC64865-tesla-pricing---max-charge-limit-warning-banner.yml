@@ -1,23 +1,21 @@
 metadata:
-  testmo_id: 64865
   id: TC64865
   name: Tesla Pricing - Max Charge Limit Warning Banner
   feature: tesla-pricing
   priority: high
-  state: draft
   platforms:
   - iOS
   - Android
   regions:
-  - NNA
+  - USA
   tags: []
-  custom_references: 86b7uey05
-  created_at: '2026-01-29'
-description: 'Verify that the max charge limit warning banner displays correctly when
+  created: '2026-01-29'
+  updated: '2026-01-29'
+  author: user_2
+  testmo_id: 64865
+description: Verify that the max charge limit warning banner displays correctly when
   a charging station enforces an automatic charge stop at a specified state of charge
   (SOC) percentage, and is hidden when no limit is set
-
-  '
 preconditions:
 - description: User is on Charge Station Details screen
 - description: Feature flag "EnableTeslaPricing" is enabled
@@ -47,13 +45,3 @@ steps:
   action: Verify warning display for station with multiple connectors
   expected: Warning is shown once at location level | Warning is not duplicated per
     connector
-notes: 'Data source: tariffPricing.data.maxChargeLimit (top-level, location-based
-  field)
-
-  Related schema task: 86b7wxy4f
-
-  Warning should be location-level, not per-connector
-
-  Test with various percentage formats (integer, decimal, with/without % symbol)
-
-  '

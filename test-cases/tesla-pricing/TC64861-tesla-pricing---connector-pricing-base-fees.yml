@@ -1,23 +1,21 @@
 metadata:
-  testmo_id: 64861
   id: TC64861
   name: Tesla Pricing - Connector Pricing Base Fees
   feature: tesla-pricing
   priority: critical
-  state: draft
   platforms:
   - iOS
   - Android
   regions:
-  - NNA
+  - USA
   tags: []
-  custom_references: 86b848n6q, 86b7uewfy
-  created_at: '2026-01-29'
-description: 'Verify that the expanded connector pricing breakdown displays energy
+  created: '2026-01-29'
+  updated: '2026-01-29'
+  author: user_2
+  testmo_id: 64861
+description: Verify that the expanded connector pricing breakdown displays energy
   fees and session fees correctly, including flat rates, time-of-day pricing, tiered
   pricing structures, and proper rate unit display for each connector type
-
-  '
 preconditions:
 - description: User is on Charge Station Details screen with expanded connector view
 - description: Feature flag "EnableTeslaPricing" is enabled
@@ -62,16 +60,3 @@ steps:
   expected: Pricing section handles missing data gracefully | Error message or "Pricing
     unavailable" displays | No app crash or blank screen | Other connector info remains
     visible
-notes: 'Energy fee units can be $/kWh (per-energy) or $/minute (per-time)
-
-  Time-of-day pricing: Peak hours typically 2pm-8pm, but verify with actual data
-
-  Tiered pricing thresholds vary by operator (common: 50 kWh, 100 kWh)
-
-  Session fees are typically $1-5 one-time charges
-
-  Test with real tariffPricing V3 schema data from GraphQL
-
-  Performance: Pricing calculations should be instant
-
-  '

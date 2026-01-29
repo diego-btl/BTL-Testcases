@@ -1,23 +1,21 @@
 metadata:
-  testmo_id: 64862
   id: TC64862
   name: Tesla Pricing - Connector Pricing Time & Dynamic Fees
   feature: tesla-pricing
   priority: high
-  state: draft
   platforms:
   - iOS
   - Android
   regions:
-  - NNA
+  - USA
   tags: []
-  custom_references: 86b87cjb2, 86b838bwp, 86b885uf7, 86b838c1a
-  created_at: '2026-01-29'
-description: 'Verify that the expanded connector pricing breakdown displays idling
+  created: '2026-01-29'
+  updated: '2026-01-29'
+  author: user_2
+  testmo_id: 64862
+description: Verify that the expanded connector pricing breakdown displays idling
   fees with grace periods and congestion fees correctly, including dynamic pricing
   indicators, time-based charges, and proper handling of conditional fees
-
-  '
 preconditions:
 - description: User is on Charge Station Details screen with expanded connector view
 - description: Feature flag "EnableTeslaPricing" is enabled
@@ -67,18 +65,3 @@ steps:
   expected: Each connector shows its respective idling/congestion fees | Fees may
     differ by connector type | CCS and NACS connectors can have different fee structures
     | Fee differences are clearly visible to user
-notes: 'Grace periods typically range from 5-15 minutes after charge completion
-
-  Idling fees typically $0.40-1.00 per minute to encourage connector turnover
-
-  Congestion fees are dynamic and may change based on station demand
-
-  Congestion fees typically add $0.05-0.20/kWh during peak demand
-
-  Test with stations that have: idling only, congestion only, both, neither
-
-  Verify that fee conditions (grace period, time windows) are clearly communicated
-
-  Performance: Fee calculations should update in real-time if congestion changes
-
-  '
