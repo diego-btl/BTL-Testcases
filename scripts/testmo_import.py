@@ -114,28 +114,95 @@ def import_to_testmo(project_id: int, input_dir: Path, folder_name: str, dry_run
         console.print(f"[green]✓[/green] Converted {len(testmo_cases)} test cases")
         
         if dry_run:
-            # Show what would be imported
-            table = Table(title="Would Import")
-            table.add_column("ID", style="cyan")
-            table.add_column("Name", style="magenta")
-            table.add_column("Priority", style="yellow")
-            table.add_column("Feature", style="green")
-            
-            for case in testmo_cases[:10]:  # Show first 10
-                metadata = case.get("_yaml_metadata", {})
-                table.add_row(
-                    metadata.get("id", "N/A"),
-                    case.get("name", "Untitled")[:50],
-                    metadata.get("priority", "medium"),
-                    metadata.get("feature", "general")
-                )
-            
-            console.print("\n")
-            console.print(table)
-            
-            if len(testmo_cases) > 10:
-                console.print(f"\n[dim]... and {len(testmo_cases) - 10} more cases[/dim]")
-            
+            if update_existing:
+                # UPDATE MODE: Only update existing cases, skip those without testmo_id
+                cases_to_update = []
+                cases_skipped = []
+
+                for case in testmo_cases:
+                    metadata = case.get("_yaml_metadata", {})
+                    testmo_id = metadata.get("testmo_id")
+                    if testmo_id:
+                        cases_to_update.append(case)
+                    else:
+                        cases_skipped.append(case)
+
+                console.print("\n[cyan]UPDATE MODE[/cyan] - Will only update existing cases with testmo_id")
+
+                # Show UPDATE table
+                if cases_to_update:
+                    update_table = Table(title=f"Would UPDATE ({len(cases_to_update)} cases)")
+                    update_table.add_column("Testmo ID", style="cyan")
+                    update_table.add_column("Name", style="magenta")
+                    update_table.add_column("Priority", style="yellow")
+
+                    for case in cases_to_update[:10]:
+                        metadata = case.get("_yaml_metadata", {})
+                        update_table.add_row(
+                            str(metadata.get("testmo_id", "N/A")),
+                            case.get("name", "Untitled")[:50],
+                            metadata.get("priority", "medium")
+                        )
+
+                    console.print("\n")
+                    console.print(update_table)
+
+                    if len(cases_to_update) > 10:
+                        console.print(f"[dim]... and {len(cases_to_update) - 10} more to update[/dim]")
+
+                # Show SKIP table
+                if cases_skipped:
+                    skip_table = Table(title=f"Would SKIP ({len(cases_skipped)} cases - no testmo_id)")
+                    skip_table.add_column("Test ID", style="yellow")
+                    skip_table.add_column("Name", style="magenta")
+                    skip_table.add_column("Reason", style="dim")
+
+                    for case in cases_skipped[:10]:
+                        metadata = case.get("_yaml_metadata", {})
+                        skip_table.add_row(
+                            metadata.get("id", "N/A"),
+                            case.get("name", "Untitled")[:50],
+                            "No testmo_id"
+                        )
+
+                    console.print("\n")
+                    console.print(skip_table)
+
+                    if len(cases_skipped) > 10:
+                        console.print(f"[dim]... and {len(cases_skipped) - 10} more skipped[/dim]")
+
+                # Summary
+                console.print(f"\n[bold]Summary:[/bold]")
+                console.print(f"  UPDATE: {len(cases_to_update)} existing cases")
+                console.print(f"  SKIP: {len(cases_skipped)} cases (no testmo_id)")
+                console.print(f"  Total: {len(testmo_cases)} cases")
+
+                if cases_skipped:
+                    console.print(f"\n[yellow]⚠️  Note: {len(cases_skipped)} case(s) will be skipped - use regular import mode (without --update-existing) to create new cases[/yellow]")
+
+            else:
+                # CREATE mode - show single table
+                table = Table(title=f"Would CREATE ({len(testmo_cases)} cases)")
+                table.add_column("Test ID", style="cyan")
+                table.add_column("Name", style="magenta")
+                table.add_column("Priority", style="yellow")
+                table.add_column("Feature", style="green")
+
+                for case in testmo_cases[:10]:
+                    metadata = case.get("_yaml_metadata", {})
+                    table.add_row(
+                        metadata.get("id", "N/A"),
+                        case.get("name", "Untitled")[:50],
+                        metadata.get("priority", "medium"),
+                        metadata.get("feature", "general")
+                    )
+
+                console.print("\n")
+                console.print(table)
+
+                if len(testmo_cases) > 10:
+                    console.print(f"\n[dim]... and {len(testmo_cases) - 10} more cases[/dim]")
+
             console.print(f"\n[yellow]Dry run complete. Run without --dry-run to import.[/yellow]")
             return
         
@@ -143,46 +210,101 @@ def import_to_testmo(project_id: int, input_dir: Path, folder_name: str, dry_run
         created = 0
         updated = 0
         failed = 0
-        
-        with Progress(
-            SpinnerColumn(),
-            TextColumn("[progress.description]{task.description}"),
-            console=console
-        ) as progress:
-            task = progress.add_task("Importing to Testmo...", total=len(testmo_cases))
-            
+        skipped = 0
+
+        if update_existing:
+            console.print("\n[cyan]UPDATE MODE[/cyan] - Will only update existing cases with testmo_id")
+
+            # Separate cases into update vs skip
+            cases_to_update = []
+            cases_skipped = []
+            skipped = 0
+
             for case in testmo_cases:
-                try:
-                    metadata = case.get("_yaml_metadata", {})
-                    testmo_id = metadata.get("testmo_id")
-                    
-                    # Remove internal fields before sending to API
-                    case.pop("_yaml_metadata", None)
-                    case.pop("_source_file", None)
-                    
-                    if testmo_id and update_existing:
-                        # Update existing case
-                        client.update_case(testmo_id, case)
-                        updated += 1
-                    else:
-                        # Create new case
-                        result = client.create_case(project_id, case)
+                metadata = case.get("_yaml_metadata", {})
+                testmo_id = metadata.get("testmo_id")
+                if testmo_id:
+                    cases_to_update.append((testmo_id, case))
+                else:
+                    test_id = metadata.get("id", "Unknown")
+                    name = metadata.get("name", "Untitled")
+                    cases_skipped.append((test_id, name))
+                    skipped += 1
+
+            console.print(f"  Will update: {len(cases_to_update)} cases")
+            console.print(f"  Will skip: {len(cases_skipped)} cases (no testmo_id)\n")
+
+            if cases_skipped:
+                console.print("[yellow]Skipped cases (no testmo_id):[/yellow]")
+                for test_id, name in cases_skipped[:5]:
+                    console.print(f"  [dim]- {test_id}: {name[:40]}[/dim]")
+                if len(cases_skipped) > 5:
+                    console.print(f"  [dim]... and {len(cases_skipped) - 5} more[/dim]")
+                console.print("")
+
+            # Update existing cases only
+            with Progress(
+                SpinnerColumn(),
+                TextColumn("[progress.description]{task.description}"),
+                console=console
+            ) as progress:
+                if cases_to_update:
+                    task = progress.add_task("Updating existing cases...", total=len(cases_to_update))
+                    for testmo_id, case in cases_to_update:
+                        try:
+                            metadata = case.get("_yaml_metadata", {})
+                            # Remove internal fields before sending to API
+                            case.pop("_yaml_metadata", None)
+                            case.pop("_source_file", None)
+                            # Remove id field (it's in the URL, not the body)
+                            case.pop("id", None)
+
+                            client.update_case(project_id, testmo_id, case)
+                            updated += 1
+                        except Exception as e:
+                            console.print(f"[red]Failed to update {testmo_id}: {e}[/red]")
+                            failed += 1
+                        progress.advance(task)
+                else:
+                    console.print("[yellow]No cases to update (all cases are missing testmo_id)[/yellow]")
+        else:
+            # CREATE mode - create all cases as new
+            console.print("\n[cyan]CREATE MODE[/cyan] - Creating all cases as new\n")
+
+            with Progress(
+                SpinnerColumn(),
+                TextColumn("[progress.description]{task.description}"),
+                console=console
+            ) as progress:
+                task = progress.add_task("Creating cases in Testmo...", total=len(testmo_cases))
+
+                for case in testmo_cases:
+                    try:
+                        metadata = case.get("_yaml_metadata", {})
+
+                        # Remove internal fields before sending to API
+                        case.pop("_yaml_metadata", None)
+                        case.pop("_source_file", None)
+                        # Remove testmo_id if present (we're creating new)
+                        case.pop("id", None)
+
+                        result = client.create_case(project_id, case, folder_id)
                         created += 1
-                        
-                        # TODO: Update YAML file with testmo_id
-                        # This would require updating the source file
-                        
-                except Exception as e:
-                    console.print(f"[red]Failed to import {metadata.get('id', 'unknown')}: {e}[/red]")
-                    failed += 1
-                
-                progress.advance(task)
+
+                    except Exception as e:
+                        console.print(f"[red]Failed to create {metadata.get('id', 'unknown')}: {e}[/red]")
+                        failed += 1
+
+                    progress.advance(task)
         
         # Summary
         console.print(f"\n[bold green]Import Complete![/bold green]")
         console.print(f"  Created: {created}")
         console.print(f"  Updated: {updated}")
         console.print(f"  Failed: {failed}")
+        if update_existing and skipped > 0:
+            console.print(f"  Skipped: {skipped} (no testmo_id)")
+            console.print(f"\n[yellow]⚠️  Use regular import mode (without --update-existing) to create new cases[/yellow]")
         
     except Exception as e:
         console.print(f"[bold red]Error:[/bold red] {str(e)}")

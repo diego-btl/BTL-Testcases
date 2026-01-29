@@ -47,23 +47,37 @@ class TestmoClient:
     # Projects
     def list_projects(self) -> List[Dict[str, Any]]:
         """List all projects"""
-        return self._request("GET", "/projects")
+        response = self._request("GET", "/projects")
+        return response.get("result", [])
     
     def get_project(self, project_id: int) -> Dict[str, Any]:
         """Get project details"""
-        return self._request("GET", f"/projects/{project_id}")
+        response = self._request("GET", f"/projects/{project_id}")
+        return response.get("result", {})
     
     # Folders
     def list_folders(self, project_id: int) -> List[Dict[str, Any]]:
         """List all folders in a project"""
-        return self._request("GET", f"/projects/{project_id}/folders")
+        response = self._request("GET", f"/projects/{project_id}/folders")
+        return response.get("result", [])
     
     def create_folder(self, project_id: int, name: str, parent_id: Optional[int] = None) -> Dict[str, Any]:
         """Create a new folder"""
-        data = {"name": name}
-        if parent_id:
-            data["parent_id"] = parent_id
-        return self._request("POST", f"/projects/{project_id}/folders", json=data)
+        # Testmo API requires 'folders' array with folder objects
+        data = {
+            "folders": [
+                {
+                    "name": name,
+                    "parent_id": parent_id
+                }
+            ]
+        }
+        response = self._request("POST", f"/projects/{project_id}/folders", json=data)
+        # API returns array of created folders, return first one
+        result = response.get("result", [])
+        if result:
+            return result[0]
+        return response
     
     def get_folder_by_name(self, project_id: int, name: str, parent_id: Optional[int] = None) -> Optional[Dict[str, Any]]:
         """Find folder by name"""
@@ -80,23 +94,23 @@ class TestmoClient:
         params = {"limit": limit}
         if folder_id:
             params["folder_id"] = folder_id
-        
-        result = self._request("GET", f"/projects/{project_id}/cases", params=params)
-        return result.get("cases", [])
+
+        response = self._request("GET", f"/projects/{project_id}/cases", params=params)
+        return response.get("result", [])
     
     def get_all_cases(self, project_id: int, folder_id: Optional[int] = None) -> List[Dict[str, Any]]:
         """Get all test cases (handles pagination)"""
         all_cases = []
         offset = 0
         limit = 250
-        
+
         while True:
             params = {"limit": limit, "offset": offset}
             if folder_id:
                 params["folder_id"] = folder_id
-            
-            result = self._request("GET", f"/projects/{project_id}/cases", params=params)
-            cases = result.get("cases", [])
+
+            response = self._request("GET", f"/projects/{project_id}/cases", params=params)
+            cases = response.get("result", [])
             
             if not cases:
                 break
@@ -112,22 +126,42 @@ class TestmoClient:
     
     def get_case(self, case_id: int) -> Dict[str, Any]:
         """Get test case details"""
-        return self._request("GET", f"/cases/{case_id}")
+        response = self._request("GET", f"/cases/{case_id}")
+        return response.get("result", {})
     
-    def create_case(self, project_id: int, case_data: Dict[str, Any]) -> Dict[str, Any]:
+    def create_case(self, project_id: int, case_data: Dict[str, Any], folder_id: Optional[int] = None) -> Dict[str, Any]:
         """Create a single test case"""
-        return self._request("POST", f"/projects/{project_id}/cases", json=case_data)
-    
-    def create_cases_batch(self, project_id: int, cases: List[Dict[str, Any]]) -> Dict[str, Any]:
-        """Create multiple test cases (max 100 per request)"""
+        # Use batch method with single case
+        result = self.create_cases_batch(project_id, [case_data], folder_id)
+        # Return first created case
+        created = result.get("result", [])
+        if created:
+            return created[0]
+        return result
+
+    def create_cases_batch(self, project_id: int, cases: List[Dict[str, Any]], folder_id: Optional[int] = None) -> Dict[str, Any]:
+        """Create multiple test cases in batch"""
         if len(cases) > 100:
             raise ValueError("Maximum 100 cases per batch")
-        
-        return self._request("POST", f"/projects/{project_id}/cases/bulk", json={"cases": cases})
+
+        # Ensure all cases have folder_id
+        for case in cases:
+            if folder_id and "folder_id" not in case:
+                case["folder_id"] = folder_id
+
+        # Testmo API requires 'cases' wrapper
+        data = {
+            "cases": cases
+        }
+
+        response = self._request("POST", f"/projects/{project_id}/cases", json=data)
+        return response
     
-    def update_case(self, case_id: int, case_data: Dict[str, Any]) -> Dict[str, Any]:
-        """Update a test case"""
-        return self._request("PUT", f"/cases/{case_id}", json=case_data)
+    def update_case(self, project_id: int, case_id: int, case_data: Dict[str, Any]) -> Dict[str, Any]:
+        """Update an existing test case"""
+        # Testmo API uses /cases/{id} for updates, not /projects/{project_id}/cases/{id}
+        response = self._request("PUT", f"/cases/{case_id}", json=case_data)
+        return response.get("result", {})
     
     def delete_case(self, case_id: int) -> None:
         """Delete a test case"""
@@ -152,5 +186,5 @@ class TestmoClient:
         if state_id:
             params["state_id"] = state_id
         
-        result = self._request("GET", f"/projects/{project_id}/cases/search", params=params)
-        return result.get("cases", [])
+        response = self._request("GET", f"/projects/{project_id}/cases/search", params=params)
+        return response.get("result", [])
