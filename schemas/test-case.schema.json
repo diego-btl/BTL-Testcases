@@ -12,8 +12,8 @@
       "properties": {
         "id": {
           "type": "string",
-          "pattern": "^TC[0-9]{5}$",
-          "description": "Unique test case ID (e.g., TC00001)"
+          "pattern": "^TC[0-9]{3,5}$",
+          "description": "Unique test case ID (e.g., TC001 or TC00001)"
         },
         "name": {
           "type": "string",
@@ -45,11 +45,11 @@
           "type": "array",
           "items": {
             "type": "string",
-            "enum": ["USA", "Canada", "Mexico", "Brazil"]
+            "enum": ["NNA", "NCI", "NMEX", "NBA"]
           },
           "minItems": 1,
           "uniqueItems": true,
-          "description": "Target regions"
+          "description": "Target regions (NNA=USA, NCI=Canada, NMEX=Mexico, NBA=Brazil)"
         },
         "tags": {
           "type": "array",

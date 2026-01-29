@@ -34,7 +34,7 @@ metadata:
   priority: medium  # critical, high, medium, low
   state: draft  # draft, active, deprecated
   platforms: [iOS, Android]  # Target platforms
-  regions: [USA, Canada, Mexico, Brazil]  # Target regions
+  regions: [NNA, NCI, NMEX, NBA]  # Target regions (NNA=USA, NCI=Canada, NMEX=Mexico, NBA=Brazil)
   tags: []  # Tagging system TBD
   custom_references: "TASK-ID"  # ClickUp task reference
   created_at: "2026-01-28"  # YYYY-MM-DD format
@@ -53,9 +53,14 @@ metadata:
 - **Specify explicitly** if test is platform-specific
 
 ### Region Specification
-- **Default**: `[USA, Canada, Mexico, Brazil]` (all regions)
-- **Specific regions**: List only applicable ones
-- **Consider**: Feature flags, localization, market-specific behavior
+- **Region Codes**: Use standardized codes (see [region_codes.md](region_codes.md))
+  - `NNA` - Nissan North America (USA)
+  - `NCI` - Nissan Canada Inc. (Canada)
+  - `NMEX` - Nissan Mexico (Mexico)
+  - `NBA` - Nissan Brazil (Brazil)
+- **Default**: `[NNA, NCI, NMEX, NBA]` (all regions)
+- **Region-specific features**: Use only applicable codes (e.g., Tesla Pricing is `[NNA]` only)
+- **Consider**: Feature flags, localization, market-specific behavior, Infiniti availability
 
 ## Description Section
 
@@ -217,7 +222,7 @@ metadata:
   priority: high
   state: draft
   platforms: [iOS, Android]
-  regions: [USA, Canada, Mexico, Brazil]
+  regions: [NNA]
   tags: []
   custom_references: "86b7uey05"
   created_at: "2026-01-28"

@@ -1,12 +1,12 @@
 metadata:
-  testmo_id: null
+  testmo_id: 64850
   id: TC001
   name: "Tesla Pricing - Max Charge Limit Warning Banner"
   feature: tesla-pricing
   priority: high
   state: draft
   platforms: [iOS, Android]
-  regions: [USA, Canada, Mexico, Brazil]
+  regions: [NNA]
   tags: []
   custom_references: "86b7uey05"
   created_at: "2026-01-29"
