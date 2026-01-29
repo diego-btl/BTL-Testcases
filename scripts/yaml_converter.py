@@ -5,6 +5,7 @@ Converts between Testmo API format and Git YAML format
 from datetime import datetime
 from html.parser import HTMLParser
 from typing import Dict, List, Any, Optional
+from pathlib import Path
 import re
 
 
@@ -103,8 +104,13 @@ class YAMLConverter:
     STATE_FROM_TESTMO = {v: k for k, v in STATE_TO_TESTMO.items()}
     
     @staticmethod
-    def testmo_to_yaml(testmo_case: Dict[str, Any], feature: str = "general") -> Dict[str, Any]:
+    def testmo_to_yaml(testmo_case: Dict[str, Any], feature: str = "general", existing_file: Optional[Path] = None) -> Dict[str, Any]:
         """Convert Testmo format to YAML format.
+
+        Args:
+            testmo_case: Case data from Testmo API
+            feature: Feature name
+            existing_file: If provided, extract test_id from filename (e.g., TC001 from TC001-name.yml)
 
         Testmo API returns these custom fields at the TOP LEVEL:
         - custom_description: HTML string with description
@@ -115,7 +121,15 @@ class YAMLConverter:
         """
         # Generate test ID
         testmo_id = testmo_case.get("id", 0)
-        test_id = f"TC{testmo_id:05d}"
+
+        # If updating existing file, preserve the original test ID
+        if existing_file:
+            # Extract TC001 from "TC001-max-charge-limit-banner.yml"
+            match = re.match(r'^(TC\d+)', existing_file.stem)
+            test_id = match.group(1) if match else f"TC{testmo_id:05d}"
+        else:
+            # New file - use Testmo ID
+            test_id = f"TC{testmo_id:05d}"
 
         # Priority mapping
         priority_map = {1: "critical", 2: "high", 3: "medium", 4: "low"}

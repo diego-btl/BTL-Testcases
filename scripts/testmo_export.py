@@ -43,6 +43,28 @@ def organize_by_feature(cases: List[Dict[str, Any]]) -> Dict[str, List[Dict[str,
     return features
 
 
+def build_existing_file_map(output_dir: Path) -> Dict[int, Path]:
+    """
+    Build mapping of testmo_id → filepath for existing files.
+    Returns: {64860: Path("TC001-max-charge-limit-banner.yml"), ...}
+    """
+    file_map = {}
+
+    # Find all YAML files in output_dir (not in subdirectories)
+    for yaml_file in output_dir.glob("TC*.yml"):
+        try:
+            with open(yaml_file, 'r') as f:
+                data = yaml.safe_load(f)
+                testmo_id = data.get("metadata", {}).get("testmo_id")
+
+                if testmo_id and testmo_id != "null" and testmo_id is not None:
+                    file_map[int(testmo_id)] = yaml_file
+        except Exception:
+            continue  # Skip malformed files
+
+    return file_map
+
+
 @click.command()
 @click.option("--project-id", type=int, help="Testmo project ID", envvar="TESTMO_PROJECT_ID")
 @click.option("--folder-id", type=int, help="Specific folder ID to export (optional)")
@@ -94,6 +116,11 @@ def export_from_testmo(project_id: int, folder_id: int, output_dir: Path, limit:
 
         console.print(f"[blue]Using feature:[/blue] {feature}")
 
+        # Build map of existing files
+        console.print("[blue]Scanning existing files...[/blue]")
+        existing_files = build_existing_file_map(output_dir)
+        console.print(f"[blue]Found {len(existing_files)} existing test cases[/blue]")
+
         # Convert to YAML format
         yaml_cases = []
 
@@ -105,7 +132,10 @@ def export_from_testmo(project_id: int, folder_id: int, output_dir: Path, limit:
             task = progress.add_task("Converting to YAML format...", total=len(cases))
 
             for case in cases:
-                yaml_case = converter.testmo_to_yaml(case, feature=feature)
+                testmo_id = case.get("id")
+                existing_file = existing_files.get(testmo_id)
+
+                yaml_case = converter.testmo_to_yaml(case, feature=feature, existing_file=existing_file)
                 yaml_cases.append(yaml_case)
                 progress.advance(task)
         
@@ -140,12 +170,20 @@ def export_from_testmo(project_id: int, folder_id: int, output_dir: Path, limit:
 
                 for case in feature_cases:
                     metadata = case.get("metadata", {})
+                    testmo_id = metadata.get("testmo_id")
                     test_id = metadata.get("id", "TC00000")
                     test_name = metadata.get("name", "untitled")
 
-                    # Generate filename
-                    filename = f"{test_id}-{safe_filename(test_name)}.yml"
-                    filepath = feature_dir / filename
+                    # Check if we're updating an existing file
+                    existing_file = existing_files.get(testmo_id) if testmo_id else None
+
+                    if existing_file and existing_file.exists():
+                        # UPDATE existing file (preserve filename)
+                        filepath = existing_file
+                    else:
+                        # CREATE new file
+                        filename = f"{test_id}-{safe_filename(test_name)}.yml"
+                        filepath = feature_dir / filename
 
                     # Write YAML file
                     with open(filepath, 'w') as f:
