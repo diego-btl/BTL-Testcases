@@ -1,0 +1,67 @@
+metadata:
+  id: TC64862
+  name: Tesla Pricing - Connector Pricing Time & Dynamic Fees
+  feature: arjun-onboarding
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2026-01-29'
+  updated: '2026-01-29'
+  author: user_2
+  testmo_id: 64862
+description: Verify that the expanded connector pricing breakdown displays idling
+  fees with grace periods and congestion fees correctly, including dynamic pricing
+  indicators, time-based charges, and proper handling of conditional fees
+preconditions:
+- description: User is on Charge Station Details screen with expanded connector view
+- description: Feature flag "EnableTeslaPricing" is enabled
+- description: Tesla charging station has tariffPricing data with idling and/or congestion
+    fees
+- description: Station has multiple connectors to test fee variations
+steps:
+- id: 1
+  action: View connector with idling fee and grace period configured
+  expected: Idling fee section displays | Grace period is shown (e.g., "Free for first
+    10 minutes after full charge") | Overstay charge rate is displayed (e.g., "$0.50/minute
+    after grace period") | Grace period duration is clear | "Idling Fee" or "Overstay
+    Fee" label is visible
+- id: 2
+  action: Review idling fee display with zero grace period
+  expected: Idling fee displays without grace period message | Charge rate shows immediately
+    applicable (e.g., "$0.40/minute") | No "Free for X minutes" message | Fee starts
+    immediately after charge completion
+- id: 3
+  action: Test connector where idling fee is null
+  expected: Idling fee section is hidden or shows "No idling fees" | Other pricing
+    sections display normally | No broken UI or empty sections | Total cost calculation
+    excludes idling fees
+- id: 4
+  action: View connector with congestion fee configured
+  expected: Congestion fee section displays | Congestion fee amount is shown (e.g.,
+    "+$0.10/kWh congestion fee") | Congestion indicator or level is visible (if implemented)
+    | "Congestion Fee" or "Peak Demand Fee" label is clear | Fee is added to base
+    energy rate in total
+- id: 5
+  action: Review congestion fee with time-based conditions
+  expected: Time-based congestion displays with applicable hours like Busy hours (12pm-6pm)
+    adds $0.15/kWh | Current time congestion status is indicated | Time ranges are
+    clear | Congestion fee applies only during specified hours
+- id: 6
+  action: Test connector where congestion fee is null or zero
+  expected: Congestion fee section is hidden or shows "No congestion fees" | Base
+    pricing displays normally | No additional congestion charges in total | UI handles
+    missing congestion data gracefully
+- id: 7
+  action: View connector with both idling and congestion fees present
+  expected: Both fee types display in separate sections | Idling fee shows with grace
+    period | Congestion fee shows separately | Total estimated cost includes both
+    conditional fees (when applicable) | UI is not cluttered, fees are clearly separated
+- id: 8
+  action: Compare fees across different connectors at same station
+  expected: Each connector shows its respective idling/congestion fees | Fees may
+    differ by connector type | CCS and NACS connectors can have different fee structures
+    | Fee differences are clearly visible to user

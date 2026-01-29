@@ -1,0 +1,28 @@
+metadata:
+  id: TC64849
+  name: Dashboard - Refresh Data
+  feature: edge-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2026-01-29'
+  updated: '2026-01-29'
+  author: user_2
+  testmo_id: 64849
+description: Verify dashboard data refreshes on button click
+preconditions:
+- description: User is on dashboard
+steps:
+- id: 1
+  action: Note current timestamp on data
+  expected: Timestamp visible
+- id: 2
+  action: Click refresh button
+  expected: Spinner appears briefly
+- id: 3
+  action: Verify timestamp updated
+  expected: New timestamp shown, data refreshed

@@ -1,0 +1,24 @@
+metadata:
+  id: TC61369
+  name: Single Statement Data Handling
+  feature: nested-folder-test
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-09-10'
+  updated: '2026-01-29'
+  author: user_28
+  testmo_id: 61369
+description: Verify behavior with only one account statement
+preconditions:
+- description: User VIN has exactly one account statement record
+steps:
+- id: 1
+  action: Navigate to Account Statements screen | Observe layout and options
+  expected: Single statement appears in Últimos estados de cuenta | Dropdown sections
+    are disabled or hidden | Selection of single statement enables PDF button | No
+    errors or layout issues occur

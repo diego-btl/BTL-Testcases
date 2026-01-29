@@ -1,0 +1,18 @@
+metadata:
+  id: TC64866
+  name: Test Case with No Steps - Edge Case
+  feature: edge-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2026-01-29'
+  updated: '2026-01-29'
+  author: user_2
+  testmo_id: 64866
+description: This test case has no steps to verify error handling
+preconditions:
+- description: User is on login page

@@ -1,0 +1,21 @@
+metadata:
+  id: EDGE02
+  name: Test with Null Fields
+  feature: login
+  priority: null
+  platforms: []
+  regions: []
+  tags: null
+  created: null
+  updated: null
+  author: null
+  testmo_id: null
+description: null
+preconditions: []
+steps:
+  - id: 1
+    action: Perform action
+    expected: null
+  - id: 2
+    action: null
+    expected: Something should happen

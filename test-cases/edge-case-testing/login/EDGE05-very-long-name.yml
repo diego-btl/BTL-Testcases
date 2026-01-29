@@ -1,0 +1,28 @@
+metadata:
+  id: EDGE05
+  name: "This is an extremely long test case name that goes on and on and includes many words to test how the system handles very long names that exceed typical length limits and might cause issues with file system path length restrictions or database column width limitations or UI display truncation in various parts of the application including the test case list view the test run execution screen and the reporting dashboard where long names might wrap or overflow or get truncated in unexpected ways"
+  feature: login
+  priority: medium
+  platforms:
+    - iOS
+  regions:
+    - NNA
+  tags: [very-long-tag-name-to-test-tag-length-handling]
+  created: '2026-01-29'
+  updated: '2026-01-29'
+  author: user_2
+  testmo_id: null
+description: |
+  This is a very long description that goes on and on with multiple paragraphs to test how the system handles large amounts of text in the description field which could potentially cause performance issues or display problems.
+
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+  Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC: Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+preconditions:
+  - description: "This is a very long precondition that describes in excruciating detail every single aspect of the setup required including environment configuration database state user permissions network conditions browser settings cookies local storage session data authentication tokens API endpoints feature flags and much more"
+steps:
+  - id: 1
+    action: "Perform a very long action that involves multiple sub-steps including navigating to the login page waiting for the page to fully load verifying all UI elements are present checking that JavaScript has loaded properly ensuring network requests have completed validating the page title confirming the correct environment is being used and preparing to enter credentials"
+    expected: "A very long expected result that describes every single detail of what should happen including UI state changes network activity console logs performance metrics accessibility compliance security validations and user experience expectations"

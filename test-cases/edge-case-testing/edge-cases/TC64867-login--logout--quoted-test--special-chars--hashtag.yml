@@ -1,0 +1,29 @@
+metadata:
+  id: TC64867
+  name: 'Login / Logout & "Quoted" Test | Special <chars> @ #hashtag'
+  feature: edge-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2026-01-29'
+  updated: '2026-01-29'
+  author: user_2
+  testmo_id: 64867
+description: 'Test with special characters: slashes /, quotes, ampersands &, less
+  than <, greater than >, pipes |, at symbols @, hashtags #'
+preconditions:
+- description: User has "admin" role & <super> privileges
+steps:
+- id: 1
+  action: 'Enter email: user@example.com'
+  expected: Email field accepts @ symbol
+- id: 2
+  action: 'Enter password with special chars: P@ssw0rd!#$'
+  expected: 'Password accepts: !@#$%^&*()'
+- id: 3
+  action: Click <Login> | Verify redirect
+  expected: User sees dashboard & profile

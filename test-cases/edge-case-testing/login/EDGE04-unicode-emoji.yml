@@ -1,0 +1,38 @@
+metadata:
+  id: EDGE04
+  name: "Login Test 🔐 with Unicode ñ á é í ó ú 中文 日本語 한국어"
+  feature: login
+  priority: high
+  platforms:
+    - iOS
+    - Android
+  regions:
+    - NNA
+    - NCI
+    - NMEX
+  tags: ["emoji-🎯", "unicode-测试", "español-ñ"]
+  created: '2026-01-29'
+  updated: '2026-01-29'
+  author: user_2
+  testmo_id: null
+description: |
+  Test case with international characters and emojis 🌍
+
+  Supports:
+  - Spanish: niño, señor, año
+  - Chinese: 测试用例 (test case)
+  - Japanese: テストケース
+  - Korean: 테스트 케이스
+  - Emoji: 🔐 🎯 ✅ ❌ 🚀
+preconditions:
+  - description: "Usuario tiene credenciales válidas 🔑"
+steps:
+  - id: 1
+    action: "Ingrese correo electrónico: usuario@ejemplo.com 📧"
+    expected: "Campo acepta caracteres españoles: ñ, á, é, í, ó, ú"
+  - id: 2
+    action: "输入密码 (Enter password) 🔒"
+    expected: "パスワードが受け入れられる (Password accepted)"
+  - id: 3
+    action: "Haga clic en 로그인 button ✅"
+    expected: "用户已登录 User logged in successfully 🎉"
