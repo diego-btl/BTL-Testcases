@@ -1,47 +1,59 @@
 metadata:
-  testmo_id: 64850
+  testmo_id: 64865
   id: TC001
-  name: "Tesla Pricing - Max Charge Limit Warning Banner"
+  name: Tesla Pricing - Max Charge Limit Warning Banner
   feature: tesla-pricing
   priority: high
   state: draft
-  platforms: [iOS, Android]
-  regions: [NNA]
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - NNA
   tags: []
-  custom_references: "86b7uey05"
-  created_at: "2026-01-29"
+  custom_references: 86b7uey05
+  created_at: '2026-01-29'
+description: 'Verify that the max charge limit warning banner displays correctly when
+  a charging station enforces an automatic charge stop at a specified state of charge
+  (SOC) percentage, and is hidden when no limit is set
 
-description: |
-  Verify that the max charge limit warning banner displays correctly when a charging station enforces an automatic charge stop at a specified state of charge (SOC) percentage, and is hidden when no limit is set
-
+  '
 preconditions:
-  - description: User is on Charge Station Details screen
-  - description: Feature flag "EnableTeslaPricing" is enabled
-  - description: User has selected a Tesla charging station with tariffPricing data
-
+- description: User is on Charge Station Details screen
+- description: Feature flag "EnableTeslaPricing" is enabled
+- description: User has selected a Tesla charging station with tariffPricing data
 steps:
-  - id: 1
-    action: View Charge Station Details screen where tariffPricing.data.maxChargeLimit is set to "80%"
-    expected: Warning banner displays with text "⚠️ Charging stops automatically at 80% SOC" | Banner is prominently displayed near the top of details screen
+- id: 1
+  action: View Charge Station Details screen where tariffPricing.data.maxChargeLimit
+    is set to "80%"
+  expected: Warning banner displays with text "⚠️ Charging stops automatically at
+    80% SOC" | Banner is prominently displayed near the top of details screen
+- id: 2
+  action: Navigate to a charging station where tariffPricing.data.maxChargeLimit is
+    set to "80.5%"
+  expected: Warning banner displays with text "⚠️ Charging stops automatically at
+    80.5% SOC" | Decimal percentage is rendered correctly
+- id: 3
+  action: Navigate to a charging station where tariffPricing.data.maxChargeLimit is
+    set to "80" (without percentage symbol)
+  expected: Warning banner displays correctly with the numeric value | System handles
+    missing percentage symbol gracefully
+- id: 4
+  action: Navigate to a charging station where tariffPricing.data.maxChargeLimit is
+    null or empty string
+  expected: Max charge limit warning banner does not display | Other station details
+    display normally
+- id: 5
+  action: Verify warning display for station with multiple connectors
+  expected: Warning is shown once at location level | Warning is not duplicated per
+    connector
+notes: 'Data source: tariffPricing.data.maxChargeLimit (top-level, location-based
+  field)
 
-  - id: 2
-    action: Navigate to a charging station where tariffPricing.data.maxChargeLimit is set to "80.5%"
-    expected: Warning banner displays with text "⚠️ Charging stops automatically at 80.5% SOC" | Decimal percentage is rendered correctly
-
-  - id: 3
-    action: Navigate to a charging station where tariffPricing.data.maxChargeLimit is set to "80" (without percentage symbol)
-    expected: Warning banner displays correctly with the numeric value | System handles missing percentage symbol gracefully
-
-  - id: 4
-    action: Navigate to a charging station where tariffPricing.data.maxChargeLimit is null or empty string
-    expected: Max charge limit warning banner does not display | Other station details display normally
-
-  - id: 5
-    action: Verify warning display for station with multiple connectors
-    expected: Warning is shown once at location level | Warning is not duplicated per connector
-
-notes: |
-  Data source: tariffPricing.data.maxChargeLimit (top-level, location-based field)
   Related schema task: 86b7wxy4f
+
   Warning should be location-level, not per-connector
+
   Test with various percentage formats (integer, decimal, with/without % symbol)
+
+  '
