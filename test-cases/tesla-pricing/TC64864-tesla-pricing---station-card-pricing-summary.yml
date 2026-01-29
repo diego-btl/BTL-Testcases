@@ -18,7 +18,10 @@ description: Verify that the collapsed pricing summary displays correctly on cha
   in a compact format
 preconditions:
 - description: User is on Charge screen with station list view
-- description: Feature flag "EnableTeslaPricing" is enabled
+- description: Vehicle enrolled with EmpAccountStatusEnum.ACTIVE
+- description: Feature flag "EnablePlugAndChargeFoundational" is enabled
+- description: Feature flag "EnablePlugAndCharge" is enabled
+- description: Feature flag "EnableTariffPricingV3" is enabled
 - description: Multiple Tesla charging stations with tariffPricing data are visible
     in the list
 steps:
@@ -49,3 +52,6 @@ steps:
   action: Test with station that has multiple pricing tiers or time-of-day pricing
   expected: Collapsed summary shows most useful pricing indicator (e.g., "From $0.35/kWh"
     or lowest rate) | Summary is clear despite complex pricing structure
+notes: |
+  Test account: nnaqa+2@bethinklabs.com (NNA STG)
+  Feature requires 4 feature flags + ACTIVE account status

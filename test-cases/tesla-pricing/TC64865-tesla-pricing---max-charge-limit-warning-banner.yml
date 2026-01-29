@@ -18,7 +18,10 @@ description: Verify that the max charge limit warning banner displays correctly 
   (SOC) percentage, and is hidden when no limit is set
 preconditions:
 - description: User is on Charge Station Details screen
-- description: Feature flag "EnableTeslaPricing" is enabled
+- description: Vehicle enrolled with EmpAccountStatusEnum.ACTIVE
+- description: Feature flag "EnablePlugAndChargeFoundational" is enabled
+- description: Feature flag "EnablePlugAndCharge" is enabled
+- description: Feature flag "EnableTariffPricingV3" is enabled
 - description: User has selected a Tesla charging station with tariffPricing data
 steps:
 - id: 1
@@ -45,3 +48,6 @@ steps:
   action: Verify warning display for station with multiple connectors
   expected: Warning is shown once at location level | Warning is not duplicated per
     connector
+notes: |
+  Test account: nnaqa+2@bethinklabs.com (NNA STG)
+  Feature requires 4 feature flags + ACTIVE account status

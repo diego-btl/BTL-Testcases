@@ -18,7 +18,10 @@ description: Verify that the expanded connector pricing breakdown displays idlin
   indicators, time-based charges, and proper handling of conditional fees
 preconditions:
 - description: User is on Charge Station Details screen with expanded connector view
-- description: Feature flag "EnableTeslaPricing" is enabled
+- description: Vehicle enrolled with EmpAccountStatusEnum.ACTIVE
+- description: Feature flag "EnablePlugAndChargeFoundational" is enabled
+- description: Feature flag "EnablePlugAndCharge" is enabled
+- description: Feature flag "EnableTariffPricingV3" is enabled
 - description: Tesla charging station has tariffPricing data with idling and/or congestion
     fees
 - description: Station has multiple connectors to test fee variations
@@ -65,3 +68,6 @@ steps:
   expected: Each connector shows its respective idling/congestion fees | Fees may
     differ by connector type | CCS and NACS connectors can have different fee structures
     | Fee differences are clearly visible to user
+notes: |
+  Test account: nnaqa+2@bethinklabs.com (NNA STG)
+  Feature requires 4 feature flags + ACTIVE account status

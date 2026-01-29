@@ -1,0 +1,60 @@
+metadata:
+  testmo_id: null
+  id: TC006
+  name: "Tesla Pricing - Account Status Validation"
+  feature: tesla-pricing
+  priority: high
+  state: draft
+  platforms: [iOS, Android]
+  regions: [NNA]
+  tags: [edge-case, bug-regression]
+  custom_references: "Slack discussion 2026-01-26"
+  created_at: "2026-01-29"
+
+description: |
+  Verify that Tesla Pricing features gracefully handle cases where
+  vehicle AccountStatus is not ACTIVE, preventing API triggering issues
+  discovered during development.
+
+  Context: Bug discovered via Slack - API was triggering when AccountStatus ≠ ACTIVE,
+  causing errors. Only vehicles with ACTIVE status should trigger TariffPricing API.
+
+preconditions:
+  - description: User is on Charge Station Details screen
+  - description: Vehicle enrolled but AccountStatus != ACTIVE (PENDING, INACTIVE, or null)
+  - description: Feature flag "EnablePlugAndChargeFoundational" is enabled
+  - description: Feature flag "EnablePlugAndCharge" is enabled
+  - description: Feature flag "EnableTariffPricingV3" is enabled
+  - description: User has selected a Tesla charging station
+
+steps:
+  - id: 1
+    action: View Charge Station Details with AccountStatus = PENDING
+    expected: TariffPricing API not called | Fallback UI displays (legacy pricing or message) | No crash or error dialog
+
+  - id: 2
+    action: View Charge Station Details with AccountStatus = INACTIVE
+    expected: TariffPricing features disabled | Legacy pricing shown (if available) | User can still view basic station info
+
+  - id: 3
+    action: View Charge Station Details with AccountStatus = null
+    expected: System handles null gracefully | Appropriate fallback behavior | No blank screen or crash
+
+  - id: 4
+    action: Verify error logging for non-ACTIVE status
+    expected: Appropriate error logged (not user-facing) | Analytics event captured | Helps debugging in production
+
+notes: |
+  Critical requirement discovered via Slack discussions (2026-01-26):
+  - Only call TariffPricing API when EmpAccountStatusEnum.ACTIVE = true
+  - Bug: API was triggering for PENDING/INACTIVE accounts causing errors
+
+  Test account: nnaqa+2@bethinklabs.com (NNA STG)
+
+  Business rule: Tesla Pricing requires ALL of:
+  1. EmpAccountStatusEnum.ACTIVE
+  2. EnablePlugAndChargeFoundational = true
+  3. EnablePlugAndCharge = true
+  4. EnableTariffPricingV3 = true
+
+  Related Slack context: Dev team discussion about middleware deployment

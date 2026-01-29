@@ -18,7 +18,10 @@ description: Verify that the Pricing Information Modal and Additional Informatio
   explanations, and terms, with proper navigation between modals
 preconditions:
 - description: User is on Charge Station Details screen
-- description: Feature flag "EnableTeslaPricing" is enabled
+- description: Vehicle enrolled with EmpAccountStatusEnum.ACTIVE
+- description: Feature flag "EnablePlugAndChargeFoundational" is enabled
+- description: Feature flag "EnablePlugAndCharge" is enabled
+- description: Feature flag "EnableTariffPricingV3" is enabled
 - description: User has selected a Tesla charging station with tariffPricing V3 data
 - description: Station has pricing data including energy fees, session fees, and additional
     information
@@ -50,3 +53,6 @@ steps:
   action: Test with station where tariffPricing.additionalInfo is null or empty
   expected: Pricing Information Modal displays normally | "Additional Information"
     link is hidden or disabled | No errors occur with missing additionalInfo
+notes: |
+  Test account: nnaqa+2@bethinklabs.com (NNA STG)
+  Feature requires 4 feature flags + ACTIVE account status

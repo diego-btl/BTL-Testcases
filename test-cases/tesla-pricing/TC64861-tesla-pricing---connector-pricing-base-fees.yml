@@ -18,7 +18,10 @@ description: Verify that the expanded connector pricing breakdown displays energ
   pricing structures, and proper rate unit display for each connector type
 preconditions:
 - description: User is on Charge Station Details screen with expanded connector view
-- description: Feature flag "EnableTeslaPricing" is enabled
+- description: Vehicle enrolled with EmpAccountStatusEnum.ACTIVE
+- description: Feature flag "EnablePlugAndChargeFoundational" is enabled
+- description: Feature flag "EnablePlugAndCharge" is enabled
+- description: Feature flag "EnableTariffPricingV3" is enabled
 - description: Tesla charging station has multiple connectors (CCS, NACS, J1772) with
     tariffPricing data
 - description: Station has both energy fees and session fees configured
@@ -60,3 +63,6 @@ steps:
   expected: Pricing section handles missing data gracefully | Error message or "Pricing
     unavailable" displays | No app crash or blank screen | Other connector info remains
     visible
+notes: |
+  Test account: nnaqa+2@bethinklabs.com (NNA STG)
+  Feature requires 4 feature flags + ACTIVE account status
