@@ -80,19 +80,32 @@ def export_from_testmo(project_id: int, folder_id: int, output_dir: Path, limit:
         if not cases:
             console.print("[yellow]No test cases found[/yellow]")
             return
-        
+
+        # Infer feature from output_dir if not explicitly provided
+        if not feature:
+            # Extract feature from output path like "test-cases/tesla-pricing" → "tesla-pricing"
+            output_path_str = str(output_dir)
+
+            if output_path_str != "test-cases" and output_path_str != ".":
+                # Use the last part of the path as feature name
+                feature = Path(output_dir).name
+            else:
+                feature = "general"
+
+        console.print(f"[blue]Using feature:[/blue] {feature}")
+
         # Convert to YAML format
         yaml_cases = []
-        
+
         with Progress(
             SpinnerColumn(),
             TextColumn("[progress.description]{task.description}"),
             console=console
         ) as progress:
             task = progress.add_task("Converting to YAML format...", total=len(cases))
-            
+
             for case in cases:
-                yaml_case = converter.testmo_to_yaml(case, feature=feature or "general")
+                yaml_case = converter.testmo_to_yaml(case, feature=feature)
                 yaml_cases.append(yaml_case)
                 progress.advance(task)
         
