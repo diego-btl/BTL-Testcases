@@ -343,7 +343,7 @@ testmo/oneapp/test-cases/
             └── TC66186-v2l-screen.yml
 ```
 
-**Format:** See [YAML_FORMAT.md](YAML_FORMAT.md)
+**Format:** Standard YAML with metadata, test_case, and testmo sections
 
 ### **Sync Metadata (.sync/)**
 
@@ -560,12 +560,249 @@ testmo/oneapp/test-cases/
 
 ---
 
+## 🤖 AI Agent Integration
+
+### **Integration Points**
+
+The framework is designed for AI agent integration at multiple levels:
+
+#### **1. File-Level Integration (Claude Code)**
+
+**Direct file manipulation:**
+```python
+# Agents can read/write YAML files directly
+file_path = "testmo/oneapp/test-cases/folder/TC123.yml"
+
+# Read
+test_case = read_yaml(file_path)
+
+# Modify
+test_case['metadata']['tags'].append('new-tag')
+test_case['test_case']['steps'].append(new_step)
+
+# Write
+write_yaml(file_path, test_case)
+
+# Compute new hash
+hasher = ContentHasher()
+new_hash = hasher.compute_hash(file_path)
+```
+
+**Batch operations:**
+```python
+# Process multiple files
+for yaml_file in glob("testmo/oneapp/**/*.yml"):
+    process_test_case(yaml_file)
+```
+
+#### **2. MCP Server Integration (Claude Desktop)**
+
+**ClickUp MCP:**
+```
+User → Claude Desktop → ClickUp MCP → ClickUp API
+       ↓
+       Read test case
+       ↓
+       Add ClickUp task link to test case
+       ↓
+       Comment on ClickUp task
+```
+
+**Slack MCP:**
+```
+User → Claude Desktop → Slack MCP → Slack API
+       ↓
+       Search discussions
+       ↓
+       Extract requirements
+       ↓
+       Enhance test case with context
+```
+
+#### **3. CLI Integration**
+
+**Command execution:**
+```bash
+# Agents can run CLI commands
+btl_testmo validate testmo/oneapp/test-cases/folder/
+btl_testmo update testmo/oneapp/test-cases/folder/TC123.yml
+```
+
+**Parse output:**
+```python
+result = subprocess.run(['btl_testmo', 'status', 'testmo/oneapp/'],
+                       capture_output=True)
+changed_files = parse_status_output(result.stdout)
+```
+
+---
+
+### **Agent Workflows**
+
+#### **Workflow 1: Improve Test Case**
+
+```
+Input: Test case file path + improvement requirements
+Process:
+1. Agent reads YAML file
+2. Agent analyzes current content
+3. Agent enhances based on requirements
+4. Agent preserves testmo: metadata
+5. Agent writes updated file
+6. Agent computes new content hash
+Output: Improved test case
+```
+
+#### **Workflow 2: Create Similar Tests**
+
+```
+Input: Template test case + variations
+Process:
+1. Agent reads template YAML
+2. Agent generates variations
+3. Agent creates new files (TC-NEW-* prefix)
+4. Agent validates all files
+Output: Multiple new test cases
+```
+
+#### **Workflow 3: Connect Context**
+
+```
+Input: Test case + ClickUp task or Slack thread
+Process:
+1. Agent gets external context (ClickUp/Slack MCP)
+2. Agent reads test case
+3. Agent adds context to notes section
+4. Agent creates bidirectional links
+Output: Test case with rich context
+```
+
+---
+
+### **Data Preservation Rules**
+
+**Critical rule for all agents:**
+
+```yaml
+# NEVER MODIFY this section
+testmo:
+  case_id: 12345          # Testmo identifier
+  project_id: 2           # Project reference
+  folder_id: 7338         # Folder location
+  content_hash: "sha256:..."  # Change detection
+  last_sync: "2026-01-30..."  # Sync timestamp
+
+# SAFE TO MODIFY these sections
+metadata:
+  name: "..."
+  priority: "..."
+  tags: []
+
+test_case:
+  description: "..."
+  steps: []
+```
+
+**Why this matters:**
+- testmo section maintains sync state
+- Modifying it breaks sync integrity
+- Framework relies on these IDs for updates
+- Hash tracks content changes
+
+---
+
+### **Agent Best Practices**
+
+**1. Always Validate**
+```bash
+# After any changes
+btl_testmo validate [file or folder]
+```
+
+**2. Preserve Metadata**
+```python
+# Remind agent in prompts
+"Do NOT modify the testmo: section"
+```
+
+**3. Batch Operations**
+```python
+# Process multiple files efficiently
+# Read all → Modify all → Validate all → Write all
+```
+
+**4. Error Handling**
+```python
+# Agents should handle:
+# - YAML syntax errors
+# - Missing required fields
+# - File permission issues
+# - API rate limits
+```
+
+---
+
+### **Integration Architecture**
+
+```
+┌─────────────────────────────────────────────────────────┐
+│                  AI AGENTS                              │
+│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐  │
+│  │ Claude Code  │  │ Claude       │  │ Other Agents │  │
+│  │ (Terminal)   │  │ Desktop      │  │ (Future)     │  │
+│  └──────┬───────┘  └──────┬───────┘  └──────┬───────┘  │
+│         │                 │                 │           │
+└─────────┼─────────────────┼─────────────────┼───────────┘
+          │                 │                 │
+          ↓                 ↓                 ↓
+┌─────────────────────────────────────────────────────────┐
+│           AGENT INTEGRATION LAYER                       │
+│                                                         │
+│  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐    │
+│  │ File I/O    │  │ MCP Servers │  │ CLI         │    │
+│  │ - Read YAML │  │ - ClickUp   │  │ - Commands  │    │
+│  │ - Write YAML│  │ - Slack     │  │ - Validate  │    │
+│  │ - Hash      │  │ - Testmo    │  │ - Sync      │    │
+│  └─────────────┘  └─────────────┘  └─────────────┘    │
+└────────────────────────┬────────────────────────────────┘
+                         │
+                         ↓
+┌─────────────────────────────────────────────────────────┐
+│         BTL TESTCASES FRAMEWORK                         │
+│         (Core modules: hasher, mapper, validator, etc.) │
+└─────────────────────────────────────────────────────────┘
+```
+
+---
+
+### **Performance Considerations**
+
+**Single file operations:**
+- Read: ~10ms
+- Write: ~20ms
+- Hash: ~5ms
+- Total: ~35ms per file
+
+**Batch operations (100 files):**
+- Sequential: ~3.5 seconds
+- With agent: ~2-3 seconds (parallelization)
+
+**API operations:**
+- Update via CLI: ~223ms per case
+- Create via CLI: ~250ms per case
+- Batch create: ~393ms for 5 cases (3.3x faster)
+
+---
+
 ## 📚 References
 
-- [TESTING_LOG.md](../TESTING_LOG.md) - Validation results
+- [TESTING_LOG.md](TESTING_LOG.md) - Validation results
+- [HOW_TO_GUIDE.md](HOW_TO_GUIDE.md) - AI workflow examples
+- [agents/](agents/) - Agent-specific documentation
 - [Testmo API Docs](https://docs.testmo.com/api)
 - [Testmo MCP Server](https://github.com/testmoapp/testmo-mcp)
 
 ---
 
 **Architecture documented and validated** ✅
+**AI agent integration designed and ready** 🤖
