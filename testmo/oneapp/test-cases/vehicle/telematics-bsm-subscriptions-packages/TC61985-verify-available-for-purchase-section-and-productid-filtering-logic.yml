@@ -1,0 +1,33 @@
+metadata:
+  id: TC61985
+  name: Verify “Available for Purchase” Section and ProductID Filtering Logic
+  feature: test-cases
+  priority: critical
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-11-12'
+  updated: '2025-12-09'
+  author: user_15
+  testmo_id: 61985
+  folder_id: 3863
+preconditions:
+- description: A VIN >= MY26 is linked to the user.
+- description: EnableTelematicsBSM = True.
+steps:
+- id: 1
+  action: Navigate to Vehicle > Subscription Packages.
+  expected: Verify VehicleSubscriptions and ProductCatalog APIs are called
+- id: 2
+  action: From VehicleSubscriptions (active). -> From ProductCatalog (available).
+  expected: If a ProductID exists in VehicleSubscriptions, it must NOT appear in the
+    Available for Purchase list. | If a ProductID is not found in VehicleSubscriptions,
+    it must appear in the list.
+- id: 3
+  action: Go to “Available for Purchase”
+  expected: Section contains one card per valid package. | No duplicates between Active
+    Packages and Available for Purchase. | Each visible card correctly shows the package
+    name, price, and “Learn More” CTA.

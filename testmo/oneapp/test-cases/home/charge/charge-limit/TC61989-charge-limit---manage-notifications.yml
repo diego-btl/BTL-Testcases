@@ -1,0 +1,41 @@
+metadata:
+  id: TC61989
+  name: Charge Limit - Manage Notifications
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-11-14'
+  updated: '2025-12-02'
+  author: user_25
+  testmo_id: 61989
+  folder_id: 6780
+preconditions:
+- description: User has an EV AVK2 vehicle
+- description: EnableChargeLimit FF is true
+- description: User is on the Charge Limit screen
+steps:
+- id: 1
+  action: Tap the Manage Notifications button
+  expected: ReminderNotificationsAfterLeavingVehicle API is called | NotificationPreferences
+    API is called | User is redirected to the Notification Preferences screen | The
+    loading state is displayed
+- id: 2
+  action: ReminderNotificationsAfterLeavingVehicle API and NotificationPreferences
+    API stop loading, returning the proper responses
+  expected: The loading state is dismissed
+- id: 3
+  action: Expand/Collapse the arrow for the Charging Status group
+  expected: The group is expanded/collapsed | Notification options (push, email, sms)
+    are shown according to the NotificationPreferences API response
+- id: 4
+  action: Toggle ON/OFF any of the notifications under the notification group
+  expected: SetNotificationPreferences API is triggered, returning the updated value
+    for the updated notification status | Toggle state is updated accordingly
+- id: 5
+  action: Tap the Back button
+  expected: User should return to the Charge Limit screen

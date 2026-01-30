@@ -1,0 +1,16 @@
+metadata:
+  id: TC01641
+  name: '[WIP] Create Specific Action Push Notifications TC'
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-09-01'
+  updated: '2025-01-15'
+  author: user_2
+  testmo_id: 1641
+  folder_id: 73

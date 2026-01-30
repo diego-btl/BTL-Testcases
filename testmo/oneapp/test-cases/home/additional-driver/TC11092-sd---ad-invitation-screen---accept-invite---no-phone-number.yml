@@ -1,0 +1,45 @@
+metadata:
+  id: TC11092
+  name: SD - AD Invitation Screen - Accept invite - No Phone Number
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-11-27'
+  updated: '2025-09-19'
+  author: user_4
+  testmo_id: 11092
+  folder_id: 411
+description: https://www.pivotaltracker.com/story/show/186399484
+preconditions:
+- description: User has an account with a pending AD invite
+steps:
+- id: 1
+  action: 'Mock VehiclesStaticData so that user.mobileNumber is null -> Mock UserMobileNumber
+    [iOS] with the following:'
+  expected: See expected results
+- id: 2
+  action: Login to the account
+  expected: User is able to login to the account and see the Additional Driver Invite
+    card on the home screen
+- id: 3
+  action: Tap on the Additional Driver Invite card
+  expected: User should see the Pending Invitation screen with the pending invite
+- id: 4
+  action: Tap on the Pending Invite
+  expected: User should see a loading spinner, then the invite is shown on the Invitation
+    screen
+- id: 5
+  action: Tap on Accept Invite
+  expected: User should see a Phone Number Not Found modal with options - Cancel/Update
+    Number
+- id: 6
+  action: Tap on Cancel
+  expected: User should see error modal dismiss and remain on the Invitation screen
+- id: 7
+  action: Tap on Update Number
+  expected: Nissan https://www.nissanusa.com/mynissan/profile.html | Infiniti https://www.infinitiusa.com/myinfiniti/profile.html

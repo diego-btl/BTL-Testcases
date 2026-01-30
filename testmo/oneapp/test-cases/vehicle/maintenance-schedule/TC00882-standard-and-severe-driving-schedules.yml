@@ -1,0 +1,21 @@
+metadata:
+  id: TC00882
+  name: Standard and Severe Driving Schedules
+  feature: test-cases
+  priority: critical
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-04'
+  updated: '2025-10-11'
+  author: user_7
+  testmo_id: 882
+  folder_id: 91
+steps:
+- id: 1
+  action: Switch between standard and severe driving schedules
+  expected: User should see the maintenance card and milestones update accordingly.
+    The selected driving schedule should be saved in the local cache.

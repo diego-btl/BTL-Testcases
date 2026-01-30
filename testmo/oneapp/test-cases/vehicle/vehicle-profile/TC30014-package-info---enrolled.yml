@@ -1,0 +1,22 @@
+metadata:
+  id: TC30014
+  name: Package Info - Enrolled
+  feature: test-cases
+  priority: critical
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-01-21'
+  updated: '2025-10-10'
+  author: user_17
+  testmo_id: 30014
+  folder_id: 90
+preconditions:
+- description: User's vehicle is currently enrolled
+steps:
+- id: 1
+  action: Tap Package Info
+  expected: User should see the Package Info screen

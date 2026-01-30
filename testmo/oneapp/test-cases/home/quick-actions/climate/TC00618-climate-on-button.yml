@@ -1,0 +1,22 @@
+metadata:
+  id: TC00618
+  name: Climate On Button
+  feature: test-cases
+  priority: critical
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-01'
+  updated: '2025-09-22'
+  author: user_2
+  testmo_id: 618
+  folder_id: 62
+preconditions:
+- description: User has an EV
+steps:
+- id: 1
+  action: User is in the Home screen
+  expected: The "Climate On" button is present in the Telematics row

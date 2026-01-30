@@ -1,0 +1,37 @@
+metadata:
+  id: TC36686
+  name: Filters - Plug & Charge toggle
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-05-06'
+  updated: '2025-12-19'
+  author: user_25
+  testmo_id: 36686
+  folder_id: 46
+preconditions:
+- description: 'FF "GrantFullPlugAndCharge": true'
+- description: User is on the Map screen
+- description: AccountStatus is ACTIVE
+steps:
+- id: 1
+  action: Tap on Filters button
+  expected: User should see the Filters screen opens as a splash page
+- id: 2
+  action: 'Scroll to the Charge Station Preferences section (AccountStatus API returns
+    "pncStatus": "FAILED" or "pncStatus": "INSTALLING" OR "pncStatus": "READY" OR
+    "pncStatus": "RENEWING" OR "pncStatus": "PENDING")'
+  expected: The Plug & Charge toggle is present in the Charge Station Preferences
+    section in DISABLED state by default
+- id: 3
+  action: Enable the Plug & Charge toggle and tap APPLY button
+  expected: Filters splash screen should be closed, user is navigated to the Map screen
+- id: 4
+  action: On the Map screen tap Charge Stations ePOI
+  expected: 'LocationDetails API is triggered with request including the following
+    parameter:"pncStationsOnly": true'

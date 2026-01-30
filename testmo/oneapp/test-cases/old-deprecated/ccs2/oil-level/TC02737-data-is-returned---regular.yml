@@ -1,0 +1,28 @@
+metadata:
+  id: TC02737
+  name: Data is returned - Regular
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-09-08'
+  updated: '2026-01-06'
+  author: user_3
+  testmo_id: 2737
+  folder_id: 415
+preconditions:
+- description: The user has an AVK2 vehicle
+- description: Mock the VehicleDynamicData call response
+- description: 'Android:'
+- description: '"oilLevel": { "level": 5, "status": "REGULAR", "lastUpdatedAt": "2024-01-27T17:23:06.000Z"
+    },'
+- description: 'iOS:'
+steps:
+- id: 1
+  action: 'oilLevel data returns:- oilLevel.level: 0 - 8- oilLevel.status: "REGULAR"'
+  expected: User should see oil level bar filled to the corresponding levelUser should
+    see oil level in green with status Normal

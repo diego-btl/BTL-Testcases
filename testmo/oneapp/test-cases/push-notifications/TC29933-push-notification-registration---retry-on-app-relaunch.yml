@@ -1,0 +1,29 @@
+metadata:
+  id: TC29933
+  name: Push Notification Registration - Retry on App Relaunch
+  feature: test-cases
+  priority: critical
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-01-13'
+  updated: '2025-09-19'
+  author: user_15
+  testmo_id: 29933
+  folder_id: 73
+preconditions:
+- description: 'Feature Flag: EnableNewMutationForPushNotificationRegistrationEnabled:
+    true --> RegisterDeviceForPushNotifications endpoint'
+- description: No token is cached.
+steps:
+- id: 1
+  action: Login to app and breakpoint RegisterDeviceForPushNotifications to fail including
+    all retries
+  expected: Verify RegisterDeviceForPushNotifications shows as failed
+- id: 2
+  action: Close the app and relaunch
+  expected: Verify RegisterDeviceForPushNotifications is trigger again after a cold
+    start with the retry logic applied.

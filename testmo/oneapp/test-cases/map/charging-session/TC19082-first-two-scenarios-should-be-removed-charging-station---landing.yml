@@ -1,0 +1,33 @@
+metadata:
+  id: TC19082
+  name: '[first two scenarios should be removed] Charging Station - Landing'
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2024-06-06'
+  updated: '2024-12-13'
+  author: user_6
+  testmo_id: 19082
+  folder_id: 2442
+description: DesignsStory
+preconditions:
+- description: firebase config is enabled and accountStatus is returning `ACTIVE`
+steps:
+- id: 1
+  action: 'User should see the following:'
+  expected: Charging Session header | Start Charger card | Charge Status card | Refresh
+    button
+- id: 2
+  action: 'Start Charger Card should have:'
+  expected: Start Charger header | Short description prompting user to enter ID |
+    Charger ID subheader | Charger ID entry field | Start Charger CTA (should be disabled
+    until user charger id is entered)
+- id: 3
+  action: 'Charge Status Card should have:'
+  expected: Charge Status subheader | Mileage subheader | Battery level percentage
+    | Battery level progress bar | Plug and Charge status

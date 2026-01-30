@@ -1,0 +1,33 @@
+metadata:
+  id: TC00617
+  name: Horn - Success
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-01'
+  updated: '2025-09-22'
+  author: user_2
+  testmo_id: 617
+  folder_id: 61
+preconditions:
+- description: User is on the Home screen
+- description: User has sent a FlashLightsHorn request
+- description: 'CheckHornLightServiceRequest API:'
+- description: '{'
+- description: '"data": {'
+- description: '"checkHornLightServiceRequest": {'
+- description: '"__typename": "ServiceRequestResult",'
+- description: '"status": "SUCCESS"'
+- description: '}'
+- description: '}'
+- description: '}'
+steps:
+- id: 1
+  action: CheckHornLightServiceRequest request has been resolved into a success
+  expected: '"Horn" and "Lights" buttons are changed to the default state | A success
+    toast "Horn activated on <year and model>" is displayed at the bottom of the screen'

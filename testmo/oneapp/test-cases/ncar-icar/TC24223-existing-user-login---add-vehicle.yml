@@ -1,0 +1,27 @@
+metadata:
+  id: TC24223
+  name: Existing user login - add vehicle
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2024-08-28'
+  updated: '2024-10-17'
+  author: user_4
+  testmo_id: 24223
+  folder_id: 3081
+preconditions:
+- description: User has an existing icar account
+steps:
+- id: 1
+  action: 1. Login to the existing user account 2. Scroll through the T&C 3. Accept
+    Terms and Conditions and tap on Save 4. Mock any error for icar add vehicle
+  expected: 1. User should see the add vehicle screen with a loading spinner User
+    should see the Connected Terms and Conditions screen 2. User is able to scroll
+    through the T&C 3. User should see a loading spinner while the vehicle is being
+    added 4. User should be returned to the add vehicle screen with corresponding
+    error text shown User should no longer be in the icar add vehicle flow

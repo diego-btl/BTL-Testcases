@@ -1,0 +1,34 @@
+metadata:
+  id: TC61960
+  name: Climate on
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-11-10'
+  updated: '2025-11-14'
+  author: user_24
+  testmo_id: 61960
+  folder_id: 6778
+steps:
+- id: 1
+  action: Go to Climate screen -> Tap on Turn on Climte and Accessories. -> OR ->
+    Go to Climate screen -> Select a temperature and toggle the climate settings ->
+    Tap on Turn on Climte and Accessories.
+  expected: 'User should see Turn Climate On button disable and status shows loading
+    stateUser should see a toast message that transitions from (3 seconds each):Contacting
+    {vehicle year, model} to turn {on/off} climate...Waking {vehicle year, model}
+    to turn {on/off} climate...Initiating climate {on/off} for {vehicle year, model}...
+    | User should see a toast saying''{vehicle model} climate turned {on/off}.'' (5
+    seconds)User should see button update to Turn Climate off button and temperature
+    dial buttons be disabledUser should see Climate status update to show climate
+    on the state (On label, temperature dial shows gradient) | On Home screen, The
+    Climate button on telematics says Climate On | The Climate card says Climate On
+    with the subtext ''Setting to <set temperature> F for NNA, C for NCI | NOTE: If
+    you choose to change the climate or climate settings but NOT MAKE IT DEFAULT,
+    the climate settings will be in effect. You can check the Request for StartClimate
+    to verify the changes you made are sent'

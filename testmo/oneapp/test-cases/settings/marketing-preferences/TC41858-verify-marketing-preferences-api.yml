@@ -1,0 +1,28 @@
+metadata:
+  id: TC41858
+  name: Verify Marketing Preferences API
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-06-09'
+  updated: '2025-06-10'
+  author: user_15
+  testmo_id: 41858
+  folder_id: 5339
+preconditions:
+- description: '"EnableNCIMarketingPreferences": "true" FF should be on'
+- description: Connect the device to Proxyman to check the APIs calls
+steps:
+- id: 1
+  action: Login to app > go to Settings > Marketing Preferences
+  expected: Verify MarketingPreferences call has been made, and the values from each
+    section match accordingly with the retrieved response.
+- id: 2
+  action: Mock MarketingPreferences to fail.
+  expected: 'Verify that an error modal is shown: (this is only for iOS), Android
+    displays the regular Something went wrong modal.'

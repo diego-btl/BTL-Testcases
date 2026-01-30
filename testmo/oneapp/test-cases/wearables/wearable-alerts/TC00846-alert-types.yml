@@ -1,0 +1,23 @@
+metadata:
+  id: TC00846
+  name: Alert Types
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-01'
+  updated: '2025-09-19'
+  author: user_2
+  testmo_id: 846
+  folder_id: 77
+preconditions:
+- description: User has at least one vehicle in the garage
+steps:
+- id: 1
+  action: Go to Alerts screen
+  expected: User should be able to view a list of all 4 alert categories and see the
+    toggle status of the valet alert

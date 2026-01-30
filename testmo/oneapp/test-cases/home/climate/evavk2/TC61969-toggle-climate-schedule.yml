@@ -1,0 +1,25 @@
+metadata:
+  id: TC61969
+  name: Toggle Climate Schedule
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-11-10'
+  updated: '2025-11-10'
+  author: user_24
+  testmo_id: 61969
+  folder_id: 6778
+preconditions:
+- description: User is on Climate screen with existing climate schedule
+steps:
+- id: 1
+  action: Tap to toggle climate schedule on/off
+  expected: 'User should see loading spinner while climate schedule is togglingwith
+    all 3 toasts showing - Contacting, Waking, Inititating. User should see toggle
+    climate state and a success toast if toggling is successfulNote: If toggling schedule
+    fails, user should see a failure toast with toggle state unchanged'

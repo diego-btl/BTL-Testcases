@@ -1,0 +1,29 @@
+metadata:
+  id: TC32505
+  name: Do not display YouTube videos
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-04-03'
+  updated: '2026-01-30'
+  author: user_15
+  testmo_id: 32505
+  folder_id: 4164
+description: The scope of this test case is to validate the correct functioning of
+  the embedded YouTube video when FF are enabled. Nissan NCI will be the only brand
+  and region showing the videos; INF NCI will not display themiOS[NCESI] Embed Youtube
+  video in catalogue page for Nissan brand - 2/18ANDROID[NCESI] Embed Youtube video
+  in catalogue page for Nissan brand - 2/18
+preconditions:
+- description: 'EnableNcesiServiceContracts: true'
+- description: 'EnableNcesiCatalogue: false'
+steps:
+- id: 1
+  action: Login to NIS app > Go to Home screen > Tap on Nissan Protection
+  expected: Verify user is led to the Nissan Protection screen and View all Nissan
+    Protection Products cta is not displayed

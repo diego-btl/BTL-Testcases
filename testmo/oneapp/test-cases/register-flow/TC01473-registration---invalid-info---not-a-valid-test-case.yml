@@ -1,0 +1,26 @@
+metadata:
+  id: TC01473
+  name: Registration - Invalid info - NOT A VALID TEST CASE
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-28'
+  updated: '2025-09-19'
+  author: user_2
+  testmo_id: 1473
+  folder_id: 43
+preconditions:
+- description: User is on the final registration screen with info that will trigger
+    error from backend (ex. city name with special characters or numbers)
+steps:
+- id: 1
+  action: Enter valid matching passwords2. Check conditions box3. Tap Create Account
+  expected: 'User should see 3 green checkmarks in password criteria2. User should
+    see enabled Create Account button3. User is brought to the relevant screen and
+    shown the errorNote: All previously filled out info should be preserved except
+    for the password fields'

@@ -1,0 +1,49 @@
+metadata:
+  id: TC28442
+  name: Data Anniversary - Turn On Anniversary Mode
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2024-11-22'
+  updated: '2026-01-21'
+  author: user_2
+  testmo_id: 28442
+  folder_id: 7144
+description: Validates "Turn On Anniversary Mode" button functionality on welcome
+  message screen.
+preconditions:
+- description: EnableOwnerAnniversary FF = true
+- description: isAnniversary = true
+- description: anniversaryYear = 1, 2, 3, 4, or 5
+- description: VIN is NOT lost/stolen, finance vehicle, or pending
+- description: User has NOT seen anniversary message for this VIN at current anniversary
+    year
+- description: User is logged in
+- description: User is on welcome message screen
+steps:
+- id: 1
+  action: Tap TURN ON ANNIVERSARY MODE button
+  expected: 'User is redirected to Home screen | Animation plays based on time of
+    day: Day time (6:01 AM - 11:59 PM): Confetti animation plays once | Night time
+    (12:00 AM - 6:00 AM): Fireworks animation loops 3 times'
+- id: 2
+  action: Navigate to Settings screen
+  expected: Anniversary theme toggle is displayed under Theme section | Toggle is
+    in ON position (green) | Expiry date text Expiring [date] is displayed in red
+    below toggle label
+- id: 3
+  action: Navigate to any other screen (e.g., Vehicle screen), then return to Home
+    screen
+  expected: 'Anniversary animation plays again based on time of day: Day time (6:01
+    AM - 11:59 PM): Confetti animation plays once | Night time (12:00 AM - 6:00 AM):
+    Fireworks animation loops 3 times'
+- id: 4
+  action: From Home screen, background the app, then foreground
+  expected: 'User returns to Home screen | Anniversary animation plays again based
+    on time of day: Day time (6:01 AM - 11:59 PM): Confetti animation plays once |
+    Night time (12:00 AM - 6:00 AM): Fireworks animation loops 3 times'

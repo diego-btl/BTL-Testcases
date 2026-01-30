@@ -1,0 +1,34 @@
+metadata:
+  id: TC02825
+  name: Capabilities - Accessories Details - Window Status
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-09-11'
+  updated: '2024-10-17'
+  author: user_4
+  testmo_id: 2825
+  folder_id: 49
+description: https://www.pivotaltracker.com/story/show/185793703
+preconditions:
+- description: AVK2 vehicle
+steps:
+- id: 1
+  action: Mock capabilities so that windowStatus is null -> Go to Notification Preferences
+    and view Reminder After Leave section
+  expected: User should not see option for Window Open
+- id: 2
+  action: 'Mock capabilities so that windowStatus is disabled -> "windowStatus": {"__typename":
+    "WindowStatusAccessoryCapability","enabled": false} -> Go to Notification Preferences
+    and view Reminder After Leave section'
+  expected: User should not see option for Window Open
+- id: 3
+  action: 'Mock capabilities so that windowStatus is enabled -> "windowStatus": {"__typename":
+    "WindowStatusAccessoryCapability","enabled": true} -> Go to Notification Preferences
+    and view Reminder After Leave section'
+  expected: User should see option for Window Open

@@ -1,0 +1,23 @@
+metadata:
+  id: TC00540
+  name: Demo Mode - Landing Page
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-01'
+  updated: '2026-01-07'
+  author: user_2
+  testmo_id: 540
+  folder_id: 6799
+preconditions:
+- description: Fresh installation or app cache cleared
+- description: User is already on the Landing Page
+steps:
+- id: 1
+  action: Tap on Demo Mode button
+  expected: User should be taken to the demo mode home screen

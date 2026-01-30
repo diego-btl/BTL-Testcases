@@ -1,0 +1,26 @@
+metadata:
+  id: TC01589
+  name: Reorder destinations
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-28'
+  updated: '2025-12-02'
+  author: user_2
+  testmo_id: 1589
+  folder_id: 101
+preconditions:
+- description: User is on Create a Route screen
+- description: Have multiple stops added
+steps:
+- id: 1
+  action: Click the Edit button -> Drag on the 3 bars next to a destination field
+    -> Drag and drop the stops as your desire
+  expected: User should be able to reorder the destination fields | The stops should
+    be reorganized as users prefers | The new stop dragged should appear in the new
+    position that was dropped | The UI should allow to move them to any specific position

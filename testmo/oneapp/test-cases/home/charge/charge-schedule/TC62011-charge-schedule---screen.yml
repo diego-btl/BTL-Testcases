@@ -1,0 +1,31 @@
+metadata:
+  id: TC62011
+  name: Charge Schedule - screen
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-11-21'
+  updated: '2025-11-21'
+  author: user_25
+  testmo_id: 62011
+  folder_id: 6781
+preconditions:
+- description: User has an EV/EV2
+- description: User is on the Manage EV screen
+- description: There're 0, 1 or 2 charge schedules created
+steps:
+- id: 1
+  action: Tap the 'Add' button on the 'Scheduled' card
+  expected: User is redirected to the Charge Schedule screen
+- id: 2
+  action: Check the UI elements on the Charge Schedule screen
+  expected: Charge Schedule screen:- Charge Schedule header- back button (shevron)-
+    Start Time dropdown (--)- End Time dropdown (--)- Quick options section with Every
+    Day, Weekdays, and Weekends buttons (all non-selected by default)- Days of the
+    Week section with days buttons from Su to Sa (all non-selected by default)- CREATE
+    SCHEDULE CTA (disabled by default)

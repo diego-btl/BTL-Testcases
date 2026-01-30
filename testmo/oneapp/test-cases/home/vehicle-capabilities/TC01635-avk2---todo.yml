@@ -1,0 +1,16 @@
+metadata:
+  id: TC01635
+  name: AVK2 - todo
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-09-01'
+  updated: '2024-10-17'
+  author: user_4
+  testmo_id: 1635
+  folder_id: 54

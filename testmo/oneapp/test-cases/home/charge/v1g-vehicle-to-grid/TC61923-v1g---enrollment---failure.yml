@@ -1,0 +1,46 @@
+metadata:
+  id: TC61923
+  name: V1G - Enrollment - FAILURE
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-11-03'
+  updated: '2026-01-18'
+  author: user_25
+  testmo_id: 61923
+  folder_id: 6755
+description: CANCELLED or NOT_ENROLLED V1G statuses mean that the user is eligible,
+  but needs to opt-in to start getting the full experience
+preconditions:
+- description: Nissan NNA and NCI only
+- description: EV or EV AVK2 only
+- description: PD only
+- description: '"v1GMonitoredChargingAccountStatus": "CANCELLED" or "NOT_ENROLLED"'
+steps:
+- id: 1
+  action: User is on the Optimize screen -> Tap the 'Activate Now' button
+  expected: The loading state is displayed (Processing your enrollment) | The V1GEnrollMonitoredChargingPlan
+    API is triggered
+- id: 2
+  action: 'Breakpoint and abort the V1GEnrollMonitoredChargingPlan API or mock it
+    to return "data": null'
+  expected: The SWW modal with 'Ok' button is displayed
+- id: 3
+  action: Tap the 'Ok' button
+  expected: The modal is dismissed | User remains on the same (Optimize) screen
+- id: 4
+  action: Navigate to the Insights screen -> Tap the 'Activate Now' button
+  expected: The loading state is displayed (Processing your enrollment) | The V1GEnrollMonitoredChargingPlan
+    API is triggered
+- id: 5
+  action: 'Breakpoint and abort the V1GEnrollMonitoredChargingPlan API or mock it
+    to return "data": null'
+  expected: The SWW modal with 'Ok' button is displayed
+- id: 6
+  action: Tap the 'Ok' button
+  expected: The modal is dismissed | User remains on the same (Insights) screen

@@ -1,0 +1,21 @@
+metadata:
+  id: TC00827
+  name: Vehicle Query
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-01'
+  updated: '2024-10-17'
+  author: user_2
+  testmo_id: 827
+  folder_id: 74
+steps:
+- id: 1
+  action: 1. Log in to an account 2. Background and foreground the app to any screen
+  expected: '1. App should query the following vehicle data: model, vin, image, hasTelematics,
+    capabilities, nickname 2. App should query the same data'

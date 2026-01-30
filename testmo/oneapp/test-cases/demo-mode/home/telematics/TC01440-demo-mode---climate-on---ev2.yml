@@ -1,0 +1,30 @@
+metadata:
+  id: TC01440
+  name: Demo Mode - Climate On - EV2
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-28'
+  updated: '2025-12-18'
+  author: user_2
+  testmo_id: 1440
+  folder_id: 6816
+preconditions:
+- description: User has EV2 selected
+steps:
+- id: 1
+  action: Tap the 'Climate On' CTA
+  expected: Contacting year, model to turn on climate... | Waking year, model to turn
+    on climate... | Initiating climate on for year, model... | year, model climate
+    turned on
+- id: 2
+  action: Go to Hero image
+  expected: Observe Climate icon is displayed
+- id: 3
+  action: Scroll to the Climate card
+  expected: 'Card title: Climate On | Subtitle: Setting to 75 F'

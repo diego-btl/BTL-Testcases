@@ -1,0 +1,49 @@
+metadata:
+  id: TC61920
+  name: V1G - Existing User Flow - FAILURE
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-11-03'
+  updated: '2025-11-05'
+  author: user_25
+  testmo_id: 61920
+  folder_id: 6755
+preconditions:
+- description: Nissan NNA and NCI only
+- description: EV or EV AVK2 only
+- description: PD only
+- description: '"v1GMonitoredChargingAccountStatus": "ACTIVE"'
+steps:
+- id: 1
+  action: The app is fresh installed -> Navigate to the Charge > Optimize screen
+  expected: V1GTokenizedUrl API is triggered | The loading state is displayed
+- id: 2
+  action: Breakpoint and abort the V1GTokenizedUrl API
+  expected: The error state is displayed per design
+- id: 3
+  action: Tap 'Refresh' button
+  expected: The loading state is displayed ('Retrieving your data') | The V1GTokenizedUrl
+    API is triggered again
+- id: 4
+  action: Abort the V1GTokenizedUrl API again -> Navigate to the Insights tab
+  expected: The V1GTokenizedUrl API is triggered again | The loading state is displayed
+- id: 5
+  action: Abort the V1GTokenizedUrl API again
+  expected: The error state is displayed per design
+- id: 6
+  action: Tap 'Refresh' button
+  expected: The loading state is displayed ('Retrieving your data') | The V1GTokenizedUrl
+    API is triggered again
+- id: 7
+  action: Tap Execute to load the valid V1GTokenizedUrl API response
+  expected: The Insights screen is updated, displaying the URL in a webview
+- id: 8
+  action: Navigate to the Optimize tab
+  expected: The V1GTokenizedUrl API is NOT triggered | The Optimize tab is updated,
+    displaying the URL in a webview

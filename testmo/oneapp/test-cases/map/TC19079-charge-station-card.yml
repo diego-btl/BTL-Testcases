@@ -1,0 +1,32 @@
+metadata:
+  id: TC19079
+  name: Charge Station Card
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2024-06-06'
+  updated: '2025-12-18'
+  author: user_7
+  testmo_id: 19079
+  folder_id: 46
+preconditions:
+- description: EnablePlugAndCharge ff should be enabled.
+- description: The user selects an EV or EVAVK2 vehicles
+steps:
+- id: 1
+  action: Tap the Map icon from the bottom bar
+  expected: The user should be navigated to the Map screen
+- id: 2
+  action: Tap the Charge Stations chip
+  expected: The user should see a search for EV/EV2 charge stations according to EV/EV2
+    map settings and results are shown on the map with lightning icons, | The preview
+    card should contain a link to charge station details
+- id: 3
+  action: Tap the Charge Station link from the POI
+  expected: The user should be navigated to the Charge Station Details screen, | The
+    details on the screen should match those from the smaller preview card.

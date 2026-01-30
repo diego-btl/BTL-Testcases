@@ -1,0 +1,23 @@
+metadata:
+  id: TC00572
+  name: MIL status indicator
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-01'
+  updated: '2025-10-11'
+  author: user_2
+  testmo_id: 572
+  folder_id: 50
+preconditions:
+- description: User has a MIL status indictor active
+steps:
+- id: 1
+  action: MIL data returned2. Tap on MIL status indicator
+  expected: User should see MIL indicator on vehicle image2. User should see Vehicle
+    Status screen with MIL tab showing MIL statuses

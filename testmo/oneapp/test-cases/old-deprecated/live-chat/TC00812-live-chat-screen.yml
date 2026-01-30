@@ -1,0 +1,25 @@
+metadata:
+  id: TC00812
+  name: Live Chat screen
+  feature: test-cases
+  priority: critical
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-01'
+  updated: '2025-10-08'
+  author: user_2
+  testmo_id: 812
+  folder_id: 87
+description: NNA only (Nissan and INFINITI)
+steps:
+- id: 1
+  action: Tap the Chat card
+  expected: 'User should be taken to the pre-chat screen and see the following items:-
+    "Chat with a Nissan/an INFINITI agent"- Please select one topic from the following-
+    MyNissan/MyINFINITI App Support card - My Current Nissan/INFINITI Vehicle card-
+    GO TO CHAT CTA- "Need support by SMS/Text?"- "APP SUPPORT BY SMS" linkNOTE: removed
+    for NCI'

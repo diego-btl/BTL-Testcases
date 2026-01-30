@@ -1,0 +1,26 @@
+metadata:
+  id: TC30160
+  name: Stolen Vehicle
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-02-05'
+  updated: '2025-08-22'
+  author: user_17
+  testmo_id: 30160
+  folder_id: 81
+preconditions:
+- description: User is on the Support screen
+steps:
+- id: 1
+  action: Tap the Stolen Vehicle item
+  expected: The user should see the stolen vehicle screen
+- id: 2
+  action: Tap Call Stolen Vehicle Locator
+  expected: 'The user should be able to call the following number: 1(844)711-8100
+    (NIS NNA)'

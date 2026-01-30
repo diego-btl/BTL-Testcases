@@ -1,0 +1,29 @@
+metadata:
+  id: TC11117
+  name: V2L Screen - Manage Notifications
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2024-02-04'
+  updated: '2025-12-09'
+  author: user_4
+  testmo_id: 11117
+  folder_id: 1454
+description: https://www.pivotaltracker.com/story/show/186654519
+preconditions:
+- description: User has an EV AVK2 vehicle
+- description: V2L capability is returning true
+- description: User is on the V2L Screen
+steps:
+- id: 1
+  action: Tap on the Manage Notifications button
+  expected: NotificationPreferences API is called | User should see the Notification
+    Preferences screen load and open
+- id: 2
+  action: Tap on the Back button
+  expected: User should return to the Vehicle-to_Load screen

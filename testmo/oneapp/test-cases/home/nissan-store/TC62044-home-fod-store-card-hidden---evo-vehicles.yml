@@ -1,0 +1,27 @@
+metadata:
+  id: TC62044
+  name: 'Home: FOD Store Card Hidden - EVO Vehicles'
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-11-28'
+  updated: '2025-11-28'
+  author: user_15
+  testmo_id: 62044
+  folder_id: 6783
+description: 'CONTEXTAdd a Nissan Store/MyINFINITI Store card to the Home tabAdd a
+  Nissan Store/MyINFINITI Store card to the Vehicle tabAndroid: https://app.clickup.com/t/86b7a4qtciOS:
+  https://app.clickup.com/t/86b7m8cbt'
+preconditions:
+- description: User logged in with EVO Vehicles
+- description: vehicle.capabilities.status =! ENROLLED
+- description: BSM FF = true
+steps:
+- id: 1
+  action: Log into the app and go to Home screen > Scroll to the bottom of the screen
+  expected: Verify Nissan/Infiniti store card is not shown

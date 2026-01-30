@@ -1,0 +1,32 @@
+metadata:
+  id: TC02853
+  name: Remote Data Wipe - Wipe - Success
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-09-13'
+  updated: '2026-01-16'
+  author: user_4
+  testmo_id: 2853
+  folder_id: 434
+description: https://www.pivotaltracker.com/story/show/185987342https://www.pivotaltracker.com/story/show/186023159Notes:For
+  AVK2 only test this on p33a7509@gmail.com/Telematics123!For AVK test on bethinklab
+  vehicles only (ex. diego+prodkicks)
+preconditions:
+- description: The user has REMOTE_DATA_WIPE capability enabledRemote Data Wipe screen
+- description: Remote data wipe flag is enabled from firebase, e.g. UseNewRemoteDataWipeImplementation
+    = true.
+- description: 'Note: Use breakpoint to check the cases. QueryName: `DataWipe`'
+steps:
+- id: 1
+  action: Toggle on at least one of the toggles -> Tap on Reset -> Tap on Yes
+  expected: User should see corresponding toggle toggled on | User should see a confirmation
+    prompt | User should see confirmation prompt dismiss and a loading spinnerUser
+    should see dataWipeType correspond with the selected toggle | Reset Monitoring
+    & Alerts = TCU_WIPE | Reset Vehicle Settings = HU_WIPE | Reset All = WIPEUpon
+    success, user should see a success toast

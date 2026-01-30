@@ -1,0 +1,23 @@
+metadata:
+  id: TC61950
+  name: CANCEL SUBSCRIPTION CTA hidden for Trial subscription
+  feature: test-cases
+  priority: critical
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-11-08'
+  updated: '2026-01-20'
+  author: user_15
+  testmo_id: 61950
+  folder_id: 3863
+preconditions:
+- description: EnableTelematicsBSM FF = true
+- description: subscriptionServiceType = "Trial"
+steps:
+- id: 1
+  action: Launch the app > Navigate to the Vehicle screen > Tap on a Trial Package
+  expected: Verify CANCEL SUBSCRIPTION CTA not visible

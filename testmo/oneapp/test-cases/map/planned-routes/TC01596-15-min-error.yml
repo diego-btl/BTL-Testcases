@@ -1,0 +1,34 @@
+metadata:
+  id: TC01596
+  name: 15 Min error
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-28'
+  updated: '2025-12-16'
+  author: user_2
+  testmo_id: 1596
+  folder_id: 102
+preconditions:
+- description: User is viewing the Planned Routes screen
+- description: The user selects an EV or EVAVK2 vehicles
+- description: The user should have a Planned Route create
+steps:
+- id: 1
+  action: Tap Send Now on a route that is scheduled within 15 mins -> Tap Ok
+  expected: User should see an error modal and dismissed once press the OK buttonError
+    - Routes cannot be changed or deleted 15 minutes or less before scheduled time.
+- id: 2
+  action: Tap Delete Route on a route that is scheduled within 15 mins
+  expected: User should see an error modalError - Routes cannot be changed or deleted
+    15 minutes or less before scheduled time.
+- id: 3
+  action: Tap on View Route -> Tap Edit Route on a route that is scheduled within
+    15 mins
+  expected: User should see an error modalError - Routes cannot be changed or deleted
+    15 minutes or less before scheduled time.

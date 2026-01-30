@@ -1,0 +1,60 @@
+metadata:
+  id: TC62079
+  name: Create Schedule Service - Select Date and Time
+  feature: test-cases
+  priority: critical
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-12-02'
+  updated: '2026-01-20'
+  author: user_23
+  testmo_id: 62079
+  folder_id: 6787
+description: 'Create Schedule Service - Select Date and Time Screen Validation: Appointment
+  SchedulingValidates the Select Date and Time screen displays correctly with available
+  dates and time slots. Users can navigate through the calendar, select a preferred
+  appointment date and time, then proceed to review the service request.Notes:Progress
+  indicator shows Step 3 of 4Available dates are in enabled state; unavailable dates
+  are disabledAvailable time slots vary based on dealer availabilityServiceAppointmentTimeSlots
+  API is called when navigating months with arrows'
+preconditions:
+- description: User has entered service details and vehicle mileage on the Additional
+    Information screen and tapped NEXT
+steps:
+- id: 1
+  action: Verify user arrives on Select Date and Time screen after tapping NEXT from
+    Additional Information screen
+  expected: Screen title is Select Date and Time | Progress indicator shows current
+    step (Step 3 of 4) | Calendar with current month displayed | Available dates are
+    in enabled state; unavailable dates are disabled | At least 2 weeks worth of days
+    are displayed
+- id: 2
+  action: Tap on left/right navigation arrows to navigate through months
+  expected: ServiceAppointmentTimeSlots API is called to fetch available time slots
+    for the new month | Calendar updates to show previous/next month | Available dates
+    are displayed in enabled state | Unavailable dates are disabled
+- id: 3
+  action: Tap on an available date (in enabled state)
+  expected: Date is selected and highlighted in blue | Select an Available Time section
+    displays below | Available time slots for that date are displayed
+- id: 4
+  action: Tap on an available time slot
+  expected: Time slot is selected and highlighted in blue | NEXT button becomes enabled
+- id: 5
+  action: Verify Optional Preferences card is displayed below time slots
+  expected: 'Optional Preferences card is displayed at bottom | Transportation: --
+    field is displayed | Advisor: -- field is displayed | Add link is available to
+    access full preferences screen'
+- id: 6
+  action: Tap NEXT button with date and time selected
+  expected: User proceeds to Review Service Request screen | Selected date and time
+    are passed to next step
+- id: 7
+  action: Tap Call Dealer link (NISSAN) or Call Retailer link (INFINITI)
+  expected: 'Phone number is retrieved from VehiclePreferredDealer query phone field
+    | Android: Phone dialer opens with dealer/retailer contact number | iOS: Phone
+    call drawer/sheet opens with dealer/retailer contact number and Call/Cancel options'

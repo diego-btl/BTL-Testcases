@@ -1,0 +1,30 @@
+metadata:
+  id: TC00592
+  name: Scan VIN / Barcode
+  feature: test-cases
+  priority: critical
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-01'
+  updated: '2025-04-30'
+  author: user_2
+  testmo_id: 592
+  folder_id: 56
+preconditions:
+- description: User is already on the Add Vehicle screen
+- description: User has allowed Camera permissions to the app
+steps:
+- id: 1
+  action: Tap on the Scan Barcode tab -> You can try to scan this Barcode
+  expected: The tab should be selected and highlighted | The VIN should be 1NXBR12E31Z463785
+- id: 2
+  action: Tap on the Scan VIN tab
+  expected: The tab should be selected and highlighted
+- id: 3
+  action: 'Tap on the Camera Interaction field (TAP HERE TO USE YOUR CAMERA) and scan
+    the following VIN:'
+  expected: The text should be populated in the VIN field

@@ -1,0 +1,28 @@
+metadata:
+  id: TC02697
+  name: Capabilities - ICE Climate Card
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-09-07'
+  updated: '2025-09-22'
+  author: user_3
+  testmo_id: 2697
+  folder_id: 4170
+description: https://www.pivotaltracker.com/n/projects/2626604/stories/185497871
+preconditions:
+- description: AVK2 vehicle
+steps:
+- id: 1
+  action: HVAC_ACCESSORIES capability is missing -> HVAC_ACCESSORIES capability is
+    disabled -> HVAC_ACCESSORIES capability is enabled and engine is OFF -> HVAC_ACCESSORIES
+    capability is enabled and engine is ON
+  expected: User should not see the ICE Climate card | User should see the ICE Climate
+    card on home screen in disabled state | User should see the ICE Climate card on
+    home screen with secondary text Off | User should see ICE Climate card on home
+    screen with secondary text On

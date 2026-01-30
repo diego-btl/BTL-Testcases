@@ -1,0 +1,26 @@
+metadata:
+  id: TC61966
+  name: Driving History - PD - No Card
+  feature: test-cases
+  priority: critical
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-11-10'
+  updated: '2025-11-10'
+  author: user_25
+  testmo_id: 61966
+  folder_id: 92
+preconditions:
+- description: Vehicle is an EV/EV2
+- description: PD
+- description: VehicleCapabilities > DRIVING_JOURNEY_HISTORY (EV2)/DRIVING_ANALYSIS
+    (EV) > missing
+- description: User is on the Vehicle tab
+steps:
+- id: 1
+  action: Scroll down on the vehicle page
+  expected: User should not be able to see the Driving History card

@@ -1,0 +1,26 @@
+metadata:
+  id: TC11103
+  name: Lock - Success - AVK/EV/AVK2
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2024-01-04'
+  updated: '2025-09-19'
+  author: user_4
+  testmo_id: 11103
+  folder_id: 59
+preconditions:
+- description: User has an AVK/EV/AVK2 vehicle
+- description: User has sent a Lock request
+steps:
+- id: 1
+  action: Lock request has been resolved into a success
+  expected: User should see a toast "<year and model> locked." at the bottom of the
+    screen. | "Lock" and "Unlock" buttons are displayed in the default state. | "Locked"
+    status is displayed in the Hero section. | "Locked" status is displayed on the
+    Controls card, the last updated time is changed to "Just Now"

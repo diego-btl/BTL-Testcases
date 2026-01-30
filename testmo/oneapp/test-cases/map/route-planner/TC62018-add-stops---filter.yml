@@ -1,0 +1,62 @@
+metadata:
+  id: TC62018
+  name: Add stops - Filter
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-11-21'
+  updated: '2025-12-03'
+  author: user_17
+  testmo_id: 62018
+  folder_id: 101
+description: Plug Types for EV:NACS (Adapter Required) DC FastCCS DC FastJ1772 AC
+  Levels 1 and 2Plug Types for EV2:NACS DC FastCCS (Adapter Required) DC FastJ1772
+  AC Levels 1 and 2
+preconditions:
+- description: User is in the Estimate Route* screen
+- description: The user selects an EV or EVAVK2 vehicles
+steps:
+- id: 1
+  action: Tap the +ADD A STOP button
+  expected: User should be redirected to the screen Add a Stop
+- id: 2
+  action: Tap the +ADD A STOP button -> Click over the Filter section (accountStatus=ACTIVE)
+  expected: The filter screen should show with all the options:Filters | Search SettingsShow
+    cahrge stations around search | Within reachable area | Only show stations with
+    available chargers | Plug TypesJ1772 AC Levels 1 and 2 | CCS DC Fast | NACS (Adapter
+    Required) DC Fast | Charge Station PreferencesIn-Network Only | ProvidersPreferred
+    Partners - favourite one | All - List of charging providers | RESET FILTERS |
+    APPLY
+- id: 3
+  action: Tap the +ADD A STOP button -> Click over the Filter section (accountStatus
+    =! ACTIVE)
+  expected: The filter screen should show with all the options:Filters | Search SettingsShow
+    cahrge stations around search | Within reachable area | Only show stations with
+    available chargers | Plug TypesJ1772 AC Levels 1 and 2 | CCS DC Fast | NACS (Adapter
+    Required) DC Fast | Charge Station PreferencesActivate the NISSAN ENERGY Charge
+    Network today for access to Nissan's in-network charging partners. | Activate
+    | ProvidersPreferred Partners - favourite one | All - List of charging providers
+    | RESET FILTERS | APPLY
+- id: 4
+  action: Tap the +ADD A STOP button -> Click over the Filter section (accountStatus=INACTIVE)
+    -> Click over the button > Activate
+  expected: The user should be redirect to the NECN screen to activate the account
+- id: 5
+  action: Tap the +ADD A STOP button -> Click over the Filter section (accountStatus=ACTIVE)
+    -> Click over RESET FILTERS -> Click the POI Charging stations
+  expected: The filters should be showing as their previous state | The results of
+    the search should match the filters that were set | The RESET FILTER option it
+    is disable again (will become enable once the user make any new change in the
+    filter)
+- id: 6
+  action: Tap the +ADD A STOP button -> Click over the Filter section (accountStatus=ACTIVE)
+    -> Modify the next filters:Show charge stations around search -> Click the button
+    APPLY -> Click the POI - Shopping
+  expected: Shopping results should show along the route | No charging stations should
+    be showing around the POI - Shopping, just the ones that were showing before applying
+    the filters

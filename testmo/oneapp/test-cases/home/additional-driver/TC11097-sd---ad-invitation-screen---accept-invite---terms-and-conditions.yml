@@ -1,0 +1,42 @@
+metadata:
+  id: TC11097
+  name: SD - AD Invitation Screen - Accept invite - Terms and Conditions
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-11-29'
+  updated: '2025-09-22'
+  author: user_4
+  testmo_id: 11097
+  folder_id: 411
+description: https://www.pivotaltracker.com/story/show/186049955
+preconditions:
+- description: User is logged into an account with a pending AD invite
+- description: User is on the Invitation screen
+steps:
+- id: 1
+  action: Tap on Accept Invite
+  expected: User should see a loading spinner, then the Terms and Conditions screen
+    with terms in the body, an unchecked check box for accepting the terms, and a
+    disabled save button
+- id: 2
+  action: Scroll through the terms
+  expected: User should be able to scroll through and view the terms
+- id: 3
+  action: Tap on a hyperlinked phone number
+  expected: User should see the option to call the number
+- id: 4
+  action: Tap on a hyperlinked web link
+  expected: User should see web link open in the external browser
+- id: 5
+  action: Tap to check the check box
+  expected: User should see check box checked and Save button enabled
+- id: 6
+  action: Tap on Save
+  expected: User should see a loading spinner, then redirected to the Code Verification
+    screen

@@ -1,0 +1,39 @@
+metadata:
+  id: TC62075
+  name: Charge Limit - Manage Notifications - API fails
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-12-02'
+  updated: '2025-12-02'
+  author: user_25
+  testmo_id: 62075
+  folder_id: 6780
+preconditions:
+- description: User has an EV AVK2 vehicle
+- description: EnableChargeLimit FF is true
+- description: User is on the Charge Limit screen
+steps:
+- id: 1
+  action: Add a breakpoint to the ReminderNotificationsAfterLeavingVehicle API ->
+    Tap the Manage Notifications button
+  expected: The ReminderNotificationsAfterLeavingVehicle API is called and fails |
+    The NotificationPreferences API is triggered returning the proper response | User
+    should see the Notification Preferences screen load and open | The Reminder After
+    Leaving Vehicle section is hidden
+- id: 2
+  action: Add a breakpoint to the NotificationPreferences API -> Tap the Manage Notifications
+    button
+  expected: The ReminderNotificationsAfterLeavingVehicle API is triggered returning
+    the proper response | The NotificationPreferences API is called and fails | User
+    should see the Notification Preferences screen load and open | The 'Something
+    Went Wrong' modal with the copy 'Sorry, something went wrong, please try again
+    later.' and the 'Ok' button is displayed
+- id: 3
+  action: Tap the 'Ok' button
+  expected: The modal is dismissed | User is navigated back to the Charge Limit screen

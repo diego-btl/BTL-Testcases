@@ -1,0 +1,26 @@
+metadata:
+  id: TC00900
+  name: Search by Zipcode
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-04'
+  updated: '2025-09-19'
+  author: user_7
+  testmo_id: 900
+  folder_id: 93
+preconditions:
+- description: User is on either the Select a Retailer list or map view screen
+steps:
+- id: 1
+  action: Tap on the search field
+  expected: User should see search by zip card with keyboard opened
+- id: 2
+  action: Enter a zip code
+  expected: 'User should see results returned in a list view | Note: User''s preferred
+    retailer should not be shown twice if returned in the search'

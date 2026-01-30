@@ -1,0 +1,28 @@
+metadata:
+  id: TC00783
+  name: Planned Routes screen
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-01'
+  updated: '2025-12-16'
+  author: user_2
+  testmo_id: 783
+  folder_id: 102
+preconditions:
+- description: User is viewing the Planned Routes screen
+- description: The user selects an EV or EVAVK2 vehicles
+steps:
+- id: 1
+  action: The user is in the Planned Routes screen
+  expected: User should see the Planned Routes screen | If there are existing planned
+    routes, they should be shown accordingly in chronological order | User should
+    see a card for each planned route with the following elements:Route name | Send
+    Now Button | Departure date/time | Arrival date/time | Total distance | Delete
+    Route button | View Route button | If there are no planned routes, empty state
+    should be shown

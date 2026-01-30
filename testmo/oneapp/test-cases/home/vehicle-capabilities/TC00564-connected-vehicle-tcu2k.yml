@@ -1,0 +1,23 @@
+metadata:
+  id: TC00564
+  name: Connected Vehicle (TCU2K)
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-01'
+  updated: '2024-10-17'
+  author: user_2
+  testmo_id: 564
+  folder_id: 54
+preconditions:
+- description: User's vehicle is TCU2K and enrolled
+- description: 'Accounts:'
+steps:
+- id: 1
+  action: Login to account with a connected vehicle
+  expected: The user should see the home screen with the connected vehicle design

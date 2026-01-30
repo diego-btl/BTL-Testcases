@@ -1,0 +1,23 @@
+metadata:
+  id: TC30165
+  name: Accident Helper Items
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-02-05'
+  updated: '2026-01-30'
+  author: user_17
+  testmo_id: 30165
+  folder_id: 81
+preconditions:
+- description: User is on the accident helper screen
+steps:
+- id: 1
+  action: 1. Expand and collapse each item
+  expected: '1. User should see each item expand to display text with an accompanying
+    image and collapse Note: Only one section should be able to be expanded at a time'

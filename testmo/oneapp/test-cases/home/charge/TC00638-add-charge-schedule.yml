@@ -1,0 +1,42 @@
+metadata:
+  id: TC00638
+  name: Add Charge Schedule
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-01'
+  updated: '2025-09-22'
+  author: user_2
+  testmo_id: 638
+  folder_id: 66
+preconditions:
+- description: User is on Charge screen
+steps:
+- id: 1
+  action: Tap on the Add button
+  expected: The user should see the Charge Schedule screen in the empty state, create
+    button disabled
+- id: 2
+  action: Fill in a start time and the end time
+  expected: User should see the corresponding days of the week highlighted
+- id: 3
+  action: Tap one of the quick options
+  expected: User should see the corresponding days of the week highlighted
+- id: 4
+  action: Tap on days of the week
+  expected: User should see the corresponding days of the week selected/unselected
+- id: 5
+  action: Tap to Create Schedule
+  expected: The user should see a loading spinner while the schedule is being created
+    | The user should see a success toast if the schedule was created successfully
+    | The user should be returned to the Charge screen with the newly added schedule
+    shown
+- id: 6
+  action: Fail the create a schedule
+  expected: The user should see a failure toast and remain on the Charge Schedule
+    screen

@@ -1,0 +1,25 @@
+metadata:
+  id: TC00647
+  name: Climate Schedules
+  feature: test-cases
+  priority: critical
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-01'
+  updated: '2025-11-04'
+  author: user_2
+  testmo_id: 647
+  folder_id: 4169
+preconditions:
+- description: User is on Climate screen
+steps:
+- id: 1
+  action: No existing charge schedules2. At least one charge schedule3. 3 climate
+    schedules for EV / 5 climate schedules for EV2
+  expected: User should see empty state for schedules2. User should see climate schedule
+    with days of the week, departure time, and toggle state3. User should see all
+    climate schedules and add button disabled

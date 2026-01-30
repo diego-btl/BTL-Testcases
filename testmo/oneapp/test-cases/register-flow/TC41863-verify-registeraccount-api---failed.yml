@@ -1,0 +1,31 @@
+metadata:
+  id: TC41863
+  name: Verify RegisterAccount API - FAILED
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-06-09'
+  updated: '2025-06-10'
+  author: user_15
+  testmo_id: 41863
+  folder_id: 43
+description: 'Story: [NCI] Marketing Preference screen during registration'
+preconditions:
+- description: '"EnableNCIMarketingPreferences": "true" FF should be on'
+- description: Connect the device to Proxyman to check the APIs calls
+steps:
+- id: 1
+  action: On Register flow continue the flow until reaching Nissan Updates screen
+    > Check some boxes > Mock RegisterAccount API to fail > Tap on Finalize Registration
+    CTA
+  expected: Verify that an error modal is shown and the app takes the user back to
+    the Password screen
+- id: 2
+  action: Tap again on the CREATE ACCOUNT cta
+  expected: Verify that the user is led to the Nissan Updates screen again with the
+    same selection from the previous interaction

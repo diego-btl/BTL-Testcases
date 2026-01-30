@@ -1,0 +1,34 @@
+metadata:
+  id: TC32523
+  name: Verify Contract Details screen for Non Connected vehicles
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-04-04'
+  updated: '2025-04-05'
+  author: user_15
+  testmo_id: 32523
+  folder_id: 4079
+description: The scope of this test case is to validate the correct functioning of
+  the embedded YouTube video when FF are enabled. Nissan NCI will be the only brand
+  and region showing the videos; INF NCI will not display themOS[NCESI] - Allow user
+  to view contract details - 2/18ANDROID[NCESI] - Allow user to view contract details
+  - 2/18
+preconditions:
+- description: 'EnableNcesiServiceContracts: true'
+- description: 'EnableNcesiCatalogue: true'
+- description: Mock GetServiceContract response (use attached mocks ENG/FR in case
+    needed)
+steps:
+- id: 1
+  action: Login to app with a Non connected VIN > Get into Nissan Protection screen
+    > Tap on any contract
+  expected: Progress bar for Expiration date (GetServiceContracts) and mileage."total"
+    (dynamicData) | Odometer progress bar Is Not Shown | Verify colors for each progress
+    bar are displayed correctly according to state received. | Verify each field displays
+    correct information according to response received.

@@ -1,0 +1,16 @@
+metadata:
+  id: TC00791
+  name: Support tab
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-01'
+  updated: '2025-09-19'
+  author: user_2
+  testmo_id: 791
+  folder_id: 47

@@ -1,0 +1,35 @@
+metadata:
+  id: TC00542
+  name: Demo Mode - Lock/Unlock
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-01'
+  updated: '2025-12-17'
+  author: user_2
+  testmo_id: 542
+  folder_id: 6816
+description: Applies for all Vehicle types
+preconditions:
+- description: User is already in Demo Mode Home Page
+steps:
+- id: 1
+  action: Tap the Lock or Unlock button
+  expected: 'Title: Are you sure? | Text: This action will remotely Lock / Unlock
+    your vehicle. | No / Yes buttons'
+- id: 2
+  action: Tap on No
+  expected: The modal is dismissed
+- id: 3
+  action: Tap the Lock or Unlock button again and tap Yes on the modal
+  expected: Contacting year, model to lock / unlock... | Waking year, model to lock
+    / unlock... | Initiating Lock/Unlock on year, model... | year, model locked /
+    unlocked
+- id: 4
+  action: go to hero status / Control card / Vehicle screen
+  expected: Observe correct status is shown

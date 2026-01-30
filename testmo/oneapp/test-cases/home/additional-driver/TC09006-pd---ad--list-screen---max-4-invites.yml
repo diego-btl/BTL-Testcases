@@ -1,0 +1,32 @@
+metadata:
+  id: TC09006
+  name: PD - AD  List Screen - Max 4 invites
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-11-21'
+  updated: '2024-10-17'
+  author: user_4
+  testmo_id: 9006
+  folder_id: 411
+description: https://www.pivotaltracker.com/story/show/185793636
+preconditions:
+- description: User has an AVK2 vehicle and is PRIMARY_DRIVER
+- description: User is on the home screen
+- description: There are 4 existing invites (accepted/pending)
+steps:
+- id: 1
+  action: Tap on the Additional Driver card
+  expected: User should see the Additional Driver screen load and open [DriverInvites
+    - iOS]User should see Add A Driver button is disabled
+- id: 2
+  action: Tap on Add A Driver
+  expected: User should see an error modal - Max Invites Reached
+- id: 3
+  action: Tap OK
+  expected: User should see error modal dismiss

@@ -1,0 +1,33 @@
+metadata:
+  id: TC29918
+  name: Update existing Towing/Transportation Info
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-01-10'
+  updated: '2025-01-28'
+  author: user_26
+  testmo_id: 29918
+  folder_id: 3800
+description: Verify the success of updating existing Towing/Transportation Information
+preconditions:
+- description: The user is on the Collision Report start screen
+steps:
+- id: 1
+  action: Tap on the Edit CTA for the Towing/Transportation card.
+  expected: The user is redirected to the edit screen | The user should see the current
+    information (Company Name, Address, etc.) pre-filled | The user should see the
+    disabled Save button
+- id: 2
+  action: Update the existing Company Name and Address information
+  expected: The user should see the enabled Save button, indicating that changes have
+    been made
+- id: 3
+  action: Tap on Save button
+  expected: The user should be redirected to the start screen | The Towing/Transportation
+    card should display the updated information (Company Name, Address, etc.)

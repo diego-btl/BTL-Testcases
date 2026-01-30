@@ -1,0 +1,41 @@
+metadata:
+  id: TC62139
+  name: Delete Service Request - Upcoming Appointment - Success
+  feature: test-cases
+  priority: critical
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-12-11'
+  updated: '2026-01-20'
+  author: user_23
+  testmo_id: 62139
+  folder_id: 6797
+description: 'Delete Service Request - Upcoming Appointment - Success: Direct Deletion
+  from Upcoming Appointment ScreenValidates successful deletion of a booked service
+  appointment directly from Upcoming Appointment screen (before entering edit flow).Notes:Delete
+  can be performed on ANY booked appointment regardless of isEditable stateSuccess
+  toast message: Service request successfully deletedUser is redirected to Vehicle
+  Screen after deletion'
+preconditions:
+- description: User has one or more booked service appointments
+- description: User is on Upcoming Appointment screen (before entering edit flow)
+steps:
+- id: 1
+  action: On Upcoming Appointment screen, tap DELETE SERVICE REQUEST button
+  expected: 'Modal appears with title: Delete Service Request? | Modal message: Are
+    you sure you want to delete your service request? You will have to start over
+    if you want to schedule another service. | No, continue button is displayed |
+    Yes, delete button is displayed'
+- id: 2
+  action: On confirmation modal, tap No, continue button
+  expected: Modal is dismissed | User remains on Upcoming Appointment screen | Appointment
+    is NOT deleted
+- id: 3
+  action: On confirmation modal, tap Yes, delete button
+  expected: 'CancelServiceAppointment mutation is triggered | Success toast appears
+    with message: Service request successfully deleted | User is redirected to Vehicle
+    Screen | Appointment is permanently deleted'

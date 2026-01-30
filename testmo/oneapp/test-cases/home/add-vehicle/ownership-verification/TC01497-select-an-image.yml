@@ -1,0 +1,26 @@
+metadata:
+  id: TC01497
+  name: Select an Image
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-28'
+  updated: '2024-10-17'
+  author: user_2
+  testmo_id: 1497
+  folder_id: 57
+preconditions:
+- description: User is on the Upload Ownership Document screen and has selected a
+    file type
+steps:
+- id: 1
+  action: 1. Tap Select an Image 2. Choose a photo 3. Tap Select a Different Image
+    and choose a photo 4. Tap UPLOAD
+  expected: 1. User should see photo picker open 2. User should see an option to select
+    a different image and UPLOAD should become enabled 3. User should be able to pick
+    a different photo 4. Photo should be uploaded

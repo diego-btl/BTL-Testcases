@@ -1,0 +1,29 @@
+metadata:
+  id: TC00784
+  name: View Planned Route Estimate Map
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-01'
+  updated: '2025-12-16'
+  author: user_2
+  testmo_id: 784
+  folder_id: 102
+preconditions:
+- description: User is viewing the Planned Routes screen
+- description: The user selects an EV or EVAVK2 vehicles
+steps:
+- id: 1
+  action: Tap the View Route button on a planned route card -> Force VehicleEVWaypoints
+    to fail -> Tap Cancel
+  expected: User should see an error alert modal:Something went wrong with the route
+    planner. Please try again with Cancel and Try Again options | The modal is dismissed,
+    user remains on the Planned Routes screen
+- id: 2
+  action: Tap Try again and let API succeed
+  expected: User is navigated to the Estimated Route screen

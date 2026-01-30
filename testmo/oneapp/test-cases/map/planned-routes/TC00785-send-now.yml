@@ -1,0 +1,29 @@
+metadata:
+  id: TC00785
+  name: Send Now
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-01'
+  updated: '2025-12-12'
+  author: user_2
+  testmo_id: 785
+  folder_id: 102
+preconditions:
+- description: User has planned routes
+- description: The user is in the Planned Route screen
+steps:
+- id: 1
+  action: Tap Send Now -> Force an error
+  expected: User should see a loading state as send now call is made | User should
+    see a failure toast
+- id: 2
+  action: Tap Send Now -> Allow call to succeed -> Check recently sent to vehicle
+  expected: User should be taken back to the Maps screen with a route sent toast |
+    User should see sent route shown in recently sent to vehicle | User should not
+    see route on the Planned Routes screen

@@ -1,0 +1,23 @@
+metadata:
+  id: TC00754
+  name: POI with Charge Stations
+  feature: test-cases
+  priority: critical
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-01'
+  updated: '2025-09-22'
+  author: user_2
+  testmo_id: 754
+  folder_id: 46
+preconditions:
+- description: User has an EV selected and Show Charge stations setting enabled
+steps:
+- id: 1
+  action: Tap any of the category search chips
+  expected: User should see the corresponding search results with charging stations
+    included

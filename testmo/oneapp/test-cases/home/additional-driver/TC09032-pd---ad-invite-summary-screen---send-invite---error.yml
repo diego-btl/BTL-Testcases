@@ -1,0 +1,56 @@
+metadata:
+  id: TC09032
+  name: PD - AD Invite Summary Screen - Send Invite - Error
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-11-21'
+  updated: '2024-10-17'
+  author: user_4
+  testmo_id: 9032
+  folder_id: 411
+description: https://www.pivotaltracker.com/story/show/185695225
+preconditions:
+- description: User has an AVK2 vehicle and is PRIMARY_DRIVER
+- description: User is on the Invite Summary screen
+steps:
+- id: 1
+  action: GeneralErrors -> DatabaseError -> BrandError -> TokenError -> VinValidationError
+    -> EntitlementsValidationError
+  expected: See expected results
+- id: 2
+  action: Tap on the Send Invite button -> Tap one of the two options
+  expected: User should see options to send via email or sms | User should see a loading
+    spinner, then an Invite failed to send modal, and a failure toast
+- id: 3
+  action: Tap on No
+  expected: User should see the error modal dismiss and remain on the AD Invite Summary
+    screen
+- id: 4
+  action: LastNameValidationError -> EmailValidationError -> PhoneValidationError
+  expected: See expected results
+- id: 5
+  action: Tap on the Send Invite button
+  expected: User should be brought back to the AD Invite screen with the corresponding
+    field highlighted with error text
+- id: 6
+  action: 'Mock an error for InviteDriver [iOS] with the following:'
+  expected: See expected results
+- id: 7
+  action: Tap on the Send Invite button
+  expected: User should see a loading spinner, then an Invite already exists modal
+    with options - Cancel and Go To Invite
+- id: 8
+  action: Tap on Cancel
+  expected: User should see the error modal dismiss and remain on the AD Invite Summary
+    screen
+- id: 9
+  action: Tap on Go To Invite
+  expected: If there is a match with the entered email address,, user should be redirected
+    to the specific Invitation Details screen | If there is no match with the entered
+    email address, user should be redirected to the AD List screen

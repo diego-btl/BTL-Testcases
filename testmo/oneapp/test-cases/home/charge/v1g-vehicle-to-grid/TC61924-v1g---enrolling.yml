@@ -1,0 +1,44 @@
+metadata:
+  id: TC61924
+  name: V1G - ENROLLING
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-11-03'
+  updated: '2025-12-16'
+  author: user_25
+  testmo_id: 61924
+  folder_id: 6755
+preconditions:
+- description: Nissan NNA and NCI only
+- description: EV or EV AVK2 only
+- description: PD only
+- description: '"v1GMonitoredChargingAccountStatus": "ENROLLING"'
+steps:
+- id: 1
+  action: User is on the Optimize tab -> Tap the 'Activate Now' button
+  expected: None of the APIs are called | The modal 'Your account is in the process
+    of enrolling.' with 'Ok' and 'Contact Support' buttons is displayed
+- id: 2
+  action: Tap 'Ok' button
+  expected: The modal is dismissed
+- id: 3
+  action: Tap 'Contact Support' button
+  expected: The native app page is opened with prepopulation of the phone number (ContactUs
+    API customerCare)
+- id: 4
+  action: User is on the Insights tab -> Tap the 'Activate Now' button
+  expected: None of the APIs are called | The modal 'Your account is in the process
+    of enrolling.' with 'Ok' and 'Contact Support' buttons is displayed
+- id: 5
+  action: Tap 'Ok' button
+  expected: The modal is dismissed
+- id: 6
+  action: Tap 'Contact Support' button
+  expected: The native app page is opened with prepopulation of the phone number (ContactUs
+    API customerCare)

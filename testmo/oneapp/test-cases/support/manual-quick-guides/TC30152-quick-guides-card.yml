@@ -1,0 +1,16 @@
+metadata:
+  id: TC30152
+  name: Quick Guides Card
+  feature: test-cases
+  priority: critical
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-02-05'
+  updated: '2025-10-08'
+  author: user_17
+  testmo_id: 30152
+  folder_id: 82

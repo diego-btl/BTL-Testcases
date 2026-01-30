@@ -1,0 +1,45 @@
+metadata:
+  id: TC62194
+  name: Second Delivery - Discovery - Remind Me Later to No Thanks
+  feature: test-cases
+  priority: critical
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-12-19'
+  updated: '2026-01-06'
+  author: user_23
+  testmo_id: 62194
+  folder_id: 6818
+description: 'Second Delivery - Discovery - Remind Me Later to No Thanks. Validates
+  the complete user flow: user dismisses popup with REMIND ME LATER, backend tracks
+  it with 8-day timer, and on next login (after 8 days) popup re-appears with NO_THANKS
+  button instead of REMIND ME LATER.Notes:Tests actual user dismissal flow (no mocking
+  backend state changes)Step 1: User sees initial popup with REMIND_ME_LATER buttonStep
+  2: User taps REMIND_ME_LATER → Backend tracks dismissal with 8-day timerStep 3:
+  After 8+ days on next login → Backend returns versionToDisplay: NO_THANKS (not REMIND_ME_LATER)Remind
+  Me Later button is only shown on first popup (not on re-prompt)No Thanks button
+  only shown on re-prompt (after 8-day timer)Use mocks from folder "Second Delivery
+  - MyINFINITI Expert - Discovery & CTA Display"Test on both light and dark modeFeature
+  Flag: EnableSecondDelivery is set to true'
+preconditions:
+- description: Feature Flag EnableSecondDelivery is set to true
+steps:
+- id: 1
+  action: 'Mock SecondDeliveryEligibility with: -> { "marketingMessage": { "versionToDisplay":
+    "REMIND_ME_LATER", "displayMarketingMessageThresholdInDays": 60, "remindMeLaterThresholdInDays":
+    8 }, "daysSincePurchased": 15 }Login to app'
+  expected: Marketing pop-up appears | BOOK NOW button displayed (primary) | REMIND
+    ME LATER button displayed (secondary)
+- id: 2
+  action: Tap REMIND ME LATER button
+  expected: Pop-up closes | Backend tracks user dismissal with 8-day reminder timer
+    | User returns to Home screen
+- id: 3
+  action: Logout and wait 8+ days, then login again
+  expected: Marketing pop-up appears again (re-prompt after 8-day timer) | BOOK NOW
+    button displayed (primary) | NO THANKS button displayed (secondary, replaces REMIND
+    ME LATER) | Backend has changed versionToDisplay to "NO_THANKS"

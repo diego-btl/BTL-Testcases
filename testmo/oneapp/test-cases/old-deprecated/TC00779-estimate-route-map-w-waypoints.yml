@@ -1,0 +1,27 @@
+metadata:
+  id: TC00779
+  name: Estimate Route Map w/ Waypoints
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-01'
+  updated: '2025-09-19'
+  author: user_2
+  testmo_id: 779
+  folder_id: 105
+preconditions:
+- description: User has estimated a route
+steps:
+- id: 1
+  action: User is on Estimate Route screen2. Tap on User Location button3. Tap on
+    Vehicle Location button
+  expected: User should see a map view of origin, stops, EV waypoints on route, and
+    destinationUser should see info draw with:- Total trip time and distance- Origin
+    (with time), stop in between, and destination (with time)- Edit Route button-
+    Save Route button- Disclaimer text fully visible2. User should see map pan to
+    user location3. User should see map pan to vehicle location

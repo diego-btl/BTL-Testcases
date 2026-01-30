@@ -1,0 +1,16 @@
+metadata:
+  id: TC60250
+  name: Verify Help line hyperlink
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-08-25'
+  updated: '2025-09-19'
+  author: user_15
+  testmo_id: 60250
+  folder_id: 6548

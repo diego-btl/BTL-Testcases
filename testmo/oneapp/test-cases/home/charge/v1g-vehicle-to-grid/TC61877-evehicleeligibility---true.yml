@@ -1,0 +1,32 @@
+metadata:
+  id: TC61877
+  name: eVehicleEligibility - TRUE
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-10-24'
+  updated: '2025-12-16'
+  author: user_25
+  testmo_id: 61877
+  folder_id: 6755
+preconditions:
+- description: Nissan NNA and NCI only
+- description: User has an EV or EV AVK2 vehicle
+- description: PD only
+steps:
+- id: 1
+  action: 'Mock eVehicleEligibility to return "v1GEligible": true -> Coldstart/Foreground
+    the app'
+  expected: V1GMonitoredChargingAccountStatus is called, returning "v1GMonitoredChargingAccountStatus"
+    =! "CLOSED" ("CANCELLED"/"NOT_ENROLLED"/"FAILED"/"ENROLLING"/"INACTIVE"/"ACTIVE")
+    | Status, Optimize, and Insights tabs are displayed
+- id: 2
+  action: 'Mock V1GMonitoredChargingAccountStatus API to return "v1GMonitoredChargingAccountStatus":
+    "CLOSED" -> Coldstart/Foreground the app'
+  expected: Status, Optimize, and Insights tabs are not displayed, the feature is
+    hidden

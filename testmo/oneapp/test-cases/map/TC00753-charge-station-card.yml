@@ -1,0 +1,18 @@
+metadata:
+  id: TC00753
+  name: Charge Station Card
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-01'
+  updated: '2025-09-22'
+  author: user_2
+  testmo_id: 753
+  folder_id: 46
+preconditions:
+- description: User has an EV selected and performed a charge station search

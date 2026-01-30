@@ -1,0 +1,23 @@
+metadata:
+  id: TC01609
+  name: Voice PIN
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-28'
+  updated: '2025-03-31'
+  author: user_2
+  testmo_id: 1609
+  folder_id: 48
+preconditions:
+- description: User is on the My Profile screen
+steps:
+- id: 1
+  action: Tap the PIN/Voice Code CTA
+  expected: 'User should be taken to the Edit PIN/Voice Code screenNOTE: removed for
+    NCI'

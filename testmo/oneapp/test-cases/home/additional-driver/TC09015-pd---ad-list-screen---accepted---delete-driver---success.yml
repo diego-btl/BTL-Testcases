@@ -1,0 +1,30 @@
+metadata:
+  id: TC09015
+  name: PD - AD List Screen - Accepted - Delete Driver - Success
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-11-21'
+  updated: '2024-10-17'
+  author: user_4
+  testmo_id: 9015
+  folder_id: 411
+description: https://www.pivotaltracker.com/story/show/185039322
+preconditions:
+- description: User has an AVK2 vehicle and is PRIMARY_DRIVER
+- description: User has an accepted invitation
+- description: User is viewing Invitation Details
+steps:
+- id: 1
+  action: Tap on Delete Driver
+  expected: User should see an Are you sure? modal with options - No/Yes
+- id: 2
+  action: Tap on Yes
+  expected: User should see a loading spinner, then redirected to the AD List screen
+    with the Accepted Invite removed, and a success toastUser should receive an email/sms
+    about being removed as an additional driver

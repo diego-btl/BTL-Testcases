@@ -1,0 +1,27 @@
+metadata:
+  id: TC36674
+  name: Lights button
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-04-29'
+  updated: '2025-04-29'
+  author: user_24
+  testmo_id: 36674
+  folder_id: 4183
+preconditions:
+- description: User is logged in
+- description: User has medium sized widget added
+- description: User has selected EV vehicle
+- description: EV vehicle details as per previous TC showing on widget
+steps:
+- id: 1
+  action: 'AND: the user should see buttons for Lights -> IF: the user taps on the
+    button'
+  expected: 'THEN: the associated call should be started | AND: then the app should
+    open showing the call in progress'

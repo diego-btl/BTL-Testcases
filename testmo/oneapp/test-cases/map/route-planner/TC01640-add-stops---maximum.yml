@@ -1,0 +1,29 @@
+metadata:
+  id: TC01640
+  name: Add stops - maximum
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-09-01'
+  updated: '2025-12-02'
+  author: user_4
+  testmo_id: 1640
+  folder_id: 101
+description: The maximum number of stops:EV - 4EVAVK2 - 6
+preconditions:
+- description: The user selects an EV or EVAVK2 vehicles
+- description: The user is in the Create Route screen
+steps:
+- id: 1
+  action: Tab on the +ADD A STOP button -> The user adds a max of 4 stops
+  expected: The UI shows the +ADD STOP button disable | The maximum numbers of stops
+    are reached
+- id: 2
+  action: Tab on the +ADD A STOP button -> The user adds a max of 6 stops
+  expected: The UI shows the +ADD STOP button disable | The maximum numbers of stops
+    are reached

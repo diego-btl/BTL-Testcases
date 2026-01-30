@@ -1,0 +1,34 @@
+metadata:
+  id: TC29996
+  name: Subscription Packages Card
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-01-17'
+  updated: '2025-09-22'
+  author: user_25
+  testmo_id: 29996
+  folder_id: 3863
+description: Nissan NNA and INFINITI NNA only
+preconditions:
+- description: 'FF "EnableTelematicsBSM": "true"'
+- description: MY26 and above
+steps:
+- id: 1
+  action: Choose an active vehicle and navigate to the Vehicle screen
+  expected: 'The user should see the Subscription PackagesCard at the bottom of the
+    screen with the following content: | NissanTitle: Subscription Packages Body:
+    NissanConnect® Services | INFINITITitle: Subscription Packages Body: INFINITI
+    InTouch Services®'
+- id: 2
+  action: Tap the Subscription PackagesCard
+  expected: The user should see the landing screen and then be redirected to the Subscriptions
+    screen
+- id: 3
+  action: Navigate to the Vehicle > Vehicle Profile > Vehicle Preferences
+  expected: User should not see Package Info card

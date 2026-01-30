@@ -1,0 +1,50 @@
+metadata:
+  id: TC01594
+  name: Add charge stations
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-28'
+  updated: '2025-12-03'
+  author: user_2
+  testmo_id: 1594
+  folder_id: 101
+preconditions:
+- description: User is viewing the Estimate Route* section
+- description: The user selects an EV or EVAVK2 vehicles
+steps:
+- id: 1
+  action: Expanded info drawer positions
+  expected: User should see all the Charging Stations that are along the Route to
+    make it to the Destination | The percentage of the battery shows at the right
+    side of the Stop/Charging Stop | The charging time necessary shows in the Charging
+    Stop | The arrival time shows in the Charging Stop
+- id: 2
+  action: Click over +ADD A STOP
+  expected: The user is redirect to the Add a Stop screen
+- id: 3
+  action: Click over the POI Charging Stations
+  expected: A loading spinner shows | LocationDetails API is triggered | The Charging
+    Stations in the radius distance display in the Map
+- id: 4
+  action: Zoom In in the area you wan to add the station -> Click over Search this
+    area -> Select one Charging Station -> Click the option +ADD A STOP
+  expected: A loading spinner shows | VehicleEVWaypoints is triggered | The new Stop
+    should be added to the Route | The new Stops shows in the Route with the name
+    of the charging station
+- id: 5
+  action: Click over the POI Charging Stations -> Zoom In in the area you wan to add
+    the station -> Click over Search this area -> Select another Charging Station
+    -> Click the option +ADD A STOP
+  expected: The new Charging Station should be added to the Route with the previous
+    one
+- id: 6
+  action: Click the back button
+  expected: The new Charging Station it is displaying in the Route | The Icon for
+    the stop should be showing depending the letter of the alphabet order (A,B,C...)
+    | The Charging Station added was successfully added

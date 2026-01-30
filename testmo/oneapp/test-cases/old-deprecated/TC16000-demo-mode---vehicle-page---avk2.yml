@@ -1,0 +1,77 @@
+metadata:
+  id: TC16000
+  name: Demo Mode - Vehicle Page - AVK2
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2024-04-30'
+  updated: '2025-10-06'
+  author: user_2
+  testmo_id: 16000
+  folder_id: 105
+description: This TC is to validate the Rogue AVK2 Demo Features
+preconditions:
+- description: Vehicle selected is the Rogue AVK2 (Rogue Platinum Demo)
+steps:
+- id: 1
+  action: Tap Vehicle in the bottom nav
+  expected: MIL Icon | Vehicle Status Icon
+- id: 2
+  action: Tap on the Vehicle Profile button
+  expected: User should be navigated to Vehicle Profile screen and see dummy data
+    for the Vehicle
+- id: 3
+  action: Tap any of the cards in the Vehicle Profile screen, except for Remote Data
+    Wipe
+  expected: User should see the demo mode alert modal
+- id: 4
+  action: Tap on Remote Data Wipe
+  expected: The user should be navigated to the Remote Data Wipe page
+- id: 5
+  action: While on the Page above, click on the Delete Data CTA
+  expected: User should see the demo mode alert modal
+- id: 6
+  action: Return to the Vehicle Page and tap on the Schedule Service/Find a Dealer
+    buttons
+  expected: User should be navigated to a Find a Dealer screen with no search results
+    screen
+- id: 7
+  action: Tap on the Service History button
+  expected: User should see the demo mode alert modal
+- id: 8
+  action: Tap on the MIL Status card (12-Volt Battery Warning) or the Vehicle Status
+    card (Window Open)
+  expected: The user should be navigated to the Vehicle Status Page showing the tab
+    depending on the user selection
+- id: 9
+  action: On the Vehicle Status Page, tap on the MIL tab and click the 12-Volt Battery
+    Warning card
+  expected: The user should see the 12-Volt Battery Warning MIL Page, tapping on the
+    Schedule Service CTA should trigger the demo mode alert modal
+- id: 10
+  action: Return to the Vehicle Status Page, tap on the Vehicle tab
+  expected: User should se a card for Vehicle Status card (Window Open) without any
+    caret, or being clickable
+- id: 11
+  action: Return to the Vehicle Page and Tap on the View Maintenance Schedule card
+  expected: Driving Conditions | Mileage Until Next Service | Estimated Next Service
+    | Maintenance Reminders | Vehicle Mileage
+- id: 12
+  action: Tap on any of the elements of the page except for the See All button on
+    the Parts Replacement Reminder Section
+  expected: User should see the demo mode alert modal
+- id: 13
+  action: Tap on the See All button on the Maintenance Reminders Section
+  expected: The user should be navigated to the Maintenance Reminders page with data
+    for future and overdue parts reminders
+- id: 14
+  action: Tap on any of the elements of the page (except (i)
+  expected: User should see the demo mode alert modal
+- id: 15
+  action: Return to the Vehicle Page and tap on the Est. Mileage card
+  expected: User should see the demo mode alert modal

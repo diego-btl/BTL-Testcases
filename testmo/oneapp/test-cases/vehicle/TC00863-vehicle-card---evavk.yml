@@ -1,0 +1,24 @@
+metadata:
+  id: TC00863
+  name: Vehicle Card - EV/AVK
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-04'
+  updated: '2025-10-28'
+  author: user_7
+  testmo_id: 863
+  folder_id: 45
+preconditions:
+- description: User has an EV/AVK vehicle
+steps:
+- id: 1
+  action: Tap on Vehicle tab
+  expected: User should see Vehicle Status module with model name, refresh button,
+    timestamp, tire pressure status and values, vehicle image, and vehicle profile
+    button

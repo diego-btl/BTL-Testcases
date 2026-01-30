@@ -1,0 +1,30 @@
+metadata:
+  id: TC02676
+  name: Climate Details - Turn Climate On - HVAC_FAILED
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-09-07'
+  updated: '2025-04-30'
+  author: user_3
+  testmo_id: 2676
+  folder_id: 4170
+description: https://www.pivotaltracker.com/story/show/185088490https://www.pivotaltracker.com/story/show/185988990
+preconditions:
+- description: AVK2 vehicleClimate DetailsEngine is PENDING
+steps:
+- id: 1
+  action: 'The user has sent an engine start command -> They are on the climate details
+    screen -> The app is polling the checkEngineServiceRequest query -> It should
+    react differently based on the new statusDetails field -> The statusDetails field
+    returns the HVAC_FAILED enum -> The status field returns the FAILED enum -> The
+    app should show a toast with the following copy:'
+  expected: Engine started, but climate failed to start | Stop the spinner animation
+    | The app should stop polling | The screen should update to show that the climate
+    status is off | The main CTA should still say "Turn Climate Off" | min timer starts
+    running above hero image

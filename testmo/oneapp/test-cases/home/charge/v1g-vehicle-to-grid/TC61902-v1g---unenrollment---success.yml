@@ -1,0 +1,57 @@
+metadata:
+  id: TC61902
+  name: V1G - Unenrollment - SUCCESS
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-10-29'
+  updated: '2025-12-16'
+  author: user_25
+  testmo_id: 61902
+  folder_id: 6755
+preconditions:
+- description: Nissan NNA and NCI only
+- description: EV or EV AVK2 only
+- description: PD only
+- description: '"v1GMonitoredChargingAccountStatus": "ACTIVE"'
+steps:
+- id: 1
+  action: User is on the Manage EV screen
+  expected: Smart Charging card is places under the NECN card with the secondary text
+    'Enrolled'
+- id: 2
+  action: Tap the Smart Charging card
+  expected: User is navigated to the Smart Charging screen | Nissan Smart Charging
+    status is 'Enrolled'
+- id: 3
+  action: Tap the 'Deactivate from Smart Charging' button
+  expected: The 'Deactivate from Smart Charging' modal with 'Cancel' and 'Deactivate'
+    buttons is displayed
+- id: 4
+  action: Tap the 'Cancel' button
+  expected: Modal is dismissed
+- id: 5
+  action: Tap the 'Deactivate from Smart Charging' button
+  expected: The 'Deactivate from Smart Charging' modal with 'Cancel' and 'Deactivate'
+    buttons is displayed
+- id: 6
+  action: Tap the 'Deactivate' button
+  expected: V1GCancelMonitoredChargingPlan API is triggered | The loading state is
+    displayed
+- id: 7
+  action: 'V1GCancelMonitoredChargingPlan API returns "statusCode": "1000"'
+  expected: 'The V1GMonitoredChargingAccountStatus API is triggered, returning "v1GMonitoredChargingAccountStatus":
+    "CANCELLED" | The toast ''You have successfully deactivated from Smart charging''
+    is displayed | The ''Learn More'' button is displayed instead of ''Deactivate
+    from Smart Charging'' | Nissan Smart Charging status is updated to ''Not enrolled'''
+- id: 8
+  action: Tap 'Learn More' button
+  expected: The loading state is displayed | User is navigated to the Optimize screen
+- id: 9
+  action: Navigate to Charge > Manage EV
+  expected: The secondary text on the Smart Charging card is updated to 'Not enrolled'

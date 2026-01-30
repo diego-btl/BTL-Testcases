@@ -1,0 +1,26 @@
+metadata:
+  id: TC61876
+  name: eVehicleEligibility - FALSE
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-10-24'
+  updated: '2025-12-16'
+  author: user_25
+  testmo_id: 61876
+  folder_id: 6755
+preconditions:
+- description: Nissan NNA and NCI only
+- description: User has an EV or EV AVK2 vehicle
+- description: PD only
+steps:
+- id: 1
+  action: 'Mock eVehicleEligibility to return "v1GEligible": false -> Navigate to
+    the Charge screen'
+  expected: V1GMonitoredChargingAccountStatus is NOT called | Status, Optimize, and
+    Insights tabs are NOT displayed, the feature is hidden

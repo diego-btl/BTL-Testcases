@@ -1,0 +1,29 @@
+metadata:
+  id: TC02674
+  name: Climate Details - Turn Climate On - Initiated
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-09-07'
+  updated: '2025-09-22'
+  author: user_3
+  testmo_id: 2674
+  folder_id: 4170
+description: https://www.pivotaltracker.com/story/show/185088490
+preconditions:
+- description: AVK2 vehicleClimate Details screenEngine is OFF
+steps:
+- id: 1
+  action: Tap Turn Climate On -> Tap No -> Tap Turn Climate On and tap Yes
+  expected: User should see confirmation prompt that climate will also start the engine
+    | User should see prompt dismissed | User should see Turn Climate On button disable
+    and status shows loading state - parameters sent in the request should match the
+    selected parameters on the screenUser should see a toast message that transitions
+    from (3 seconds each):Contacting {vehicle model} to start engine...Waking {vehicle
+    model} to start engine...Initiating climate {on/off} for {vehicle model}... |
+    User should also see an additional toast "Changes are now saved as your default".

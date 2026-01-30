@@ -1,0 +1,23 @@
+metadata:
+  id: TC00866
+  name: Refresh
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-04'
+  updated: '2025-10-28'
+  author: user_7
+  testmo_id: 866
+  folder_id: 45
+steps:
+- id: 1
+  action: Tap refresh button Make sure to test on EV/AVK. Refer to sheet for logic
+    -> https://docs.google.com/spreadsheets/d/1Ch6XwP9XdU2km5jsJm_O0SrvDL6hJw4uu8mDPRl26-g/edit#gid=542058053
+  expected: User should see loading spinner while refresh is in progress, | User should
+    see updated data and timestamp (tire pressure) after refresh is successful | If
+    refresh is not successful, cached data will be shown

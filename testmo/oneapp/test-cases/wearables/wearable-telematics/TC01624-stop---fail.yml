@@ -1,0 +1,27 @@
+metadata:
+  id: TC01624
+  name: Stop - Fail
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-28'
+  updated: '2024-10-17'
+  author: user_2
+  testmo_id: 1624
+  folder_id: 76
+preconditions:
+- description: User has sent a start command and is on the telematics screen
+steps:
+- id: 1
+  action: 1. Tap the Stop button 2. Tap Yes 3. Force call to fail 4. Try again
+  expected: '1. User should see a confirmation modal 2. Stop command should be sent
+    and user should see the modal dismiss itself. User should see status updates as
+    the call is being made. User should see the status updates as the call is being
+    made 3. User should see a failure modal and start countdown should continue to
+    run 4. User should see Stop flow try again Note: If user taps No on any of the
+    modals, modal should be dismissed and command should not be sent'

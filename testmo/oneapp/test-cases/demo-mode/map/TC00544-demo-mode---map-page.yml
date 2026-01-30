@@ -1,0 +1,33 @@
+metadata:
+  id: TC00544
+  name: Demo Mode - Map Page
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-01'
+  updated: '2025-12-17'
+  author: user_2
+  testmo_id: 544
+  folder_id: 6801
+preconditions:
+- description: User is on the homescreen
+steps:
+- id: 1
+  action: Tap Map in the bottom nav
+  expected: 'User should see the map screen with: user location, vehicle pins in fixed
+    locations, scrolling POI categories'
+- id: 2
+  action: Tap on the search bar, POI categories, or buttons on the map
+  expected: User should see the demo mode alert modal
+- id: 3
+  action: Tap on the user/vehicle location buttons
+  expected: For user location, the map screen should be changed, | For vehicle location,
+    vehicle pin in fixed locations should be shown.
+- id: 4
+  action: Change the vehicle from the selector
+  expected: The dummy data should be changed.

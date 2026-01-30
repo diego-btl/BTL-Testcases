@@ -1,0 +1,20 @@
+metadata:
+  id: TC00600
+  name: Lock/Unlock Buttons
+  feature: test-cases
+  priority: critical
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-01'
+  updated: '2025-08-21'
+  author: user_2
+  testmo_id: 600
+  folder_id: 59
+steps:
+- id: 1
+  action: User is in the Home screen
+  expected: User should see Lock and Unlock buttons in the telematics row

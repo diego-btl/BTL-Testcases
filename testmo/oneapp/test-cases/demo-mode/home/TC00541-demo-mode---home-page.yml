@@ -1,0 +1,52 @@
+metadata:
+  id: TC00541
+  name: Demo Mode - Home Page
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-01'
+  updated: '2025-12-18'
+  author: user_2
+  testmo_id: 541
+  folder_id: 6799
+description: Demo Mode Home Page validation + Vehicle Selection, shared for both Infiniti
+  and Nissan, please skip the vehicles that are not part of the brand you're testing
+preconditions:
+- description: User is already in Demo Mode Home Page
+steps:
+- id: 1
+  action: Validate the Hero Section
+  expected: Est. Range (EV) / Fuel Remaining (ICE) | Weather icon/info | Lock Status
+    | Vehicle Image | Support Icon | Notifications Icon | Vehicle Selector
+- id: 2
+  action: Tap on the Vehicle Selector dropdown
+  expected: Rogue | LEAF | Rogue AVK2 | QX60 | QX55 | QX80
+- id: 3
+  action: NISSAN - Select the LEAF
+  expected: The user should be navigated to the Home Page showing all the data for
+    the LEAF, including the Telematics Controls and Cards for an Electric Vehicle
+- id: 4
+  action: NISSAN - Tap on the Vehicle Selector dropdown and select the Rogue
+  expected: The user should be navigated to the Home Page showing all the data for
+    the Rogue, including the Telematics Controls and Cards for an AVK Vehicle
+- id: 5
+  action: NISSAN - Tap on the Vehicle Selector dropdown and select the Rogue AVK2
+  expected: The user should be navigated to the Home Page showing all the data for
+    the Rogue, including the Telematics Controls and Cards for an AVK2 Vehicle
+- id: 6
+  action: INFINITI - Tap on the Vehicle Selector dropdown and select the QX60
+  expected: The user should be navigated to the Home Page showing all the data for
+    the QX60, including the Telematics Controls and Cards for an AVK Vehicle
+- id: 7
+  action: INFINITI - Tap on the Vehicle Selector dropdown and select the QX55
+  expected: The user should be navigated to the Home Page showing all the data for
+    the QX55, including the Telematics Controls and Cards for an AVK Vehicle
+- id: 8
+  action: INFINITI - Tap on the Vehicle Selector dropdown and select the QX80
+  expected: The user should be navigated to the Home Page showing all the data for
+    the QX80, including the Telematics Controls and Cards for an AVK2 Vehicle

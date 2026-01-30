@@ -1,0 +1,35 @@
+metadata:
+  id: TC41889
+  name: Share Collision Report - No Collision Center is selected
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-06-10'
+  updated: '2025-06-10'
+  author: user_26
+  testmo_id: 41889
+  folder_id: 3800
+description: Verify that the user can share a collision report via email from the
+  Generated Report screen, when a Collision Center was not selected when creating
+  the Report
+preconditions:
+- description: A collision report has been generated successfully.
+- description: The user is on the Generated Collision Report screen.
+- description: No Collision Center was selected during report creation.
+steps:
+- id: 1
+  action: Tap the Share Report CTA on the Generated Report screen
+  expected: The user is navigated to the Collision Center screen
+- id: 2
+  action: In the search field, enter a ZIP code (e.g., 2345).
+  expected: The system displays a list of available Collision Center cards, each with
+    a Send Report CTA
+- id: 3
+  action: Tap the Send Report CTA on one of the Center cards.
+  expected: The collision report is attached as a PDF file. | The recipient field
+    is automatically filled with the selected Collision Center’s email address.

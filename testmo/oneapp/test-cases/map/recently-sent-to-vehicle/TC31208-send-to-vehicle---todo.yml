@@ -1,0 +1,16 @@
+metadata:
+  id: TC31208
+  name: Send to Vehicle - todo
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-02-11'
+  updated: '2025-08-22'
+  author: user_17
+  testmo_id: 31208
+  folder_id: 100

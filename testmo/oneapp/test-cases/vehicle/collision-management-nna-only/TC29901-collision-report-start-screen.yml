@@ -1,0 +1,32 @@
+metadata:
+  id: TC29901
+  name: Collision Report start Screen
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-01-09'
+  updated: '2025-07-14'
+  author: user_26
+  testmo_id: 29901
+  folder_id: 3800
+description: https://www.pivotaltracker.com/story/show/188697539
+preconditions:
+- description: The user is already on the Collision Management screen
+- description: The Vehicle Data section depends on the following capability COLLISION_MANAGEMENT
+steps:
+- id: 1
+  action: Tap on the New Collision Report card
+  expected: 'The user is redirected to the Collision Report start screen | The user
+    should see the following card : - Title: Your Information with ( Name, Phone Number,
+    Email)- Title: Towing/Transportation with (Name: --, Address: --) - Title: Insurance
+    Provider (Company: --)- Title: Vehicle Data with (Location, Vehicle Info)- Title:
+    Collision Center with ( Name:-- , Address:--, Email :--) | The user information
+    on the Your Information card should be filled out using the User info stored in
+    the app | The Vehicle Data information should be prefilled according to the stored
+    data in the app | The user should see the blank state for the rest of the cards
+    | ADD PHOTOS CTA should always be active'

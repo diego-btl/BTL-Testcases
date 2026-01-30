@@ -1,0 +1,70 @@
+metadata:
+  id: TC62132
+  name: Upcoming Appointment - Details - Editable
+  feature: test-cases
+  priority: critical
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-12-09'
+  updated: '2026-01-20'
+  author: user_23
+  testmo_id: 62132
+  folder_id: 6795
+description: 'Edit Schedule Service - Upcoming Appointment - Editable: Appointment
+  Details Display with Edit OptionsValidates the Upcoming Appointment screen displays
+  all booked appointment information correctly when appointment is editable (isEditable:
+  true). Tests that Edit buttons are displayed and available on all editable cards.Notes:Applicable
+  only when appointment has isEditable: trueAll cards display with Edit buttons enabledDELETE
+  SERVICE REQUEST button IS displayedDealer card shows message: To change the dealer,
+  please delete the request and start a new bookingDealer card has NO Edit button'
+preconditions:
+- description: 'User has booked service appointment with isEditable: true'
+- description: User taps on Upcoming Appointment card
+steps:
+- id: 1
+  action: Tap on Upcoming Appointment card from Vehicle Screen or Service History
+    Screen
+  expected: User is navigated to Upcoming Appointment screen | Screen title is Upcoming
+    Appointment | Back arrow is displayed at top left | Vehicle image is displayed
+    | Vehicle nickname from VehicleStaticData is displayed | Vehicle year, model,
+    and color from VehicleStaticData are displayed
+- id: 2
+  action: Verify Dealer card displays correctly
+  expected: 'Location icon is displayed | Card title: Dealer | Dealer name from appointment
+    data is displayed | Dealer address from appointment data is displayed | Message
+    text: To change the dealer, please delete the request and start a new booking
+    | NO Edit button on dealer card'
+- id: 3
+  action: Verify Selected Service card displays correctly
+  expected: 'Wrench icon is displayed | Card title: Selected Service | Selected service
+    name(s) from appointment data is displayed | Edit button is visible and enabled'
+- id: 4
+  action: Verify Appointment Details card displays correctly
+  expected: 'Calendar icon is displayed | Card title: Appointment Details | Date from
+    appointment data displayed in format: Date: [Day], [Month] [Date], [Year] | Time
+    from appointment data displayed in format: Time: [HH:MM AM/PM] | Service Advisor
+    name from appointment data is displayed (if selected) | Edit button is visible
+    and enabled'
+- id: 5
+  action: Verify Transportation card displays correctly (if applicable)
+  expected: 'Car icon is displayed | Card title: Transportation | Transportation preference
+    from appointment data is displayed | Pick Up and Drop Off addresses displayed
+    (if Valet Service selected) | Edit button is visible and enabled'
+- id: 6
+  action: Verify Contact Information card displays correctly
+  expected: 'Phone icon is displayed | Card title: Contact Information | Email address
+    from appointment data displayed in correct case | Phone number from appointment
+    data is displayed | Edit button is visible and enabled'
+- id: 7
+  action: Tap CALL DEALER link (NISSAN) or CALL RETAILER link (INFINITI)
+  expected: 'Phone number is retrieved from VehiclePreferredDealer query phone field
+    | Android: Phone dialer opens with dealer/retailer contact number | iOS: Phone
+    call drawer/sheet opens with dealer/retailer contact number and Call/Cancel options'
+- id: 8
+  action: Verify DELETE SERVICE REQUEST button is available
+  expected: 'ALL CAPS button text: DELETE SERVICE REQUEST | Button is visible and
+    enabled'

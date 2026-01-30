@@ -1,0 +1,25 @@
+metadata:
+  id: TC00897
+  name: Button
+  feature: test-cases
+  priority: critical
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-04'
+  updated: '2025-10-24'
+  author: user_7
+  testmo_id: 897
+  folder_id: 7143
+preconditions:
+- description: User is on Vehicle tab
+steps:
+- id: 1
+  action: Tap on Schedule Service
+  expected: User should see Schedule Service CTA | User should see Dealer Details
+    (if user has a preferred dealer and native scheduling is false) | User should
+    see Select Services (if user has a preferred dealer and native scheduling is true)
+    | User should see Find a Dealer (if user does not have a preferred dealer)

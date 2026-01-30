@@ -1,0 +1,20 @@
+metadata:
+  id: TC28444
+  name: Data Anniversary - Confetti Animation
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2024-11-22'
+  updated: '2025-02-06'
+  author: user_2
+  testmo_id: 28444
+  folder_id: 7145
+description: This test case should coverValidating the Confetti animation on the Home
+  screen
+preconditions:
+- description: EnableOwnerAnniversary FF Enabled

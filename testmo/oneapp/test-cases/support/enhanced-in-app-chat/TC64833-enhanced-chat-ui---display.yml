@@ -1,0 +1,54 @@
+metadata:
+  id: TC64833
+  name: Enhanced Chat UI - Display
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2026-01-28'
+  updated: '2026-01-28'
+  author: user_23
+  testmo_id: 64833
+  folder_id: 7146
+description: 'Validates Enhanced Chat UI loads correctly after tapping GO TO CHAT.
+  Smoke test to verify basic chat interface display and conversation options. Notes:
+  Chat UI is controlled by Salesforce SDK Android Limitation: Salesforce Chat SDK
+  forces chat UI to follow device (system) theme, not in-app theme setting Device
+  in Dark mode → Chat opens in Dark mode (even if app is in Light mode) Device in
+  Light mode → Chat opens in Light mode (even if app is in Dark mode) iOS works correctly
+  (chat follows in-app theme) Preconditions: EnableEnhancedInAppChat FF = true User
+  is logged in User is on Live Chat screen'
+steps:
+- id: 1
+  action: Select any department card and tap GO TO CHAT button
+  expected: 'Enhanced Chat UI loads with:Title: Chat | Back arrow button in top left
+    | Three-dot menu icon in top right | Timestamp: Today • [Time] | Initial message:
+    Thanks for your message. An agent will be with you shortly. Just so you know,
+    we record and track conversations to help improve your experience | Message input
+    field: Type a message | Plus (+) button for attachments | Send arrow button'
+- id: 2
+  action: Tap three-dot menu icon in top right
+  expected: 'Conversation Options screen is displayed with:Back arrow in top left
+    | Title: Conversation Options | Search bar | Button: Request Chat Transcript |
+    Button: End Chat'
+- id: 3
+  action: Tap Request Chat Transcript button
+  expected: Chat transcript is available for download
+- id: 4
+  action: Return to Conversation Options and tap End Chat button
+  expected: 'Confirmation modal is displayed with:Title: End Chat? | Message: Are
+    you sure you want to end the chat session? You will be disconnected from the agent.
+    | Button: End Chat | Button: Cancel'
+- id: 5
+  action: Tap Cancel button
+  expected: Modal is dismissed | User returns to Conversation Options screen
+- id: 6
+  action: Tap End Chat button again, then tap End Chat in confirmation modal
+  expected: Chat session ends | User returns to Chat screen with closing message displayed
+- id: 7
+  action: Tap back arrow button from Chat screen
+  expected: User is redirected to Live Chat screen

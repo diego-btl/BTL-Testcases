@@ -1,0 +1,26 @@
+metadata:
+  id: TC00591
+  name: Camera Permissions
+  feature: test-cases
+  priority: critical
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-01'
+  updated: '2025-10-09'
+  author: user_2
+  testmo_id: 591
+  folder_id: 56
+preconditions:
+- description: User is already on the Add Vehicle screen
+- description: User has not provided Camera permissions to the app
+steps:
+- id: 1
+  action: Tap on the Camera Interaction field (TAP HERE TO USE YOUR CAMERA)
+  expected: User should see camera permissions modal pop up
+- id: 2
+  action: 'iOS: "OK" -> Android: "While Using The App"'
+  expected: The Camera Interaction field should display the camera feed

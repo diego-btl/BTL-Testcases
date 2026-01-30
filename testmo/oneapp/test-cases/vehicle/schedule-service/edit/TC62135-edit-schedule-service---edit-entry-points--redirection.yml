@@ -1,0 +1,49 @@
+metadata:
+  id: TC62135
+  name: Edit Schedule Service - Edit Entry Points & Redirection
+  feature: test-cases
+  priority: critical
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-12-11'
+  updated: '2026-01-20'
+  author: user_23
+  testmo_id: 62135
+  folder_id: 6795
+description: 'Edit Schedule Service - Edit Entry Points & Redirection: Entry Point
+  Validation and Screen NavigationValidates all four Edit entry points on the Upcoming
+  Appointment screen route to their respective screens with correct prepopulation
+  and locking behavior. Each Edit button navigates to the appropriate editing screen
+  with specific field conditions (prepopulated, locked/disabled, or empty for safety).'
+preconditions:
+- description: User has one or more booked service appointments
+- description: 'Appointment has isEditable: true'
+- description: User is on Upcoming Appointment screen
+steps:
+- id: 1
+  action: Tap Edit button on Selected Service card
+  expected: User is navigated to Select Services screen | Dealer card is displayed
+    with DISABLED state | Services list displays with NO checkmarks (services NOT
+    prepopulated) | NEXT button is disabled
+- id: 2
+  action: Tap Edit button on Appointment Details card
+  expected: 'User is navigated to Select Date and Time screen | Calendar displays
+    with NO date preselected | NO time slot is preselected | Optional Preferences
+    section displays: Transportation: -- and Advisor: -- (not prepopulated) | NEXT
+    button is disabled'
+- id: 3
+  action: Tap Edit button on Transportation card
+  expected: 'User is navigated to Select Date and Time screen | Calendar displays
+    with NO date preselected | NO time slot is preselected | Optional Preferences
+    section displays: Transportation: -- and Advisor: -- (not prepopulated) | NEXT
+    button is disabled'
+- id: 4
+  action: Tap Edit button on Contact Information card
+  expected: User is navigated to Contact Information screen | Email field is prepopulated
+    with current email from appointment data in correct case | Phone field is prepopulated
+    with current phone number from appointment data | Fields are editable | NEXT button
+    is disabled (no changes made yet)

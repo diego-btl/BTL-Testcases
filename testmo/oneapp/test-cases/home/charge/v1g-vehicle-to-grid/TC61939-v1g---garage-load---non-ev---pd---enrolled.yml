@@ -1,0 +1,41 @@
+metadata:
+  id: TC61939
+  name: V1G - Garage Load - NON-EV - PD - ENROLLED
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-11-05'
+  updated: '2025-12-16'
+  author: user_25
+  testmo_id: 61939
+  folder_id: 6755
+description: 'Note: mocking VehicleCapabilities or VehicleStaticData perform bg/fg
+  or cold start 2 times due to the existing 2nd step validationNote: performing pull-to-refresh
+  cache should be cleared, if all the mandatory criteria have not been met > the feature
+  should be hidden after the first pull-to-refresh; after the second pull-to-refresh
+  > eVehicleEligibility and V1GMonitoredChargingAccountStatus APIs should not be called'
+preconditions:
+- description: Nissan NNA and NCI only
+- description: '"GrantV1G": "{\"enabled\": true, \"checkCapability\": true}"'
+- description: 'VehicleStaticData IS NOT > "__typename" = "ElectricAVK2Vehicle" or
+    "__typename": "ElectricVehicle"'
+- description: 'VehicleStaticData > "driverType": "PRIMARY_DRIVER"'
+- description: 'VehicleCapabilities > "status": "ENROLLED"'
+steps:
+- id: 1
+  action: User is on the Home screen
+  expected: eVehicleEligibility API is not called | V1GMonitoredChargingAccountStatus
+    is not called
+- id: 2
+  action: 'Stop mocking VehicleStaticData to receive "__typename": "ElectricAVK2Vehicle"
+    or "ElectricVehicle" -> Bg/fg the app 2 times or pull-to-refresh'
+  expected: 'eVehicleEligibility API is called, returning "v1GEligible": true | V1GMonitoredChargingAccountStatus
+    is called'
+- id: 3
+  action: Navigate to the Charge screen
+  expected: Feature is shown in Charge Screen

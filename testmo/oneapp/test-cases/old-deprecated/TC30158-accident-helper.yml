@@ -1,0 +1,18 @@
+metadata:
+  id: TC30158
+  name: Accident Helper
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-02-05'
+  updated: '2025-09-19'
+  author: user_17
+  testmo_id: 30158
+  folder_id: 105
+preconditions:
+- description: The user is on the Support tab

@@ -1,0 +1,26 @@
+metadata:
+  id: TC01468
+  name: Name and Email - Success*
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-28'
+  updated: '2025-08-21'
+  author: user_2
+  testmo_id: 1468
+  folder_id: 43
+description: Verify the first registration screen success path
+preconditions:
+- description: User is on the first registration screen
+steps:
+- id: 1
+  action: Enter valid first name, last name, and matching emails
+  expected: User should see enabled Next CTA button
+- id: 2
+  action: Tap on Next CTA button
+  expected: User should be brought to the second registration screen

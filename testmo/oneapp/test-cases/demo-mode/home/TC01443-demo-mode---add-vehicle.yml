@@ -1,0 +1,21 @@
+metadata:
+  id: TC01443
+  name: Demo Mode - Add Vehicle
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-28'
+  updated: '2026-01-07'
+  author: user_2
+  testmo_id: 1443
+  folder_id: 6799
+steps:
+- id: 1
+  action: Tap on Vehicle Selector2. Tap the Add Vehicle button
+  expected: User should see the vehicle selector screen2. User should see a dismissable
+    alert informing them the feature is not available in demo mode

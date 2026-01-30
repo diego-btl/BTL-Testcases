@@ -1,0 +1,43 @@
+metadata:
+  id: TC52128
+  name: Nissan Energy Notification Preferences - AccountStatus Active
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-06-13'
+  updated: '2025-06-13'
+  author: user_15
+  testmo_id: 52128
+  folder_id: 49
+description: 'Story: https://app.clickup.com/t/86b54txk1'
+steps:
+- id: 1
+  action: Log into app > Tap on envelope icon from the Home screen > Tap on the gear
+    icon
+  expected: emailStatus | pushStatus | smsStatus
+- id: 2
+  action: Mock NissanEnergyNotificationPreferences call to retrieve TRUE values >
+    Go to EV Notification section from the Notification Preferences screen
+  expected: 'Verify that there is a new notification called: NISSAN ENERGY Charge
+    Network with toggles displayed as enabled'
+- id: 3
+  action: Mock NissanEnergyNotificationPreferences call to retrieve some NULL values
+    > Go to EV Notification section from the Notification Preferences screen
+  expected: Verify that only the toggle retrieved as null is hidden
+- id: 4
+  action: Mock NissanEnergyNotificationPreferences call to retrieve FALSE values >
+    Go to EV Notification section from the Notification Preferences screen
+  expected: 'Verify that there is a new notification called: NISSAN ENERGY Charge
+    Network with toggles displayed as disabled'
+- id: 5
+  action: Mock NissanEnergyNotificationPreferences call to retrieve NULL values >
+    Go to EV Notification section from the Notification Preferences screen
+  expected: Verify the entire NISSAN ENERGY Charge Network The notification is hidden
+- id: 6
+  action: Tap to collapse and expand the NISSAN ENERGY Charge Network section
+  expected: Verify user can perform this action without problems

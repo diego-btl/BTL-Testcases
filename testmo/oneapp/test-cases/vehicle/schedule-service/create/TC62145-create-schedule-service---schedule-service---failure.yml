@@ -1,0 +1,42 @@
+metadata:
+  id: TC62145
+  name: Create Schedule Service - Schedule Service - Failure
+  feature: test-cases
+  priority: critical
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-12-12'
+  updated: '2026-01-20'
+  author: user_23
+  testmo_id: 62145
+  folder_id: 6787
+description: 'Create Schedule Service - Schedule Service - Failure: Booking Submission
+  Error HandlingValidates error handling when CreateServiceAppointment mutation fails.
+  Tests that error modal is displayed with retry option and user can either retry
+  submission or return to Review Service Request screen.Notes:Mock or simulate CreateServiceAppointment
+  mutation failureError modal displays with retry optionUser can retry submission
+  or cancel and return to Review screenAll booking information is preserved'
+preconditions:
+- description: User has completed all screens and arrived at Review Service Request
+    screen
+- description: All booking information is filled and ready for submission
+steps:
+- id: 1
+  action: 'Mock the CreateServiceAppointment mutation to return failure: -> { "data":
+    { "createServiceAppointment": { "__typename": "ResponseStatus", "success": false
+    } } }On Review Service Request screen, tap SCHEDULE SERVICE button'
+  expected: 'CreateServiceAppointment mutation is triggered | Error modal appears
+    with title: Failed to Schedule Service | Modal message: Sorry, something went
+    wrong when scheduling your service appointment. Would you like to retry? | No,
+    cancel button is displayed | Yes, retry button is displayed'
+- id: 2
+  action: Tap No, cancel button on error modal
+  expected: Modal is dismissed | User remains on Review Service Request screen | All
+    booking information is preserved
+- id: 3
+  action: Tap SCHEDULE SERVICE button again, then tap Yes, retry button on error modal
+  expected: CreateServiceAppointment mutation is triggered again

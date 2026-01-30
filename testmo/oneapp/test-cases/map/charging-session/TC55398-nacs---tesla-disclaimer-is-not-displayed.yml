@@ -1,0 +1,34 @@
+metadata:
+  id: TC55398
+  name: NACS - Tesla Disclaimer is NOT displayed
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-07-29'
+  updated: '2025-07-29'
+  author: user_25
+  testmo_id: 55398
+  folder_id: 2442
+description: Check nacsStatus when determining whether to show the Tesla disclaimer
+preconditions:
+- description: AccountStatus API:- status is ACTIVE- nacsStatus is NOT_APPLICABLE,
+    missing or null
+steps:
+- id: 1
+  action: Navigate to the Map and tap Charge Stations ePOI
+  expected: LocationDetails API is triggered
+- id: 2
+  action: Navigate to the charge station which contains "Supercharger" in its name,
+    proceed to the Select Charge screen and tap START CHARGING CTA
+  expected: The parkingChargeable API is triggered, Tesla disclaimer is NOT displayed
+    in the FE
+- id: 3
+  action: Navigate to the charge station which DOES NOT contain "Supercharger" in
+    its name, proceed to the Select Charge screen and tap START CHARGING CTA
+  expected: The parkingChargeable API is triggered, Tesla disclaimer IS NOT displayed
+    in the FE

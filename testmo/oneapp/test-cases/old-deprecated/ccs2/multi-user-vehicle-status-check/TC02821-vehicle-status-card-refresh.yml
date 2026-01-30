@@ -1,0 +1,24 @@
+metadata:
+  id: TC02821
+  name: Vehicle status card refresh
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-09-08'
+  updated: '2026-01-06'
+  author: user_3
+  testmo_id: 2821
+  folder_id: 429
+preconditions:
+- description: User is on Vehicle tab User has a MIL/Vehicle status indicator active
+    User is a PRIMARY_DRIVER or SHARED_DRIVER (to be tested for both for AVK2)
+steps:
+- id: 1
+  action: 1. Tap on Vehicle status card 2. Tap on Refresh
+  expected: 1. User should see Vehicle status screen 2. User should see loading screen
+    and MIL statuses, Vehicle statues, and Recalls refresh

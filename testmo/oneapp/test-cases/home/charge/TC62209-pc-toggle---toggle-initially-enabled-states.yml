@@ -1,0 +1,49 @@
+metadata:
+  id: TC62209
+  name: P&C Toggle - Toggle initially enabled States
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-12-19'
+  updated: '2025-12-19'
+  author: user_6
+  testmo_id: 62209
+  folder_id: 66
+preconditions:
+- description: User has an EV
+- description: User is on charge screen
+- description: GrantFullPlugAndCharge FF is enabled
+- description: NECN AccountStatus is Active
+- description: User is a Primary driver
+- description: Toggle is enabled
+steps:
+- id: 1
+  action: Tap on the enabled toggle
+  expected: 'updatedPnCServiceStatus api is triggered and passes the current VIN and
+    "pncServiceStatus": "DISABLE" as parameters | PNCServiceStatus api is polled every
+    3 seconds'
+- id: 2
+  action: Mock pncStatus response to be ENABLING
+  expected: Toggle should stay in the enabled state but should become inactive (cannot
+    be tapped)
+- id: 3
+  action: Repeat step 1 and mock pncStatus response to be ENABLED
+  expected: Toggle should stay in the enabled state but should become inactive (cannot
+    be tapped) and an error toast should be displayed
+- id: 4
+  action: Repeat step 1 and mock pncStatus response to be PENDING/NA/null
+  expected: Toggle should display the copy ERROR instead of the toggle and an error
+    toast should be displayed
+- id: 5
+  action: Mock pncStatus response to be DISABLED
+  expected: Toggle should flip to off and continue to be active (can be tapped again)
+- id: 6
+  action: Tap on the (now disabled) toggle again
+  expected: 'updatedPnCServiceStatus api is triggered and passes the current VIN and
+    "pncServiceStatus": "ENABLED" as parameters | PNCServiceStatus api is polled every
+    3 seconds'

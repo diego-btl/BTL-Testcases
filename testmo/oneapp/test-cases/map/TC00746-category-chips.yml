@@ -1,0 +1,23 @@
+metadata:
+  id: TC00746
+  name: Category Chips
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-01'
+  updated: '2025-08-22'
+  author: user_2
+  testmo_id: 746
+  folder_id: 46
+preconditions:
+- description: User is on Map tab
+steps:
+- id: 1
+  action: Tap any of the category search chips
+  expected: User should see the category text in the search bar and the category text
+    should be used to show search results on the map screen

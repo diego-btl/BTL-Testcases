@@ -1,0 +1,40 @@
+metadata:
+  id: TC61888
+  name: No vehicle
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-10-28'
+  updated: '2026-01-08'
+  author: user_24
+  testmo_id: 61888
+  folder_id: 6757
+description: Test this and the following 4 TCs one after another - without reinstalling
+  app. To ensure that the onboarding cards show as th vehicle's status changes
+steps:
+- id: 1
+  action: Mock the account to have no vehicles (empty staticdata) -> Launch app ->
+    Log in -> Once StaticData and PendingVehicle apis are resolved, modal will show
+    -> Tap on Yes
+  expected: 'The first card you see will say Hello! in title | Body will read: | Welcome
+    to the [MyNISSAN / MyINFINITI] app! | To fully leverage the app we need to add
+    [a Nissan / an INFINITI] vehicle to your garage. | CTA 1: Add vehicle | No other
+    cards after this card'
+- id: 2
+  action: Tap on Add a vehicle CTA
+  expected: User is taken to Add Vehicle screen
+- id: 3
+  action: Tap back inside app
+  expected: User is taken to home screen
+- id: 4
+  action: Go to Support Screen
+  expected: App Key Features card is shown on the screen
+- id: 5
+  action: Tap on the App Key Features card on support screen
+  expected: The Status(Hello) card should be the same as seen when app is launched,
+    with the same flow

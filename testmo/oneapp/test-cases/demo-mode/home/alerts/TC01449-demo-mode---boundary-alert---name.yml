@@ -1,0 +1,23 @@
+metadata:
+  id: TC01449
+  name: Demo Mode - Boundary Alert - Name
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-28'
+  updated: '2025-12-18'
+  author: user_2
+  testmo_id: 1449
+  folder_id: 6809
+steps:
+- id: 1
+  action: Tap on a Boundary alert2. Interact with the name field3. Tap on 'Display
+    Alert in Vehicle' checkbox4. Tap on the save alert or delete alert button
+  expected: User should see the edit boundary alert sheet2. User should be able to
+    edit the name3. User should be able to check/uncheck 'Display Alert in Vehicle'
+    checkbox4. User should see the demo mode alert modal

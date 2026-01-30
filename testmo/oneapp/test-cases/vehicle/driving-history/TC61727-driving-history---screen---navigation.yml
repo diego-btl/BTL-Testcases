@@ -1,0 +1,60 @@
+metadata:
+  id: TC61727
+  name: Driving History - Screen - Navigation
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-09-19'
+  updated: '2025-11-12'
+  author: user_15
+  testmo_id: 61727
+  folder_id: 92
+preconditions:
+- description: User has an EV/EV2 vehicle
+- description: User is on the Vehicle Page
+steps:
+- id: 1
+  action: Tap the Driving History card
+  expected: The DrivingHistory API is triggered | The loading state is displayed |
+    User is navigated to the Driving History screen
+- id: 2
+  action: Validate the Page Elements
+  expected: The page shows 3 tabs (Day, Month, Year)The Day tab is selected by default,
+    the text shows the Day and Date (Monday 09/05) | The card displays all the fields
+    with particular values:- Avg Energy Economy- Avg Energy Consumed- Avg energy Saved-
+    Avg CO2 Saved- Total No. of Trips- Total Distance- Total Travel Time- Avg Speed
+    | "CO2 gas savings calculates the emissions you save by driving a Nissan electric
+    vehicle." text is displayed at the bottom of the card
+- id: 3
+  action: Tap the Date Picker carrots < >
+  expected: 'User should navigate through the dates and info should be updated according
+    to the DrivingHistory API response ("aggregator": "DAILY")'
+- id: 4
+  action: Tap the Month tab
+  expected: The DrivingHistory API is triggered | The loading state is displayedThe
+    Month tab is selected, the text shows the Month (September)The card displays all
+    the fields with particular values:- Avg Energy Economy- Avg Energy Consumed- Avg
+    energy Saved- Avg CO2 Saved- Total No. of Trips- Total Distance- Total Travel
+    Time- Avg Speed | "CO2 gas savings calculates the emissions you save by driving
+    a Nissan electric vehicle." text is displayed at the bottom of the card
+- id: 5
+  action: Tap the Month Picker carrots < >
+  expected: 'User should navigate through the months and info should be updated according
+    to the DrivingHistory API response ("aggregator": "MONTHLY")'
+- id: 6
+  action: Tap the Year tab
+  expected: The DrivingHistory API is triggered | The loading state is displayedThe
+    Year tab is selected, the text shows the Year (2025)The card displays all the
+    fields with particular values:- Avg Energy Economy- Avg Energy Consumed- Avg energy
+    Saved- Avg CO2 Saved- Total No. of Trips- Total Distance- Total Travel Time- Avg
+    Speed | "CO2 gas savings calculates the emissions you save by driving a Nissan
+    electric vehicle." text is displayed at the bottom of the card
+- id: 7
+  action: Tap the Year Picker carrots < >
+  expected: 'User should navigate through the years and info should be updated according
+    to the DrivingHistory API response ("aggregator": "YEARLY")'

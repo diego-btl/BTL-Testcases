@@ -1,0 +1,23 @@
+metadata:
+  id: TC01566
+  name: Create Schedule Service - Select Date and Time - No Available Time Slots
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-28'
+  updated: '2026-01-20'
+  author: user_2
+  testmo_id: 1566
+  folder_id: 6787
+preconditions:
+- description: User has selected at least one service and entered mileage if required
+steps:
+- id: 1
+  action: Tap NEXT on Additional Information screen
+  expected: User should see Select Date and Time screen with messaging that no time
+    slots are available

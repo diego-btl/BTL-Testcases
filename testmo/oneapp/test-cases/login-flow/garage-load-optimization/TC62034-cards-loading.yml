@@ -1,0 +1,33 @@
+metadata:
+  id: TC62034
+  name: Cards loading
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-11-27'
+  updated: '2026-01-20'
+  author: user_24
+  testmo_id: 62034
+  folder_id: 6782
+description: 'Regions: NNA, NCI, NMEXBrands: NIS and INF'
+preconditions:
+- description: Clean device without app installed.
+steps:
+- id: 1
+  action: Do a fresh install of app -> Log in with any valid account -> Wait until
+    all the APIs are loaded (spinning icon disappears) -> Kill the app -> Cold start
+    (Reopen) the app -> Observe the cards on Home screen
+  expected: 'The relevant cards should show right away. No loading indicators or placeholders
+    should show. Note: You will see that compared to iOS, on android, some cards take
+    a wee bit longer to load and some show right away. For e.g. MiL, Vehicle Status,
+    Additional Driver card will show right away, the others will follow in a second
+    or two. This is expected as android caching is a little slower than ios. | Also,
+    Look at the sub text under Cards such as Climate, My Car Finder. The sub-text
+    should show after a few seconds (having checked the latest update). it should
+    not show cache value first, then disappear, and then show latest update. (in other
+    words, it shouldn''t blink)'

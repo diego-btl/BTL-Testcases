@@ -1,0 +1,49 @@
+metadata:
+  id: TC01595
+  name: Edit Route
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-28'
+  updated: '2025-12-17'
+  author: user_2
+  testmo_id: 1595
+  folder_id: 102
+preconditions:
+- description: User is viewing the Estimate Route* section
+- description: The user selects an EV or EVAVK2 vehicles
+- description: The user should have a Planned Route create
+steps:
+- id: 1
+  action: Tap Edit Route in default collapsed, and expanded info drawer positions
+  expected: User should see be redirect to the Edit Route screen with previously entered
+    info shown
+- id: 2
+  action: Click over +ADD A STOP on the Estimated Route* screen
+  expected: The screen Add a Stop shows
+- id: 3
+  action: Tap Edit Route in default collapsed -> Click over +ADD A STOP -> Type any
+    address to the Search field -> Select an autocomplete result -> Click over ESTIMATE
+    NEW ROUTE
+  expected: The user should see the autocomplete result filled into the field and
+    stay in the Add a Stop screen | The user should be redirected to the Edit Route
+    screen and see the updated screen with the new stop added
+- id: 4
+  action: Click over Estimate New Route
+  expected: User is redirected to the Estimated Route* screen | The new Stop should
+    be added to the Route
+- id: 5
+  action: Click over the Save Route
+  expected: The loading state is displayed | User is redirected to the Planned Routes
+    screen | The Route Saved success toast is displayed
+- id: 6
+  action: 'Edit a planned route -> Update any of the fields/stops or values -> Click
+    over Save Route -> The UpdateRoute API fails{ "message": "Internal Server Error"
+    }'
+  expected: The user stays in the Estimated Route* screen | A toast is displaying
+    > Failed to save route

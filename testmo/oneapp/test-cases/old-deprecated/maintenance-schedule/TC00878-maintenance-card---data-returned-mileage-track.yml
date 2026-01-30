@@ -1,0 +1,20 @@
+metadata:
+  id: TC00878
+  name: Maintenance Card - Data returned Mileage Track
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-04'
+  updated: '2026-01-06'
+  author: user_7
+  testmo_id: 878
+  folder_id: 6796
+preconditions:
+- description: Card is on Distance track and Driving Type has been selected
+- description: User has data being returned(AVK) or manually entered odometer data(TCU2K)
+    within the last 3 months

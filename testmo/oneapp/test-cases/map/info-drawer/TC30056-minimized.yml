@@ -1,0 +1,21 @@
+metadata:
+  id: TC30056
+  name: Minimized
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-01-24'
+  updated: '2026-01-30'
+  author: user_17
+  testmo_id: 30056
+  folder_id: 98
+steps:
+- id: 1
+  action: 1. Drag the info drawer down from the default position
+  expected: User should be able to lower the info drawer to its minimum height with
+    only the vehicle location card showing

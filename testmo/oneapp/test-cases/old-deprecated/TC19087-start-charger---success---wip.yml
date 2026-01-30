@@ -1,0 +1,41 @@
+metadata:
+  id: TC19087
+  name: Start Charger - Success - WIP
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2024-06-06'
+  updated: '2026-01-14'
+  author: user_6
+  testmo_id: 19087
+  folder_id: 105
+description: DesignsStory
+preconditions:
+- description: EnablePlugAndCharge is enabled in remote configs
+- description: AccountStatus is ACTIVE
+steps:
+- id: 1
+  action: Enter a Charger ID in the Charger ID field
+  expected: Start Charge CTA should be enabled
+- id: 2
+  action: Tap on Start Charger
+  expected: Modal should appear prompting user for confirmation
+- id: 3
+  action: Tap Start on the modal
+  expected: App should send a startChargeSession command with the current VIN and
+    entered charger ID. | App should poll CheckChargeSessionStatus for status
+- id: 4
+  action: While polling user should see the following
+  expected: full screen loading state | Toasts showing the following order:Contacting
+    [car model] to begin charge ... | Initiating [car model] to begin charge ... |
+    Charge Session Started
+- id: 5
+  action: 'User should see the following update:'
+  expected: IF stopSessionAllowed was true in startChargeSession, then user should
+    see a Stop Charger CTA. Otherwise it should be hidden | Charge status should update
+    to show charging state (similar to battery card) i.e

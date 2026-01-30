@@ -1,0 +1,24 @@
+metadata:
+  id: TC01579
+  name: No Range
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-28'
+  updated: '2024-10-17'
+  author: user_2
+  testmo_id: 1579
+  folder_id: 46
+preconditions:
+- description: User has an EV
+steps:
+- id: 1
+  action: Vehicle is not returning range data2. Tap the gear icon
+  expected: User should not see any range information for Vehicle Location2. User
+    should see Map SettingsUser should not see any range information for Within Reachable
+    Area and toggle should be off and disabled

@@ -1,0 +1,29 @@
+metadata:
+  id: TC29989
+  name: Subscriptions Landing Page - SUCCESS
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-01-16'
+  updated: '2025-12-09'
+  author: user_15
+  testmo_id: 29989
+  folder_id: 3863
+description: Nissan NNA and INFINITI NNA only
+preconditions:
+- description: 'FF "EnableTelematicsBSM": "true"'
+steps:
+- id: 1
+  action: Login to app > Go to vehicles screen > Tap on Subscription Packages card
+  expected: 'Title: Subscriptions (Hard Coded) | Section Title: Your packages: (Hard
+    Coded) | Card Title: Select (product - marketing name) | Card Body: IF MY26+ :"Trial
+    expires:"'
+- id: 2
+  action: Go to proxyman and look for the VehicleSubscriptions
+  expected: Card Title <> marketingName (just the last word without 'NissanConnect
+    Services') | Card Body <> subscriptionEndDate

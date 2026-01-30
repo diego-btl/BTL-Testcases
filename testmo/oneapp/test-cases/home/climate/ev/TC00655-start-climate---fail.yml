@@ -1,0 +1,24 @@
+metadata:
+  id: TC00655
+  name: Start Climate - Fail
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-01'
+  updated: '2024-10-17'
+  author: user_2
+  testmo_id: 655
+  folder_id: 4169
+preconditions:
+- description: User has sent a start climate request
+steps:
+- id: 1
+  action: Start climate request has resolved into a failure
+  expected: User should see a toast saying'{vehicle model} failed to turn {on/off}
+    climate.' (5 seconds)User should see Climate status update accordingly (status
+    remains off, Start Climate button is enabled)

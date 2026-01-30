@@ -1,0 +1,22 @@
+metadata:
+  id: TC30107
+  name: Settings - NCF Preferences
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-02-03'
+  updated: '2026-01-30'
+  author: user_17
+  testmo_id: 30107
+  folder_id: 3085
+preconditions:
+- description: Login with an NCF account > https://www.notion.so/bethinklabs/d0f8f58385a94c51ab27ce3ee1ef1e51?v=caf06428a7ac41aa96541666be242cd7
+steps:
+- id: 1
+  action: Login into the app -> Go to Settings
+  expected: In the Setting screen showing NCF section with Preferences

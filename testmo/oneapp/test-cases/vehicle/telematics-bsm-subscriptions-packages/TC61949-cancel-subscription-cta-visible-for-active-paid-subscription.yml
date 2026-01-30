@@ -1,0 +1,24 @@
+metadata:
+  id: TC61949
+  name: CANCEL SUBSCRIPTION CTA visible for active paid subscription
+  feature: test-cases
+  priority: critical
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-11-08'
+  updated: '2026-01-20'
+  author: user_15
+  testmo_id: 61949
+  folder_id: 3863
+preconditions:
+- description: EnableTelematicsBSM FF = true
+- description: subscriptionServiceType = "Subscription"
+- description: subscriptionEndDate = null or 0
+steps:
+- id: 1
+  action: Launch the app > Navigate to the Vehicle screen > Tap on Subscription Packages.
+  expected: Verify CANCEL SUBSCRIPTION CTA is visible at bottom (non-sticky)

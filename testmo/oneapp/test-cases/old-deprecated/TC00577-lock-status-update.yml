@@ -1,0 +1,20 @@
+metadata:
+  id: TC00577
+  name: Lock Status Update
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-01'
+  updated: '2025-09-19'
+  author: user_2
+  testmo_id: 577
+  folder_id: 105
+steps:
+- id: 1
+  action: Tap to Lock/Unlock the vehicle
+  expected: User should see lock/unlock icon update when lock/unlock is successful

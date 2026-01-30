@@ -1,0 +1,32 @@
+metadata:
+  id: TC02715
+  name: View list of parts - Failure
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-09-07'
+  updated: '2024-10-17'
+  author: user_3
+  testmo_id: 2715
+  folder_id: 412
+preconditions:
+- description: User is on Main Proactive Maintenance sheet
+- description: User has fewer than 4 reminders
+- description: Mock data failure for parts list
+steps:
+- id: 1
+  action: Tap Create New
+  expected: User should see an unable to load parts error modal with an option to
+    retry
+- id: 2
+  action: Press No
+  expected: Error modal should dismiss
+- id: 3
+  action: Press Yes
+  expected: App should retry api for parts data. If the retry fails, they should see
+    the error modal again. If it passes they should see the create screen

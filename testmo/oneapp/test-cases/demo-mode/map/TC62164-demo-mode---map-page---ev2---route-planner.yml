@@ -1,0 +1,63 @@
+metadata:
+  id: TC62164
+  name: Demo Mode - Map Page - EV2 - Route Planner
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-12-16'
+  updated: '2025-12-18'
+  author: user_15
+  testmo_id: 62164
+  folder_id: 6801
+description: 'Ariya was replaced by LEAF in Demo Mode. Stories related to this implementation:https://app.clickup.com/t/86b5dywt0
+  Note: Options selected under this screen are not persisted; this is just a simulation
+  of how Plan a route can work'
+steps:
+- id: 1
+  action: Tap Map in the bottom nav > Tap on Route Planner card
+  expected: User is led to Create a route screen, tapping on any field/element from
+    the Destination card should trigger the Demo Mode modal
+- id: 2
+  action: Go to Depart at/Arrive by card
+  expected: User should be able to interact with any of the dropdowns
+- id: 3
+  action: Go to Notification card
+  expected: User should be able to interact with the dropdown
+- id: 4
+  action: Go to Plug In Options card
+  expected: User should be able to interact with the dropdown, and the information
+    icon should take the user to the respective screen
+- id: 5
+  action: Go to Avoid for All Drives card
+  expected: User can interact with the toggles
+- id: 6
+  action: Go to the Climate Options card
+  expected: User can interact with the dropdown
+- id: 7
+  action: Tap on Cancel option
+  expected: Cancel Route modal will be displayed with No and Yes options.
+- id: 8
+  action: Tap on NO
+  expected: User remains on same screen
+- id: 9
+  action: Tap YES
+  expected: USer is taken to Map screen
+- id: 10
+  action: Tap on Estimate Route cta
+  expected: 'Origin: Nashville | Stop: Charge Station | Destination: Atlanta | Save
+    button | Add Stop option | Validate all elements that the estimated route usually
+    has. | Scroll up the drawer should display the full information about the trip'
+- id: 11
+  action: Tap on Edit button
+  expected: User taken back to Create Route screen
+- id: 12
+  action: Tap on the information icon
+  expected: User taken to About Estimated Route screen
+- id: 13
+  action: User taps on Save Route cta or Add Stop option
+  expected: Demo mode modal is shown

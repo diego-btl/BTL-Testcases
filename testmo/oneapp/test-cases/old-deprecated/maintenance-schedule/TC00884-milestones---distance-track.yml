@@ -1,0 +1,19 @@
+metadata:
+  id: TC00884
+  name: Milestones - Distance Track
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-04'
+  updated: '2026-01-06'
+  author: user_7
+  testmo_id: 884
+  folder_id: 6796
+preconditions:
+- description: Odometer data has been returned in the past 3 months
+- description: User has selected a driving type

@@ -1,0 +1,38 @@
+metadata:
+  id: TC61972
+  name: Make Default Settings
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-11-11'
+  updated: '2025-11-11'
+  author: user_24
+  testmo_id: 61972
+  folder_id: 6778
+preconditions:
+- description: User is logged into an account that has an EVAVK2
+- description: And Climate is turned off
+steps:
+- id: 1
+  action: On the Home screen, tap on Climate card -> Once on the Climate screen, change
+    default temperature and some climate accessories -> Tap on MAKE DEFAULT -> Tap
+    on TURN CLIMATE & ACCESSORIES ON CTA
+  expected: 'User sees the toast Contacting, Waking, Initiating... | User also sees
+    toast re: Changes are now saved as your default'
+- id: 2
+  action: While climate is on, make chnges to the climate accessories
+  expected: You will see a message - You made changes to your climate settings while
+    climate is turned on. Would you like to apply these changes now?
+- id: 3
+  action: Tap on Make Default -> Tap on Apply Changes
+  expected: You get the toast of Changes applied | you get the toasts of Contacting,
+    Waking, Initiating.. | You get success toast of Climate adjusted
+- id: 4
+  action: Tap on back arrow or go back to Home screen -> Tap on Climate card
+  expected: You should see the climate acessories settings as you had chosen as Default
+    on the Climate Screen

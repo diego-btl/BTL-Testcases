@@ -1,0 +1,23 @@
+metadata:
+  id: TC00818
+  name: Terms of Service
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-01'
+  updated: '2025-10-06'
+  author: user_2
+  testmo_id: 818
+  folder_id: 48
+preconditions:
+- description: User is on the Settings screen
+steps:
+- id: 1
+  action: Tap Terms of Service2. Tap on a link
+  expected: User should see the terms of use link open in a webview2. User should
+    see link open in webview or browser

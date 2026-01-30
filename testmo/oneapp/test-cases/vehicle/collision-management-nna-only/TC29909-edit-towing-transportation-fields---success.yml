@@ -1,0 +1,29 @@
+metadata:
+  id: TC29909
+  name: Edit Towing /Transportation fields - Success
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-01-10'
+  updated: '2025-01-28'
+  author: user_26
+  testmo_id: 29909
+  folder_id: 3800
+description: Verify that the user is able to successfully edit and save Towing information
+  on the Collision Report.
+preconditions:
+- description: The user is already on the Edit Towing /Transportation screen
+steps:
+- id: 1
+  action: Enter the company name, address, valid email, and phone number
+  expected: The user should see the Save button becomes enabled
+- id: 2
+  action: Tap on Save button
+  expected: The user should be redirected to the Collision Report start screen | The
+    user should see the updated information reflected on the Towing/Transportation
+    card

@@ -1,0 +1,25 @@
+metadata:
+  id: TC24216
+  name: OTP - success
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2024-08-28'
+  updated: '2024-10-17'
+  author: user_4
+  testmo_id: 24216
+  folder_id: 3081
+preconditions:
+- description: User is on OTP screen
+steps:
+- id: 1
+  action: 1. Enter the correct OTP code 2. Proceed to the second registration screen
+  expected: 1. User should see the first screen of the registration flow User should
+    see fields prepopulated with their information (user is able to modify fields)
+    2. User should see the second screen of the registration flow prepopulated with
+    their information (user is able to modify fields)

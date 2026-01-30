@@ -1,0 +1,20 @@
+metadata:
+  id: TC30150
+  name: Warranty Coverage screen
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-02-05'
+  updated: '2025-10-08'
+  author: user_17
+  testmo_id: 30150
+  folder_id: 83
+steps:
+- id: 1
+  action: Tap the Warranty Coverage card
+  expected: User should be taken to the Warranty Coverage screen

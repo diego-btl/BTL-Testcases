@@ -1,0 +1,24 @@
+metadata:
+  id: TC01614
+  name: Marketing Preferences
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-28'
+  updated: '2025-09-19'
+  author: user_2
+  testmo_id: 1614
+  folder_id: 48
+preconditions:
+- description: User is on the Settings screen
+steps:
+- id: 1
+  action: Tap the Marketing Preferences line item2. Tap any of the collapsed items3.
+    Tap to toggle any of the options
+  expected: User should be taken to the marketing preferences screen2. User should
+    be expand and collapse any of the items3. User should see options toggle

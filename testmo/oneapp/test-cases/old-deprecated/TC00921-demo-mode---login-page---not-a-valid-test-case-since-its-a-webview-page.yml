@@ -1,0 +1,23 @@
+metadata:
+  id: TC00921
+  name: Demo Mode - Login Page - Not a valid test case since it's a Webview Page
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-17'
+  updated: '2026-01-07'
+  author: user_2
+  testmo_id: 921
+  folder_id: 105
+preconditions:
+- description: Fresh installation or app cache cleared
+- description: User is already on the Login Page
+steps:
+- id: 1
+  action: Tap on Demo Mode button
+  expected: User should be taken to the demo mode home screen

@@ -1,0 +1,29 @@
+metadata:
+  id: TC41887
+  name: New Collision Report screen - Edit Collision Center card
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-06-10'
+  updated: '2025-06-10'
+  author: user_26
+  testmo_id: 41887
+  folder_id: 3800
+preconditions:
+- description: The user is on the Collision Report screen.
+steps:
+- id: 1
+  action: Tap the Edit CTA on the Collision Center card.
+  expected: The user is navigated to the Collision Center screen
+- id: 2
+  action: On the Search Collision Centers screen, enter a ZIP code.
+  expected: The search via a ZIP code triggers the CollisionCenters query.
+- id: 3
+  action: Select a Collision Center and tap the AddCTA.
+  expected: The user is redirected back to the Collision Report screen | The selected
+    Collision Center information is updated and displayed on the card.

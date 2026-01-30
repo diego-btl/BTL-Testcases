@@ -1,0 +1,31 @@
+metadata:
+  id: TC01469
+  name: Address and Phone Number - Errors*
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-28'
+  updated: '2025-08-21'
+  author: user_2
+  testmo_id: 1469
+  folder_id: 43
+description: Verify Address and Phone Number errors during Registration
+preconditions:
+- description: User is on the second registration screen
+steps:
+- id: 1
+  action: Verify placeholders for Address , City, State, ZIP Code, Phone Number and
+    Carrier fields
+  expected: 'User should see below placeholders Address field: Address City: City
+    | State: -- | Zip Code : Zip Code | Phone Number: (000)-000-0000 | Carrier: --'
+- id: 2
+  action: Enter less than 5 digits for ZIP code
+  expected: User should see an error * Invalid ZIP code
+- id: 3
+  action: Enter less than 10 digits for phone number
+  expected: User should see an error * Invalid phone number

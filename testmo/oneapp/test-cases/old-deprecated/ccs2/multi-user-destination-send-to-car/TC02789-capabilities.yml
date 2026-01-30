@@ -1,0 +1,31 @@
+metadata:
+  id: TC02789
+  name: Capabilities
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-09-08'
+  updated: '2026-01-06'
+  author: user_3
+  testmo_id: 2789
+  folder_id: 423
+preconditions:
+- description: User is on Map tab User is a PRIMARY_DRIVER or SHARED_DRIVER (to be
+    tested for both for AVK2)
+steps:
+- id: 1
+  action: 1. Remove DESTINATION_SEND_TO_CAR from capability list (must clear data
+    on Android before doing this/must uninstall on iOS before doing this) 2. Expand
+    Info Drawer 3. Search for a POI 4. Disable the capability and repeat steps 2-3
+  expected: 2. User should not see Favorites section or Recently Sent to Vehicle section
+    3. User should not see favorites button on POI card (hidden) 4. User should see
+    disabled Favorites/Recently Sent to Vehicle section in the Info Drawer, tapping
+    on see more will open Account Expired modal with option to call an agent - 1-855-426-6628
+    (NNA/NCI) User should see favorites button on POI card but tapping on it will
+    open the Account Expired modal User should see Recently Sent to Vehicle section
+    but tapping on it will open the Account Expired modal

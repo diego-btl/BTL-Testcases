@@ -1,0 +1,32 @@
+metadata:
+  id: TC32539
+  name: Start - Fail
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-04-07'
+  updated: '2025-04-15'
+  author: user_25
+  testmo_id: 32539
+  folder_id: 4167
+preconditions:
+- description: User is in the Home screen
+- description: User has sent an Engine Start request
+- description: CheckEngineServiceRequest API response:{
+- description: '"data": {'
+- description: '"checkEngineServiceRequest": {'
+- description: '"__typename": "ServiceRequestResult",'
+- description: '"status": "FAILED",'
+- description: '"statusDetails": null'
+- description: '}'
+- description: '}'
+- description: '}'
+steps:
+- id: 1
+  action: Engine Start request has resolved into a failure
+  expected: 'AVK: "<year and model> failed to start."'

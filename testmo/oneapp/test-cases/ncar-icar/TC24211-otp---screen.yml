@@ -1,0 +1,25 @@
+metadata:
+  id: TC24211
+  name: OTP - screen
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2024-08-28'
+  updated: '2024-10-17'
+  author: user_4
+  testmo_id: 24211
+  folder_id: 3081
+preconditions:
+- description: User has a new user deeplink
+steps:
+- id: 1
+  action: 1. Tap on new user deeplink
+  expected: 1. User should see the OTP screen after the account has been verified
+    and OTP is generated User should see a field for the OTP User should see a Send
+    New Code link User should see a Verify and Proceed CTA (disabled when OTP field
+    has not be filled with 5 numbers)

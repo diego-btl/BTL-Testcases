@@ -1,0 +1,23 @@
+metadata:
+  id: TC00813
+  name: Chat screen
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-01'
+  updated: '2025-10-08'
+  author: user_2
+  testmo_id: 813
+  folder_id: 87
+steps:
+- id: 1
+  action: Tap one of the cards
+  expected: User should see the Go to Chat button become enabled
+- id: 2
+  action: Tap Go to Chat button
+  expected: User should be taken to the Chat screen

@@ -1,0 +1,28 @@
+metadata:
+  id: TC62161
+  name: Edit Favourites POI
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-12-16'
+  updated: '2025-12-16'
+  author: user_17
+  testmo_id: 62161
+  folder_id: 99
+preconditions:
+- description: User is viewing POI search results
+- description: The user is in the Map screen
+- description: The user has one POI saved
+steps:
+- id: 1
+  action: Scroll up the drawer -> Click on any of the POI saved -> Click the heart
+    icon -> Click again the heart icon -> Input the new name -> Click the the Save
+    Favorite button
+  expected: User should see Save Favorite become disabled | A new pop-up should show
+    with the textfield to input the name | User should see a success toast, and the
+    heart icon should show the saved state

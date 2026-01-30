@@ -1,0 +1,27 @@
+metadata:
+  id: TC36680
+  name: Lock/Unlock buttons
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-04-29'
+  updated: '2025-04-29'
+  author: user_24
+  testmo_id: 36680
+  folder_id: 4185
+preconditions:
+- description: User is logged in to either NIS or INF app
+- description: User has medium sized widget added
+- description: User has selected ICE vehicle
+- description: ICE vehicle details as per previous TC showing on widget
+- description: REMOTE_DOOR_LOCK_UNLOCK caps are enabled
+steps:
+- id: 1
+  action: 'IF: the user taps on the button'
+  expected: 'THEN: the associated call should be started | AND: then the app should
+    open showing the call in progress'

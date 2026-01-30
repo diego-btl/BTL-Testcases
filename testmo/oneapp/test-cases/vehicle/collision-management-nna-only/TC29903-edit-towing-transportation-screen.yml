@@ -1,0 +1,26 @@
+metadata:
+  id: TC29903
+  name: Edit Towing /Transportation Screen
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-01-09'
+  updated: '2025-01-28'
+  author: user_26
+  testmo_id: 29903
+  folder_id: 3800
+description: https://www.pivotaltracker.com/story/show/188707449
+preconditions:
+- description: The user is already on Collision Report start screen
+steps:
+- id: 1
+  action: Tap on the Edit CTA for the Towing/Transportation card
+  expected: 'The user is redirected to the edit screen | The user should be able to
+    see the following fields: - Company Name - Address - Phone Number- Email | None
+    of the fields should be marked as required | The save button should be inactive
+    (disabled).'

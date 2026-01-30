@@ -1,0 +1,27 @@
+metadata:
+  id: TC61887
+  name: User taps NO on onboarding modal
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-10-28'
+  updated: '2025-10-28'
+  author: user_24
+  testmo_id: 61887
+  folder_id: 6757
+preconditions:
+- description: User has launched the app
+- description: All 4.5 apis have been resolved i,e. VehicleStaticData, FinancialVehicles(NCI
+    only), PendingVehicles, VehicleSubscriptions, VehicleCapabilities
+- description: Modal shows on app
+steps:
+- id: 1
+  action: Tap on No
+  expected: Modal dismisses | User is on Home screen now unless before the modal appeared,
+    user has navigated to anywhere else on app, once the modal is dismissed, user
+    is shown the screen he was on last

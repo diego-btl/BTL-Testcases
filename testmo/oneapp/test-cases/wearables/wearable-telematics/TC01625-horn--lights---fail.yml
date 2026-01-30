@@ -1,0 +1,27 @@
+metadata:
+  id: TC01625
+  name: Horn & Lights - Fail
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-28'
+  updated: '2024-10-17'
+  author: user_2
+  testmo_id: 1625
+  folder_id: 76
+preconditions:
+- description: User has a vehicle that supports horn/lights and is on the telematics
+    screen
+steps:
+- id: 1
+  action: Tap the Horn & Lights button2. Force call to fail3. Try again
+  expected: 'Horn & Lights command should be sent. User should see status updates
+    as the call is being made. User should see the status updates as the call is being
+    made2. User should see a failure modal when the call fails3. User should see Horn
+    & Lights flow start againNote: If user taps No on the modals, modal should be
+    dismissed and command should not be sent'

@@ -1,0 +1,25 @@
+metadata:
+  id: TC02677
+  name: Climate Details - Turn Climate On - DOUBLERES_FAILED
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-09-07'
+  updated: '2025-10-10'
+  author: user_3
+  testmo_id: 2677
+  folder_id: 4170
+description: https://www.pivotaltracker.com/story/show/185088490https://www.pivotaltracker.com/story/show/185988990
+preconditions:
+- description: AVK2 vehicleClimate DetailsEngine is PENDING
+steps:
+- id: 1
+  action: statusDetails returns with DOUBLERES_FAILED -> Go back to home screen
+  expected: You should see the toast > Remote engine and climate are ending soon for
+    <VEHICLE YEAR> | After that you should see the toast > <VEHICLE YEAR> Engine turned
+    off | User should see engine countdown timer reduce by 10 mins

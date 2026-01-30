@@ -1,0 +1,24 @@
+metadata:
+  id: TC61987
+  name: EnableChargeLimit FF - ON
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-11-14'
+  updated: '2025-12-02'
+  author: user_25
+  testmo_id: 61987
+  folder_id: 6780
+preconditions:
+- description: User has an EV AVK2 vehicle
+steps:
+- id: 1
+  action: Mock remote config so that EnableChargeLimit is true -> Go to the Manage
+    EV screen
+  expected: ChargeConfig API is called | Charge Limit card is present and in the enabled
+    state

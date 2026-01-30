@@ -1,0 +1,45 @@
+metadata:
+  id: TC62199
+  name: Second Delivery - Marketing Pop-up - No Thanks
+  feature: test-cases
+  priority: critical
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-12-19'
+  updated: '2026-01-06'
+  author: user_23
+  testmo_id: 62199
+  folder_id: 6818
+description: 'Marketing Pop-up - NO_THANKS Permanent Dismissal for Second Delivery.
+  Validates that tapping NO THANKS permanently dismisses the marketing popup and it
+  never appears again.Notes:NO_THANKS occurs after user has already dismissed with
+  REMIND ME LATER onceTapping NO THANKS triggers permanent dismissalBackend returns
+  versionToDisplay: null on future requestsPop-up never appears again for this vehicleUse
+  mocks from folder "Second Delivery - MyINFINITI Expert - Discovery & CTA Display"Test
+  on both light and dark modeFeature Flag: EnableSecondDelivery is set to true'
+preconditions:
+- description: Feature Flag EnableSecondDelivery is set to true
+steps:
+- id: 1
+  action: 'Mock SecondDeliveryEligibility with: -> { "marketingMessage": { "versionToDisplay":
+    "NO_THANKS", "displayMarketingMessageThresholdInDays": 60, "remindMeLaterThresholdInDays":
+    8 }, "daysSincePurchased": 15 }Login to app'
+  expected: 'Marketing pop-up appears | BOOK NOW button displayed (primary) | NO THANKS
+    button displayed (secondary) | Pop-up Title: MyINFINITI Expert | Pop-up Body:
+    Discover more about your new {vehicle model} | Pop-up Description: MyINFINITI
+    Expert is a complimentary meeting with an INFINITI product and technology expert
+    to demonstrate the features of your new {vehicle model}. Schedule your one-hour
+    virtual meeting to learn more about the technology features and product functions
+    that suit your lifestyle.'
+- id: 2
+  action: Tap NO THANKS button, then kill app and relaunch
+  expected: 'Pop-up closes on dismissal | Backend tracks dismissal and sets versionToDisplay:
+    null'
+- id: 3
+  action: Verify pop-up never returns on next launch
+  expected: Marketing pop-up does NOT appear | User goes directly to Home screen |
+    Backend permanently dismissed the popup for this vehicle

@@ -1,0 +1,26 @@
+metadata:
+  id: TC01561
+  name: Map View
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-28'
+  updated: '2024-10-17'
+  author: user_2
+  testmo_id: 1561
+  folder_id: 93
+preconditions:
+- description: User is on the Select a Retailer list view screen and has search results
+steps:
+- id: 1
+  action: 1. Tap the floating map view 2. Tap on the user location button 3. Swipe
+    to a different retailer card 4. Tap on a retailer card
+  expected: 1. User should be taken to the map view with a swimlane of retailer cards
+    2. User should see map center on their current location 3. User should see map
+    pan ot center on that retailer pin 4. User should be taken to see that retailer's
+    details

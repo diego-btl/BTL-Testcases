@@ -1,0 +1,28 @@
+metadata:
+  id: TC24266
+  name: SD - User is seeing "Marketing Pop-up"
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2024-10-17'
+  updated: '2026-01-06'
+  author: user_17
+  testmo_id: 24266
+  folder_id: 1453
+description: So QX80 10 has a sales date of 9/1 so anything higher than 34 should
+  do it. The normal value will be 60. It is only 0 for Infinitis sold before Oct 1.Once
+  you hit remind me later on the popup you will need a fresh install (delete and reinstall,
+  not overload) to be able to see it again before the 8 day 'snooze'
+preconditions:
+- description: Vehicle is eligible within the valid period from purchase & have a
+    unverified user(QX80 - 9/QX80 10) and "daysSincePurchased" higher than 34 .
+- description: 'In the Firebase config > "EnableSecondDelivery": "true"'
+steps:
+- id: 1
+  action: Login in the app -> Go to the Vehicle screen
+  expected: The apps should show the Marketing Pop-up

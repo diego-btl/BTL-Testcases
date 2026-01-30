@@ -1,0 +1,40 @@
+metadata:
+  id: TC00778
+  name: Estimate Route
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-01'
+  updated: '2025-12-02'
+  author: user_2
+  testmo_id: 778
+  folder_id: 101
+preconditions:
+- description: User is in the Create Route screen
+- description: The user selects an EV or EVAVK2 vehicles
+steps:
+- id: 1
+  action: Enter a destination field, date, and time -> Tap Estimate Route button ->
+    Force an error
+  expected: User should see Estimate Route button become enabled | User should see
+    a loading state as the app makes a call to get EV waypoints | User should see
+    an error alert modal and be able to cancel or try againError - Something went
+    wrong with the route planner. Please try again - Cancel | Try Again
+- id: 2
+  action: Enter a destination field, date, and time -> Tap Estimate Route button ->
+    Force an error -> Tap Try Again on error alert modal and wait for call to succeed
+  expected: User should see a map view of their origin, stops, and EV waypoints on
+    a route
+- id: 3
+  action: Enter a destination field, date, and time -> Add different stops -> Tap
+    Estimate Route button -> Check the Charging Icons
+  expected: The Charging Icons should be showing in the left side of the Charging
+    Stop | The color should be light blue like the other buttons | The battery percentage
+    should be showing in the right side with the battery icon | The Charging Station
+    name should be displaying | The arriving hour should show in the stop | The charging
+    time should be displaying in min/h

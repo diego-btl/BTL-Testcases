@@ -1,0 +1,25 @@
+metadata:
+  id: TC62002
+  name: Adjust Cimate
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-11-14'
+  updated: '2025-11-14'
+  author: user_24
+  testmo_id: 62002
+  folder_id: 6778
+preconditions:
+- description: Climate is turned on
+steps:
+- id: 1
+  action: Make changes to climate settings or temperature -> Tap on Apply Changes
+  expected: AdjustClimate is triggered | And polling requests are sent | you see the
+    following toasts | Initiating Adjustment in climate | Contacting <Year and model>
+    to to adjust climate | Climate Adjusted | The Climate card on Home screen will
+    reflect the set temperature IF the temperature was adjusted

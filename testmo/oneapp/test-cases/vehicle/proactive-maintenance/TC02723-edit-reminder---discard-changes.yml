@@ -1,0 +1,37 @@
+metadata:
+  id: TC02723
+  name: Edit reminder - Discard changes
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-09-07'
+  updated: '2024-10-17'
+  author: user_3
+  testmo_id: 2723
+  folder_id: 412
+preconditions:
+- description: User is on PSR screenUser has an existing reminder
+steps:
+- id: 1
+  action: Tap on Edit on existing reminder
+  expected: User should see Edit Reminder screen with the corresponding settings for
+    that reminder
+- id: 2
+  action: Modify anything in the reminder (ex. Current Parts, Reminder Interval -
+    mileage, date)
+  expected: User is able to modify the reminder
+- id: 3
+  action: Tap on Back button
+  expected: User should see discard changes modal
+- id: 4
+  action: Tap on No on modal
+  expected: User should see discard changes modal dismiss
+- id: 5
+  action: Tap on Yes on modal
+  expected: User should be returned to the Parts Service Reminders without any changes
+    made to the existing reminder

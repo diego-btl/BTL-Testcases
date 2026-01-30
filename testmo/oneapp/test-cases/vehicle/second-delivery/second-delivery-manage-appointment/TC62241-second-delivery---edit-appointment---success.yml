@@ -1,0 +1,65 @@
+metadata:
+  id: TC62241
+  name: Second Delivery - Edit Appointment - Success
+  feature: test-cases
+  priority: critical
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-12-19'
+  updated: '2026-01-06'
+  author: user_23
+  testmo_id: 62241
+  folder_id: 6821
+description: 'Second Delivery - Edit Appointment - Success: Successful Edit FlowValidates
+  that users can successfully edit an existing Second Delivery appointment by tapping
+  the Edit Appointment button, modifying appointment details (date/time, contact information,
+  notes), reviewing changes, and confirming the update.Notes:User has an existing
+  booked Second Delivery appointmentEdit flow reuses booking screens (Select Date/Time,
+  Contact/Notes, Review)All existing appointment data is pre-populated in edit screensImportant:
+  Save Changes button is disabled if no changes are made to the appointmentSuccessful
+  edit updates appointment and shows Appointment Scheduled confirmation screenUpdated
+  appointment details are reflected on Vehicle screen card'
+steps:
+- id: 1
+  action: 'Mock the SecondDeliveryAppointment query to return: -> { "data": { "vehicle":
+    { "__typename": "Vehicle", "secondDelivery": { "__typename": "SecondDelivery",
+    "appointment": { "__typename": "SecondDeliveryExistingBookedAppointment", "id":
+    20498452, "activityId": 20498452, "beginsAt": "2026-01-02T19:30:00.000Z", "address":
+    { "__typename": "Address", "address1": "1413 test address", "address2": null,
+    "city": "los angeles", "state": "CA", "postalCode": "90012", "country": "US" },
+    "contact": { "__typename": "SecondDeliveryContactInformation", "firstName": "Nna",
+    "lastName": "Qa", "phoneNumber": "5487545464", "email": "nnaqa@bethinklabs.com"
+    }, "redeliveryNotes": "Test appointment notes", "featureNotes": null, "hub": {
+    "__typename": "SecondDeliveryHub", "id": 1000000, "timezone": "US/Pacific", "dealer":
+    { "__typename": "SecondDeliveryDealer", "code": "999991", "address": { "__typename":
+    "SecondDeliveryDealerAddress", "coordinates": null, "address1": "325 W Gardena
+    Blvd", "address2": null, "state": "CA", "city": "Gardena", "country": "US", "id":
+    132498250, "postalCode": "90248" } } }, "mode": "VIRTUAL" } } } } }Navigate to
+    Upcoming Appointment screen'
+  expected: Mock data is set for SecondDeliveryAppointment query | User is on Upcoming
+    Appointment screen
+- id: 2
+  action: Tap Edit Appointment button
+  expected: 'User is navigated to Select Date and Time screen | Screen title: Select
+    Date and Time is displayed | Current appointment date and time are pre-selected
+    | Progress indicator shows step 1 of 3 | NEXT button is enabled'
+- id: 3
+  action: Select a different date and time slot, then tap NEXT
+  expected: 'User is navigated to Contact and Notes screen | Screen title: Contact
+    and Notes is displayed | Existing contact information is pre-populated in all
+    fields | Progress indicator shows step 2 of 3 | NEXT button is enabled'
+- id: 4
+  action: Modify any contact field or special instructions, then tap NEXT
+  expected: 'User is navigated to Review screen | Screen title: Review is displayed
+    | Updated appointment details are displayed | Save Changes button is displayed
+    and enabled (because changes were made) | Note: If no changes were made, Save
+    Changes button would be disabled | CANCEL button is displayed | Progress indicator
+    shows step 3 of 3'
+- id: 5
+  action: Tap Save Changes button
+  expected: UpdateSecondDeliveryAppointment mutation is triggered | User is redirected
+    to Appointment Scheduled screen

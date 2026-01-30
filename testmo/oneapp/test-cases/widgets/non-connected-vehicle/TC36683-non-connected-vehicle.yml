@@ -1,0 +1,24 @@
+metadata:
+  id: TC36683
+  name: Non connected vehicle
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-04-29'
+  updated: '2025-05-05'
+  author: user_24
+  testmo_id: 36683
+  folder_id: 4181
+preconditions:
+- description: User is logged in
+- description: User has added Small or medium sized widget to device
+steps:
+- id: 1
+  action: Log in to app -> Select a non-connected vehicle -> OR -> Long press widget
+    -> Choose Modify widget -> Choose a non-connected vehicle
+  expected: the widget should show a selected vehicle not eligible state

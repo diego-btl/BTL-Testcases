@@ -1,0 +1,42 @@
+metadata:
+  id: TC62190
+  name: Second Delivery - Marketing Pop-up - Remind Me Later
+  feature: test-cases
+  priority: critical
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-12-18'
+  updated: '2026-01-06'
+  author: user_23
+  testmo_id: 62190
+  folder_id: 6818
+description: 'Second Delivery - Marketing Pop-up - Remind Me Later. Validates that
+  marketing popup appears with REMIND_ME_LATER button during initial prompt when user
+  is eligible and within marketing window.Notes:Marketing popup shown when: versionToDisplay:
+  "REMIND_ME_LATER" AND daysSincePurchased <= 60REMIND_ME_LATER button available on
+  first popup prompt (initial state)User can tap to dismiss with 8-day reminder timerSecond
+  Delivery Card also visible (separate from marketing popup)Use mocks from folder
+  "Second Delivery - MyINFINITI Expert - Discovery & CTA Display"Test on both light
+  and dark modeFeature Flag: EnableSecondDelivery is set to true'
+preconditions:
+- description: User is not logged in (popup appears on app launch)
+- description: Feature Flag EnableSecondDelivery is set to true
+- description: 'Mock configured with versionToDisplay: "REMIND_ME_LATER"'
+- description: 'Mock configured with daysSincePurchased: 15 (within 60-day threshold)'
+- description: User has no booked appointment for this vehicle
+steps:
+- id: 1
+  action: 'Mock SecondDeliveryEligibility with: -> { "marketingMessage": { "versionToDisplay":
+    "REMIND_ME_LATER", "displayMarketingMessageThresholdInDays": 60, "remindMeLaterThresholdInDays":
+    8 }, "daysSincePurchased": 15 }Login to app'
+  expected: 'Marketing pop-up appears | BOOK NOW button displayed (primary) | REMIND
+    ME LATER button displayed (secondary) | Pop-up Title: MyINFINITI Expert | Pop-up
+    Body: Discover more about your new {vehicle model} | Pop-up Description: MyINFINITI
+    Expert is a complimentary meeting with an INFINITI product and technology expert
+    to demonstrate the features of your new {vehicle model}. Schedule your one-hour
+    virtual meeting to learn more about the technology features and product functions
+    that suit your lifestyle.'

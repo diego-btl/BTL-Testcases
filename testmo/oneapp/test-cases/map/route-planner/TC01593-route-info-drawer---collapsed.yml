@@ -1,0 +1,29 @@
+metadata:
+  id: TC01593
+  name: Route Info Drawer - Collapsed
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-28'
+  updated: '2025-12-02'
+  author: user_2
+  testmo_id: 1593
+  folder_id: 101
+preconditions:
+- description: The user is in the Estimate Route* screen
+- description: The user already pass the create route first step
+steps:
+- id: 1
+  action: Drag to collapse info drawer
+  expected: User should see info drawer minimize only showing:Total time of the route
+    + distance | EDIT ROUTE button | Duration/distance, edit route button, and show
+    full map view | Save Route button
+- id: 2
+  action: Drag to collapse info drawer -> Tap on Back button
+  expected: User should see be returned to the Create a Route screen with previously
+    entered info shown

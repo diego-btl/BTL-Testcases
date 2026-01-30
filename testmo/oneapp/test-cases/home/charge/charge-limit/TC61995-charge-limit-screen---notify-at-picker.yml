@@ -1,0 +1,42 @@
+metadata:
+  id: TC61995
+  name: Charge Limit screen - Notify at picker
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-11-14'
+  updated: '2025-12-02'
+  author: user_25
+  testmo_id: 61995
+  folder_id: 6780
+preconditions:
+- description: User has an EV AVK2 vehicle
+- description: EnableChargeLimit FF is true
+- description: User is on the Manage EV screen and Charge Limit card is enabled
+steps:
+- id: 1
+  action: Tap the Charge Limit card
+  expected: User should see the Charge Limit screen with the Notify at field showing
+    the value corresponding to ChargeConfig.notification.percent
+- id: 2
+  action: Tap the Notify at dropdown
+  expected: Values should start with Do Not Notify, then increase by 5% from 20% to
+    100%
+- id: 3
+  action: Mock ChargeConfig so that ChargeConfig.notification.percent is returning
+    null or from 5 to 15 -> Navigate back to the Charge screen and return to the Manage
+    EV screen
+  expected: ChargeConfig API is called
+- id: 4
+  action: Tap the Charge Limit card
+  expected: The Notify at field is updated to Do Not Notify | The Set Notification
+    CTA is disabled
+- id: 5
+  action: Tap the Notify at dropdown
+  expected: Values should start with Do Not Notify, then increase by 5% from 20% to
+    100%

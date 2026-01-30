@@ -1,0 +1,24 @@
+metadata:
+  id: TC02711
+  name: Empty state
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-09-07'
+  updated: '2024-10-17'
+  author: user_3
+  testmo_id: 2711
+  folder_id: 412
+preconditions:
+- description: User is on the main Proactive Maintenance Screen
+- description: There are no existing reminders
+steps:
+- id: 1
+  action: 'User should see the following:'
+  expected: Info button in top right | Empty reminder sheet with No Reminders label
+    | Label saying You can save up to 4 reminders | Active CREATE NEW CTA

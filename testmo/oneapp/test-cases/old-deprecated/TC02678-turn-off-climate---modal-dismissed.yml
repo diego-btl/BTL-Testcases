@@ -1,0 +1,25 @@
+metadata:
+  id: TC02678
+  name: Turn Off Climate - Modal Dismissed
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-09-07'
+  updated: '2025-01-28'
+  author: user_3
+  testmo_id: 2678
+  folder_id: 105
+preconditions:
+- description: AVK2 vehicleClimate is ON
+steps:
+- id: 1
+  action: Tap on Turn Off Climate2. User taps No
+  expected: 'There should be a confirmation modal shown to the user with the following
+    details:Title: Are you sure?Body: Turning climate off will also stop your vehicle’s
+    engine. Would you like to proceed?CTA: No, Yes2. The modal should be dismissed
+    and the user should stay on the same screen with the same state'

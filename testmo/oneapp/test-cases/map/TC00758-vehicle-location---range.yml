@@ -1,0 +1,23 @@
+metadata:
+  id: TC00758
+  name: Vehicle Location - Range
+  feature: test-cases
+  priority: critical
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-01'
+  updated: '2024-10-17'
+  author: user_2
+  testmo_id: 758
+  folder_id: 46
+preconditions:
+- description: BatteryStatus is returning remainingMileage data or fuelAutonomy is
+    returning data
+steps:
+- id: 1
+  action: 1. Navigate to the Map screen
+  expected: 1. User should see battery/gas icon with remaining mileage

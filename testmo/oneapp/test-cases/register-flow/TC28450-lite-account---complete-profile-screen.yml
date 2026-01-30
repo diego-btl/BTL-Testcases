@@ -1,0 +1,38 @@
+metadata:
+  id: TC28450
+  name: Lite Account - Complete Profile screen
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2024-11-22'
+  updated: '2025-02-06'
+  author: user_15
+  testmo_id: 28450
+  folder_id: 43
+description: Nissan has some users who have a "lite account" which is a registered
+  profile that is missing an address and/or phone number.We would like to allow a
+  lite user to update their profile in the app, so that they can experience the full
+  app as intendedREGIONS/BRANDSNNA onlyINF and NIS
+preconditions:
+- description: Update isLiteAccount = true on USerInfo call
+steps:
+- id: 1
+  action: Perform a Fresh install and log into the app
+  expected: Verify Terms and Conditions appear first > then the onboarding cards come
+    if applicable, garage loads, the user call identifies if they are a lite user,
+    so lite registration to be last out of all 3
+- id: 2
+  action: Once on Complete Profile screen
+  expected: Complete Profile header | `Please complete your profile to continue accessing
+    the MyNissan app` card is show right below the header | Address fieldAddress placeholder
+    | CityCity placeholder | State dropdown`--` by default | States list displays
+    two-digit values | Zip codeZip Code placeholder | Phone Number(000) 000-0000 placeholder
+    | Carrier`--` by default | NEXT cta, disabled by default
+- id: 3
+  action: User taps on Back arrow
+  expected: Verify user is taken to Home screen

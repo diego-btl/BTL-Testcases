@@ -1,0 +1,23 @@
+metadata:
+  id: TC02852
+  name: Remote Data Wipe - Info Screen
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-09-13'
+  updated: '2024-10-17'
+  author: user_4
+  testmo_id: 2852
+  folder_id: 434
+description: https://www.pivotaltracker.com/story/show/185987342
+preconditions:
+- description: User has REMOTE_DATA_WIPE capability enabledRemote Data Wipe screen
+steps:
+- id: 1
+  action: Tap on Info Button
+  expected: User should see the Data Wipe Info screen explaining the various options

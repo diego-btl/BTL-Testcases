@@ -1,0 +1,25 @@
+metadata:
+  id: TC00562
+  name: Pending Vehicle
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-01'
+  updated: '2025-02-19'
+  author: user_2
+  testmo_id: 562
+  folder_id: 54
+preconditions:
+- description: User has a pending vehicle
+steps:
+- id: 1
+  action: Launch app to home screen2. Tap on Vehicle tab3. Tap on Map tab
+  expected: User should see pending vehicle homescreen (only support button, vehicle
+    selector, and OV card are enabled)2. User should see pending vehicle vehicle screen
+    (schedule service and find a dealer are disabled)3. User should see pending vehicle
+    map screen (everything is disabled)

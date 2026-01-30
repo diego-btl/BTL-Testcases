@@ -1,0 +1,32 @@
+metadata:
+  id: TC00646
+  name: Climate screen
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-01'
+  updated: '2025-11-10'
+  author: user_2
+  testmo_id: 646
+  folder_id: 4169
+preconditions:
+- description: User is on home screen
+steps:
+- id: 1
+  action: Login into the app -> At the home screen click Climate card -> See the info
+    and details from the Climate card
+  expected: 'User should see Climate screen | User should see all the data displaying
+    correctly | You see the following sections: | Climate Control with Ext and int
+    temperature showing on the top right - Climate status on or off with the climate
+    (fan) icon - The interior temperature as default value with temperature selector
+    bar as well as - and + buttons to change temperature setting | Secheduled box
+    with Add CTA on top right -(if schedules exist, they should show in this box with
+    toggle on or off) - the schedules should read the temperature scheduled with initial
+    of Day and departure time. (Fan icon on right side in blue with toggle on) . if
+    schedule is toggled off, icon is black in light mode. - TURN CLIMATE ON or TURN
+    CLIMATE OFF CTA'

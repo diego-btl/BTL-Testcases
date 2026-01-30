@@ -1,0 +1,33 @@
+metadata:
+  id: TC61965
+  name: Maximum routes created
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-11-10'
+  updated: '2025-11-13'
+  author: user_17
+  testmo_id: 61965
+  folder_id: 102
+description: 'The number of Routes is linked with the vehicleCapabilities API and
+  will tell how many Routes the VIN can haveThis is the section we need to modify
+  if we want to increase or reduce the number of possible stopsFor EV the default
+  one is 10, for EVAVK2 it depends on this cap:"wayPoint": { "__typename": "WayPointAccessoryCapability",
+  "enabled": true, "maxNumber": 8 },'
+preconditions:
+- description: User is viewing the Planned Routes section
+- description: The user selects an EV or EVAVK2 vehicles
+- description: The user should have 10 Planned Route created (With the nnaqa and Ariya)
+steps:
+- id: 1
+  action: The user Route Planner section -> Click over Planned Routes
+  expected: The user is seeing a max of 10 Routes in the List
+- id: 2
+  action: The user Route Planner section -> Click over Planned Routes -> Fill all
+    the information -> Click over Estimate Route -> Click over Save Route
+  expected: The user will see the toastFailed to saved route

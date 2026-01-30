@@ -1,0 +1,37 @@
+metadata:
+  id: TC31285
+  name: Capability Check for Collision Management
+  feature: test-cases
+  priority: critical
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-03-07'
+  updated: '2025-05-02'
+  author: user_25
+  testmo_id: 31285
+  folder_id: 3800
+description: NNA only (Nissan and INFINITI)
+preconditions:
+- description: 'FF `"EnableCollisionManagement": "true"`Vehicle is non pending, not
+    stolen'
+steps:
+- id: 1
+  action: Check the `VehicleCapabilities` API response
+  expected: 'The `VehicleCapabilities` API response includes ACCIDENT_REPORT_SERVICE
+    AND COLLISION_MANAGEMENT caps in "enabled": true OR "enabled": false` states'
+- id: 2
+  action: 'Mock ACCIDENT_REPORT_SERVICE AND COLLISION_MANAGEMENT caps to "enabled":
+    true'
+  expected: '"Vehicle Data" Card is present in the Collision Report screen'
+- id: 3
+  action: 'Mock ACCIDENT_REPORT_SERVICE to "enabled": true AND COLLISION_MANAGEMENT
+    caps to "enabled": false'
+  expected: '"Vehicle Data" Card is NOT present in the Collision Report screen'
+- id: 4
+  action: 'Mock ACCIDENT_REPORT_SERVICE to "enabled": false'
+  expected: Collision Management Card is hidden. UI reacts as if the Feature Flag
+    is OFF

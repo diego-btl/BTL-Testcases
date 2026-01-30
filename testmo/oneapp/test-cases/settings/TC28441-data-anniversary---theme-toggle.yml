@@ -1,0 +1,21 @@
+metadata:
+  id: TC28441
+  name: Data Anniversary - Theme Toggle
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2024-11-22'
+  updated: '2024-11-22'
+  author: user_2
+  testmo_id: 28441
+  folder_id: 48
+description: This test case should coverValidating the toggle is displayed for Anniversary
+  Mode enabled vehiclesValidating the toggle enables or disables the Anniversary Theme
+  on the Home Screen
+preconditions:
+- description: EnableOwnerAnniversary FF Enabled

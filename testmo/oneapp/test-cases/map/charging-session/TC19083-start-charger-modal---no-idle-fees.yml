@@ -1,0 +1,29 @@
+metadata:
+  id: TC19083
+  name: Start Charger modal - no idle fees
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2024-06-06'
+  updated: '2025-02-28'
+  author: user_6
+  testmo_id: 19083
+  folder_id: 2442
+description: DesignsStory
+preconditions:
+- description: EnablePlugAndCharge is enabled in remote configs
+- description: AccountStatus is ACTIVE
+steps:
+- id: 1
+  action: Go to Maps -> Go to Filters -> Select only Charge Point from list of Providers
+    OR Ensure at least this is selected -> Tap on Apply
+  expected: See expected results
+- id: 2
+  action: Pick Charge Point from the POIs listed
+  expected: 'You should not see any fees associated with the charger | The PricingDetails
+    api should have | "parkingTariff": null, | "flatFee": null,'

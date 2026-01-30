@@ -1,0 +1,37 @@
+metadata:
+  id: TC24342
+  name: Setting - My Profile - NCF Account Status Screen
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2024-10-18'
+  updated: '2024-10-22'
+  author: user_17
+  testmo_id: 24342
+  folder_id: 3085
+preconditions:
+- description: Login with an NCF account > https://www.notion.so/bethinklabs/d0f8f58385a94c51ab27ce3ee1ef1e51?v=caf06428a7ac41aa96541666be242cd7
+- description: NCF Account Connected or Disconnected
+steps:
+- id: 1
+  action: Login into the app -> Go to Settings -> Click My Profile -> Click NCF Account
+    Status card
+  expected: 'The user is seeing the screen NCF Settings with the next information:'
+- id: 2
+  action: Login into the app -> Go to Settings -> Click My Profile -> Click NCF Account
+    Status card -> Click Disconnect
+  expected: 'The user is getting disconnected from the NCF account and a toast appears
+    saying: | You have disconnected successfully'
+- id: 3
+  action: Login into the app -> Go to Settings -> Click My Profile -> Click NCF Account
+    Status card -> Click Connect
+  expected: The user is redirect to Add Financial Account flow (if vehicle is connected)
+- id: 4
+  action: Login into the app -> Go to Settings -> Click My Profile -> Click NCF Account
+    Status card -> Click Connect
+  expected: The user is redirect to Add Financial Vehicle flow (if vehicle is non-connected)

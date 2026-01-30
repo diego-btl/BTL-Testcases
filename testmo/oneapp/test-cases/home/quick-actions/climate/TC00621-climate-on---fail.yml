@@ -1,0 +1,38 @@
+metadata:
+  id: TC00621
+  name: Climate On - Fail
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-01'
+  updated: '2025-04-15'
+  author: user_2
+  testmo_id: 621
+  folder_id: 62
+preconditions:
+- description: User is on the Home screen
+- description: User has sent a StartClimate request
+steps:
+- id: 1
+  action: 'Climate on request has resolved into a failure -> CheckRemoteClimateRequest
+    API: -> { -> "data": { -> "checkRemoteClimateRequest": { -> "__typename": "ServiceRequestResult",
+    -> "status": "FAILED" -> } -> } -> }'
+  expected: User should see a toast "<year and model> failed to turn on climate""Climate
+    On" and "Climate Off" buttons are returned to the default stateUser should see
+    the "Climate" card with the secondary text "Off - Interior Temp <temperature>"
+- id: 2
+  action: 'Climate on request has resolved into a failure -> CheckRemoteClimateRequest
+    API: -> { -> "data": { -> "checkRemoteClimateRequest": { -> "__typename": "ServiceRequestResult",
+    -> "status": "SUCCESS" -> } -> } -> } -> VehicleClimateStatus API: -> { -> "data":
+    { -> "vehicle": { -> "__typename": "ElectricVehicle", -> "climateStatus": { ->
+    "__typename": "ClimateStatus", -> "state": "OFF", -> "temperature": { -> "__typename":
+    "Temperature", -> "value": 70, -> "unit": "FAHRENHEIT" -> } -> } -> } -> } ->
+    }'
+  expected: User should see a toast "<year and model> failed to turn on climate""Climate
+    On" and "Climate Off" buttons are returned to the default stateUser should see
+    the "Climate" card with the secondary text "Off - Interior Temp <temperature>"

@@ -1,0 +1,27 @@
+metadata:
+  id: TC24226
+  name: Exit icar flow
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2024-08-28'
+  updated: '2024-10-17'
+  author: user_4
+  testmo_id: 24226
+  folder_id: 3081
+preconditions:
+- description: User has an icar deeplink
+steps:
+- id: 1
+  action: 1. Tap on the deeplink 2. Close out of the icar flow
+  expected: 1. User should either be in the existing user or new user icar flows 2.
+    Upon exiting the icar flow in anyway, the user should no longer be able to get
+    into the icar flow unless they tap on a deeplink If the user was in the new user
+    flow, they should be returned to the app landing screen If the user was in the
+    add vehicle flow, they should be returned to the app home screen (without any
+    vehicles added)

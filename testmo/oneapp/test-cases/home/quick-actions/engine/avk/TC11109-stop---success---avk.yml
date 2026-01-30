@@ -1,0 +1,35 @@
+metadata:
+  id: TC11109
+  name: Stop - Success - AVK
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2024-01-04'
+  updated: '2025-09-22'
+  author: user_4
+  testmo_id: 11109
+  folder_id: 4167
+preconditions:
+- description: User has an AVK vehicle
+- description: User is on the Home screen
+- description: User has sent an Engine STOP request
+- description: CheckEngineServiceRequest API response:{
+- description: '"data": {'
+- description: '"checkEngineServiceRequest": {'
+- description: '"__typename": "ServiceRequestResult",'
+- description: '"status": "SUCCESS",'
+- description: '"statusDetails": null'
+- description: '}'
+- description: '}'
+- description: '}'
+steps:
+- id: 1
+  action: Engine STOP request has resolved into a success
+  expected: An "Engine STOP" button icon changed to the default state | A success
+    toast "<year and model> Engine Stopped." is displayed at the bottomA countdown
+    timer is dismissed in the Hero section, Fuel Remaining is displayed instead

@@ -1,0 +1,22 @@
+metadata:
+  id: TC00792
+  name: Support screen
+  feature: test-cases
+  priority: critical
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-01'
+  updated: '2025-09-19'
+  author: user_2
+  testmo_id: 792
+  folder_id: 47
+preconditions:
+- description: User is on the Support screen
+steps:
+- id: 1
+  action: Check Support screen
+  expected: User should see Let us Help section at the top

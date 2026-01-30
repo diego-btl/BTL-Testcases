@@ -1,0 +1,24 @@
+metadata:
+  id: TC24208
+  name: Quick Guides - Empty or null (To Be Updated)
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2024-08-28'
+  updated: '2024-10-17'
+  author: user_2
+  testmo_id: 24208
+  folder_id: 82
+preconditions:
+- description: Manual & Quick Guides - VehiclesStaticData > quickGuidesUrl (sample)
+- description: Warranty Coverage - ContactUs > warranty (sample)
+steps:
+- id: 1
+  action: set the URL to a null or empty string ("") -> go to the Support screen ->
+    Verify that the card is disabled -> Tap on the Manual & Quick Guides card
+  expected: The expiration modal should be displayed with the call number

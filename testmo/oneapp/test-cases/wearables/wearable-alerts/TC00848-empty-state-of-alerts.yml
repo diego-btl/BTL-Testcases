@@ -1,0 +1,28 @@
+metadata:
+  id: TC00848
+  name: Empty State of Alerts
+  feature: test-cases
+  priority: critical
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-01'
+  updated: '2024-10-17'
+  author: user_2
+  testmo_id: 848
+  folder_id: 77
+preconditions:
+- description: User is on the Alerts page and does not have any alerts
+steps:
+- id: 1
+  action: Tap the speed alerts item
+  expected: User should see a message indicating no alerts found
+- id: 2
+  action: Tap the curfew alerts item
+  expected: User should see a message indicating no alerts found
+- id: 3
+  action: Tap the drive zone alerts item
+  expected: User should see a message indicating no alerts found

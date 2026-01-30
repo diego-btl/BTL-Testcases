@@ -1,0 +1,27 @@
+metadata:
+  id: TC24235
+  name: My Photos Page - Consent Declined
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2024-10-07'
+  updated: '2026-01-13'
+  author: user_2
+  testmo_id: 24235
+  folder_id: 3083
+preconditions:
+- description: The user has a CCS2 - AVK2 Vehicle
+- description: 'Capabilities return enabled: true and subscribed: true for both REMOTE_PHOTOS_COMMAND
+    and REMOTE_PHOTOS_SHOCK'
+- description: Photos Consent is DECLINED
+- description: The user is in the Home Screen
+steps:
+- id: 1
+  action: The user taps on the My Photos card
+  expected: The user is driven to the Cloud Photo Consent Status page | The Cloud
+    Photo Consent Status is Not Accepted

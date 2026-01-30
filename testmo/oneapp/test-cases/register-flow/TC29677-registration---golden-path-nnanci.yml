@@ -1,0 +1,100 @@
+metadata:
+  id: TC29677
+  name: Registration - Golden Path NNA/NCI*
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2024-12-18'
+  updated: '2025-10-07'
+  author: user_17
+  testmo_id: 29677
+  folder_id: 43
+description: This is the registration flow happy path, it will cover the entire flow
+  with only valid data and valid responses from the API. for NNA/ NCI
+preconditions:
+- description: The user is already in the First Page of the Registration Flow
+steps:
+- id: 1
+  action: Enter a valid First Name and Last Name using only alphabetical characters
+  expected: The fields display the input data without issues
+- id: 2
+  action: Enter any email on the Email field
+  expected: The Email field will show a red background and display a * Invalid Email
+    Address error message until the input matches a valid email - for Android | For
+    ios, if you don't fill the email field or enter invalid email address, when you
+    move away from the text box, you will see the error message.
+- id: 3
+  action: Enter the same email used in the previous step on the Confirm Email field
+  expected: The Confirm Email field will show a red background and display a * Email
+    addresses do not match error message until the input matches a the value input
+    in the previous step - for android | For ios, For ios, if you don't fill the confirm
+    email field or enter invalid email address, when you move away from the text box,
+    you will see the error message. | The NEXT button at the bottom, remains inactive
+    until all the previous validations are completed
+- id: 4
+  action: Tap on the NEXT button
+  expected: The user is navigated to the Second Page of the Registration flow
+- id: 5
+  action: Enter any address on the Address field -> Enter any city on the City field
+    -> Select any state from the State selector
+  expected: The fields display the input data without issues
+- id: 6
+  action: Enter any valid Zip Code on the ZIP Code field
+  expected: The device keyboard should only display numbers | The ZIP Code field will
+    show a red background and display a * Invalid ZIP code error message until the
+    input has 5 digits - for android | for ios, if you don't enter 5 digits, when
+    you move away from the text box, you will see the error message.
+- id: 7
+  action: Enter any valid phone number on the Phone Number field
+  expected: The device keyboard should only display numbers | The Phone Number field
+    will show a red background and display a * Invalid phone number error message
+    until the input has 10 digits - for android | For ios, if you don't enter 10 digits,when
+    you move away from the text box, you will see the error message.
+- id: 8
+  action: Select any carrier from the Carrier selector
+  expected: The selected carrier should be displayed on the Carrier field | The NEXT
+    button at the bottom, remains inactive until all the previous validations are
+    completed
+- id: 9
+  action: Tap on the NEXT button
+  expected: The user is navigated to the Third Page of the Registration flow
+- id: 10
+  action: Enter any valid password on the Password field, follow up the password rules
+    displayed on the screen
+  expected: The Password field will show a red background until the password rules
+    are met - for android | for ios - if you don't fill the password field or if you
+    don't follow the password rules, when you move away from the text box, (you can't
+    move forward and create button is not activated)
+- id: 11
+  action: Enter the same password used on the previous step on the Confirm Password
+    field
+  expected: The Confirm Password field will show a red background and display a *
+    Passwords do not match error message until the input matches a the value input
+    in the previous step -for android | for ios - if you don't fill the confirm password
+    field (create account button is not activated). if you enter the wrong password,
+    when you move away from the text box, you will see the error message.
+- id: 12
+  action: Tap on both of the password fields show / hide icons
+  expected: The switch should show / hide the text on the fields
+- id: 13
+  action: Mark the I have read and accept the Terms of Service, the Privacy Policy,
+    and the Data Privacy Policy checkmark
+  expected: The checkmark is selected or deselected depending of the user interaction
+    | The CREATE ACCOUNT button at the bottom, remains inactive until all the previous
+    validations are completed
+- id: 14
+  action: Click on all the links in the I have read and accept the Terms of Service,
+    the Privacy Policy, and the Data Privacy Policy (Removed from NCI) section
+  expected: The three links are displayed in a native webview inside the app
+- id: 15
+  action: Click on the CREATE ACCOUNT button
+  expected: The user is driven to the Login page | The email used in the Registration
+    flow should be prefilled in the Login Email field
+- id: 16
+  action: Switch the device to dark mode and repeat previous steps again
+  expected: Behaviour is consistent

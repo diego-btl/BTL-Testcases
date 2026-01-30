@@ -1,0 +1,49 @@
+metadata:
+  id: TC30176
+  name: What's New Modal
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-02-06'
+  updated: '2025-04-29'
+  author: user_24
+  testmo_id: 30176
+  folder_id: 39
+description: When an existing user updates app, he should not see onboarding cards
+  and a What's new Modal should show when he logs in. The copy of the Modal should
+  match the copy for this modal in Firebase Remote Console.
+preconditions:
+- description: In Firebase (on proxyman), you should see the field WhatsNew parameter
+    with some value against it. Below is an example.
+- description: '"WhatsNew": "{\"version\":\"6.4.27\",\"messages\":[\"This is the WNM
+    For NNA Only!\",\"And just for Android 6.4.27\",\"We''re good!\"]}"'
+- description: In Firebase console, under Remote Config, ensure that there are parameters/conditions
+    for the version you are testing on. We are doing this to ensure that the app picks
+    up new copy from Firebase dynamically. Example screenshots above.
+steps:
+- id: 1
+  action: Install an older version of app.
+  expected: Then Onboarding cards should show | Whats new Modal should show** only
+    if onboarding cards DON'T show
+- id: 2
+  action: If What's new Modal shows, then Tap on Don't show this again
+  expected: See expected results
+- id: 3
+  action: Exit out of app
+  expected: See expected results
+- id: 4
+  action: Go back to app
+  expected: You shouldn't see onboarding cards and the What's new Modal
+- id: 5
+  action: You can also log out and log back in
+  expected: You shouldn't see onboarding cards and the What's new Modal
+- id: 6
+  action: Now update the app version to the version that's configured in Firebase
+    Console (with the new copy)
+  expected: You should NOT see onboarding cards | You should see the What's new Modal
+    with the new copy

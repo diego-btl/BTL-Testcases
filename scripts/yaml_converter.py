@@ -178,7 +178,8 @@ class YAMLConverter:
                 "created": YAMLConverter._format_date(testmo_case.get("created_at")),
                 "updated": YAMLConverter._format_date(testmo_case.get("updated_at")),
                 "author": f"user_{testmo_case.get('created_by', 'unknown')}",
-                "testmo_id": testmo_id
+                "testmo_id": testmo_id,
+                "folder_id": testmo_case.get("folder_id")
             }
         }
 

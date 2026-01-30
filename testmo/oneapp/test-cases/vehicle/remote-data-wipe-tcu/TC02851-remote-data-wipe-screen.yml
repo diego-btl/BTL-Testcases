@@ -1,0 +1,27 @@
+metadata:
+  id: TC02851
+  name: Remote Data Wipe screen
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-09-13'
+  updated: '2025-02-24'
+  author: user_4
+  testmo_id: 2851
+  folder_id: 434
+description: https://www.pivotaltracker.com/story/show/185987342
+preconditions:
+- description: UseNewRemoteDataWipeImplementation = true.
+- description: User has REMOTE_DATA_WIPE capability enabledUser is on Vehicle Profile
+    screen
+steps:
+- id: 1
+  action: Tap on Remote Data Wipe card
+  expected: User should see Remote Data Wipe screenUser should see a card containing
+    a description of Remote Data WipeUser should see a Reset Options section with
+    info button and various togglesUser should see a Reset button

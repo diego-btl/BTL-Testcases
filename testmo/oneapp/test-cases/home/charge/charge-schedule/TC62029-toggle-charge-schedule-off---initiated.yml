@@ -1,0 +1,31 @@
+metadata:
+  id: TC62029
+  name: Toggle Charge Schedule OFF - Initiated
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-11-21'
+  updated: '2026-01-09'
+  author: user_25
+  testmo_id: 62029
+  folder_id: 6781
+preconditions:
+- description: User has an EV/EV2
+- description: At least 1 charge schedule exists with the toggle in enabled state
+- description: User is on the Manage EV screen
+steps:
+- id: 1
+  action: Tap the toggle OFF for one of the created charge schedule
+  expected: 'The ToggleChargeSchedule API is triggered, sending "enable": false in
+    the request | The CheckChargeServiceRequest starts polling, returning "status":
+    "PENDING" | The loading state with the Charge icon is displayed | The DeleteChargeSchedule
+    API is triggered | The CheckChargeServiceRequest starts polling, returning "status":
+    "PENDING" | The loading state with the Charge icon is displayed | The toasts are
+    displayed in the following order:- ''Contacting <year model> to toggle charge
+    schedule...''- ''Waking <year model> to toggle charge schedule...''- ''Initiating
+    toggle charge schedule on <year model>...'''

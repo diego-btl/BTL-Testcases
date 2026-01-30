@@ -1,0 +1,37 @@
+metadata:
+  id: TC61362
+  name: Quebec bill 29 - NCI NIS and INF only
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-09-10'
+  updated: '2025-09-22'
+  author: user_24
+  testmo_id: 61362
+  folder_id: 82
+description: CONTEXTThere's a Canadian legislation named Quebec Bill 29, “An Act to
+  protect consumers against planned obsolescence and to promote the durability, repairability
+  and maintenance of goods”, which comes into effect on October 5, 2025.For Nissan
+  Canada Inc. (NCI), this means they're required to clearly communicate the availability
+  of replacement parts and repair services to consumers across provinces.This feature
+  ensures compliance by adding explanatory copy in user manuals and warranty pages
+  within the MyNissan and MyInfiniti apps.https://www.figma.com/design/YCob43R7CpbqmSvdvIalfu/-SHARE--MyInfiniti-1.5--NCI-?node-id=5073-57109&t=SWVYyAYiRaQ0M2eT-0https://www.figma.com/design/Wc99oBzCMjx1g0lmm3SkH6/-Share--MyNissan-1.5--NCI-?t=Ruad8ufb2P8HzOKT-0
+preconditions:
+- description: User is logged into either NIS or INF NCI app
+- description: User is on Manual and Quick Guides screen in Support Tab
+steps:
+- id: 1
+  action: On Manual and Quick Guides screen
+  expected: 'the user should see the Quebec Bill 29 blurb in a bubble with an x on
+    top right to dismiss the bubble on the screen | The Text should be:(Brand n Device
+    language specific):'
+- id: 2
+  action: Dismiss the bubble -> Navigate to another screen -> Come back to Support>Manual
+    and Quick Guides
+  expected: The bubble should show everytime the user enters this screen, even if
+    it was dismissed earlier | Test this with bg/fg and exiting app.

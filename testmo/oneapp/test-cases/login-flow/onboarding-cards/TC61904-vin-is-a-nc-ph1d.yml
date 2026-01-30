@@ -1,0 +1,16 @@
+metadata:
+  id: TC61904
+  name: VIN is a NC PH1D
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-10-30'
+  updated: '2026-01-30'
+  author: user_24
+  testmo_id: 61904
+  folder_id: 6757

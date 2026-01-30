@@ -1,0 +1,40 @@
+metadata:
+  id: TC61954
+  name: V1G - Cache Strategy
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-11-10'
+  updated: '2025-12-16'
+  author: user_25
+  testmo_id: 61954
+  folder_id: 6755
+preconditions:
+- description: Nissan NNA and NCI only
+- description: User has an EV or EV AVK2 vehicle
+- description: PD only
+- description: 'eVehicleEligibility > "v1GEligible": true'
+- description: 'V1GMonitoredChargingAccountStatus > "v1GMonitoredChargingAccountStatus":
+    "ACTIVE"'
+steps:
+- id: 1
+  action: Bg/fg the app -> While the loading state is displayed on the Home screen
+    quickly navigate to the Charge screen
+  expected: Status, Optimize, and Insights tabs are displayed, the data is cached
+- id: 2
+  action: Navigate to the Manage EV screen
+  expected: The Smart Charging card is located under the NECN card with the 'Enrolled'
+    secondary text
+- id: 3
+  action: Cold start the app -> While the loading state is displayed on the Home screen
+    quickly navigate to the Charge screen
+  expected: Status, Optimize, and Insights tabs are displayed, the data is cached
+- id: 4
+  action: Navigate to the Manage EV screen
+  expected: The Smart Charging card is located under the NECN card with the 'Enrolled'
+    secondary text

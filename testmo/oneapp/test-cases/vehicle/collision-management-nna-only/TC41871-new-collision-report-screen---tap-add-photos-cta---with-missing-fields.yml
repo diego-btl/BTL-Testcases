@@ -1,0 +1,32 @@
+metadata:
+  id: TC41871
+  name: New Collision Report screen - Tap "Add Photos" CTA - with Missing Fields
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-06-09'
+  updated: '2025-06-10'
+  author: user_26
+  testmo_id: 41871
+  folder_id: 3800
+description: Verify that tapping the Add Photos CTA opens the Missing Information
+  modal, not the Confirmation modal
+preconditions:
+- description: User is on the Collision Report screen
+- description: One or more required fields are left empty
+steps:
+- id: 1
+  action: Leave one or all required fields empty
+  expected: See expected results
+- id: 2
+  action: Tap ADD PHOTOS CTA
+  expected: Appears the Missing Information Modal
+- id: 3
+  action: Tap Yes
+  expected: Observe a Loading State | 'CreateCollisionReport' API is triggered successfully
+    | User is redirected to the Upload Photos screen

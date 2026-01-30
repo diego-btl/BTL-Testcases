@@ -1,0 +1,20 @@
+metadata:
+  id: TC28445
+  name: Data Anniversary - Fireworks Animation
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2024-11-22'
+  updated: '2025-02-06'
+  author: user_2
+  testmo_id: 28445
+  folder_id: 7145
+description: This test case should coverValidating the Fireworks animation on the
+  Home screen
+preconditions:
+- description: EnableOwnerAnniversary FF Enabled

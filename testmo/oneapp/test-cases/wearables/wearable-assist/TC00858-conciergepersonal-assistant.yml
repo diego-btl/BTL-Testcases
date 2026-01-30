@@ -1,0 +1,28 @@
+metadata:
+  id: TC00858
+  name: Concierge/Personal Assistant
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-01'
+  updated: '2024-10-17'
+  author: user_2
+  testmo_id: 858
+  folder_id: 79
+description: 'The user is on the Assist screen and has the Concierge/Personal assist
+  capabilityNOTE: removed for NCI'
+preconditions:
+- description: User is on the Assist screen and has the Concierge capability
+steps:
+- id: 1
+  action: Tap Concierge -> Tap Call
+  expected: 'The user should see a modal to call the Personal Assistant''s phone number2.
+    The user should be able to call: 1-888-717-1411'
+- id: 2
+  action: Tap Concierge -> Tap Call -> Tap Cancel
+  expected: Modal should dismiss itself

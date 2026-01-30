@@ -1,0 +1,28 @@
+metadata:
+  id: TC02855
+  name: Remote Data Wipe - Wipe - Failure
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-09-13'
+  updated: '2024-10-17'
+  author: user_4
+  testmo_id: 2855
+  folder_id: 434
+description: https://www.pivotaltracker.com/story/show/185987342
+preconditions:
+- description: User has REMOTE_DATA_WIPE capability enabledRemote Data Wipe screen
+steps:
+- id: 1
+  action: Toggle on at least one of the toggles -> Tap on Reset -> Tap on No -> Mock
+    an error for DataWipe (iOS) or let the API call timeoutTap on Reset and tap Yes
+  expected: User should see corresponding toggle toggled on | User should see a confirmation
+    prompt | User should see confirmation prompt dismiss | User should see confirmation
+    prompt dismiss and a loading spinnerUser should see dataWipeType correspond with
+    the selected toggle | Reset Monitoring & Alerts = TCU_WIPE | Reset Vehicle Settings
+    = HU_WIPE | Reset All = WIPEUpon failure, user should see a failure toast

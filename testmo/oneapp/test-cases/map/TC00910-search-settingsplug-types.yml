@@ -1,0 +1,38 @@
+metadata:
+  id: TC00910
+  name: Search Settings/Plug Types
+  feature: test-cases
+  priority: critical
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-08'
+  updated: '2025-02-25'
+  author: user_7
+  testmo_id: 910
+  folder_id: 46
+preconditions:
+- description: User has an EV
+steps:
+- id: 1
+  action: Tap to toggle search settings
+  expected: User is able to toggle search settings (Show Charge stations must be toggled
+    for Within Reachable Area to enable)
+- id: 2
+  action: Tap to disable both plug types
+  expected: User is able to toggle off plug types and search settings are disabled
+- id: 3
+  action: Tap to toggle search settings
+  expected: User should see a Select Plug Type prompt
+- id: 4
+  action: Tap Ok
+  expected: User should see prompt dismiss
+- id: 5
+  action: Tap to enable a plug type
+  expected: User is able to toggle on plug type
+- id: 6
+  action: Tap to toggle search settings
+  expected: User is able to toggle search settings

@@ -1,0 +1,24 @@
+metadata:
+  id: TC24210
+  name: Errors when verifying account (also applies for existing user)
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2024-08-28'
+  updated: '2024-10-17'
+  author: user_4
+  testmo_id: 24210
+  folder_id: 3081
+preconditions:
+- description: User has a new user deeplink
+steps:
+- id: 1
+  action: 1. Tap on new user deeplink 2. Mock any error for verifying account or generate
+    OTP
+  expected: 1. User should see the splash screen while API calls are processing 2.
+    User should no longer be in the icar flow and user sees the app landing screen

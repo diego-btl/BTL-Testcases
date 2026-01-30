@@ -1,0 +1,26 @@
+metadata:
+  id: TC02838
+  name: Map Settings screen
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-09-13'
+  updated: '2026-01-06'
+  author: user_4
+  testmo_id: 2838
+  folder_id: 6788
+description: https://www.pivotaltracker.com/story/show/185517595
+preconditions:
+- description: AVK2 VehicleMap tab
+steps:
+- id: 1
+  action: Tap on the Map Settings icon -> Tap to change Route Options and toggles
+  expected: 'User should see the Map Setting screenUser should see Route Options card
+    with options for: Fastest (default), Shortest, Eco, General and toggles for Tolls,
+    Highways, and Ferries | User should see the selected options change and toggles
+    flip'

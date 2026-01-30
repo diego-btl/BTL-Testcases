@@ -1,0 +1,38 @@
+metadata:
+  id: TC61889
+  name: When Vin is in Pending status
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-10-28'
+  updated: '2026-01-12'
+  author: user_24
+  testmo_id: 61889
+  folder_id: 6757
+preconditions:
+- description: Mock account to have only 1 VIN in pending status and no other vin
+    in VehicleStaticData
+steps:
+- id: 1
+  action: Launch app -> Log in -> After Static data, pendingvehicles, is resolved,
+    the modal should show -> Tap on Yes
+  expected: 'The card title should read Hello! | The body should read: | Welcome to
+    the [MyNISSAN / MyINFINITI] app! | We''re currently verifying your ownership documents
+    for the vehicle in your garage- please come back soon. | CTA 1: Dismiss | No other
+    cards after this card'
+- id: 2
+  action: Tap on Dismiss or the X on top right
+  expected: Onboarding card is dismissed and user is on the screen he was on last
+    (for e.g. home)
+- id: 3
+  action: Go to Support Screen
+  expected: App Key Features card is shown on the screen
+- id: 4
+  action: Tap on the App Key Features card on support screen
+  expected: The Status(Hello) card should be the same as seen when app is launched,
+    with the same flow

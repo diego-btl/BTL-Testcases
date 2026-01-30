@@ -1,0 +1,33 @@
+metadata:
+  id: TC64828
+  name: Enhanced Chat SDK - Feature Flag Validation
+  feature: test-cases
+  priority: critical
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2026-01-27'
+  updated: '2026-01-30'
+  author: user_23
+  testmo_id: 64828
+  folder_id: 7146
+description: 'Validates that when EnableEnhancedInAppChat feature flag is set to true,
+  the LiveChatHours query includes enhancedChat: true in the payload. Preconditions:
+  EnableEnhancedInAppChat FF = true User is logged in'
+steps:
+- id: 1
+  action: Navigate to Support screen and tap Chat card
+  expected: LiveChatHours query is triggered
+- id: 2
+  action: Validate LiveChatHours query payload in network logs
+  expected: 'Query payload includes: Brand-specific departments: Nissan: ["NissanCAMobile",
+    "NissanConnectionMobile"] | INFINITI: ["InfinitiCAMobile", "InfinitiConnectionMobile"]
+    | enhancedChat: true (Enhanced SDK active)'
+- id: 3
+  action: Validate LiveChatHours query response in network logs
+  expected: 'Response includes: contactUs.liveChatHours array with department objects
+    | Each department includes: departmentName, openingTime, closingTime, afterHourMessage,
+    availableNow | Brand-specific department names match request'

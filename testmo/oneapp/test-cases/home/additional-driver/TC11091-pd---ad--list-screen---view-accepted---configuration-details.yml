@@ -1,0 +1,27 @@
+metadata:
+  id: TC11091
+  name: PD - AD  List Screen - View Accepted - Configuration Details
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-11-24'
+  updated: '2024-10-17'
+  author: user_4
+  testmo_id: 11091
+  folder_id: 411
+description: https://www.pivotaltracker.com/story/show/185040330
+preconditions:
+- description: User has an AVK2 vehicle and is PRIMARY_DRIVER
+- description: User has an accepted invitation
+- description: User is viewing Invitation Details
+steps:
+- id: 1
+  action: Tap on Selected Configurations
+  expected: User should see Configuration Details screen with toggles and capabilities
+    matching the states from the data returned in ShareableCapabilitiesForInvitation
+    and DriverInvites [iOS] (ex. true = enabled, false = disabled)

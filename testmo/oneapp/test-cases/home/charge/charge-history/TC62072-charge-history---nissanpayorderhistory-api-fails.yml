@@ -1,0 +1,46 @@
+metadata:
+  id: TC62072
+  name: Charge History - NissanPayOrderHistory API fails
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-12-02'
+  updated: '2025-12-03'
+  author: user_25
+  testmo_id: 62072
+  folder_id: 2443
+preconditions:
+- description: User is a PD and has an EV/EV2
+- description: None of the FF is checked
+- description: User is on the Manage EV screen > Charge History card is in the enabled
+    state (it should always be enabled for PD)
+- description: EV > VehicleCapabilities > "DRIVING_ANALYSIS" is true
+- description: EV2 > VehicleCapabilities > "CHARGE_HISTORY" is true
+steps:
+- id: 1
+  action: Add a breakpoint to the NissanPayOrderHistory API -> Tap Charge History
+    card
+  expected: NissanPayOrderHistory API is triggered and failed | User is navigated
+    to the In-network tab | The 'Something Went Wrong' modal with the copy 'Sorry,
+    something went wrong. Please try again.' and buttons 'Cancel' and 'Retry' is displayed
+- id: 2
+  action: Tap the 'Cancel' button
+  expected: The modal is dismissed | User remains on the In-network tab | The copy
+    ' No Charge History' is displayed on the screen
+- id: 3
+  action: Tap the 'Refresh' button
+  expected: NissanPayOrderHistory API is triggered and failed | The 'Something Went
+    Wrong' modal with the copy 'Sorry, something went wrong. Please try again.' and
+    buttons 'Cancel' and 'Retry' is displayed
+- id: 4
+  action: Tap the 'Retry' button
+  expected: The NissanPayOrderHistory API is triggered again
+- id: 5
+  action: Tap 'Execute' to return the data for the NissanPayOrderHistory API response
+  expected: UI shows the correct data according to the returned NissanPayOrderHistory
+    API response

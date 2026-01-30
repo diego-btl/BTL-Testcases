@@ -1,0 +1,35 @@
+metadata:
+  id: TC11108
+  name: Start - Success - AVK
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2024-01-04'
+  updated: '2025-09-22'
+  author: user_4
+  testmo_id: 11108
+  folder_id: 4167
+preconditions:
+- description: User has an AVK vehicle
+- description: User is on the Home screen
+- description: User has sent an Engine Start request
+- description: CheckEngineServiceRequest API response:{
+- description: '"data": {'
+- description: '"checkEngineServiceRequest": {'
+- description: '"__typename": "ServiceRequestResult",'
+- description: '"status": "SUCCESS",'
+- description: '"statusDetails": null'
+- description: '}'
+- description: '}'
+- description: '}'
+steps:
+- id: 1
+  action: Engine Start request has been resolved into a success
+  expected: An "Engine" button icon changed to "STOP" | A success toast "<year and
+    model> Engine Started" is displayed at the bottomA countdown timer (10 min) and
+    "Engine Running" text are displayed in the Hero section instead of Fuel Remaining

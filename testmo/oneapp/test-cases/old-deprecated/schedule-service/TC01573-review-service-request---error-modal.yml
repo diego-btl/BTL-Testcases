@@ -1,0 +1,25 @@
+metadata:
+  id: TC01573
+  name: Review Service Request - error modal
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-28'
+  updated: '2024-10-17'
+  author: user_2
+  testmo_id: 1573
+  folder_id: 7143
+preconditions:
+- description: User is on Review Service Request screen
+steps:
+- id: 1
+  action: 1. Tap on Schedule My Service and trigger an error 2. Tap on Retry 3. Tap
+    on Cancel
+  expected: 1. User should see an error modal appear with options to cancel and retry
+    2. User should see loading spinner as API is triggered again 3. User should see
+    error modal dismissed

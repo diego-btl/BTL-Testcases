@@ -1,0 +1,25 @@
+metadata:
+  id: TC02834
+  name: Capabilities - Accessories Details - Steering Wheel
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-09-12'
+  updated: '2024-10-17'
+  author: user_4
+  testmo_id: 2834
+  folder_id: 4170
+description: https://www.pivotaltracker.com/story/show/185793935
+preconditions:
+- description: AVK2 vehicleUser is on Climate Details screen
+steps:
+- id: 1
+  action: Accessories Details returns with steeringHeat enabled flag set to false
+    -> Accessories Details returns with steeringHeat enabled flag set to true
+  expected: User should not see Steering Wheel Heater options the Climate Control
+    | User should see Steering Wheel Heater Off/On options

@@ -1,0 +1,62 @@
+metadata:
+  id: TC00877
+  name: Maintenance Card - Data returned Time Based
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-04'
+  updated: '2025-12-18'
+  author: user_7
+  testmo_id: 877
+  folder_id: 91
+description: User has data being returned(AVK) or has done manual entry (TCU2K) within
+  the last 3 monthsNot Close to Due - green progress barClose to Due - Orange warning
+  state progress bar nearly completeOverdue - Orange warning state Progress bar filled
+preconditions:
+- description: 'Card is on Time Track and driving type was selectedGenerateAllVisits
+    API response should have: "Alignment": "TimeBased" (Attaching mocks)'
+steps:
+- id: 1
+  action: Mock GenerateAllVisits API (use mock - Not close to Overdue ) -> Go to vehicle
+    screen > Tap on Maintenance schedule > Set a driving condition> GenerateAllVisits
+    + PartsReminders calls are triggered> Observe UI
+  expected: 'Card with time remaining:Title Text: X mo until Est. Next Service until
+    next service | Green Progress bar with percentage according to the service doneX
+    of Y months | Estimated Next Service cardDisplays past Service in Months | The
+    upcoming one will be selected and the next one unselected | The colour will be
+    green'
+- id: 2
+  action: Tap on any of the scheduled services
+  expected: Verify that the Service Details screen displays the correct information
+    for the selected service/date, including all ServiceComponentName entries associated
+    with that service.
+- id: 3
+  action: Go back to the vehicle screen
+  expected: 'Title Text: X mo until Est. Next Service until next service | Green Progress
+    bar with percentage according to the service doneX of Y months'
+- id: 4
+  action: Mock GenerateAllVisits API (use mock - Overdue/Close Overdue) -> Go to vehicle
+    screen > Tap on Maintenance schedule > Set a driving condition> GenerateAllVisits
+    + PartsReminders calls are triggered> Observe UI
+  expected: Card with time remaining:Title Text:0 mo until Est. Next Service until
+    next service | Orange Progress bar fully filledX of Y months - Expected Soon |
+    Schedule Service CTA | Service Expected Soon cardDisplays past Service in Months
+    | The upcoming one will be unselected | color will be orange
+- id: 5
+  action: Go back to the vehicle screen
+  expected: 'Title Text: 0 mo until Est. Next Service until next service | Orange
+    Progress bar with percentage according to the service doneX of Y months - Expected
+    soon | Schedule Service CTA'
+- id: 6
+  action: Tapping on Schedule Service CTA
+  expected: Leads the user to the Selected Services screen, which is part of the Schedule
+    Appointment flow.
+- id: 7
+  action: Delete any previous visits, bg/fg the app, and wait for apis to load
+  expected: Progress bar should be empty for time track if there are no previous visits
+    | Expected Soon verbiage should be hidden

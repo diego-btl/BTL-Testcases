@@ -1,0 +1,40 @@
+metadata:
+  id: TC11124
+  name: Manage EV Screen - Error loading V2L
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2024-02-04'
+  updated: '2025-12-09'
+  author: user_4
+  testmo_id: 11124
+  folder_id: 1454
+description: https://app.clickup.com/t/86b64dch1
+preconditions:
+- description: User has an EV AVK2 vehicle
+- description: V2L capability is returning true
+- description: User is on the Charge screen
+steps:
+- id: 1
+  action: 'Mock an error for V2lStatus API with the following:'
+  expected: See expected results
+- id: 2
+  action: Tap on the Manage EV button
+  expected: User should see the Vehicle-to_Load card in the enabled state without
+    any secondary text
+- id: 3
+  action: Tap on the Vehicle-to_Load card
+  expected: User should see a Something Went Wrong error modal with options Cancel/Retry
+- id: 4
+  action: Tap on Cancel
+  expected: User should see error modal dismiss and remain on the Manage EV screen
+- id: 5
+  action: Tap on Retry
+  expected: User should see the same API call triggered again | If an error is still
+    returned, then it should show the error modal again | If a valid response is returned,
+    then user should be navigated to the Vehicle-to_Load screen

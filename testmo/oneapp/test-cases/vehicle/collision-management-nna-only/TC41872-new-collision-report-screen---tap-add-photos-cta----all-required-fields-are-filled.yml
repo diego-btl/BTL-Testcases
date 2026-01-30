@@ -1,0 +1,33 @@
+metadata:
+  id: TC41872
+  name: New Collision Report screen - Tap "Add Photos" CTA -  All required fields
+    are filled
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-06-09'
+  updated: '2025-06-10'
+  author: user_26
+  testmo_id: 41872
+  folder_id: 3800
+description: Verify that when all required fields are completed and the user taps
+  the Add Photos CTA, the flow proceeds correctly through confirmation and API response
+preconditions:
+- description: User is on the Collision Report screen
+- description: All required fields are filled
+steps:
+- id: 1
+  action: Fill out all required fields on the Collision Management screen
+  expected: All required fields are filled out
+- id: 2
+  action: Tap the ADD PHOTOS CTA
+  expected: Appears the Confirmation Message modal
+- id: 3
+  action: Tap Continue
+  expected: Appears a Loading State | CreateCollisionReport API is triggered successfully
+    | User is redirected to the Photos screen

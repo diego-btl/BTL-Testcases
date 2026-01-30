@@ -1,0 +1,27 @@
+metadata:
+  id: TC58194
+  name: Charge History - AD - Missing Caps
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-08-19'
+  updated: '2025-12-02'
+  author: user_25
+  testmo_id: 58194
+  folder_id: 2443
+description: https://app.clickup.com/t/86b63902yhttps://app.clickup.com/t/86b66c5h9
+preconditions:
+- description: User is a AD and has an EV/EV2
+- description: None of the FF is checked
+- description: EV > VehicleCapabilities > "DRIVING_ANALYSIS" is missing
+- description: EV2 > VehicleCapabilities > "CHARGE_HISTORY" is missing
+- description: User is on the Charge screen
+steps:
+- id: 1
+  action: Tap Manage EV button
+  expected: User is navigated to the Manage EV screen | Charge History card is hidden

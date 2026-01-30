@@ -1,0 +1,30 @@
+metadata:
+  id: TC36676
+  name: Small sized ICE vehicle widget - SELECT package
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-04-29'
+  updated: '2025-05-01'
+  author: user_24
+  testmo_id: 36676
+  folder_id: 4184
+preconditions:
+- description: User is logged in
+- description: User has added Small sized widget to device
+- description: User ha following capabilties turned on in VehicleCapabilties api for
+    that
+- description: 'selected vehicle:'
+- description: REMOTE_DOOR_LOCK_UNLOCK enabled ONLY
+- description: Disable REMOTE_VEHICLE_STATUS and REMOTE_ENGINE if they are enabled
+steps:
+- id: 1
+  action: Select an ICE vehicle in NIS or INF app -> Go to Widget -> Choose EV vehicle
+  expected: 'Since only the one caps is one, the vehicle has a select package | AND:
+    the user should see the model name and vehicle image available from GetVehicle
+    call | AND: the user should see the lock status from GetVehicleStatus call'

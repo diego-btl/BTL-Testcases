@@ -1,0 +1,36 @@
+metadata:
+  id: TC11133
+  name: Planned Route Screen - Weather Info - Error
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2024-02-06'
+  updated: '2024-10-17'
+  author: user_4
+  testmo_id: 11133
+  folder_id: 1452
+description: https://www.pivotaltracker.com/story/show/186644040
+preconditions:
+- description: User has an EV
+- description: User is on the Home Screen
+- description: User has upcoming planned routes (within the next 30 days)
+- description: 'Note: Keep in mind that the app retrieves weather data for each saved
+    route individually, with a separate call for each location covering a 30-day data
+    period'
+steps:
+- id: 1
+  action: 'Mock an error for https://pro.openweathermap.org/ with the following:'
+  expected: See expected results
+- id: 2
+  action: Tap on the My Car Finder card or the Map tab -> Scroll up on the Info Drawer
+    and tap on the Planned Routes card
+  expected: User should see the Map screen, VehiclePlannedRoutes and https://pro.openweathermap.org/
+    APIs are triggered for upcoming routes | User should see Planned Routes screen
+    with upcoming planned routes. The trip card should see the following error message
+    in place of the weather information:Something went wrong, weather data in <location>
+    could not be shown, please check back later

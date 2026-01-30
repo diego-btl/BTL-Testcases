@@ -1,0 +1,26 @@
+metadata:
+  id: TC00610
+  name: Start/Stop Timer - AVK
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-01'
+  updated: '2025-09-22'
+  author: user_2
+  testmo_id: 610
+  folder_id: 4167
+preconditions:
+- description: The vehicle engine has been started successfully
+- description: The Countdown timer is displayed in the Hero section (10 min)
+steps:
+- id: 1
+  action: Wait for 10 minutes to check the app's behavior
+  expected: the countdown timer is dismissed in the Hero section, Fuel Remaining is
+    displayed in the Hero section instead | the STOP Engine button is changed to the
+    default state | the toast "<year and model> engine turned off" is displayed in
+    the bottom of the screen

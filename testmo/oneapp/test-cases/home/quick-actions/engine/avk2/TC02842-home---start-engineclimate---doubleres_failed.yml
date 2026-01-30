@@ -1,0 +1,34 @@
+metadata:
+  id: TC02842
+  name: Home - Start Engine/Climate - DOUBLERES_FAILED
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-09-13'
+  updated: '2025-04-17'
+  author: user_4
+  testmo_id: 2842
+  folder_id: 4168
+description: https://www.pivotaltracker.com/story/show/185088490https://www.pivotaltracker.com/story/show/185988990https://www.pivotaltracker.com/story/show/188615366
+preconditions:
+- description: AVK2 vehicleEngine is PENDING
+steps:
+- id: 1
+  action: statusDetails returns with HVAC_SUCCESS andstatus returns with PENDING
+  expected: 'EN: "Remote engine and climate control was started for <MODEL YEAR &
+    VEHICLE MODEL>" (5 seconds) | FR: "Le démarrage du moteur et du contrôle climat
+    à distance sont réussis pour <ANNÉE MODÈLE & MODÈLE DU VÉHICULE>" (5 seconds)
+    | ES: "El encendido remoto y el control del aire acondicionado se encendieron
+    para <AÑO DEL MODELO Y MODELO DEL VEHÍCULO>" (5 seconds)'
+- id: 2
+  action: statusDetails returns with DOUBLERES_FAILED andstatus returns with FAILED
+  expected: 'EN: "Remote engine and climate control are ending soon for <MODEL YEAR
+    & VEHICLE MODEL>" (5 seconds) | FR: "Le démarrage du moteur et du contrôle climat
+    à distance se termineront bientôt pour <ANNÉE MODÈLE & MODÈLE DU VÉHICULE>" (5
+    seconds) | ES: "El encendido remoto y el control del aire acondicionado se terminarán
+    pronto para <AÑO DEL MODELO Y MODELO DEL VEHÍCULO>" (5 seconds)'

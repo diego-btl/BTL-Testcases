@@ -1,0 +1,28 @@
+metadata:
+  id: TC01572
+  name: Review Service Request - Contact information
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-28'
+  updated: '2024-10-17'
+  author: user_2
+  testmo_id: 1572
+  folder_id: 7143
+preconditions:
+- description: User is on Review Sevice Request screen
+steps:
+- id: 1
+  action: 1. Tap on Contact Information caret 2. Modify email field 3. Modify phone
+    number field 4. Tap on Save
+  expected: '1. User should see Contact Information screen with their email and phone
+    number populated 2. User is able to modify their email (local validation for email
+    format) 3. User is able to modify their phone number (local validation for 10
+    digits) 4. User should see Review Service Request screen with their updated contact
+    information Note: Modifying this contact information should not change the account''s
+    contact information, this is only for this particular service request'

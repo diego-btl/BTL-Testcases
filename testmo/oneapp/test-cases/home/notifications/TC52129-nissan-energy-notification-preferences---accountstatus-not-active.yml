@@ -1,0 +1,26 @@
+metadata:
+  id: TC52129
+  name: Nissan Energy Notification Preferences - AccountStatus Not Active
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-06-13'
+  updated: '2025-06-13'
+  author: user_15
+  testmo_id: 52129
+  folder_id: 49
+description: 'Story: https://app.clickup.com/t/86b54txk1'
+steps:
+- id: 1
+  action: 'Mock AccuntStatus to have any status different than ACTIVE (e.g: INACTIVE,
+    NOT_ENROLLED, CANCELLED, etc..) -> Tap on envelope icon from the Home screen >
+    Tap on the gear icon'
+  expected: Observe that there NissanEnergyNotificationPreferences api is not triggered
+- id: 2
+  action: Go to EV Notification section from the Notification Preferences screen
+  expected: Verify that there NISSAN ENERGY Charge Network section is not displayed

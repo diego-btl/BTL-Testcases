@@ -1,0 +1,77 @@
+metadata:
+  id: TC16001
+  name: Demo Mode - Notification Center
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2024-04-30'
+  updated: '2026-01-15'
+  author: user_2
+  testmo_id: 16001
+  folder_id: 6804
+preconditions:
+- description: User is in the Home Screen with any vehicle selected
+steps:
+- id: 1
+  action: Validate the Notification Icon at the top right of the Hero Section
+  expected: The Notification icon should be an envelope with a red dot, signaling
+    there is an unread notification
+- id: 2
+  action: Tap on the Notification Icon
+  expected: Messages Tab with read and unread messages and data for Today and Previous
+    sections | Alerts Tab with data for Today and Previous sections | Activity Tab
+    with data for Today and Previous sections | Notifications Settings icon (gear)
+    at the top right section of the page
+- id: 3
+  action: Tap on any of the elements of the Messages, Alerts and Activity tabs
+  expected: User should see the demo mode alert modal
+- id: 4
+  action: Tap on Notification Settings icon (cog)
+  expected: Remote Services Notifications (AVK, AVK2, LEAF) | EV Notifications (LEAF)
+    | Monitoring and Alert Notifications (AVK, AVK2, LEAF) | General Notifications
+    (AVK, AVK2, LEAF) | Malfunction Lights (AVK2, LEAF) | Reminder After Leaving Vehicle
+    (AVK2, LEAF) | Smart Charging Notifications (LEAF) (coming soon)
+- id: 5
+  action: Validate the Remote Services Notifications section
+  expected: Remote Door Lock | Remote Door Unlock | Remote Engine Start/Stop (AVK,
+    AVK2) | Remote Horn & Lights | My Vehicle Finder
+- id: 6
+  action: Validate the EV Notifications section
+  expected: Charging Status | Climate Control | Plug In Reminder | Intelligent Route
+    Planner | Vehicle-to-Load
+- id: 7
+  action: Validate the Monitoring and Alert Notifications section
+  expected: Boundary / Valet Alerts | Curfew Alerts | Speed Alerts
+- id: 8
+  action: Validate the General Notifications section
+  expected: Stolen Vehicle Locator | Alarm Notification | Malfunction Lights | In-App
+    Messaging | Maintenance Reminders | Stolen Vehicle Locator | In-App Messaging
+    | Maintenance Reminders | Alarm Notification | Malfunction Lights | Last Mile
+    Navigation | Stolen Vehicle Locator | Malfunction Lights | In-App Messaging
+- id: 9
+  action: Validate the Malfunction Lights section
+  expected: Power Steering Warming Alert | Electric Shift Control Alert | Airbag Alert
+    | Volt Battery Warning Alert | Tire Pressure Alert | Brakes Alert | Power Limitation
+    Alert | ABS Alert
+- id: 10
+  action: Validate the Reminder After Leaving Vehicle section
+  expected: Feature explanation text | Door Unlocked checkbox | Door Open checkbox
+    | Trunk Open checkbox | Moonroof Open checkbox | Window Open checkbox | Push /
+    Text / Email dropdown section
+- id: 11
+  action: Validate the Smart Charging section (coming soon)
+  expected: New Prime Time Hours | Monthly insights
+- id: 12
+  action: All the sections should have a collapse / expand caret, interact with this
+    caret
+  expected: The entire section should collapse / expand, if it's collapsed, it should
+    display how many Notifications are enabled
+- id: 13
+  action: Interact with any of the toggles or checkboxes
+  expected: The app should allow the user to enable / disable toggles and select /
+    unselect the checkboxes

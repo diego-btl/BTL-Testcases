@@ -1,0 +1,31 @@
+metadata:
+  id: TC00833
+  name: Charge On - Plug In Reminder
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-01'
+  updated: '2024-10-17'
+  author: user_2
+  testmo_id: 833
+  folder_id: 75
+preconditions:
+- description: The user is logged in to an account on a mobile
+- description: The app is launched on wearable
+- description: The vehicle is not plugged in (mock data if it is plugged in)
+steps:
+- id: 1
+  action: Switch vehicles to the Ariya
+  expected: The Home screen of Ariya is displayed
+- id: 2
+  action: Swipe left to view the battery level screen
+  expected: Battery level screen is displayed
+- id: 3
+  action: Tap on the charge button
+  expected: '"Not Plugged In, Please plug in your vehicle in order to start charging"
+    error message should be displayed. Design'

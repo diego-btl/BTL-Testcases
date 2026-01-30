@@ -1,0 +1,42 @@
+metadata:
+  id: TC00788
+  name: Upcoming Events
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-01'
+  updated: '2025-12-19'
+  author: user_2
+  testmo_id: 788
+  folder_id: 103
+preconditions:
+- description: User is in the Upcoming Events screen
+- description: The user selects an EV or EVAVK2 vehicles
+- description: Calendar permissions are allowed
+steps:
+- id: 1
+  action: Tap on Connect Calendar card
+  expected: User should see the Upcoming Events screen showing the current month and
+    any events with location shown in a list
+- id: 2
+  action: Tap on arrows
+  expected: The user should see the month change and events update accordingly (empty
+    state if there are no events)
+- id: 3
+  action: Tap on the Calendar icon
+  expected: The user should be brought back to the current month
+- id: 4
+  action: Tap on the Refresh button
+  expected: The user should see a loading spinner when refresh is in progress
+- id: 5
+  action: Tap on an event card
+  expected: User should see the map view show the location of the vehicle + user +
+    event location with the POI card
+- id: 6
+  action: Tap on the list view
+  expected: The user should see the Upcoming Events screen again

@@ -1,0 +1,23 @@
+metadata:
+  id: TC00770
+  name: Create Route
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-01'
+  updated: '2025-12-02'
+  author: user_2
+  testmo_id: 770
+  folder_id: 101
+preconditions:
+- description: User is viewing the Route Planner section
+- description: The user selects an EV or EVAVK2 vehicles
+steps:
+- id: 1
+  action: Tap Route Planner
+  expected: User should be taken to the Create a Route screen

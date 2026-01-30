@@ -1,0 +1,34 @@
+metadata:
+  id: TC41886
+  name: Accident Report History screen
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-06-09'
+  updated: '2025-06-10'
+  author: user_26
+  testmo_id: 41886
+  folder_id: 3800
+preconditions:
+- description: The user is on the Collision Management screen.
+- description: At least one collision report exists in the history.
+steps:
+- id: 1
+  action: Tap the View All the reports CTA
+  expected: The user is navigated to the Accident Helper History screen | The app
+    triggers the CollisionHistory API call. | and a list of previous collision reports
+    is shown.
+- id: 2
+  action: Tap on any one of the report cards in the list.
+  expected: A list of previous collision reports is shown. | The screen contains two
+    CTAs:- Share Report- Download Report | The Collision Report is displayed as an
+    embedded PDF file within the screen.
+- id: 3
+  action: Tap on the Back button
+  expected: The user is redirected to the previous screen (Accident Report History
+    screen)

@@ -1,0 +1,29 @@
+metadata:
+  id: TC01570
+  name: Create Schedule Service - Optional Preferences - Error
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-28'
+  updated: '2026-01-20'
+  author: user_2
+  testmo_id: 1570
+  folder_id: 6787
+preconditions:
+- description: The user is on the Select Date and Time screen
+steps:
+- id: 1
+  action: Tap on Add and trigger an error (fail TransportationOptions call)
+  expected: User should see the Optional Preference screen | Error modal should appear
+    with options to cancel and retry
+- id: 2
+  action: Tap on Retry
+  expected: User should see the loading spinner as API is triggered again
+- id: 3
+  action: Tap on Cancel
+  expected: User should see the error modal dismissed

@@ -1,0 +1,29 @@
+metadata:
+  id: TC61892
+  name: When Vin becomes Stolen
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-10-28'
+  updated: '2025-10-28'
+  author: user_24
+  testmo_id: 61892
+  folder_id: 6757
+preconditions:
+- description: Have 1 Vin in account (Connected and subscribed, or Connected and not
+    subscribed, or Not_Connected)
+- description: See the relevant onboarding modal as per the above conditions
+- description: Now, mock the capabilities api to status = STOLEN
+steps:
+- id: 1
+  action: Open app
+  expected: Wait for all apis to be resolved | On home screen, you will see Vehicle
+    Stolen message | NO Onboarding modal should show
+- id: 2
+  action: Go to Support tab
+  expected: You shouldn't see the App Key Features card on Support screen

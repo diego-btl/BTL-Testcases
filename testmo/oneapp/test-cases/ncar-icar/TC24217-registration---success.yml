@@ -1,0 +1,26 @@
+metadata:
+  id: TC24217
+  name: Registration - success
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2024-08-28'
+  updated: '2024-10-17'
+  author: user_4
+  testmo_id: 24217
+  folder_id: 3081
+preconditions:
+- description: User has gone through OTP flow and is in the registration flow
+steps:
+- id: 1
+  action: 1. Proceed through the first two screen of registration 2. Fill in password
+    fields and check Terms of Service 3. Tap on Register
+  expected: 1. User should see the final registration screen 2. User should be able
+    to enter password fields and see the register button enable 3. User is able to
+    successfully register a new account User should be on the sign on screen with
+    their email prepopulated in the email field

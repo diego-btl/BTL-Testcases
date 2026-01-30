@@ -1,0 +1,24 @@
+metadata:
+  id: TC01480
+  name: Find a Charging Station
+  feature: test-cases
+  priority: critical
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-28'
+  updated: '2025-10-11'
+  author: user_2
+  testmo_id: 1480
+  folder_id: 55
+preconditions:
+- description: User has an EV
+steps:
+- id: 1
+  action: Battery level is 19% or lower and not charging2. Tap on Find a Charging
+    Station CTA
+  expected: User should see a Find a Charging Station CTA2. User should be on the
+    map tab with results for charging stations

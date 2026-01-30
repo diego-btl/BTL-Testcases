@@ -1,0 +1,24 @@
+metadata:
+  id: TC30155
+  name: Roadside Assistance and Tow Coverage
+  feature: test-cases
+  priority: critical
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-02-05'
+  updated: '2025-03-31'
+  author: user_17
+  testmo_id: 30155
+  folder_id: 81
+preconditions:
+- description: User is on the Support screen
+steps:
+- id: 1
+  action: Tap the roadside assistance item
+  expected: User should see a "Call Roadside Assistance CTA"2. User should see the
+    "Roadside Assistance Coverage" card and "Tow Coverage" card with information about
+    their coverage

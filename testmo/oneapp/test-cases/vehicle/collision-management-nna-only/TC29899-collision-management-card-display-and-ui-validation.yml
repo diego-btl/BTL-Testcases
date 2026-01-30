@@ -1,0 +1,31 @@
+metadata:
+  id: TC29899
+  name: Collision Management Card Display and UI Validation
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-01-09'
+  updated: '2025-01-28'
+  author: user_26
+  testmo_id: 29899
+  folder_id: 3800
+description: Verify the user sees a collision management card on the Vehicle screenhttps://www.pivotaltracker.com/story/show/188707438
+preconditions:
+- description: 'Verify the Feature Flag: "EnableCollisionManagement": "true”- Use
+    any account with a Connected and Enrolled Vehicles (status: ENROLLED)- The user
+    is in the Home Screen'
+steps:
+- id: 1
+  action: Navigate to the Vehicle Screen
+  expected: The user should see the Collision Management card displayed at the bottom
+    of the Screen
+- id: 2
+  action: Validate Icon and Card Text
+  expected: Validate the icon is displayed properly like the Figma File Explains |
+    Validate the Collision Management card is using the same font and font size as
+    the rest of the cards

@@ -1,0 +1,26 @@
+metadata:
+  id: TC24290
+  name: SD - Use This Address Button - Something Went Wrong
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2024-10-18'
+  updated: '2026-01-06'
+  author: user_17
+  testmo_id: 24290
+  folder_id: 1453
+description: Nissan only
+preconditions:
+- description: Vehicle is eligible within the valid period from purchase.
+- description: 'In the Firebase config > "EnableSecondDelivery": "true"'
+steps:
+- id: 1
+  action: Edit an "At Home" appointment. -> Click "Use This Address". -> Observe the
+    error and the removal of the original address. -> Re-enter the address and proceed.
+  expected: The app should accept the current address without error, and the original
+    address should remain intact unless the user explicitly changes it.

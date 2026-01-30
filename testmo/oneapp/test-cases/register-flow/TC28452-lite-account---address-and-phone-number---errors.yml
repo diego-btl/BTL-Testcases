@@ -1,0 +1,41 @@
+metadata:
+  id: TC28452
+  name: Lite Account - Address and Phone Number - Errors
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2024-11-22'
+  updated: '2025-08-21'
+  author: user_15
+  testmo_id: 28452
+  folder_id: 43
+description: Nissan has some users who have a "lite account" which is a registered
+  profile that is missing an address and/or phone number.We would like to allow a
+  lite user to update their profile in the app, so that they can experience the full
+  app as intendedREGIONS/BRANDSNNA onlyINF and NIS
+preconditions:
+- description: Update isLiteAccount = true on USerInfo call
+steps:
+- id: 1
+  action: Perform a Fresh install and log into the app
+  expected: Login successful and Complete Profile screen is displayed
+- id: 2
+  action: Paste and emoji on the Address field
+  expected: Verify app does not allow it
+- id: 3
+  action: Enter a number for City
+  expected: User should see an error * Invalid city
+- id: 4
+  action: Enter less than 5 digits for ZIP code
+  expected: User should see an error * Invalid ZIP code
+- id: 5
+  action: Enter less than 10 digits for phone number
+  expected: User should see an error * Invalid phone number
+- id: 6
+  action: Given user has inserted invalid information
+  expected: Verify NEXT cta is disabled

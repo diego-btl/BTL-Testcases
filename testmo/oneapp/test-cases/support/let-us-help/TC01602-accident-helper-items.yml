@@ -1,0 +1,21 @@
+metadata:
+  id: TC01602
+  name: Accident Helper Items
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-28'
+  updated: '2025-03-31'
+  author: user_2
+  testmo_id: 1602
+  folder_id: 81
+steps:
+- id: 1
+  action: Expand At the Scene2. Tap on 9113. Tap on Call Roadside Assistance
+  expected: User should see item expand2. User should see option to call 9113. User
+    should see option to call 1 (866) 654-6705

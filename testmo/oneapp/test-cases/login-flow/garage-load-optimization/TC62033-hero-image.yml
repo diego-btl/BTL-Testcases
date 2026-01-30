@@ -1,0 +1,25 @@
+metadata:
+  id: TC62033
+  name: Hero image
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-11-27'
+  updated: '2026-01-20'
+  author: user_24
+  testmo_id: 62033
+  folder_id: 6782
+description: 'Regions: NNA, NCI, NMEXBrands: NIS and INF'
+preconditions:
+- description: Clean device without app installed.
+steps:
+- id: 1
+  action: Do a fresh install of app -> Log in with any valid account -> Wait until
+    all the APIs are loaded (spinning icon disappears) -> Kill the app -> Cold start
+    (Reopen) the app
+  expected: The vehicle image in the Hero Section should show right away

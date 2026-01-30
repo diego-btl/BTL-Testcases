@@ -1,0 +1,26 @@
+metadata:
+  id: TC00749
+  name: Call Button
+  feature: test-cases
+  priority: critical
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-01'
+  updated: '2024-10-17'
+  author: user_2
+  testmo_id: 749
+  folder_id: 46
+preconditions:
+- description: User has performed a search
+steps:
+- id: 1
+  action: Tap on the Call button
+  expected: The User should see call buttons appear with the corresponding numberIf
+    a POI does not have a phone number, the call button will be hidden
+- id: 2
+  action: Tap on Cancel (only for IOS)
+  expected: The user should see call buttons dismiss

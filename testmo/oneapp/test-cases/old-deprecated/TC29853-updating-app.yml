@@ -1,0 +1,27 @@
+metadata:
+  id: TC29853
+  name: Updating app
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-01-07'
+  updated: '2026-01-06'
+  author: user_24
+  testmo_id: 29853
+  folder_id: 105
+description: When user updates app to newer version (that has browser login enabled)
+  and user was signed in to the older version, user stays signed in.
+preconditions:
+- description: User is signed in to an older version of app that didn't have browserLogin/EnableBrowserLogin
+    ='false'.
+- description: User had chosen `keep me signed in` on Login
+steps:
+- id: 1
+  action: Update app
+  expected: App gets updated to version that has Browser Login set to true | User
+    stays signed in to new version of app

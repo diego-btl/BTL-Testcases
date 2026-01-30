@@ -1,0 +1,27 @@
+metadata:
+  id: TC02854
+  name: Remote Data Wipe - Toggles
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-09-13'
+  updated: '2024-10-17'
+  author: user_4
+  testmo_id: 2854
+  folder_id: 434
+description: https://www.pivotaltracker.com/story/show/185987342
+preconditions:
+- description: User has REMOTE_DATA_WIPE capability enabledRemote Data Wipe screen
+steps:
+- id: 1
+  action: Disable each toggle -> Enable each toggle -> Toggle Reset All Off -> Toggle
+    Reset All On
+  expected: User is able to disable each toggle | User is able to enable each toggle
+    | User is able to toggle all toggles off at once (Reset button is disabled) |
+    User is able to toggle all toggles on at once (Reset button enables as long as
+    one toggle is enabled)

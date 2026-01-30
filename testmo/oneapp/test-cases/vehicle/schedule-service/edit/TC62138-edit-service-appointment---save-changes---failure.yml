@@ -1,0 +1,47 @@
+metadata:
+  id: TC62138
+  name: Edit Service Appointment - Save Changes - Failure
+  feature: test-cases
+  priority: critical
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-12-11'
+  updated: '2026-01-20'
+  author: user_23
+  testmo_id: 62138
+  folder_id: 6795
+description: 'Edit Service Appointment - Save Changes - Failure: Error HandlingValidates
+  error handling when updateServiceAppointment mutation fails. Tests that appropriate
+  error modal is displayed and user remains on Upcoming Appointment screen with changes
+  intact to retry or adjust.Notes:Applicable only when appointment has isEditable:
+  trueupdateServiceAppointment mutation fails (network error, server error, etc.)Error
+  modal title: Error Saving ChangesError message: Sorry, something went wrong while
+  saving your service request changes. Please try again.User remains on Upcoming Appointment
+  screen with changes preservedUser can retry saving or make adjustments before retrying'
+preconditions:
+- description: User has one or more booked service appointments
+- description: 'Appointment has isEditable: true'
+- description: User has made changes in edit flow and returned to Upcoming Appointment
+    screen
+- description: updateServiceAppointment mutation fails due to network or server error
+steps:
+- id: 1
+  action: Enter edit flow from any entry point (Selected Services, Appointment Details,
+    Transportation, or Contact Information), make changes, tap NEXT button from any
+    editing screen to reach Upcoming Appointment screen
+  expected: User is navigated back to Upcoming Appointment screen | Updated values
+    are displayed on respective cards
+- id: 2
+  action: Tap SAVE CHANGES button on Upcoming Appointment screen (when updateServiceAppointment
+    mutation fails)
+  expected: 'Error modal appears with title: Error Saving Changes | Modal message:
+    Sorry, something went wrong while saving your service request changes. Please
+    try again. | OK button is displayed'
+- id: 3
+  action: Tap OK button on error modal
+  expected: Modal is dismissed | User remains on Upcoming Appointment screen | Changes
+    remain intact

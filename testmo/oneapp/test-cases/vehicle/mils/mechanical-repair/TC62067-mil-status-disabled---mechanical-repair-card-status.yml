@@ -1,0 +1,58 @@
+metadata:
+  id: TC62067
+  name: MIL Status DISABLED - Mechanical Repair card status
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-12-02'
+  updated: '2025-12-02'
+  author: user_15
+  testmo_id: 62067
+  folder_id: 432
+description: 'https://www.pivotaltracker.com/story/show/185988647Stories:Android:
+  [MoveTirePressure][Android] Update MIL Data Sharing card to info paneliOS: [MoveTirePressure][iOS]
+  Update MIL Data Sharing card to info panelSCOPEWhen MIL Data Sharing is not enabled,
+  show an info panel at the top of the MIL tab on the Vehicle Status screenIf it''s
+  enabled, show this panel at the bottom of the screen and update the CTA text to
+  be Manage PreferencesThis info panel should show regardless of whether there is
+  an active MIL'
+preconditions:
+- description: AVK2 or EVO vehicle (AVK2, EVAVK2, EVO, EVEVO)
+- description: 'User has NO active MILs and at least one Vehicle status enabled (e.g:
+    tire pressure PSI)'
+- description: User has MECHANICAL_REPAIR capability enabled
+- description: GrantMechanicalRepair FF is enabled
+steps:
+- id: 1
+  action: Mock vehicle.preferences.communication.milDataSharing.enabled == false >
+    Tap on the Vehicle status card on the vehicle screen > Tap on MIL tab
+  expected: User should be brought to the Vehicle Status screen with MIL tab also
+    displayed
+- id: 2
+  action: Tap on the MIL tab
+  expected: 'Info panel is shown at the top of the tab | Panel has red border per
+    design | CTA text is “Enable Data Sharing” | The subtitle: Not Sharing'
+- id: 3
+  action: Tap on the Enable Data Sharing CTA on the info panel
+  expected: User is navigated to Vehicle Maintenance Data Sharing screen
+- id: 4
+  action: Toggle ON Enabled Data Sharing toggle
+  expected: Verified that a call is triggered for UpdateVehiclePreferences, the request
+    is sent with all toggles set to true and all sub-toggles are true by default.
+- id: 5
+  action: Tab on the back button
+  expected: 'Info panel is shown at the bottom of the tab | Panel appears below a
+    horizontal rule per design | CTA text is “Manage Preferences” | The subtitle:
+    Sharing'
+- id: 6
+  action: Tap on the Manage Preferences CTA on the info panel
+  expected: User is navigated to Vehicle Maintenance Data Sharing screen
+- id: 7
+  action: Toggle Off the Enable Data Sharing toggle
+  expected: Verify UpdateVehiclePreferences api is triggered and the request is sent
+    with all toggles set to false

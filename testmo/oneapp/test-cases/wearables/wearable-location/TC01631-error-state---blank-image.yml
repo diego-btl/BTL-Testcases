@@ -1,0 +1,22 @@
+metadata:
+  id: TC01631
+  name: Error State - Blank Image
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-28'
+  updated: '2024-10-17'
+  author: user_2
+  testmo_id: 1631
+  folder_id: 78
+preconditions:
+- description: User's vehicle location was not obtained and is on the Location screen
+steps:
+- id: 1
+  action: Tap anywhere on the blank image
+  expected: Nothing should happen

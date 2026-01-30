@@ -1,0 +1,35 @@
+metadata:
+  id: TC61900
+  name: Verify "powered by Co-operators" CTA
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-10-29'
+  updated: '2025-10-29'
+  author: user_6
+  testmo_id: 61900
+  folder_id: 6759
+preconditions:
+- description: user is on the main powered by Co-operators screen
+steps:
+- id: 1
+  action: Tap on the Learn More CTA
+  expected: 'Title: Learn More | Body: You are now being redirected to Co-operators
+    website | Button: Continue'
+- id: 2
+  action: Tap on Continue
+  expected: The correct link from the feature flag should be opened based on brand
+    and language in an EXTERNAL browser
+- id: 3
+  action: Tap on the Log In CTA
+  expected: 'Title: Log In | Body: You are now being redirected to Co-operators website
+    | Button: Continue'
+- id: 4
+  action: Tap on Continue
+  expected: The correct link from the feature flag should be opened based on brand
+    and language in an EXTERNAL browser

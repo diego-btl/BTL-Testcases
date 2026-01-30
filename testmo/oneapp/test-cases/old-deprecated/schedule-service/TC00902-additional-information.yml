@@ -1,0 +1,33 @@
+metadata:
+  id: TC00902
+  name: Additional Information
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-04'
+  updated: '2024-10-17'
+  author: user_7
+  testmo_id: 902
+  folder_id: 7143
+preconditions:
+- description: User has selected at least one service
+steps:
+- id: 1
+  action: Tap Next on Select Services screen
+  expected: User should see Additional Information screen with text boxes corresponding
+    to the selected services for adding additional comments
+- id: 2
+  action: Enter comment in the text boxes
+  expected: User is able to add comments in the text boxes
+- id: 3
+  action: Tap on Select Interval and change intervals
+  expected: User is able to update the selected interval to view maintenance options
+    for different intervals
+- id: 4
+  action: Tap Next
+  expected: User should proceed to Select Date and Time screen

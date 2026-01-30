@@ -1,0 +1,40 @@
+metadata:
+  id: TC62228
+  name: P&C Toggle - Failed to Install pncStatusReason 00 errors
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-12-19'
+  updated: '2025-12-19'
+  author: user_6
+  testmo_id: 62228
+  folder_id: 66
+preconditions:
+- description: User has an EV
+- description: User is on Charge screen
+- description: GrantFullPlugAndCharge FF is enabled
+- description: NECN AccountStatus is `Active
+- description: User is a Primary Driver
+steps:
+- id: 1
+  action: Mock pncStatus to be FAILED and pncStatusReason to be 00
+  expected: App should display the Failed to Install card with the Install CTA and
+    Failed to Install as the Status
+- id: 2
+  action: Tap on Install
+  expected: App should show a loading state while retryCertInstall is triggered and
+    loading
+- id: 3
+  action: null / empty
+  expected: Something Went Wrong modal should be displayed to allow Retry or Cancel
+- id: 4
+  action: Tap Retry
+  expected: retryCertInstall should retrigger
+- id: 5
+  action: Tap on Cancel
+  expected: Modal should be dismissed

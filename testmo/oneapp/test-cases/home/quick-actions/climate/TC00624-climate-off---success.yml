@@ -1,0 +1,51 @@
+metadata:
+  id: TC00624
+  name: Climate Off - Success
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-01'
+  updated: '2025-09-22'
+  author: user_2
+  testmo_id: 624
+  folder_id: 62
+preconditions:
+- description: User is on the Home screen
+- description: User has sent a StopClimate request
+- description: 'CheckRemoteClimateRequest API:'
+- description: '{'
+- description: '"data": {'
+- description: '"checkRemoteClimateRequest": {'
+- description: '"__typename": "ServiceRequestResult",'
+- description: '"status": "SUCCESS"'
+- description: '}'
+- description: '}'
+- description: '}'
+- description: 'VehicleClimateStatus API: {'
+- description: '"data": {'
+- description: '"vehicle": {'
+- description: '"__typename": "ElectricVehicle",'
+- description: '"climateStatus": {'
+- description: '"__typename": "ClimateStatus",'
+- description: '"state": "OFF",'
+- description: '"temperature": {'
+- description: '"__typename": "Temperature",'
+- description: '"value": 70,'
+- description: '"unit": "FAHRENHEIT"'
+- description: '}'
+- description: '}'
+- description: '}'
+- description: '}'
+- description: '}'
+steps:
+- id: 1
+  action: Climate off request has been resolved into a success
+  expected: '"Climate On" and "Climate Off" buttons are changed to the default state
+    | A success toast "<year and model> climate turned off" is displayed at the bottom
+    of the screen | "Climate On" card is changed to "Climate" | "Climate On" card
+    secondary text is changed to "Off - Interior Temp <temperature>"'

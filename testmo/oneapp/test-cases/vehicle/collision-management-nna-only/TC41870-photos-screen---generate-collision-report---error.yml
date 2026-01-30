@@ -1,0 +1,36 @@
+metadata:
+  id: TC41870
+  name: Photos screen - Generate Collision Report - Error
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-06-09'
+  updated: '2026-01-30'
+  author: user_26
+  testmo_id: 41870
+  folder_id: 3800
+preconditions:
+- description: 'Feature flag "EnableCollisionManagement": "true" is enabled'
+- description: 'Feature flag "GrantCollisionManagement": "{\"enabled\": true, \"checkCapability\":
+    false} is enabled'
+- description: User is logged in with an account that has a vehicle in ENROLLstatus
+- description: User is on the Photos screen
+- description: mocking CreateCollisionReportPDF to show an error for GenerationCollisionReport
+steps:
+- id: 1
+  action: Tap the Generate Collision Report CTA
+  expected: A confirmation modal appears
+- id: 2
+  action: Simulate a failure in the CreateCollisionReportPDF API call
+  expected: See expected results
+- id: 3
+  action: Tap Save in the modal
+  expected: CreateCollisionReportPDF API is failed
+- id: 4
+  action: Observe error message
+  expected: An Error modal is displayed with a Try Again option

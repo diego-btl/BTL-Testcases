@@ -1,0 +1,31 @@
+metadata:
+  id: TC30064
+  name: Favourites Limit
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-01-24'
+  updated: '2025-09-22'
+  author: user_17
+  testmo_id: 30064
+  folder_id: 99
+preconditions:
+- description: The user is viewing POI search results and has reached the favorites
+    limit (5)
+steps:
+- id: 1
+  action: Go to the Maps page2. Search for a POI
+  expected: POI search results are displayed at the bottom.
+- id: 2
+  action: Tap the heart button on the POI card (x5)
+  expected: 'The user should see an error modal indicating that the favorites limit
+    has been reached | Header: Favorites Limit ReachedBody: Looks like you''ve already
+    added 5 Favorites, please delete one to add another.CTA: Ok'
+- id: 3
+  action: Tap Ok
+  expected: The user should see the error modal dismiss

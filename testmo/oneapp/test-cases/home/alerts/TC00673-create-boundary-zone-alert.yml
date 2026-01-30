@@ -1,0 +1,24 @@
+metadata:
+  id: TC00673
+  name: Create Boundary Zone Alert
+  feature: test-cases
+  priority: critical
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-01'
+  updated: '2026-01-14'
+  author: user_2
+  testmo_id: 673
+  folder_id: 70
+preconditions:
+- description: User has not reached the maximum number (10) of drive zone alerts
+steps:
+- id: 1
+  action: Tap Create Alert2. Tap the zone alert CTA
+  expected: 'User should see create alert sheet open2. User should be able to add
+    the following alert properties: alert name, displaying alert in vehicle, adding
+    and saving address.'

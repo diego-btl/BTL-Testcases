@@ -1,0 +1,39 @@
+metadata:
+  id: TC01565
+  name: Create Schedule Service - Additional Information - Non-Connected Vehicle
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-28'
+  updated: '2026-01-20'
+  author: user_2
+  testmo_id: 1565
+  folder_id: 6787
+description: 'Note: If services with maintenance flag set to true are selected, the
+  Estimated Next Service Interval section will appear, if not, then that section does
+  not show up'
+preconditions:
+- description: User has a non-connected vehicle and has selected at least one service
+steps:
+- id: 1
+  action: Tap NEXT on Select Services screen
+  expected: User should see Additional Information screen with text boxes corresponding
+    to the selected services for adding additional comments
+- id: 2
+  action: Enter comment in the text boxes
+  expected: User is able to add comments in the text boxes
+- id: 3
+  action: Enter vehicle mileage and tap Update
+  expected: User is able to manually enter vehicle mileage
+- id: 4
+  action: Tap on Select Interval and change intervals
+  expected: If selected service includes maintenance true, then user is able to update
+    the selected interval to view maintenance options for different intervals
+- id: 5
+  action: Tap NEXT
+  expected: User should proceed to Select Date and Time screen

@@ -1,0 +1,25 @@
+metadata:
+  id: TC19080
+  name: Charge station details -  Not activated
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2024-06-06'
+  updated: '2025-12-18'
+  author: user_7
+  testmo_id: 19080
+  folder_id: 46
+preconditions:
+- description: The user selects an EV or EVAVK2 vehicles
+- description: EnablePlugAndCharge ff should be enabled.
+- description: AccountStatus query's response should not be ACTIVE
+steps:
+- id: 1
+  action: Tap the Chargers Available link on the ChargePoint card
+  expected: The user should not see the SELECT CHARGER CTA on the Charge Station Details
+    screen

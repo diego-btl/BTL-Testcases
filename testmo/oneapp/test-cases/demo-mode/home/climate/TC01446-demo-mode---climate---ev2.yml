@@ -1,0 +1,62 @@
+metadata:
+  id: TC01446
+  name: Demo Mode - Climate - EV2
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-28'
+  updated: '2025-12-18'
+  author: user_2
+  testmo_id: 1446
+  folder_id: 6807
+preconditions:
+- description: User has EV2 selected
+steps:
+- id: 1
+  action: Navigate to Home screen > Tap on the Climate card
+  expected: Climate Control card | Scheduled Card | TURN CLIMATE & ACCESSORIES ON
+    CTA | CREATE DELAYED START CTA
+- id: 2
+  action: Validate the Climate dial and Current temp parameters
+  expected: The Current Int. Temp should be 70 (Fahrenheit) | The Current Ext. Temp
+    should be <Dynamics value in Fahrenheit> | The Target Temp dial should be set
+    to 75
+- id: 3
+  action: Increase / decrease the target temperature by interacting with the dial
+    or using the + or - buttons
+  expected: The user should be able to set the desired temperature in Fahrenheit
+- id: 4
+  action: Validate the climate accessories (defrost and deicer) and interact with
+    them
+  expected: Defrost & Deicer
+- id: 5
+  action: Tap on a climate schedule
+  expected: User should see the climate schedule details screen
+- id: 6
+  action: Change details for the climate schedule
+  expected: User can change details for the climate schedule
+- id: 7
+  action: Tap Save/Delete Schedule
+  expected: User should see a dismissable alert informing them the feature is not
+    available in demo mode
+- id: 8
+  action: Tap to toggle climate schedule
+  expected: Contacting <year and model> to toggle climate schedule... | Waking <year
+    and model> to toggle climate schedule... | Initiating toggle climate schedule
+    on <year and model>... | Climate schedule toggled
+- id: 9
+  action: Tap on TURN CLIMATE & ACCESSORIES ON CTA
+  expected: User should see a dismissable alert informing them the feature is not
+    available in demo mode
+- id: 10
+  action: Tap on CREATE DELAYED START CTA
+  expected: Use is led to the Delayed Climate Start screen and the user can change
+    details for the current schedule
+- id: 11
+  action: Tap on SAVE DELAYED START cta
+  expected: Delayed Start created

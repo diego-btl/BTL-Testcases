@@ -1,0 +1,76 @@
+metadata:
+  id: TC62151
+  name: NECN - Plug & Charge Card - PD - FAILURE
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-12-15'
+  updated: '2026-01-15'
+  author: user_25
+  testmo_id: 62151
+  folder_id: 2444
+preconditions:
+- description: User has an EV/EV2
+- description: '"EnablePlugAndCharge": "true"'
+- description: 'VehicleStaticData > "driverType": "PRIMARY_DRIVER"'
+- description: 'AccountStatus > "status": "ACTIVE"'
+steps:
+- id: 1
+  action: 'Mock AccountStatus API to return "pncStatus": "FAILED" and "pncStatusReason":
+    "01" -> Navigate to the NISSAN ENERGY Charge Network screen'
+  expected: The status is 'Failed to Install' | The copy is 'Plug & Charge certificates
+    failed to install. Please contact customer support for more details.'
+- id: 2
+  action: 'Mock AccountStatus API to return "pncStatus": "FAILED" and "pncStatusReason":
+    "00" -> Navigate to the NISSAN ENERGY Charge Network screen'
+  expected: The status is 'Failed to Install' | The copy is 'Plug & Charge certificates
+    failed to install. You can click "Install" to try again.' | 'Install' CTA
+- id: 3
+  action: Tap 'Install' CTA
+  expected: RetryCertInstall query is called to trigger the reinstallation | The loading
+    state is displayed
+- id: 4
+  action: 'If RetryCertInstall returns "statusCode": "1000"'
+  expected: The loading state is displayed | AccountStatus API is triggered
+- id: 5
+  action: 'If AccountStatus API returns "pncStatus": "PENDING"/"INSTALLING"/"RENEWING"'
+  expected: The status is 'Installing...'/'Renewing...' | The copy is 'Please note
+    that it may take up to 24 hours to install your Plug & Charge Certificate. Make
+    sure that your vehicle has a clear view of the sky to maximize network connection.'
+- id: 6
+  action: 'If AccountStatus API returns "pncStatus": "FAILED"'
+  expected: The toast 'Failed to Install' is displayed
+- id: 7
+  action: 'If AccountStatus API returns "pncStatus": "READY" and "toggleStatus": "ENABLED"/"DISABLED"'
+  expected: The toggle is in ON/OFF state | The copy is 'Plug and Charge provides
+    a seamless method of charging (when at compatible stations). After plugging in
+    the vehicle, charging will start automatically. Troubleshooting - If charging
+    doesn't start within two minutes, unplug the charger- Toggle "off" Plug & Charge
+    in-app- Begin the session through your MyNISSAN app (or follow the instructions
+    on the charger)'
+- id: 8
+  action: 'Return to the second step and mock AccountStatus API to return "pncStatus":
+    "FAILED" and "pncStatusReason": "00" -> Navigate to the NISSAN ENERGY Charge Network
+    screen'
+  expected: The status is 'Failed to Install' | The copy is 'Plug & Charge certificates
+    failed to install. You can click "Install" to try again.' | 'Install' CTA
+- id: 9
+  action: Tap 'Install' CTA
+  expected: RetryCertInstall query is called to trigger the reinstallation | The loading
+    state is displayed
+- id: 10
+  action: 'If RetryCertInstall returns "statusCode": "2024"/"2028"/"2029"/"2030"/"4011"/"5000"/null/""
+    or time out'
+  expected: The 'Something Went Wrong' modal with options 'Cancel' and 'Retry' is
+    displayed
+- id: 11
+  action: Tap 'Cancel'
+  expected: The modal is dismissed
+- id: 12
+  action: Tap 'Retry'
+  expected: RetryCertInstall is called

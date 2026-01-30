@@ -1,0 +1,16 @@
+metadata:
+  id: TC60251
+  name: Verify user can Add a payment method -  SUCCESS
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-08-25'
+  updated: '2026-01-06'
+  author: user_15
+  testmo_id: 60251
+  folder_id: 105

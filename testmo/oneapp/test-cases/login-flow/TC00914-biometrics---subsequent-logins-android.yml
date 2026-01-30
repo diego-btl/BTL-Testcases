@@ -1,0 +1,42 @@
+metadata:
+  id: TC00914
+  name: Biometrics - Subsequent Logins (Android)
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-15'
+  updated: '2025-02-06'
+  author: user_2
+  testmo_id: 914
+  folder_id: 41
+description: Valid accounts:Brand / LocationEmailPasswordNissan NNAvictor+prodpathfinder5@bethinklabs.com`Telematics123!Infiniti
+  NNAed+prodq50@bethinklabs.comTelematics123!Nissan NCInci070@nissancanada.com2020rogueInfiniti
+  NCIiit290@infiniticanada.com2019q50s
+preconditions:
+- description: User has already logged into the app
+- description: User have previously enabled Biometric login with the app
+- description: User has Biometrics enabled on their device
+- description: App must be closed
+- description: Onboarding cards are not covered, must be skipped
+steps:
+- id: 1
+  action: Open the app by tapping on the app icon
+  expected: The Biometric Login modal is displayed
+- id: 2
+  action: Interact with the Fingerprint sensor with the incorrect finger
+  expected: After two incorrect tries a Biometric Error modal is displayed
+- id: 3
+  action: Tap on the Ok button
+  expected: The Login page is displayed again
+- id: 4
+  action: Tap on the blue Fingerprint icon at the far right position within the Password
+    text field
+  expected: The Biometric Login modal is displayed
+- id: 5
+  action: Interact with the Fingerprint sensor with the correct finger
+  expected: The user is driven to the Home page

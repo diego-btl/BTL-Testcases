@@ -1,0 +1,24 @@
+metadata:
+  id: TC00570
+  name: Current Weather
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-01'
+  updated: '2025-10-11'
+  author: user_2
+  testmo_id: 570
+  folder_id: 55
+preconditions:
+- description: User has an AVK/EV/TCU2K with maintenance_alert and remote_vehicle_status
+    capabilities as set to false.
+steps:
+- id: 1
+  action: Vehicle Location data returned
+  expected: User should see current weather information based on their vehicle location
+    (icon + temperature + location)

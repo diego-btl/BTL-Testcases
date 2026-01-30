@@ -1,0 +1,65 @@
+metadata:
+  id: TC62071
+  name: Charge History - All Sessions - Navigation
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-12-02'
+  updated: '2025-12-02'
+  author: user_25
+  testmo_id: 62071
+  folder_id: 2443
+preconditions:
+- description: User is a PD and has an EV/EV2
+- description: EV > VehicleCapabilities > "DRIVING_ANALYSIS" is true
+- description: EV2 > VehicleCapabilities > "CHARGE_HISTORY" is true
+- description: User is on the Charge History - In-network tab
+steps:
+- id: 1
+  action: Tap the 'All Sessions' tab
+  expected: 'VehicleChargeHistory API is triggered ("aggregator": "DAILY" in the request)
+    | The loading state is displayed | User is navigated to the ''All Sessions'' tab
+    > the Day, Month, Year tabs are displayed | The Day tab is selected by default'
+- id: 2
+  action: Observe the screen for the selected Day tab
+  expected: The data displayed under the Day section correlates with the ChargeSummary
+    object for the particular day | The sections below correlate with the ChargeSession
+    objects for the particular day and the number of the Charging Sessions
+- id: 3
+  action: Tap the caret (< >) on the left or right side of the date
+  expected: The data displayed under the Day section is updated according to the ChargeSummary
+    object for the particular day | The sections below are updated according to the
+    ChargeSession objects for the particular day and the number of the Charging Sessions
+- id: 4
+  action: Tap the Month tab
+  expected: 'VehicleChargeHistory API is triggered ("aggregator": "MONTHLY" in the
+    request) | The loading state is displayed | The Month tab is selected'
+- id: 5
+  action: Observe the screen for the selected Month tab
+  expected: The data displayed under the Month section is displayed according to the
+    ChargeSummary object for the particular month | The Charging Sessions sections
+    are hidden
+- id: 6
+  action: Tap the caret (< >) on the left or right side of the month
+  expected: The data displayed under the Month section is updated according to the
+    ChargeSummary object for the particular month
+- id: 7
+  action: Tap the Year tab
+  expected: 'VehicleChargeHistory API is triggered ("aggregator": "YEARLY" in the
+    request) | The loading state is displayed | The Year tab is selected'
+- id: 8
+  action: Observe the screen for the selected Year tab
+  expected: The data displayed under the Year section is displayed according to the
+    ChargeSummary object for the particular month | The Charging Sessions sections
+    are hidden
+- id: 9
+  action: Tap the enabled caret (< >) on the left or right side of the year (If API
+    returns the data for another year)
+  expected: The data displayed under the Year section is updated according to the
+    ChargeSummary object for the particular year | Note > if API returns data only
+    for 1 year > the carets will be disabled

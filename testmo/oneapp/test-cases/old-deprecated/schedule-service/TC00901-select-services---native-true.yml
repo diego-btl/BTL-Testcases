@@ -1,0 +1,32 @@
+metadata:
+  id: TC00901
+  name: Select Services - native true
+  feature: test-cases
+  priority: critical
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-04'
+  updated: '2025-10-24'
+  author: user_7
+  testmo_id: 901
+  folder_id: 7143
+preconditions:
+- description: User has a preferred retailer
+steps:
+- id: 1
+  action: Tap on Schedule Service card
+  expected: User should see Select Services with preferred retailer selected and list
+    of vehicle services
+- id: 2
+  action: Tap on Call Retailer
+  expected: User should be able to call retailer
+- id: 3
+  action: Tap on any of the services
+  expected: User should see service(s) selected
+- id: 4
+  action: Tap on Next
+  expected: User should proceed to Additional Information screen

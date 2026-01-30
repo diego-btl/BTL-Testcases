@@ -1,0 +1,29 @@
+metadata:
+  id: TC01586
+  name: Capabilities
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-28'
+  updated: '2024-10-17'
+  author: user_2
+  testmo_id: 1586
+  folder_id: 100
+preconditions:
+- description: User is on Map tab
+steps:
+- id: 1
+  action: Remove DESTINATION_SEND_TO_CAR from capability list2. Expand Info Drawer3.
+    Search for a POI4. Disable the capability and repeat steps 2-3
+  expected: User should not see Favorites section but Recently Sent to Vehicle should
+    still be accessible (due to IRP)3. User should not see favorites button on POI
+    card (hidden)4. User should see disabled Favorites section in the Info Drawer,
+    tapping on see more will open Account Expired modal with option to call an agent
+    - 1-855-426-6628 (NNA/NCI)User should see favorites button on POI card but tapping
+    on it will also open the Account Expired modalUser should see Recently Sent to
+    Vehicle section is still accessible (due to IRP)

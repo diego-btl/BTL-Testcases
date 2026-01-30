@@ -1,0 +1,25 @@
+metadata:
+  id: TC30062
+  name: Favorites
+  feature: test-cases
+  priority: critical
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-01-24'
+  updated: '2025-10-06'
+  author: user_17
+  testmo_id: 30062
+  folder_id: 99
+preconditions:
+- description: User's selected vehicle has the DESTINATION_SEND_TO_CAR capability
+    enabled
+steps:
+- id: 1
+  action: Scroll the map info drawer2. Swipe on the swimlane3. Tap on one of the favourites
+  expected: User should see a Favorites section (maximum of 5)2. User should be able
+    to scroll horizontally3. User should see search performed for the corresponding
+    favourite, map centers on result and shows POI card

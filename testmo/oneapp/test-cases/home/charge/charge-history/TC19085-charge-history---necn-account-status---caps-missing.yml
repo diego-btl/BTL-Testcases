@@ -1,0 +1,55 @@
+metadata:
+  id: TC19085
+  name: Charge History - NECN Account Status - Caps MISSING
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2024-06-06'
+  updated: '2025-12-02'
+  author: user_17
+  testmo_id: 19085
+  folder_id: 2443
+preconditions:
+- description: User has EV2 or EV1
+- description: EV > VehicleCapabilities > "DRIVING_ANALYSIS" is missing
+- description: EV2 > VehicleCapabilities > "CHARGE_HISTORY" is missingUser is a PRIMARY_DRIVER
+- description: User is on the Manage EV screen
+steps:
+- id: 1
+  action: Mock AccountStatus > "status" =! "ACTIVE" (FAILED/INACTIVE/CANCELLED/CLOSED/ENROLLING/NOT_ENROLLED)
+    -> Tap the 'Charge History' card -> NissanPayOrderHistory API returns an empty
+    response
+  expected: 'User should see the ''Charge History'' screen with a dialog: | NISSAN
+    ENERGY Charge Network | Activate the NISSAN ENERGY Charge Network today for access
+    to Nissan''s in-network charging partners. | The ''Start Activation'' CTA is enabled'
+- id: 2
+  action: Tap the 'Start Activation' CTA
+  expected: User is redirected to the NECN screen
+- id: 3
+  action: Tap the 'Charge History' card -> NissanPayOrderHistory API returns some
+    data in the response
+  expected: User should see the 'Charge History' screen with data correlated to the
+    NissanPayOrderHistory API response | The 'Start Activation' CTA is hidden
+- id: 4
+  action: Tap the 'See More' dropdown
+  expected: The 'See More' section is expanded, showing the details for the particular
+    NissanPayEnergyChargeSession | The 'See More' button is replaced with the 'See
+    Less'
+- id: 5
+  action: Tap the 'See Less' dropdown
+  expected: The section should be collapsed | The 'See Less' button is replaced with
+    the 'See More'
+- id: 6
+  action: Mock AccountStatus > "status" = "ACTIVE" -> Tap the 'Charge History' card
+    -> NissanPayOrderHistory API returns an empty response
+  expected: The user should see the Charge History card with the dialog 'No Charge
+    History' | The 'Start Activation' CTA is hidden
+- id: 7
+  action: Tap the 'Refresh' button
+  expected: NissanPayOrderHistory is triggered | The loading state is displayed |
+    The data on the screen correlates with the NissanPayOrderHistory API response

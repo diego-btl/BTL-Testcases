@@ -1,0 +1,30 @@
+metadata:
+  id: TC19086
+  name: Start Charger modal - idle fees
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2024-06-06'
+  updated: '2025-02-28'
+  author: user_6
+  testmo_id: 19086
+  folder_id: 2442
+description: DesignsStory
+preconditions:
+- description: EnablePlugAndCharge is enabled in remote configs
+- description: AccountStatus is ACTIVE
+steps:
+- id: 1
+  action: Go to Maps -> Go to Filters -> Make sure Charge Point is deselected from
+    list of Providers -> Tap on Apply
+  expected: See expected results
+- id: 2
+  action: From the list, pick any charger
+  expected: 'You should see idle fees and/or Access fees associated with this charger
+    | The PricingDetails API should have "parkingTariff": <some $value>, | "flatFee":
+    <some $value>,'

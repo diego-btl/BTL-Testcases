@@ -1,0 +1,30 @@
+metadata:
+  id: TC02670
+  name: Capabilities - Accessories Details - Minimum parameters
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-09-07'
+  updated: '2025-09-22'
+  author: user_3
+  testmo_id: 2670
+  folder_id: 4170
+description: https://www.pivotaltracker.com/n/projects/2626604/stories/185088480
+preconditions:
+- description: AVK2 vehicleUser is on Climate Details screen
+steps:
+- id: 1
+  action: Accessories Details does not return any parameters for seatHeater or steeringHeat
+    (or they're set to false)
+  expected: User should not see any seat controls + steering wheel options in the
+    Climate Control cardUser should see Climate Control status | User should see default
+    temperature set to 75 (add a breakpoint for the VehicleClimate Defaults and fresh
+    install the app to see 75 default temp) (range from 61-88) (NNA) | User should
+    see current ext temp (if vehicle has location) | User should see Make Default
+    button set to off | User should see Turn Climate On/Off (depending on whether
+    climate is on/off)

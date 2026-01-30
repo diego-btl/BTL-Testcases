@@ -1,0 +1,23 @@
+metadata:
+  id: TC02714
+  name: View list of parts - Success
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-09-07'
+  updated: '2024-10-17'
+  author: user_3
+  testmo_id: 2714
+  folder_id: 412
+preconditions:
+- description: User is on the main Proactive Maintenance Sheet
+- description: User has fewer than 4 reminders
+steps:
+- id: 1
+  action: Tap `Create New` CTA
+  expected: Parts list loads with no issues | User sees the main create screen

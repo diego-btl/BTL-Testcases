@@ -1,0 +1,22 @@
+metadata:
+  id: TC00607
+  name: Engine Button
+  feature: test-cases
+  priority: critical
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-01'
+  updated: '2025-09-19'
+  author: user_2
+  testmo_id: 607
+  folder_id: 60
+preconditions:
+- description: User has an ICE vehicle
+steps:
+- id: 1
+  action: User is in the Home screen
+  expected: User should see an "Engine" button in the telematics row

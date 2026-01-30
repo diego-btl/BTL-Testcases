@@ -1,0 +1,27 @@
+metadata:
+  id: TC62196
+  name: Charge Card - Capability false
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-12-19'
+  updated: '2025-12-19'
+  author: user_6
+  testmo_id: 62196
+  folder_id: 66
+preconditions:
+- description: User is on the Home screen
+- description: User has an EV
+- description: User has REMOTE_CHARGING set to false
+steps:
+- id: 1
+  action: User lands on the home page with REMOTE_CHARGING set to false
+  expected: Charge card should be in the disabled state
+- id: 2
+  action: Tap on the Charge card
+  expected: Account Expired modal should appear

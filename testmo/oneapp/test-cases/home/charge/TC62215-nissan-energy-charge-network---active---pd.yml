@@ -1,0 +1,30 @@
+metadata:
+  id: TC62215
+  name: NISSAN ENERGY Charge Network - Active - PD
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-12-19'
+  updated: '2025-12-19'
+  author: user_6
+  testmo_id: 62215
+  folder_id: 66
+preconditions:
+- description: User has an EV/EV2
+- description: '"EnablePlugAndCharge": "true"'
+- description: '"GrantFullPlugAndCharge": "{\"enabled\": true, \"checkCapability\":
+    true}"'
+- description: 'VehicleStaticData > "driverType": "PRIMARY_DRIVER"'
+steps:
+- id: 1
+  action: 'User is on the Charge screen -> AccountStatus API > "status": "ACTIVE"'
+  expected: NISSAN ENERGY Charge Network card is displayed
+- id: 2
+  action: Tap the Find In-network Chargers CTA
+  expected: LocationDetail and VehiclePlannedRoutes APIs are triggered | User is navigated
+    to Map tab

@@ -1,0 +1,25 @@
+metadata:
+  id: TC30015
+  name: Package Details
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-01-21'
+  updated: '2025-10-10'
+  author: user_17
+  testmo_id: 30015
+  folder_id: 90
+preconditions:
+- description: User is on the Package Info screen and has a vehicle with at least
+    one package
+steps:
+- id: 1
+  action: Tap Package Details2. Tap a dropdown arrow
+  expected: User should see the Package Details screen with the subscription packages
+    listed2. User should be able to expand the package details. Multiple dropdowns
+    can be open at the same time

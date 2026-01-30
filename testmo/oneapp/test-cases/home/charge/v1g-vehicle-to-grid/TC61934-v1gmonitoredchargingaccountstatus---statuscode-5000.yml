@@ -1,0 +1,28 @@
+metadata:
+  id: TC61934
+  name: 'V1GMonitoredChargingAccountStatus - statusCode: 5000'
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-11-05'
+  updated: '2025-12-16'
+  author: user_25
+  testmo_id: 61934
+  folder_id: 6755
+preconditions:
+- description: Nissan NNA and NCI only
+- description: User has an EV or EV AVK2 vehicle
+- description: PD only
+- description: 'eVehicleEligibility > "v1GEligible": true'
+steps:
+- id: 1
+  action: 'Mock V1GMonitoredChargingAccountStatus to return "statusCode": "5000" ->
+    Bg/fg or cold start the app -> Wait until API is loading -> Navigate to the Charge
+    screen'
+  expected: Status, Optimize, and Insights tabs are NOT displayed, the feature is
+    hidden

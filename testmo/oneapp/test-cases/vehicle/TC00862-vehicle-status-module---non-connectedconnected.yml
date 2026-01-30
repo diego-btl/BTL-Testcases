@@ -1,0 +1,23 @@
+metadata:
+  id: TC00862
+  name: Vehicle Status Module - Non-Connected/Connected
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-04'
+  updated: '2025-10-28'
+  author: user_7
+  testmo_id: 862
+  folder_id: 45
+preconditions:
+- description: Vehicle Status Module - Non-Connected/Connected
+steps:
+- id: 1
+  action: Tap on Vehicle tab
+  expected: User should see Vehicle Status module with model name, vehicle image,
+    and vehicle profile button

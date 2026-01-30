@@ -1,0 +1,27 @@
+metadata:
+  id: TC00861
+  name: Edit Curfew Alert
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-04'
+  updated: '2025-10-11'
+  author: user_5
+  testmo_id: 861
+  folder_id: 70
+preconditions:
+- description: User is on a curfew alert edit sheet
+steps:
+- id: 1
+  action: Edit curfew alert (name, start/end time, all day, display in vehicle, time
+    zone, days of week)2. Tap Save Alert
+  expected: User should see Save CTA become enabled once changes have been made2.
+    User should be taken to the main alerts sheet and see their alert updated
+- id: 2
+  action: Fail to save the alert
+  expected: The user will see an error alert and remain on the edit alert sheet

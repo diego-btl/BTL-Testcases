@@ -1,0 +1,43 @@
+metadata:
+  id: TC41869
+  name: Photos screen - Generate Collision Report - Successful
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-06-09'
+  updated: '2025-06-09'
+  author: user_26
+  testmo_id: 41869
+  folder_id: 3800
+description: Verify Collision Report generation from the Photos screen, including
+  confirmation modal, triggered actions, and success flow
+preconditions:
+- description: 'Feature flag "EnableCollisionManagement": "true" is enabled'
+- description: 'Feature flag "GrantCollisionManagement": "{\"enabled\": true, \"checkCapability\":
+    false} is enabled'
+- description: User is logged in with an account that has a vehicle in ENROLL status
+- description: User is on the Photos screen
+steps:
+- id: 1
+  action: Tap the Generate Collision Report CTA
+  expected: A confirmation modal appears
+- id: 2
+  action: Tap Cancel in the modal
+  expected: The modal is dismissed, and no further action is taken
+- id: 3
+  action: Tap Generate Collision Report again
+  expected: The confirmation modal appears again
+- id: 4
+  action: Tap Save in the modal
+  expected: CreateCollisionReportPDF API is triggered Successful
+- id: 5
+  action: Observe the toast message
+  expected: A toast "Generating Report" is shown
+- id: 6
+  action: Observe navigation
+  expected: User is redirected to the Generating Report Screen

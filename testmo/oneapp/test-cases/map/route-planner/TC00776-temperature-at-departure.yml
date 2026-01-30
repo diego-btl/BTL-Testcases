@@ -1,0 +1,24 @@
+metadata:
+  id: TC00776
+  name: Temperature at Departure
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-01'
+  updated: '2025-12-02'
+  author: user_2
+  testmo_id: 776
+  folder_id: 101
+preconditions:
+- description: User is on Create a Route screen
+steps:
+- id: 1
+  action: Tap on temperature field -> Scroll and tap outside the picker
+  expected: User should see default temperature at 72 | User should see temperature
+    picker open | User should see a range between LO - HI, and corresponding temperature
+    is selected | The previous temperatures a LO - 62F and for HI - 87F

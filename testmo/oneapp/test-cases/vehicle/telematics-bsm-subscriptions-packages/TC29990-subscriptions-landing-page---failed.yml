@@ -1,0 +1,29 @@
+metadata:
+  id: TC29990
+  name: Subscriptions Landing Page - FAILED
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-01-17'
+  updated: '2025-12-09'
+  author: user_15
+  testmo_id: 29990
+  folder_id: 3863
+description: Nissan NNA and INFINITI NNA only
+preconditions:
+- description: 'FF "EnableTelematicsBSM": "true"'
+- description: Fresh install the app
+- description: Go to Proxyman and breakpoint the VehicleSubscriptionsAPI
+steps:
+- id: 1
+  action: Login to app > Go to vehicles screen > Tap on Subscription Packages card
+  expected: 'Title: No Subscription Package | Body: If you feel like this is an error,
+    please use the call button to speak with an agent. | Call cta'
+- id: 2
+  action: Tap on the Call cta
+  expected: 'Verify native call mod is displayd with the following phone number: 1-855-426-6628'

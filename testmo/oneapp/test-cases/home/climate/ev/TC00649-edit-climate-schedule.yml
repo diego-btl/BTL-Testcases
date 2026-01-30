@@ -1,0 +1,32 @@
+metadata:
+  id: TC00649
+  name: Edit Climate Schedule
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-01'
+  updated: '2025-12-19'
+  author: user_2
+  testmo_id: 649
+  folder_id: 4169
+preconditions:
+- description: User is on Climate screen with existing climate schedule
+steps:
+- id: 1
+  action: Tap on an existing Climate Schedule2. Modify departure time, temperature,
+    and days of the week3. Tap to Save Schedule
+  expected: 'User should see Climate Schedule screen with schedule details filled
+    in and save button disabled2. User should see corresponding modifications made
+    to departure time, temperature, and days of the week and save button enable3.
+    User should see a loading spinner while schedule is being saved | User should
+    see folowing toasts: Contacting {vehicle year, model} to Update Climate Schedule...Waking
+    {vehicle year, model} to UpdateClimate Schedule...Initiating Update Climate Schedule
+    on {vehicle year, model}...User should see a success toast if schedule was saved
+    successfullyUser should be returned to the Climate screen with modified schedule
+    shownNote: If save schedule fails, user should see a failure toast and remain
+    on the Climate Schedule screen'

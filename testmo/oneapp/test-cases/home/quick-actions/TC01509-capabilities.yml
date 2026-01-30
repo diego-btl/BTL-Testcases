@@ -1,0 +1,35 @@
+metadata:
+  id: TC01509
+  name: Capabilities
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-28'
+  updated: '2024-10-17'
+  author: user_2
+  testmo_id: 1509
+  folder_id: 58
+steps:
+- id: 1
+  action: Enable each of the capabilities:REMOTE_CHARGINGREMOTE_CLIMATE_CONTROL or
+    HVAC_ACCESSORIES (for AVK2)REMOTE_DOOR_UNLOCKREMOTE_DOOR_LOCKREMOTE_ENGINEREMOTE_HORN_LIGHTSREMOTE_VEHICLE_STATUS
+    (affects the controls card)
+  expected: User should see quick action buttons visible/enabled based on capabilities
+- id: 2
+  action: 'Disable each of the capabilities: -> REMOTE_CHARGINGREMOTE_CLIMATE_CONTROL
+    or HVAC_ACCESSORIES (for AVK2)REMOTE_DOOR_UNLOCKREMOTE_DOOR_LOCKREMOTE_ENGINEREMOTE_HORN_LIGHTSREMOTE_VEHICLE_STATUS
+    (affects the controls card)'
+  expected: User should see quick action buttons visible/disabled based on capabilities
+- id: 3
+  action: 'Delete each of the capabilities: -> REMOTE_CHARGINGREMOTE_CLIMATE_CONTROL
+    or HVAC_ACCESSORIES (for AVK2)REMOTE_DOOR_UNLOCKREMOTE_DOOR_LOCKREMOTE_ENGINEREMOTE_HORN_LIGHTSREMOTE_VEHICLE_STATUS
+    (affects the controls card)'
+  expected: User should see quick action buttons hidden based on capabilities
+- id: 4
+  action: 'login as shared driver -> delete or disable each of the capabilities:'
+  expected: User should see quick action buttons hidden based on capabilities

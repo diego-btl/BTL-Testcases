@@ -1,0 +1,27 @@
+metadata:
+  id: TC01597
+  name: Capabilities
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-28'
+  updated: '2025-12-19'
+  author: user_2
+  testmo_id: 1597
+  folder_id: 103
+preconditions:
+- description: The user selects an EV or EVAVK2 vehicles
+- description: Calendar permissions are allowed
+steps:
+- id: 1
+  action: Remove INTELLECTUAL_ROUTE_PLANNER capability
+  expected: User should not see Route Planner in the Info Drawer
+- id: 2
+  action: Disable INTELLECTUAL_ROUTE_PLANNER capability
+  expected: User should see Route Planner disabled in the Info Drawer and upon tapping,
+    user should see an alert modal with the option to call an agentNNA/NCI > 1-855-426-6628

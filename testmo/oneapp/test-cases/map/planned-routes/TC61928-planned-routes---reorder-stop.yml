@@ -1,0 +1,31 @@
+metadata:
+  id: TC61928
+  name: Planned Routes - Reorder Stop
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-11-04'
+  updated: '2025-12-12'
+  author: user_28
+  testmo_id: 61928
+  folder_id: 102
+preconditions:
+- description: Route Already Created with at least 3 stops
+- description: Route is more than 48 hours away
+- description: User is on Maps Screen
+steps:
+- id: 1
+  action: Tap on Planned Routes -> Tap on View Route to Edit the route -> Validate
+    the number of stops displayed -> Tap on EDIT ROUTE button -> After the Edit Route
+    page is displayed, Tap on the Edit button -> The UI should display a hamburguer
+    and a X button -> Long press the hamburguer menu and reorder the stops -> After
+    the stop is reordered from the view, tap on the Done button -> Scroll Down and
+    tap on ESTIMATE NEW ROUTE -> After being navigated to the Estimated Route* page,
+    validate the Stop was properly rearranged -> Tap on Save Route -> Check the Success
+    toast is displayed
+  expected: See expected results

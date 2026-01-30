@@ -1,0 +1,33 @@
+metadata:
+  id: TC32540
+  name: Stop - Fail
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-04-07'
+  updated: '2025-04-15'
+  author: user_25
+  testmo_id: 32540
+  folder_id: 4166
+preconditions:
+- description: User is in the Home screen
+- description: User has sent an Engine STOP request
+- description: CheckEngineServiceRequest API response:{
+- description: '"data": {'
+- description: '"checkEngineServiceRequest": {'
+- description: '"__typename": "ServiceRequestResult",'
+- description: '"status": "FAILED",'
+- description: '"statusDetails": null'
+- description: '}'
+- description: '}'
+- description: '}'
+steps:
+- id: 1
+  action: Engine STOP request has resolved into a failure
+  expected: 'TCU2K: "<year and model> failed to stop.User should continue seeing a
+    countdown timer'

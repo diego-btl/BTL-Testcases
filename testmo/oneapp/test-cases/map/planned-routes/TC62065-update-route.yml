@@ -1,0 +1,25 @@
+metadata:
+  id: TC62065
+  name: Update Route
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-12-01'
+  updated: '2025-12-02'
+  author: user_17
+  testmo_id: 62065
+  folder_id: 102
+preconditions:
+- description: User has estimated a route
+- description: Be in the Estimate Route* screen
+steps:
+- id: 1
+  action: Tap on Save Route
+  expected: User should see a loading spinner while save route call is made | User
+    should see a loading spinner and be brought to Planned Routes screen with a Route
+    saved toast when successful

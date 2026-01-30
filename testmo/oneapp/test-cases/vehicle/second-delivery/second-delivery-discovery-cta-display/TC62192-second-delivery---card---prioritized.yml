@@ -1,0 +1,43 @@
+metadata:
+  id: TC62192
+  name: Second Delivery - Card - Prioritized
+  feature: test-cases
+  priority: critical
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-12-19'
+  updated: '2026-01-14'
+  author: user_23
+  testmo_id: 62192
+  folder_id: 6818
+description: 'Second Delivery - Card - Prioritized. Validates that Second Delivery
+  Card appears with highest precedence on Home and Vehicle screens when vehicle is
+  within first 30 days of purchase (prioritized state).Notes:Card prioritized when:
+  daysSincePurchased < 30 AND discover.prioritized: truePrioritized display: Card
+  appears with highest precedence on both Home and Vehicle screensOn Home screen:
+  Appears above all other cardsOn Vehicle screen: Appears below quick action buttons
+  with highest precedenceUse mocks from folder "Second Delivery - MyINFINITI Expert
+  - Discovery & CTA Display"Test on both light and dark modeFeature Flag: EnableSecondDelivery
+  is set to true'
+preconditions:
+- description: User is logged in
+- description: Feature Flag EnableSecondDelivery is set to true
+- description: 'Mock configured with daysSincePurchased: 15 (within first 30 days)'
+- description: 'Mock configured with discover.prioritized: true'
+steps:
+- id: 1
+  action: 'Mock SecondDeliveryEligibility with: -> { "cta": { "discover": { "__typename":
+    "SecondDeliveryDiscoverCTA", "prioritized": true }, "daysSincePurchased": 15 }
+    }Login to app'
+  expected: 'Second Delivery Card displayed with highest precedence (above all other
+    cards) | Card title: MyINFINITI Expert | Card subtitle: Discover more about your
+    new {model name} | Chevron (>) icon displayed on right'
+- id: 2
+  action: Navigate to Vehicle screen
+  expected: 'Second Delivery Card displayed below quick action buttons with highest
+    precedence | Card title: MyINFINITI Expert | Card subtitle: Discover more about
+    your new {model name} | Chevron (>) icon displayed on right'

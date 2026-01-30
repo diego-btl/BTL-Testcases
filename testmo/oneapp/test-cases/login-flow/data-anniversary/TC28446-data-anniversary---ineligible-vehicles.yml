@@ -1,0 +1,29 @@
+metadata:
+  id: TC28446
+  name: Data Anniversary - Ineligible Vehicles
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2024-11-22'
+  updated: '2026-01-21'
+  author: user_2
+  testmo_id: 28446
+  folder_id: 7144
+description: 'Validates that gift box animation does NOT appear for ineligible vehicle
+  types (stolen, financial vehicles, additional driver). Preconditions: EnableOwnerAnniversary
+  FF = true isAnniversary = true anniversaryYear = 1, 2, 3, 4, or 5'
+steps:
+- id: 1
+  action: Login to the app with VIN marked as stolen
+  expected: Gift box animation does NOT appear | User is taken to Home screen
+- id: 2
+  action: Login to the app with financial vehicle VIN
+  expected: Gift box animation does NOT appear | User is taken to Home screen
+- id: 3
+  action: Login to the app as additional driver with VIN meeting anniversary conditions
+  expected: Gift box animation does NOT appear | User is taken to Home screen

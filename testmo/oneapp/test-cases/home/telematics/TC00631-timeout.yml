@@ -1,0 +1,23 @@
+metadata:
+  id: TC00631
+  name: Timeout
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-01'
+  updated: '2024-10-17'
+  author: user_2
+  testmo_id: 631
+  folder_id: 64
+preconditions:
+- description: User has sent a telematics request (lock/unlock, start/stop, lights/horn,
+    climate on/off, charge)
+steps:
+- id: 1
+  action: 1. Service request returns with status PENDING for 210 seconds
+  expected: Command times out and shows the failure toast

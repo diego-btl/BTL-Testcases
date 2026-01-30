@@ -1,0 +1,19 @@
+metadata:
+  id: TC36671
+  name: Update dynamic data - the dynamic data may take 30 minutes to show update
+    on Widget
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-04-29'
+  updated: '2025-04-29'
+  author: user_24
+  testmo_id: 36671
+  folder_id: 4176
+description: 'Update dynamic data - the dynamic data may take 30 minutes to show update
+  on Widget.Updating: Mileage remaining, climate status, Charge status, lock status'

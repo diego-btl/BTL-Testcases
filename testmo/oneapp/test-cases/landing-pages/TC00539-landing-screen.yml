@@ -1,0 +1,49 @@
+metadata:
+  id: TC00539
+  name: Landing screen
+  feature: test-cases
+  priority: critical
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-01'
+  updated: '2025-10-06'
+  author: user_2
+  testmo_id: 539
+  folder_id: 40
+description: The screen should match the Figma designs screenshots attached
+preconditions:
+- description: App is either a fresh installation or the cache is cleared
+- description: User is signed out
+steps:
+- id: 1
+  action: Launch app by tapping on the app icon
+  expected: The splash screen is displayed | The Allow access to device's location
+    modal appears (depending on the OS version
+- id: 2
+  action: The user dismisses the Device's location modal
+  expected: a background video is playing, Nissan logo in centre of app, Sign in Blue
+    button, Register button visible. Also visible CTA for DEMO MODE and PRIVACY &
+    TERMS
+- id: 3
+  action: Tap on Privacy and Terms
+  expected: Action sheet shows with Privacy Policy, Terms of Service, `Do Not Sell
+    My Personal Information` (for NNA NIS, INF only) and Cancel CTAs.
+- id: 4
+  action: Tap on Cancel or anywhere outside action sheet
+  expected: the action sheet should get dismissed
+- id: 5
+  action: Tap on Privacy Policy
+  expected: User is taken to external browser, the url of which should match the privacy
+    url on the Contact us api response
+- id: 6
+  action: Tap on Do not Sell My Personal Information (for NNA NIS and INF only)
+  expected: User is taken to external browser, the url of which should match the data
+    - privacy url on the Contact us api response
+- id: 7
+  action: Tap on Terms of Service
+  expected: The TermsAndConditions API is triggered | User is taken to Terms and Conditions
+    screen

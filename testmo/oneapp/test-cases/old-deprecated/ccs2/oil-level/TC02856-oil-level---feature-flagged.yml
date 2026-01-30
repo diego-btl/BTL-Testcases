@@ -1,0 +1,38 @@
+metadata:
+  id: TC02856
+  name: Oil Level - feature flagged
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-09-13'
+  updated: '2026-01-06'
+  author: user_4
+  testmo_id: 2856
+  folder_id: 415
+description: The oil level card is displayed on the Vehicle screen when it is set
+  true from feature flags.
+preconditions:
+- description: '{ "entries": { "EnableAdjustClimate": "false", "EnableCurfewAlertAdjustment":
+    "false", "EnableInAppMessages": "false", "EnableLocationAutoUpdate": "false",
+    "EnableMechanicalRepair": "false", "EnablePayAndCharge": "false", "EnableSecondDelivery":
+    "false", "EnableV2L": "true", "ExperimentalLockUnlock": "false", "GrantMechanicalRepair":
+    "{\"enabled\": false, \"checkCapability\": true}", "GrantProactiveMaintenance":
+    "{\"enabled\": false, \"checkCapability\": true}", "SearchPoiMinCountPerStop":
+    "15", "ShowAddStop": "true", "ShowOilLevelCard": "true", "ShowProactiveMaintenance":
+    "false", "ShowWindowOpenReminder": "false", "UpdateVersion": "{\"storeUrl\":\"https://play.google.com/store/apps/details?id=com.nissan.mynissan\",\"updateVersion\":\"4.4.10\"}",
+    "UseAlternativeDeleteVehicleCopy": "false", "UseNewRemoteDataWipeImplementation":
+    "false" }, "appName": "com.nissan.mynissan", "state": "UPDATE", "templateVersion":
+    "239" }'
+steps:
+- id: 1
+  action: 'Set "ShowOilLevelCard": "true",'
+  expected: See expected results
+- id: 2
+  action: Kill the app and reopen it
+  expected: The https://firebaseremoteconfig.googleapis.com/* the call is edited with
+    mocked data

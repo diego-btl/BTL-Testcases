@@ -1,0 +1,29 @@
+metadata:
+  id: TC02700
+  name: Shared Driver with Pending Invite should see the Additional Driver Card
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-09-07'
+  updated: '2025-09-19'
+  author: user_3
+  testmo_id: 2700
+  folder_id: 105
+preconditions:
+- description: User has a AVK2 vehicle User is a SHARED_DRIVER User has at least one
+    pending invitation
+steps:
+- id: 1
+  action: '1. Mock the UserVehicles response with: 1.1. data.vehicles.driverType:
+    "SHARED_DRIVER" 1.2. data.pendingDriverInvitations: "pendingDriverInvitations":
+    { "__typename": "PendingDriverInvitationsSuccessResponse", "invites": [ { "__typename":
+    "PendingDriverInvite", "inviteId": 999, "inviterFirstName": "FirstName", "inviterLastName":
+    "LastName", "vin": "PN1FV7DP6NM371003", "vehicleModel": "ROGUE", "vehicleYear":
+    2023, "inviteDateTime": "2023-04-26T10:49:30.033Z", "expiresIn": 2 } ] } 2. Login
+    to the app'
+  expected: 1. The Home Page should display the Additional Driver Card

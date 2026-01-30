@@ -1,0 +1,26 @@
+metadata:
+  id: TC01498
+  name: Select a File
+  feature: test-cases
+  priority: critical
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-28'
+  updated: '2024-10-17'
+  author: user_2
+  testmo_id: 1498
+  folder_id: 57
+preconditions:
+- description: User is on the Upload Ownership Document screen and has selected a
+    file type
+steps:
+- id: 1
+  action: Tap Select a File2. Choose a file3. Tap Select a Different File and choose
+    a file4. Tap UPLOAD
+  expected: User should see file picker open2. User should see an option to select
+    a different file and UPLOAD should become enabled3. User should be able to pick
+    a different file4. File should be uploaded

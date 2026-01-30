@@ -1,0 +1,34 @@
+metadata:
+  id: TC61982
+  name: Verify the Health report card is not displayed under the Vehicle profile screen
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-11-11'
+  updated: '2025-12-18'
+  author: user_15
+  testmo_id: 61982
+  folder_id: 6800
+description: 'CONTEXTNNA will officially sunset the VHR across all TSP types effective
+  January 1, 2026. To ensure a smooth transition, the VHR will be sunset no later
+  than Friday, December 19th (avoiding holiday conflicts).For this purpose, BTL will
+  make a modification in GraphQL to stop relaying the VEHICLE_HEALTH_REPORTApply for:
+  All Model Year, all models, Nissan and INFINITI, NNA and NCI)'
+steps:
+- id: 1
+  action: Launch Demo mode > Select LEAF Demo > Tap on Vehicle nav button > Tap on
+    Vehicle Profile cta
+  expected: Verify Vehicle Health Report card is not shown under Vehicle Profile screen.
+- id: 2
+  action: Launch Demo mode > Select Rogue Platinum Demo > Tap on Vehicle nav button
+    > Tap on Vehicle Profile cta
+  expected: Verify Vehicle Health Report card is not shown under Vehicle Profile screen.
+- id: 3
+  action: Launch Demo mode > Select Rogue SV Demo > Tap on Vehicle nav button > Tap
+    on Vehicle Profile cta
+  expected: Verify Vehicle Health Report card is not shown under Vehicle Profile screen

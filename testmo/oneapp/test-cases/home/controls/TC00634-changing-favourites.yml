@@ -1,0 +1,28 @@
+metadata:
+  id: TC00634
+  name: Changing favourites
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-01'
+  updated: '2025-09-22'
+  author: user_2
+  testmo_id: 634
+  folder_id: 65
+preconditions:
+- description: User is on controls screen
+steps:
+- id: 1
+  action: Tap on Edit Controls2. Drag a quick action from More to Favorites3. Drag
+    a quick action from Favorites to More4. Drag and reorder quick action from Favorites5.
+    Tap on Done6. Tap on Back
+  expected: User should see Favorites and More Controls section in edit mode with
+    + icon shown2. User is able to drag quick action from More to Favorites3. User
+    is able to drag quick action from Favorites to More4. User is able to reorder
+    the quick action buttons in Favorites4. User should see quick action buttons saved5.
+    User should see their corresponding favorites in the quick action bar

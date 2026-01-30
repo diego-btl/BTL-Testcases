@@ -1,0 +1,27 @@
+metadata:
+  id: TC29942
+  name: Edit Your Information Screen
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-01-14'
+  updated: '2025-01-28'
+  author: user_26
+  testmo_id: 29942
+  folder_id: 3800
+description: https://www.pivotaltracker.com/story/show/188707444
+preconditions:
+- description: The user is on the Collision Report start screen
+steps:
+- id: 1
+  action: Tap on the Edit CTA for the Personal Information card
+  expected: The user is redirected to the edit screen | The user should see the information
+    prefilled (First Name, Last Name, Phone Number, and Email) | The app should use
+    the same local validation and limits that have been implemented for similar fields
+    on the registration screen | The fields should be as required (fields cannot be
+    empty) | The SAVE button should be inactive (disabled)

@@ -1,0 +1,27 @@
+metadata:
+  id: TC02841
+  name: Home - Start Engine/Climate - HVAC_FAILED
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-09-13'
+  updated: '2025-04-17'
+  author: user_4
+  testmo_id: 2841
+  folder_id: 4168
+description: https://www.pivotaltracker.com/story/show/185088490https://www.pivotaltracker.com/story/show/185988990https://www.pivotaltracker.com/story/show/188615366
+preconditions:
+- description: AVK2 vehicleEngine is PENDING
+steps:
+- id: 1
+  action: statusDetails returns with HVAC_FAILED and status returns FAILED
+  expected: 'EN: "Remote engine start was successful and climate control did not start
+    for <year and model>" (5 seconds) | FR: "Le démarrage du moteur à distance est
+    réussi et le contrôle climat n''est pas réussi pour<ANNÉE MODÈLE & MODÈLE DU VÉHICULE>"
+    (5 seconds) | ES: "Se ha encendido remotamente el motor, pero el aire acondicionado
+    no, para <AÑO DEL MODELO Y MODELO DEL VEHÍCULO>" (5 seconds)'

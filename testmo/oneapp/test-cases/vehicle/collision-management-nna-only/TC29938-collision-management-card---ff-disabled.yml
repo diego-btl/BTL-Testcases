@@ -1,0 +1,28 @@
+metadata:
+  id: TC29938
+  name: Collision Management Card - FF Disabled
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-01-14'
+  updated: '2026-01-13'
+  author: user_26
+  testmo_id: 29938
+  folder_id: 3800
+description: https://www.pivotaltracker.com/story/show/188720336Verify User is not
+  able to see the Collision Management card on the Vehicle screen when FF is false
+preconditions:
+- description: 'Verify the Feature flag: "EnableCollisionManagement": "false”'
+- description: '"GrantCollisionManagement": "{\"enabled\": false, \"checkCapability\":false}",'
+- description: 'CAPS: ACCIDENT_REPORT_SERVICE , COLLISION_MANAGEMENT'
+- description: 'Use any account with a Connected and Enrolled Vehicles (status: ENROLLED)-
+    The user is in the Home Screen'
+steps:
+- id: 1
+  action: Navigate to the Vehicle Screen
+  expected: The user should not see the Collision Management card

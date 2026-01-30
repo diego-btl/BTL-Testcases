@@ -1,0 +1,25 @@
+metadata:
+  id: TC00826
+  name: Add Vehicle
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-01'
+  updated: '2024-10-17'
+  author: user_2
+  testmo_id: 826
+  folder_id: 74
+preconditions:
+- description: User has logged in via the phone app and their account satisfies one
+    of the following:- no vehicles in the account- all vehicles show something other
+    than ENROLLED in the capabilities status field
+steps:
+- id: 1
+  action: Launch watch app
+  expected: User should see a message informing them to add a vehicle with a subscription
+    in order to use watch app

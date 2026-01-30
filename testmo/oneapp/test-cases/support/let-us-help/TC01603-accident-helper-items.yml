@@ -1,0 +1,25 @@
+metadata:
+  id: TC01603
+  name: Accident Helper Items
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-28'
+  updated: '2025-03-31'
+  author: user_2
+  testmo_id: 1603
+  folder_id: 81
+preconditions:
+- description: User is on the accident helper screen
+steps:
+- id: 1
+  action: Expand Certified Collision Repair Network2. Tap on Schedule Service
+  expected: User should see item expand2. User should see Dealer Details (if user
+    has a preferred dealer and native scheduling is false)User should see Select Services
+    (if user has a preferred dealer and native scheduling is true)User should see
+    Find a Dealer (if user does not have a preferred dealer)

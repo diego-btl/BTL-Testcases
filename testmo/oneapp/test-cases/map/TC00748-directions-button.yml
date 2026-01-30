@@ -1,0 +1,40 @@
+metadata:
+  id: TC00748
+  name: Directions Button
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-01'
+  updated: '2024-10-17'
+  author: user_2
+  testmo_id: 748
+  folder_id: 46
+preconditions:
+- description: User has performed a searchUser has INTELLECTUAL_ROUTE_PLANNER and
+    DESTINATION_SEND_TO_CAR set to true
+steps:
+- id: 1
+  action: Tap on Directions button
+  expected: 'User should see directions options: | EV | AVK, AVK2'
+- id: 2
+  action: Tap on Send to Vehicle
+  expected: User should see a loading state on the POI card and a success toast when
+    it has been sent successfully
+- id: 3
+  action: Force an error and tap Send to Vehicle
+  expected: User should see a failure toast
+- id: 4
+  action: Tap on Create Route (only for EV)
+  expected: User should be brought to Create a Route screen with POI filled in as
+    the destination
+- id: 5
+  action: Tap on Get Directions in Maps
+  expected: User should be redirected to their maps app with directions to POI
+- id: 6
+  action: Tap on Cancel
+  expected: User should see direction options dismissed

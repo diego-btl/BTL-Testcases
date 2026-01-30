@@ -1,0 +1,43 @@
+metadata:
+  id: TC62150
+  name: NECN - Plug & Charge Card - PD - SUCCESS
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-12-12'
+  updated: '2026-01-15'
+  author: user_25
+  testmo_id: 62150
+  folder_id: 2444
+preconditions:
+- description: User has an EV/EV2
+- description: '"EnablePlugAndCharge": "true"'
+- description: 'VehicleStaticData > "driverType": "PRIMARY_DRIVER"'
+- description: 'AccountStatus > "status": "ACTIVE"'
+steps:
+- id: 1
+  action: 'Mock AccountStatus API to return "pncStatus": "PENDING" or "INSTALLING"
+    -> Navigate to the NISSAN ENERGY Charge Network screen'
+  expected: The status is 'Installing...' | The copy is 'Please note that it may take
+    up to 24 hours to install your Plug & Charge Certificate. Make sure that your
+    vehicle has a clear view of the sky to maximize network connection.'
+- id: 2
+  action: 'Mock AccountStatus API to return "pncStatus": "RENEWING" -> Navigate to
+    the NISSAN ENERGY Charge Network screen'
+  expected: The status is 'Renewing...' | The copy is 'Please note that it may take
+    up to 24 hours to install your Plug & Charge Certificate. Make sure that your
+    vehicle has a clear view of the sky to maximize network connection.'
+- id: 3
+  action: 'Mock AccountStatus API to return "pncStatus": "READY" and "toggleStatus":
+    "ENABLED"/"DISABLED" -> Navigate to the NISSAN ENERGY Charge Network screen'
+  expected: The toggle is in ON/OFF state | The copy is 'Plug and Charge provides
+    a seamless method of charging (when at compatible stations). After plugging in
+    the vehicle, charging will start automatically. Troubleshooting - If charging
+    doesn't start within two minutes, unplug the charger- Toggle "off" Plug & Charge
+    in-app- Begin the session through your MyNISSAN app (or follow the instructions
+    on the charger)'

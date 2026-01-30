@@ -1,0 +1,32 @@
+metadata:
+  id: TC29943
+  name: Edit Your Information fields -Success
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-01-14'
+  updated: '2025-01-28'
+  author: user_26
+  testmo_id: 29943
+  folder_id: 3800
+description: https://www.pivotaltracker.com/story/show/188707444Verify that the user
+  is able to successfully edit and save contact information
+preconditions:
+- description: The user is already on the Edit Your Information screen
+- description: The user should see the information pre-filled( First Name, Last Name,
+    Phone Number, and Email)
+steps:
+- id: 1
+  action: Enter at least one character in both the First Name and Last Name fields
+    -> Enter a Valid email address -> Enter Full phone number
+  expected: The SAVE button should be active
+- id: 2
+  action: Tap on the SAVE button
+  expected: The user should be redirected to the Collision Report start screen | The
+    user should see the updated Name, Phone, and Email information on Your Information
+    card

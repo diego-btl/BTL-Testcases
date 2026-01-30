@@ -1,0 +1,32 @@
+metadata:
+  id: TC30020
+  name: Update Contact
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-01-21'
+  updated: '2025-10-10'
+  author: user_17
+  testmo_id: 30020
+  folder_id: 90
+preconditions:
+- description: User is on the Emergency Contacts sheet and has saved contacts
+steps:
+- id: 1
+  action: 'Tap one of the contacts2. Update contact information and make sure criteria
+    is met for each field3. Tap SAVE4. Wait for saving to succeedEmergency Contact
+    Criteria:First name: At least 2 characters entered (letters & numbers only, no
+    special characters)Last name: At least 2 characters entered (letters & numbers
+    only, no special characters)Primary phone: Exactly 10 digits enteredRelationship:
+    An item selected'
+  expected: 'User should be taken to the Update Contact sheet2. User should see SAVE
+    button should be enabled when they make a change3. User should see all fields
+    become disabled and a loading state as the saving call is being made4. User should
+    be brought back to the emergency contacts screen and see updated data when saving
+    succeedsNOTE: If saving fails, there should no longer be a loading state and user
+    should see fields revert to the previous data and become enabled'

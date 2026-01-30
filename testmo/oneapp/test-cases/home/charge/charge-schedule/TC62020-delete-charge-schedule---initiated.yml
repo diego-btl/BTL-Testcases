@@ -1,0 +1,45 @@
+metadata:
+  id: TC62020
+  name: Delete Charge Schedule - Initiated
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-11-21'
+  updated: '2025-11-21'
+  author: user_25
+  testmo_id: 62020
+  folder_id: 6781
+preconditions:
+- description: User has an EV/EV2
+- description: At least 1 charge schedule exists
+- description: User is on the Manage EV screen
+steps:
+- id: 1
+  action: Tap the created schedule inside the Scheduled card
+  expected: User is redirected to the Charge Schedule screen | The 'DELETE SCHEDULE'
+    button is enabled
+- id: 2
+  action: Tap the 'DELETE SCHEDULE' button
+  expected: The 'Delete Schedule?' modal with 'No' and 'Yes' buttons, and the copy
+    'Are you sure you want to delete this charging schedule? This action cannot be
+    undone' is displayed
+- id: 3
+  action: Tap the 'No' button
+  expected: The modal is dismissed
+- id: 4
+  action: Tap the 'DELETE SCHEDULE' button
+  expected: The 'Delete Schedule?' modal with 'No' and 'Yes' buttons, and the copy
+    'Are you sure you want to delete this charging schedule? This action cannot be
+    undone' is displayed
+- id: 5
+  action: Tap the 'Yes' button
+  expected: 'The DeleteChargeSchedule API is triggered | The CheckChargeServiceRequest
+    starts polling, returning "status": "PENDING" | The loading state with the Charge
+    icon is displayed | The toasts are displayed in the following order:- ''Contacting
+    <year model> to delete charge schedule...''- ''Waking <year model> to delete charge
+    schedule...''- ''Initiating delete charge schedule on <year model>...'''

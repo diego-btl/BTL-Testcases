@@ -1,0 +1,29 @@
+metadata:
+  id: TC00635
+  name: Charge Card - Not Plugged In + Not Charging
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-01'
+  updated: '2025-12-18'
+  author: user_2
+  testmo_id: 635
+  folder_id: 66
+preconditions:
+- description: User has an EV vehicle selected
+- description: Vehicle is not plugged in and not charging
+steps:
+- id: 1
+  action: Go to home screen
+  expected: User should see the Charge card with secondary text showing Not Plugged
+    In - Not Charging
+- id: 2
+  action: Tap on the Charge Card
+  expected: User should land on the Charge screen and see the Charge Status card |
+    Charge Status card should have secondary text showing Not Plugged In - Not Charging
+    | Progress bar should not have the charging icon

@@ -1,0 +1,27 @@
+metadata:
+  id: TC24258
+  name: SD - Unverified user types wrong/expired OTP when checking Appointment
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2024-10-17'
+  updated: '2026-01-06'
+  author: user_17
+  testmo_id: 24258
+  folder_id: 1453
+preconditions:
+- description: Vehicle is eligible within the valid period from purchase & have a
+    unverified user(QX80 - 9/QX80 10).
+- description: 'In the Firebase config > "EnableSecondDelivery": "true"'
+steps:
+- id: 1
+  action: Navigate to vehicle tab -> Check the event at the top of the screen -> Click
+    over the appointment -> Click Verify Identity -> Get the OTP code in your phone
+    and type it in the app -> Click Verify and Proceed -> The OTP code it is wrong
+    or expired
+  expected: The apps displays and error "Invalid code. Please try again"

@@ -1,0 +1,28 @@
+metadata:
+  id: TC02689
+  name: Climate Details - Make Default - Modify defaults
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-09-07'
+  updated: '2024-10-17'
+  author: user_3
+  testmo_id: 2689
+  folder_id: 4170
+description: https://www.pivotaltracker.com/story/show/185796805
+preconditions:
+- description: AVK2 vehicleClimate Details
+steps:
+- id: 1
+  action: Modify some of the HVAC parameters -> Tap on Make Defaults -> Modify some
+    of the HVAC parameters
+  expected: User should see Make Defaults button enable | App should cache these values
+    as the default values and user should see button disable | App should cache these
+    values as the current values and user should see button enable (if default cache
+    and current cache are the same, button is disabled, if they differ, button is
+    enabled)

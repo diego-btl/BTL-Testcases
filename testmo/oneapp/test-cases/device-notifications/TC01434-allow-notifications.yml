@@ -1,0 +1,22 @@
+metadata:
+  id: TC01434
+  name: Allow Notifications
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-28'
+  updated: '2024-10-17'
+  author: user_2
+  testmo_id: 1434
+  folder_id: 234
+preconditions:
+- description: User is on notifications permissions alert
+steps:
+- id: 1
+  action: 1. Tap Allow Notifications
+  expected: App should register for push notifications

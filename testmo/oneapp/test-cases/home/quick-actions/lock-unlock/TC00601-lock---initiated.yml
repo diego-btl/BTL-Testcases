@@ -1,0 +1,35 @@
+metadata:
+  id: TC00601
+  name: Lock - Initiated
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-01'
+  updated: '2025-09-19'
+  author: user_2
+  testmo_id: 601
+  folder_id: 59
+preconditions:
+- description: User is in the Home screenLock/Unlock buttons are in the Telematics
+    row
+steps:
+- id: 1
+  action: User taps "Lock" button
+  expected: 'TCU2K/AVK/AVK2: "Are you sure? This action will remotely lock your vehicle."
+    and two buttons "No" and "Yes"'
+- id: 2
+  action: User taps "No" button on the confirmation modal
+  expected: Modal is dismissed
+- id: 3
+  action: User taps "Lock" button again
+  expected: 'TCU2K/AVK/AVK2: "Are you sure? This action will remotely lock your vehicle."
+    and two buttons "No" and "Yes"'
+- id: 4
+  action: User taps "Yes" button on the confirmation modal
+  expected: Contacting <year and model> to lock... | Waking <year and model> to lock...
+    | Initiating lock on <year and model>...

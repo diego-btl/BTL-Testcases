@@ -1,0 +1,24 @@
+metadata:
+  id: TC02823
+  name: Edit Alerts
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-09-11'
+  updated: '2026-01-06'
+  author: user_4
+  testmo_id: 2823
+  folder_id: 417
+description: https://www.pivotaltracker.com/story/show/185973627
+preconditions:
+- description: User is a SHARED_DRIVER
+steps:
+- id: 1
+  action: Tap on each of the different alert types
+  expected: User should be able to see the edit alert screen for the corresponding
+    alert but all options (text fields, buttons, checkboxes, sliders, etc.) are disabled

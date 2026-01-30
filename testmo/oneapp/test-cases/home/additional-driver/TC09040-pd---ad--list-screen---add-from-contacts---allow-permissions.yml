@@ -1,0 +1,37 @@
+metadata:
+  id: TC09040
+  name: PD - AD  List Screen - Add from Contacts - Allow Permissions
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-11-23'
+  updated: '2024-10-17'
+  author: user_4
+  testmo_id: 9040
+  folder_id: 411
+description: https://www.pivotaltracker.com/story/show/186141206
+preconditions:
+- description: User has an AVK2 vehicle and is PRIMARY_DRIVER
+- description: User is on the Additional Driver screen
+- description: There are less than 4 invites
+steps:
+- id: 1
+  action: Tap on Add A Driver
+  expected: User should see options for Add from Contacts, Add New, and Cancel
+- id: 2
+  action: Tap on Add from Contacts
+  expected: User should see permissions modal to access Contacts with options - Don't
+    Allow and OK
+- id: 3
+  action: Tap on OK
+  expected: User should see Contact list appear
+- id: 4
+  action: Select a contact
+  expected: User should see the invitation screen auto-filled with the corresponding
+    information | If there are multiple values for a single field (ex. email, phone
+    number) auto-fill should use the first available value

@@ -1,0 +1,37 @@
+metadata:
+  id: TC02694
+  name: Home - Stop Engine/Climate - Initiated
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-09-07'
+  updated: '2025-09-22'
+  author: user_3
+  testmo_id: 2694
+  folder_id: 4168
+description: https://www.pivotaltracker.com/story/show/185088492
+preconditions:
+- description: User has an AVK2 vehicleEngine is ON
+steps:
+- id: 1
+  action: User taps an Engine STOP button
+  expected: 'AVK2: "Are you sure? This action will remotely stop your vehicle and
+    stop your climate settings. Would you like to proceed?" with two buttons "No"
+    and "Yes"'
+- id: 2
+  action: User taps "No" button on confirmation modal
+  expected: A modal is dismissed
+- id: 3
+  action: User taps an Engine STOP button again
+  expected: 'AVK2: "Are you sure? This action will remotely stop your vehicle and
+    stop your climate settings. Would you like to proceed?" with two buttons "No"
+    and "Yes"'
+- id: 4
+  action: User taps "Yes" button on confirmation modal
+  expected: Contacting <year and model> to stop engine... | Initiating engine stop
+    on <year and model>...

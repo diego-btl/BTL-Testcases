@@ -1,0 +1,32 @@
+metadata:
+  id: TC11095
+  name: SD - Code Verification Screen - Verify and Proceed - Success
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-11-27'
+  updated: '2025-08-21'
+  author: user_4
+  testmo_id: 11095
+  folder_id: 411
+description: https://www.pivotaltracker.com/story/show/186049955
+preconditions:
+- description: User is logged into an account with a pending AD invite
+- description: User is on the Code Verification screen
+- description: In order to receive the OTP code, you will need to have mocked user
+    own number in VehiclesStaticData and UserMobileNumber or setting a breakpoint
+    on GenerateOTPForSharedDriver and modifying the request with your own number
+steps:
+- id: 1
+  action: Enter 5 digits (correct code) and tap on Verify and Proceed
+  expected: 'User should see a loading spinner, then redirected to the home screen
+    which updates (VehiclesStaticData,VehicleDynamicData, and all the other API calls
+    should be triggered) and shows a success toast for accepting the invite | User
+    should not see the AD Invite card unless there are other pending invites | Note:
+    Vehicle data won''t actually load because all AVK2 vehicles require an IVI (in
+    vehicle infotainment) login before data starts flowing'

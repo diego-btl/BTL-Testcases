@@ -1,0 +1,26 @@
+metadata:
+  id: TC00872
+  name: Vehicle status card
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-04'
+  updated: '2025-10-28'
+  author: user_7
+  testmo_id: 872
+  folder_id: 45
+preconditions:
+- description: User has a Vehicle status indicator active
+steps:
+- id: 1
+  action: Vehicle data returned
+  expected: User should see Vehicle status card with secondary text containing Vehicle
+    status warning name - if there are warnings, will also show '+# more'
+- id: 2
+  action: Tap on Vehicle status card
+  expected: User should see Vehicle Status screen with Vehicle tab

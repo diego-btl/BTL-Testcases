@@ -1,0 +1,45 @@
+metadata:
+  id: TC62242
+  name: Second Delivery - Edit Appointment - Failure and Retry
+  feature: test-cases
+  priority: critical
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-12-19'
+  updated: '2026-01-06'
+  author: user_23
+  testmo_id: 62242
+  folder_id: 6821
+description: 'Second Delivery - Edit Appointment - Failure and Retry: Error HandlingValidates
+  that when editing an appointment fails, the system displays an error modal with
+  options to retry or cancel, and that retry functionality works correctly.Notes:User
+  has modified appointment details and tapped Save ChangesUpdateSecondDeliveryAppointment
+  mutation returns failure responseError modal displays with title, message, and action
+  buttonsRetry button re-triggers the mutationCancel button dismisses modal and keeps
+  user on Review screenUser data is preserved after canceling error modal'
+steps:
+- id: 1
+  action: 'Mock the UpdateSecondDeliveryAppointment mutation to return failure: ->
+    { "data": { "updateSecondDeliveryAppointment": { "__typename": "UpdateSecondDeliveryAppointmentUnknownErrorResponse",
+    "message": "Failed to update appointment. Please try again later." } } }Tap Save
+    Changes button'
+  expected: 'UpdateSecondDeliveryAppointment mutation is triggered | Error modal is
+    displayed on Review screen | Modal title: Failed to Book Appointment | Modal message:
+    Sorry, something went wrong when booking your appointment. You can retry or call
+    1-844-471-1010 to book over the phone. | Cancel button is displayed | Retry button
+    is displayed | Background is dimmed/overlayed | User remains on Review screen'
+- id: 2
+  action: Tap Retry button
+  expected: 'UpdateSecondDeliveryAppointment mutation is triggered again | If success:
+    User is redirected to Appointment Scheduled screen | If failure: Error modal is
+    displayed again'
+- id: 3
+  action: Tap Cancel button (if error modal appears again)
+  expected: Modal is dismissed | User remains on Review screen | All modified appointment
+    data is preserved:Updated date and time | Updated contact information | Updated
+    special instructions | Save Changes button remains enabled | User can attempt
+    to save again or navigate back

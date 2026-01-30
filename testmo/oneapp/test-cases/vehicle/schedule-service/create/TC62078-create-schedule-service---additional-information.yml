@@ -1,0 +1,59 @@
+metadata:
+  id: TC62078
+  name: Create Schedule Service - Additional Information
+  feature: test-cases
+  priority: critical
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-12-02'
+  updated: '2026-01-20'
+  author: user_23
+  testmo_id: 62078
+  folder_id: 6787
+description: 'Create Schedule Service - Additional Information Screen Validation:
+  Service Details and Vehicle Information CollectionValidates the Additional Information
+  screen displays correctly and allows users to enter service-specific details and
+  vehicle mileage. Users can add comments about their service needs and confirm vehicle
+  mileage before proceeding to date/time selection.Notes:If services with maintenance
+  flag set to true are selected, the Estimated Next Service Interval section will
+  appear, if not, then that section does not show up'
+preconditions:
+- description: User has selected one or more services from the Select Services screen
+    and tapped NEXT
+steps:
+- id: 1
+  action: Verify user arrives on Additional Information screen after tapping NEXT
+    from Select Services screen
+  expected: Screen title is Additional Information | Progress indicator shows current
+    step (Step 2 of 4) | Vehicle Concern Information section displays with selected
+    service-specific text fields | NEXT button is disabled (grayed out) until vehicle
+    mileage is entered
+- id: 2
+  action: Verify Tell Us More section displays with text input field
+  expected: Text field label shows Can you provide any more details? | Text field
+    is empty and ready for input | Placeholder text is visible
+- id: 3
+  action: Enter comments in the Tell Us More text field
+  expected: Text is entered successfully in the text field | Characters are displayed
+    as typed | NEXT button remains disabled
+- id: 4
+  action: Verify Vehicle Mileage section displays
+  expected: Vehicle Mileage label is displayed | Input field shows current vehicle
+    mileage (or 0 if not available) | Field is editable
+- id: 5
+  action: Enter or modify vehicle mileage in the mileage field
+  expected: Mileage value is updated in the field | Numeric input is accepted | NEXT
+    button becomes enabled (active state)
+- id: 6
+  action: Tap NEXT button with vehicle mileage entered
+  expected: User proceeds to Select Date and Time screen | Entered information is
+    passed to next step
+- id: 7
+  action: Tap Call Dealer link (NISSAN) or Call Retailer link (INFINITI)
+  expected: 'Phone number is retrieved from VehiclePreferredDealer query phone field
+    | Android: Phone dialer opens with dealer/retailer contact number | iOS: Phone
+    call drawer/sheet opens with dealer/retailer contact number and Call/Cancel options'

@@ -1,0 +1,35 @@
+metadata:
+  id: TC00648
+  name: Add Climate Schedule
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-01'
+  updated: '2025-12-19'
+  author: user_2
+  testmo_id: 648
+  folder_id: 4169
+preconditions:
+- description: User is on Climate screen
+steps:
+- id: 1
+  action: Tap on Add button2. Fill in a departure time (at least 15 mins from now)3.
+    Tap on arrows or drag dial to change temperature4. Tap one of the quick options5.
+    Tap on days of the week6. Tap to Create Schedule
+  expected: 'User should see Climate Schedule screen in the empty state, create button
+    disabled2. User should see selected times filled into field3. User should see
+    selected temperature between 61-87 (after 87 it says hi) degrees4. User should
+    see the corresponding days of the week highlighted5. User should see corresponding
+    days of the week selected/unselected6. User should see a loading spinner while
+    schedule is being created | User should see folowing toasts: Contacting {vehicle
+    year, model} to Create Climate Schedule...Waking {vehicle year, model} o Create
+    Climate Schedule...Initiating o Climate Schedule on {vehicle year, model}...User
+    should see a success toast if schedule was created successfullyUser should be
+    returned to the Climate screen with newly added schedule shownDeparture time,
+    temperature, and days of the week are required fieldsNote: If create schedule
+    fails, user should see a failure toast and remain on the Climate Schedule screen'

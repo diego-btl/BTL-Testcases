@@ -1,0 +1,36 @@
+metadata:
+  id: TC29934
+  name: Subscription Packages Card - FF is disabled
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-01-13'
+  updated: '2025-12-09'
+  author: user_25
+  testmo_id: 29934
+  folder_id: 3863
+description: Nissan NNA and INFINITI NNA only
+preconditions:
+- description: 'FF "EnableTelematicsBSM": "false"'
+steps:
+- id: 1
+  action: Choose an active vehicle and navigate to the Vehicle screen
+  expected: The user should not see the Subscription PackagesCard at the bottom of
+    the screen
+- id: 2
+  action: Navigate to the Vehicle > Vehicle Profile > Vehicle Preferences
+  expected: Verify that Package Info card is displayed
+- id: 3
+  action: Tap the Package Info card
+  expected: User is redirected to the Package Info screen which includes information
+    about existing Subscription, expiration date, when Subscription began, and Package
+    Detailes card
+- id: 4
+  action: Tap Package Details card
+  expected: User is redirected to the Package Details screen with information regarding
+    existing Subscription

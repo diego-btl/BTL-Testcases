@@ -1,0 +1,110 @@
+metadata:
+  id: TC01445
+  name: Demo Mode - Charge
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-28'
+  updated: '2025-12-18'
+  author: user_2
+  testmo_id: 1445
+  folder_id: 6806
+preconditions:
+- description: User has the LEAF selected
+- description: V2L is enabled in firebase configs
+- description: Charge History is enabled in firebase configs
+steps:
+- id: 1
+  action: Tap the 'Charge' card
+  expected: Charge Status cardRefresh icon | Manage EV cta | NISSAN ENERGY Charge
+    Network cardFind In-Netwrok Chargers CTA | Plug & Charge card with a toggle enabled
+    by defaultThe user can interact with the toggle.
+- id: 2
+  action: Tap on MANAGE EV CTA
+  expected: 'NISSAN ENERGY Charge Network cardSubtitle: Active | Charge Limit cardSubtitle:
+    80% | Vehicle-to-Load cardSubtitle: All On - 30% | Charge History card | Schedule
+    card2 charge scheduled | Add Option | START CHARGING cta'
+- id: 3
+  action: Tap on START CHARGING
+  expected: User should see a dismissible alert informing them the feature is not
+    available in demo mode
+- id: 4
+  action: Tap on any Charge Schedule
+  expected: User should see the charge schedule details screen
+- id: 5
+  action: Change details for the charge schedule
+  expected: User is able to change details for the charge schedule
+- id: 6
+  action: Tap Save/Delete Schedule
+  expected: User should see a dismissable alert informing them the feature is not
+    available in demo mode
+- id: 7
+  action: Tap to toggle charge schedule
+  expected: Contacting <year and model> to toggle charge schedule... | Waking <year
+    and model> to toggle charge schedule... | Initiating toggle charge schedule on
+    <year and model>... | Charge schedule toggled
+- id: 8
+  action: Tap on the Add option
+  expected: User should see a dismissible alert informing them that the feature is
+    not available in demo mode
+- id: 9
+  action: Tap on NECN card
+  expected: Account Status cardDeactivate Account cta | Plug & Charge card with a
+    toggle enabled by defaultThe user can interact with the toggle. | Payment Method
+    cardCredit card demo info | Change Payment Method cta | CALL OUR HELP LINE
+- id: 10
+  action: Tap on any element except PnC toggle
+  expected: User should see a dismissible alert informing them that the feature is
+    not available in demo mode
+- id: 11
+  action: Tap on back arrow
+  expected: User is led to Manage EV screen
+- id: 12
+  action: Tap on Charge Limit card
+  expected: Charge Limit cardCharge Limit Setting field with 80% set by default |
+    Set Charge Limit CTA is disabled by default | Charge Notification cardNotify at
+    field with 20% set by default | Set Notification CTA is disabled by default |
+    MANAGE NOTIFICATIONS option
+- id: 13
+  action: Select any value different from default on Charge Limit Setting field
+  expected: Setting Charge limit | Charge Limit set
+- id: 14
+  action: Select any value different from default on Notify at field
+  expected: Notification set
+- id: 15
+  action: Tap on MANAGE NOTIFICATIONS option
+  expected: User is led to the Notification Preferences screen
+- id: 16
+  action: Tap on back arrow
+  expected: User is led to Charge Limit screen
+- id: 17
+  action: On Manage EV screen, tap on Vehicle-to-Load (V2L) card
+  expected: Vehicle-to-Load Remote Services card (All On status)Minimum Charge dropdown
+    | % set by default | Set Minimum Charge CTA is disabled by default | MANAGE NOTIFICATIONS
+    option
+- id: 18
+  action: Select any value different from default on Minimum Charge dropdown
+  expected: Contacting <year and model>... | Waking <year and model>... | Initiating
+    Vehicle-to-Load limit... | Vehicle-to-Load limit set
+- id: 19
+  action: Tap on MANAGE NOTIFICATIONS option
+  expected: User is led to the Notification Preferences screen
+- id: 20
+  action: Tap on back arrow
+  expected: User is led to V2L screen
+- id: 21
+  action: On Manage EV screen, tap on Charge History card
+  expected: User should see a dismissible alert informing them that the feature is
+    not available in demo mode
+- id: 22
+  action: On Manage EV screen tap 'Find In-network Chargers' CTA
+  expected: User is redirected to the Map screen | Charge Stations are shown in the
+    Search filed, charge stations cards are shown at the bottom of the screen
+- id: 23
+  action: On the Manage EV screen tap the 'Refresh' button
+  expected: The loading state with the charge icon is displayed

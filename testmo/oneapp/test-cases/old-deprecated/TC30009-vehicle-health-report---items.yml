@@ -1,0 +1,24 @@
+metadata:
+  id: TC30009
+  name: Vehicle Health Report - Items
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-01-21'
+  updated: '2025-11-11'
+  author: user_17
+  testmo_id: 30009
+  folder_id: 105
+preconditions:
+- description: User is on the Vehicle Profile sheet, has the VHR capability and has
+    VHR items
+steps:
+- id: 1
+  action: Tap Vehicle Health Report item
+  expected: User should see the VHR items as individual CTAs with the date of the
+    report in the CTAUser is able to open the selected VHR

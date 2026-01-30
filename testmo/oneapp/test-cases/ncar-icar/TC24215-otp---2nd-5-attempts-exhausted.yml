@@ -1,0 +1,29 @@
+metadata:
+  id: TC24215
+  name: OTP - 2nd 5 attempts exhausted
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2024-08-28'
+  updated: '2024-10-17'
+  author: user_4
+  testmo_id: 24215
+  folder_id: 3081
+preconditions:
+- description: User is on OTP screen
+steps:
+- id: 1
+  action: 1. Enter an incorrect code in the OTP field 2. Tap on Verify and Proceed
+    3. Enter another incorrect code 4. Exhaust all 5 attempts 5. Tap on Reset
+  expected: 1. User should be able to enter a numerical code in the field User should
+    see Verify CTA enable once 5 numbers have been entered User should see that the
+    send new code link is disabled 2. User should see an error text with number of
+    attempts remaining 3. User should be able to modify the OTP field with another
+    code 4. User should see a message that too many attempts have been made and reset
+    needs to be selected to get a new link 5. User should be brought back to the app
+    landing screen

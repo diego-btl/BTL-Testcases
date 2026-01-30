@@ -1,0 +1,23 @@
+metadata:
+  id: TC00574
+  name: Vehicle status indicator
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-01'
+  updated: '2025-10-11'
+  author: user_2
+  testmo_id: 574
+  folder_id: 51
+preconditions:
+- description: User has a Vehicle status indictor active
+steps:
+- id: 1
+  action: Vehicle data returned2. Tap on Vehicle status indicator
+  expected: User should see Vehicle status indicator on vehicle image1. User should
+    see Vehicle Status screen with Vehicle tab showing Vehicle statuses

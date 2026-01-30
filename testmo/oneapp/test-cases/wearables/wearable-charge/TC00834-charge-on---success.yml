@@ -1,0 +1,23 @@
+metadata:
+  id: TC00834
+  name: Charge On - Success
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-01'
+  updated: '2024-10-17'
+  author: user_2
+  testmo_id: 834
+  folder_id: 75
+steps:
+- id: 1
+  action: Connect device to proxy -> Login into the App -> Wait for all initial APIs
+    to finish loading -> Modify ChargeStatus so that vehicle.batteryStatus.isCharging
+    is TRUE -> Modify ChargeServiceRequest so that data.status is SUCCESS -> BG/FG
+    the app -> Observe the lock status in the home hero
+  expected: See in the Home Hero modal that the vehicle is being charged

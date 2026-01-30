@@ -1,0 +1,26 @@
+metadata:
+  id: TC62163
+  name: Demo Mode - Splash Page
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-12-16'
+  updated: '2025-12-16'
+  author: user_15
+  testmo_id: 62163
+  folder_id: 42
+preconditions:
+- description: Fresh installation or app cache cleared
+steps:
+- id: 1
+  action: Open the app
+  expected: SIGN IN button | REGISTER button | DEMO MODE option | PRIVACY & TERMS
+    option
+- id: 2
+  action: Tap on DEMO MODE option
+  expected: The user is taken to the Home screen from demo mode.

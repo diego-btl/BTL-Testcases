@@ -1,0 +1,29 @@
+metadata:
+  id: TC11120
+  name: Manage EV Screen - All Off
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2024-02-04'
+  updated: '2025-12-09'
+  author: user_4
+  testmo_id: 11120
+  folder_id: 1454
+description: https://app.clickup.com/t/86b64dch1
+preconditions:
+- description: User has an EV AVK2 vehicle
+- description: V2L capability is returning true
+- description: User is on the Charge screen
+steps:
+- id: 1
+  action: Tap on the Manage EV button
+  expected: User should see the Manage EV screen load and open
+- id: 2
+  action: Data returned for v2lStatus.State is ALL_OFF
+  expected: User should see the Vehicle-to_Load card in the enabled state with the
+    relevant secondary text "All Off"

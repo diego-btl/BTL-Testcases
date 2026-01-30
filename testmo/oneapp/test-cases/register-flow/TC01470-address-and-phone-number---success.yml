@@ -1,0 +1,26 @@
+metadata:
+  id: TC01470
+  name: Address and Phone Number - Success*
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-28'
+  updated: '2025-08-21'
+  author: user_2
+  testmo_id: 1470
+  folder_id: 43
+description: Verify Address and Phone Number success during Registration
+preconditions:
+- description: User is on the second registration screen
+steps:
+- id: 1
+  action: Enter valid address, ZIP code and phone number fields
+  expected: User should see NEXT become enabled
+- id: 2
+  action: Tap on Next CTA button
+  expected: User should be taken to the final registration screen

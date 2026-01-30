@@ -1,0 +1,28 @@
+metadata:
+  id: TC11129
+  name: V2L Screen - Set Minimum SoC - Success
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2024-02-05'
+  updated: '2025-12-09'
+  author: user_4
+  testmo_id: 11129
+  folder_id: 1454
+description: https://www.pivotaltracker.com/story/show/186645145
+preconditions:
+- description: User has an EV AVK2 vehicle
+- description: V2L capability is returning true
+- description: User is on the Vehicle-to_Load Screen
+- description: Set CheckV2LServiceRequest to return the PENDING status
+steps:
+- id: 1
+  action: Mock CheckV2LServiceRequest so that status returns SUCCESS
+  expected: User should see a success toast Vehicle-to-Load limit set. (5 seconds)
+    | User should see the Set Minimum SoC CTA change back to the regular state (disabled)
+    | The V2lStatus API should not be called

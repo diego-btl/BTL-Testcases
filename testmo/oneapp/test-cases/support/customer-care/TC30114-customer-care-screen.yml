@@ -1,0 +1,23 @@
+metadata:
+  id: TC30114
+  name: Customer Care screen
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-02-03'
+  updated: '2025-10-08'
+  author: user_17
+  testmo_id: 30114
+  folder_id: 85
+steps:
+- id: 1
+  action: Tap the Customer Care card
+  expected: The user should be taken to the Customer Care screen
+- id: 2
+  action: Tap the Call Customer Care button
+  expected: 'The user should be able to call:'

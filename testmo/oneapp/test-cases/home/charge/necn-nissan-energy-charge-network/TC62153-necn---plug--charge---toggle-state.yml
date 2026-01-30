@@ -1,0 +1,31 @@
+metadata:
+  id: TC62153
+  name: NECN - Plug & Charge - Toggle State
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-12-15'
+  updated: '2026-01-15'
+  author: user_25
+  testmo_id: 62153
+  folder_id: 2444
+preconditions:
+- description: User has an EV/EV2
+- description: '"EnablePlugAndCharge": "true"'
+- description: 'VehicleStaticData > "driverType": "PRIMARY_DRIVER"'
+- description: 'AccountStatus > "status": "ACTIVE"'
+steps:
+- id: 1
+  action: 'Mock AccountStatus API to return "pncStatus": "READY" and "toggleStatus":
+    "ENABLED"/"DISABLED" -> Navigate to the NISSAN ENERGY Charge Network screen'
+  expected: The toggle is in ON/OFF state on the Plug & Charge card
+- id: 2
+  action: 'Mock AccountStatus API to return "pncStatus": "READY" and "toggleStatus":
+    "PENDING"/"NA"/null -> Navigate to the NISSAN ENERGY Charge Network screen'
+  expected: The 'ERROR' status is displayed on the Plug & Charge card in place of
+    the Toggle

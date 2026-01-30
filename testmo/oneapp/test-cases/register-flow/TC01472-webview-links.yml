@@ -1,0 +1,45 @@
+metadata:
+  id: TC01472
+  name: Webview links*
+  feature: test-cases
+  priority: critical
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-28'
+  updated: '2025-07-04'
+  author: user_2
+  testmo_id: 1472
+  folder_id: 43
+description: Verify user on final registration screen is able to open Webview links
+  and return back properly to the app
+preconditions:
+- description: User is on the final registration screen
+steps:
+- id: 1
+  action: Tap on Terms of Service link
+  expected: 'User should be able to open Terms of Service web-view Header is displayed
+    as Terms of Service | Note: For Android it includes a back < button and an X icon
+    for IOS'
+- id: 2
+  action: Tap on return arrow / close icon from Terms of Service screen
+  expected: User is able to see the final Registration screen
+- id: 3
+  action: Tap on Privacy Notice link
+  expected: 'User should be able to open the Privacy Notice web-view Header is displayed
+    as Privacy Notice | Note: For Android it includes a back < button and an X icon
+    for IOS'
+- id: 4
+  action: Tap on return arrow / close icon from Privacy Notice screen
+  expected: User is able to see the final Registration screen
+- id: 5
+  action: Tap on Data Privacy Notice link
+  expected: 'User should be able to open Privacy Notice web-view Header is displayed
+    as Data Privacy Notice | NOTE: Data Privacy should be removed for NCINote: For
+    Android it includes a back < button and an X icon for IOS'
+- id: 6
+  action: Tap on return arrow / close icon from Data Privacy Notice screen
+  expected: User is able to see the final Registration screen

@@ -1,0 +1,21 @@
+metadata:
+  id: TC00909
+  name: Button
+  feature: test-cases
+  priority: critical
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-04'
+  updated: '2024-10-17'
+  author: user_7
+  testmo_id: 909
+  folder_id: 94
+steps:
+- id: 1
+  action: Tap on Find a Dealer
+  expected: User should see the Find a Dealer screen with nearest dealers in list
+    view

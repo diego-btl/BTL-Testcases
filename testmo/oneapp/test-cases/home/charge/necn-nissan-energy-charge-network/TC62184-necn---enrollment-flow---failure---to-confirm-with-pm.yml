@@ -1,0 +1,43 @@
+metadata:
+  id: TC62184
+  name: NECN - Enrollment Flow - FAILURE - TO CONFIRM WITH PM
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-12-17'
+  updated: '2026-01-15'
+  author: user_25
+  testmo_id: 62184
+  folder_id: 2444
+preconditions:
+- description: User has an EV/EV2
+- description: '"EnablePlugAndCharge": "true"'
+- description: 'AccountStatus API > "status": "NOT_ENROLLED"/"FAILED"/"CANCELLED"'
+- description: User is on the NECN screen
+- description: Payment Method is added
+steps:
+- id: 1
+  action: Add a breakpoint to the UpsertNissanPayAccount API -> Tap 'ACTIVATE' CTA
+    -> Abort the UpsertNissanPayAccount API
+  expected: The loading state is displayed | The 'Something Went Wrong' modal with
+    the copy 'Sorry, something went wrong, please try again.' and 'Cancel' and 'Retry'
+    buttons is triggered
+- id: 2
+  action: Tap 'Cancel'
+  expected: The modal is dismissed
+- id: 3
+  action: Tap 'Retry' and let the UpsertNissanPayAccount API to be executed -> Add
+    a breakpoint and abort the EnrollChargePlan API
+  expected: The loading state is displayed | The 'Activation failed' toast is displayed
+    *
+- id: 4
+  action: Tap 'ACTIVATE' and let the EnrollChargePlan API to return the success response
+    -> Add a breakpoint and abort the AccountStatus API
+  expected: The loading state is displayed | The 'Activation failed' toast is displayed
+    | User remains on the same NECN screen | 'Account Status' card status is 'Not
+    Activated'

@@ -1,0 +1,25 @@
+metadata:
+  id: TC01558
+  name: Retailer Details - native false, url true
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-28'
+  updated: '2024-10-17'
+  author: user_2
+  testmo_id: 1558
+  folder_id: 93
+preconditions:
+- description: User has a preferred retailer
+steps:
+- id: 1
+  action: 1. Tap on Schedule Service card 2. Tap on Call Retailer 3. Tap on Schedule
+    Service Online CTA
+  expected: 1. User should see Retailer Details with retailer information 2. User
+    should be brought to the dialer with servicePhone populated 3. User should see
+    browser open to scheduling URL Other CTAs function the same as above

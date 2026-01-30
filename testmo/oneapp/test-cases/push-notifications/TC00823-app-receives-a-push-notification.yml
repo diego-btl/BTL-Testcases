@@ -1,0 +1,24 @@
+metadata:
+  id: TC00823
+  name: App Receives a Push Notification
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-01'
+  updated: '2025-09-19'
+  author: user_2
+  testmo_id: 823
+  folder_id: 73
+preconditions:
+- description: User is logged in
+- description: App has Push Notifications registered
+- description: Device allows Push Notifications
+steps:
+- id: 1
+  action: Trigger a push notification
+  expected: User should be able to see the push notifications arrive

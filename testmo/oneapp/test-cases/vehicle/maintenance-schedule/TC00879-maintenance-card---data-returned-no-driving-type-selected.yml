@@ -1,0 +1,25 @@
+metadata:
+  id: TC00879
+  name: Maintenance Card - Data Returned, No Driving Type selected
+  feature: test-cases
+  priority: critical
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-04'
+  updated: '2025-12-10'
+  author: user_7
+  testmo_id: 879
+  folder_id: 91
+preconditions:
+- description: User is in the Vehicle Page
+- description: Odometer data has been returned or manually entered in the past 3 months
+- description: User has not selected a driving type
+steps:
+- id: 1
+  action: Scroll down and check the View Maintenance Schedule card
+  expected: 'Title: View Maintenance Schedule | An empty progress bar | Text: "Please
+    select a driving condition to see your maintenance schedule estimates."'

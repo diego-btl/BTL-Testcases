@@ -1,0 +1,46 @@
+metadata:
+  id: TC62143
+  name: Delete Service Request - Failure
+  feature: test-cases
+  priority: critical
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-12-11'
+  updated: '2026-01-20'
+  author: user_23
+  testmo_id: 62143
+  folder_id: 6797
+description: 'Delete Service Request - Failure: Error HandlingValidates error handling
+  when CancelServiceAppointment mutation fails. Tests that appropriate error modal
+  is displayed and user remains on Upcoming Appointment screen to retry or cancel.Notes:Applies
+  to both delete scenarios (direct from Upcoming Appointment and during edit flow)Error
+  modal title: Failed to Delete Service RequestError message: Sorry, something went
+  wrong deleting your service request. Please try again.User remains on Upcoming Appointment
+  screen after dismissing errorIf in edit flow: unsaved changes remain intactUser
+  can retry deletion or continue editing/viewing'
+preconditions:
+- description: User has one or more booked service appointments
+- description: User is on Upcoming Appointment screen (direct or during edit flow)
+- description: CancelServiceAppointment mutation fails due to network or server error
+steps:
+- id: 1
+  action: Tap DELETE SERVICE REQUEST button from Upcoming Appointment screen (direct
+    or during edit flow)
+  expected: 'Confirmation modal appears with title: Delete Service Request? | Modal
+    message: Are you sure you want to delete your service request? You will have to
+    start over if you want to schedule another service. | No, continue button is displayed
+    | Yes, delete button is displayed'
+- id: 2
+  action: On confirmation modal, tap Yes, delete button (when CancelServiceAppointment
+    mutation fails)
+  expected: 'Error modal appears with title: Failed to Delete Service Request | Error
+    message: Sorry, something went wrong deleting your service request. Please try
+    again. | Ok button is displayed'
+- id: 3
+  action: Tap Ok button on error modal
+  expected: 'Modal is dismissed | User remains on Upcoming Appointment screen | Appointment
+    is NOT deleted | If in edit flow: unsaved changes remain intact'

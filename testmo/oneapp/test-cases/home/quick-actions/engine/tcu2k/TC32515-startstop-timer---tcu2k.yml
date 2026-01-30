@@ -1,0 +1,26 @@
+metadata:
+  id: TC32515
+  name: Start/Stop Timer - TCU2K
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-04-04'
+  updated: '2025-09-22'
+  author: user_25
+  testmo_id: 32515
+  folder_id: 4166
+preconditions:
+- description: The vehicle engine has been started successfully
+- description: The Countdown timer is displayed in the Hero section (10 min)
+steps:
+- id: 1
+  action: Wait for 10 minutes to check the app's behavior
+  expected: the countdown timer is dismissed in the Hero section, Fuel Remaining is
+    displayed in the Hero section instead | the STOP Engine button is changed to the
+    default state | the toast "<year and model> engine turned off" is displayed at
+    the bottom of the screen

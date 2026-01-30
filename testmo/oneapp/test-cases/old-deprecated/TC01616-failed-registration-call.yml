@@ -1,0 +1,26 @@
+metadata:
+  id: TC01616
+  name: Failed Registration Call
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-28'
+  updated: '2025-01-28'
+  author: user_2
+  testmo_id: 1616
+  folder_id: 105
+preconditions:
+- description: API Failures should be a 503 response, do this by doing a map local
+    to the Register Push Notifications Endpoints
+steps:
+- id: 1
+  action: Log in or launch the App and Fail the Register Push Notifications
+  expected: First Retry 30 seconds after the first API call failed. | Second Retry
+    60 seconds after the previous API call fails. | Third Retry 90 seconds after the
+    previous API call fails. | Fourth and Last Retry 120 seconds after the last API
+    call fails.

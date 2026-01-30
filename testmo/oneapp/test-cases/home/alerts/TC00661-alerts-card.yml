@@ -1,0 +1,20 @@
+metadata:
+  id: TC00661
+  name: Alerts Card
+  feature: test-cases
+  priority: critical
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-01'
+  updated: '2025-10-06'
+  author: user_2
+  testmo_id: 661
+  folder_id: 70
+steps:
+- id: 1
+  action: Tap Alerts Card
+  expected: Users should see an alerts card with their currently set alerts

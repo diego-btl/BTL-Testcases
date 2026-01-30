@@ -1,0 +1,22 @@
+metadata:
+  id: TC30010
+  name: Remote Data Wipe
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-01-21'
+  updated: '2025-10-10'
+  author: user_17
+  testmo_id: 30010
+  folder_id: 90
+preconditions:
+- description: User is on the Vehicle Profile sheet and has the remote data wipe capability
+steps:
+- id: 1
+  action: Tap Remote Data Wipe
+  expected: User should be taken to the Remote Data Wipe screen

@@ -1,0 +1,35 @@
+metadata:
+  id: TC29644
+  name: Validate ICE Maintenance Card Display
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2024-12-12'
+  updated: '2026-01-14'
+  author: user_23
+  testmo_id: 29644
+  folder_id: 105
+description: This test case ensures that the "Maintenance Care" card is displayed
+  correctly on both the Vehicle and Support screens for ICE vehicles. It verifies
+  that the card is consistent with the design for both Light and Dark modes, and that
+  it appears as expected when the user is logged in with an active account and the
+  complimentaryMaintenancePackage is set to "NISSAN" in VehiclesStaticData
+preconditions:
+- description: User is logged in with an active account.
+- description: complimentaryMaintenancePackage is set to "NISSAN" in VehiclesStaticData.
+- description: The vehicle is an ICE (Internal Combustion Engine) vehicle.
+steps:
+- id: 1
+  action: Log in with an active account.
+  expected: See expected results
+- id: 2
+  action: Navigate to the Vehicle screen
+  expected: The "Maintenance Care" card is displayed
+- id: 3
+  action: Navigate to the Support screen.
+  expected: The "Maintenance Care" card is displayed

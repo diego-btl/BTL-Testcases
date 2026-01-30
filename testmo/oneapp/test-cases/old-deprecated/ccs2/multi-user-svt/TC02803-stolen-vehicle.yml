@@ -1,0 +1,29 @@
+metadata:
+  id: TC02803
+  name: Stolen Vehicle
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-09-08'
+  updated: '2026-01-06'
+  author: user_3
+  testmo_id: 2803
+  folder_id: 428
+preconditions:
+- description: 'User''s vehicle is in the stolen state (status: "STOLEN")User is a
+    PRIMARY_DRIVER or SHARED_DRIVER (to be tested for both for AVK2)'
+steps:
+- id: 1
+  action: Launch app to home screen2. Tap on Call Customer Care3. Tap on Vehicle tab4.
+    Tap on Map tab
+  expected: User should see all feature cards disabled except for the NMAC card. User
+    should see the stolen badge displayed on the home hero2. User should see call
+    button 1-844-711-8100 (NNA) 1-844-711-8200 (NCI)3. User should see items in the
+    stolen state with the stolen badge. User should only be able to tap the Vehicle
+    Profile button4. User should not see the vehicle's location and the vehicle pin
+    is hidden, info drawer shows stolen badge

@@ -1,0 +1,29 @@
+metadata:
+  id: TC62188
+  name: Charge station details -  Activated
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-12-18'
+  updated: '2026-01-30'
+  author: user_17
+  testmo_id: 62188
+  folder_id: 46
+preconditions:
+- description: The user selects an EV or EVAVK2 vehicles
+- description: EnablePlugAndCharge ff should be enabled.
+- description: AccountStatus query's response should be ACTIVE
+steps:
+- id: 1
+  action: Tap Chargers Available link on the POI card
+  expected: User is navigated to the Charge Station Details screen. All the information
+    matches the ChargePoint card from the Charge Stations screen
+- id: 2
+  action: Tap SELECT CHARGER CTA on the Charge Station Details screen
+  expected: User is navigated to the Select Charger screen, which contains information
+    about all the chargers

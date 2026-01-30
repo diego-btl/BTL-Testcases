@@ -1,0 +1,48 @@
+metadata:
+  id: TC62207
+  name: P&C Toggle Primary Driver - Active
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-12-19'
+  updated: '2026-01-15'
+  author: user_6
+  testmo_id: 62207
+  folder_id: 66
+preconditions:
+- description: User has an EV
+- description: User is on charge screen
+- description: GrantFullPlugAndCharge FF is enabled
+- description: NECN AccountStatus is Active
+- description: User is a Primary driver
+steps:
+- id: 1
+  action: Mock pncStatus as READY and toggleStatus as ENABLED
+  expected: PnC toggle card should be visible with the toggle enabled
+- id: 2
+  action: Mock pncStatus as READY and toggleStatus as DISABLED
+  expected: PnC toggle card should be visible with the toggle disabled
+- id: 3
+  action: Mock pncStatus as PENDING
+  expected: PnC toggle card should be visible with the status Installing... and no
+    toggle
+- id: 4
+  action: Mock pncStatus as INSTALLING
+  expected: PnC toggle card should be visible with the status Installing... and no
+    toggle
+- id: 5
+  action: Mock pncStatus as RENEWING
+  expected: PnC toggle card should be visible with the status Renewing... and no toggle
+- id: 6
+  action: Mock pncStatus as READY and toggleStatus as NA/null
+  expected: PnC toggle card should be visible with the copy ERROR and no toggle
+- id: 7
+  action: 'Mock pncStatus as FAILED and "pncStatusReason": "00" or "pncStatusReason":
+    "01"'
+  expected: PnC toggle card should be visible with the status Failed to Install and
+    no toggle

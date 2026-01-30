@@ -1,0 +1,18 @@
+metadata:
+  id: TC00652
+  name: Climate Control Status
+  feature: test-cases
+  priority: critical
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-01'
+  updated: '2025-10-14'
+  author: user_2
+  testmo_id: 652
+  folder_id: 4169
+preconditions:
+- description: User is on Climate screen

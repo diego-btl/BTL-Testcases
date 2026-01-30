@@ -1,0 +1,22 @@
+metadata:
+  id: TC00686
+  name: NMAC Account card
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-01'
+  updated: '2025-10-14'
+  author: user_2
+  testmo_id: 686
+  folder_id: 72
+preconditions:
+- description: User should be logged in
+steps:
+- id: 1
+  action: Navigate to the Home tab
+  expected: User should see a NMAC Account card (for Nissan) or IFS Account (for Infiniti)

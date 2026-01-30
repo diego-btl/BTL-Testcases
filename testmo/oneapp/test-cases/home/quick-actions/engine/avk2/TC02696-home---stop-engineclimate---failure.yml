@@ -1,0 +1,24 @@
+metadata:
+  id: TC02696
+  name: Home - Stop Engine/Climate - Failure
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-09-07'
+  updated: '2025-04-15'
+  author: user_3
+  testmo_id: 2696
+  folder_id: 4168
+description: https://www.pivotaltracker.com/story/show/185088492
+preconditions:
+- description: AVK2 vehicleEngine is ON
+steps:
+- id: 1
+  action: Stop engine request has resolved into a failure or 210 seconds have elapsed
+    since sending the initial command
+  expected: '"<year and model> failed to stop." (5 seconds)'

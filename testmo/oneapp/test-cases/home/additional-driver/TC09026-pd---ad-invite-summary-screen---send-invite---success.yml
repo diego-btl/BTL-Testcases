@@ -1,0 +1,27 @@
+metadata:
+  id: TC09026
+  name: PD - AD Invite Summary Screen - Send Invite - Success
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-11-21'
+  updated: '2025-09-22'
+  author: user_4
+  testmo_id: 9026
+  folder_id: 411
+description: https://www.pivotaltracker.com/story/show/184722599
+preconditions:
+- description: User has an AVK2 vehicle and is PRIMARY_DRIVER
+- description: User is on the Invite Summary screen
+steps:
+- id: 1
+  action: Tap on the Send Invite button -> Tap one of the two options
+  expected: User should see options to send via email or sms | User should see a loading
+    spinner and be taken back to the AD List screen with a success toastUser should
+    see all the data sent in the request for InviteDriver [iOS] match what was entered
+    by the userUser should receive an email/sms for the invitation request

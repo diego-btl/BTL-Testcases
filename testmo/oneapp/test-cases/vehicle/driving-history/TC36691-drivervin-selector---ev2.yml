@@ -1,0 +1,86 @@
+metadata:
+  id: TC36691
+  name: Driver/VIN Selector - EV2
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-05-08'
+  updated: '2025-11-12'
+  author: user_25
+  testmo_id: 36691
+  folder_id: 92
+preconditions:
+- description: User has an EV2 vehicle
+- description: User is on the Driving History screen
+- description: DrivingHistory API returns duplicate entries ("tripSummaries") for
+    the same day, month, or year
+steps:
+- id: 1
+  action: Choose the day that has duplicate entries in DrivingHistory API response
+  expected: Driver/VIN selector is present under the Day/Month/Year selector | Driver
+    option is selected by default
+- id: 2
+  action: Select "Driver" from the Driver/VIN selector
+  expected: The displayed information includes records with a valid `{userID}` from
+    DrivingHistory API response:- Avg Energy Economy- Avg Energy Consumed- Avg energy
+    Saved- Avg CO2 Saved- Total No. of Trips- Total Distance- Total Travel Time- Avg
+    Speed | "CO2 gas savings calculates the emissions you save by driving a Nissan
+    electric vehicle." text is displayed at the bottom of the card
+- id: 3
+  action: Select "VIN" from the Driver/VIN selector
+  expected: Displayed information includes records where the `userID` is `null` |
+    The card displays all the fields with particular values:- Avg Energy Economy-
+    Avg Energy Consumed- Avg energy Saved- Avg CO2 Saved- Total No. of Trips- Total
+    Distance- Total Travel Time- Avg Speed | "CO2 gas savings calculates the emissions
+    you save by driving a Nissan electric vehicle." text is displayed at the bottom
+    of the card
+- id: 4
+  action: Navigate to the Month tab -> Choose the month that has duplicate entries
+    in DrivingHistory API response
+  expected: Driver/VIN selector is present under the Day/Month/Year selector
+- id: 5
+  action: Select "Driver" from the Driver/VIN selector
+  expected: The displayed information includes records with a valid `{userID}` from
+    DrivingHistory API response:- Avg Energy Economy- Avg Energy Consumed- Avg energy
+    Saved- Avg CO2 Saved- Total No. of Trips- Total Distance- Total Travel Time- Avg
+    Speed | "CO2 gas savings calculates the emissions you save by driving a Nissan
+    electric vehicle." text is displayed at the bottom of the card
+- id: 6
+  action: Select "VIN" from the Driver/VIN selector
+  expected: Displayed information includes records where the `userID` is `null` |
+    The card displays all the fields with particular values:- Avg Energy Economy-
+    Avg Energy Consumed- Avg energy Saved- Avg CO2 Saved- Total No. of Trips- Total
+    Distance- Total Travel Time- Avg Speed | "CO2 gas savings calculates the emissions
+    you save by driving a Nissan electric vehicle." text is displayed at the bottom
+    of the card
+- id: 7
+  action: Choose the year that has duplicate entries in DrivingHistory API response
+  expected: Driver/VIN selector is present under the Day/Month/Year selector
+- id: 8
+  action: Select "Driver" from the Driver/VIN selector
+  expected: The displayed information includes records with a valid `{userID}` from
+    DrivingHistory API response:- Avg Energy Economy- Avg Energy Consumed- Avg energy
+    Saved- Avg CO2 Saved- Total No. of Trips- Total Distance- Total Travel Time- Avg
+    Speed | "CO2 gas savings calculates the emissions you save by driving a Nissan
+    electric vehicle." text is displayed at the bottom of the card
+- id: 9
+  action: Select "VIN" from the Driver/VIN selector
+  expected: Displayed information includes records where the `userID` is `null` |
+    The card displays all the fields with particular values:- Avg Energy Economy-
+    Avg Energy Consumed- Avg energy Saved- Avg CO2 Saved- Total No. of Trips- Total
+    Distance- Total Travel Time- Avg Speed | "CO2 gas savings calculates the emissions
+    you save by driving a Nissan electric vehicle." text is displayed at the bottom
+    of the card
+- id: 10
+  action: Navigate to the day/month/year that DOES NOT have duplicate entries in DrivingHistory
+    API response
+  expected: Driver/VIN selector is hidden | The card displays all the fields with
+    particular values:- Avg Energy Economy- Avg Energy Consumed- Avg energy Saved-
+    Avg CO2 Saved- Total No. of Trips- Total Distance- Total Travel Time- Avg Speed
+    | "CO2 gas savings calculates the emissions you save by driving a Nissan electric
+    vehicle." text is displayed at the bottom of the card

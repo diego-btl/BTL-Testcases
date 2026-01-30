@@ -1,0 +1,32 @@
+metadata:
+  id: TC02721
+  name: Edit reminder - Success
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-09-07'
+  updated: '2024-10-17'
+  author: user_3
+  testmo_id: 2721
+  folder_id: 412
+preconditions:
+- description: User is on PSR screenUser has an existing reminder
+steps:
+- id: 1
+  action: Tap on Edit on existing reminder
+  expected: User should see Edit Reminder screen with the corresponding settings for
+    that reminder
+- id: 2
+  action: Modify anything in the reminder (ex. Current Parts, Reminder Interval -
+    mileage, date)
+  expected: User is able to modify the reminder
+- id: 3
+  action: Tap on Save
+  expected: User should see a loading spinner while reminder is savingOn success,
+    user is returned to the Parts Service Reminders screen showing the edited reminder
+    and a success toast is shown

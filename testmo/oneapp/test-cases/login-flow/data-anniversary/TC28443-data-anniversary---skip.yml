@@ -1,0 +1,34 @@
+metadata:
+  id: TC28443
+  name: Data Anniversary - Skip
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2024-11-22'
+  updated: '2026-01-21'
+  author: user_2
+  testmo_id: 28443
+  folder_id: 7144
+description: Validates "Skip" button functionality on welcome message screen.
+preconditions:
+- description: EnableOwnerAnniversary FF = true
+- description: isAnniversary = true
+- description: anniversaryYear = 1, 2, 3, 4, or 5
+- description: VIN is NOT lost/stolen, finance vehicle, or pending
+- description: User has NOT seen anniversary message for this VIN at current anniversary
+    year
+- description: User is logged in
+- description: User is on welcome message screen
+steps:
+- id: 1
+  action: Tap SKIP button
+  expected: User is redirected to Home screen | No anniversary animation plays
+- id: 2
+  action: Navigate to Settings screen
+  expected: Anniversary theme toggle is displayed under Theme section | Toggle is
+    in OFF position (grey)

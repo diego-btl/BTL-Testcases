@@ -1,0 +1,32 @@
+metadata:
+  id: TC62189
+  name: Charge station - Charger Statuses
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-12-18'
+  updated: '2025-12-18'
+  author: user_17
+  testmo_id: 62189
+  folder_id: 46
+preconditions:
+- description: The user selects an EV or EVAVK2 vehicles
+- description: EnablePlugAndCharge ff should be enabled.
+- description: AccountStatus query's response should be ACTIVE
+- description: The user is in the Select Charger screen
+steps:
+- id: 1
+  action: The user see the list of chargers available
+  expected: 'The user will see the chargers details:ID - String | Connector - J1772/CCS/NACS
+    | Power - IE: 6kW | Status - Available(green)/In Use(orange)/Status Unknown(grey)
+    | Icon - Asset of the charging connector | Price - IE: $0.42/kWh'
+- id: 2
+  action: The user see the list of chargers available -> Check the status of the chargers
+  expected: The user will see the details and none of this status should be showing
+    for the Charge Stations:BLOCKED | INOPERATIVE | OUTOFORDER | PLANNED | REMOVED
+    | RESERVED

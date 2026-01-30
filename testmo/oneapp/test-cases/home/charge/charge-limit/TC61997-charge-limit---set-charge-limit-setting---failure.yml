@@ -1,0 +1,26 @@
+metadata:
+  id: TC61997
+  name: Charge Limit - Set Charge Limit Setting - Failure
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-11-14'
+  updated: '2025-12-02'
+  author: user_25
+  testmo_id: 61997
+  folder_id: 6780
+preconditions:
+- description: User has an EV AVK2 vehicle
+- description: EnableChargeLimit FF is true
+- description: User is on the Charge Limit screen
+- description: Set the CheckChargeConfigServiceRequest to return the PENDING status
+steps:
+- id: 1
+  action: Mock CheckChargeConfigServiceRequest to return FAILED
+  expected: User should see a success toast Failed to set charge limit (5 seconds)
+    | User should see the Set Charging Limit CTA get back to the enabled state

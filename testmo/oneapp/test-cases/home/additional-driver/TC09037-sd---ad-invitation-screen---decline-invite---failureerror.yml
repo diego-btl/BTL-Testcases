@@ -1,0 +1,34 @@
+metadata:
+  id: TC09037
+  name: SD - AD Invitation Screen - Decline invite - Failure/Error
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-11-21'
+  updated: '2024-10-17'
+  author: user_4
+  testmo_id: 9037
+  folder_id: 411
+description: https://www.pivotaltracker.com/story/show/185039308
+preconditions:
+- description: User is logged into an account with a pending AD invite
+- description: User is on the Invitation screen
+steps:
+- id: 1
+  action: GeneralErrors -> DatabaseError -> BrandError -> TokenError -> InvalidInviteIdError
+  expected: See expected results
+- id: 2
+  action: Tap on Decline
+  expected: User should see a loading spinner, then a Decline invitation failed modal
+    with options - Cancel/Retry
+- id: 3
+  action: Tap on Cancel
+  expected: User should see error modal dismiss and remain on the Invitation screen
+- id: 4
+  action: Tap on Retry
+  expected: User should see the same API call triggered again

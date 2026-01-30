@@ -1,0 +1,38 @@
+metadata:
+  id: TC29687
+  name: Registration - User exists*
+  feature: test-cases
+  priority: critical
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2024-12-18'
+  updated: '2025-10-06'
+  author: user_17
+  testmo_id: 29687
+  folder_id: 43
+description: User is on Registration first screen and is trying to input an email
+  of an existing account.
+preconditions:
+- description: User has already preregistered accounts.
+- description: User is on the first screen of registration page
+- description: User fills out First Name and Last Name fields
+steps:
+- id: 1
+  action: User Inputs an Email and Confirm Email of an account that already exists
+    and taps on Next button. Verify typename response from ValidateNissanID is NissanIdExists
+  expected: Red asterisk "*" is displayed at the beginning of warning messageWarning
+    message is displayed as "* User already exists for this email address. Please
+    SIGN_IN instead"
+- id: 2
+  action: User Inputs an Email and Confirm Email of an account that already exists
+    and tap onNext button. Verify typename response from ValidateNissanID is NissanIDRequiresOwnerPortalPwReset
+    or NissanIDRequiresOwnerPortalProfileCompletion or -> NissanIdRequiresNMACPWReset
+  expected: 'Modal is displayed as below:Header: Action RequiredText: We are improving
+    our data security. Please reset your NISSAN ID password | CTA: Cancel CTA: Confirm'
+- id: 3
+  action: User taps on Confirm button
+  expected: User is redirected to link on the response

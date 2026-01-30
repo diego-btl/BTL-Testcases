@@ -1,0 +1,25 @@
+metadata:
+  id: TC00657
+  name: Stop Climate - Success
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-01'
+  updated: '2025-09-22'
+  author: user_2
+  testmo_id: 657
+  folder_id: 4169
+preconditions:
+- description: User has sent a stop climate request
+steps:
+- id: 1
+  action: Stop climate request has resolved into a success
+  expected: User should see a toast saying'{vehicle model} climate turned {on/off}.'
+    (5 seconds)User should see button update to Stop Climate buttonUser should see
+    Climate status update to show climate off state (Off label, temperature dial shows
+    grey)

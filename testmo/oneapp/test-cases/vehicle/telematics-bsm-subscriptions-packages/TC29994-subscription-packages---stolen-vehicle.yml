@@ -1,0 +1,27 @@
+metadata:
+  id: TC29994
+  name: Subscription Packages - Stolen Vehicle
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-01-17'
+  updated: '2025-12-09'
+  author: user_25
+  testmo_id: 29994
+  folder_id: 3863
+description: Nisssan NNA and INFINITI NNA only
+preconditions:
+- description: FF "EnableTelematicsBSM":"true"
+steps:
+- id: 1
+  action: 'Go to Proxyman and mock VehicleCapabilities API response to "status": "STOLEN"'
+  expected: User should see that the vehicle's status is updated accordingly on the
+    FE
+- id: 2
+  action: Navigate to the Vehicle Tab
+  expected: Verify that Subscription Packages card is not displayed

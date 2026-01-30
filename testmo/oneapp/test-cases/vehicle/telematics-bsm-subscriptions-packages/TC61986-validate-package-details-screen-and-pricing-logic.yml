@@ -1,0 +1,52 @@
+metadata:
+  id: TC61986
+  name: Validate Package Details screen and Pricing Logic
+  feature: test-cases
+  priority: critical
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-11-12'
+  updated: '2025-12-09'
+  author: user_15
+  testmo_id: 61986
+  folder_id: 3863
+preconditions:
+- description: A VIN >= MY26 is linked to the user.
+- description: EnableTelematicsBSM = True.
+- description: ProductCatalog returns multiple packages with variations in retailPrice
+    and discountedPrice.
+steps:
+- id: 1
+  action: Navigate to Vehicle > Mock ProductCatalog APi to have retailPrice = 0 or
+    null > Tap on Subscription Packages.
+  expected: Verify that packages under Available for Purchase are not displayed
+- id: 2
+  action: Navigate to Vehicle > Mock ProductCatalog APi to have discountedPrice =
+    0 or null and retailPrice = 10.87> Tap on Subscription Packages. -> Could be any
+    valid retailPrice
+  expected: Verify that packages under Available for Purchase are displayed
+- id: 3
+  action: Navigate to Vehicle > Mock ProductCatalog APi to have discountedPrice =
+    0 and retailPrice = 10.87> Tap on Subscription Packages > Tap on Learn more
+  expected: The promotions section is hidden. | “Buy Now” CTA is visible and uses
+    retailPrice (non-zero). | No $0 values are shown.
+- id: 4
+  action: Navigate to Vehicle > Mock ProductCatalog APi to have discountedPrice >
+    0 and retailPrice = 10.87> Tap on Subscription Packages > Tap on Learn more ->
+    Could be any valid for retailPrice/discountedPrice
+  expected: The promotions section is visible. | Both retail and discounted prices
+    are shown correctly. | “Buy Now” CTA reflects discountedPrice.
+- id: 5
+  action: Tap “Learn More” on a package where sellingModelPricingTermUnit = "Months"
+  expected: Price label shows “per month”. | If discountedPrice > 0, both discounted
+    and retail prices are displayed (promo section visible). | If discountedPrice
+    = 0, promo section is hidden and retailPrice used for “Buy Now.”
+- id: 6
+  action: Tap “Learn More” on a package where sellingModelPricingTermUnit = "Annual"
+  expected: Price label shows “per year.” | If discountedPrice > 0, both retail and
+    discounted prices are visible (promo section shown). | If discountedPrice = 0,
+    promo section hidden, retailPrice used for “Buy Now.”

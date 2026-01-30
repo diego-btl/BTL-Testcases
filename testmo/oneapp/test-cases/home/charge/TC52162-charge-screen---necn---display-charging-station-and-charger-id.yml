@@ -1,0 +1,44 @@
+metadata:
+  id: TC52162
+  name: Charge Screen - NECN - Display Charging Station and Charger ID
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-06-18'
+  updated: '2025-12-19'
+  author: user_25
+  testmo_id: 52162
+  folder_id: 66
+description: The location data for ongoing charge sessions has been added to the body
+  of the sessionStatus call. When we retrieve the user's session status on the Battery
+  Screen - a call that is already made, to determine if the user is able to remote
+  stop the session - then we should retrieve the charge location information as well.
+preconditions:
+- description: User has an EVNECN account status is ACTIVEUser is on the Charge screen
+- description: PRIMARY_DRIVER/SHARED_DRIVER
+steps:
+- id: 1
+  action: 'ChargeSessionStatus API response includes "status": "ACTIVE" and "message":
+    "The charging session is active"'
+  expected: Charge Station and Charger ID fields in the NECN section on the Battery
+    screen are updated accordingly to the cpoName and physicalReference values | The
+    'STOP CHARGING' CTA is displayed
+- id: 2
+  action: Mock cpoName and physicalReference to empty values
+  expected: Charge Station and Charger ID fields are blank
+- id: 3
+  action: 'Mock "stopSessionAllowed": false'
+  expected: '''STOP CHARGING'' CTA is hidden | ''The station does not support remote
+    stop. Please use the station screen.'' copy is displayed as the last field of
+    the NECN section'
+- id: 4
+  action: 'Mock ChargeSessionStatus API response to retrieve "status": "FAILED" and
+    "message": "The charging session is failed"'
+  expected: Find In-Network Chargers CTA is displayed in the NECN section on the Battery
+    screen | The copy is 'Are you an in-network charging station? Select your charger
+    to pay directly through the MyNissan App'

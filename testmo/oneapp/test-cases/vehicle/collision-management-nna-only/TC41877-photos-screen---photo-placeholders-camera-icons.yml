@@ -1,0 +1,38 @@
+metadata:
+  id: TC41877
+  name: Photos Screen - Photo placeholders (Camera icons)
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-06-09'
+  updated: '2025-06-09'
+  author: user_26
+  testmo_id: 41877
+  folder_id: 3800
+description: Verify that the user can interact with the info icon, photo placeholders
+  (Camera icons), and the Add More Photos CTA correctly
+preconditions:
+- description: The user is on the Photos screen
+steps:
+- id: 1
+  action: Tap Info Icon
+  expected: 'The Info screen is displayed, showing the message: ''You can now upload
+    photos using different angles into your report.'''
+- id: 2
+  action: Tap any photo placeholder (Camera icons) in one of the photo sections
+  expected: 'A system pop-up appears with: "Add from Gallery" / "Take Photo"'
+- id: 3
+  action: Tap Near Vehicle Image
+  expected: The same system pop-up appears
+- id: 4
+  action: Tap "Add More Photos" CTA
+  expected: One new row of 3 photo placeholders is added below the existing ones
+- id: 5
+  action: Repeat step 4 multiple times until a total of 18 photo placeholders are
+    displayed
+  expected: After reaching 18 placeholders, the Add More Photos CTA is hidden

@@ -1,0 +1,55 @@
+metadata:
+  id: TC01457
+  name: Demo mode - Support Tab
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-28'
+  updated: '2025-12-18'
+  author: user_2
+  testmo_id: 1457
+  folder_id: 6802
+description: 'Note: This test case applies to all 3 vehicle types in Demo Mode'
+steps:
+- id: 1
+  action: Navigate to the Support tab
+  expected: The user should see the support sheet
+- id: 2
+  action: Tap the Roadside Assistance Button
+  expected: User should be navigated to the Roadside Assistance screen
+- id: 3
+  action: Tap on any button/CTA
+  expected: If user taps the info button, they should be navigated to the Coverage
+    Details screen. | Everything else should trigger the demo mode modal
+- id: 4
+  action: Exit and tap the Accident Helper Button
+  expected: User should see the accident helper screen
+- id: 5
+  action: Expand/Collapse all the cards and tap on CTAs
+  expected: User should see the demo mode modal
+- id: 6
+  action: Exit and tap the Stolen Vehicle Button
+  expected: User should see the Stolen Vehicle Locator screen
+- id: 7
+  action: Tap the Call Stolen Vehicle Locator CTA
+  expected: User should see the demo mode modal
+- id: 8
+  action: Exit and tap the Schedule Service button
+  expected: User should see the Find a Dealer screen with no results
+- id: 9
+  action: Tap on the search bar
+  expected: User should see the demo mode modal
+- id: 10
+  action: Tap on the other cards on the screen
+  expected: User should be brought to the respective page
+- id: 11
+  action: Tap on any buttons/CTAs/page elements
+  expected: User should see the demo mode modal
+- id: 12
+  action: Tap the Personal Assistant item (only for NMEX)
+  expected: The user should see the Personal Assistant screen

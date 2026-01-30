@@ -1,0 +1,62 @@
+metadata:
+  id: TC62130
+  name: Create Schedule Service - Navigation Controls
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-12-09'
+  updated: '2026-01-20'
+  author: user_23
+  testmo_id: 62130
+  folder_id: 6787
+description: 'Create Schedule Service - Navigation Controls: Back Arrow, Close Button,
+  and Dealer NavigationValidates navigation controls work correctly across all Create
+  Schedule Service screens. Tests back arrow behavior, dealer card navigation, and
+  close (X) button functionality.Notes:Back arrow behavior varies by screen:Select
+  Services: Back arrow redirects to Vehicle ScreenOther main flow screens: Back arrow
+  returns to previous screenOptional Preferences: Back arrow returns to Select Date
+  and Time (no close button on this screen)Dealer Details: Back arrow returns to Select
+  ServicesSelected Dealer chevron on Select Services navigates to Dealer Details screenClose
+  (X) button appears on: Select Services, Additional Information, Select Date and
+  Time, Review Service RequestClose (X) button shows "Leave Schedule Service?" modal
+  on all screensModal buttons: "No, Continue" (stays on screen) and "Yes, Leave" (redirects
+  to Vehicle Screen)'
+preconditions:
+- description: User is in any Create Schedule Service screen (Select Services through
+    Review Service Request)
+steps:
+- id: 1
+  action: Tap Back arrow on Select Services screen
+  expected: User is redirected to Vehicle screen
+- id: 2
+  action: Tap chevron on Selected Dealer card on Select Services screen
+  expected: User is redirected to Dealer Details screen
+- id: 3
+  action: Tap Back arrow on Dealer Details screen
+  expected: User returns to Select Services screen
+- id: 4
+  action: Tap Back arrow on Additional Information, Select Date and Time, Review Service
+    Request, and Contact Information screens
+  expected: User returns to previous screen | All previously entered information is
+    preserved
+- id: 5
+  action: Tap Back arrow on Optional Preferences screen
+  expected: User returns to Select Date and Time screen
+- id: 6
+  action: Tap Close (X) button on Select Services, Additional Information, Select
+    Date and Time, or Review Service Request screen
+  expected: 'Modal appears with title Leave Schedule Service? | Message displays:
+    Are you sure you want to leave? You will have to start over if you want to schedule
+    another service. | No, Continue button is displayed | Yes, Leave button is displayed'
+- id: 7
+  action: Tap No, Continue on Leave Schedule Service modal
+  expected: Modal is dismissed | User remains on current screen | All information
+    is preserved
+- id: 8
+  action: Tap Yes, Leave on Leave Schedule Service modal
+  expected: User is redirected to Vehicle screen | Service booking flow is exited

@@ -1,0 +1,24 @@
+metadata:
+  id: TC00752
+  name: Charge Station Chip
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-01'
+  updated: '2025-09-22'
+  author: user_2
+  testmo_id: 752
+  folder_id: 46
+preconditions:
+- description: User has an EV selected
+steps:
+- id: 1
+  action: Go to the map screen2. Tap the Charge Stations chip
+  expected: User should see Charge Stations as the first category button2. User should
+    see a search for EV charge stations according to EV map settings and results are
+    shown on the map with lightning icons

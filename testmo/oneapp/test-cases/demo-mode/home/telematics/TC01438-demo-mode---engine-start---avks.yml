@@ -1,0 +1,34 @@
+metadata:
+  id: TC01438
+  name: Demo Mode - Engine Start - AVKs
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-28'
+  updated: '2025-12-18'
+  author: user_2
+  testmo_id: 1438
+  folder_id: 6816
+preconditions:
+- description: For AVK and AVK2
+steps:
+- id: 1
+  action: Tap the Engine Start button
+  expected: Are you sure? popup appears with Yes and No CTAs
+- id: 2
+  action: Tap on No CTA
+  expected: The popup dismisses.
+- id: 3
+  action: Tap on Yes CTA
+  expected: Contacting year, model to start engine... | Waking year, model to start
+    engine... | Initiating engine start on year, model... | year, model engine started.
+- id: 4
+  action: Tap on Yes CTA - AVK2
+  expected: Contacting year, model to start engine... | Waking year, model to start
+    engine... | Initiating engine start on year, model... | Remote engine and climate
+    was started for year, model

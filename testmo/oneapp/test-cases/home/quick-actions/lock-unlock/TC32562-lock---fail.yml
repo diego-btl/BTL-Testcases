@@ -1,0 +1,24 @@
+metadata:
+  id: TC32562
+  name: Lock - Fail
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-04-22'
+  updated: '2025-04-24'
+  author: user_25
+  testmo_id: 32562
+  folder_id: 59
+preconditions:
+- description: User is in the Home screen
+- description: User has sent a lock request
+steps:
+- id: 1
+  action: Lock request has been resolved into a failure
+  expected: User should see a toast '<year and model> failed to lock.' at the bottom
+    of the screen. | Lock and Unlock buttons are displayed in the default state.

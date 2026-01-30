@@ -1,0 +1,28 @@
+metadata:
+  id: TC00651
+  name: Delete Climate Schedule
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-01'
+  updated: '2025-12-19'
+  author: user_2
+  testmo_id: 651
+  folder_id: 4169
+preconditions:
+- description: User is editing a climate schedule
+steps:
+- id: 1
+  action: Tap to Delete schedule
+  expected: 'User should see loading spinner while climate schedule is being deleted
+    | User should see folowing toasts: Contacting {vehicle year, model} to Delete
+    Climate Schedule...Waking {vehicle year, model} to Delete Climate Schedule...Initiating
+    Delete Climate Schedule on {vehicle year, model}...User should see a success toast
+    if schedule was deleted successfullyUser should be returned to the climate screen
+    with schedule deletedNote: If deleting schedule fails, user should see a failure
+    toast and remain on the Climate Schedule screen'

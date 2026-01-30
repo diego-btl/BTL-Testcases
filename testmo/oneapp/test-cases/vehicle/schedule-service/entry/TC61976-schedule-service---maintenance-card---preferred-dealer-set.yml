@@ -1,0 +1,42 @@
+metadata:
+  id: TC61976
+  name: Schedule Service - Maintenance Card - Preferred Dealer Set
+  feature: test-cases
+  priority: critical
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-11-11'
+  updated: '2026-01-20'
+  author: user_23
+  testmo_id: 61976
+  folder_id: 6779
+description: 'Entry Point Validation: Vehicle Screen Maintenance Card Schedule Service
+  CTAValidates that tapping the Schedule Service CTA on the Maintenance Schedule Card
+  on the Vehicle screen redirects to the Select Services screen when vehicle maintenance
+  is due and a preferred retailer/dealer is set and nativeServiceBooking= true.Preconditions:User
+  is logged in to the appPreferred retailer/dealer is set (Retailer for INFINITI,
+  Dealer for NISSAN) and nativeServiceBooking= trueUser is on the Vehicle ScreenVehicle
+  maintenance is due or close to due (Mock: "Next":true in GenerateAllVisits API response)Mock
+  Data { "data": { "viewer": { "__typename": "MS_Viewer", "Schedule": { "__typename":
+  "MS_ViewerSchedule", "Visits": [ { "__typename": "MS_ExpandedServiceOccurrence",
+  "Alignment": "TimeBased", "Interval": { "__typename": "MS_ExpandedInterval", "Month":
+  12, "Year": 2025, "Next": true, "DistanceMiles": 5300, "DistanceKMs": 8600 }, "ServiceOccurrences":
+  [ { "__typename": "MS_ServiceOccurrence", "ServiceComponent": { "__typename": "MS_ServiceComponent",
+  "ServiceComponentName": "Engine oil and filter", "ServiceCategory": { "__typename":
+  "MS_ServiceCategory", "ServiceCategoryName": "Oil & Consumables" } }, "ServiceType":
+  { "__typename": "MS_ServiceType", "ServiceTypeName": "Replace", "ServiceTypeGroup":
+  { "__typename": "MS_ServiceTypeGroup", "ServiceTypeGroupName": "Essentials" } }
+  }, { "__typename": "MS_ServiceOccurrence", "ServiceComponent": { "__typename": "MS_ServiceComponent",
+  "ServiceComponentName": "Tires", "ServiceCategory": { "__typename": "MS_ServiceCategory",
+  "ServiceCategoryName": "Wheels & Tires" } }, "ServiceType": { "__typename": "MS_ServiceType",
+  "ServiceTypeName": "Rotate", "ServiceTypeGroup": { "__typename": "MS_ServiceTypeGroup",
+  "ServiceTypeGroupName": "Essentials" } } } ] } ] } } } }'
+steps:
+- id: 1
+  action: Tap on the Schedule Service CTA on the Maintenance Schedule Card
+  expected: ServiceOperations query is triggered | User is redirected to the Select
+    Services screen

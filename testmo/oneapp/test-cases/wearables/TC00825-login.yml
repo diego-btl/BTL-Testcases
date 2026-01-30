@@ -1,0 +1,22 @@
+metadata:
+  id: TC00825
+  name: Login
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-01'
+  updated: '2024-10-17'
+  author: user_2
+  testmo_id: 825
+  folder_id: 74
+preconditions:
+- description: User has not logged in
+steps:
+- id: 1
+  action: Launch phone app and login2. Launch watch app
+  expected: User should be able to login and see the watch app's landing screen

@@ -1,0 +1,29 @@
+metadata:
+  id: TC02704
+  name: Primary Driver with Expired Additional Driver Invitation
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-09-07'
+  updated: '2025-09-19'
+  author: user_3
+  testmo_id: 2704
+  folder_id: 105
+preconditions:
+- description: User has a AVK2 vehicle User is already on the Home Page User is a
+    PRIMARY_DRIVER with expired Additional Driver Invitation
+steps:
+- id: 1
+  action: 1. The user is able to see the Additional Driver card, and then taps on
+    the card 2. The user is able to see the pending invitations 2.1 On the driverInvites
+    call, for obtaining the expired invitation the parameter inviteExpiryDateTime
+    should be before than the current system datetime.
+  expected: 1. User is driven to the Additional Driver page, it should display as
+    many cards as pending invitations there are. 2. Each card should show the First
+    and Last Names of the invitee and the status of the invitation should be "Invite
+    Expired"

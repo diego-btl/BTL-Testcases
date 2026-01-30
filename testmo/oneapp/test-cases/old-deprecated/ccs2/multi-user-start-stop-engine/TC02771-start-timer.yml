@@ -1,0 +1,25 @@
+metadata:
+  id: TC02771
+  name: Start Timer
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-09-08'
+  updated: '2026-01-06'
+  author: user_3
+  testmo_id: 2771
+  folder_id: 421
+preconditions:
+- description: User has started their vehicle successfullyUser is a PRIMARY_DRIVER
+    or SHARED_DRIVER (to be tested for both for AVK2)
+steps:
+- id: 1
+  action: Wait for 10 minutes to pass
+  expected: User should see their vehicle engine stop after 10 minutes, the start
+    button should change to the default state, the engine running text should no longer
+    be shown, and "<model> Engine turned off after 10min" toast appear

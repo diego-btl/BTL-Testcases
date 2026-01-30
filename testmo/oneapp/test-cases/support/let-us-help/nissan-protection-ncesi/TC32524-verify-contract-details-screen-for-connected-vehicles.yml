@@ -1,0 +1,41 @@
+metadata:
+  id: TC32524
+  name: Verify Contract Details screen for Connected vehicles
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-04-04'
+  updated: '2025-04-05'
+  author: user_15
+  testmo_id: 32524
+  folder_id: 4164
+description: The scope of this test case is to validate the correct functioning of
+  the embedded YouTube video when FF are enabled. Nissan NCI will be the only brand
+  and region showing the videos; INF NCI will not display themOS[NCESI] - Allow user
+  to view contract details - 2/18ANDROID[NCESI] - Allow user to view contract details
+  - 2/18
+preconditions:
+- description: 'EnableNcesiServiceContracts: true'
+- description: 'EnableNcesiCatalogue: true'
+- description: Mock GetServiceContract response (use attached mocks ENG/FR in case
+    needed)
+steps:
+- id: 1
+  action: Login to app with a connected VIN
+  expected: Verify Dynamics data retrieves Mileage
+- id: 2
+  action: Get into Nissan Protection screen > Tap on any contract
+  expected: Progress bar for Expiration date | Progress bar for Odometer (based on
+    planExpirationOdometer, planEffectiveMiles (GetServiceContracts) and mileage."total"
+    (dynamicData) | Verify colors for each progress bar are displayed correctly according
+    to state received. | Verify each field displays correct information according
+    to response received.
+- id: 3
+  action: Mock mileage on DynamicaData to reach 100% (comparing to what is received
+    on GetServicesContracts response - planExpirationOdometer)
+  expected: Verify Odomter displayes red when DynamicData.mileage.total >= planExpirationOdometer

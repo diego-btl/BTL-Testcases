@@ -1,0 +1,40 @@
+metadata:
+  id: TC62203
+  name: Second Delivery - Marketing Pop-up - Book Now
+  feature: test-cases
+  priority: critical
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-12-19'
+  updated: '2026-01-06'
+  author: user_23
+  testmo_id: 62203
+  folder_id: 6818
+description: 'Marketing Pop-up - BOOK NOW Button Navigation for Second Delivery. Validates
+  that tapping BOOK NOW button closes the popup and navigates user to the virtual
+  appointment booking flow (date/time selection for virtual meeting).Notes:BOOK NOW
+  button always available on marketing popup (regardless of versionToDisplay value)Available
+  on both: versionToDisplay: "REMIND_ME_LATER" and "NO_THANKS" statesTapping BOOK
+  NOW triggers SecondDeliveryAppointmentsAtVirtual API callNavigates directly to virtual
+  appointment booking flow (date/time selection)No appointment type selection (Virtual
+  mode only, forced)User selects date and time for 1-hour virtual meeting with INFINITI
+  expertOn successful booking, eligibility changes to SecondDeliveryEligibilityResponseAppointmentBookedUse
+  mocks from folder "Second Delivery - MyINFINITI Expert - Discovery & CTA Display"Test
+  on both light and dark modeFeature Flag: EnableSecondDelivery is set to true'
+preconditions:
+- description: Feature Flag EnableSecondDelivery is set to true
+steps:
+- id: 1
+  action: 'Mock SecondDeliveryEligibility with: -> { "marketingMessage": { "versionToDisplay":
+    "REMIND_ME_LATER", "displayMarketingMessageThresholdInDays": 60, "remindMeLaterThresholdInDays":
+    8 }, "daysSincePurchased": 15 }Login to app'
+  expected: Marketing pop-up appears
+- id: 2
+  action: Tap BOOK NOW button
+  expected: Pop-up closes | User navigates directly to virtual appointment booking
+    screen | Date and time selection screen appears (Virtual mode only) | No appointment
+    type selection (Virtual is forced)

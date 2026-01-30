@@ -1,0 +1,24 @@
+metadata:
+  id: TC24326
+  name: Contract Details - Contract Details
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2024-10-18'
+  updated: '2025-09-11'
+  author: user_17
+  testmo_id: 24326
+  folder_id: 3084
+preconditions:
+- description: Login with an NCF account > https://www.notion.so/bethinklabs/d0f8f58385a94c51ab27ce3ee1ef1e51?v=caf06428a7ac41aa96541666be242cd7
+steps:
+- id: 1
+  action: Login into the app -> In the Home page screen -> Click over NCF Account
+    card -> Open the NCF Account screen -> Click the option Contract Details -> Open
+    the Contract Details screen
+  expected: The data it is displaying correctly

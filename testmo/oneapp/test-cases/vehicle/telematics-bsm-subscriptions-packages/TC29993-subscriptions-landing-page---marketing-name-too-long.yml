@@ -1,0 +1,24 @@
+metadata:
+  id: TC29993
+  name: Subscriptions Landing Page - Marketing Name too Long
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-01-17'
+  updated: '2025-12-09'
+  author: user_15
+  testmo_id: 29993
+  folder_id: 3863
+description: Nissan NNA and INFINITI NNA only
+preconditions:
+- description: 'FF "EnableTelematicsBSM": "true"'
+steps:
+- id: 1
+  action: Go to proxyman and mock VehicleSubscriptions to retrieving an empty marketing
+    name
+  expected: Verify name gets wrapped correctly when retrieving a very long name

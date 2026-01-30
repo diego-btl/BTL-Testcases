@@ -1,0 +1,27 @@
+metadata:
+  id: TC00537
+  name: Requires Update
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-01'
+  updated: '2025-08-21'
+  author: user_2
+  testmo_id: 537
+  folder_id: 39
+preconditions:
+- description: App is installed
+- description: 'Add a breakpoint or map local to the Firebase Remote Config call and
+    modify the response of the parameter:'
+steps:
+- id: 1
+  action: Click on the app icon
+  expected: User should see 'App Update Required' modal
+- id: 2
+  action: User click on the 'Update' CTA
+  expected: User should be driven to the respective Store Page

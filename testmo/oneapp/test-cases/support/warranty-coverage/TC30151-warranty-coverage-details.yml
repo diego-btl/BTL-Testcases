@@ -1,0 +1,20 @@
+metadata:
+  id: TC30151
+  name: Warranty Coverage Details
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-02-05'
+  updated: '2025-09-24'
+  author: user_17
+  testmo_id: 30151
+  folder_id: 83
+steps:
+- id: 1
+  action: Force warranty values to not be returned2. Return warranty values
+  expected: User should not see coverage cards2. User should see the coverage cards

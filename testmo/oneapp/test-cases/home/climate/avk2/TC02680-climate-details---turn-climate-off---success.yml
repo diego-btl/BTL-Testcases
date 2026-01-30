@@ -1,0 +1,29 @@
+metadata:
+  id: TC02680
+  name: Climate Details - Turn Climate Off - Success
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-09-07'
+  updated: '2025-09-22'
+  author: user_3
+  testmo_id: 2680
+  folder_id: 4170
+description: https://www.pivotaltracker.com/story/show/185088492
+preconditions:
+- description: AVK2 vehicleClimate Details screenEngine is ON
+steps:
+- id: 1
+  action: The statusDetails field returns the HVAC_SUCCESS enum -> The status field
+    returns the PENDING enum -> The app should show a success toast -> Stop engine
+    request has resolved into a success -> Turn off climate request has resolved into
+    a success
+  expected: User should see a toast sayingClimate off, engine stopped. (5 seconds)
+    | The Turn Climate Off button should change into the Turn Climate On button |
+    The verbiage on top right corner should change to Off | The engine button on Home
+    Screen shall become Start

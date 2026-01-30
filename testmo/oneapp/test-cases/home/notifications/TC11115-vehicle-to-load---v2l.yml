@@ -1,0 +1,30 @@
+metadata:
+  id: TC11115
+  name: Vehicle-to-Load - V2L
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2024-02-02'
+  updated: '2025-12-05'
+  author: user_4
+  testmo_id: 11115
+  folder_id: 49
+description: https://www.pivotaltracker.com/story/show/186998933
+preconditions:
+- description: User has an EV AVK2 vehicle
+- description: V2L capability is returning true
+- description: User is on the Notification Preferences screen
+steps:
+- id: 1
+  action: Scroll to the EV Notifications section and tap on Vehicle-to-Load
+  expected: User should see a Vehicle-to-Load section expand with options for Push,
+    Text and Email notifications corresponding to the data returned in NotificationPreferences
+- id: 2
+  action: Toggle ON/OFF any of the notifications under the notification group
+  expected: SetNotificationPreferences API is triggered, returning the updated value
+    for the updated notification status | Toggle state is updated accordingly

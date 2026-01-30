@@ -1,0 +1,27 @@
+metadata:
+  id: TC62177
+  name: Dealer Offers - Hours of Operation
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-12-17'
+  updated: '2025-12-19'
+  author: user_17
+  testmo_id: 62177
+  folder_id: 3600
+description: This test case should coverHours of operation from Offers and Promotions
+preconditions:
+- description: The user is in the Offer Details screen
+- description: 'The FF needs to be "EnableDealerOffers": "true"'
+steps:
+- id: 1
+  action: The user scroll to the Hours of Operation section
+  expected: 'The hours should be displaying under Service Center | The hours should
+    display like:Monday-Friday: 7 AM - 6 PM | Saturday: 7 AM - 2 PM | Sunday: Closed
+    | For NCI it should be displayingMonday-Friday: 7 AM - 6 PM | Saturday: 7 AM -
+    2 PM | Sunday: Closed'

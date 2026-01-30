@@ -1,0 +1,23 @@
+metadata:
+  id: TC01435
+  name: Don't Allow Notifications
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-28'
+  updated: '2024-10-17'
+  author: user_2
+  testmo_id: 1435
+  folder_id: 234
+preconditions:
+- description: User is on notifications permissions alert
+steps:
+- id: 1
+  action: 1. Tap Don't Allow Notifications
+  expected: App should not register for push notifications until user allows notifications
+    in their device settings

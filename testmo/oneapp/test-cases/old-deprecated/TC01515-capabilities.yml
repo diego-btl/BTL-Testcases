@@ -1,0 +1,24 @@
+metadata:
+  id: TC01515
+  name: Capabilities
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-28'
+  updated: '2025-09-19'
+  author: user_2
+  testmo_id: 1515
+  folder_id: 105
+steps:
+- id: 1
+  action: 1. Enable each of the capabilities 2. Disable each of the capabilities 3.
+    Delete each of the capabilities REMOTE_CHARGING REMOTE_CLIMATE_CONTROL REMOTE_DOOR_UNLOCK
+    REMOTE_DOOR_LOCK REMOTE_ENGINE REMOTE_HORN_LIGHTS
+  expected: 1. User should see the corresponding quick action in the enabled state
+    2. User should see the corresponding quick action in the disabled state 3. User
+    should not see the corresponding quick action

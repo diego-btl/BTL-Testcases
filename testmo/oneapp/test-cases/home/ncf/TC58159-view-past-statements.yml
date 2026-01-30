@@ -1,0 +1,34 @@
+metadata:
+  id: TC58159
+  name: View Past Statements
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-08-11'
+  updated: '2025-08-11'
+  author: user_24
+  testmo_id: 58159
+  folder_id: 3084
+description: For the below StaticText numbers AND When Paymenthistory = true'View
+  Past Statements' CTA should show inside card under the copy and Call CTAST3, ST14,
+  ST16, ST17, ST18, and ST19.Note the PaymentHistory quick action button SHOULD NOT
+  SHOW for these. The Payment History quick action button and View Past Statements
+  CTA button should NEVER be shown together on th screen.
+preconditions:
+- description: StaticText = either of these nos.
+- description: ST3, ST14, ST16, ST17, ST18, and ST19.
+- description: PaymentHistory = True
+- description: in the FinancialVehicles api response
+steps:
+- id: 1
+  action: Once logged into an NCI account with a financial vehicle (use mock server)
+  expected: FinancialVehicles api is triggered | The NFC card is enabled on Home
+- id: 2
+  action: Tap on Card
+  expected: Along with the copy for the relevant StaticText no. as per other TCs,
+    the View Past Statements CTA show also show and be tappable

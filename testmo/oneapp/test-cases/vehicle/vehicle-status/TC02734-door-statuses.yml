@@ -1,0 +1,34 @@
+metadata:
+  id: TC02734
+  name: Door Statuses
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-09-08'
+  updated: '2024-10-17'
+  author: user_3
+  testmo_id: 2734
+  folder_id: 6785
+description: https://www.pivotaltracker.com/story/show/184636255
+preconditions:
+- description: AVK2 vehicleUser has REMOTE_VEHICLE_STATUS capability enabled
+steps:
+- id: 1
+  action: 'Vehicle.doorStatus response includes (where applicable)-doorFrontLeft-doorFrontRight-doorRearLeft-doorRearRight-engineHood-hatch-sunroof-trunk-overallLock
+    -> For each door, possible statuses include-ajar:[CLOSED | OPEN]-window:[CLOSED
+    | OPEN] (this is also dependent on accessories details for windowstatus)-lock:
+    [LOCKED | UNLOCKED] -> For engineHood, hatch, sunroof, possible statuses include-ajar:
+    [CLOSED | OPEN] -> For trunk and overallLock, possible statuses include-lock:
+    [LOCKED | UNLOCKED] -> Tap on Vehicle Status card on home screen or Vehicle Status
+    warning on vehicle image -> Tap on Vehicle Status card on vehicle screen or Vehicle
+    Status warning on vehicle image'
+  expected: User should see corresponding vehicle status shown on home/vehicle screens
+    if statuses are OPEN/UNLOCKED3. User should see corresponding vehicle status shown
+    on home/vehicle screens if statuses are OPEN4. User should see trunk vehicle status
+    shown on home/vehicle screens if statuses are UNLOCKED5/6. User should see Vehicle
+    Status screen with all corresponding OPEN/UNLOCKED statuses listed

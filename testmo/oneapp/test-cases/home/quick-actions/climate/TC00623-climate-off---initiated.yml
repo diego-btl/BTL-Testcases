@@ -1,0 +1,26 @@
+metadata:
+  id: TC00623
+  name: Climate Off - Initiated
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-01'
+  updated: '2025-09-22'
+  author: user_2
+  testmo_id: 623
+  folder_id: 62
+preconditions:
+- description: User is on the Home screen
+- description: '"Climate On" and "Climate Off" buttons are present in the Telematics
+    row'
+- description: Climate is turned on
+steps:
+- id: 1
+  action: User taps the "Climate Off" button
+  expected: Contacting <year and model> to turn off climate... | Waking <year and
+    model> to turn off climate... | Initiating climate off for <year and model>...

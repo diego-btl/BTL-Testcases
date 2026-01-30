@@ -1,0 +1,29 @@
+metadata:
+  id: TC00639
+  name: Edit Charge Schedule
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-01'
+  updated: '2025-09-22'
+  author: user_2
+  testmo_id: 639
+  folder_id: 66
+preconditions:
+- description: User is on Charge screen with existing charge schedule
+steps:
+- id: 1
+  action: Tap on an existing Charge Schedule2. Modify start/end time and days of the
+    week3. Tap to Save Schedule
+  expected: 'User should see Charge Schedule screen with schedule details filled in
+    and save button disabled2. User should see corresponding modifications made to
+    start/end time and days of the week and save button enable3. User should see a
+    loading spinner while schedule is being savedUser should see a success toast if
+    schedule was saved successfullyUser should be returned to the Charge screen with
+    modified schedule shownNote: If save schedule fails, user should see a failure
+    toast and remain on the Charge Schedule screen'

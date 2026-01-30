@@ -1,0 +1,26 @@
+metadata:
+  id: TC02743
+  name: Checkbox - Failure
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-09-08'
+  updated: '2024-10-17'
+  author: user_3
+  testmo_id: 2743
+  folder_id: 49
+description: https://www.pivotaltracker.com/story/show/184655354
+preconditions:
+- description: User has an AVK2 vehicleUser is on Notification Center screenUser has
+    REMINDER_TO_LOCK capability enabled
+steps:
+- id: 1
+  action: 'Mock ToggleReminderNotificationsAfterLeavingVehicle (iOS) so that it returns:
+    false OR an error is returned (ex. 500) -> Tap to check/uncheck any of the checkboxes'
+  expected: User should see all checkboxes disable while API call is madeUser should
+    see the corresponding checkbox revert to the previous state

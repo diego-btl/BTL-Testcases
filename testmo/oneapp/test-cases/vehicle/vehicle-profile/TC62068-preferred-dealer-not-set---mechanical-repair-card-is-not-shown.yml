@@ -1,0 +1,35 @@
+metadata:
+  id: TC62068
+  name: Preferred Dealer Not Set - Mechanical Repair card is not shown
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-12-02'
+  updated: '2025-12-02'
+  author: user_15
+  testmo_id: 62068
+  folder_id: 90
+description: 'https://www.pivotaltracker.com/story/show/185987320Stories:Android:
+  [MoveTirePressure][Android] Update MIL Data Sharing card to info paneliOS: [MoveTirePressure][iOS]
+  Update MIL Data Sharing card to info panelSCOPEWhen MIL Data Sharing is not enabled,
+  show an info panel at the top of the MIL tab on the Vehicle Status screenIf it''s
+  enabled, show this panel at the bottom of the screen and update the CTA text to
+  be Manage PreferencesThis info panel should show regardless of whether there is
+  an active MIL'
+preconditions:
+- description: AVK2 or EVO vehicle (AVK2, EVAVK2, EVO, EVEVO)
+- description: User does not need to have active MILs
+- description: User has MECHANICAL_REPAIR capability enabled
+- description: GrantMechanicalRepair FF is enabled
+- description: User has a preferred dealer set
+steps:
+- id: 1
+  action: Mock VehiclePreferredDealer to be empty then go to Vehicle tab > Vehicle
+    Profile > My Preferred dealer card
+  expected: Verify the Dealers details screen is shown in an empty state and the Vehicle
+    Maintenance Data Sharing card is not shown

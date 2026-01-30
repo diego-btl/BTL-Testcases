@@ -1,0 +1,31 @@
+metadata:
+  id: TC61945
+  name: Verify Trial EndDate is shown on a package subtitle
+  feature: test-cases
+  priority: critical
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-11-07'
+  updated: '2025-12-09'
+  author: user_15
+  testmo_id: 61945
+  folder_id: 3863
+preconditions:
+- description: EnableTelematicsBSM FF = true.
+- description: User logged in with the relevant subscription(s).
+- description: App is at initial launch state (no cached states interfering).
+- description: Mock serviceType = "Trial" on vehicleSubscriptions api
+steps:
+- id: 1
+  action: Launch the app > Navigate to the Vehicle screen > Tap on Subscription Packages.
+  expected: The subscriptions screen is shown successfully and populates according
+    information fetched on VehicleSubscriptions API
+- id: 2
+  action: Mock subscriptionEndDate to a date in the future and serviceType = "Trial"
+    >Tap on Subscription Packages.
+  expected: 'Trial package is displayed in the list. | Subtitle on card reads: Trial
+    Expires: [date]'

@@ -1,0 +1,24 @@
+metadata:
+  id: TC00538
+  name: Splash screen
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-01'
+  updated: '2025-10-06'
+  author: user_2
+  testmo_id: 538
+  folder_id: 40
+preconditions:
+- description: App must be installed
+- description: App is either a fresh installation or the cache is cleared
+steps:
+- id: 1
+  action: Launch app by clicking on the app icon
+  expected: User should see a splash screen with the brand logo while the rest of
+    the app loads

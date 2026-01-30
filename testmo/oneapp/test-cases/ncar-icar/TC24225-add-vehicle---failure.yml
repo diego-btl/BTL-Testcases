@@ -1,0 +1,25 @@
+metadata:
+  id: TC24225
+  name: Add vehicle - failure
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2024-08-28'
+  updated: '2024-10-17'
+  author: user_4
+  testmo_id: 24225
+  folder_id: 3081
+preconditions:
+- description: An error has triggered during the icar add vehicle flow
+steps:
+- id: 1
+  action: 1. Tap Validate VIN 2. Proceed through the regular add vehicle flow
+  expected: 1. User should see the Connected Terms and Conditions screen 2. User should
+    be able to proceed through the regular add vehicle flow which may include ownership
+    verification User should see the vehicle on the home screen if it is successfully
+    added

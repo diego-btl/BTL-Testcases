@@ -1,0 +1,23 @@
+metadata:
+  id: TC02837
+  name: Map Settings icon
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-09-13'
+  updated: '2026-01-06'
+  author: user_4
+  testmo_id: 2837
+  folder_id: 6788
+description: https://www.pivotaltracker.com/story/show/185517595
+preconditions:
+- description: AVK2 Vehicle
+steps:
+- id: 1
+  action: Tap on Map tab
+  expected: User should see the Map screen with Map Settings icon

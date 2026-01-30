@@ -1,0 +1,50 @@
+metadata:
+  id: TC62237
+  name: Book Second Delivery Appointment - Failure and Retry (Virtual)
+  feature: test-cases
+  priority: critical
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-12-19'
+  updated: '2025-12-19'
+  author: user_23
+  testmo_id: 62237
+  folder_id: 6820
+description: 'Book Second Delivery Appointment - Failure and Retry (Virtual): Booking
+  Submission Error HandlingValidates error handling when CreateSecondDeliveryAppointment
+  mutation fails. Tests that error modal is displayed with appropriate messaging,
+  retry option, and cancel option when booking submission encounters an error.Notes:BOOK
+  VIRTUAL APPOINTMENT button triggers CreateSecondDeliveryAppointment mutationAPI
+  failure displays error modal with retry and cancel optionsUser can retry booking
+  or cancel to return to Review screenError message includes phone number for alternative
+  booking method: 1-844-471-1010Preconditions:User is logged inEligible INFINITI VIN
+  in focusEligibility: SecondDeliveryEligibilityResponseRDRRecordFoundFeature Flag:
+  EnableSecondDelivery = trueUser is on Review screen (Step 3 of 3)Date and time have
+  been selectedContact information has been entered'
+steps:
+- id: 1
+  action: 'Mock CreateSecondDeliveryAppointment mutation to return error: -> { "data":
+    { "createSecondDeliveryAppointment": { "__typename": "CreateSecondDeliveryAppointmentSuccessResponse",
+    "success": false } } }On Review screen, tap BOOK VIRTUAL APPOINTMENT button'
+  expected: 'CreateSecondDeliveryAppointment mutation is triggered | API returns error
+    response | Error modal is displayed with:Modal title: Failed to Book Appointment
+    | Error message: Sorry, something went wrong when booking your appointment. You
+    can retry or call 1-844-471-1010 to book over the phone. | Cancel button (left
+    side, secondary style) | Retry button (right side, primary style - blue) | User
+    remains on Review screen (background dimmed with modal overlay)'
+- id: 2
+  action: Tap Retry button
+  expected: 'Error modal is dismissed | CreateSecondDeliveryAppointment mutation is
+    triggered again with same booking data | If retry succeeds: User is redirected
+    to Appointment Scheduled confirmation screen | If retry fails: Error modal is
+    displayed again with same messaging and options'
+- id: 3
+  action: Tap Cancel button (when error modal is displayed)
+  expected: Error modal is dismissed | User remains on Review screen | All booking
+    data is preserved (date, time, contact information) | User can modify booking
+    details or attempt to book again | BOOK VIRTUAL APPOINTMENT button remains enabled
+    and visible

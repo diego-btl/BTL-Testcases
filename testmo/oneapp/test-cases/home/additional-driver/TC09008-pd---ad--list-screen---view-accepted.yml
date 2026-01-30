@@ -1,0 +1,29 @@
+metadata:
+  id: TC09008
+  name: PD - AD  List Screen - View Accepted
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-11-21'
+  updated: '2024-10-17'
+  author: user_4
+  testmo_id: 9008
+  folder_id: 411
+description: https://www.pivotaltracker.com/story/show/185040330https://www.pivotaltracker.com/story/show/185039355
+preconditions:
+- description: User has an AVK2 vehicle and is PRIMARY_DRIVER
+- description: User has an accepted invitation
+- description: User is on AD List screen
+steps:
+- id: 1
+  action: Tap on accepted invitation
+  expected: User should see a section with name and when the invite as acceptedUser
+    should see Selected Vehicle section with the vehicle nicknameUser should see Additional
+    Driver section with Name, Email, and Phone numberUser should see Selected Configurations
+    section with a check or x corresponding with data returned from ShareableCapabilitiesForInvitation
+    and DriverInvites [iOS] | User should see a Delete Driver button at the bottom

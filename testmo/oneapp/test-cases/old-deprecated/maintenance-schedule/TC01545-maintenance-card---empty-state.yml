@@ -1,0 +1,18 @@
+metadata:
+  id: TC01545
+  name: Maintenance Card - Empty state
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-28'
+  updated: '2026-01-06'
+  author: user_2
+  testmo_id: 1545
+  folder_id: 6796
+preconditions:
+- description: Maintenance Schedule card is in the empty state

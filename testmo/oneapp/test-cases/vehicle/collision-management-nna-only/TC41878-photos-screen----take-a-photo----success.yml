@@ -1,0 +1,44 @@
+metadata:
+  id: TC41878
+  name: Photos Screen -  Take a Photo -  Success
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-06-09'
+  updated: '2025-06-09'
+  author: user_26
+  testmo_id: 41878
+  folder_id: 3800
+description: Verify that the user can take a photo from the device’s camera, review
+  it in the Photo Details screen, and complete the upload successfully.
+preconditions:
+- description: User is on the Photos screen
+- description: App has permission to access the device camera
+steps:
+- id: 1
+  action: Tap any photo placeholder or camera icon
+  expected: Add from Gallery | Take a Photo
+- id: 2
+  action: Tap Take a Photo
+  expected: The device camera opens
+- id: 3
+  action: Take a photo using the camera
+  expected: User is redirected to the Photo Details screen
+- id: 4
+  action: Verify Photo Details Screen
+  expected: Photo preview is displayed | Photo name is shown (non-editable) | Use
+    Photo CTA is visible | Add Different Photo CTA is visible | Delete Photo CTA is
+    visible
+- id: 5
+  action: Tap the info icon
+  expected: On Android, as a separate screen | On iOS, as a bottom sheet
+- id: 6
+  action: Tap Use Photo CTA
+  expected: App triggers UploadPhotoForCollisionReport API call | User sees a loading
+    state during the upload | User is redirected to the main Photos screen | The newly
+    uploaded photo is shown in the photo list/grid

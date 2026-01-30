@@ -1,0 +1,39 @@
+metadata:
+  id: TC62157
+  name: NECN - AccountStatus - FAILURE - TO CONFIRM WITH PM
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-12-15'
+  updated: '2026-01-15'
+  author: user_25
+  testmo_id: 62157
+  folder_id: 2444
+preconditions:
+- description: User has an EV/EV2
+- description: '"EnablePlugAndCharge": "true"'
+steps:
+- id: 1
+  action: Add a breakpoint to the AccountStatus API -> Fresh install the app -> Abort
+    the AccountStatus API when it's called -> Navigate to the Charge screen
+  expected: The 'Something Went Wrong' modal with 'Cancel' and 'Retry' buttons is
+    displayed
+- id: 2
+  action: Tap the 'Cancel' button
+  expected: The modal is dismissed - IT'S SUPPOSED TO BE CONFIRMED WITH PM SINCE IOS
+    REDIRECTS TO THE MANAGE EV SCREEN CALLING THE ACCOUNTSTATUS AGAIN
+- id: 3
+  action: Tap the 'Retry' button
+  expected: ChargeProduct API is called - ???????? | The Something Went Wrong modal
+    is not dismissed
+- id: 4
+  action: Fresh install the app -> Let the AccountStatus API to be executed for the
+    first time -> Breakpoint and abort the AccountStatus API when navigate to the
+    NECN screen
+  expected: The previously cached data is displayed | The 'Something Went Wrong' modal
+    is displayed > only on iOS - ??????????

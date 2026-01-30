@@ -1,0 +1,25 @@
+metadata:
+  id: TC00569
+  name: Estimate Range + Bar - Different states
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-01'
+  updated: '2024-10-17'
+  author: user_2
+  testmo_id: 569
+  folder_id: 55
+preconditions:
+- description: User has an EV
+steps:
+- id: 1
+  action: Battery level is more than 19%2. Battery level is 19% or lower3. Battery
+    level is more than 19% and charging4. Battery level is 19% or lower and charging
+  expected: User should see a blue range bar 2. User should see an orange range bar3.
+    User should see a blue gradient range bar with charging indicator4. User should
+    see an orange gradient range bar with charging indictor

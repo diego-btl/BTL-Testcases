@@ -1,0 +1,43 @@
+metadata:
+  id: TC02847
+  name: Mechanical Repair - Enable Data Sharing, SMS/Cell/Email - toggle success
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-09-13'
+  updated: '2025-12-02'
+  author: user_4
+  testmo_id: 2847
+  folder_id: 432
+description: 'https://www.pivotaltracker.com/story/show/185987331Stories:Android:
+  [MoveTirePressure][Android] Update MIL Data Sharing card to info paneliOS: [MoveTirePressure][iOS]
+  Update MIL Data Sharing card to info panelSCOPEWhen MIL Data Sharing is not enabled,
+  show an info panel at the top of the MIL tab on the Vehicle Status screenIf it''s
+  enabled, show this panel at the bottom of the screen and update the CTA text to
+  be Manage PreferencesThis info panel should show regardless of whether there is
+  an active MIL'
+preconditions:
+- description: AVK2 or EVO vehicle (AVK2, EVAVK2, EVO, EVEVO)
+- description: User does not need to have active MILs
+- description: 'User has at least one Vehicle status enabled (e.g: tire pressure PSI)'
+- description: User has MECHANICAL_REPAIR capability enabled
+- description: GrantMechanicalRepair FF is enabled
+steps:
+- id: 1
+  action: Tap toggle to enable/disable Enable Data Sharing -> Wait for the success
+    -> Tap toggle to disable/enable Enable Data Sharing -> Wait for the success
+  expected: User should see a loading screen while API is loading | User should see
+    toggle enable/disable and UI update to show the enabled/disabled state | User
+    should see a loading screen while API is loading | User should see toggle disable/enable
+    and UI update to show the disabled/enabled state
+- id: 2
+  action: Tap toggle to enable/disable SMS/Cell/Email -> Wait for the success -> Tap
+    toggle to disable/enable SMS/Cell/Email -> Wait for the success
+  expected: User should see a loading screen while API is loading | User should see
+    toggle enable/disable | User should see a loading screen while API is loading
+    | User should see toggle disable/enable

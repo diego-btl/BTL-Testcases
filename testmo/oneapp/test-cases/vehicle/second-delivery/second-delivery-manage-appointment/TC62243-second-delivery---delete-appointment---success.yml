@@ -1,0 +1,63 @@
+metadata:
+  id: TC62243
+  name: Second Delivery - Delete Appointment - Success
+  feature: test-cases
+  priority: critical
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-12-19'
+  updated: '2026-01-06'
+  author: user_23
+  testmo_id: 62243
+  folder_id: 6821
+description: 'Second Delivery - Delete Appointment - Success: Successful Deletion
+  FlowValidates that users can successfully delete an existing Second Delivery appointment
+  by tapping the Cancel Appointment button, confirming deletion in the modal, and
+  verifying the appointment is removed from the system with confirmation toast.Notes:User
+  has an existing booked Second Delivery appointmentCancel button displays confirmation
+  modal before deletionModal provides option to confirm or dismissSuccessful deletion
+  removes appointment and updates eligibility stateToast message confirms deletionUser
+  returns to Vehicle screen after deletionSecond Delivery booking card should reappear
+  after deletion'
+steps:
+- id: 1
+  action: 'Mock the SecondDeliveryAppointment query to return: -> { "data": { "vehicle":
+    { "__typename": "Vehicle", "secondDelivery": { "__typename": "SecondDelivery",
+    "appointment": { "__typename": "SecondDeliveryExistingBookedAppointment", "id":
+    20498452, "activityId": 20498452, "beginsAt": "2026-01-02T19:30:00.000Z", "address":
+    { "__typename": "Address", "address1": "1413 test address", "address2": null,
+    "city": "los angeles", "state": "CA", "postalCode": "90012", "country": "US" },
+    "contact": { "__typename": "SecondDeliveryContactInformation", "firstName": "Nna",
+    "lastName": "Qa", "phoneNumber": "5487545464", "email": "nnaqa@bethinklabs.com"
+    }, "redeliveryNotes": "Test appointment notes", "featureNotes": null, "hub": {
+    "__typename": "SecondDeliveryHub", "id": 1000000, "timezone": "US/Pacific", "dealer":
+    { "__typename": "SecondDeliveryDealer", "code": "999991", "address": { "__typename":
+    "SecondDeliveryDealerAddress", "coordinates": null, "address1": "325 W Gardena
+    Blvd", "address2": null, "state": "CA", "city": "Gardena", "country": "US", "id":
+    132498250, "postalCode": "90248" } } }, "mode": "VIRTUAL" } } } } }Navigate to
+    Upcoming Appointment screen'
+  expected: Mock data is set for SecondDeliveryAppointment query | User is on Upcoming
+    Appointment screen
+- id: 2
+  action: Tap Cancel Appointment button
+  expected: 'Confirmation modal is displayed | Modal title: Cancel Appointment? |
+    Modal message: Are you sure you want to cancel your appointment? | Nevermind button
+    is displayed | Yes, Cancel button is displayed | Background is dimmed/overlayed
+    | User remains on Upcoming Appointment screen'
+- id: 3
+  action: 'Mock the CancelSecondDeliveryAppointment mutation to return: -> { "data":
+    { "cancelSecondDeliveryAppointment": { "__typename": "CancelSecondDeliveryAppointmentSuccessResponse",
+    "success": true } } }Tap Yes, Cancel button'
+  expected: 'CancelSecondDeliveryAppointment mutation is triggered | Modal is dismissed
+    | User is navigated to Vehicle screen | Toast message is displayed: Appointment
+    cancelled with checkmark icon | Upcoming Virtual Appointment card is removed from
+    Vehicle screen | Second Delivery booking card is displayed (user can book again)
+    | Eligibility state changes to allow new booking'
+- id: 4
+  action: Tap Nevermind button (alternative path - if testing modal dismissal)
+  expected: Modal is dismissed | User remains on Upcoming Appointment screen | Appointment
+    is NOT deleted | All appointment details remain unchanged | No mutation is triggered

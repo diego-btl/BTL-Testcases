@@ -1,0 +1,45 @@
+metadata:
+  id: TC62137
+  name: Edit Service Appointment - Save Changes - Success
+  feature: test-cases
+  priority: critical
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-12-11'
+  updated: '2026-01-20'
+  author: user_23
+  testmo_id: 62137
+  folder_id: 6795
+description: 'Edit Service Appointment - Save Changes: Update and ConfirmationValidates
+  that changes made to a booked service appointment are saved successfully. Tests
+  that modified data is saved via updateServiceAppointment mutation with success confirmation
+  when tapping SAVE CHANGES button on Upcoming Appointment screen.Notes:Applicable
+  only when appointment has isEditable: trueSAVE CHANGES button is located on Upcoming
+  Appointment screen in ALL CAPSData changes depend on entry point:- Entered from
+  Selected Services → All fields (services, date/time, transportation, contact) can
+  be changed- Entered from Appointment Details or Transportation → Selected Services
+  remain unchanged, only date/time and transportation can change- Entered from Contact
+  Information → Only contact information (email, phone) is changedupdateServiceAppointment
+  mutation is triggered with all updated appointment details as payloadSuccess toast
+  appears after successful save'
+preconditions:
+- description: User has one or more booked service appointments
+- description: 'Appointment has isEditable: true'
+- description: User has made changes in edit flow and returned to Upcoming Appointment
+    screen
+steps:
+- id: 1
+  action: Enter edit flow from any entry point (Selected Services, Appointment Details,
+    Transportation, or Contact Information), make changes, tap NEXT button from any
+    editing screen to reach Upcoming Appointment screen
+  expected: User is navigated back to Upcoming Appointment screen | Updated values
+    are displayed on respective cards
+- id: 2
+  action: Tap SAVE CHANGES button on Upcoming Appointment screen
+  expected: 'updateServiceAppointment mutation is triggered with all updated appointment
+    data as payload | Success toast appears with message: Changes to Service Request
+    sent | User is redirected to Vehicle Screen'

@@ -1,0 +1,22 @@
+metadata:
+  id: TC00819
+  name: Privacy Notice
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-01'
+  updated: '2025-10-06'
+  author: user_2
+  testmo_id: 819
+  folder_id: 48
+preconditions:
+- description: User is on the Settings screen
+steps:
+- id: 1
+  action: Tap Privacy Notice
+  expected: User should see the privacy notice link open in a webview

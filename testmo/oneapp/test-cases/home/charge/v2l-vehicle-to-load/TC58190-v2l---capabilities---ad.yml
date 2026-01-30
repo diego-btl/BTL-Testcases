@@ -1,0 +1,35 @@
+metadata:
+  id: TC58190
+  name: V2L - Capabilities - AD
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-08-18'
+  updated: '2025-12-09'
+  author: user_25
+  testmo_id: 58190
+  folder_id: 1454
+description: https://app.clickup.com/t/86b64dch1
+preconditions:
+- description: User has an EV AVK2 vehicle
+- description: GrantV2L feature flag is enabled
+- description: User is AD
+steps:
+- id: 1
+  action: Mock capabilities so that V2L is missing -> Go to Manage EV screen
+  expected: V2lStatus API is not triggered. User should not see the Vehicle-to-Load
+    card
+- id: 2
+  action: Mock capabilities so that V2L is false -> Go to Manage EV screen -> Tap
+    on the Vehicle-to_Load card
+  expected: V2lStatus API is not triggered. User should not see the Vehicle-to-Load
+    card
+- id: 3
+  action: Mock capabilities so that V2L is true -> Go to Manage EV screen
+  expected: V2lStatus API is triggered. User should see the Vehicle-to_Load card in
+    the enabled state with a corresponding status in the secondary text

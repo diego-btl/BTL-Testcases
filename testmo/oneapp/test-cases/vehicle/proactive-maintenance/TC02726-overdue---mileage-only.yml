@@ -1,0 +1,35 @@
+metadata:
+  id: TC02726
+  name: Overdue - mileage only
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-09-07'
+  updated: '2024-10-17'
+  author: user_3
+  testmo_id: 2726
+  folder_id: 412
+preconditions:
+- description: User is on Maintenance Schedule Details screenReminder only has mileage
+    and is overdue
+steps:
+- id: 1
+  action: Observe Parts Service Reminders card
+  expected: User should see reminder showing the overdue pill, mileage, and Book a
+    Service CTA (text should say No Date with mileage)
+- id: 2
+  action: Tap on Book a Service
+  expected: User should enter the Book a Service flow
+- id: 3
+  action: Tap See All on Parts Service Reminders card
+  expected: User should see the Parts Service Reminders screenUser should see the
+    corresponding reminder in the Overdue section with mileage and the Book a Service
+    CTA
+- id: 4
+  action: Tap on Book a Service
+  expected: User should enter the Book a Service flow

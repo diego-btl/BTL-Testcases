@@ -1,0 +1,40 @@
+metadata:
+  id: TC41879
+  name: Photos Screen -  Add Photo  from Gallery - Success
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-06-09'
+  updated: '2025-06-09'
+  author: user_26
+  testmo_id: 41879
+  folder_id: 3800
+description: Verify that the user can add a photo from the device’s gallery, review
+  it in the Photo Details screen, and complete the upload successfully.
+preconditions:
+- description: User is on the Photos screen
+- description: App has permission to access the device’s photo gallery
+steps:
+- id: 1
+  action: Tap any photo placeholder or camera icon
+  expected: Add from Gallery | Take a Photo
+- id: 2
+  action: Tap Add from Gallery
+  expected: The device’s gallery opens for selection
+- id: 3
+  action: Select a photo from Gallery
+  expected: User is navigated to the Photo Details screen
+- id: 4
+  action: Verify Photo Details Screen
+  expected: 'Photo preview is displayed | Photo name is shown (non-editable) | Buttons:
+    Use Photo, Add Different Photo, Delete Photo'
+- id: 5
+  action: Tap Use Photo
+  expected: The app triggers the UploadPhotoForCollisionReport API | A loading state
+    is shown during the request | User is redirected to the Photos screen | The uploaded
+    photo is shown in the photo grid

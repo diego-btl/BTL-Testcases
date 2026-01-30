@@ -1,0 +1,33 @@
+metadata:
+  id: TC29931
+  name: Push Notification Registration - Error and Retries
+  feature: test-cases
+  priority: critical
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-01-13'
+  updated: '2025-09-19'
+  author: user_15
+  testmo_id: 29931
+  folder_id: 73
+preconditions:
+- description: 'Feature Flag: EnableNewMutationForPushNotificationRegistrationEnabled:
+    true --> RegisterDeviceForPushNotifications endpoint'
+- description: No token is cached (e.g., clean installation).
+- description: BreakPoint `RegisterDeviceForPushNotifications` API
+- description: API Failures should be a 503 response, do this by doing a map local
+    to the Register Push Notifications Endpoints
+steps:
+- id: 1
+  action: Login to app
+  expected: Verify `RegisterDeviceForPushNotifications` has been made
+- id: 2
+  action: Simulate a proper API error (503)
+  expected: First Retry 30 seconds after the first API call failed. | Second Retry
+    60 seconds after the previous API call fails. | Third Retry 90 seconds after the
+    previous API call fails. | Fourth and Last Retry 120 seconds after the last API
+    call fails.

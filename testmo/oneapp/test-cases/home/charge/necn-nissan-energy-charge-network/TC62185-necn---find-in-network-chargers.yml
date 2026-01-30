@@ -1,0 +1,30 @@
+metadata:
+  id: TC62185
+  name: NECN - Find In Network Chargers
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-12-17'
+  updated: '2026-01-15'
+  author: user_6
+  testmo_id: 62185
+  folder_id: 2444
+preconditions:
+- description: User is on the Home screen
+- description: User has an EV/EV2
+- description: '"EnablePlugAndCharge": "true"'
+- description: 'VehicleStaticData > "driverType": "PRIMARY_DRIVER"'
+- description: 'AccountStatus > "status": "ACTIVE"'
+steps:
+- id: 1
+  action: Tap on the Charge card
+  expected: User should see a NECN card for In Network Chargers
+- id: 2
+  action: Tap on the Find In-Network Charger CTA
+  expected: User is navigated to the map screen | Charge Stations are pre-populated
+    in the Search field

@@ -1,0 +1,16 @@
+metadata:
+  id: TC01628
+  name: Climate Off - Fail
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-28'
+  updated: '2024-10-17'
+  author: user_2
+  testmo_id: 1628
+  folder_id: 76

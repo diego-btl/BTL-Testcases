@@ -1,0 +1,25 @@
+metadata:
+  id: TC24282
+  name: SD - Create Appointment - Retry on Failure
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2024-10-18'
+  updated: '2026-01-06'
+  author: user_17
+  testmo_id: 24282
+  folder_id: 1453
+preconditions:
+- description: Vehicle is eligible within the valid period from purchase.
+- description: 'In the Firebase config > "EnableSecondDelivery": "true"'
+steps:
+- id: 1
+  action: Simulate an error during appointment creation. -> Check for retry notification.
+    -> Retry the appointment creation process. -> Confirm success after retry.
+  expected: The user should receive a retry notification and be able to successfully
+    create the appointment upon retrying.

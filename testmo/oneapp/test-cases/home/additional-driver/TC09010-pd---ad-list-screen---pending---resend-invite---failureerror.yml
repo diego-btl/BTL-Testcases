@@ -1,0 +1,36 @@
+metadata:
+  id: TC09010
+  name: PD - AD List Screen - Pending - Resend Invite - Failure/Error
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-11-21'
+  updated: '2024-10-17'
+  author: user_4
+  testmo_id: 9010
+  folder_id: 411
+description: https://www.pivotaltracker.com/story/show/184995050https://www.pivotaltracker.com/story/show/185695347
+preconditions:
+- description: User has an AVK2 vehicle and is PRIMARY_DRIVER
+- description: User has a valid pending invitation
+- description: User is viewing pending invitation
+steps:
+- id: 1
+  action: GeneralErrors -> DatabaseError -> BrandError -> TokenError -> InvalidInviteIdError
+  expected: See expected results
+- id: 2
+  action: Tap on Resend Invite -> Tap one of the two options
+  expected: User should see options to send via email or sms | User should see a loading
+    spinner, then an Re-invite failed to send modal
+- id: 3
+  action: Tap on Cancel
+  expected: User should see the error modal dismiss and remain on the pending invitation
+    screen
+- id: 4
+  action: Tap on Retry
+  expected: User should see the same API call triggered again

@@ -1,0 +1,21 @@
+metadata:
+  id: TC30057
+  name: Expanded
+  feature: test-cases
+  priority: critical
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-01-24'
+  updated: '2025-10-08'
+  author: user_17
+  testmo_id: 30057
+  folder_id: 98
+steps:
+- id: 1
+  action: Draw the info drawer up2. Drag within the drawer
+  expected: User should be able to move to the top position just under the header2.
+    User should be able to scroll the contents

@@ -1,0 +1,35 @@
+metadata:
+  id: TC61895
+  name: Verify "powered by Co-operators" is displayed
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-10-29'
+  updated: '2025-10-29'
+  author: user_6
+  testmo_id: 61895
+  folder_id: 6759
+description: 'The scope of this test case is to verify the card is displayed based
+  on both feature flag and user''s province. The firebase feature flag is attached
+  below.The app will compare the array of provinces returned in the feature flag to
+  the province returned in VehicleStaticData.data.user.address.state for the signed
+  in user and if there is no match then the card should be hidden. The feature flag
+  returns the abbreviated form but VehicleStaticData returns the full province name."NcesiInsuranceEligibility":
+  "{ \"provinces\": [ \"AB\", \"BC\", \"MB\", \"NB\", \"NL\", \"NS\", \"NT\", \"NU\",
+  \"ON\", \"PE\", \"QC\", \"SK\", \"YT\" ], \"learnMore\": { \"en\": \"https://apps.duuo.cooperators.ca/app/launch?lang=en&p=a&o=Nissan&a=journey&referrer=MobileApp\",
+  \"fr\": \"https://apps.duuo.cooperators.ca/app/launch?lang=fr&p=a&o=Nissan&a=journey&referrer=MobileApp\"
+  }, \"login\": { \"en\": \"https://myportal.duuo.cooperators.ca/en/Nissan\", \"fr\":
+  \"https://myportal.duuo.cooperators.ca/fr/Nissan\" } }"'
+preconditions:
+- description: User is signed in to the app and on the Home screen
+- description: User is using an NCI build
+- description: Users account is registered in Canada
+steps:
+- id: 1
+  action: Tap on the Nissan Protection card
+  expected: User should see the Insure my Nissan powered by Co-operators card

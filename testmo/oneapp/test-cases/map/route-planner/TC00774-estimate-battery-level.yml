@@ -1,0 +1,29 @@
+metadata:
+  id: TC00774
+  name: Estimate Battery level
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-01'
+  updated: '2025-12-02'
+  author: user_2
+  testmo_id: 774
+  folder_id: 101
+preconditions:
+- description: User is on Create a Route screen
+steps:
+- id: 1
+  action: The value batteryStatus.level is not available -> Tap on battery level
+  expected: User should see previously cached data or 90% value | User should see
+    options for 80%, 90% & 100%
+- id: 2
+  action: The value batteryStatus.level value is available -> Tap on battery level
+    -> Tap one of the options
+  expected: User should see the current battery percentage set or the previously cached
+    value | User should see options for current %, 80%, 90%, 100% | User should see
+    picker dismiss and the battery level set

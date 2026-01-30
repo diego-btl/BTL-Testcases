@@ -1,0 +1,27 @@
+metadata:
+  id: TC00780
+  name: Route Info Drawer - Expanded
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-01'
+  updated: '2025-12-02'
+  author: user_2
+  testmo_id: 780
+  folder_id: 101
+preconditions:
+- description: The user is in the Estimate Route* screen
+- description: The user already pass the create route first step
+steps:
+- id: 1
+  action: Drag to expand info drawer -> Tap on Back button
+  expected: User should see info drawer maximize showing additional information:Total
+    time of the route + distance | EDIT ROUTE button | Departure date/time | Arrival
+    date/time | Charge time | Origin, stops, EV waypoints, destination and their corresponding
+    address, time, charge time (for EV waypoints), and battery level | +ADD A STOP
+    button | Save button

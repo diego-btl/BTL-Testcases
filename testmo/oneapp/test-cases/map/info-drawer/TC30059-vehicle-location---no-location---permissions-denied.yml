@@ -1,0 +1,25 @@
+metadata:
+  id: TC30059
+  name: Vehicle Location - No Location - Permissions Denied
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-01-24'
+  updated: '2026-01-30'
+  author: user_17
+  testmo_id: 30059
+  folder_id: 98
+preconditions:
+- description: User's selected vehicle is not returning a location User has location
+    permissions denied
+steps:
+- id: 1
+  action: 1. Navigate to the Map screen
+  expected: 1. User should see Map centered Franklin, TN User should see User location
+    and Vehicle location button disabled User should see Vehicle could not be located
+    message and empty state for timestamp in Vehicle Location

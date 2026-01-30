@@ -1,0 +1,29 @@
+metadata:
+  id: TC00576
+  name: Lock Status
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-01'
+  updated: '2025-09-19'
+  author: user_2
+  testmo_id: 576
+  folder_id: 55
+description: Update the Lock Status on the Hero Module
+preconditions:
+- description: User has REMOTE_VEHICLE_STATUS capabilities
+steps:
+- id: 1
+  action: Connect device to proxy -> Login into the app -> Wait for all initial APIs
+    to finish loading -> Modify VehicleDynamicData so that vehicle.lockStatus.lockStatus
+    is UNLOCKED and modify vehicle.doorStatus.overallLock.lock is LOCKED -> Bg/Fg
+    the app -> Observe the lock status in the home hero
+  expected: User should see the corresponding lock/unlock icon in the Hero Module
+    | The app should be using vehicle.doorStatus data over vehicle.lockStatus data
+    when available and should fall back to vehicle.lockStatus data when it is not
+    available

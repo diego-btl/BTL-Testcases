@@ -1,0 +1,28 @@
+metadata:
+  id: TC01478
+  name: Stolen Vehicle
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-28'
+  updated: '2024-10-17'
+  author: user_2
+  testmo_id: 1478
+  folder_id: 54
+preconditions:
+- description: 'User''s vehicle is in the stolen state (status: "STOLEN")'
+steps:
+- id: 1
+  action: Launch app to home screen2. Tap on Call Customer Care3. Tap on Vehicle tab4.
+    Tap on Map tab
+  expected: User should see all feature cards disabled except for the NMAC card. User
+    should see the stolen badge displayed on the vehicle in the carousel2. User should
+    see call button 1-844-711-8100 1-855-444-72443. User should see items in the stolen
+    state with the stolen badge. | User should only be able to tap the Vehicle Profile
+    button5. User should not see the vehicle's location and the vehicle pin is hidden,
+    info drawer shows stolen badge

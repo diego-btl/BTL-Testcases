@@ -1,0 +1,31 @@
+metadata:
+  id: TC62008
+  name: Verify Tire Pressure MIL is inactive
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-11-17'
+  updated: '2026-01-06'
+  author: user_15
+  testmo_id: 62008
+  folder_id: 50
+description: SCOPEWhen the Tire Pressure MIL is active, then instead of displaying
+  it in the Status tab, it should be displayed in the MIL tabWhen displaying Tire
+  Pressure MIL in MIL tab, any tire where the tire pressure status is not 0 should
+  be displayed under the Tire Pressure MIL cardEnsure Tire Pressure MIL causes Home
+  tab to show MIL status card with icon on vehicle imageApplies for AVKVehicle generation
+  or newer vehicle (AVK, ElectricVehicle, AVK2, EVAVK2, EVO, EVEVO)
+steps:
+- id: 1
+  action: Mock VehicleDynamicData only with TIRE_PRESSURE=false > Call VehicleDynamicData
+    api > Go to Home screen
+  expected: Tire Pressure MIL card is not displayed. | Tire status cards are not shown
+- id: 2
+  action: Mock VehicleDynamicData only with TIRE_PRESSURE=false > Call VehicleDynamicData
+    api > Go to Vehicle screen
+  expected: Tire Pressure MIL card is not displayed. | Tire status cards are not shown

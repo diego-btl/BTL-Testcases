@@ -1,0 +1,37 @@
+metadata:
+  id: TC00880
+  name: Maintenance Card Expected Soon
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-04'
+  updated: '2026-01-06'
+  author: user_7
+  testmo_id: 880
+  folder_id: 6796
+description: 'User is >= 90% progress towards milestone (if time tracked then within
+  60 days) NOTE: Time Track uses the end of the month as the date (e.g Jan 2023 uses
+  Jan 31st 2023 as target date)'
+preconditions:
+- description: Mock the GenerateAllVisits call response
+- description: 'Milestone: "Alignment": "DistanceAndTimeBased" and update the mileage
+    (DistanceMiles, DistanceKMs) of an upcoming appointment to be >= 90% progress
+    towards the milestone.'
+- description: 'Time track: "Alignment": "TimeBased" , update the date (Month) of
+    an upcoming appointment to be less than 60 days'
+- description: 'Sample:'
+- description: '"Interval": {"__typename": "MS_ExpandedInterval","Month": 7,"Year":
+    2023,"Next": true,"DistanceMiles": 1300,"DistanceKMs": 2200},'
+steps:
+- id: 1
+  action: Go to the Vehicle tab
+  expected: A maintenance card exists on the screen
+- id: 2
+  action: Tap on Maintenance Schedule Card -> Select the Driving type -> Go back to
+    the Vehicle tab
+  expected: There's an Expected Soon text

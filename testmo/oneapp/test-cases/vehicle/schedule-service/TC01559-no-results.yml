@@ -1,0 +1,19 @@
+metadata:
+  id: TC01559
+  name: No Results
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-28'
+  updated: '2024-10-17'
+  author: user_2
+  testmo_id: 1559
+  folder_id: 93
+preconditions:
+- description: User is on the Select a Retailer screen and in a location with no search
+    results nearby

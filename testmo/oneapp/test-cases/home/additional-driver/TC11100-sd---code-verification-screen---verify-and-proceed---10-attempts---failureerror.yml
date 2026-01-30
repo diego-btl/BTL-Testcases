@@ -1,0 +1,46 @@
+metadata:
+  id: TC11100
+  name: SD - Code Verification Screen - Verify and Proceed - 10 attempts - Failure/Error
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-11-29'
+  updated: '2024-10-17'
+  author: user_4
+  testmo_id: 11100
+  folder_id: 411
+description: https://www.pivotaltracker.com/story/show/186399716
+preconditions:
+- description: User is logged into an account with a pending AD invite
+- description: User is on the Code Verification screen
+- description: User has exhausted the first set of 5 attempts and requested a new
+    code
+- description: In order to receive the OTP code, you will need to have mocked user
+    own number in VehiclesStaticData and UserMobileNumber or setting a breakpoint
+    on GenerateOTPForSharedDriver and modifying the request with your own number
+steps:
+- id: 1
+  action: Enter an incorrect code and tap on Verify and Proceed until the second set
+    of 5 attempts have been exhausted (10 attempts total)
+  expected: User should see an error message for too many attempts and to request
+    a new inviteUse should see back button hidden, empty field and Send New Code link
+    are disabled, and Return to Home button enabled
+- id: 2
+  action: GeneralErrors -> DatabaseError -> BrandError -> TokenError -> InvalidInviteIdError
+  expected: See expected results
+- id: 3
+  action: Tap on Return to Home
+  expected: User should see a loading spinner, then a Something Went Wrong modal with
+    options - Cancel/Retry
+- id: 4
+  action: Tap on Cancel
+  expected: User should see the error modal dismiss and remain on the Code Verification
+    screen
+- id: 5
+  action: Tap on Retry
+  expected: User should see the same API call triggered again

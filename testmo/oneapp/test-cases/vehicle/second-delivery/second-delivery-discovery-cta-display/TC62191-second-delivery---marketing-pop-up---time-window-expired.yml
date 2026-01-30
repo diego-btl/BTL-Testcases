@@ -1,0 +1,40 @@
+metadata:
+  id: TC62191
+  name: Second Delivery - Marketing Pop-up - Time Window Expired
+  feature: test-cases
+  priority: critical
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-12-19'
+  updated: '2026-01-06'
+  author: user_23
+  testmo_id: 62191
+  folder_id: 6818
+description: 'Marketing Pop-up Display - Outside Time Window for Second Delivery.
+  Validates that marketing pop-up is hidden when daysSincePurchased exceeds displayMarketingMessageThresholdInDays,
+  regardless of versionToDisplay value.Notes:Pop-up hidden when: daysSincePurchased
+  > displayMarketingMessageThresholdInDaysMarketing window closes after 60 days (threshold)Display
+  logic checks time window BEFORE checking versionToDisplayExample: 65 days > 60 days
+  threshold = Pop-up hiddenUse mocks from folder "Second Delivery - MyINFINITI Expert
+  - Discovery & CTA Display"Test on both light and dark modeFeature Flag: EnableSecondDelivery
+  is set to true'
+preconditions:
+- description: User is not logged in (popup checked on app launch)
+- description: Feature Flag EnableSecondDelivery is set to true
+- description: 'Mock configured with daysSincePurchased: 65 (exceeds 60-day threshold)'
+- description: 'Mock configured with displayMarketingMessageThresholdInDays: 60'
+steps:
+- id: 1
+  action: 'Mock SecondDeliveryEligibility with: -> { "marketingMessage": { "versionToDisplay":
+    "REMIND_ME_LATER", "displayMarketingMessageThresholdInDays": 60, "remindMeLaterThresholdInDays":
+    8 }, "daysSincePurchased": 65 }Login to app'
+  expected: 'Marketing pop-up does NOT appear | User goes directly to Home screen
+    | Card visibility based on prioritization: | If prioritized: true (daysSincePurchased
+    < 30): Card appears on Home screen AND Vehicle screen at top | If prioritized:
+    false (daysSincePurchased >= 30): Card appears ONLY on Vehicle screen (not on
+    Home screen) | At 65 days, card would be non-prioritized, so appears on Vehicle
+    screen only'

@@ -1,0 +1,24 @@
+metadata:
+  id: TC00637
+  name: Schedules
+  feature: test-cases
+  priority: critical
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-01'
+  updated: '2026-01-06'
+  author: user_2
+  testmo_id: 637
+  folder_id: 66
+preconditions:
+- description: User is on Manage EV screen
+steps:
+- id: 1
+  action: No existing charge schedules2. At least one charge schedule3. 3 charge schedules
+  expected: User should see empty state for schedules2. User should see charge schedule
+    with days of the week, start time, and toggle state3. User should see all charge
+    schedules and add button disabled

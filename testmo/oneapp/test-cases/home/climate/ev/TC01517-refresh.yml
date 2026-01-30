@@ -1,0 +1,23 @@
+metadata:
+  id: TC01517
+  name: Refresh
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-28'
+  updated: '2025-10-28'
+  author: user_2
+  testmo_id: 1517
+  folder_id: 4169
+preconditions:
+- description: User is on Climate screen
+steps:
+- id: 1
+  action: Tap to Refresh
+  expected: User should see a loading spinner while refresh is in progressUser should
+    see schedules and climate status update if successful

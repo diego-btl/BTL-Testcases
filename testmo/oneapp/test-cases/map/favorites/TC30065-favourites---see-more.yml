@@ -1,0 +1,26 @@
+metadata:
+  id: TC30065
+  name: Favourites - See more
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-01-24'
+  updated: '2025-09-22'
+  author: user_17
+  testmo_id: 30065
+  folder_id: 99
+steps:
+- id: 1
+  action: Tap See More2. Tap on Call button3. Tap on Directions button4. Tap the heart
+    icon5. Tap one of the favorite POI cards
+  expected: User should be taken to the Favorites screen. If there are no Favorites,
+    the See More button will be disabled or user should see a scrolling view of POI
+    cards if there are Favorites.2. User should see call button function properly3.
+    User should see directions button function properly4. User should see loading
+    state while favorite is being removedOn success, user should see card removed
+    and success toast5. User should see map pan to the corresponding favorite POI

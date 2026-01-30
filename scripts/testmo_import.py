@@ -21,20 +21,24 @@ from yaml_converter import YAMLConverter
 console = Console()
 
 
-def load_yaml_files(directory: Path) -> List[Dict[str, Any]]:
-    """Load all YAML test case files from directory"""
-    yaml_cases = []
-    
+def load_yaml_files(directory: Path) -> Dict[Path, Dict[str, Any]]:
+    """Load all YAML test case files from directory
+
+    Returns:
+        Dict mapping file path -> yaml case data
+    """
+    yaml_cases = {}
+
     for yaml_file in directory.rglob("*.yml"):
         try:
             with open(yaml_file, 'r') as f:
                 case = yaml.safe_load(f)
                 if case and "metadata" in case:
                     case["_source_file"] = str(yaml_file)
-                    yaml_cases.append(case)
+                    yaml_cases[yaml_file] = case
         except Exception as e:
             console.print(f"[yellow]Warning: Could not load {yaml_file}: {e}[/yellow]")
-    
+
     return yaml_cases
 
 
@@ -42,9 +46,10 @@ def load_yaml_files(directory: Path) -> List[Dict[str, Any]]:
 @click.option("--project-id", type=int, help="Testmo project ID", envvar="TESTMO_PROJECT_ID")
 @click.option("--input-dir", type=Path, default="test-cases", help="Input directory with YAML files")
 @click.option("--folder-name", type=str, help="Target folder name in Testmo (will be created if needed)")
+@click.option("--preserve-folders", is_flag=True, default=True, help="Preserve folder structure from local export (default: True)")
 @click.option("--dry-run", is_flag=True, help="Show what would be imported without actually importing")
 @click.option("--update-existing", is_flag=True, help="Update existing cases (match by testmo_id)")
-def import_to_testmo(project_id: int, input_dir: Path, folder_name: str, dry_run: bool, update_existing: bool):
+def import_to_testmo(project_id: int, input_dir: Path, folder_name: str, preserve_folders: bool, dry_run: bool, update_existing: bool):
     """Import test cases from YAML files to Testmo"""
     
     console.print("\n[bold blue]Testmo Import Tool[/bold blue]")
@@ -80,37 +85,60 @@ def import_to_testmo(project_id: int, input_dir: Path, folder_name: str, dry_run
         
         # Load YAML files
         with console.status("[bold green]Loading YAML files..."):
-            yaml_cases = load_yaml_files(input_dir)
-            console.print(f"[green]✓[/green] Loaded {len(yaml_cases)} YAML files")
-        
-        if not yaml_cases:
+            yaml_cases_map = load_yaml_files(input_dir)
+            console.print(f"[green]✓[/green] Loaded {len(yaml_cases_map)} YAML files")
+
+        if not yaml_cases_map:
             console.print("[yellow]No YAML test cases found[/yellow]")
             return
-        
+
+        # Group cases by folder path (if preserve_folders is enabled)
+        if preserve_folders and not folder_name:
+            console.print("[cyan]Grouping cases by folder structure...")
+            cases_by_folder = {}
+
+            for filepath, yaml_case in yaml_cases_map.items():
+                # Get folder path from filepath
+                rel_path = filepath.relative_to(input_dir)
+                folder_path = str(rel_path.parent)
+
+                if folder_path == ".":
+                    folder_path = None
+
+                if folder_path not in cases_by_folder:
+                    cases_by_folder[folder_path] = []
+
+                cases_by_folder[folder_path].append((filepath, yaml_case))
+
+            console.print(f"[green]✓[/green] Cases organized into {len(cases_by_folder)} folders")
+        else:
+            # No folder preservation - treat as flat list
+            cases_by_folder = {folder_name: list(yaml_cases_map.items())}
+
         # Convert to Testmo format
         testmo_cases = []
-        
+
         with Progress(
             SpinnerColumn(),
             TextColumn("[progress.description]{task.description}"),
             console=console
         ) as progress:
-            task = progress.add_task("Converting to Testmo format...", total=len(yaml_cases))
-            
-            for yaml_case in yaml_cases:
-                testmo_case = converter.yaml_to_testmo(yaml_case)
-                
-                # Add folder_id if specified
-                if folder_id:
-                    testmo_case["folder_id"] = folder_id
-                
-                # Store metadata for tracking
-                testmo_case["_yaml_metadata"] = yaml_case.get("metadata", {})
-                testmo_case["_source_file"] = yaml_case.get("_source_file")
-                
-                testmo_cases.append(testmo_case)
-                progress.advance(task)
-        
+            task = progress.add_task("Converting to Testmo format...", total=len(yaml_cases_map))
+
+            for folder_path, folder_cases in cases_by_folder.items():
+                for filepath, yaml_case in folder_cases:
+                    testmo_case = converter.yaml_to_testmo(yaml_case)
+
+                    # Store folder path for later
+                    testmo_case["_folder_path"] = folder_path
+
+                    # Store metadata for tracking
+                    testmo_case["_yaml_metadata"] = yaml_case.get("metadata", {})
+                    testmo_case["_source_file"] = yaml_case.get("_source_file")
+
+                    testmo_cases.append(testmo_case)
+                    progress.advance(task)
+
         console.print(f"[green]✓[/green] Converted {len(testmo_cases)} test cases")
         
         if dry_run:
@@ -272,7 +300,11 @@ def import_to_testmo(project_id: int, input_dir: Path, folder_name: str, dry_run
             # CREATE mode - create all cases as new
             console.print("\n[cyan]CREATE MODE[/cyan] - Creating all cases as new\n")
 
+            if preserve_folders and not folder_name:
+                console.print("[cyan]Creating folder structure...")
+
             created_mapping = []  # Track: [(yaml_file_path, testmo_id), ...]
+            folder_cache = {}  # Cache folder_path -> folder_id
 
             with Progress(
                 SpinnerColumn(),
@@ -285,10 +317,33 @@ def import_to_testmo(project_id: int, input_dir: Path, folder_name: str, dry_run
                     try:
                         metadata = case.get("_yaml_metadata", {})
                         source_file = case.get("_source_file")
+                        folder_path = case.get("_folder_path")
+
+                        # Create or get folder if needed
+                        target_folder_id = None
+                        if preserve_folders and folder_path and not folder_name:
+                            if folder_path in folder_cache:
+                                target_folder_id = folder_cache[folder_path]
+                            else:
+                                # Create folder hierarchy
+                                target_folder_id = client.get_or_create_folder_hierarchy(
+                                    project_id=project_id,
+                                    folder_path=folder_path,
+                                    verbose=True
+                                )
+                                folder_cache[folder_path] = target_folder_id
+                        elif folder_id:
+                            # Use the single folder specified by --folder-name
+                            target_folder_id = folder_id
+
+                        # Add folder_id to case
+                        if target_folder_id:
+                            case["folder_id"] = target_folder_id
 
                         # Remove internal fields before sending to API
                         case.pop("_yaml_metadata", None)
                         case.pop("_source_file", None)
+                        case.pop("_folder_path", None)
                         # Remove testmo_id if present (we're creating new)
                         case.pop("id", None)
 

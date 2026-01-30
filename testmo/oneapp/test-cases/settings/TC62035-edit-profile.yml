@@ -1,0 +1,26 @@
+metadata:
+  id: TC62035
+  name: Edit Profile
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-11-27'
+  updated: '2025-11-28'
+  author: user_24
+  testmo_id: 62035
+  folder_id: 48
+preconditions:
+- description: Browser Log in FF should be True
+steps:
+- id: 1
+  action: Log in to app (browser login) -> Go to Settings>Profile -> Tap on Edit profile
+  expected: You should be taken to the Profile page on nissan portal within the system
+    webview - you shouldn't be taken to the nissan portal sig in in page on an external
+    webview | The url should match url on "editContactInformationAndChangePassword"
+    parameter in ContactUs api response | Edit address, name etc. | Save | Go back
+    to app | You should see the edits you made under Settings > Profile

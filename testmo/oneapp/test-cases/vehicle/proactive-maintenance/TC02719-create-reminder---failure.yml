@@ -1,0 +1,39 @@
+metadata:
+  id: TC02719
+  name: Create reminder - Failure
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-09-07'
+  updated: '2024-10-17'
+  author: user_3
+  testmo_id: 2719
+  folder_id: 412
+preconditions:
+- description: User is on PSR screen
+- description: User has fewer than 4 reminders
+steps:
+- id: 1
+  action: Tap on Create New
+  expected: User should see New Reminder screen in default state without anything
+    selected
+- id: 2
+  action: Check at least 1 part and set at least 1 type of reminder interval
+  expected: User is able to check any parts and set a reminder interval
+- id: 3
+  action: Mock an error for the API call and tap on Save
+  expected: User should see a loading spinner while reminder is savingOn error, user
+    should see a failure modal with the option to retry or not
+- id: 4
+  action: Tap on Yes on modal
+  expected: User should see a loading spinner while reminder is saving. | On success
+    user should see the main PSR screen with the new reminder. On failure, user should
+    see the error modal again
+- id: 5
+  action: Tap on No on modal
+  expected: User should see failure modal dismiss and remain on the New Reminder screen

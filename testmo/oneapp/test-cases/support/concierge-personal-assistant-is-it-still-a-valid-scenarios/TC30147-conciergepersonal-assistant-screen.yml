@@ -1,0 +1,29 @@
+metadata:
+  id: TC30147
+  name: Concierge/Personal Assistant screen
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-02-05'
+  updated: '2026-01-30'
+  author: user_17
+  testmo_id: 30147
+  folder_id: 84
+description: 'Note: Removed for NCI'
+preconditions:
+- description: User is on the Support tab and has the CONCIERGE_PERSONAL_ASSISTANCE
+    capability
+steps:
+- id: 1
+  action: Tap the Concierge card (if Nissan), Personal Assistant (If Infiniti)
+  expected: The user should be taken to the Concierge (if Nissan), Personal Assistant
+    (If Infiniti) screen
+- id: 2
+  action: Tap the Call Concierge / Personal Assistant button
+  expected: 'The user should be able to call: 1 (888) 409-1411 (Nissan NNA), 1 (888)
+    774-1411 (Infiniti NNA)'

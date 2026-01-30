@@ -1,0 +1,85 @@
+metadata:
+  id: TC58189
+  name: Collision Management - Golden Path - (Empty Collision Report forms and without
+    photos)
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-08-15'
+  updated: '2025-08-15'
+  author: user_26
+  testmo_id: 58189
+  folder_id: 3800
+preconditions:
+- description: 'The Collision Management feature flag is enabled:'
+- description: The user is on the vehicle page and can see the Collision Management
+    card.
+steps:
+- id: 1
+  action: Tap on the Collision Management card
+  expected: 'The user should be navigated to the Collision Management screen | The
+    Collision Management screen opens, showing options: - New Collision Report- View
+    All Reports- Accident Helper- Collision Towing section with a Call Roadside Assistance
+    button.'
+- id: 2
+  action: Tap on the New Collision Report card
+  expected: 'The Collision Report screen appears with sections: | Your Information,
+    - Towing/Transportation, - Insurance Provider, - Collision Center, - and the ADD
+    PHOTOS button.'
+- id: 3
+  action: Do not Edit Towing/Transportation, Insurance Provider, Collision Center
+    (leave them as “—”). -> Keep whatever is prefilled in Your Information.
+  expected: Sections show blanks/“—”. | ADD PHOTOS is available.
+- id: 4
+  action: Tap ADD PHOTOS -> Appears the Missing Information Modal " Your collision
+    report is missing information. Would you still like to share the current collision
+    report? -> Tap Cancel on the warning modal
+  expected: You stay on the Collision Report form, nothing changes.
+- id: 5
+  action: Tap ADD PHOTOS again -> On the same warning modal, Tap Continue
+  expected: The photo screen opens showing the car diagram and empty photo slots (Front
+    Left, Front, Front Right, …). | THE GENERATE COLLISION REPORT button is visible
+    at the bottom.
+- id: 6
+  action: Without adding any photos, Tap GENERATE COLLISION REPORT
+  expected: 'Confirmation modal appears: Generate Collision Report? You will not be
+    able to edit your photos once you save. Saving will generate your completed Collision
+    Report.” with buttons Cancel / Save.'
+- id: 7
+  action: Tap Save
+  expected: 'A progress screen shows “Report is being generated with the following
+    details: • Owner information • Vehicle information • Photos” | with a toast “Generating
+    Report…”. No crash.'
+- id: 8
+  action: Wait for the generation to complete.
+  expected: Collision Report preview (PDF) opens. | SHARE REPORT and DOWNLOAD REPORT
+    buttons are visible. | Blank sections (e.g., Towing/Insurance/Collision Center)
+    display as empty/“—”.
+- id: 9
+  action: Tap SHARE REPORT
+  expected: The user is navigated to the Collision Center screen
+- id: 10
+  action: In the search field, enter a ZIP code (e.g., 2345, 37067 )
+  expected: The system displays a list of available Collision Center cards, each with
+    a Send Report CTA
+- id: 11
+  action: Tap the Send Report CTA on one of the Center cards.
+  expected: The collision report is attached as a PDF file. | The recipient field
+    is automatically filled with the selected Collision Center’s email address.
+- id: 12
+  action: Tap Download Report
+  expected: The system “Open with” menu appears, showing available apps to open or
+    save the PDF.
+- id: 13
+  action: Go back to the report screen
+  expected: 'A confirmation appears: “Are you sure? If you go back, you will have
+    to start your report over again,” with Cancel and Yes leave options.'
+- id: 14
+  action: On the Collision Management screen, tap View All Reports
+  expected: The newly generated report appears in the history list with the correct
+    Report Date; fields you left blank are empty in the PDF

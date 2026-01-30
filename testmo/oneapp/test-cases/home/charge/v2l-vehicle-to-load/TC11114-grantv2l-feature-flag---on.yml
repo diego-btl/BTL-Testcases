@@ -1,0 +1,26 @@
+metadata:
+  id: TC11114
+  name: GrantV2L Feature flag - ON
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2024-02-02'
+  updated: '2026-01-07'
+  author: user_4
+  testmo_id: 11114
+  folder_id: 1454
+description: https://app.clickup.com/t/86b64dch1
+preconditions:
+- description: User has an EV AVK2 vehicle
+- description: V2L capability is returning true
+steps:
+- id: 1
+  action: Mock remote config so that GrantV2L is true -> Go to Charge card > Manage
+    EV screen
+  expected: User should see an API call for V2lStatus and should see the Vehicle-to-Load
+    card

@@ -1,0 +1,26 @@
+metadata:
+  id: TC00633
+  name: Controls screen
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-01'
+  updated: '2025-11-04'
+  author: user_2
+  testmo_id: 633
+  folder_id: 65
+preconditions:
+- description: User is on home screen
+steps:
+- id: 1
+  action: Tap on Controls card
+  expected: 'User should see the Controls screenUser should see quick action buttons
+    in Favorites and More Controls sectionsDefault favoritesICE: Lock, Unlock, Engine,
+    Lights, HornEV: Lock, Unlock, Climate On, Charge On, LightsFor ICE - available
+    quick actions are: Lock, Unlock, Engine, Horn, LightsFor EV - available quick
+    actions are: Lock, Unlock, Horn, Lights, Climate On, Climate Off, Charge On'

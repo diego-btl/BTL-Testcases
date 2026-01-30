@@ -1,0 +1,41 @@
+metadata:
+  id: TC61964
+  name: Driving History - Card Disabled
+  feature: test-cases
+  priority: critical
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-11-10'
+  updated: '2025-11-10'
+  author: user_25
+  testmo_id: 61964
+  folder_id: 92
+preconditions:
+- description: Vehicle is an EV/EV2
+- description: PD
+- description: 'VehicleCapabilities > DRIVING_JOURNEY_HISTORY (EV2)/DRIVING_ANALYSIS
+    (EV) > "enabled": false OR'
+- description: 'VehicleCapabilities > DRIVING_JOURNEY_HISTORY (EV2)/DRIVING_ANALYSIS
+    (EV) > "enabled": null/""'
+- description: User is on the Vehicle tab
+steps:
+- id: 1
+  action: Scroll down on the vehicle page
+  expected: User should be able to see the Driving History card in the disabled state
+- id: 2
+  action: Tap the Driving History card
+  expected: The 'Account Expired' modal with 'Cancel' and 'Call' buttons is displayed
+- id: 3
+  action: Tap the 'Cancel' button
+  expected: The modal is dismissed
+- id: 4
+  action: Tap the Driving History card
+  expected: The 'Account Expired' modal with 'Cancel' and 'Call' buttons is displayed
+- id: 5
+  action: Tap the 'Call' button
+  expected: The proper phone number is displayed returned by ContactUs.ownershipVerification
+    (NNA - 1-855-426-6628)

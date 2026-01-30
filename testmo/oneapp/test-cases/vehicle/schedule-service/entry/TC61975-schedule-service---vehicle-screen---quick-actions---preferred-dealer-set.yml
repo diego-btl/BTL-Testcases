@@ -1,0 +1,27 @@
+metadata:
+  id: TC61975
+  name: Schedule Service - Vehicle Screen - Quick Actions - Preferred Dealer Set
+  feature: test-cases
+  priority: critical
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-11-11'
+  updated: '2026-01-20'
+  author: user_23
+  testmo_id: 61975
+  folder_id: 6779
+description: 'Entry Point Validation: Vehicle Screen Quick Actions Schedule Service
+  ButtonValidates that tapping the Schedule Service button in quick actions on the
+  Vehicle screen redirects to the Select Services screen when a preferred retailer/dealer
+  is set and nativeServiceBooking= true.Preconditions:User is logged in to the appPreferred
+  retailer/dealer is set (Retailer for INFINITI, Dealer for NISSAN) and nativeServiceBooking=
+  trueUser is on the Vehicle Screen'
+steps:
+- id: 1
+  action: Tap on the Schedule Service button in the quick actions section
+  expected: ServiceOperations query is triggered | User is redirected to the Select
+    Services screen

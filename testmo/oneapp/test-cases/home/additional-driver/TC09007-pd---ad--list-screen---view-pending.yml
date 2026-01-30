@@ -1,0 +1,36 @@
+metadata:
+  id: TC09007
+  name: PD - AD  List Screen - View Pending
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-11-21'
+  updated: '2024-10-17'
+  author: user_4
+  testmo_id: 9007
+  folder_id: 411
+description: https://www.pivotaltracker.com/story/show/184995050
+preconditions:
+- description: User has an AVK2 vehicle and is PRIMARY_DRIVER
+- description: User has a valid pending invitation
+- description: User is on AD List screen
+steps:
+- id: 1
+  action: Tap on the pending invitation
+  expected: User should see a section with the date the invite was sent, the name
+    of the person the invitation was sent to, days remaining until the invite expires,
+    and CTAs to Resend or Cancel InviteUser should see Selected Vehicle section with
+    the vehicle nicknameUser should see Additional Driver section with Name, Email,
+    and Phone number
+- id: 2
+  action: Change the device date a few days in the future -> Return to the app
+  expected: User should see the days remaining until expiry update dynamically
+- id: 3
+  action: Change the device date beyond the expiry date of the invite -> Go back to
+    the AD List screen
+  expected: User should no longer see pending invite shown in the list

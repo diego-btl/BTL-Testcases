@@ -1,0 +1,50 @@
+metadata:
+  id: TC00620
+  name: Climate On - Success
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-01'
+  updated: '2025-10-09'
+  author: user_2
+  testmo_id: 620
+  folder_id: 62
+preconditions:
+- description: User is on the Home screen
+- description: User has sent a StartClimate request
+- description: 'CheckRemoteClimateRequest API:'
+- description: '{'
+- description: '"data": {'
+- description: '"checkRemoteClimateRequest": {'
+- description: '"__typename": "ServiceRequestResult",'
+- description: '"status": "SUCCESS"'
+- description: '}'
+- description: '}'
+- description: '}'
+- description: 'VehicleClimateStatus API: {'
+- description: '"data": {'
+- description: '"vehicle": {'
+- description: '"__typename": "ElectricVehicle",'
+- description: '"climateStatus": {'
+- description: '"__typename": "ClimateStatus",'
+- description: '"state": "ON",'
+- description: '"temperature": {'
+- description: '"__typename": "Temperature",'
+- description: '"value": 70,'
+- description: '"unit": "FAHRENHEIT"'
+- description: '}'
+- description: '}'
+- description: '}'
+- description: '}'
+- description: '}'
+steps:
+- id: 1
+  action: Climate On request has been resolved into a success
+  expected: Climate control is on for <year and model> ENG | Le contrôle de la climatisation
+    est activé pour le <year and model> FR | Climate On | Climatisation activé | Setting
+    to $temp | Réglage sur $temp

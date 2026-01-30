@@ -1,0 +1,16 @@
+metadata:
+  id: TC60253
+  name: Verify Nissan Wallet entry point - NECN
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-08-25'
+  updated: '2025-08-25'
+  author: user_15
+  testmo_id: 60253
+  folder_id: 6548

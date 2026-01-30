@@ -1,0 +1,30 @@
+metadata:
+  id: TC01569
+  name: Select Date and Time - Optional Preference - Pick up & Delivery
+  feature: test-cases
+  priority: critical
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-28'
+  updated: '2025-09-19'
+  author: user_2
+  testmo_id: 1569
+  folder_id: 7143
+preconditions:
+- description: User is on Optional Preference screen
+steps:
+- id: 1
+  action: Tap on Pick up & Delivery2. Tap on either address field3. Enter an address
+    and select an autocomplete entry4. Tap on either 'I don't need' checkbox5. Tap
+    on Save
+  expected: 'User should see Pickup/dropoff fields enable and populate with user''s
+    address2. User should be able to enter an address3. User should see their selected
+    entry in the corresponding address field4. User should see address field cleared
+    and disabled5. User should be brought back to Select Date and Time screen with
+    updated time slots and pickup/dropoff addresses shownNote: Save button is disabled
+    if both fields have ''I don''t need'' checked. If ''I don''t need'' is not checked,
+    then an address must be filled in to proceed.'

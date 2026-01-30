@@ -1,0 +1,35 @@
+metadata:
+  id: TC36690
+  name: NISSAN ENERGY Charge Network - Active - AD
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-05-08'
+  updated: '2026-01-15'
+  author: user_25
+  testmo_id: 36690
+  folder_id: 2444
+preconditions:
+- description: User has an EV/EV2
+- description: '"EnablePlugAndCharge": "true"'
+- description: 'VehicleStaticData > "driverType": "SHARED_DRIVER"'
+steps:
+- id: 1
+  action: 'User is on the Manage EV screen -> AccountStatus API > "status": "ACTIVE"'
+  expected: NISSAN ENERGY Charge Network card is displayed | Subtitle of the NISSAN
+    ENERGY Charge Network card is 'Active'
+- id: 2
+  action: Tap the NISSAN ENERGY Charge Network card
+  expected: AccountStatus API is called | NissanPay API is not called | User is navigated
+    to the NISSAN ENERGY Charge Network screen | Status of the Account Status card
+    is 'Active' | The copy of the Account Status card is 'NISSAN ENERGY Charge Network'
+    | The 'Deactivate Account' button is hidden | There's the text 'Need more information?'
+    and the 'CALL OUR HELP LINE' button | The Payment Method card is hidden
+- id: 3
+  action: Tap the 'CALL OUR HELP LINE' button
+  expected: The phone number from the ContactUs.plugAndChargeSupport is populated

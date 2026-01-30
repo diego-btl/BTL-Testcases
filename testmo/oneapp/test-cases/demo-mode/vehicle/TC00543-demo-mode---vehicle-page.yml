@@ -1,0 +1,47 @@
+metadata:
+  id: TC00543
+  name: Demo Mode - Vehicle Page
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-01'
+  updated: '2026-01-13'
+  author: user_2
+  testmo_id: 543
+  folder_id: 6800
+description: Applies to all vehicle types
+steps:
+- id: 1
+  action: Tap Vehicle in the bottom nav
+  expected: User should see dummy data for three vehicles on INF and three vehicles
+    on NIS
+- id: 2
+  action: Tap on the Vehicle Profile button
+  expected: User should be navigated to Vehicle Profile screen and see dummy data
+    for all vehicles - INF and NIS
+- id: 3
+  action: Tap any of the cards in the Vehicle Profile screen, except for Remote Data
+    Wipe
+  expected: User should see the demo mode alert modal
+- id: 4
+  action: Tap on Remote Data Wipe
+  expected: The user should be navigated to the Remote Data Wipe page
+- id: 5
+  action: While on the Page above, click on the Delete Data CTA
+  expected: User should see the demo mode alert modal
+- id: 6
+  action: Return to the Vehicle Page and tap on the Schedule Service/Find a Dealer
+    buttons
+  expected: User should be navigated to a Find a Dealer screen with no search results
+    screen
+- id: 7
+  action: Tap on the Service History button
+  expected: User should see the demo mode alert modal
+- id: 8
+  action: Tap on the Est. Mileage card
+  expected: User should see the demo mode alert modal

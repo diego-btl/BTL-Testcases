@@ -1,0 +1,60 @@
+metadata:
+  id: TC62082
+  name: Create Schedule Service - Service Request Submitted
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-12-03'
+  updated: '2026-01-20'
+  author: user_23
+  testmo_id: 62082
+  folder_id: 6787
+description: 'Create Schedule Service - Service Request Submitted Screen Validation:
+  Confirmation and Calendar IntegrationValidates the Service Request Submitted confirmation
+  screen displays success message and allows users to add the appointment to their
+  device calendar or dismiss the screen.Notes:Success checkmark icon displayedConfirmation
+  message: "Your Service Request has been submitted! We may contact you if we need
+  more information prior to your service."ADD TO CALENDAR link integrates with device
+  calendar appIf calendar app not installed, platform-specific prompt appearsClose
+  button redirects to Vehicle ScreenCalendar app must be installed to add appointmentShow
+  in Play Store (Android) or Show in App Store (iOS) redirects to respective app store
+  with Calendar app searched'
+preconditions:
+- description: User has completed Review Service Request and tapped SCHEDULE SERVICE
+    button; CreateServiceAppointment mutation was triggered successfully
+steps:
+- id: 1
+  action: Verify user arrives on Service Request Submitted screen
+  expected: 'Screen title is Service Request Submitted | Green checkmark icon is displayed
+    | Confirmation message displays: Your Service Request has been submitted! We may
+    contact you if we need more information prior to your service. | ADD TO CALENDAR
+    link is displayed | Close (X) button is displayed at top right'
+- id: 2
+  action: Tap ADD TO CALENDAR link with calendar app installed
+  expected: Calendar app opens | Service appointment is added with all booking details
+    (date, time, dealer/retailer, services) | Appointment details match the scheduled
+    booking
+- id: 3
+  action: Tap ADD TO CALENDAR link with no calendar app installed
+  expected: 'Modal prompt appears with title Restore "Calendar"? | iOS: Message displays:
+    To continue, download "Calendar" from the App Store. and Show in App Store button
+    is displayed | Android: Message displays: To continue, download "Calendar" from
+    the Play Store. and Show in Play Store button is displayed | Cancel button is
+    displayed'
+- id: 4
+  action: Tap Show in App Store (iOS) or Show in Play Store (Android) button
+  expected: 'iOS: User is redirected to App Store with Calendar app search results
+    displayed | Android: User is redirected to Play Store with Calendar app search
+    results displayed'
+- id: 5
+  action: Tap Cancel button on calendar prompt
+  expected: Modal is dismissed | User returns to Service Request Submitted screen
+- id: 6
+  action: Tap Close (X) button at top right
+  expected: User is redirected to Vehicle screen | Upcoming Appointment card is displayed
+    for the scheduled appointment

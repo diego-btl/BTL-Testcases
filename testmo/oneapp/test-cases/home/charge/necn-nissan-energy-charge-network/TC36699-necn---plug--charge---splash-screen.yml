@@ -1,0 +1,51 @@
+metadata:
+  id: TC36699
+  name: NECN - Plug & Charge - Splash Screen
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-05-13'
+  updated: '2025-12-15'
+  author: user_24
+  testmo_id: 36699
+  folder_id: 2444
+description: When `ProductSKU` contains the letter 'P' in the 'ChargeProduct' api,
+  the user sees the Splash screen
+preconditions:
+- description: User has an EV/EV2
+- description: '"EnablePlugAndCharge": "true"'
+- description: 'VehicleStaticData > "driverType": "PRIMARY_DRIVER."'
+- description: AccountStatus > "status" =! "ACTIVE" ("INACTIVE"/"NOT_ENROLLED"/"FAILED"/"CANCELLED"/"CLOSED"/"ENROLLING")
+steps:
+- id: 1
+  action: Navigate to the NISSAN ENERGY Charge Network screen
+  expected: ChargeProduct API is triggered
+- id: 2
+  action: 'Mock ChargeProduct API to return the letter ''P'' in the "productSKU":
+    "V2G-P01" -> { "data": { "chargeProduct": { "__typename": "EmpChargeProductResponse",
+    "statusCode": "1000", "statusMessage": "Success", "timestamp": "2025-03-26T15:18:23.376Z",
+    "data": { "__typename": "EmpChargeProductData", "productSKU": "V2G-P01", "price":
+    "0.0", "description": "Foundation First Owner" } } } }Tap ''ACTIVATE'' CTA'
+  expected: Title 'Want to make charging even easier?' | Copy - Confirm your MyNISSAN
+    credentials are entered on the "Accounts" page in the vehicle's head unit.- Park
+    the vehicle with a clear view of the sky. Activation make take up to 24 hours.-
+    Once activated, simply plug into a compatible charger - your session will automatically
+    be billed to the default card in your Nissan Store Wallet- To find compatible
+    chargers, use the Plug & Charge filter in the map section of the MyNISSAN app.
+    | 'CONFIRM' CTA | 'CANCEL' CTA
+- id: 3
+  action: Tap 'CANCEL'
+  expected: The splash screen is dismissed
+- id: 4
+  action: Tap 'CONFIRM'
+  expected: The loading state is displayed | UpsertNissanPayAccount and EnrollChargePlan
+    APIs are triggered
+- id: 5
+  action: 'Mock ChargeProduct API to return the "productSKU": "V2G-B01" instead of
+    "productSKU": "V2G-P01" -> Tap ''ACTIVATE'' CTA'
+  expected: The splash screen is not displayed

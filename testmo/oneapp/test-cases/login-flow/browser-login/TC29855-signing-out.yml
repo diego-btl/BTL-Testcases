@@ -1,0 +1,32 @@
+metadata:
+  id: TC29855
+  name: Signing out
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-01-07'
+  updated: '2025-01-07'
+  author: user_24
+  testmo_id: 29855
+  folder_id: 3775
+description: When user signs out, exits the app and reopens it. He should be on Landing
+  page to sign in again
+preconditions:
+- description: Browser Login is enabled.
+- description: User has Keep me Signed in check marked and is logged in
+steps:
+- id: 1
+  action: Log out of app
+  expected: User successfully logs out
+- id: 2
+  action: Exit app. -> Reopen app
+  expected: User should be on Landing page with the option to sign in
+- id: 3
+  action: Also test uninstalling app after log out -> Reinstall app -> Tap on App
+    to open
+  expected: User should be on Landing page with option to sign in again

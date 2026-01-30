@@ -1,0 +1,25 @@
+metadata:
+  id: TC01551
+  name: Vehicle Mileage Update Now CTA
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-28'
+  updated: '2024-10-17'
+  author: user_2
+  testmo_id: 1551
+  folder_id: 91
+preconditions:
+- description: App hasn't returned/User hasn't entered mileage data for over 3 months
+- description: VehicleDynamicData call > Mock the mileage > recordedTime
+- description: '"mileage": {..."recordedTime": "2023-09-20T03:02:47.000Z",}'
+steps:
+- id: 1
+  action: Tap on Update Now CTA
+  expected: User should be able to update their mileage and see the card timestamp
+    update

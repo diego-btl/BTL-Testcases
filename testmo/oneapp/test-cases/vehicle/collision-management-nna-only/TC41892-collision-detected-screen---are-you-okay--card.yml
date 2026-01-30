@@ -1,0 +1,33 @@
+metadata:
+  id: TC41892
+  name: Collision Detected screen - "Are you okay? " card
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-06-10'
+  updated: '2025-06-10'
+  author: user_26
+  testmo_id: 41892
+  folder_id: 3800
+description: Ensure that the first card on the Collision Detected screen displays
+  the correct legal-compliant text using "may have been involved" instead of "has
+  been involved."
+preconditions:
+- description: Use a deeplink to trigger a Collision Detected screen- https://halgatewood.com/deeplink?link=myinfiniti%3A%2F%2Fparts_replacement_reminders-
+    mynissan://collision_management
+- description: The app detects a collision and navigates the user to the Collision
+    Detected screen.
+steps:
+- id: 1
+  action: 'Trigger a scenario where the app navigates to the Collision Detected screen
+    by push notification link : mynissan://collision_management'
+  expected: See expected results
+- id: 2
+  action: Locate the first card titled "Are you okay?
+  expected: 'The text under "Are you okay?" shows as: | "We detect that your [vehicle]
+    may have been involved in a collision."'

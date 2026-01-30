@@ -1,0 +1,18 @@
+metadata:
+  id: TC00666
+  name: Valet Alert
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-01'
+  updated: '2025-10-11'
+  author: user_2
+  testmo_id: 666
+  folder_id: 70
+preconditions:
+- description: The user is on the Alerts sheet and has alerts set for their vehicle

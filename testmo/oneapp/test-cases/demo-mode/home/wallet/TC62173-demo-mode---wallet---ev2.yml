@@ -1,0 +1,23 @@
+metadata:
+  id: TC62173
+  name: Demo mode - Wallet - EV2
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-12-17'
+  updated: '2025-12-18'
+  author: user_15
+  testmo_id: 62173
+  folder_id: 6813
+description: Applies for EV2 vehicle
+preconditions:
+- description: User has selected LEAF vehicle
+steps:
+- id: 1
+  action: Navigate to Home screen > tap on Wallet card
+  expected: Verify Demo mode modal is displayed

@@ -1,0 +1,31 @@
+metadata:
+  id: TC00777
+  name: Climate Preferences
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-01'
+  updated: '2025-12-03'
+  author: user_2
+  testmo_id: 777
+  folder_id: 101
+preconditions:
+- description: User is on Create a Route screen
+steps:
+- id: 1
+  action: Check the box to save a preferred climate setting and create a new route
+  expected: User should be able to check the box and their climate setting should
+    be saved to the local cache | The next fields should be displaying:Schedule Temp.
+    at Departure (Drop down to select the new temperature - NCI will handle decimal
+    values like 20, 20.5, 21, 21.5, etc) - 72 F (default) | Climate Pre-Conditioning
+    - Toggle ON | Save as preferred climate settings - Unchecked
+- id: 2
+  action: Disable the Climate Pre-Conditioning toggles
+  expected: The drop down for Schedule Temp. at Departure it is not enable anymore
+    | User can't select a new temperature | The field it is greyed out | User is not
+    able to check the Save as preferred climate settings box

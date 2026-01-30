@@ -1,0 +1,33 @@
+metadata:
+  id: TC61962
+  name: Add stops - at least 2
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-11-10'
+  updated: '2025-12-03'
+  author: user_17
+  testmo_id: 61962
+  folder_id: 101
+preconditions:
+- description: The user selects an EV or EVAVK2 vehicles
+- description: The user is in the Create Route screen
+steps:
+- id: 1
+  action: Tab on the +ADD A STOP button
+  expected: User should see the Search field
+- id: 2
+  action: Type any destination to add to the Route -> Select an autocomplete result
+  expected: The user should see the autocomplete result filled into the field and
+    return to the Create Screen | The user should see the updated screen with the
+    new stop added
+- id: 3
+  action: Tap on the +ADD A STOP button again to add more stops.
+  expected: The user should see the updated screen with the new stops successfully
+    added to the route | The stops added should be placed under the previous stop
+    added

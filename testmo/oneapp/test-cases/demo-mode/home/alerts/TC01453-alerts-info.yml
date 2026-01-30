@@ -1,0 +1,20 @@
+metadata:
+  id: TC01453
+  name: Alerts Info
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-28'
+  updated: '2025-12-18'
+  author: user_2
+  testmo_id: 1453
+  folder_id: 6809
+steps:
+- id: 1
+  action: Tap the "i" icon for each of the alert types
+  expected: User should be able to open and close the alert info sheets

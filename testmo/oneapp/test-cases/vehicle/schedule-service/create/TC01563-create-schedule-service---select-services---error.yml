@@ -1,0 +1,29 @@
+metadata:
+  id: TC01563
+  name: Create Schedule Service - Select Services - Error
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-28'
+  updated: '2026-01-20'
+  author: user_2
+  testmo_id: 1563
+  folder_id: 6787
+preconditions:
+- description: User has a preferred retailer
+steps:
+- id: 1
+  action: Tap on Schedule Service card and trigger an error
+  expected: User should see Select Services screen | Error modal should appear with
+    options to cancel and retry
+- id: 2
+  action: Tap on Retry
+  expected: User should see loading spinner as API is triggered again
+- id: 3
+  action: Tap on Cancel
+  expected: Error modal is dismissed | User is redirected to Vehicle screen

@@ -1,0 +1,26 @@
+metadata:
+  id: TC01510
+  name: 15 minute error
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-28'
+  updated: '2025-09-19'
+  author: user_2
+  testmo_id: 1510
+  folder_id: 105
+preconditions:
+- description: User is adding or editing a charge schedule
+steps:
+- id: 1
+  action: Set the start time so that it is within the next 15 minutes of the current
+    time and fill in end time2. Set the days of the week such that it includes today3.
+    Tap to Create Schedule4. Tap Ok
+  expected: User should see start and end times filled in2. User should see selected
+    days highlighted3. User should see unable to save (15 min) error modal4. User
+    should see error modal dismissed

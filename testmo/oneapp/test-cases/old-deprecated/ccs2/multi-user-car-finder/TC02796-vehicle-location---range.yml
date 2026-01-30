@@ -1,0 +1,24 @@
+metadata:
+  id: TC02796
+  name: Vehicle Location - Range
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-09-08'
+  updated: '2026-01-06'
+  author: user_3
+  testmo_id: 2796
+  folder_id: 426
+preconditions:
+- description: BatteryStatus is returning remainingMileage data or fuelAutonomy is
+    returning data User is a PRIMARY_DRIVER or SHARED_DRIVER (to be tested for both
+    for AVK2)
+steps:
+- id: 1
+  action: 1. Navigate to the Map screen
+  expected: 1. User should see battery/gas icon with remaining mileage

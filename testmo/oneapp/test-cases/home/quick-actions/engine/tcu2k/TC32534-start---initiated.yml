@@ -1,0 +1,34 @@
+metadata:
+  id: TC32534
+  name: Start - Initiated
+  feature: test-cases
+  priority: critical
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-04-07'
+  updated: '2025-09-19'
+  author: user_25
+  testmo_id: 32534
+  folder_id: 4166
+preconditions:
+- description: User is in the Home screen
+steps:
+- id: 1
+  action: User taps an "Engine" button
+  expected: 'TCU2K: "Are you sure? This action will remotely start your vehicle."
+    with two buttons "No" and "Yes"'
+- id: 2
+  action: User taps "No" on confirmation modal
+  expected: A modal is dismissed
+- id: 3
+  action: User taps an "Engine" button again
+  expected: 'TCU2K: "Are you sure? This action will remotely start your vehicle."
+    with two buttons "No" and "Yes"'
+- id: 4
+  action: User taps "Yes" on confirmation modal
+  expected: Contacting <year and model> to start engine... | Waking <year and model>
+    to start engine... | Initiating engine start on <year and model>...

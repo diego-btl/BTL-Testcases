@@ -1,0 +1,16 @@
+metadata:
+  id: TC30113
+  name: Customer Care card
+  feature: test-cases
+  priority: critical
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-02-03'
+  updated: '2025-10-08'
+  author: user_17
+  testmo_id: 30113
+  folder_id: 85

@@ -1,0 +1,26 @@
+metadata:
+  id: TC01502
+  name: Ownership Verification Error Sheet
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-28'
+  updated: '2024-10-17'
+  author: user_2
+  testmo_id: 1502
+  folder_id: 57
+preconditions:
+- description: User has successfully submitted ownership verification documents but
+    their status indicates insufficient documents
+steps:
+- id: 1
+  action: 1. Tap the Ownership Verification card 2. Tap Call Customer Support 3. Tap
+    Chat With A Live Agent
+  expected: 1. User should see the Ownership Verification Error bottom sheet 2. User
+    should be able to call 1-800-662-6200 (NNA) 1-800-387-0122 (NCI) 3. User should
+    see live chat sheet (No live chat for NCI)

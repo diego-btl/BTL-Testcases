@@ -1,0 +1,20 @@
+metadata:
+  id: TC62246
+  name: Preferred Dealer with no hash id
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2026-01-06'
+  updated: '2026-01-06'
+  author: user_24
+  testmo_id: 62246
+  folder_id: 6822
+steps:
+- id: 1
+  action: user logs in with nci126@nissancanada.com/2023Ariya
+  expected: The webpage should show nearest Canadian dealer as per brand for location

@@ -1,0 +1,25 @@
+metadata:
+  id: TC09033
+  name: SD - AD Card
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-11-21'
+  updated: '2025-08-21'
+  author: user_4
+  testmo_id: 9033
+  folder_id: 411
+description: https://www.pivotaltracker.com/story/show/185039303
+preconditions:
+- description: User is logged into an account with a pending AD invite
+- description: User is on the home screen
+steps:
+- id: 2
+  action: 'Mock VehiclesStaticData so that pendingDriverInvitations.invites is either
+    empty [] or pendingDriverInvitations: null -> Background, foreground the app'
+  expected: User should not see the Additional Driver Invite card

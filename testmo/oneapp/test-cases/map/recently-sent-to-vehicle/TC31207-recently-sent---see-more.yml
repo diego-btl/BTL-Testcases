@@ -1,0 +1,22 @@
+metadata:
+  id: TC31207
+  name: Recently Sent - See more
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-02-11'
+  updated: '2025-09-22'
+  author: user_17
+  testmo_id: 31207
+  folder_id: 100
+steps:
+- id: 1
+  action: Tap See More
+  expected: User should be taken to the Recently Sent screenUser should see the empty
+    state if there are no recently sent items, or they should see recently sent POIs
+    + recently sent journeys (up to 5 POIs + 6 Routes/Journeys)

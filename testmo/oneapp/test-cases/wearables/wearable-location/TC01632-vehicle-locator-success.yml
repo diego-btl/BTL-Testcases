@@ -1,0 +1,23 @@
+metadata:
+  id: TC01632
+  name: Vehicle Locator Success
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-28'
+  updated: '2024-10-17'
+  author: user_2
+  testmo_id: 1632
+  folder_id: 78
+preconditions:
+- description: User received a vehicle locator success notification (vehicle location
+    is refreshed and is successfully returned)
+steps:
+- id: 1
+  action: 1. Tap the notification on the wearable device
+  expected: User should see the wearable app open to the location screen

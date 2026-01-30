@@ -1,0 +1,37 @@
+metadata:
+  id: TC41857
+  name: Verify Marketing Preferences screen
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-06-09'
+  updated: '2025-06-09'
+  author: user_15
+  testmo_id: 41857
+  folder_id: 5339
+preconditions:
+- description: '"EnableNCIMarketingPreferences": "true" FF should be on'
+- description: Connect the device to Proxyman to check the APIs calls
+steps:
+- id: 1
+  action: Set device in English > Login to app > go to Settings > Marketing Preferences
+  expected: 'English Copy:'
+- id: 2
+  action: Expand each section and verify the options displayed are in ENG
+  expected: Direct Mail Email SMS In-App Messages In-Vehicle Messages
+- id: 3
+  action: Set device in FR > Login to app > go to Settings > Marketing Preferences
+  expected: '- Préférences de marketing - Bénéficiez d’un accès à une grande variété
+    de renseignements utiles, y compris des actualités, des offres et des rappels
+    d’entretien. Gérez vos préférences ci-dessous pour choisir ce que vous souhaitez
+    entendre et comment nous devons vous contacter. Offres et promotions Nouvelles
+    et événements Mises à jour du produit'
+- id: 4
+  action: Expand each section and verify the options displayed are in FR
+  expected: Publipostage direct Courriel SMS Messages dans l’application Messagerie
+    dans le véhicule

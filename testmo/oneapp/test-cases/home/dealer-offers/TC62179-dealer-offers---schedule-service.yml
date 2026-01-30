@@ -1,0 +1,24 @@
+metadata:
+  id: TC62179
+  name: Dealer Offers - Schedule Service
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-12-17'
+  updated: '2025-12-19'
+  author: user_17
+  testmo_id: 62179
+  folder_id: 3600
+description: This test case should coverSchedule Service
+preconditions:
+- description: The user is in the Offer Details screen
+- description: 'The FF needs to be "EnableDealerOffers": "true"'
+steps:
+- id: 1
+  action: The user clicks the Schedule Service button
+  expected: The user is taken to the Schedule Service flow

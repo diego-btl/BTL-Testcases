@@ -1,0 +1,54 @@
+metadata:
+  id: TC64874
+  name: Tesla Pricing - Legacy Data Conflict Prevention
+  feature: tesla-pricing
+  priority: critical
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2026-01-29'
+  updated: '2026-01-29'
+  author: user_2
+  testmo_id: 64874
+description: 'Verify that when TariffPricing (V3) is enabled and succeeds, fees from
+  legacy PricingDetails are NOT displayed. Regression test for iOS bug where both
+  data sources were shown simultaneously on Charge Station Details screen. Context:
+  Two pricing data sources exist: - PricingDetails (legacy/old UI) - TariffPricing
+  (new Tesla Pricing V3) Business rule: When TariffPricing succeeds, ONLY show TariffPricing
+  data. Do NOT mix or show duplicate fees from PricingDetails.'
+preconditions:
+- description: User is on Charge Station Details screen
+- description: Vehicle enrolled with EmpAccountStatusEnum.ACTIVE
+- description: Feature flag "EnablePlugAndChargeFoundational" is enabled
+- description: Feature flag "EnablePlugAndCharge" is enabled
+- description: Feature flag "EnableTariffPricingV3" is enabled
+- description: Station has BOTH PricingDetails and TariffPricing data available
+- description: TariffPricing API call succeeds with valid response
+steps:
+- id: 1
+  action: Load Charge Station Details for station with both data sources
+  expected: TariffPricing fees display (energy, session, idling, congestion) | PricingDetails
+    fees NOT visible anywhere | No duplicate fee information
+- id: 2
+  action: Verify pricing breakdown modal shows TariffPricing data only
+  expected: All fee breakdowns from TariffPricing V3 | No legacy PricingDetails data
+    mixed in | Single source of truth displayed
+- id: 3
+  action: Test iOS specifically (regression validation)
+  expected: iOS behavior matches Android | No PricingDetails fees shown on iOS | Bug
+    does not reoccur
+- id: 4
+  action: Inspect station card collapsed view pricing
+  expected: Pricing summary derived from TariffPricing only | Consistent with expanded
+    view | No legacy data leakage
+- id: 5
+  action: Test TariffPricing API failure scenario
+  expected: Falls back to PricingDetails gracefully | Shows legacy pricing as fallback
+    | Clear indication of fallback state (if any)
+- id: 6
+  action: Verify data source indicator (if implemented)
+  expected: UI indicates data source (V3 vs legacy) if designed | Consistent labeling
+    across screens

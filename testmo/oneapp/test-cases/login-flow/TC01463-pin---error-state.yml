@@ -1,0 +1,29 @@
+metadata:
+  id: TC01463
+  name: PIN - error state
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-28'
+  updated: '2024-10-17'
+  author: user_2
+  testmo_id: 1463
+  folder_id: 41
+preconditions:
+- description: User has not set up their pin/voice code
+steps:
+- id: 1
+  action: Sign In2. Tap the security questions CTA and select a security question3.
+    Tap the security answer field and enter a security answer4. Tap the PIN field
+    and enter a 4 digit number5. Tap the confirm PIN field and enter a different 4
+    digit number
+  expected: 'User should see the add PIN screen2. User should be able to select a
+    security question to answer3. User should be able to enter a security answer4.
+    User should be able to enter a 4 digit number5. User should be able to enter a
+    different 4 digit number and see an error state and message indicating mismatched
+    PINsUser should see the pin labels turn redNOTE: N/A for NCI'

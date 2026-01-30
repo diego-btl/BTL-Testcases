@@ -1,0 +1,27 @@
+metadata:
+  id: TC41890
+  name: Free Tow Coverage -  info icon
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-06-10'
+  updated: '2025-06-10'
+  author: user_26
+  testmo_id: 41890
+  folder_id: 3800
+description: Verify that the info icon in the Free Tow Coverage card opens a modal
+  displaying the correct legal disclaimer based on the vehicle brand.
+preconditions:
+- description: The user is on the Collision Management screen.
+steps:
+- id: 1
+  action: Locate the Free Tow Coverage card. -> Confirm that the info icon (i) is
+    visible in the top-right corner of the card. -> Tap the info icon (i).
+  expected: 'A modal appears displaying the correct legal message based on the vehicle
+    brand. | Copy should be: | “Only [Nissan/INFINITI] vehicles within a 50-mile radius
+    of [a Nissan/an INFINITI] Certified Collision Center, all others at owner''s expense.”'

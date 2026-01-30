@@ -1,0 +1,31 @@
+metadata:
+  id: TC00886
+  name: Vehicle Mileage Last Updated Card
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-04'
+  updated: '2025-12-11'
+  author: user_7
+  testmo_id: 886
+  folder_id: 91
+preconditions:
+- description: App has returned odometer data/User has manually entered mileage data
+steps:
+- id: 1
+  action: Go to vehicle screen > Tap on Maintenance shedule card > Select Driving
+    conditions
+  expected: 'Tesxt:Please enter the mileage for your vehicle to see your suggested
+    maintenance schedule | Current Vehicle Mileage (mi) (text box) | Last updated:
+    -- | Save cta greyed out.'
+- id: 2
+  action: 'Insert any number on the Current Vehicle Mileage (mi) field (e.g: 12345)
+    > Tap on Save'
+  expected: Verify GenerateAllVisits is triggered and a loading state will be shown
+    until fetching a response. The Maintenance Schedule screen should be updated with
+    information retrieved on the API.

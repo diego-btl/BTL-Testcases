@@ -1,0 +1,28 @@
+metadata:
+  id: TC00550
+  name: Biometrics
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-01'
+  updated: '2025-09-19'
+  author: user_2
+  testmo_id: 550
+  folder_id: 105
+preconditions:
+- description: User is on the login screen and has not yet used biometrics
+steps:
+- id: 1
+  action: Tap the face/touch ID icon2. Sign in3. Accept the biometric alert4. Accept
+    the iOS biometrics permissions
+  expected: 'User should see an alert explaining how to turn on biometrics2. User
+    should see an biometric alert3. User should see the iOS biometrics permissions
+    modal (for Face ID)4. User should see biometric authentication should occur to
+    enable biometrics. If biometric authentication fails twice, user should see the
+    fallback alert with the option to enter password to enable biometricsNote: If
+    user declines either of pop ups, biometrics should be disabled'

@@ -1,0 +1,25 @@
+metadata:
+  id: TC01577
+  name: Upcoming Appointments
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-28'
+  updated: '2025-10-28'
+  author: user_2
+  testmo_id: 1577
+  folder_id: 45
+preconditions:
+- description: User has booked a service appointment and is on service history screen
+steps:
+- id: 1
+  action: Data is returned for service appointments2. Tap on the upcoming appointment
+  expected: User should see an upcoming appointment card - should have dealer name,
+    date, and time2. User should be able to see upcoming appointment screen with all
+    appointment detailsIf there are multiple appointments, they should be in chronological
+    order (most recent on top, later ones below)

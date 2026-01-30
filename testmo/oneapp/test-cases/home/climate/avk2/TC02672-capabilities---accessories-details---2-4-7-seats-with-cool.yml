@@ -1,0 +1,26 @@
+metadata:
+  id: TC02672
+  name: Capabilities - Accessories Details - 2, 4, 7 seats with Cool
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-09-07'
+  updated: '2024-10-17'
+  author: user_3
+  testmo_id: 2672
+  folder_id: 4170
+description: https://www.pivotaltracker.com/story/show/185088480https://www.pivotaltracker.com/story/show/185793642
+preconditions:
+- description: AVK2 vehicleUser is on Climate Details screen
+steps:
+- id: 1
+  action: Accessories Details returns 2 seat configuration with HEATING_AND_COOLING
+    -> Accessories Details returns 4 seat configuration with HEATING_AND_COOLING ->
+    Accessories Details returns 7 seat configuration with HEATING_AND_COOLING
+  expected: /2/3. User should see {n} seat configuration with heat and cool options
+    + defrost/deice options in the Climate Control

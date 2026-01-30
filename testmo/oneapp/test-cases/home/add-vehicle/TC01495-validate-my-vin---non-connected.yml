@@ -1,0 +1,24 @@
+metadata:
+  id: TC01495
+  name: Validate My Vin - Non-connected
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-28'
+  updated: '2024-10-17'
+  author: user_2
+  testmo_id: 1495
+  folder_id: 56
+preconditions:
+- description: User has entered a valid VIN for a non-connected vehicle that has not
+    been previously added
+steps:
+- id: 1
+  action: Tap Validate VIN2. Tap Ok
+  expected: User should see modal appear indicating successful VIN validation2. Modal
+    is dismissed, user is taken to Upload Ownership Document screen

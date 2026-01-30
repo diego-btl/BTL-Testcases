@@ -1,0 +1,43 @@
+metadata:
+  id: TC16002
+  name: Demo Mode - Climate - AVK2
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2024-05-01'
+  updated: '2025-12-18'
+  author: user_2
+  testmo_id: 16002
+  folder_id: 6807
+preconditions:
+- description: User has the Rogue Platinum DEMO selected
+- description: User is at the Home Screen
+steps:
+- id: 1
+  action: Tap the Climate card
+  expected: User should see the Climate details page
+- id: 2
+  action: Validate the Climate dial and Current temp parameters
+  expected: The Current Temp parameter should be <Dynamics value in Fahrenheit> |
+    The Target Temp dial should be set to 75 (Fahrenheit)
+- id: 3
+  action: Increase / decrease the target temperature by interacting with the dial
+    or using the + or - buttons
+  expected: The user should be able to set the desired temperature
+- id: 4
+  action: Validate the climate accessories (seats) and interact with them
+  expected: Driver Seat | Front Passenger Seat | Rear Left Seat | Rear Right Seat
+- id: 5
+  action: Validate the climate accessories (steering wheel, deicer) and interact with
+    them
+  expected: Steering Wheel Heater | Defrost & Deicer
+- id: 6
+  action: Validate the MAKE DEFAULT and Turn Engine / Climate On CTAs and interact
+    with them
+  expected: The buttons should be displayed at the bottom of the screen, tapping on
+    those should trigger the Demo Mode modal

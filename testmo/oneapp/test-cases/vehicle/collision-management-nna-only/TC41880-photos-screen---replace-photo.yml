@@ -1,0 +1,46 @@
+metadata:
+  id: TC41880
+  name: Photos Screen - Replace Photo
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-06-09'
+  updated: '2025-06-09'
+  author: user_26
+  testmo_id: 41880
+  folder_id: 3800
+description: Verify that the user can replace a selected or captured photo by tapping
+  the Add Different Photo CTA on the Photo Details screen, and that the new photo
+  is correctly displayed.
+preconditions:
+- description: User is on the Photos screenApp has permission to access the camera
+    and photo gallery
+steps:
+- id: 1
+  action: Tap any photo placeholder or camera icon
+  expected: Add from Gallery | Take a Photo
+- id: 2
+  action: Tap Add from Gallery or Take a Photo
+  expected: If Add from Gallery → the device’s gallery opens | If Take a Photo → the
+    device camera opens
+- id: 3
+  action: Select a photo from Gallery or take a photo using the camera
+  expected: 'User is redirected to the Photo Details screen showing: | Photo preview
+    | Use Photo, Add Different Photo, Delete Photo CTAs | Non-editable photo name'
+- id: 4
+  action: Tap Add Different Photo CTA
+  expected: System opens the photo gallery or camera again
+- id: 5
+  action: Selects or captures a new photo
+  expected: Use Photo CTA | Add Different Photo CTA | Delete Photo CTA are still visible
+    | The photo name updates to the new file name (not editable)
+- id: 6
+  action: Tap Use Photo
+  expected: The app triggers the UploadPhotoForCollisionReport API | A loading state
+    is shown during the request | User is redirected to the Photos screen | The uploaded
+    photo is shown in the photo grid

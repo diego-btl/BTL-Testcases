@@ -1,0 +1,30 @@
+metadata:
+  id: TC00741
+  name: EV Map Settings
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-01'
+  updated: '2025-10-27'
+  author: user_2
+  testmo_id: 741
+  folder_id: 46
+preconditions:
+- description: User has an EV Selected
+steps:
+- id: 1
+  action: Tap on the Map Bottom Navigation Icon
+  expected: The user should be navigated to the Map Screen | There should be a Settings/Filters
+    Icon at the bottom left side of the map
+- id: 2
+  action: Tap on the Settings/filters Icon
+  expected: 'User should be taken to the Map Settings screen and see the default options:-
+    Search Settings items : Show Charge Stations around search is ON by default.Within
+    Reachable Area is ON by default.- Plug Types items are turned on | Charge Station
+    Preferences turned on | Providers - all selected. Under Providers, it should read
+    Preferred Partners. - RESET FILTERS CTA at the bottom of screen'

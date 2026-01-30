@@ -1,0 +1,51 @@
+metadata:
+  id: TC00917
+  name: Remember Email
+  feature: test-cases
+  priority: critical
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-15'
+  updated: '2025-10-06'
+  author: user_2
+  testmo_id: 917
+  folder_id: 41
+description: Valid accounts:Brand / LocationEmailPasswordNissan NNAvictor+prodpathfinder5@bethinklabs.com`Telematics123!Infiniti
+  NNAed+prodq50@bethinklabs.comTelematics123!Nissan NCInci070@nissancanada.com2020rogueInfiniti
+  NCIiit290@infiniticanada.com2019q50s
+preconditions:
+- description: Fresh installation or app cache cleared
+- description: User is already on the Login page
+- description: Biometric flow is not covered, must be skipped
+- description: Onboarding cards are not covered, must be skipped
+steps:
+- id: 1
+  action: Enter a valid email on the Email text field -> Enter a valid password on
+    the Password text field -> Select the Remember Email checkmark below the Password
+    text field
+  expected: The checkmark is selected or deselected depending of the user interaction
+- id: 2
+  action: With the Remember Email checkmark selected, tap on the SIGN IN button
+  expected: The Login flow is triggered
+- id: 3
+  action: if Terms of Service page is displayed, select the I have read and accept
+    the App Terms of Service checkmark and tap on the SAVE button
+  expected: User is driven to the Home page
+- id: 4
+  action: Close the app by triggering the Recent Apps interaction and closing swiping
+    away the app -> Reopen the app by tapping on the app icon
+  expected: The user is driven to the Login page and the email used in Step 1 is prefilled
+    in the Email text field
+- id: 5
+  action: Enter the valid password for the prefilled email -> Deselect the Remember
+    Email checkmark and tap on the SIGN IN button
+  expected: User is driven to the Home page
+- id: 6
+  action: Close the app by triggering the Recent Apps interaction and closing swiping
+    away the app -> Reopen the app by tapping on the app icon
+  expected: The user is driven to the Login page with both Email and Password text
+    fields empty

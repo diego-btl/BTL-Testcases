@@ -1,0 +1,51 @@
+metadata:
+  id: TC61896
+  name: Verify "powered by Co-operators" card is hidden
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-10-29'
+  updated: '2025-10-29'
+  author: user_6
+  testmo_id: 61896
+  folder_id: 6759
+description: 'The scope of this test case is to verify the card is hidden based on
+  both feature flag and user''s province. The firebase feature flag is attached below.The
+  app will compare the array of provinces returned in the feature flag to the province
+  returned in VehicleStaticData.data.user.address.state for the signed in user and
+  if there is no match then the card should be hidden. The feature flag returns the
+  abbreviated form but VehicleStaticData returns the full province name."NcesiInsuranceEligibility":
+  "{ \"provinces\": [ \"AB\", \"BC\", \"MB\", \"NB\", \"NL\", \"NS\", \"NT\", \"NU\",
+  \"ON\", \"PE\", \"QC\", \"SK\", \"YT\" ], \"learnMore\": { \"en\": \"https://apps.duuo.cooperators.ca/app/launch?lang=en&p=a&o=Nissan&a=journey&referrer=MobileApp\",
+  \"fr\": \"https://apps.duuo.cooperators.ca/app/launch?lang=fr&p=a&o=Nissan&a=journey&referrer=MobileApp\"
+  }, \"login\": { \"en\": \"https://myportal.duuo.cooperators.ca/en/Nissan\", \"fr\":
+  \"https://myportal.duuo.cooperators.ca/fr/Nissan\" } }"'
+preconditions:
+- description: Inbetween each step, exit the Nissan Protection screen back to the
+    home page, coldstart the app to retrigger the firebase and VehicleStaticData apis
+    and then re-enters the Nissan Protection Screen
+- description: User is signed in and on the home page
+- description: User is using an NCI build
+- description: User's address is not in Canada OR the feature flag does not return
+    the province the user resides in
+steps:
+- id: 1
+  action: Modify VehicleStaticData so the users province is not any of the following
+    Alberta, British Columbia, Manitoba, New Brunswick, Newfoundland and Labrador,
+    Nova Scotia, Ontario, Prince Edward Island, Quebec, Saskatchewan, Yukon, Northwest
+    Territories, Nunavut -> i.e Can mock it as California, Tennessee, Peru, Spain.
+    Also try including spelling errors such as Ontarioo, Qwebec, etc.
+  expected: The card should be hidden
+- id: 2
+  action: Modify VehicleStaticData so that the province is valid again
+  expected: The card should be visible
+- id: 3
+  action: Modify the feature flag so that the province returned in VehicleStaticData
+    isnt shown -> (i.e if the user province is Ontario, then remove \"ON\" from the
+    feature flag)
+  expected: The card should be hidden

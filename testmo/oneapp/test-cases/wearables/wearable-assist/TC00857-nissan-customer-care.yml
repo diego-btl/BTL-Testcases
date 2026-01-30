@@ -1,0 +1,34 @@
+metadata:
+  id: TC00857
+  name: Nissan Customer Care
+  feature: test-cases
+  priority: medium
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-01'
+  updated: '2025-09-19'
+  author: user_2
+  testmo_id: 857
+  folder_id: 79
+preconditions:
+- description: User is on the Assist screen
+steps:
+- id: 1
+  action: Tap NISSAN Customer Care -> Tap Call
+  expected: 'User should see a modal to call the Customer Care phone number | User
+    should be able to call:'
+- id: 2
+  action: Tap NISSAN Customer Care -> Tap Call -> Tap Cancel
+  expected: Modal should dismiss itself
+- id: 3
+  action: Tap NISSAN Customer Care -> Tap Call Client Experience Coordinator -> Tap
+    Cancel
+  expected: (877) 980-4968
+- id: 4
+  action: Tap NISSAN Customer Care -> Tap Email Client Experience Coordinator -> Tap
+    Cancel
+  expected: QX80ClientExperienceCoordinator@Infiniti.com

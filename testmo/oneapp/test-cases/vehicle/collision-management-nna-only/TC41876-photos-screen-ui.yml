@@ -1,0 +1,29 @@
+metadata:
+  id: TC41876
+  name: Photos Screen UI
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-06-09'
+  updated: '2025-06-09'
+  author: user_26
+  testmo_id: 41876
+  folder_id: 3800
+description: Verify that the user can see all required UI elements on the Photos screen,
+  interact with them correctly, including scrolling, tapping icons, placeholders,
+  and managing photo uploads (up to 18 photos).
+preconditions:
+- description: User is successfully navigated to the Photos screen from a previous
+    Collision Report screen
+steps:
+- id: 1
+  action: The user is on the *Photos* screen
+  expected: The following elements should be visible | Info icon in the top right
+    corner- A vehicle image with 8 camera icons- Vehicle photo placeholders are divided
+    into 3 sections - "Add More Photos" CTA- You can save up to 18 photos- "Generate
+    Collision Report" CTA always Active- The screen is fully scrollable

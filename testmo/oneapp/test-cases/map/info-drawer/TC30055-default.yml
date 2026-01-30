@@ -1,0 +1,21 @@
+metadata:
+  id: TC30055
+  name: Default
+  feature: test-cases
+  priority: critical
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2025-01-24'
+  updated: '2025-10-08'
+  author: user_17
+  testmo_id: 30055
+  folder_id: 98
+steps:
+- id: 1
+  action: Navigate to the Maps screen
+  expected: User should see the info drawer in its default state (25% of the total
+    screen height)

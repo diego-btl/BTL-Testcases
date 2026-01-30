@@ -1,0 +1,29 @@
+metadata:
+  id: TC01562
+  name: Other Retailer Details - native true
+  feature: test-cases
+  priority: high
+  platforms:
+  - iOS
+  - Android
+  regions:
+  - USA
+  tags: []
+  created: '2023-08-28'
+  updated: '2024-10-17'
+  author: user_2
+  testmo_id: 1562
+  folder_id: 93
+preconditions:
+- description: User has a preferred retailer
+steps:
+- id: 1
+  action: 1. Tap on Schedule Service card 2. Tap on Selected Retailer 3. Tap on Select
+    a Retailer 4. Search for 37355 5. Tap on John Roberts Nissan 6. Tap Schedule Service
+    CTA
+  expected: 1. User should see Select Services with preferred retailer selected and
+    list of vehicle services 2. User should see Retailer Detailers for preferred retailer
+    3. User should see Select a Retailer screen 4. User should see search results
+    5. User should see Retailer Details for John Roberts Nissan 6. User should see
+    Select Services with John Roberts Nissan as the selected retailer and list of
+    vehicle services
