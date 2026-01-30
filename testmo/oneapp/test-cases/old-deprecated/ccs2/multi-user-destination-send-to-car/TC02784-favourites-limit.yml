@@ -12,7 +12,7 @@ metadata:
   created: '2023-09-08'
   updated: '2026-01-06'
   author: user_3
-  testmo_id: 2784
+  testmo_id: 65768
   folder_id: 423
 preconditions:
 - description: User is viewing POI search results and has reached favorites limit

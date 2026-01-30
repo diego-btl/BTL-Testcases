@@ -12,7 +12,7 @@ metadata:
   created: '2025-06-09'
   updated: '2025-06-09'
   author: user_26
-  testmo_id: 41869
+  testmo_id: 65567
   folder_id: 3800
 description: Verify Collision Report generation from the Photos screen, including
   confirmation modal, triggered actions, and success flow

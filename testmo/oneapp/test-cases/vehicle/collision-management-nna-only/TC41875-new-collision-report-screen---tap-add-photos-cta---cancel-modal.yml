@@ -12,7 +12,7 @@ metadata:
   created: '2025-06-09'
   updated: '2025-06-10'
   author: user_26
-  testmo_id: 41875
+  testmo_id: 65552
   folder_id: 3800
 description: Verify that when a user taps the Add Photos CTA with missing required
   fields, a Missing Information Modal appears, and if the user taps No or Cancel,

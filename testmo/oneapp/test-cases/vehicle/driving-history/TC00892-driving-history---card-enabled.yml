@@ -12,7 +12,7 @@ metadata:
   created: '2023-08-04'
   updated: '2025-11-10'
   author: user_7
-  testmo_id: 892
+  testmo_id: 65489
   folder_id: 92
 preconditions:
 - description: Vehicle is an EV/EV2

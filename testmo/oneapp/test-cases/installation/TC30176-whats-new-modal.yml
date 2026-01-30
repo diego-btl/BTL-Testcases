@@ -12,7 +12,7 @@ metadata:
   created: '2025-02-06'
   updated: '2025-04-29'
   author: user_24
-  testmo_id: 30176
+  testmo_id: 65083
   folder_id: 39
 description: When an existing user updates app, he should not see onboarding cards
   and a What's new Modal should show when he logs in. The copy of the Modal should

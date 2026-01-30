@@ -12,7 +12,7 @@ metadata:
   created: '2025-12-19'
   updated: '2026-01-14'
   author: user_23
-  testmo_id: 62192
+  testmo_id: 65706
   folder_id: 6818
 description: 'Second Delivery - Card - Prioritized. Validates that Second Delivery
   Card appears with highest precedence on Home and Vehicle screens when vehicle is

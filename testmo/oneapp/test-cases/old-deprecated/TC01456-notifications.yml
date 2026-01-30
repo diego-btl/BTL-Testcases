@@ -12,7 +12,7 @@ metadata:
   created: '2023-08-28'
   updated: '2025-12-16'
   author: user_2
-  testmo_id: 1456
+  testmo_id: 65037
   folder_id: 105
 preconditions:
 - description: User is on the homescreen

@@ -12,7 +12,7 @@ metadata:
   created: '2025-11-14'
   updated: '2025-12-02'
   author: user_25
-  testmo_id: 61997
+  testmo_id: 66271
   folder_id: 6780
 preconditions:
 - description: User has an EV AVK2 vehicle

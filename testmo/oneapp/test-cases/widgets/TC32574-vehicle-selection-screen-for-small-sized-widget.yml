@@ -12,7 +12,7 @@ metadata:
   created: '2025-04-25'
   updated: '2025-04-29'
   author: user_24
-  testmo_id: 32574
+  testmo_id: 65175
   folder_id: 4176
 preconditions:
 - description: Either Nissan and/or Infiniti app is installed on ios

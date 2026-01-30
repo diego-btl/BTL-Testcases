@@ -13,7 +13,7 @@ metadata:
   created: '2025-06-09'
   updated: '2025-06-10'
   author: user_26
-  testmo_id: 41872
+  testmo_id: 65574
   folder_id: 3800
 description: Verify that when all required fields are completed and the user taps
   the Add Photos CTA, the flow proceeds correctly through confirmation and API response

@@ -12,7 +12,7 @@ metadata:
   created: '2025-11-08'
   updated: '2026-01-20'
   author: user_15
-  testmo_id: 61951
+  testmo_id: 65604
   folder_id: 3863
 preconditions:
 - description: EnableTelematicsBSM FF = true

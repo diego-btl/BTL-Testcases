@@ -12,7 +12,7 @@ metadata:
   created: '2023-08-01'
   updated: '2025-10-28'
   author: user_2
-  testmo_id: 688
+  testmo_id: 65042
   folder_id: 45
 preconditions:
 - description: User is logged in

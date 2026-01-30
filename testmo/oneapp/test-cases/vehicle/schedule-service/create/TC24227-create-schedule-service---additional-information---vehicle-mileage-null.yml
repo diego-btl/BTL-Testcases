@@ -12,7 +12,7 @@ metadata:
   created: '2024-08-29'
   updated: '2026-01-20'
   author: user_19
-  testmo_id: 24227
+  testmo_id: 65662
   folder_id: 6787
 description: 'Create Schedule Service - Additional Information - Vehicle Mileage Null:
   Manual Mileage Entry When Data UnavailableValidates that when VehicleDynamicData.Mileage.Total

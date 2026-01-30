@@ -12,7 +12,7 @@ metadata:
   created: '2026-01-21'
   updated: '2026-01-21'
   author: user_23
-  testmo_id: 64822
+  testmo_id: 65248
   folder_id: 7144
 description: Validates gift box animation UI elements display correctly and interaction
   behaviors (close button and tap gift box).

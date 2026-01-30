@@ -12,7 +12,7 @@ metadata:
   created: '2023-09-07'
   updated: '2024-10-17'
   author: user_3
-  testmo_id: 2721
+  testmo_id: 65596
   folder_id: 412
 preconditions:
 - description: User is on PSR screenUser has an existing reminder

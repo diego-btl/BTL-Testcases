@@ -12,7 +12,7 @@ metadata:
   created: '2025-06-10'
   updated: '2025-06-10'
   author: user_26
-  testmo_id: 41892
+  testmo_id: 65578
   folder_id: 3800
 description: Ensure that the first card on the Collision Detected screen displays
   the correct legal-compliant text using "may have been involved" instead of "has

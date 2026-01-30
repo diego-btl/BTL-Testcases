@@ -12,7 +12,7 @@ metadata:
   created: '2023-08-01'
   updated: '2025-10-15'
   author: user_2
-  testmo_id: 855
+  testmo_id: 65225
   folder_id: 78
 preconditions:
 - description: User's vehicle has a location and is on the Map screen

@@ -12,7 +12,7 @@ metadata:
   created: '2023-08-28'
   updated: '2025-04-29'
   author: user_2
-  testmo_id: 1481
+  testmo_id: 65979
   folder_id: 55
 preconditions:
 - description: User has an AVK vehicle

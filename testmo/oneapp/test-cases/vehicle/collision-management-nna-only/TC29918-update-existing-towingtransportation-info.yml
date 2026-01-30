@@ -12,7 +12,7 @@ metadata:
   created: '2025-01-10'
   updated: '2025-01-28'
   author: user_26
-  testmo_id: 29918
+  testmo_id: 65569
   folder_id: 3800
 description: Verify the success of updating existing Towing/Transportation Information
 preconditions:

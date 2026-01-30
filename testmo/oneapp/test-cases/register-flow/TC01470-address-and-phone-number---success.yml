@@ -12,7 +12,7 @@ metadata:
   created: '2023-08-28'
   updated: '2025-08-21'
   author: user_2
-  testmo_id: 1470
+  testmo_id: 65144
   folder_id: 43
 description: Verify Address and Phone Number success during Registration
 preconditions:

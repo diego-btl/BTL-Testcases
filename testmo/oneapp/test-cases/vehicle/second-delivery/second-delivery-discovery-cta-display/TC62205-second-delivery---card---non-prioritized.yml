@@ -12,7 +12,7 @@ metadata:
   created: '2025-12-19'
   updated: '2026-01-06'
   author: user_23
-  testmo_id: 62205
+  testmo_id: 65705
   folder_id: 6818
 description: 'Second Delivery - Card - Non-Prioritized. Validates that Second Delivery
   Card appears ONLY on Vehicle screen below other cards when user is outside the priority

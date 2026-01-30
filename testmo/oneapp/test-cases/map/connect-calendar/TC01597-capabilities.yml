@@ -12,7 +12,7 @@ metadata:
   created: '2023-08-28'
   updated: '2025-12-19'
   author: user_2
-  testmo_id: 1597
+  testmo_id: 65431
   folder_id: 103
 preconditions:
 - description: The user selects an EV or EVAVK2 vehicles

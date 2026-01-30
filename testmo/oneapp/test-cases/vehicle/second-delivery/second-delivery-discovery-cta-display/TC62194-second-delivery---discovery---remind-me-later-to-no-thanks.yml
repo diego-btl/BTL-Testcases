@@ -12,7 +12,7 @@ metadata:
   created: '2025-12-19'
   updated: '2026-01-06'
   author: user_23
-  testmo_id: 62194
+  testmo_id: 65702
   folder_id: 6818
 description: 'Second Delivery - Discovery - Remind Me Later to No Thanks. Validates
   the complete user flow: user dismisses popup with REMIND ME LATER, backend tracks

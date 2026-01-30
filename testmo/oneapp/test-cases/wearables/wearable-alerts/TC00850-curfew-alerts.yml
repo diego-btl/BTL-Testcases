@@ -12,7 +12,7 @@ metadata:
   created: '2023-08-01'
   updated: '2025-04-30'
   author: user_2
-  testmo_id: 850
+  testmo_id: 65234
   folder_id: 77
 preconditions:
 - description: User is on the Alerts page

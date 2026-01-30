@@ -12,7 +12,7 @@ metadata:
   created: '2025-04-07'
   updated: '2025-04-15'
   author: user_25
-  testmo_id: 32541
+  testmo_id: 66148
   folder_id: 4167
 preconditions:
 - description: User is in the Home screen

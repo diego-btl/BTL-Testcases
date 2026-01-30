@@ -12,7 +12,7 @@ metadata:
   created: '2023-08-01'
   updated: '2025-09-22'
   author: user_2
-  testmo_id: 753
+  testmo_id: 65105
   folder_id: 46
 preconditions:
 - description: User has an EV selected and performed a charge station search

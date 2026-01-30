@@ -12,7 +12,7 @@ metadata:
   created: '2025-07-29'
   updated: '2025-07-29'
   author: user_25
-  testmo_id: 55398
+  testmo_id: 65422
   folder_id: 2442
 description: Check nacsStatus when determining whether to show the Tesla disclaimer
 preconditions:

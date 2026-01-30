@@ -12,7 +12,7 @@ metadata:
   created: '2023-08-01'
   updated: '2025-10-06'
   author: user_2
-  testmo_id: 685
+  testmo_id: 65831
   folder_id: 71
 description: This is the Happy Path test case for IRP (Route Planner)
 preconditions:

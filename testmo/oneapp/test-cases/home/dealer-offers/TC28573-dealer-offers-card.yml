@@ -12,7 +12,7 @@ metadata:
   created: '2024-11-30'
   updated: '2025-12-19'
   author: user_2
-  testmo_id: 28573
+  testmo_id: 66037
   folder_id: 3600
 description: This test case should coverOffers and Promotions card displayDesign (Light
   / Dark Mode)Reordering the cardTap to navigate

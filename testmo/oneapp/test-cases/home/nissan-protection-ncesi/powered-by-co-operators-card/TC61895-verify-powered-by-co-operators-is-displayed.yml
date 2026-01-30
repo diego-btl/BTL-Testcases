@@ -12,7 +12,7 @@ metadata:
   created: '2025-10-29'
   updated: '2025-10-29'
   author: user_6
-  testmo_id: 61895
+  testmo_id: 66168
   folder_id: 6759
 description: 'The scope of this test case is to verify the card is displayed based
   on both feature flag and user''s province. The firebase feature flag is attached

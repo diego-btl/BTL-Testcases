@@ -12,7 +12,7 @@ metadata:
   created: '2025-06-10'
   updated: '2025-06-10'
   author: user_26
-  testmo_id: 41887
+  testmo_id: 65562
   folder_id: 3800
 preconditions:
 - description: The user is on the Collision Report screen.

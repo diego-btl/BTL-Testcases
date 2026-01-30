@@ -12,7 +12,7 @@ metadata:
   created: '2023-08-01'
   updated: '2025-09-22'
   author: user_2
-  testmo_id: 643
+  testmo_id: 65873
   folder_id: 66
 preconditions:
 - description: User is on Charge screen, EV is plugged in

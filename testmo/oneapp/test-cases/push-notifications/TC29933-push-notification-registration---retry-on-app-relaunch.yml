@@ -12,7 +12,7 @@ metadata:
   created: '2025-01-13'
   updated: '2025-09-19'
   author: user_15
-  testmo_id: 29933
+  testmo_id: 65124
   folder_id: 73
 preconditions:
 - description: 'Feature Flag: EnableNewMutationForPushNotificationRegistrationEnabled:

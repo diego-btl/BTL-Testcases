@@ -12,7 +12,7 @@ metadata:
   created: '2025-02-05'
   updated: '2025-08-22'
   author: user_17
-  testmo_id: 30160
+  testmo_id: 65298
   folder_id: 81
 preconditions:
 - description: User is on the Support screen

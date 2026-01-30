@@ -12,7 +12,7 @@ metadata:
   created: '2025-12-16'
   updated: '2025-12-16'
   author: user_17
-  testmo_id: 62162
+  testmo_id: 65413
   folder_id: 99
 preconditions:
 - description: User is viewing POI search results

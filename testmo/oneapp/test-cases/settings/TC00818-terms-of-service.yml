@@ -12,7 +12,7 @@ metadata:
   created: '2023-08-01'
   updated: '2025-10-06'
   author: user_2
-  testmo_id: 818
+  testmo_id: 64975
   folder_id: 48
 preconditions:
 - description: User is on the Settings screen

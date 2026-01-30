@@ -12,7 +12,7 @@ metadata:
   created: '2025-06-09'
   updated: '2025-06-09'
   author: user_26
-  testmo_id: 41879
+  testmo_id: 65548
   folder_id: 3800
 description: Verify that the user can add a photo from the device’s gallery, review
   it in the Photo Details screen, and complete the upload successfully.

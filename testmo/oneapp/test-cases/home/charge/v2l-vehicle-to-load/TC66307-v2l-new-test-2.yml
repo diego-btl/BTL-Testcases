@@ -1,0 +1,33 @@
+metadata:
+  name: NEW - V2L Test Case 2
+  priority: low
+  tags:
+  - validation
+  - batch-test
+  - v2l
+test_case:
+  description: 'Batch creation validation test case 2.
+
+    Safe to delete after validation.
+
+    '
+  preconditions: '- None required for validation
+
+    '
+  steps:
+  - step: Execute test 2
+    expected: Test passes
+  configurations:
+  - iOS, Prod
+  - Android, Prod
+notes: '✅ BATCH CREATE TEST 3B - Case 2
+
+  Created: 2026-01-30
+
+  '
+testmo:
+  case_id: 66307
+  folder_id: 7338
+  project_id: 9
+  created_at: '2026-01-30 21:21:32.785045'
+  url: https://bethinklabs.testmo.net/repositories/9/cases/66307

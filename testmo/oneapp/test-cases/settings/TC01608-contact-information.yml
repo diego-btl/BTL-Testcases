@@ -12,7 +12,7 @@ metadata:
   created: '2023-08-28'
   updated: '2025-10-06'
   author: user_2
-  testmo_id: 1608
+  testmo_id: 64989
   folder_id: 48
 preconditions:
 - description: User is on My Profile screen

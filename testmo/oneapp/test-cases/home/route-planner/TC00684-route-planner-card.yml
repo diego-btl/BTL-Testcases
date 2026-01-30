@@ -12,7 +12,7 @@ metadata:
   created: '2023-08-01'
   updated: '2025-10-06'
   author: user_2
-  testmo_id: 684
+  testmo_id: 65832
   folder_id: 71
 preconditions:
 - description: User has an EV with INTELLIGENT_ROUTE_PLANNER capability

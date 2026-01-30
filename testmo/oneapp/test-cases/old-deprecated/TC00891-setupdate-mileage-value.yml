@@ -12,7 +12,7 @@ metadata:
   created: '2023-08-04'
   updated: '2025-09-19'
   author: user_7
-  testmo_id: 891
+  testmo_id: 65006
   folder_id: 105
 preconditions:
 - description: User has a non-connected/UNKNOWN vehicle

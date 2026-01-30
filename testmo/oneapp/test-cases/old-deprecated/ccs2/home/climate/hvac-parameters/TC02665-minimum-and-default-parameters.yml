@@ -12,7 +12,7 @@ metadata:
   created: '2023-09-07'
   updated: '2026-01-06'
   author: user_3
-  testmo_id: 2665
+  testmo_id: 65818
   folder_id: 406
 description: Minimum parameters (no seats, only temperature dial & defaults toggle)https://www.pivotaltracker.com/n/projects/2626604/stories/185088929
 preconditions:

@@ -12,7 +12,7 @@ metadata:
   created: '2023-08-28'
   updated: '2024-10-17'
   author: user_2
-  testmo_id: 1620
+  testmo_id: 65169
   folder_id: 74
 preconditions:
 - description: Capabilities list to test:- `REMOTE_ENGINE` (Power button)- `REMOTE_DOOR_LOCK`

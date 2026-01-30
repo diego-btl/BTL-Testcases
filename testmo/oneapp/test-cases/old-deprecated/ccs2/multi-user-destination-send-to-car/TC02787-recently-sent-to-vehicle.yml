@@ -12,7 +12,7 @@ metadata:
   created: '2023-09-08'
   updated: '2026-01-06'
   author: user_3
-  testmo_id: 2787
+  testmo_id: 65760
   folder_id: 423
 preconditions:
 - description: User is on Map tab with Info Drawer expanded User is a PRIMARY_DRIVER

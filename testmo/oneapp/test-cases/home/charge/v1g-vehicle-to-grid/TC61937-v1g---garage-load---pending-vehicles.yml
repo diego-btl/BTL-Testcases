@@ -12,7 +12,7 @@ metadata:
   created: '2025-11-05'
   updated: '2025-12-16'
   author: user_25
-  testmo_id: 61937
+  testmo_id: 66219
   folder_id: 6755
 description: 'Note: mocking VehicleCapabilities or VehicleStaticData perform bg/fg
   or cold start 2 times due to the existing 2nd step validationNote: performing pull-to-refresh

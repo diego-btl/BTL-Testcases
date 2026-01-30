@@ -12,7 +12,7 @@ metadata:
   created: '2023-08-01'
   updated: '2025-02-14'
   author: user_2
-  testmo_id: 843
+  testmo_id: 65203
   folder_id: 76
 preconditions:
 - description: Choose Ariya in Vehicle Selector

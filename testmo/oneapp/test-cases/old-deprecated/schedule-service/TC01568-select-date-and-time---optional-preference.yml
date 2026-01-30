@@ -12,7 +12,7 @@ metadata:
   created: '2023-08-28'
   updated: '2025-09-24'
   author: user_2
-  testmo_id: 1568
+  testmo_id: 65726
   folder_id: 7143
 preconditions:
 - description: User is on Select Date and Time screen

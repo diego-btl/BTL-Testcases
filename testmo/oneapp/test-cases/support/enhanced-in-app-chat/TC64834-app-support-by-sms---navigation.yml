@@ -12,7 +12,7 @@ metadata:
   created: '2026-01-28'
   updated: '2026-01-28'
   author: user_23
-  testmo_id: 64834
+  testmo_id: 65306
   folder_id: 7146
 description: Validates APP SUPPORT BY SMS link functionality on Live Chat screen.Preconditions:EnableEnhancedInAppChat
   FF = trueUser is logged inUser is on Live Chat screen

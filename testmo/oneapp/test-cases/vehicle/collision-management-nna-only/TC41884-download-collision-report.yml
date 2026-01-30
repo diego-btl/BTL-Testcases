@@ -12,7 +12,7 @@ metadata:
   created: '2025-06-09'
   updated: '2025-06-09'
   author: user_26
-  testmo_id: 41884
+  testmo_id: 65536
   folder_id: 3800
 description: Verify that the user can successfully download the collision report file
   from the Generated Report screen after tapping the Download Report CTA.

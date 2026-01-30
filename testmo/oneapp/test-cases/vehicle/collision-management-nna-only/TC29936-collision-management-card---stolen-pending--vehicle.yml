@@ -12,7 +12,7 @@ metadata:
   created: '2025-01-14'
   updated: '2025-01-28'
   author: user_26
-  testmo_id: 29936
+  testmo_id: 65577
   folder_id: 3800
 description: Verify the User is not able to see the collision management card on the
   Vehicle screen when the status is "STOLEN" https://www.pivotaltracker.com/story/show/188707438

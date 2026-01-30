@@ -12,7 +12,7 @@ metadata:
   created: '2026-01-27'
   updated: '2026-01-27'
   author: user_23
-  testmo_id: 64832
+  testmo_id: 65308
   folder_id: 7146
 description: 'Validates Salesforce payload content when user selects Current Vehicle
   department and taps GO TO CHAT. Preconditions: EnableEnhancedInAppChat FF = true

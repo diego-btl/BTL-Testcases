@@ -12,7 +12,7 @@ metadata:
   created: '2025-11-28'
   updated: '2026-01-06'
   author: user_15
-  testmo_id: 62056
+  testmo_id: 66061
   folder_id: 51
 description: SCOPEWhen the Tire Pressure MIL is NOT active and there are tires where
   the tire pressure status is not zero (0 means OK), display the Tire Pressure status

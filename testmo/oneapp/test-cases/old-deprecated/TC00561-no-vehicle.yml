@@ -12,7 +12,7 @@ metadata:
   created: '2023-08-01'
   updated: '2025-09-19'
   author: user_2
-  testmo_id: 561
+  testmo_id: 64998
   folder_id: 105
 preconditions:
 - description: User is on the no vehicle homescreen

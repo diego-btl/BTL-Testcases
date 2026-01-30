@@ -12,7 +12,7 @@ metadata:
   created: '2023-08-28'
   updated: '2024-10-17'
   author: user_2
-  testmo_id: 1561
+  testmo_id: 65631
   folder_id: 93
 preconditions:
 - description: User is on the Select a Retailer list view screen and has search results

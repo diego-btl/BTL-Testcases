@@ -12,7 +12,7 @@ metadata:
   created: '2025-10-28'
   updated: '2026-01-08'
   author: user_24
-  testmo_id: 61888
+  testmo_id: 65259
   folder_id: 6757
 description: Test this and the following 4 TCs one after another - without reinstalling
   app. To ensure that the onboarding cards show as th vehicle's status changes

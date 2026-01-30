@@ -12,7 +12,7 @@ metadata:
   created: '2025-01-07'
   updated: '2025-01-07'
   author: user_24
-  testmo_id: 29855
+  testmo_id: 65236
   folder_id: 3775
 description: When user signs out, exits the app and reopens it. He should be on Landing
   page to sign in again

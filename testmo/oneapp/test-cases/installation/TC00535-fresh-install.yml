@@ -12,7 +12,7 @@ metadata:
   created: '2023-08-01'
   updated: '2025-02-06'
   author: user_2
-  testmo_id: 535
+  testmo_id: 65085
   folder_id: 39
 preconditions:
 - description: Fresh installation or app cache cleared

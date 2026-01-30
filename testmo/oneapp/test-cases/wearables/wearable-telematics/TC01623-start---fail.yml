@@ -12,7 +12,7 @@ metadata:
   created: '2023-08-28'
   updated: '2024-10-17'
   author: user_2
-  testmo_id: 1623
+  testmo_id: 65202
   folder_id: 76
 preconditions:
 - description: User has a vehicle that supports start/stop and is on the telematics

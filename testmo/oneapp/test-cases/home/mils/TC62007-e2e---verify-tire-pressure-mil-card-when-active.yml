@@ -12,7 +12,7 @@ metadata:
   created: '2025-11-17'
   updated: '2026-01-06'
   author: user_15
-  testmo_id: 62007
+  testmo_id: 66024
   folder_id: 50
 description: SCOPEWhen the Tire Pressure MIL is active, then instead of displaying
   it in the Status tab, it should be displayed in the MIL tabWhen displaying Tire

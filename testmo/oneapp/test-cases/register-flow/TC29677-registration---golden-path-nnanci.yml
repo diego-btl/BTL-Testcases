@@ -12,7 +12,7 @@ metadata:
   created: '2024-12-18'
   updated: '2025-10-07'
   author: user_17
-  testmo_id: 29677
+  testmo_id: 65140
   folder_id: 43
 description: This is the registration flow happy path, it will cover the entire flow
   with only valid data and valid responses from the API. for NNA/ NCI

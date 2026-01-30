@@ -12,7 +12,7 @@ metadata:
   created: '2025-08-14'
   updated: '2025-08-14'
   author: user_24
-  testmo_id: 58160
+  testmo_id: 66014
   folder_id: 3084
 description: When vehicle status is STOLEN in Capabilities, show NCF card as enabled
   on Home screen

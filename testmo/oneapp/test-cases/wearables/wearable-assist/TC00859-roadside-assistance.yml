@@ -12,7 +12,7 @@ metadata:
   created: '2023-08-01'
   updated: '2025-09-19'
   author: user_2
-  testmo_id: 859
+  testmo_id: 65219
   folder_id: 79
 preconditions:
 - description: User is on the Assist screen and has the Roadside Assistance capability

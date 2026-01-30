@@ -12,7 +12,7 @@ metadata:
   created: '2025-10-28'
   updated: '2025-10-28'
   author: user_24
-  testmo_id: 61892
+  testmo_id: 65253
   folder_id: 6757
 preconditions:
 - description: Have 1 Vin in account (Connected and subscribed, or Connected and not

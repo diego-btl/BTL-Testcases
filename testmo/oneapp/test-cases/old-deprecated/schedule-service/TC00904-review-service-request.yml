@@ -12,7 +12,7 @@ metadata:
   created: '2023-08-04'
   updated: '2025-10-24'
   author: user_7
-  testmo_id: 904
+  testmo_id: 65734
   folder_id: 7143
 preconditions:
 - description: User is on Select Date and Time screen. And chooses a transportation

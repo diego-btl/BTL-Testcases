@@ -12,7 +12,7 @@ metadata:
   created: '2023-08-28'
   updated: '2024-10-17'
   author: user_2
-  testmo_id: 1494
+  testmo_id: 65842
   folder_id: 56
 preconditions:
 - description: User has entered a valid VIN for a non-connected vehicle that has previously

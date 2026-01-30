@@ -12,7 +12,7 @@ metadata:
   created: '2025-10-29'
   updated: '2025-10-29'
   author: user_6
-  testmo_id: 61900
+  testmo_id: 66167
   folder_id: 6759
 preconditions:
 - description: user is on the main powered by Co-operators screen

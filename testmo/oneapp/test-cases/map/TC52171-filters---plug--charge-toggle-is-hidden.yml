@@ -12,7 +12,7 @@ metadata:
   created: '2025-06-20'
   updated: '2025-12-19'
   author: user_25
-  testmo_id: 52171
+  testmo_id: 65087
   folder_id: 46
 preconditions:
 - description: 'FF "GrantFullPlugAndCharge": true'

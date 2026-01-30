@@ -12,7 +12,7 @@ metadata:
   created: '2023-08-28'
   updated: '2024-10-17'
   author: user_2
-  testmo_id: 1433
+  testmo_id: 65055
   folder_id: 234
 preconditions:
 - description: User has never allowed/disallowed notification permissions

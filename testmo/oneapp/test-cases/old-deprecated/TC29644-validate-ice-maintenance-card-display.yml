@@ -12,7 +12,7 @@ metadata:
   created: '2024-12-12'
   updated: '2026-01-14'
   author: user_23
-  testmo_id: 29644
+  testmo_id: 65035
   folder_id: 105
 description: This test case ensures that the "Maintenance Care" card is displayed
   correctly on both the Vehicle and Support screens for ICE vehicles. It verifies

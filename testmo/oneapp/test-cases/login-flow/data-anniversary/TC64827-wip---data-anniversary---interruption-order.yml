@@ -12,7 +12,7 @@ metadata:
   created: '2026-01-21'
   updated: '2026-01-30'
   author: user_23
-  testmo_id: 64827
+  testmo_id: 65246
   folder_id: 7144
 description: 'Validates that anniversary gift box appears last in the sequence of
   mandatory app interruptions and that each view persists until dismissed. Preconditions:

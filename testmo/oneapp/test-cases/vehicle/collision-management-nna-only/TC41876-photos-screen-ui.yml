@@ -12,7 +12,7 @@ metadata:
   created: '2025-06-09'
   updated: '2025-06-09'
   author: user_26
-  testmo_id: 41876
+  testmo_id: 65537
   folder_id: 3800
 description: Verify that the user can see all required UI elements on the Photos screen,
   interact with them correctly, including scrolling, tapping icons, placeholders,

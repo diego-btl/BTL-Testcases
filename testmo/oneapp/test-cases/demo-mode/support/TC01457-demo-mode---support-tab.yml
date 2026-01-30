@@ -12,7 +12,7 @@ metadata:
   created: '2023-08-28'
   updated: '2025-12-18'
   author: user_2
-  testmo_id: 1457
+  testmo_id: 65344
   folder_id: 6802
 description: 'Note: This test case applies to all 3 vehicle types in Demo Mode'
 steps:

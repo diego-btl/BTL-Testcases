@@ -12,7 +12,7 @@ metadata:
   created: '2023-08-01'
   updated: '2025-10-14'
   author: user_2
-  testmo_id: 659
+  testmo_id: 65884
   folder_id: 69
 preconditions:
 - description: User has a vehicle with PARKED_CAR_FINDER capability

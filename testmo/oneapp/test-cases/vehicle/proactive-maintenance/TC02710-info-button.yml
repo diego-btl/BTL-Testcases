@@ -12,7 +12,7 @@ metadata:
   created: '2023-09-07'
   updated: '2024-10-17'
   author: user_3
-  testmo_id: 2710
+  testmo_id: 65589
   folder_id: 412
 preconditions:
 - description: User is on the main Proactive Maintenance Screen

@@ -12,7 +12,7 @@ metadata:
   created: '2025-12-12'
   updated: '2026-01-20'
   author: user_23
-  testmo_id: 62146
+  testmo_id: 65674
   folder_id: 6787
 description: 'Create Schedule Service - Cancel: Booking AbandonmentValidates cancellation
   flow with confirmation modal. Tests that user can abandon the booking process at

@@ -12,7 +12,7 @@ metadata:
   created: '2025-01-07'
   updated: '2025-01-07'
   author: user_24
-  testmo_id: 29852
+  testmo_id: 65238
   folder_id: 3775
 description: Verify when both EnableWebviewLogin and EnableBrowserLogin are true,
   Browser login takes precedence.

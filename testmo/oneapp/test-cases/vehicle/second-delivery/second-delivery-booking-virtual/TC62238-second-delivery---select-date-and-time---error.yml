@@ -12,7 +12,7 @@ metadata:
   created: '2025-12-19'
   updated: '2025-12-19'
   author: user_23
-  testmo_id: 62238
+  testmo_id: 65686
   folder_id: 6820
 description: 'Second Delivery - Select Date and Time - Error: Time Slot Loading Error
   HandlingValidates error handling when SecondDeliveryAppointmentsAtVirtual query

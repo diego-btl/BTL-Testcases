@@ -12,7 +12,7 @@ metadata:
   created: '2025-11-10'
   updated: '2025-11-10'
   author: user_24
-  testmo_id: 61968
+  testmo_id: 66068
   folder_id: 6778
 preconditions:
 - description: User is on Climate screen with existing charge schedule

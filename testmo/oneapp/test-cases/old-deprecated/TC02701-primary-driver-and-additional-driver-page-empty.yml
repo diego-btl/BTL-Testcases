@@ -12,7 +12,7 @@ metadata:
   created: '2023-09-07'
   updated: '2025-09-19'
   author: user_3
-  testmo_id: 2701
+  testmo_id: 65001
   folder_id: 105
 preconditions:
 - description: User has a AVK2 vehicleUser is already on the Home PageUser is a PRIMARY_DRIVER

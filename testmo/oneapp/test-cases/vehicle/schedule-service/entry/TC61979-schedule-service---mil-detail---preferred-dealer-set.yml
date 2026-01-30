@@ -12,7 +12,7 @@ metadata:
   created: '2025-11-11'
   updated: '2026-01-20'
   author: user_23
-  testmo_id: 61979
+  testmo_id: 65648
   folder_id: 6779
 description: 'Entry Point Validation: MIL Detail Screen Schedule Service CTAValidates
   that tapping the Schedule Service CTA on MIL detail screens redirects to the Select

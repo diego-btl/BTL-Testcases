@@ -12,7 +12,7 @@ metadata:
   created: '2023-08-28'
   updated: '2025-12-18'
   author: user_2
-  testmo_id: 1461
+  testmo_id: 65339
   folder_id: 6801
 preconditions:
 - description: User is on the Map screen

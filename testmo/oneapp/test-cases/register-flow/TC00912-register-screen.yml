@@ -12,7 +12,7 @@ metadata:
   created: '2023-08-14'
   updated: '2025-08-21'
   author: user_2
-  testmo_id: 912
+  testmo_id: 65146
   folder_id: 43
 description: Verify the Register CTA button on Landing page opens Registration screen
 preconditions:

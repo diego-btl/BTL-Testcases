@@ -12,7 +12,7 @@ metadata:
   created: '2025-12-12'
   updated: '2026-01-20'
   author: user_23
-  testmo_id: 62145
+  testmo_id: 65665
   folder_id: 6787
 description: 'Create Schedule Service - Schedule Service - Failure: Booking Submission
   Error HandlingValidates error handling when CreateServiceAppointment mutation fails.

@@ -12,7 +12,7 @@ metadata:
   created: '2024-11-22'
   updated: '2026-01-21'
   author: user_2
-  testmo_id: 28446
+  testmo_id: 65243
   folder_id: 7144
 description: 'Validates that gift box animation does NOT appear for ineligible vehicle
   types (stolen, financial vehicles, additional driver). Preconditions: EnableOwnerAnniversary

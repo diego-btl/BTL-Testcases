@@ -12,7 +12,7 @@ metadata:
   created: '2025-05-13'
   updated: '2025-12-15'
   author: user_24
-  testmo_id: 36699
+  testmo_id: 66239
   folder_id: 2444
 description: When `ProductSKU` contains the letter 'P' in the 'ChargeProduct' api,
   the user sees the Splash screen

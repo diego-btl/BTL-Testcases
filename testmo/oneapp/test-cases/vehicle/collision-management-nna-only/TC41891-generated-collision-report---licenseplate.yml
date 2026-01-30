@@ -12,7 +12,7 @@ metadata:
   created: '2025-06-10'
   updated: '2025-06-10'
   author: user_26
-  testmo_id: 41891
+  testmo_id: 65550
   folder_id: 3800
 description: Verify that the licensePlate is included in the CreateCollisionReport
   request and is correctly shown in the generated PDF

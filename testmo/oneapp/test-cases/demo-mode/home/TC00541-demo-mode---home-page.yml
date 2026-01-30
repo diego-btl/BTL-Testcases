@@ -12,7 +12,7 @@ metadata:
   created: '2023-08-01'
   updated: '2025-12-18'
   author: user_2
-  testmo_id: 541
+  testmo_id: 65328
   folder_id: 6799
 description: Demo Mode Home Page validation + Vehicle Selection, shared for both Infiniti
   and Nissan, please skip the vehicles that are not part of the brand you're testing

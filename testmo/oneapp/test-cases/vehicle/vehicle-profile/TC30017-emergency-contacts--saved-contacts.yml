@@ -12,7 +12,7 @@ metadata:
   created: '2025-01-21'
   updated: '2025-10-10'
   author: user_17
-  testmo_id: 30017
+  testmo_id: 65510
   folder_id: 90
 preconditions:
 - description: User has saved contacts

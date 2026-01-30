@@ -12,7 +12,7 @@ metadata:
   created: '2023-08-28'
   updated: '2025-10-09'
   author: user_2
-  testmo_id: 1491
+  testmo_id: 65837
   folder_id: 56
 description: Verify that if device does not have camera permissions then when user
   tries to take a picture a modal is displayed to turn-on on device Settings.

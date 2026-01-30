@@ -12,7 +12,7 @@ metadata:
   created: '2026-01-27'
   updated: '2026-01-30'
   author: user_23
-  testmo_id: 64828
+  testmo_id: 65307
   folder_id: 7146
 description: 'Validates that when EnableEnhancedInAppChat feature flag is set to true,
   the LiveChatHours query includes enhancedChat: true in the payload. Preconditions:
