@@ -1,0 +1,10 @@
+{
+  "project_id": 2,
+  "project_name": "OneApp",
+  "testmo_url": "https://bethinklabs.testmo.net",
+  "last_full_sync": null,
+  "total_cases": 1334,
+  "total_folders": 162,
+  "version": "1.0",
+  "notes": "Metadata will be populated during first sync operation"
+}

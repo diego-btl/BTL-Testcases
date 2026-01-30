@@ -51,3 +51,31 @@ htmlcov/
 
 # Temporary directories
 temp-testmo-mcp/
+
+# BTL-TestCases specific
+testmo/*/.sync/sync-log.jsonl
+testmo/*/.sync/case-map.json
+testmo/*/.sync/folder-map.json
+*.pyc
+__pycache__/
+.pytest_cache/
+.coverage
+htmlcov/
+dist/
+build/
+*.egg-info/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temp files
+*.tmp
+*.bak
+*~
