@@ -1,6 +1,9 @@
-# Environment
-.env
-.env.local
+# BTL-TestCases .gitignore
+
+# Sync metadata (except project.json which can be versioned)
+testmo/*/.sync/sync-log.jsonl
+testmo/*/.sync/case-map.json
+testmo/*/.sync/folder-map.json
 
 # Python
 __pycache__/
@@ -20,62 +23,103 @@ parts/
 sdist/
 var/
 wheels/
+pip-wheel-metadata/
+share/python-wheels/
 *.egg-info/
 .installed.cfg
 *.egg
-venv/
-.venv/
-ENV/
+MANIFEST
 
-# IDE
-.idea/
+# Testing
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+*.cover
+.hypothesis/
+
+# Type checking
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+
+# IDEs
 .vscode/
+.idea/
 *.swp
 *.swo
+*.swn
 *~
+.project
+.pydevproject
+.settings/
 
 # OS
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
 Thumbs.db
 
-# Test outputs
-.pytest_cache/
-htmlcov/
-.coverage
-*.cover
+# Environment
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
 
-# Logs
+# Logs and temp
 *.log
-.env.testmo
-.mcp.json
+*.tmp
+*.bak
+
+# Build artifacts
+*.egg-info/
+dist/
+build/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Backup files
+*~
+*.orig
+*.rej
+
+# Summary files (info in docs now)
+RESTRUCTURE_SUMMARY.md
+DOCUMENTATION_SUMMARY.md
+IMPLEMENTATION_SUMMARY.md
+MCP_COMPARISON.md
+PAGINATION_BUG_FIX.md
+CSV_VS_API_STRUCTURE.md
+EXECUTIVE_SUMMARY.md
+MCP_MIGRATION_ANALYSIS.md
+PAGINATION_AUDIT.md
+CSV_PARSING_FIX.md
+TESTMO_MCP_INDIVIDUAL_UPDATES.md
+PROMPT_FIX_EXPORT_FOLDERS.md
+QUICKSTART.md
+
+# Data files (we use YAML)
+*.csv
+*.xlsx
+*.xls
 
 # Temporary directories
 temp-testmo-mcp/
+agents/
+backup/
+data/
+schemas/
 
-# BTL-TestCases specific
-testmo/*/.sync/sync-log.jsonl
-testmo/*/.sync/case-map.json
-testmo/*/.sync/folder-map.json
-*.pyc
-__pycache__/
-.pytest_cache/
-.coverage
-htmlcov/
-dist/
-build/
-*.egg-info/
-
-# IDE
-.vscode/
-.idea/
-*.swp
-*.swo
-
-# OS
-.DS_Store
-Thumbs.db
-
-# Temp files
-*.tmp
-*.bak
-*~
+# Import logs
+import_log.txt
