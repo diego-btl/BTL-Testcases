@@ -1,0 +1,36 @@
+testmo:
+  case_id: 32362
+  folder_id: 6772
+  project_id: 6
+  folder_path: map-page/poi-and-favorites
+  folder_name_ui: POI and Favorites
+  created_at: '2025-04-01 17:50:44.883778'
+  updated_at: '2025-10-31 14:55:28.815054'
+  last_sync: '2026-01-30T18:20:45.612491Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/32362
+metadata:
+  name: Favourites POI card
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is viewing POI search results</p>
+  steps:
+  - column_name: custom_steps
+    id: 52733
+    case_id: 32362
+    text1: <ol><li>Tap the heart icon on one of the POI cards</li><li>Enter at least
+      one character in the name field</li><li>Tap <code>Guardar Favorito</code></li><li>Force
+      save to fail</li><li>Try to <code>Guardar Favorito</code> again and wait for
+      save to succeed</li></ol>
+    text2: null
+    text3: <ul><li>User should see a modal appear. Name field should be autofilled
+      if POI has returned a name</li><li>User should see <code>Guardar Favorito</code>
+      become enabled</li><li>User should see a loading spinner where the heart icon
+      was</li><li>User should see a failure toast and the heart icon should show the
+      non-saved state</li><li>User should see a success toast and the heart icon should
+      show the saved state</li></ul>
+    text4: null
+    display_order: 1

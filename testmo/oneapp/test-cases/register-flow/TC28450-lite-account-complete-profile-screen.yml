@@ -1,0 +1,72 @@
+testmo:
+  case_id: 28450
+  folder_id: 43
+  project_id: 2
+  folder_path: register-flow
+  folder_name_ui: Register Flow
+  created_at: '2024-11-22 21:08:23.237951'
+  updated_at: '2025-02-06 20:27:02.440122'
+  last_sync: '2026-01-30T18:21:06.657270Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/28450
+metadata:
+  name: Lite Account - Complete Profile screen
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<p>Update <code>isLiteAccount</code> = <code>true</code> on USerInfo
+    call</p><pre><code class="editor-plain language-plain code-block">{
+
+    "data": {
+
+    "user": {
+
+    "__typename": "User",
+
+    "pinConfigured": true,
+
+    "securityQuestionId": "1",
+
+    "isLiteAccount": true
+
+    }
+
+    }
+
+    }</code></pre>'
+  steps:
+  - column_name: custom_steps
+    id: 46152
+    case_id: 28450
+    text1: <p>Perform a Fresh install and log into the app</p>
+    text2: null
+    text3: <p>Verify Terms and Conditions appear first &gt; then the onboarding cards
+      come if applicable, garage loads, the user call identifies if they are a lite
+      user, so lite registration to be last out of all 3</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 46153
+    case_id: 28450
+    text1: <p>Once on <code>Complete Profile</code> screen</p>
+    text2: null
+    text3: <p>Verify the following information is displayed:</p><ul><li>Complete Profile
+      header</li><li>`Please complete your profile to continue accessing the MyNissan
+      app` card is show right below the header</li><li>Address field<ul><li>Address
+      placeholder</li></ul></li><li>City<ul><li>City placeholder</li></ul></li><li>State
+      dropdown<ul><li>`--` by default</li><li>States list displays two-digit values</li></ul></li><li>Zip
+      code<ul><li>Zip Code placeholder</li></ul></li><li>Phone Number<ul><li>(000)
+      000-0000 placeholder</li></ul></li><li>Carrier<ul><li>`--` by default</li></ul></li><li><code>NEXT</code>
+      cta, disabled by default</li></ul>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 46168
+    case_id: 28450
+    text1: <p>User taps on <code>Back</code> arrow</p>
+    text2: null
+    text3: <p>Verify user is taken to Home screen</p>
+    text4: null
+    display_order: 3

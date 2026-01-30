@@ -1,0 +1,51 @@
+testmo:
+  case_id: 19082
+  folder_id: 2442
+  project_id: 2
+  folder_path: map/charging-session
+  folder_name_ui: Charging Session
+  created_at: '2024-06-06 16:52:21.467084'
+  updated_at: '2024-12-13 18:54:48.344228'
+  last_sync: '2026-01-30T18:21:07.013631Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/19082
+metadata:
+  name: '[first two scenarios should be removed] Charging Station - Landing'
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>firebase config is enabled and <code>accountStatus</code> is returning
+    `ACTIVE`</p>
+  steps:
+  - column_name: custom_steps
+    id: 27473
+    case_id: 19082
+    text1: <p>User should see the following:</p>
+    text2: null
+    text3: <ol><li>Charging Session header</li><li>Start Charger card</li><li>Charge
+      Status card</li><li>Refresh button</li></ol>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 27474
+    case_id: 19082
+    text1: <p>Start Charger Card should have:</p>
+    text2: null
+    text3: <ol><li>Start Charger header</li><li>Short description prompting user to
+      enter ID</li><li>Charger ID subheader</li><li>Charger ID entry field</li><li>Start
+      Charger CTA (should be disabled until user charger id is entered)</li></ol>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 27475
+    case_id: 19082
+    text1: <p>Charge Status Card should have:</p>
+    text2: null
+    text3: '<ol><li>Charge Status subheader</li><li>Mileage subheader</li><li>Battery
+      level percentage</li><li>Battery level progress bar</li><li>Plug and Charge
+      status</li></ol><p>NOTE: if the <code>refreshBatteryCall</code> fails, user
+      should see the battery card empty state</p>'
+    text4: null
+    display_order: 3

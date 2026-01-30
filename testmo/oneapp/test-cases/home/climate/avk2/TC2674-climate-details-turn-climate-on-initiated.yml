@@ -1,0 +1,36 @@
+testmo:
+  case_id: 2674
+  folder_id: 4170
+  project_id: 2
+  folder_path: home/climate/avk2
+  folder_name_ui: AVK2
+  created_at: '2023-09-07 21:10:07.560284'
+  updated_at: '2025-09-22 14:48:20.519337'
+  last_sync: '2026-01-30T18:21:07.813875Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/2674
+metadata:
+  name: Climate Details - Turn Climate On - Initiated
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>AVK2 vehicle<br />Climate Details screen<br />Engine is OFF</p>
+  steps:
+  - column_name: custom_steps
+    id: 3040
+    case_id: 2674
+    text1: <ol><li>Tap Turn Climate On</li><li>Tap No</li><li>Tap Turn Climate On
+      and tap Yes</li></ol>
+    text2: null
+    text3: <ol><li>User should see confirmation prompt that climate will also start
+      the engine</li><li>User should see prompt dismissed</li><li>User should see
+      Turn Climate On button disable and status shows loading state - parameters sent
+      in the request should match the selected parameters on the screen<br /><br />User
+      should see a toast message that transitions from (3 seconds each):<br />Contacting
+      {vehicle model} to start engine...<br />Waking {vehicle model} to start engine...<br
+      />Initiating climate {on/off} for {vehicle model}...</li><li>User should also
+      see an additional toast "Changes are now saved as your default". </li></ol>
+    text4: null
+    display_order: 1

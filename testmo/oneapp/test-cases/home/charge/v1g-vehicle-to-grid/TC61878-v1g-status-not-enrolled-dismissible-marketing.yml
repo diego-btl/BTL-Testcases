@@ -1,0 +1,85 @@
+testmo:
+  case_id: 61878
+  folder_id: 6755
+  project_id: 2
+  folder_path: home/charge/v1g-vehicle-to-grid
+  folder_name_ui: V1G - Vehicle-to-Grid
+  created_at: '2025-10-24 19:17:17.495993'
+  updated_at: '2025-12-16 18:20:15.189428'
+  last_sync: '2026-01-30T18:21:05.702805Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/61878
+metadata:
+  name: V1G status - NOT_ENROLLED - Dismissible Marketing Message
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<p>Nissan NNA and NCI only</p><p>User has an EV or EV AVK2 vehicle</p><p>PD
+    only</p><p>"v1GEligible": true</p>'
+  steps:
+  - column_name: custom_steps
+    id: 94684
+    case_id: 61878
+    text1: '<p>1. Mock V1GMonitoredChargingAccountStatus API to return "v1GMonitoredChargingAccountStatus":
+      "NOT_ENROLLED"</p><p>2. Navigate to the Charge screen</p>'
+    text2: null
+    text3: <p>The dismissible marketing message is displayed under the Status tab</p><figure
+      class="image"><img src="/attachments/view/8628" alt="8628" /></figure><p><br
+      /><br /><img src="https://t9014537789.p.clickup-attachments.com/t9014537789/7d887b39-cca8-45fa-a7a8-1ecf25483d7c/Screenshot%202025-09-19%20at%202.25.28%E2%80%AFPM.png"
+      alt="Screenshot%202025-09-19%20at%202.25.28%E2%80%AFPM.png" /></p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 94685
+    case_id: 61878
+    text1: <p>Tap the LEARN MORE button</p>
+    text2: null
+    text3: <p>User is navigated to the Optimize screen</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 94686
+    case_id: 61878
+    text1: <p>Tap the X button in the top right corner of the message</p>
+    text2: null
+    text3: <p>The message is dismissed</p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 94687
+    case_id: 61878
+    text1: <p>Navigate to any tab and go back to the Charge screen</p>
+    text2: null
+    text3: <p>The message is hidden</p>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 94688
+    case_id: 61878
+    text1: <p>1. Bg/fg or cold start the app</p><p>2. Navigate to the Charge screen</p>
+    text2: null
+    text3: <p>The message is hidden</p>
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 94689
+    case_id: 61878
+    text1: '<p>1. Fresh install the app</p><p>2. Make sure the V1GMonitoredChargingAccountStatus
+      API still returns "v1GMonitoredChargingAccountStatus": "NOT_ENROLLED"</p><p>3.
+      Navigate to the Charge screen</p>'
+    text2: null
+    text3: <p>The dismissible marketing message is displayed under the Status tab</p>
+    text4: null
+    display_order: 6
+  - column_name: custom_steps
+    id: 94690
+    case_id: 61878
+    text1: '<p>1. Mock V1GMonitoredChargingAccountStatus API to return "v1GMonitoredChargingAccountStatus":
+      "CANCELLED"/"FAILED"/"ENROLLING"/"INACTIVE"</p><p>2. Navigate to the Charge
+      screen</p>'
+    text2: null
+    text3: <p>The dismissible marketing message is hidden</p>
+    text4: null
+    display_order: 7

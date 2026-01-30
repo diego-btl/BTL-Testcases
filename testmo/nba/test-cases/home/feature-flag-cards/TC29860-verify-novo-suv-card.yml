@@ -1,0 +1,39 @@
+testmo:
+  case_id: 29860
+  folder_id: 3799
+  project_id: 5
+  folder_path: home/feature-flag-cards
+  folder_name_ui: Feature flag cards
+  created_at: '2025-01-09 16:45:42.593179'
+  updated_at: '2025-01-09 17:02:38.338382'
+  last_sync: '2026-01-30T18:20:38.295359Z'
+  url: https://bethinklabs.testmo.net/repositories/5/cases/29860
+metadata:
+  name: Verify  "Novo SUV" Card
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>Set the feature flag <code>NewCarCampaignCard</code> to <code>EnableNewSUV</code>
+    in FirebaseConfig.</p>
+  steps:
+  - column_name: custom_steps
+    id: 48744
+    case_id: 29860
+    text1: <ol><li>Open the application.</li><li>Verify that the <strong>"Novo SUV"</strong>
+      card is displayed at the top.</li></ol>
+    text2: null
+    text3: <p>The <strong>"Novo SUV"</strong> card should be displayed.</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 48745
+    case_id: 29860
+    text1: <p>Click on the <strong>"Novo SUV"</strong> card.</p>
+    text2: null
+    text3: <p>The link <a href="https://novonissankicks.com.br"><strong>https://novonissankicks.com.br</strong></a>
+      should open in a WebView.</p>
+    text4: null
+    display_order: 2

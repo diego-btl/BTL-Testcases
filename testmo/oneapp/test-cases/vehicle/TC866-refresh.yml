@@ -1,0 +1,29 @@
+testmo:
+  case_id: 866
+  folder_id: 45
+  project_id: 2
+  folder_path: vehicle
+  folder_name_ui: Vehicle
+  created_at: '2023-08-04 11:02:03.356007'
+  updated_at: '2025-10-28 06:19:47.348784'
+  last_sync: '2026-01-30T18:21:08.537612Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/866
+metadata:
+  name: Refresh
+  priority: 3
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  steps:
+  - column_name: custom_steps
+    id: 1033
+    case_id: 866
+    text1: <p>Tap refresh button Make sure to test on EV/AVK. Refer to sheet for logic </p><p>https://docs.google.com/spreadsheets/d/1Ch6XwP9XdU2km5jsJm_O0SrvDL6hJw4uu8mDPRl26-g/edit#gid=542058053</p>
+    text2: null
+    text3: <ol><li>User should see loading spinner while refresh is in progress,</li><li>User
+      should see updated data and timestamp (tire pressure) after refresh is successful</li><li>If
+      refresh is not successful, cached data will be shown</li></ol>
+    text4: null
+    display_order: 1

@@ -1,0 +1,53 @@
+testmo:
+  case_id: 2847
+  folder_id: 432
+  project_id: 2
+  folder_path: vehicle/mils/mechanical-repair
+  folder_name_ui: Mechanical Repair
+  created_at: '2023-09-13 15:39:14.460164'
+  updated_at: '2025-12-02 00:47:26.723290'
+  last_sync: '2026-01-30T18:21:07.400152Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/2847
+metadata:
+  name: Mechanical Repair - Enable Data Sharing, SMS/Cell/Email - toggle success
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: "<ul><li>AVK2 or EVO vehicle (AVK2, EVAVK2, EVO, EVEVO)</li><li>User\
+    \ does not need to have active MILs</li><li>User has at least one Vehicle status\
+    \ enabled (e.g: tire pressure PSI)</li><li>User has MECHANICAL_REPAIR capability\
+    \ enabled</li><li><code>GrantMechanicalRepair</code> FF is <strong>enabled</strong></li></ul><p><code>UpdateVehiclePreferences</code>\
+    \ - success<br /> </p><p>Mock sample</p><p><code>UpdateVehiclePreferences</code>\
+    \ - true</p><pre><code class=\"editor-plain language-plain code-block\">{\n\"\
+    data\": {\n\"updateVehiclePreferences\": {\n\"__typename\": \"ResponseStatus\"\
+    ,\n\"success\": true\n        }\n    }\n}</code></pre>"
+  steps:
+  - column_name: custom_steps
+    id: 3234
+    case_id: 2847
+    text1: <ol><li>Tap toggle to enable/disable Enable Data Sharing</li><li>Wait for
+      the success</li><li>Tap toggle to disable/enable Enable Data Sharing</li><li>Wait
+      for the success</li></ol>
+    text2: null
+    text3: <ol><li>User should see a loading screen while API is loading</li><li>User
+      should see toggle enable/disable and UI update to show the enabled/disabled
+      state</li><li>User should see a loading screen while API is loading</li><li>User
+      should see toggle disable/enable and UI update to show the disabled/enabled
+      state</li></ol>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 11832
+    case_id: 2847
+    text1: <ol><li>Tap toggle to enable/disable SMS/Cell/Email</li><li>Wait for the
+      success</li><li>Tap toggle to disable/enable SMS/Cell/Email</li><li>Wait for
+      the success</li></ol>
+    text2: null
+    text3: <ol><li>User should see a loading screen while API is loading</li><li>User
+      should see toggle enable/disable</li><li>User should see a loading screen while
+      API is loading</li><li>User should see toggle disable/enable</li></ol>
+    text4: null
+    display_order: 2

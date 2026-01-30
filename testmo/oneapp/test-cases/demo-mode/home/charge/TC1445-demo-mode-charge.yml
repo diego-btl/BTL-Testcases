@@ -1,0 +1,246 @@
+testmo:
+  case_id: 1445
+  folder_id: 6806
+  project_id: 2
+  folder_path: demo-mode/home/charge
+  folder_name_ui: Charge
+  created_at: '2023-08-28 20:13:22.177350'
+  updated_at: '2025-12-18 17:01:08.517887'
+  last_sync: '2026-01-30T18:21:08.296227Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/1445
+metadata:
+  name: Demo Mode - Charge
+  priority: 3
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has the LEAF selected</p><p>V2L is enabled in firebase configs</p><p>Charge
+    History is enabled in firebase configs</p>
+  steps:
+  - column_name: custom_steps
+    id: 1813
+    case_id: 1445
+    text1: <p>Tap the 'Charge' card</p>
+    text2: null
+    text3: <p>User should see the <code>Charge</code> screen</p><ul><li>Charge Status
+      card<ul><li><strong>Refresh</strong> icon</li><li><code>Manage EV</code> cta</li></ul></li><li>NISSAN
+      ENERGY Charge Network card<ul><li><code>Find In-Netwrok Chargers</code> CTA</li></ul></li><li>Plug
+      &amp; Charge card with a toggle enabled by default<ul><li>The user can interact
+      with the toggle.</li></ul></li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 25408
+    case_id: 1445
+    text1: <p>Tap on <code>MANAGE EV</code> CTA</p>
+    text2: null
+    text3: '<p>User should see <strong>Manage EV</strong> screen:</p><ul><li>NISSAN
+      ENERGY Charge Network card<ul><li>Subtitle: Active</li></ul></li><li>Charge
+      Limit card<ul><li>Subtitle: 80%</li></ul></li><li>Vehicle-to-Load card<ul><li>Subtitle:
+      All On - 30%</li></ul></li><li>Charge History card</li><li>Schedule card<ul><li>2
+      charge scheduled</li><li>Add Option</li></ul></li><li><code>START CHARGING</code>
+      cta</li></ul>'
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 25407
+    case_id: 1445
+    text1: <p>Tap on <code>START CHARGING</code></p>
+    text2: null
+    text3: <p>User should see a dismissible alert informing them the feature is not
+      available in demo mode</p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 25409
+    case_id: 1445
+    text1: <p>Tap on any Charge Schedule</p>
+    text2: null
+    text3: <p>User should see the charge schedule details screen</p>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 25410
+    case_id: 1445
+    text1: <p>Change details for the charge schedule</p>
+    text2: null
+    text3: <p>User is able to change details for the charge schedule</p>
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 25411
+    case_id: 1445
+    text1: <p>Tap Save/Delete Schedule</p>
+    text2: null
+    text3: <p>User should see a dismissable alert informing them the feature is not
+      available in demo mode</p>
+    text4: null
+    display_order: 6
+  - column_name: custom_steps
+    id: 25412
+    case_id: 1445
+    text1: <p>Tap to toggle charge schedule</p>
+    text2: null
+    text3: <p>User should see charge schedule toggle on/off</p><p>The Charge schedule
+      process is triggered and the following toasts are displayed:</p><ul><li>Contacting
+      &lt;year and model&gt; to toggle charge schedule...</li><li>Waking &lt;year
+      and model&gt; to toggle charge schedule...</li><li>Initiating toggle charge
+      schedule on &lt;year and model&gt;...</li><li>Charge schedule toggled</li></ul>
+    text4: null
+    display_order: 7
+  - column_name: custom_steps
+    id: 25413
+    case_id: 1445
+    text1: <p>Tap on the <strong>Add</strong> option</p>
+    text2: null
+    text3: <p>User should see a dismissible alert informing them that the feature
+      is not available in demo mode</p>
+    text4: null
+    display_order: 8
+  - column_name: custom_steps
+    id: 96645
+    case_id: 1445
+    text1: <p>Tap on <code>NECN</code> card</p>
+    text2: null
+    text3: <p>User is led to NECN screen</p><ul><li>Account Status card<ul><li><code>Deactivate
+      Account</code> cta</li></ul></li><li>Plug &amp; Charge card with a toggle enabled
+      by default<ul><li>The user can interact with the toggle.</li></ul></li><li>Payment
+      Method card<ul><li>Credit card demo info</li><li><code>Change Payment Method</code>
+      cta</li></ul></li><li>CALL OUR HELP LINE</li></ul>
+    text4: null
+    display_order: 9
+  - column_name: custom_steps
+    id: 96646
+    case_id: 1445
+    text1: <p>Tap on any element except PnC toggle</p>
+    text2: null
+    text3: <p>User should see a dismissible alert informing them that the feature
+      is not available in demo mode</p>
+    text4: null
+    display_order: 10
+  - column_name: custom_steps
+    id: 96647
+    case_id: 1445
+    text1: <p>Tap on back arrow </p>
+    text2: null
+    text3: <p>User is led to <code>Manage EV</code> screen</p>
+    text4: null
+    display_order: 11
+  - column_name: custom_steps
+    id: 96648
+    case_id: 1445
+    text1: <p>Tap on <code>Charge Limit</code> card</p>
+    text2: null
+    text3: <p>User is led to <strong>Charge Limit</strong> screen</p><ul><li>Charge
+      Limit card<ul><li><strong>Charge Limit</strong> <strong>Setting</strong> field
+      with 80% set by default</li><li><code>Set Charge Limit</code> CTA is disabled
+      by default</li></ul></li><li>Charge Notification card<ul><li><strong>Notify
+      at</strong> field with 20% set by default</li><li><code>Set Notification</code>
+      CTA is disabled by default</li></ul></li><li><strong>MANAGE NOTIFICATIONS</strong>
+      option</li></ul>
+    text4: null
+    display_order: 12
+  - column_name: custom_steps
+    id: 96649
+    case_id: 1445
+    text1: <p>Select any value different from default on <strong>Charge Limit</strong>
+      <strong>Setting</strong> field</p>
+    text2: null
+    text3: <p><code>Set Charge Limit</code> CTA will become enabled, tapping on it
+      will display the following toasts:</p><ul><li>Setting Charge limit</li><li>Charge
+      Limit set</li></ul>
+    text4: null
+    display_order: 13
+  - column_name: custom_steps
+    id: 96650
+    case_id: 1445
+    text1: <p>Select any value different from default on <strong>Notify at</strong>
+      field</p>
+    text2: null
+    text3: <p><code>Set Notification</code> CTA will become enabled, tapping on it
+      will display a loading state icon and toast:</p><ul><li>Notification set</li></ul>
+    text4: null
+    display_order: 14
+  - column_name: custom_steps
+    id: 96651
+    case_id: 1445
+    text1: <p>Tap on <strong>MANAGE NOTIFICATIONS</strong> option</p>
+    text2: null
+    text3: <p>User is led to the <strong>Notification Preferences</strong> screen</p>
+    text4: null
+    display_order: 15
+  - column_name: custom_steps
+    id: 96652
+    case_id: 1445
+    text1: <p>Tap on back arrow </p>
+    text2: null
+    text3: <p>User is led to <code>Charge Limit</code> screen</p>
+    text4: null
+    display_order: 16
+  - column_name: custom_steps
+    id: 96653
+    case_id: 1445
+    text1: <p>On Manage EV screen, tap on Vehicle-to-Load (V2L) card</p>
+    text2: null
+    text3: <p>User is taken to the V2L screen:</p><ul><li>Vehicle-to-Load Remote Services
+       card (All On status)<ul><li><strong>Minimum Charge</strong> dropdown</li><li>30%
+      set by default</li><li><code>Set Minimum Charge</code> CTA is disabled by default</li></ul></li><li><strong>MANAGE
+      NOTIFICATIONS</strong> option</li></ul>
+    text4: null
+    display_order: 17
+  - column_name: custom_steps
+    id: 96654
+    case_id: 1445
+    text1: <p>Select any value different from default on <strong>Minimum Charge</strong>
+      dropdown</p>
+    text2: null
+    text3: <p><code>Set Minimum Charge</code> CTA will become enabled, tapping on
+      it will trigger the following toasts:</p><ul><li>Contacting &lt;year and model&gt;...</li><li>Waking
+      &lt;year and model&gt;...</li><li>Initiating Vehicle-to-Load limit...</li><li>Vehicle-to-Load
+      limit set</li></ul>
+    text4: null
+    display_order: 18
+  - column_name: custom_steps
+    id: 25414
+    case_id: 1445
+    text1: <p>Tap on <strong>MANAGE NOTIFICATIONS</strong> option</p>
+    text2: null
+    text3: <p>User is led to the <strong>Notification Preferences</strong> screen</p>
+    text4: null
+    display_order: 19
+  - column_name: custom_steps
+    id: 96655
+    case_id: 1445
+    text1: <p>Tap on back arrow </p>
+    text2: null
+    text3: <p>User is led to <strong>V2L</strong> screen</p>
+    text4: null
+    display_order: 20
+  - column_name: custom_steps
+    id: 96656
+    case_id: 1445
+    text1: <p>On Manage EV screen, tap on Charge History card</p>
+    text2: null
+    text3: <p>User should see a dismissible alert informing them that the feature
+      is not available in demo mode</p>
+    text4: null
+    display_order: 21
+  - column_name: custom_steps
+    id: 96786
+    case_id: 1445
+    text1: <p>On Manage EV screen tap 'Find In-network Chargers' CTA </p>
+    text2: null
+    text3: <p>User is redirected to the Map screen</p><p>Charge Stations are shown
+      in the Search filed, charge stations cards are shown at the bottom of the screen</p>
+    text4: null
+    display_order: 22
+  - column_name: custom_steps
+    id: 96787
+    case_id: 1445
+    text1: <p>On the Manage EV screen tap the 'Refresh' button</p>
+    text2: null
+    text3: <p>The loading state with the charge icon is displayed</p>
+    text4: null
+    display_order: 23

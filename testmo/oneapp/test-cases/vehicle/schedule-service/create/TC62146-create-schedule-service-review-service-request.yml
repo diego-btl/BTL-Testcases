@@ -1,0 +1,54 @@
+testmo:
+  case_id: 62146
+  folder_id: 6787
+  project_id: 2
+  folder_path: vehicle/schedule-service/create
+  folder_name_ui: Create
+  created_at: '2025-12-12 15:21:34.108839'
+  updated_at: '2026-01-20 21:18:43.679975'
+  last_sync: '2026-01-30T18:21:04.738966Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/62146
+metadata:
+  name: Create Schedule Service - Review Service Request - Cancel
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>User has completed all screens and arrived at Review Service
+    Request screen</li><li>All booking information is filled</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 96427
+    case_id: 62146
+    text1: <p>On <code>Review Service Request</code> screen, tap <code>CANCEL</code>
+      button</p>
+    text2: null
+    text3: '<ul><li>Modal appears with title: <code>Leave Schedule Service?</code></li><li>Modal
+      message: <code>Are you sure you want to leave? You will have to start over if
+      you want to schedule another service.</code></li><li><code>No, Continue</code>
+      button is displayed</li><li><code>Yes, Leave</code> button is displayed</li></ul>'
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 96428
+    case_id: 62146
+    text1: <p>Tap <code>No, Continue</code> button on <code>Leave Schedule Service?</code>
+      modal</p>
+    text2: null
+    text3: <ul><li>Modal is dismissed</li><li>User remains on <code>Review Service
+      Request</code> screen</li><li>All booking information is preserved</li><li>User
+      can continue editing or submit booking</li></ul>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 96429
+    case_id: 62146
+    text1: <p>Tap <code>CANCEL</code> button again, then tap <code>Yes, Leave</code>
+      button on modal</p>
+    text2: null
+    text3: <ul><li>Modal is dismissed</li><li>User is redirected to Vehicle Screen</li><li>Booking
+      is abandoned (not submitted)</li></ul>
+    text4: null
+    display_order: 3

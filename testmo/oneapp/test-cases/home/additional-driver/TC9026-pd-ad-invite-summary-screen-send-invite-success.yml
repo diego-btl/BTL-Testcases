@@ -1,0 +1,33 @@
+testmo:
+  case_id: 9026
+  folder_id: 411
+  project_id: 2
+  folder_path: home/additional-driver
+  folder_name_ui: Additional Driver
+  created_at: '2023-11-21 08:35:28.020802'
+  updated_at: '2025-09-22 15:10:22.432228'
+  last_sync: '2026-01-30T18:21:07.270868Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/9026
+metadata:
+  name: PD - AD Invite Summary Screen - Send Invite - Success
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has an AVK2 vehicle and is PRIMARY_DRIVER</p><p>User is on
+    the Invite Summary screen</p>
+  steps:
+  - column_name: custom_steps
+    id: 11606
+    case_id: 9026
+    text1: <ol><li>Tap on the Send Invite button</li><li>Tap one of the two options</li></ol>
+    text2: null
+    text3: <ol><li>User should see options to send via email or sms</li><li>User should
+      see a loading spinner and be taken back to the AD List screen with a success
+      toast<br /><br />User should see all the data sent in the request for <code>InviteDriver</code>
+      [iOS] match what was entered by the user<br /><br />User should receive an email/sms
+      for the invitation request</li></ol>
+    text4: null
+    display_order: 1

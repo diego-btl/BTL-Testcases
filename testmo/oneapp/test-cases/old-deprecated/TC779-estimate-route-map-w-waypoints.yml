@@ -1,0 +1,36 @@
+testmo:
+  case_id: 779
+  folder_id: 105
+  project_id: 2
+  folder_path: old-deprecated
+  folder_name_ui: Old / Deprecated
+  created_at: '2023-08-01 23:08:22.575978'
+  updated_at: '2025-09-19 21:13:59.475462'
+  last_sync: '2026-01-30T18:21:08.738154Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/779
+metadata:
+  name: Estimate Route Map w/ Waypoints
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has estimated a route</p>
+  steps:
+  - column_name: custom_steps
+    id: 948
+    case_id: 779
+    text1: <p>1. User is on Estimate Route screen<br />2. Tap on User Location button<br
+      />3. Tap on Vehicle Location button</p>
+    text2: null
+    text3: <p>1. User should see a map view of origin, stops, EV waypoints on route,
+      and destination<br /><br />User should see info draw with:<br />- Total trip
+      time and distance<br />- Origin (with time), stop in between, and destination
+      (with time)<br />- Edit Route button<br />- Save Route button<br />- Disclaimer
+      text fully visible<br /><br />2. User should see map pan to user location<br
+      />3. User should see map pan to vehicle location</p>
+    text4: null
+    display_order: 1
+  notes: <p>[Update the case] The User and Vehicle Location buttons are hidden from
+    the Estimate Route Screen</p>

@@ -1,0 +1,39 @@
+testmo:
+  case_id: 649
+  folder_id: 4169
+  project_id: 2
+  folder_path: home/climate/ev
+  folder_name_ui: EV
+  created_at: '2023-08-01 23:08:20.911047'
+  updated_at: '2025-12-19 17:41:32.513508'
+  last_sync: '2026-01-30T18:21:08.943351Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/649
+metadata:
+  name: Edit Climate Schedule
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is on Climate screen with existing climate schedule</p>
+  steps:
+  - column_name: custom_steps
+    id: 818
+    case_id: 649
+    text1: <p>1. Tap on an existing Climate Schedule<br />2. Modify departure time,
+      temperature, and days of the week<br />3. Tap to Save Schedule</p>
+    text2: null
+    text3: '<p>1. User should see Climate Schedule screen with schedule details filled
+      in and save button disabled<br />2. User should see corresponding modifications
+      made to departure time, temperature, and days of the week and save button enable<br
+      />3. User should see a loading spinner while schedule is being saved</p><p>User
+      should see folowing toasts: Contacting {vehicle year, model} to Update Climate
+      Schedule...<br />Waking {vehicle year, model} to UpdateClimate Schedule...<br
+      />Initiating Update Climate Schedule on {vehicle year, model}...<br />User should
+      see a success toast if schedule was saved successfully<br />User should be returned
+      to the Climate screen with modified schedule shown<br /><br />Note: If save
+      schedule fails, user should see a failure toast and remain on the Climate Schedule
+      screen</p>'
+    text4: null
+    display_order: 1

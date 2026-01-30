@@ -1,0 +1,28 @@
+testmo:
+  case_id: 888
+  folder_id: 96
+  project_id: 2
+  folder_path: vehicle/battery-status
+  folder_name_ui: Battery Status
+  created_at: '2023-08-04 12:53:08.856990'
+  updated_at: '2025-10-24 05:28:13.294575'
+  last_sync: '2026-01-30T18:21:08.479176Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/888
+metadata:
+  name: Battery screen
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has an EV</p>
+  steps:
+  - column_name: custom_steps
+    id: 1064
+    case_id: 888
+    text1: <p>Tap on Battery status card</p>
+    text2: null
+    text3: <p>User should see Battery screen</p>
+    text4: null
+    display_order: 1

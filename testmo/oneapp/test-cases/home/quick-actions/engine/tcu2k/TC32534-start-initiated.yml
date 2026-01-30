@@ -1,0 +1,58 @@
+testmo:
+  case_id: 32534
+  folder_id: 4166
+  project_id: 2
+  folder_path: home/quick-actions/engine/tcu2k
+  folder_name_ui: TCU2K
+  created_at: '2025-04-07 18:03:46.853725'
+  updated_at: '2025-09-19 18:44:21.082665'
+  last_sync: '2026-01-30T18:21:06.112680Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/32534
+metadata:
+  name: Start - Initiated
+  priority: 1
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is in the Home screen</p>
+  steps:
+  - column_name: custom_steps
+    id: 53209
+    case_id: 32534
+    text1: <p>User taps an "Engine" button<br /> </p>
+    text2: null
+    text3: '<p>User should see a confirmation modal: </p><ul><li>TCU2K: "Are you sure?
+      This action will remotely start your vehicle." with two buttons "No" and "Yes"</li></ul>'
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 53210
+    case_id: 32534
+    text1: <p>User taps "No" on confirmation modal</p>
+    text2: null
+    text3: <p>A modal is dismissed</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 53211
+    case_id: 32534
+    text1: <p>User taps an "Engine" button again</p>
+    text2: null
+    text3: '<p>User should see a confirmation modal: </p><ul><li>TCU2K: "Are you sure?
+      This action will remotely start your vehicle." with two buttons "No" and "Yes"</li></ul>'
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 53212
+    case_id: 32534
+    text1: <p>User taps "Yes" on confirmation modal</p>
+    text2: null
+    text3: <p><code>EngineStart</code> API and <code>CheckEngineServiceRequest</code>
+      API are triggered</p><p>User should see an "Engine" button is changed to a spinner</p><p>User
+      should see toast messages that transition from: </p><ul><li>Contacting &lt;year
+      and model&gt; to start engine...</li><li>Waking &lt;year and model&gt; to start
+      engine...</li><li>Initiating engine start on &lt;year and model&gt;...</li></ul>
+    text4: null
+    display_order: 4

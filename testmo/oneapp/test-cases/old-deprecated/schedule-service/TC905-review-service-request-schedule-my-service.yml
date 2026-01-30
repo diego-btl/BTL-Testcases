@@ -1,0 +1,50 @@
+testmo:
+  case_id: 905
+  folder_id: 7143
+  project_id: 2
+  folder_path: old-deprecated/schedule-service
+  folder_name_ui: Schedule Service
+  created_at: '2023-08-04 13:53:51.344765'
+  updated_at: '2025-10-24 16:23:48.638376'
+  last_sync: '2026-01-30T18:21:08.429338Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/905
+metadata:
+  name: Review Service Request - Schedule My Service
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is in the process of scheduling service and is on the last
+    screen of Review Service Request </p>
+  steps:
+  - column_name: custom_steps
+    id: 1109
+    case_id: 905
+    text1: <p>Tap on Schedule Service button </p>
+    text2: null
+    text3: <p>User should see Service Request Submitted screen with option to add
+      to calendar</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 1110
+    case_id: 905
+    text1: <p>Tap on Add to Calendar</p>
+    text2: null
+    text3: <p>User should be brought to their calendar app with all details matching
+      their booking</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 1111
+    case_id: 905
+    text1: <p>Return to the app and tap the close button</p>
+    text2: null
+    text3: <p>User should see the Vehicles tab with their Scheduled Service shown
+      on screen <br /> </p>
+    text4: null
+    display_order: 3
+  notes: '<p>Note: check that mileage is always included in the request when creating
+    a booking</p>'

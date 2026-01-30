@@ -1,0 +1,28 @@
+testmo:
+  case_id: 684
+  folder_id: 71
+  project_id: 2
+  folder_path: home/route-planner
+  folder_name_ui: Route Planner
+  created_at: '2023-08-01 23:08:21.357454'
+  updated_at: '2025-10-06 08:11:44.903887'
+  last_sync: '2026-01-30T18:21:08.860573Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/684
+metadata:
+  name: Route Planner card
+  priority: 1
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has an EV with INTELLIGENT_ROUTE_PLANNER capability</p>
+  steps:
+  - column_name: custom_steps
+    id: 853
+    case_id: 684
+    text1: <p>1. Go to Home screen</p>
+    text2: null
+    text3: <p>User should see a Route Planner card</p>
+    text4: null
+    display_order: 1

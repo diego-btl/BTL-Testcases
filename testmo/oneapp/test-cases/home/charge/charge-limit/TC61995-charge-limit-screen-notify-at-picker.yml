@@ -1,0 +1,67 @@
+testmo:
+  case_id: 61995
+  folder_id: 6780
+  project_id: 2
+  folder_path: home/charge/charge-limit
+  folder_name_ui: Charge Limit
+  created_at: '2025-11-14 21:04:10.156859'
+  updated_at: '2025-12-02 22:12:19.847766'
+  last_sync: '2026-01-30T18:21:05.288569Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/61995
+metadata:
+  name: Charge Limit screen - Notify at picker
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has an EV AVK2 vehicle</p><p><code>EnableChargeLimit</code>
+    FF is true</p><p>User is on the Manage EV screen and Charge Limit card is enabled</p>
+  steps:
+  - column_name: custom_steps
+    id: 95488
+    case_id: 61995
+    text1: <p>Tap the <strong>Charge Limit</strong> card</p>
+    text2: null
+    text3: <p>User should see the Charge Limit screen with the <strong>Notify at</strong>
+      field showing the value corresponding to <code>ChargeConfig.notification.percent</code> </p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 95489
+    case_id: 61995
+    text1: <p>Tap the <strong>Notify at </strong>dropdown</p>
+    text2: null
+    text3: <p>Values should start with <strong>Do Not Notify</strong>, then increase
+      by 5% from 2<strong>0% to 100%</strong></p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 95490
+    case_id: 61995
+    text1: <p>1. Mock <code>ChargeConfig</code> so that <code>ChargeConfig.notification.percent</code>
+      is returning <strong>null</strong> or from <strong>5</strong> to <strong>15</strong></p><p>2.
+      Navigate back to the Charge screen and return to the Manage EV screen</p>
+    text2: null
+    text3: <p>ChargeConfig API is called</p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 95491
+    case_id: 61995
+    text1: <p>Tap the <strong>Charge Limit</strong> card</p>
+    text2: null
+    text3: <p>The Notify at field is updated to Do Not Notify</p><p>The Set Notification
+      CTA is disabled</p>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 95492
+    case_id: 61995
+    text1: <p>Tap the <strong>Notify at</strong> dropdown</p>
+    text2: null
+    text3: <p>Values should start with <strong>Do Not Notify</strong>, then increase
+      by 5% from 2<strong>0% to 100%</strong></p>
+    text4: null
+    display_order: 5

@@ -1,0 +1,46 @@
+testmo:
+  case_id: 29812
+  folder_id: 3767
+  project_id: 5
+  folder_path: home/message-center
+  folder_name_ui: Message Center
+  created_at: '2024-12-20 15:21:40.308281'
+  updated_at: '2025-01-31 16:21:27.617343'
+  last_sync: '2026-01-30T18:20:38.354009Z'
+  url: https://bethinklabs.testmo.net/repositories/5/cases/29812
+metadata:
+  name: Push Notifications
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has sent the following push notifications using the marketingcloud
+    apis:</p><p>Plain</p><p>Rich</p><p>Rich + Cloudpage</p>
+  steps:
+  - column_name: custom_steps
+    id: 48663
+    case_id: 29812
+    text1: <p>User expands the Plain notification</p>
+    text2: null
+    text3: <p>Notification should be text only. App opens when tapped</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 48664
+    case_id: 29812
+    text1: <p>User expands Rich notification</p>
+    text2: null
+    text3: <p>Notification should include text and an image. App opens when tapped</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 48665
+    case_id: 29812
+    text1: <p>User expands a Rich+Cloudpage notification</p>
+    text2: null
+    text3: <p>Notification should include text+imagine. App should open to the inbox
+      message in the inapp message centre</p>
+    text4: null
+    display_order: 3

@@ -1,0 +1,30 @@
+testmo:
+  case_id: 32160
+  folder_id: 4142
+  project_id: 6
+  folder_path: login-page/register-flow
+  folder_name_ui: Register Flow
+  created_at: '2025-04-01 17:50:43.443325'
+  updated_at: '2025-04-04 21:13:39.915578'
+  last_sync: '2026-01-30T18:20:45.986003Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/32160
+metadata:
+  name: NMEX - Name, Surname, Lastname and Email - Success*
+  priority: 3
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is on the first registration screen</p>
+  steps:
+  - column_name: custom_steps
+    id: 52542
+    case_id: 32160
+    text1: <p>Enter valid first name, last name, second last name and matching emails</p><p>Tap
+      on Next CTA button</p>
+    text2: null
+    text3: <p>User should see enabled Next CTA button<br /> </p><p>User should be
+      brought to the second registration screen</p>
+    text4: null
+    display_order: 1

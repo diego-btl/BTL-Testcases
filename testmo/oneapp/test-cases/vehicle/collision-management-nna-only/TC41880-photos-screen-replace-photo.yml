@@ -1,0 +1,78 @@
+testmo:
+  case_id: 41880
+  folder_id: 3800
+  project_id: 2
+  folder_path: vehicle/collision-management-nna-only
+  folder_name_ui: Collision Management - NNA only
+  created_at: '2025-06-09 22:09:40.520828'
+  updated_at: '2025-06-09 22:23:46.368196'
+  last_sync: '2026-01-30T18:21:05.901630Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/41880
+metadata:
+  name: Photos Screen - Replace Photo
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is on the Photos screen<br />App has permission to access
+    the camera and photo gallery</p>
+  steps:
+  - column_name: custom_steps
+    id: 71967
+    case_id: 41880
+    text1: <p>Tap any photo placeholder or camera icon</p>
+    text2: null
+    text3: <p>System pop-up appears with:</p><ul><li>Add from Gallery</li><li>Take
+      a Photo</li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 71968
+    case_id: 41880
+    text1: <p> Tap  <code>Add from Gallery</code> or  <code>Take a Photo</code></p>
+    text2: null
+    text3: <ul><li>If Add from Gallery → the device’s gallery opens</li><li>If Take
+      a Photo → the device camera opens</li></ul>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 71969
+    case_id: 41880
+    text1: <p>Select a photo from Gallery or take a photo using the camera</p>
+    text2: null
+    text3: <ul><li>User is redirected to the Photo Details screen showing:</li><li>Photo
+      preview</li><li>Use Photo, Add Different Photo, Delete Photo CTAs</li><li>Non-editable
+      photo name</li></ul>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 71970
+    case_id: 41880
+    text1: <p> Tap <code>Add Different Photo</code> CTA</p>
+    text2: null
+    text3: <p>System opens the photo gallery or camera again</p>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 71971
+    case_id: 41880
+    text1: <p>Selects or captures a new photo</p>
+    text2: null
+    text3: <p>The new photo preview is shown</p><ul><li><code>Use Photo</code> CTA
+      </li><li><code>Add Different Photo</code> CTA</li><li><code>Delete Photo</code>
+      CTA are still visible</li><li>The <code>photo name</code> updates to the new
+      file name (not editable)</li></ul>
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 71972
+    case_id: 41880
+    text1: <p>Tap <code>Use Photo</code></p>
+    text2: null
+    text3: <ul><li>The app triggers the<code> UploadPhotoForCollisionReport</code>
+      API</li><li>A loading state is shown during the request</li><li>User is redirected
+      to the Photos screen</li><li>The uploaded photo is shown in the photo grid</li></ul>
+    text4: null
+    display_order: 6

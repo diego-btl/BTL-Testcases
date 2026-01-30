@@ -1,0 +1,33 @@
+testmo:
+  case_id: 32538
+  folder_id: 4166
+  project_id: 2
+  folder_path: home/quick-actions/engine/tcu2k
+  folder_name_ui: TCU2K
+  created_at: '2025-04-07 18:05:04.153081'
+  updated_at: '2025-04-15 19:48:14.606156'
+  last_sync: '2026-01-30T18:21:06.100464Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/32538
+metadata:
+  name: Start - Fail
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<p>User is in the Home screen</p><p>User has sent an Engine Start
+    request</p><p>CheckEngineServiceRequest API response:<br /><code>{</code></p><p><code> 
+    "data": {</code></p><p><code>    "checkEngineServiceRequest": {</code></p><p><code> 
+        "__typename": "ServiceRequestResult",</code></p><p><code>      "status": "FAILED",</code></p><p><code> 
+        "statusDetails": null</code></p><p><code>    }</code></p><p><code>  }</code></p><p><code>}</code></p>'
+  steps:
+  - column_name: custom_steps
+    id: 53237
+    case_id: 32538
+    text1: <p>Engine Start request has resolved into a failure</p>
+    text2: null
+    text3: '<p>User should see a toast at the bottom of the screen:</p><ul><li>TCU2K:
+      "&lt;year and model&gt; failed to start."</li></ul>'
+    text4: null
+    display_order: 1

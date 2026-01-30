@@ -1,0 +1,32 @@
+testmo:
+  case_id: 29790
+  folder_id: 3762
+  project_id: 5
+  folder_path: home
+  folder_name_ui: Home
+  created_at: '2024-12-20 15:21:40.308281'
+  updated_at: '2025-04-02 17:50:17.211473'
+  last_sync: '2026-01-30T18:20:38.436052Z'
+  url: https://bethinklabs.testmo.net/repositories/5/cases/29790
+metadata:
+  name: No Vehicle State
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>The user is already logged in</li><li>The account doesn't
+    have a vehicle added</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 48602
+    case_id: 29790
+    text1: <ol><li>Launch app</li><li>Sign into an account with no vehicle</li></ol>
+    text2: null
+    text3: <ol><li>Vehicle Garage should say <code>Sem Veiculos</code></li><li><code>Adicionar
+      Veiculo</code> CTA should be displayed and active</li><li>Placeholder vehicle
+      image should be shown</li><li>Cards, buttons, message centre and whatsapp icons
+      should displayed and active</li></ol>
+    text4: null
+    display_order: 1

@@ -1,0 +1,27 @@
+testmo:
+  case_id: 32467
+  folder_id: 4086
+  project_id: 6
+  folder_path: vehicle-page
+  folder_name_ui: Vehicle Page
+  created_at: '2025-04-01 19:06:14.234890'
+  updated_at: '2025-04-02 20:06:36.348262'
+  last_sync: '2026-01-30T18:20:45.343617Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/32467
+metadata:
+  name: Error editar Apodo del Vehículo
+  priority: 3
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  steps:
+  - column_name: custom_steps
+    id: 52890
+    case_id: 32467
+    text1: <p>1. Tap Save button and trigger an error</p>
+    text2: null
+    text3: <p>User should see an error toast</p>
+    text4: null
+    display_order: 1

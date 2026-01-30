@@ -1,0 +1,76 @@
+testmo:
+  case_id: 61894
+  folder_id: 6757
+  project_id: 2
+  folder_path: login-flow/onboarding-cards
+  folder_name_ui: Onboarding cards
+  created_at: '2025-10-28 22:55:36.234045'
+  updated_at: '2025-10-30 19:55:01.558999'
+  last_sync: '2026-01-30T18:21:05.646752Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/61894
+metadata:
+  name: Financial Vehicle
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<p>Log in to an NCI that has only aa financial vehicle in the garage
+    OR as the first vin in VehicleStaticData (first vin in garage)</p><p>NOTE: the
+    vin should be an only Financial Vehicle (in other words the Z vehicle Vin: "JN1BJ1CP6JW107883",
+    in mock server. </p><p>NOT the ROGUE JAPA even though its a financial vehicle
+    but since it was added normally as a telematics vehicle then it will have an associated
+    value (financial vehicle) for onboarding card, this kind of vehicle won''t be
+    treated as Fin Vehicle</p>'
+  steps:
+  - column_name: custom_steps
+    id: 94730
+    case_id: 61894
+    text1: <p>Log in to an NCI account with Financial vehicle as primary</p>
+    text2: null
+    text3: <p>Once all 5 apis - vehiclestaticdata, financialVehicles, VehicleSubscriptions,
+      VehicleCapabilities and PendingVehicles is resolved, the onboarding modal should
+      show</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 94731
+    case_id: 61894
+    text1: <p>Tap on Yes</p>
+    text2: null
+    text3: '<ul><li>The title of the card will read: Hello!</li></ul><p>         
+          The body of the card will read: </p><p>Welcome to the [MyNISSAN / MyINFINITI]
+      app!</p><p>We''re so excited for you to embark on the thrilling journey of being
+      a NISSAN owner.</p><p>Your current vehicle is limited to viewing [Nissan Canada
+      Finance (NCF) / INFINITI Financial Services (IFS)] information and does not
+      support connected car features such as remote start.</p><p>As next steps, make
+      sure you have a valid proof of ownership to continue adding your connected vehicle.</p><p>CTA
+      1: Add vehicle</p><ul><li>No other cards show after this card</li></ul>'
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 94732
+    case_id: 61894
+    text1: <p>Tap on Add Vehicle CTA</p>
+    text2: null
+    text3: <p>It takes you to Add Vehicle Screen</p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 94733
+    case_id: 61894
+    text1: <p>Tap back to exit out of Add Vehicle screen</p><p>Tap on Support icon
+      in navigation menu at the bottom of the screen</p>
+    text2: null
+    text3: <p>App Key Features card should show on Support Screen</p>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 94734
+    case_id: 61894
+    text1: <p>Tap on the App Key Features Card</p>
+    text2: null
+    text3: <p>It should show the same card and flow as you saw in Step 2 above</p>
+    text4: null
+    display_order: 5

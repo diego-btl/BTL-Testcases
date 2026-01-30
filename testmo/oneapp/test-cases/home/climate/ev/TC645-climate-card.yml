@@ -1,0 +1,32 @@
+testmo:
+  case_id: 645
+  folder_id: 4169
+  project_id: 2
+  folder_path: home/climate/ev
+  folder_name_ui: EV
+  created_at: '2023-08-01 23:08:20.858444'
+  updated_at: '2025-12-19 17:12:31.330141'
+  last_sync: '2026-01-30T18:21:08.955845Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/645
+metadata:
+  name: Climate Card
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has an EV</p>
+  steps:
+  - column_name: custom_steps
+    id: 814
+    case_id: 645
+    text1: <p>1. Go to home screen<br />2. Modify climate status so that it is on</p>
+    text2: null
+    text3: <p>1. User should see the Climate card with secondary text interior temperature
+      when climate is off<br />2. User should see secondary text change to Setting
+      to &lt;target temp&gt; depending on what the target temp is compared to the
+      interior temperaature</p>
+    text4: null
+    display_order: 1
+  notes: '<ul><li>Automation: step 2 not automated as it requires mocking capabilities</li></ul>'

@@ -1,0 +1,18 @@
+testmo:
+  case_id: 31208
+  folder_id: 100
+  project_id: 2
+  folder_path: map/recently-sent-to-vehicle
+  folder_name_ui: Recently Sent to Vehicle
+  created_at: '2025-02-11 19:19:40.990904'
+  updated_at: '2025-08-22 12:44:52.141389'
+  last_sync: '2026-01-30T18:21:06.279174Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/31208
+metadata:
+  name: Send to Vehicle - todo
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case: {}

@@ -1,0 +1,38 @@
+testmo:
+  case_id: 29806
+  folder_id: 3769
+  project_id: 5
+  folder_path: home/add-vehicle
+  folder_name_ui: Add Vehicle
+  created_at: '2024-12-20 15:21:40.308281'
+  updated_at: null
+  last_sync: '2026-01-30T18:20:38.378394Z'
+  url: https://bethinklabs.testmo.net/repositories/5/cases/29806
+metadata:
+  name: Add Vehicle - Scan VIN
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is on add vehicle screen and has accepted permissions</p>
+  steps:
+  - column_name: custom_steps
+    id: 48645
+    case_id: 29806
+    text1: <p>Tap on the camera field</p>
+    text2: null
+    text3: <p>User should see camera become active</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 48646
+    case_id: 29806
+    text1: <p>Scan a VIN</p>
+    text2: null
+    text3: <ol><li>VIN should be autopopulated into VIN field. </li><li>VIN counter
+      should match the number of characters scanned</li><li>Validar Chassi should
+      become active</li></ol>
+    text4: null
+    display_order: 2

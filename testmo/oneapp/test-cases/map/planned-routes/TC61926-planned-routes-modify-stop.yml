@@ -1,0 +1,38 @@
+testmo:
+  case_id: 61926
+  folder_id: 102
+  project_id: 2
+  folder_path: map/planned-routes
+  folder_name_ui: Planned Routes
+  created_at: '2025-11-04 02:52:38.450826'
+  updated_at: '2025-12-12 18:40:23.814961'
+  last_sync: '2026-01-30T18:21:05.559540Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/61926
+metadata:
+  name: Planned Routes - Modify Stop
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>Route Already Created with at least 3 stops</li><li>Route
+    is more than 48 hours away</li><li>User is on Maps Screen</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 94965
+    case_id: 61926
+    text1: <ol><li>Tap on Planned Routes</li><li>Tap on <code>View Route</code> to
+      Edit the route</li><li>Validate the number of stops displayed according to VehicleEVWaypoints
+      API response</li><li>Tap on <code>EDIT ROUTE</code> button</li><li>Tap on Any
+      of the Stops</li><li>After being navigated to address page search for the new
+      address or tap on <code>Use Vehicle Location</code></li><li>After being navigated
+      to the Edit Route screen check the stop that was modified and changed accordingly</li><li>Scroll
+      Down and tap on <code>ESTIMATE NEW ROUTE</code></li><li>After being navigated
+      to the <code>Estimated Route*</code> page, validate the Stop that was modified
+      is shown properly</li><li>Tap on Save Route</li><li>Check the Success toast
+      is displayed</li></ol>
+    text2: null
+    text3: null
+    text4: null
+    display_order: 1

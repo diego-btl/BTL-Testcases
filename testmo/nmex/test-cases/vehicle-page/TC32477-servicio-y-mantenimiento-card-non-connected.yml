@@ -1,0 +1,98 @@
+testmo:
+  case_id: 32477
+  folder_id: 4086
+  project_id: 6
+  folder_path: vehicle-page
+  folder_name_ui: Vehicle Page
+  created_at: '2025-04-01 19:06:14.234890'
+  updated_at: '2025-04-02 20:06:36.348262'
+  last_sync: '2026-01-30T18:20:45.293695Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/32477
+metadata:
+  name: Servicio y mantenimiento card - NON-CONNECTED
+  priority: 3
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>Have an account with the next vehicles:</p><ul><li>Non-connected</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 52917
+    case_id: 32477
+    text1: <ol><li>Login into the app</li><li>Go to <code>Vehículo</code> option</li><li>Check
+      the card for <code>Servicio y Mantenimiento</code></li></ol>
+    text2: null
+    text3: <ul><li>The <code>Servicio y Mantenimiento</code> card should be under
+      the <code>Mi Distribuidor</code> card</li><li>The <code>Servicio y Mantenimiento</code>
+      card should be clickable</li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 52918
+    case_id: 32477
+    text1: <ol><li>Login into the app</li><li>Go to <code>Vehículo</code> option</li><li>Check
+      the card for <code>Servicio y mantenimiento</code></li></ol>
+    text2: null
+    text3: <ul><li>The icon/asset should be displaying <strong>LIGHT RED</strong></li></ul>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 52919
+    case_id: 32477
+    text1: <ol><li>Login into the app</li><li>Go to <code>Vehículo</code> option</li><li>Check
+      the card for <code>Servicio y mantenimiento</code></li></ol>
+    text2: null
+    text3: '<ul><li>The subtitle should be displaying the remaining mileages in <i>XXX,XXX</i>
+      <strong>KM </strong>or <i>XX</i> <strong>months</strong> for your next service</li></ul><p>IE:
+      <code>Restan 105,150km o 1 mes para tu próximo servicio</code></p>'
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 52920
+    case_id: 32477
+    text1: <ol><li>Login into the app</li><li>Go to <code>Vehículo</code> option</li><li>Check
+      the card for <code>Servicio y mantenimiento</code></li></ol>
+    text2: null
+    text3: <ul><li>If the value of the mileage it is grater than 3 digits the <code>,</code>
+      will be added to the value like -&gt; <i>XX,XXX, </i>if it is lower than 4 digits
+      no <code>,</code> will be display</li></ul>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 52921
+    case_id: 32477
+    text1: <ol><li>Login into the app</li><li>Go to <code>Vehículo</code> option</li><li>Check
+      the card for <code>Servicio y mantenimiento</code></li></ol>
+    text2: null
+    text3: <ul><li>The card should be displaying the correct asset (Check images attached)</li></ul>
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 52922
+    case_id: 32477
+    text1: <ol><li>Login into the app</li><li>Go to <code>Vehículo</code> option</li><li>Check
+      the card for <code>Servicio y mantenimiento</code></li><li>No data it is displaying
+      for<ol><li><code>remainingServiceMileage</code></li><li><code>remainingServiceMonths</code></li></ol></li></ol>
+    text2: null
+    text3: '<ul><li>The card should be displaying the correct asset &amp; title, for
+      the subtitle if <strong>ERROR</strong>, <strong>EMPTY</strong> or <strong>NO
+      DATA</strong>, it will display like <code>-</code> (Check image)</li></ul><p>IE:
+      <code>XXX,XXX</code>km &gt; Progress bar empty &gt; <code>-</code></p>'
+    text4: null
+    display_order: 6
+  - column_name: custom_steps
+    id: 52923
+    case_id: 32477
+    text1: <ol><li>Login into the app</li><li>Go to <code>Vehículo</code> option</li><li>Check
+      the card for <code>Servicio y mantenimiento</code></li><li>No data it is displaying
+      for:<ol><li><code>remainingServiceMileage</code></li><li><code>remainingServiceMonths</code></li><li><code>totalMileage</code>
+      &gt; <code>value</code></li></ol></li></ol>
+    text2: null
+    text3: '<ul><li>The card should be displaying the correct asset &amp; title, for
+      the subtitle if <strong>ERROR</strong>, <strong>EMPTY</strong> or <strong>NO
+      DATA</strong>, it will display like <code>-</code> (Check image)</li></ul><p>IE:
+      <code>-</code> km &gt; Progress bar empty &gt; <code>-</code></p>'
+    text4: null
+    display_order: 7

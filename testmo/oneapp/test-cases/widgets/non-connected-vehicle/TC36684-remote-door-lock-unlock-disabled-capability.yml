@@ -1,0 +1,31 @@
+testmo:
+  case_id: 36684
+  folder_id: 4181
+  project_id: 2
+  folder_path: widgets/non-connected-vehicle
+  folder_name_ui: Non Connected Vehicle
+  created_at: '2025-04-29 20:15:18.952599'
+  updated_at: '2025-04-29 20:20:11.134453'
+  last_sync: '2026-01-30T18:21:06.034012Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/36684
+metadata:
+  name: REMOTE_DOOR_LOCK_UNLOCK disabled Capability
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is logged in</p><p>User has added Small or medium sized widget
+    to device</p><p>Foll. Capability for the selected vehicle is enabled FALSE:</p><p><code>REMOTE_DOOR_LOCK_UNLOCK</code></p>
+  steps:
+  - column_name: custom_steps
+    id: 61462
+    case_id: 36684
+    text1: <p>Log in to app</p><p>Select a connected vehicle with above cap off</p><p>OR </p><p>Long
+      press widget</p><p>Choose Modify widget</p><p>Choose the connected vehicle with
+      above cap off</p>
+    text2: null
+    text3: <p>the widget should show a selected vehicle not eligible state </p>
+    text4: null
+    display_order: 1

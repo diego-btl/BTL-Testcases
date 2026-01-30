@@ -1,0 +1,30 @@
+testmo:
+  case_id: 62247
+  folder_id: 6822
+  project_id: 2
+  folder_path: support/parts-and-accessories-nci-nis-and-inf
+  folder_name_ui: Parts and Accessories - NCI NIS and INF
+  created_at: '2026-01-06 16:01:11.597792'
+  updated_at: '2026-01-06 16:24:47.251882'
+  last_sync: '2026-01-30T18:21:03.672618Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/62247
+metadata:
+  name: No Preferred dealer set
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  steps:
+  - column_name: custom_steps
+    id: 97199
+    case_id: 62247
+    text1: <ol><li>user logs in with nci126@nissancanada.com/2023Ariya</li></ol><p>2.
+      Mock <code>VehiclePreferredDealer</code> so there is no Preferred Dealer set
+      for the vin (Mock this or use another account that doesn't have a preferred
+      dealer set)</p><p>3. And user goes to Support Tab&gt;Parts and Accessories Card</p>
+    text2: null
+    text3: <p>The webpage should nearest Canadian dealer as per brand for location </p>
+    text4: null
+    display_order: 1

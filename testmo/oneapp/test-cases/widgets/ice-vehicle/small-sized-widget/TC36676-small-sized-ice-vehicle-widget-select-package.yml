@@ -1,0 +1,36 @@
+testmo:
+  case_id: 36676
+  folder_id: 4184
+  project_id: 2
+  folder_path: widgets/ice-vehicle/small-sized-widget
+  folder_name_ui: Small Sized widget
+  created_at: '2025-04-29 16:30:43.129113'
+  updated_at: '2025-05-01 22:12:31.380791'
+  last_sync: '2026-01-30T18:21:06.053488Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/36676
+metadata:
+  name: Small sized ICE vehicle widget - SELECT package
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is logged in</p><p>User has added Small sized widget to device</p><p>User
+    ha following capabilties turned on in <code>VehicleCapabilties</code> api for
+    that </p><p>selected vehicle: </p><p><code>REMOTE_DOOR_LOCK_UNLOCK</code> enabled
+    ONLY</p><p>Disable  <code>REMOTE_VEHICLE_STATUS</code> and <code>REMOTE_ENGINE</code>
+    if they are enabled</p>
+  steps:
+  - column_name: custom_steps
+    id: 61456
+    case_id: 36676
+    text1: <p>Select an ICE vehicle in NIS or INF app</p><p>Go to Widget</p><p>Choose
+      EV vehicle</p>
+    text2: null
+    text3: '<p>Since only the one caps is one, the vehicle has a select package</p><p><strong>AND:
+      </strong>the user should see the model name and vehicle image available from
+      <code>GetVehicle</code> call</p><p><strong>AND:</strong> the user should see
+      the lock status from <code>GetVehicleStatus</code> call</p>'
+    text4: null
+    display_order: 1

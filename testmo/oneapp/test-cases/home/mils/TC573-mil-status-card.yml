@@ -1,0 +1,30 @@
+testmo:
+  case_id: 573
+  folder_id: 50
+  project_id: 2
+  folder_path: home/mils
+  folder_name_ui: MILs
+  created_at: '2023-08-01 23:08:19.914942'
+  updated_at: '2025-10-11 13:44:29.744090'
+  last_sync: '2026-01-30T18:21:09.152853Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/573
+metadata:
+  name: MIL status card
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has a MIL status indictor active</p>
+  steps:
+  - column_name: custom_steps
+    id: 742
+    case_id: 573
+    text1: <p>1. MIL data returned<br />2. Tap on MIL status card</p>
+    text2: null
+    text3: <p>1. User should see MIL status card with secondary text containing MIL
+      name - if there are multiple MIL, will also show '+# more'<br />2. User should
+      see Vehicle Status screen with MIL tab</p>
+    text4: null
+    display_order: 1

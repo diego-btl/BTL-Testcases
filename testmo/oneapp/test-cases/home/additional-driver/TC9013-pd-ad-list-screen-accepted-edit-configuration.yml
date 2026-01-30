@@ -1,0 +1,40 @@
+testmo:
+  case_id: 9013
+  folder_id: 411
+  project_id: 2
+  folder_path: home/additional-driver
+  folder_name_ui: Additional Driver
+  created_at: '2023-11-21 08:17:52.248471'
+  updated_at: '2024-10-17 17:57:34.769274'
+  last_sync: '2026-01-30T18:21:07.308486Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/9013
+metadata:
+  name: PD - AD List Screen - Accepted - Edit Configuration - Success
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has an AVK2 vehicle and is PRIMARY_DRIVER</p><p>User has
+    an accepted invitation</p><p>User is viewing Configuration Details</p>
+  steps:
+  - column_name: custom_steps
+    id: 11640
+    case_id: 9013
+    text1: <ol><li>Modify any of the toggles</li><li>Tap on Save Changes</li></ol>
+    text2: null
+    text3: <ol><li>User should see Save Changes button enable</li><li>User should
+      see a loading spinner, then redirected to the AD List screen with a success
+      toast</li></ol>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 11641
+    case_id: 9013
+    text1: <ol><li>Tap on the invite</li></ol>
+    text2: null
+    text3: <ol><li>User should see the Selected Configurations section updated to
+      match the changes that were made</li></ol>
+    text4: null
+    display_order: 2

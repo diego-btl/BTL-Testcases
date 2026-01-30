@@ -1,0 +1,28 @@
+testmo:
+  case_id: 822
+  folder_id: 105
+  project_id: 2
+  folder_path: old-deprecated
+  folder_name_ui: Old / Deprecated
+  created_at: '2023-08-01 23:08:23.205582'
+  updated_at: '2025-01-28 22:54:28.895090'
+  last_sync: '2026-01-30T18:21:08.656350Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/822
+metadata:
+  name: Register Notifications
+  priority: 13
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>Clean Installation</li><li>User is logged out</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 991
+    case_id: 822
+    text1: <p>User logs in for the first time</p>
+    text2: null
+    text3: <p>App should trigger the Push Notification registration endpoint</p>
+    text4: null
+    display_order: 1

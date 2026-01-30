@@ -1,0 +1,46 @@
+testmo:
+  case_id: 32373
+  folder_id: 6761
+  project_id: 6
+  folder_path: support/let-us-help
+  folder_name_ui: Let Us Help
+  created_at: '2025-04-01 17:50:44.966960'
+  updated_at: '2025-10-30 17:40:03.242297'
+  last_sync: '2026-01-30T18:20:45.538937Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/32373
+metadata:
+  name: Asistencia Vial screen
+  priority: 12
+  type: functional
+  status: active
+  estimate: 7200000000
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is on the <code>Soporte</code> screen</p>
+  steps:
+  - column_name: custom_steps
+    id: 52744
+    case_id: 32373
+    text1: <ol><li>Login into the app</li><li>User goes to <code>Soporte</code> screen</li><li>Tap
+      the <code>Asistencia Vial</code> item</li><li>Click the <code>i</code> icon
+      to see the coverage details on the third card</li></ol>
+    text2: null
+    text3: '<p>I should see 3 sections:</p><p><strong>Información del Vehículo</strong></p><ul><li><code>Vehicle
+      name</code> &gt; IE: 2024 QX80 | 2026 KICKS</li><li><code>VIN</code> &gt; IE:
+      XXXXXXXXXXXXXXXXX (17 characters)</li><li><code>Ir a guantera</code> &gt; Redirects
+      to <code>Guantera</code> screen</li></ul><p><strong>Icon + text + button</strong></p><ul><li>Icon
+      (see ss attached)</li><li>Text:<ul><li><code>Estamos a tu lado en todo momento,
+      recuerda que nos puedes contactar las 24 horas los 365 días del año</code></li></ul></li><li>Button
+      &gt; <code>Llamar a Asistencia Vial</code><ul><li>INF &gt; <code>+52 8005463464</code></li><li>NIS
+      &gt; <code>+52 55 5809 4787</code></li></ul></li><li>Tapping on the button,
+      prompts you to call the number for Roadside assistance (from ContactUs api response)
+      OR Choose Cancel</li></ul><p><strong>Asistencia Vial</strong></p><ul><li><strong>INF</strong>
+      - <code>5 años</code></li><li><strong>NIS</strong> - <code>3 años</code></li><li><strong>Incluido
+      en la cobertura</strong><ul><li><code>Cambio de llanta</code></li><li><code>Batería
+      descargada</code></li><li><code>Gasolina</code></li><li><code>Llave</code></li><li><code>Translado
+      en plataforma</code></li></ul></li></ul><p><code>Detalles de Cobertura</code>
+      screen with all the details. The links underneath should be clickable and be
+      able to open the website link and download the coverage details.</p>'
+    text4: null
+    display_order: 1

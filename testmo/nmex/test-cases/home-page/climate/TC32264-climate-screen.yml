@@ -1,0 +1,30 @@
+testmo:
+  case_id: 32264
+  folder_id: 4154
+  project_id: 6
+  folder_path: home-page/climate
+  folder_name_ui: Climate
+  created_at: '2025-04-01 17:50:44.179504'
+  updated_at: null
+  last_sync: '2026-01-30T18:20:45.750802Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/32264
+metadata:
+  name: Climate screen
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is on home screen</p>
+  steps:
+  - column_name: custom_steps
+    id: 52643
+    case_id: 32264
+    text1: <ol><li>Login into the app</li><li>At the home screen click <code>Climate</code>
+      card</li><li>See the info and details from the <code>Climate</code> card</li></ol>
+    text2: null
+    text3: <ul><li>User should see Climate Details screen</li><li>User should see
+      all the data displaying correctly</li></ul>
+    text4: null
+    display_order: 1

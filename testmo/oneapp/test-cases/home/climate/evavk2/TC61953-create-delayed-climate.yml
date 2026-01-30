@@ -1,0 +1,66 @@
+testmo:
+  case_id: 61953
+  folder_id: 6778
+  project_id: 2
+  folder_path: home/climate/evavk2
+  folder_name_ui: EVAVK2
+  created_at: '2025-11-10 15:51:59.052042'
+  updated_at: '2025-11-14 21:59:42.530241'
+  last_sync: '2026-01-30T18:21:05.453854Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/61953
+metadata:
+  name: Create Delayed Climate
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is logged in to an account with EVAV2 vehicle selected in
+    garage</p>
+  steps:
+  - column_name: custom_steps
+    id: 95304
+    case_id: 61953
+    text1: <p>Tap on Climate card</p>
+    text2: null
+    text3: '<p>User is taken to Climate Screen</p><p>You see the following sections: </p><ul><li><p>Climate
+      Control with Ext and int temperature showing on the top right</p><p>     - Indicate
+      Climate is on or off with the climate (fan) icon</p><p>      - The interior
+      temperature as default value with temperature selector bar as well as <code>-</code>
+      and <code>+</code> buttons to change temperature setting</p></li><li>Driver
+      Seat, Front Passenger Seat with three options to choose: Off, Cool, Heat - one
+      of them selected.</li><li>Rear Left Seat, Rear Right Seat with Off and Heat
+      options - one of them selected</li><li>Steering Wheel Heater and Defrost &amp;
+      Deicer with off and on options - one of them selected</li><li>MAKE DEFAULT disabled
+      CTA</li><li><p>Secheduled box with Add CTA on top right</p><p>    -(if schedules
+      exist, they should show in this box with toggle on or off) </p><p>   - the schedules
+      should read the temperature scheduled with initial of Day and departure time.
+      (Fan icon on right side in blue) </p></li><li>TURN CLIMATE &amp; ACCESSORIES
+      ON CTA button enabled with black bg and white font on Light mode</li><li>CREATE
+      DELAYED START CTA button enabled with white bg and black font on Light mode</li><li><p>The
+      values for the climate accessories above should match the response from VehicleCimateDefaults</p><p> </p></li></ul>'
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 95505
+    case_id: 61953
+    text1: <p>Tap o Create Delayed Start CTA</p>
+    text2: null
+    text3: <p>It will take you to Delayed Climate Start screen</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 95506
+    case_id: 61953
+    text1: <p>Select Day, Start time 20 mins upto 2 weeks</p><p>Tap on Save Delayed
+      Start</p><p>Ignore the Climate control card with temperature and climate settings
+      as making any changes here doesn't come into effect. Only the Default settings
+      will kick in for Delayed Start. This particular card will most probably be removed. </p>
+    text2: null
+    text3: <p>You will see loading indicator </p><p>And then user is taken back to
+      Climate screenand success toast Delayed Start Saved is shown</p><p>The Delayed
+      Climate Start card will show on top of Climate Screen with Edit and Remove options </p><p>The
+      card will indicate the Month, date, year and time of Delayed Start. </p>
+    text4: null
+    display_order: 3

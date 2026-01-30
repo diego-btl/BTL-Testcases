@@ -1,0 +1,29 @@
+testmo:
+  case_id: 873
+  folder_id: 45
+  project_id: 2
+  folder_path: vehicle
+  folder_name_ui: Vehicle
+  created_at: '2023-08-04 11:16:36.385589'
+  updated_at: '2025-10-28 06:39:23.824902'
+  last_sync: '2026-01-30T18:21:08.515527Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/873
+metadata:
+  name: Vehicle status card refresh
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has a MIL/Vehicle status indicator active</p>
+  steps:
+  - column_name: custom_steps
+    id: 1050
+    case_id: 873
+    text1: <p>Tap on Refresh</p>
+    text2: null
+    text3: <p>User should see loading screen and MIL statuses, Vehicle statues, and
+      Recalls refresh</p>
+    text4: null
+    display_order: 1

@@ -1,0 +1,104 @@
+testmo:
+  case_id: 55587
+  folder_id: 6250
+  project_id: 6
+  folder_path: vehicle-page/programar-servicio
+  folder_name_ui: Programar Servicio
+  created_at: '2025-08-07 15:11:39.459672'
+  updated_at: '2025-08-07 15:17:39.111078'
+  last_sync: '2026-01-30T18:20:45.033030Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/55587
+metadata:
+  name: Out of Cut Off - Pick Up - INF
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has a Pick Up appointment book</p><p>The appointment is out
+    of the cut off time (+48h before the appointment)</p>
+  steps:
+  - column_name: custom_steps
+    id: 85747
+    case_id: 55587
+    text1: <ol><li>Login into the app</li><li>Go to <code>Vehicle</code> screen</li><li>See
+      the upcoming appointment</li><li>Select a <code>Drop Off</code> appointment</li></ol>
+    text2: null
+    text3: <ul><li>The user will see the Title:<ul><li><code>Tu Próximo Servicio</code></li></ul></li><li>The
+      user should see the <code>Edit</code> button in the screen for <code>Fecha y
+      Hora</code></li><li>The next fields are showing:<ul><li><code>Distribuidor</code></li><li><code>Fecha
+      y Hora</code></li><li><code>¿Como quieres realizar tu servicio?</code></li><li><code>¿Dónde
+      recogeremos el vehículo?</code></li><li><code>Comentarios adicionales</code></li></ul></li><li>The
+      button cancel it is showing:<ul><li><code>CANCELAR CITA</code></li></ul></li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 85748
+    case_id: 55587
+    text1: <ol><li>Login into the app</li><li>Go to <code>Vehicle</code> screen</li><li>See
+      the upcoming appointment</li><li>Select a <code>Drop Off</code> appointment</li><li>Press
+      the button <code>CANCELAR CITA</code></li></ol>
+    text2: null
+    text3: <ul><li>The appointment it is cancel</li><li>The user should be redirect
+      to the <code>Vehicle</code> screen</li><li>The UI should update and don't show
+      the delete appointment anymore</li></ul>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 85749
+    case_id: 55587
+    text1: <ol><li>Login into the app</li><li>Go to <code>Vehicle</code> screen</li><li>See
+      the upcoming appointment</li><li>Select a <code>Drop Off</code> appointment</li><li>Press
+      the button <code>Editar</code></li></ol>
+    text2: null
+    text3: <ul><li>The <code>Fecha y Hora</code> screen it is open and you can edit
+      the appointment</li><li>The user goes to <code>Tu Próximo Servicio</code> screen</li><li>The
+      buttons displaying are:<ul><li><code>CONFIRMAR</code></li><li><code>CANCELAR</code></li></ul></li></ul>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 85750
+    case_id: 55587
+    text1: <ol><li>Login into the app</li><li>Go to <code>Vehicle</code> screen</li><li>See
+      the upcoming appointment</li><li>Select a <code>Drop Off</code> appointment</li><li>Press
+      the button <code>Editar</code></li><li>Press <code>CONFIRMAR</code></li></ol>
+    text2: null
+    text3: <ul><li>The new appointment was updated</li><li>The user goes back to <code>Vehicle</code>
+      screen</li></ul>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 85751
+    case_id: 55587
+    text1: <ol><li>Login into the app</li><li>Go to <code>Vehicle</code> screen</li><li>See
+      the upcoming appointment</li><li>Select a <code>Drop Off</code> appointment</li><li>Press
+      the button <code>Editar</code></li><li>Press <code>CANCELAR</code></li></ol>
+    text2: null
+    text3: <ul><li> A modal it is display<ul><li><code>Salir de programación de servicio?</code></li><li><code>Estás
+      seguro de que deseas salir? Tendrás que empezar de nuevo con una nueva cita
+      de servicio.</code></li><li><code>No, continuar</code> | <code>Sí, reintentar</code></li></ul></li></ul>
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 85752
+    case_id: 55587
+    text1: <ol><li>Login into the app</li><li>Go to <code>Vehicle</code> screen</li><li>See
+      the upcoming appointment</li><li>Select a <code>Drop Off</code> appointment</li><li>Press
+      the button <code>Editar</code></li><li>Press <code>CANCELAR</code></li><li>Press
+      on the modal &gt; <code>Sí, reintentar</code></li></ol>
+    text2: null
+    text3: <ul><li>The user start the new flow for the appointment</li></ul>
+    text4: null
+    display_order: 6
+  - column_name: custom_steps
+    id: 85753
+    case_id: 55587
+    text1: <ol><li>Login into the app</li><li>Go to <code>Vehicle</code> screen</li><li>See
+      the upcoming appointment</li><li>Select a <code>Drop Off</code> appointment</li><li>Press
+      the button <code>Editar</code></li><li>Press <code>CANCELAR</code></li><li>Press
+      on the modal &gt; <code>No, continuar</code></li></ol>
+    text2: null
+    text3: <ul><li>The user stays in the same screen</li></ul>
+    text4: null
+    display_order: 7

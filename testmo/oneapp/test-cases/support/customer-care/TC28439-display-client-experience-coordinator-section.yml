@@ -1,0 +1,91 @@
+testmo:
+  case_id: 28439
+  folder_id: 85
+  project_id: 2
+  folder_path: support/customer-care
+  folder_name_ui: Customer Care
+  created_at: '2024-11-22 17:50:48.941448'
+  updated_at: '2025-10-08 20:19:16.838401'
+  last_sync: '2026-01-30T18:21:06.692957Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/28439
+metadata:
+  name: Display - Client Experience Coordinator section
+  priority: 1
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<p><strong>Note:</strong> This story is only for Infiniti NNA and
+    only for QX80 2025 vehicle. INF NCI should not display this section</p><ol><li>Vehicle
+    model: QX80</li><li>Year of Vehicle: 2025</li></ol>'
+  steps:
+  - column_name: custom_steps
+    id: 46123
+    case_id: 28439
+    text1: <p>Login to the app</p>
+    text2: null
+    text3: <p>The user logs in successfully</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 46124
+    case_id: 28439
+    text1: <p>Select QX80 vehicle</p>
+    text2: null
+    text3: <p>Vehicle selected successfully</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 46125
+    case_id: 28439
+    text1: <p>Go to Support &gt; customer care</p>
+    text2: null
+    text3: <p>Verify there is a new section displayed <code>Client Experience Coordinator</code>
+      right under the <code>Contact Customer Care</code> section</p><ul><li><strong>Text
+      for CEC section</strong><br /><code>Contact your dedicated QX80 Client Experience
+      Coordinator with any questions Mon – Fri 8AM – 5PM CT</code></li><li>CTAs:<ul><li>Call
+      Client Experience Coordinator</li><li>Email Client Experience Coordinator</li></ul></li></ul>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 46126
+    case_id: 28439
+    text1: <p>Tap on the <code>Call Client Experience Coordinator</code> CTA</p>
+    text2: null
+    text3: '<p>Native modal is prompted to call the number: <code>1-877-980-4968</code> </p>'
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 46127
+    case_id: 28439
+    text1: <p>Tap on <code>Cancel</code></p>
+    text2: null
+    text3: <p>Action dismiss the modal</p>
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 46128
+    case_id: 28439
+    text1: <p>Tap on the <code>Call Client Experience Coordinator</code> CTA </p>
+    text2: null
+    text3: <p>Modal displayed again</p>
+    text4: null
+    display_order: 6
+  - column_name: custom_steps
+    id: 46129
+    case_id: 28439
+    text1: <p>Tap on <code>Call 1(877)980-4968</code> option</p>
+    text2: null
+    text3: <p>App will display the native caller </p>
+    text4: null
+    display_order: 7
+  - column_name: custom_steps
+    id: 46130
+    case_id: 28439
+    text1: <p>Tap on the <code>Email Client Experience Coordinator</code> CTA</p>
+    text2: null
+    text3: <p>Verify app takes the user to the default email app with the email destination
+      pre-populated by default.</p><ul><li>Email address is <code>QX80ClientExperienceCoordinator@Infiniti.com</code></li></ul>
+    text4: null
+    display_order: 8

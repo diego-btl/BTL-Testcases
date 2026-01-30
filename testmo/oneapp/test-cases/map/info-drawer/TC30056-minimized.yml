@@ -1,0 +1,28 @@
+testmo:
+  case_id: 30056
+  folder_id: 98
+  project_id: 2
+  folder_path: map/info-drawer
+  folder_name_ui: Info Drawer
+  created_at: '2025-01-24 18:41:34.799566'
+  updated_at: null
+  last_sync: '2026-01-30T18:21:06.376954Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/30056
+metadata:
+  name: Minimized
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  steps:
+  - column_name: custom_steps
+    id: 48949
+    case_id: 30056
+    text1: 1. Drag the info drawer down from the default position
+    text2: null
+    text3: User should be able to lower the info drawer to its minimum height with
+      only the vehicle location card showing
+    text4: null
+    display_order: 1

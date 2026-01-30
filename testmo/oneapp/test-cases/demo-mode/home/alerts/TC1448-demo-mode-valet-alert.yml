@@ -1,0 +1,42 @@
+testmo:
+  case_id: 1448
+  folder_id: 6809
+  project_id: 2
+  folder_path: demo-mode/home/alerts
+  folder_name_ui: Alerts
+  created_at: '2023-08-28 20:13:22.229224'
+  updated_at: '2025-12-18 17:01:54.534380'
+  last_sync: '2026-01-30T18:21:08.266473Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/1448
+metadata:
+  name: Demo Mode - Valet Alert
+  priority: 3
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is on the alerts sheet</p>
+  steps:
+  - column_name: custom_steps
+    id: 1816
+    case_id: 1448
+    text1: <p>1. Tap on the valet alert<br />2. Interact with the distance slider<br
+      />3. Tap the save alert button</p>
+    text2: null
+    text3: <p>1. User should see the edit valet alert sheet<br />2. User should be
+      able to edit the distance<br />3. User should see the demo mode alert modal</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 11754
+    case_id: 1448
+    text1: <p>Tap on the valet alert when alert is turned ON</p>
+    text2: null
+    text3: <p>User should see popup with:<br /> 'Valet Alert On' header and 'Your
+      Valet is on, Please turn it off in order to edit your distance' body and 'Ok'
+      button </p>
+    text4: null
+    display_order: 2
+  notes: '<p>Automation: for step 2, using <strong>-</strong> / <strong>+</strong>
+    buttons to edit distance rather than slider (it can''t be retrieved by appium)</p>'

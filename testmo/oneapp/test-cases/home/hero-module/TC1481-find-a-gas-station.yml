@@ -1,0 +1,31 @@
+testmo:
+  case_id: 1481
+  folder_id: 55
+  project_id: 2
+  folder_path: home/hero-module
+  folder_name_ui: Hero Module
+  created_at: '2023-08-28 20:13:22.797160'
+  updated_at: '2025-04-29 21:49:39.055980'
+  last_sync: '2026-01-30T18:21:08.168671Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/1481
+metadata:
+  name: Find a Gas Station
+  priority: 1
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has an AVK vehicle</p><p>DynamicData api has fuel autonomy
+    30 or less</p>
+  steps:
+  - column_name: custom_steps
+    id: 1849
+    case_id: 1481
+    text1: <p>1. FuelAutonomy is 30 mi or lower<br />2. Tap on Find a Gas Station
+      CTA</p>
+    text2: null
+    text3: <p>1. User should see a Find a Gas Station CTA<br />2. User should be on
+      the map tab with results for gas stations</p>
+    text4: null
+    display_order: 1

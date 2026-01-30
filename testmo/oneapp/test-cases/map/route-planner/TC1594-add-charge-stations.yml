@@ -1,0 +1,126 @@
+testmo:
+  case_id: 1594
+  folder_id: 101
+  project_id: 2
+  folder_path: map/route-planner
+  folder_name_ui: Route Planner
+  created_at: '2023-08-28 20:13:24.732086'
+  updated_at: '2025-12-03 16:25:14.455626'
+  last_sync: '2026-01-30T18:21:07.945522Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/1594
+metadata:
+  name: Add charge stations
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>User is viewing the <strong>Estimate Route*</strong> section</li><li>The
+    user selects an <code>EV</code> or <code>EVAVK2</code> vehicles</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 1959
+    case_id: 1594
+    text1: <ol><li>Expanded info drawer positions</li></ol>
+    text2: null
+    text3: <ul><li>User should see all the Charging Stations that are along the Route
+      to make it to the Destination</li><li>The percentage of the battery shows at
+      the right side of the Stop/Charging Stop</li><li>The charging time necessary
+      shows in the Charging Stop</li><li>The arrival time shows in the Charging Stop</li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 95339
+    case_id: 1594
+    text1: <ol><li>Click over <code>+ADD A STOP</code></li></ol>
+    text2: null
+    text3: <ul><li>The user is redirect to the <code>Add a Stop</code> screen</li></ul>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 95340
+    case_id: 1594
+    text1: <ol><li>Click over the POI <code>Charging Stations</code></li></ol>
+    text2: null
+    text3: <ul><li>A loading spinner shows</li><li>LocationDetails API is triggered</li><li>The
+      Charging Stations in the radius distance display in the Map</li></ul>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 95341
+    case_id: 1594
+    text1: <ol><li>Zoom In in the area you wan to add the station</li><li>Click over
+      <code>Search this area</code></li><li>Select one Charging Station</li><li>Click
+      the option <code>+ADD A STOP</code></li></ol>
+    text2: null
+    text3: <ul><li>A loading spinner shows</li><li>VehicleEVWaypoints is triggered</li><li>The
+      new Stop should be added to the Route</li><li>The new Stops shows in the Route
+      with the name of the charging station</li></ul>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 95383
+    case_id: 1594
+    text1: <ol><li>Click over the POI <code>Charging Stations</code></li><li>Zoom
+      In in the area you wan to add the station</li><li>Click over <code>Search this
+      area</code></li><li>Select another Charging Station</li><li>Click the option
+      <code>+ADD A STOP</code></li></ol>
+    text2: null
+    text3: <ul><li>The new Charging Station should be added to the Route with the
+      previous one</li></ul>
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 95381
+    case_id: 1594
+    text1: <ol><li>Click the back button</li></ol>
+    text2: null
+    text3: <ul><li>The new Charging Station it is displaying in the Route</li><li>The
+      Icon for the stop should be showing depending the letter of the alphabet order
+      (A,B,C...)</li><li>The Charging Station added was successfully added </li></ul>
+    text4: null
+    display_order: 6
+  notes: "<p>When the user add a stop from <code>Estimated Route*</code> the app it\
+    \ is calling the API <strong>VehicleEVWaypoints</strong></p><pre><code class=\"\
+    editor-plain language-plain code-block\">{\n  \"data\": {\n    \"vehicle\": {\n\
+    \      \"__typename\": \"ElectricVehicle\",\n      \"evWaypoints\": {\n      \
+    \  \"__typename\": \"EVWaypoint\",\n        \"departureTime\": \"2025-12-04T19:05:00.000Z\"\
+    ,\n        \"arrivalTime\": \"2025-12-04T20:14:41.000Z\",\n        \"totalChargingTimeInSeconds\"\
+    : null,\n        \"totalTravelTimeInSeconds\": 4181,\n        \"totalDistance\"\
+    : {\n          \"__typename\": \"Distance\",\n          \"unit\": \"MILE\",\n\
+    \          \"value\": 54\n        },\n        \"routes\": [\n          {\n   \
+    \         \"__typename\": \"RouteDetails\",\n            \"name\": \"505 Technology\
+    \ Drive\",\n            \"arrivalTime\": \"2025-12-04T19:05:00.000Z\",\n     \
+    \       \"chargingTimeInSeconds\": null,\n            \"level\": 41,\n       \
+    \     \"type\": \"ORIGIN\",\n            \"status\": null,\n            \"address\"\
+    : {\n              \"__typename\": \"Address\",\n              \"address1\": \"\
+    505 Technology Drive\",\n              \"address2\": null,\n              \"city\"\
+    : \"Irvine\",\n              \"state\": \"CA\",\n              \"postalCode\"\
+    : \"92618\",\n              \"country\": \"US\"\n            },\n            \"\
+    location\": {\n              \"__typename\": \"Location\",\n              \"latitude\"\
+    : 33.67300101,\n              \"longitude\": -117.7577966\n            },\n  \
+    \          \"chargingOutput\": null\n          },\n          {\n            \"\
+    __typename\": \"RouteDetails\",\n            \"name\": \"ChargePoint\",\n    \
+    \        \"arrivalTime\": \"2025-12-04T19:05:59.000Z\",\n            \"chargingTimeInSeconds\"\
+    : null,\n            \"level\": 41,\n            \"type\": \"STOP\",\n       \
+    \     \"status\": null,\n            \"address\": {\n              \"__typename\"\
+    : \"Address\",\n              \"address1\": \"505 Technology Dr\",\n         \
+    \     \"address2\": \"505 Technology Dr\",\n              \"city\": \"Irvine\"\
+    ,\n              \"state\": \"CA\",\n              \"postalCode\": \"92618\",\n\
+    \              \"country\": \"US\"\n            },\n            \"location\":\
+    \ {\n              \"__typename\": \"Location\",\n              \"latitude\":\
+    \ 33.672558,\n              \"longitude\": -117.757997\n            },\n     \
+    \       \"chargingOutput\": null\n          },\n          {\n            \"__typename\"\
+    : \"RouteDetails\",\n            \"name\": \"Santa Monica Airport\",\n       \
+    \     \"arrivalTime\": \"2025-12-04T20:14:41.000Z\",\n            \"chargingTimeInSeconds\"\
+    : null,\n            \"level\": 23,\n            \"type\": \"DESTINATION\",\n\
+    \            \"status\": null,\n            \"address\": {\n              \"__typename\"\
+    : \"Address\",\n              \"address1\": \"3233 Donald Douglas Loop South\"\
+    ,\n              \"address2\": null,\n              \"city\": \"Santa Monica\"\
+    ,\n              \"state\": \"CA\",\n              \"postalCode\": \"90405\",\n\
+    \              \"country\": \"US\"\n            },\n            \"location\":\
+    \ {\n              \"__typename\": \"Location\",\n              \"latitude\":\
+    \ 34.0175575,\n              \"longitude\": -118.4475081\n            },\n   \
+    \         \"chargingOutput\": null\n          }\n        ]\n      }\n    }\n \
+    \ }\n}</code></pre>"

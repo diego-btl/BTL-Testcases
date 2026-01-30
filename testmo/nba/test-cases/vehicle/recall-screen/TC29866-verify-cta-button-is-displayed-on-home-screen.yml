@@ -1,0 +1,41 @@
+testmo:
+  case_id: 29866
+  folder_id: 3772
+  project_id: 5
+  folder_path: vehicle/recall-screen
+  folder_name_ui: Recall Screen
+  created_at: '2025-01-09 17:46:20.201840'
+  updated_at: null
+  last_sync: '2026-01-30T18:20:38.277259Z'
+  url: https://bethinklabs.testmo.net/repositories/5/cases/29866
+metadata:
+  name: Verify CTA Button is Displayed on Home Screen
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>Vehicle has an active recall (determined by recall status in API
+    response).</p>
+  steps:
+  - column_name: custom_steps
+    id: 48755
+    case_id: 29866
+    text1: <ol><li>Open the application.</li><li>Navigate to the <strong>Home Screen</strong>.</li><li>Observe
+      the presence of the <strong>CTA button</strong> labeled <strong>"Agendar Serviço
+      de Recall"</strong>.</li></ol>
+    text2: null
+    text3: <p>The <strong>CTA button</strong> should be displayed on the <strong>Home
+      Screen</strong>.</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 48756
+    case_id: 29866
+    text1: <p>Click on the <strong>CTA button</strong>.</p>
+    text2: null
+    text3: <p>Clicking on the <strong>CTA button</strong> should open the <strong>serviceBookingRecall</strong>
+      link in a WebView.</p>
+    text4: null
+    display_order: 2

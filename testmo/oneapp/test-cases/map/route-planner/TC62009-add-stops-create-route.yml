@@ -1,0 +1,46 @@
+testmo:
+  case_id: 62009
+  folder_id: 101
+  project_id: 2
+  folder_path: map/route-planner
+  folder_name_ui: Route Planner
+  created_at: '2025-11-18 19:48:19.283639'
+  updated_at: '2025-12-10 16:54:56.306230'
+  last_sync: '2026-01-30T18:21:05.155641Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/62009
+metadata:
+  name: Add stops - Create Route
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>User is in the <strong>Create Route</strong> screen</li><li>The
+    user selects an <code>EV</code> or <code>EVAVK2</code> vehicles</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 95579
+    case_id: 62009
+    text1: <ol><li>Tap the <code>+ADD A STOP</code> button</li><li>The user enter
+      <strong>a stop</strong></li></ol>
+    text2: null
+    text3: <ul><li>The user is taken to the <strong>Create Route </strong>screen and
+      can search for a location</li><li>The <code>Use Vehicle Location </code>it is
+      showing under the search bar field</li><li>The loop it is showing in the search
+      bar field</li><li>The user can delete the results clicking the <code>X</code>
+      button in the field</li><li>The autocomplete feature suggest the possible options</li><li>User
+      should see a <i>destination</i> field added under the last one</li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 95809
+    case_id: 62009
+    text1: <ol><li>Tap the <code>+ADD A STOP</code> button</li><li>The user enter
+      the max number of stops <strong>(EV -4/EV2 - 6)</strong></li></ol>
+    text2: null
+    text3: <ul><li>User should see <code>+ADD A STOP</code> button become disabled
+      when there are <strong>(EV -4/EV2 - 6)</strong> stops (<i><u>excluding</u></i>
+      <strong>Vehicle Location</strong> and <strong>Destination</strong> fields)</li></ul>
+    text4: null
+    display_order: 2

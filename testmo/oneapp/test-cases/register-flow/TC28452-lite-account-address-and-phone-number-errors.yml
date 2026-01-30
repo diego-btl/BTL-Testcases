@@ -1,0 +1,87 @@
+testmo:
+  case_id: 28452
+  folder_id: 43
+  project_id: 2
+  folder_path: register-flow
+  folder_name_ui: Register Flow
+  created_at: '2024-11-22 22:49:01.370669'
+  updated_at: '2025-08-21 13:43:10.107354'
+  last_sync: '2026-01-30T18:21:06.647081Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/28452
+metadata:
+  name: Lite Account - Address and Phone Number - Errors
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<p>Update <code>isLiteAccount</code> = <code>true</code> on USerInfo
+    call</p><pre><code class="editor-plain language-plain code-block">{
+
+    "data": {
+
+    "user": {
+
+    "__typename": "User",
+
+    "pinConfigured": true,
+
+    "securityQuestionId": "1",
+
+    "isLiteAccount": true
+
+    }
+
+    }
+
+    }</code></pre>'
+  steps:
+  - column_name: custom_steps
+    id: 46159
+    case_id: 28452
+    text1: <p>Perform a Fresh install and log into the app</p>
+    text2: null
+    text3: <p>Login successful and Complete Profile screen is displayed</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 46166
+    case_id: 28452
+    text1: <p>Paste and emoji on the Address field</p>
+    text2: null
+    text3: <p>Verify app does not allow it </p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 46167
+    case_id: 28452
+    text1: <p>Enter a number for City</p>
+    text2: null
+    text3: <p>User should see an error <code>* Invalid city</code></p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 46160
+    case_id: 28452
+    text1: <p>Enter less than 5 digits for ZIP code</p>
+    text2: null
+    text3: <p>User should see an error <code>* Invalid ZIP code</code></p>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 46161
+    case_id: 28452
+    text1: <p>Enter less than 10 digits for phone number</p>
+    text2: null
+    text3: <p>User should see an error <code>* Invalid phone number</code></p>
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 46162
+    case_id: 28452
+    text1: <p>Given user has inserted invalid information</p>
+    text2: null
+    text3: <p>Verify NEXT cta is disabled</p>
+    text4: null
+    display_order: 6

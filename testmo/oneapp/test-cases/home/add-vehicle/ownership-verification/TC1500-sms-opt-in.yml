@@ -1,0 +1,37 @@
+testmo:
+  case_id: 1500
+  folder_id: 57
+  project_id: 2
+  folder_path: home/add-vehicle/ownership-verification
+  folder_name_ui: Ownership Verification
+  created_at: '2023-08-28 20:13:23.112121'
+  updated_at: '2024-10-17 17:56:23.776593'
+  last_sync: '2026-01-30T18:21:08.126668Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/1500
+metadata:
+  name: SMS opt-in
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: User is on the Upload Ownership Document screen
+  steps:
+  - column_name: custom_steps
+    id: 1865
+    case_id: 1500
+    text1: '1. Tap the i icon in the SMS notifications section<br />
+
+      2. Check the SMS notifications box'
+    text2: null
+    text3: '1. User should be able to see the SMS notifications information bottom
+      sheet<br />
+
+      2. User should be able to opt into SMS notifications<br />
+
+      <br />
+
+      NOTE: removed for NCI'
+    text4: null
+    display_order: 1

@@ -1,0 +1,133 @@
+testmo:
+  case_id: 62164
+  folder_id: 6801
+  project_id: 2
+  folder_path: demo-mode/map
+  folder_name_ui: Map
+  created_at: '2025-12-16 21:19:04.472226'
+  updated_at: '2025-12-18 17:04:43.975293'
+  last_sync: '2026-01-30T18:21:04.608300Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/62164
+metadata:
+  name: Demo Mode - Map Page - EV2 - Route Planner
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  steps:
+  - column_name: custom_steps
+    id: 96554
+    case_id: 62164
+    text1: <p>Tap <code>Map</code> in the bottom nav &gt; Tap on <code>Route Planner</code>
+      card</p>
+    text2: null
+    text3: <p>User is led to <strong>Create a route</strong> screen, tapping on any
+      field/element from the <code>Destination</code> card should trigger the Demo
+      Mode modal</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 96555
+    case_id: 62164
+    text1: <p>Go to <code>Depart at/Arrive by</code> card</p>
+    text2: null
+    text3: <p>User should be able to interact with any of the dropdowns</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 96556
+    case_id: 62164
+    text1: <p>Go to <code>Notification</code> card</p>
+    text2: null
+    text3: <p>User should be able to interact with the dropdown</p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 96557
+    case_id: 62164
+    text1: <p>Go to <code>Plug In Options</code> card</p>
+    text2: null
+    text3: <p>User should be able to interact with the dropdown, and the information
+      icon should take the user to the respective screen</p>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 96558
+    case_id: 62164
+    text1: <p>Go to <code>Avoid for All Drives</code> card</p>
+    text2: null
+    text3: <p>User can interact with the toggles</p>
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 96559
+    case_id: 62164
+    text1: <p>Go to the <code>Climate Options</code>  card</p>
+    text2: null
+    text3: <p>User can interact with the dropdown</p>
+    text4: null
+    display_order: 6
+  - column_name: custom_steps
+    id: 96576
+    case_id: 62164
+    text1: <p>Tap on Cancel option</p>
+    text2: null
+    text3: <p><code>Cancel Route</code> modal will be displayed with No and Yes options.</p>
+    text4: null
+    display_order: 7
+  - column_name: custom_steps
+    id: 96577
+    case_id: 62164
+    text1: <p>Tap on NO</p>
+    text2: null
+    text3: <p>User remains on same screen</p>
+    text4: null
+    display_order: 8
+  - column_name: custom_steps
+    id: 96578
+    case_id: 62164
+    text1: <p>Tap YES</p>
+    text2: null
+    text3: <p>USer is taken to Map screen</p>
+    text4: null
+    display_order: 9
+  - column_name: custom_steps
+    id: 96579
+    case_id: 62164
+    text1: <p>Tap on <code>Estimate Route</code> cta</p>
+    text2: null
+    text3: '<p>Loading state icon is shown and the user is taken to the <strong>Estimated
+      Route</strong> screen:</p><ul><li>Origin: Nashville</li><li>Stop: Charge Station</li><li>Destination:
+      Atlanta</li><li>Save button</li><li>Add Stop option</li><li>Validate all elements
+      that the estimated route usually has.</li><li>Scroll up the drawer should display
+      the full information about the trip</li></ul><figure class="image"><img src="/attachments/view/8957"
+      alt="8957" /></figure>'
+    text4: null
+    display_order: 10
+  - column_name: custom_steps
+    id: 96580
+    case_id: 62164
+    text1: <p>Tap on Edit button</p>
+    text2: null
+    text3: <p>User taken back to Create Route screen</p>
+    text4: null
+    display_order: 11
+  - column_name: custom_steps
+    id: 96581
+    case_id: 62164
+    text1: <p>Tap on the information icon</p>
+    text2: null
+    text3: <p>User taken to <strong>About Estimated Route</strong> screen</p>
+    text4: null
+    display_order: 12
+  - column_name: custom_steps
+    id: 96582
+    case_id: 62164
+    text1: <p>User taps on <code>Save Route</code> cta or <strong>Add Stop</strong>
+      option</p>
+    text2: null
+    text3: <p>Demo mode modal is shown</p>
+    text4: null
+    display_order: 13

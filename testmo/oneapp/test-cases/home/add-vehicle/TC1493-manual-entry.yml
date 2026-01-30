@@ -1,0 +1,28 @@
+testmo:
+  case_id: 1493
+  folder_id: 56
+  project_id: 2
+  folder_path: home/add-vehicle
+  folder_name_ui: Add vehicle
+  created_at: '2023-08-28 20:13:22.986858'
+  updated_at: '2025-10-09 05:38:42.000248'
+  last_sync: '2026-01-30T18:21:08.143703Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/1493
+metadata:
+  name: Manual Entry
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  steps:
+  - column_name: custom_steps
+    id: 1858
+    case_id: 1493
+    text1: <p>1. Tap VIN field<br />2. Enter VIN</p>
+    text2: null
+    text3: <p>1. User should see keyboard popup<br />2. User should be able to enter
+      their VIN and character count should update accordingly</p>
+    text4: null
+    display_order: 1

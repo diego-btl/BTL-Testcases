@@ -1,0 +1,105 @@
+testmo:
+  case_id: 30074
+  folder_id: 3766
+  project_id: 5
+  folder_path: settings
+  folder_name_ui: Settings
+  created_at: '2025-01-27 07:52:17.860891'
+  updated_at: '2025-03-17 17:45:09.882159'
+  last_sync: '2026-01-30T18:20:38.211254Z'
+  url: https://bethinklabs.testmo.net/repositories/5/cases/30074
+metadata:
+  name: Settings - UI
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is on the Settings page</p>
+  steps:
+  - column_name: custom_steps
+    id: 48976
+    case_id: 30074
+    text1: null
+    text2: null
+    text3: <p>User should see the header on top with the copy <code>Ajustes</code></p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 48977
+    case_id: 30074
+    text1: null
+    text2: null
+    text3: <p>User should see a green circle with the initial of their first name.</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 48978
+    case_id: 30074
+    text1: null
+    text2: null
+    text3: '<p>User should see copy below it that says depending on time:<br />Name
+      should be fetched from <code>VehicleStaticData</code></p><pre><code class="editor-plain
+      language-plain code-block">Bom Dia (Good Morning): 6 AM - 11:59 AM
+
+      Boa Tarde (Good Afternoon): noon - 5:59 PM
+
+      Boa Noite (Good Evening): 6 PM - 11:59 PM
+
+      Boa Noite (Good Night): 0:00 AM - 5:59 AM</code></pre>'
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 48979
+    case_id: 30074
+    text1: null
+    text2: null
+    text3: <p>User should see a header with the copy <code>Preferências</code> and
+      a card below with the copy <code>Meu Perfil</code></p>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 48980
+    case_id: 30074
+    text1: null
+    text2: null
+    text3: <p>User should see a header with the copy <code>Tema</code> and a section
+      below with three buttons with the copy <code>Dia</code>, <code>Noite</code>,
+      <code>Padrão</code></p>
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 48981
+    case_id: 30074
+    text1: null
+    text2: null
+    text3: <p>User should see a header with the copy <code>Segurança</code> and a
+      card below with the copy <code>Permissões do Dispositivo</code></p>
+    text4: null
+    display_order: 6
+  - column_name: custom_steps
+    id: 48982
+    case_id: 30074
+    text1: null
+    text2: null
+    text3: <p>User should see a header with the copy <code>Legal</code> and two cards
+      below with the copy <code>Termos de Serviço</code> and <code>Política de Privacidade</code></p>
+    text4: null
+    display_order: 7
+  - column_name: custom_steps
+    id: 48983
+    case_id: 30074
+    text1: null
+    text2: null
+    text3: <p>User should see a button with the copy <code>SAIR DO APLICATIVO</code></p>
+    text4: null
+    display_order: 8
+  - column_name: custom_steps
+    id: 48984
+    case_id: 30074
+    text1: null
+    text2: null
+    text3: <p>User should see <code>Versão do app &lt;app version&gt;</code></p>
+    text4: null
+    display_order: 9

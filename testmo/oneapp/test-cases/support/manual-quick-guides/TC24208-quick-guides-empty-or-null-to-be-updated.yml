@@ -1,0 +1,33 @@
+testmo:
+  case_id: 24208
+  folder_id: 82
+  project_id: 2
+  folder_path: support/manual-quick-guides
+  folder_name_ui: Manual & Quick Guides
+  created_at: '2024-08-28 16:51:48.109763'
+  updated_at: '2024-10-17 17:57:05.010933'
+  last_sync: '2026-01-30T18:21:06.984716Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/24208
+metadata:
+  name: Quick Guides - Empty or null (To Be Updated)
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>Manual &amp; Quick Guides -  VehiclesStaticData &gt; quickGuidesUrl
+    (<a href="https://mynissan.quick.guide/#/guide/2022/frontier">sample</a>)</li><li>Warranty
+    Coverage - ContactUs &gt;  warranty (<a href="https://www.nissanusa.com/owners/ownership/warranty.html">sample</a>)</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 37756
+    case_id: 24208
+    text1: <p><strong>VehiclesStaticData &gt; quickGuidesUrl </strong></p><ol><li>set
+      the URL to a <strong>null</strong> or empty string <strong>("")</strong></li><li>go
+      to the <strong>Support</strong> screen</li><li>Verify that the card is <strong>disabled</strong></li><li>Tap
+      on the <strong>Manual &amp; Quick Guides</strong> card</li></ol>
+    text2: null
+    text3: <p>The expiration modal should be displayed with the call number<br /> </p>
+    text4: null
+    display_order: 1

@@ -1,0 +1,41 @@
+testmo:
+  case_id: 839
+  folder_id: 76
+  project_id: 2
+  folder_path: wearables/wearable-telematics
+  folder_name_ui: Wearable - Telematics
+  created_at: '2023-08-01 23:08:23.327194'
+  updated_at: '2024-10-17 17:57:05.010933'
+  last_sync: '2026-01-30T18:21:08.613881Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/839
+metadata:
+  name: Start - Success
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has already sent a start command and is on the telematics
+    screen</p>
+  steps:
+  - column_name: custom_steps
+    id: 1008
+    case_id: 839
+    text1: <ol><li>Tap the Start button</li><li>Tap Yes</li><li>Wait for call to succeed</li></ol>
+    text2: null
+    text3: <ol><li>User should see a confirmation modal</li><li>Start command should
+      be sent and user should see modal dismiss itself. User should see status updates
+      as the call is being made</li><li>User should see the start countdown and the
+      start button in the active state while it is running. User should also see stop
+      button become enabled</li></ol>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 1159
+    case_id: 839
+    text1: <ol><li>Tap the Start button</li><li>Tap No</li></ol>
+    text2: null
+    text3: <p>The modal should be dismissed and command should not be sent</p>
+    text4: null
+    display_order: 2

@@ -1,0 +1,29 @@
+testmo:
+  case_id: 30001
+  folder_id: 90
+  project_id: 2
+  folder_path: vehicle/vehicle-profile
+  folder_name_ui: Vehicle Profile
+  created_at: '2025-01-21 17:11:01.149637'
+  updated_at: '2025-10-10 14:49:10.105269'
+  last_sync: '2026-01-30T18:21:06.432535Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/30001
+metadata:
+  name: Vehicle License Plate
+  priority: 3
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is on the Vehicle Profile sheet</p>
+  steps:
+  - column_name: custom_steps
+    id: 48878
+    case_id: 30001
+    text1: <p>1. Tap Vehicle License Plate item</p>
+    text2: null
+    text3: '<p>User should see the license plate screen<br /><br />Note: Fields should
+      be empty if user has not previously saved license plate to app</p>'
+    text4: null
+    display_order: 1

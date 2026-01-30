@@ -1,0 +1,41 @@
+testmo:
+  case_id: 62003
+  folder_id: 6778
+  project_id: 2
+  folder_path: home/climate/evavk2
+  folder_name_ui: EVAVK2
+  created_at: '2025-11-14 23:10:22.584288'
+  updated_at: '2025-11-14 23:11:28.146571'
+  last_sync: '2026-01-30T18:21:05.180994Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/62003
+metadata:
+  name: Climate Failed to turn on/off
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>Climate is turned on </p>
+  steps:
+  - column_name: custom_steps
+    id: 95536
+    case_id: 62003
+    text1: <p>Tap on Climate Turn off</p>
+    text2: null
+    text3: <p>User should see a toast saying<br />'{vehicle model} failed to turn
+      {on/off} climate.' (5 seconds)<br /><br />User should see Climate status update
+      accordingly (status remains off, Start Climate button is enabled)</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 95537
+    case_id: 62003
+    text1: <p>Climate is off. </p><p>User taps on climate and Accuessories Turn on
+      CTA</p>
+    text2: null
+    text3: <p>User should see a toast saying<br />'{vehicle model} failed to turn
+      {on/off} climate.' (5 seconds)<br /><br />User should see Climate status update
+      accordingly (status remains off, Start Climate button is enabled)</p>
+    text4: null
+    display_order: 2

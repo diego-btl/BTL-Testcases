@@ -1,0 +1,39 @@
+testmo:
+  case_id: 811
+  folder_id: 87
+  project_id: 2
+  folder_path: old-deprecated/live-chat
+  folder_name_ui: Live Chat
+  created_at: '2023-08-01 23:08:23.124929'
+  updated_at: '2025-10-08 20:07:48.162670'
+  last_sync: '2026-01-30T18:21:08.684555Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/811
+metadata:
+  name: Chat Card
+  priority: 1
+  type: functional
+  status: active
+  estimate: 60000000
+  automation: 'no'
+  tags: []
+test_case:
+  steps:
+  - column_name: custom_steps
+    id: 980
+    case_id: 811
+    text1: null
+    text2: null
+    text3: <p>User should see the Chat card<br /> </p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 9432
+    case_id: 811
+    text1: <p>Tap on the chat card</p>
+    text2: null
+    text3: <p>User should see (Nissan NNA) </p><ul><li>MyNISSAN App Support</li><li>My
+      Current Nissan Vehicle<br /><br />OR<br />User should see (INFINITI NNA)</li><li>MyINFINITI
+      App Support</li><li>My Current INFINITI Vehicle</li></ul>
+    text4: null
+    display_order: 2
+  notes: <p>Removed for NCI</p><p><s>Needs update - https://www.pivotaltracker.com/story/show/186303899</s></p>

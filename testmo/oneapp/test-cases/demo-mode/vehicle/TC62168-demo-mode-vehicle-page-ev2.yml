@@ -1,0 +1,56 @@
+testmo:
+  case_id: 62168
+  folder_id: 6800
+  project_id: 2
+  folder_path: demo-mode/vehicle
+  folder_name_ui: Vehicle
+  created_at: '2025-12-16 22:46:30.763575'
+  updated_at: '2025-12-18 17:03:49.472953'
+  last_sync: '2026-01-30T18:21:04.578646Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/62168
+metadata:
+  name: Demo Mode - Vehicle Page - EV2
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>Vehicle selected is the <code>LEAF</code>(EVAVK2)</p>
+  steps:
+  - column_name: custom_steps
+    id: 96627
+    case_id: 62168
+    text1: <p>Tap Vehicle in the bottom nav </p>
+    text2: null
+    text3: <p>User should see dummy data for the LEAF</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 96628
+    case_id: 62168
+    text1: <p>Tap on the <code>Battery</code> card</p>
+    text2: null
+    text3: <p>User is led to the <strong>Charge</strong> screen and data will not
+      be displayed until the screen finishes loading</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 96629
+    case_id: 62168
+    text1: <p>Go back to Vehicle screen &gt; Tap on <code>Maintenance schedule</code>
+      card</p>
+    text2: null
+    text3: <p>Demo mode modal is displayed</p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 96630
+    case_id: 62168
+    text1: <p>Tap on <code>Driving History</code> card</p>
+    text2: null
+    text3: <p>User is led to <strong>Driving History</strong> screen:</p><ul><li><code>Day/Month/Year</code>
+      tabs are displayed</li><li>Information will change depending on the tab selected</li><li>Driver/VIN
+      dropdown is present under all 3 tabs</li></ul>
+    text4: null
+    display_order: 4

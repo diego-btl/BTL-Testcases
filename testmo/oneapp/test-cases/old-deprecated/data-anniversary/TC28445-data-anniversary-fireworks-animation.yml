@@ -1,0 +1,19 @@
+testmo:
+  case_id: 28445
+  folder_id: 7145
+  project_id: 2
+  folder_path: old-deprecated/data-anniversary
+  folder_name_ui: Data Anniversary
+  created_at: '2024-11-22 18:18:59.165372'
+  updated_at: '2025-02-06 20:39:36.182715'
+  last_sync: '2026-01-30T18:21:06.674071Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/28445
+metadata:
+  name: Data Anniversary - Fireworks Animation
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p><code>EnableOwnerAnniversary</code> FF Enabled</p>

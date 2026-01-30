@@ -1,0 +1,29 @@
+testmo:
+  case_id: 30082
+  folder_id: 3874
+  project_id: 5
+  folder_path: landing-page/login
+  folder_name_ui: Login
+  created_at: '2025-01-27 08:31:41.825662'
+  updated_at: '2025-04-01 15:02:38.874354'
+  last_sync: '2026-01-30T18:20:38.182721Z'
+  url: https://bethinklabs.testmo.net/repositories/5/cases/30082
+metadata:
+  name: Sign in - UI
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User tapped on the <code>Entrar</code> CTA</p>
+  steps:
+  - column_name: custom_steps
+    id: 49001
+    case_id: 30082
+    text1: <p>User should see the Sign in page </p>
+    text2: null
+    text3: <figure class="image image_resized" style="width:41.09%;"><img src="/attachments/view/3178"
+      alt="3178" /></figure>
+    text4: null
+    display_order: 1

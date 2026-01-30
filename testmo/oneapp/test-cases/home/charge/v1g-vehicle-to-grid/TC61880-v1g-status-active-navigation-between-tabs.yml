@@ -1,0 +1,39 @@
+testmo:
+  case_id: 61880
+  folder_id: 6755
+  project_id: 2
+  folder_path: home/charge/v1g-vehicle-to-grid
+  folder_name_ui: V1G - Vehicle-to-Grid
+  created_at: '2025-10-24 20:48:43.291927'
+  updated_at: '2025-12-16 18:20:15.189428'
+  last_sync: '2026-01-30T18:21:05.692098Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/61880
+metadata:
+  name: V1G status - ACTIVE - Navigation Between Tabs
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<p>Nissan NNA and NCI only</p><p>EV or EV AVK2 only</p><p>PD only</p><p>"v1GMonitoredChargingAccountStatus":
+    "ACTIVE"</p><p>User is on the Status, Optimize, or Insights screen</p>'
+  steps:
+  - column_name: custom_steps
+    id: 94697
+    case_id: 61880
+    text1: <p>Tap the back button on the device or the top left back chevron on the
+      first webview page or on the Status/Optimize/Insight tabs</p>
+    text2: null
+    text3: <p>User is navigated to the Home screen</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 94698
+    case_id: 61880
+    text1: <p>1. Navigate to the inner page on the Optimize or Insights webview</p><p>2.
+      Tap the back button on the device or the top left back chevron</p>
+    text2: null
+    text3: <p>User should be navigated back one page within the webview context</p>
+    text4: null
+    display_order: 2

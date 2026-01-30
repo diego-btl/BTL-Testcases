@@ -1,0 +1,94 @@
+testmo:
+  case_id: 62243
+  folder_id: 6821
+  project_id: 2
+  folder_path: vehicle/second-delivery/second-delivery-manage-appointment
+  folder_name_ui: Second Delivery - Manage Appointment
+  created_at: '2025-12-19 23:41:48.009859'
+  updated_at: '2026-01-06 18:52:39.690786'
+  last_sync: '2026-01-30T18:21:03.692516Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/62243
+metadata:
+  name: Second Delivery - Delete Appointment - Success
+  priority: 1
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  steps:
+  - column_name: custom_steps
+    id: 97166
+    case_id: 62243
+    text1: "<p>Mock the <code>SecondDeliveryAppointment</code> query to return:</p><pre><code\
+      \ class=\"editor-plain language-plain code-block\">{\n  \"data\": {\n    \"\
+      vehicle\": {\n      \"__typename\": \"Vehicle\",\n      \"secondDelivery\":\
+      \ {\n        \"__typename\": \"SecondDelivery\",\n        \"appointment\": {\n\
+      \          \"__typename\": \"SecondDeliveryExistingBookedAppointment\",\n  \
+      \        \"id\": 20498452,\n          \"activityId\": 20498452,\n          \"\
+      beginsAt\": \"2026-01-02T19:30:00.000Z\",\n          \"address\": {\n      \
+      \      \"__typename\": \"Address\",\n            \"address1\": \"1413 test address\"\
+      ,\n            \"address2\": null,\n            \"city\": \"los angeles\",\n\
+      \            \"state\": \"CA\",\n            \"postalCode\": \"90012\",\n  \
+      \          \"country\": \"US\"\n          },\n          \"contact\": {\n   \
+      \         \"__typename\": \"SecondDeliveryContactInformation\",\n          \
+      \  \"firstName\": \"Nna\",\n            \"lastName\": \"Qa\",\n            \"\
+      phoneNumber\": \"5487545464\",\n            \"email\": \"nnaqa@bethinklabs.com\"\
+      \n          },\n          \"redeliveryNotes\": \"Test appointment notes\",\n\
+      \          \"featureNotes\": null,\n          \"hub\": {\n            \"__typename\"\
+      : \"SecondDeliveryHub\",\n            \"id\": 1000000,\n            \"timezone\"\
+      : \"US/Pacific\",\n            \"dealer\": {\n              \"__typename\":\
+      \ \"SecondDeliveryDealer\",\n              \"code\": \"999991\",\n         \
+      \     \"address\": {\n                \"__typename\": \"SecondDeliveryDealerAddress\"\
+      ,\n                \"coordinates\": null,\n                \"address1\": \"\
+      325 W Gardena Blvd\",\n                \"address2\": null,\n               \
+      \ \"state\": \"CA\",\n                \"city\": \"Gardena\",\n             \
+      \   \"country\": \"US\",\n                \"id\": 132498250,\n             \
+      \   \"postalCode\": \"90248\"\n              }\n            }\n          },\n\
+      \          \"mode\": \"VIRTUAL\"\n        }\n      }\n    }\n  }\n}</code></pre><p>Navigate\
+      \ to <code>Upcoming Appointment</code> screen</p>"
+    text2: null
+    text3: <ul><li>Mock data is set for <code>SecondDeliveryAppointment</code> query</li><li>User
+      is on <code>Upcoming Appointment</code> screen</li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 97167
+    case_id: 62243
+    text1: <p>Tap <code>Cancel Appointment</code> button</p>
+    text2: null
+    text3: '<ul><li>Confirmation modal is displayed</li><li>Modal title: <code>Cancel
+      Appointment?</code></li><li>Modal message: <code>Are you sure you want to cancel
+      your appointment?</code></li><li><code>Nevermind</code> button is displayed</li><li><code>Yes,
+      Cancel</code> button is displayed</li><li>Background is dimmed/overlayed</li><li>User
+      remains on <code>Upcoming Appointment</code> screen</li></ul>'
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 97168
+    case_id: 62243
+    text1: "<p>Mock the <code>CancelSecondDeliveryAppointment</code> mutation to return:</p><pre><code\
+      \ class=\"editor-plain language-plain code-block\">{\n  \"data\": {\n    \"\
+      cancelSecondDeliveryAppointment\": {\n      \"__typename\": \"CancelSecondDeliveryAppointmentSuccessResponse\"\
+      ,\n      \"success\": true\n    }\n  }\n}</code></pre><p>Tap <code>Yes, Cancel</code>\
+      \ button</p>"
+    text2: null
+    text3: '<ul><li><code>CancelSecondDeliveryAppointment</code> mutation is triggered</li><li>Modal
+      is dismissed</li><li>User is navigated to <code>Vehicle</code> screen</li><li>Toast
+      message is displayed: <code>Appointment cancelled</code> with <strong>checkmark
+      icon</strong></li><li>Upcoming Virtual Appointment card is <strong>removed</strong>
+      from Vehicle screen</li><li>Second Delivery booking card is <strong>displayed</strong>
+      (user can book again)</li><li>Eligibility state changes to allow new booking</li></ul>'
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 97169
+    case_id: 62243
+    text1: <p>Tap <code>Nevermind</code> button (alternative path - if testing modal
+      dismissal)</p>
+    text2: null
+    text3: <ul><li>Modal is dismissed</li><li>User remains on <code>Upcoming Appointment</code>
+      screen</li><li>Appointment is <strong>NOT deleted</strong></li><li>All appointment
+      details remain unchanged</li><li>No mutation is triggered</li></ul>
+    text4: null
+    display_order: 4

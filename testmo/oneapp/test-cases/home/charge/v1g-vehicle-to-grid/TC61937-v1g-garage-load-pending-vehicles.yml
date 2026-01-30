@@ -1,0 +1,35 @@
+testmo:
+  case_id: 61937
+  folder_id: 6755
+  project_id: 2
+  folder_path: home/charge/v1g-vehicle-to-grid
+  folder_name_ui: V1G - Vehicle-to-Grid
+  created_at: '2025-11-05 22:34:59.736374'
+  updated_at: '2025-12-16 18:20:15.189428'
+  last_sync: '2026-01-30T18:21:05.511029Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/61937
+metadata:
+  name: V1G - Garage Load - Pending Vehicles
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: "<p>Nissan NNA and NCI only</p><p>\"GrantV1G\": \"{\\\"enabled\\\"\
+    : true, \\\"checkCapability\\\": true}\" </p><p>PendingVehicles </p><pre><code\
+    \ class=\"editor-plain language-plain code-block\">{\n  \"data\": {\n    \"pendingVehicles\"\
+    : [\n      {\n        \"__typename\": \"PendingVehicle\",\n        \"vin\": \"\
+    3N1CP5CU2KL485206\",\n        \"caseStatus\": \"Insufficient Documents\",\n  \
+    \      \"model\": \"KICKS\",\n        \"year\": \"2019\",\n        \"caseId\"\
+    : \"48526626\",\n        \"caseNumber\": \"1\"\n      }\n    ]\n  }\n}</code></pre>"
+  steps:
+  - column_name: custom_steps
+    id: 95230
+    case_id: 61937
+    text1: <p>User is on the Home screen</p>
+    text2: null
+    text3: <p>PendingVehicles API is resolved</p><p>eVehicleEligibility API is NOT
+      called for that VIN</p>
+    text4: null
+    display_order: 1

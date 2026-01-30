@@ -1,0 +1,39 @@
+testmo:
+  case_id: 646
+  folder_id: 4169
+  project_id: 2
+  folder_path: home/climate/ev
+  folder_name_ui: EV
+  created_at: '2023-08-01 23:08:20.871573'
+  updated_at: '2025-11-10 22:01:11.891229'
+  last_sync: '2026-01-30T18:21:08.952495Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/646
+metadata:
+  name: Climate screen
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is on home screen</p>
+  steps:
+  - column_name: custom_steps
+    id: 815
+    case_id: 646
+    text1: <ol><li>Login into the app</li><li>At the home screen click <code>Climate</code>
+      card</li><li>See the info and details from the <code>Climate</code> card</li></ol>
+    text2: null
+    text3: <ul><li>User should see Climate screen</li><li>User should see all the
+      data displaying correctly</li><li>You see the following sections: </li><li><p>Climate
+      Control with Ext and int temperature showing on the top right</p><p>     - Climate
+      status on or off with the climate (fan) icon</p><p>      - The interior temperature
+      as default value with temperature selector bar as well as <code>-</code> and
+      <code>+</code> buttons to change temperature setting</p></li><li><p>Secheduled
+      box with Add CTA on top right</p><p>    -(if schedules exist, they should show
+      in this box with toggle on or off) </p><p>   - the schedules should read the
+      temperature scheduled with initial of Day and departure time. (Fan icon on right
+      side in blue with toggle on) . if schedule is toggled off, icon is black in
+      light mode. </p><p>- TURN CLIMATE ON or TURN CLIMATE OFF CTA </p></li></ul>
+    text4: null
+    display_order: 1

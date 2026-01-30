@@ -1,0 +1,39 @@
+testmo:
+  case_id: 1482
+  folder_id: 55
+  project_id: 2
+  folder_path: home/hero-module
+  folder_name_ui: Hero Module
+  created_at: '2023-08-28 20:13:22.814720'
+  updated_at: '2024-10-17 17:56:23.776593'
+  last_sync: '2026-01-30T18:21:08.166428Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/1482
+metadata:
+  name: Dynamic Background
+  priority: 3
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  steps:
+  - column_name: custom_steps
+    id: 1850
+    case_id: 1482
+    text1: '1. Time is 6am - 11:59am<br />
+
+      2. Time is 12pm -  5:59pm<br />
+
+      3. Time is 6pm - 11:59pm<br />
+
+      4. Time is 12am -  5:59am'
+    text2: null
+    text3: '1. User should see Morning Image background<br />
+
+      1. User should see Afternoon Image background<br />
+
+      1. User should see Evening Image background<br />
+
+      1. User should see Night Image background'
+    text4: null
+    display_order: 1

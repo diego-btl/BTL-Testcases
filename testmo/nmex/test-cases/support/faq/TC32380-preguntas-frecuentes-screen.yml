@@ -1,0 +1,37 @@
+testmo:
+  case_id: 32380
+  folder_id: 6762
+  project_id: 6
+  folder_path: support/faq
+  folder_name_ui: FAQ
+  created_at: '2025-04-01 17:50:45.007280'
+  updated_at: '2025-10-30 17:38:08.747973'
+  last_sync: '2026-01-30T18:20:45.496803Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/32380
+metadata:
+  name: Preguntas Frecuentes screen
+  priority: 1
+  type: functional
+  status: active
+  estimate: 3600000000
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is on <code>Soporte</code> screen</p>
+  steps:
+  - column_name: custom_steps
+    id: 53115
+    case_id: 32380
+    text1: <ol><li>Login into the app</li><li>Go to <code>Soporte</code> option</li><li>Tap
+      the card <code>Preguntas Frecuentes &gt;</code></li></ol>
+    text2: null
+    text3: '<ul><li><code>FAQ</code> api is triggered</li><li>The data (questions
+      and answers) matches what''s in the api response</li><li>This are the sections
+      should be displayed:</li><li><code>Garantía INFINITI</code></li><li><code>Servicio
+      de Mantenimiento</code></li><li><code>Partes y Refacciones</code></li><li><code>Llamados
+      a revisión</code></li><li><p><code>InTouch</code></p><p> </p></li><li>Call CTA
+      at the bottom of screen with text: Atención al cliente (see SS attached)</li><li>Clicking
+      on the button prompts to call the Customer service no. (from ContactUs api)</li><li>Cancel
+      option</li></ul>'
+    text4: null
+    display_order: 1

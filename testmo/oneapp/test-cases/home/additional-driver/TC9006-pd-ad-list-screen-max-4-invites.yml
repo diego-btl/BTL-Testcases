@@ -1,0 +1,46 @@
+testmo:
+  case_id: 9006
+  folder_id: 411
+  project_id: 2
+  folder_path: home/additional-driver
+  folder_name_ui: Additional Driver
+  created_at: '2023-11-21 08:09:23.545664'
+  updated_at: '2024-10-17 17:57:34.769274'
+  last_sync: '2026-01-30T18:21:07.335220Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/9006
+metadata:
+  name: PD - AD  List Screen - Max 4 invites
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has an AVK2 vehicle and is PRIMARY_DRIVER</p><p>User is on
+    the home screen</p><p>There are 4 existing invites (accepted/pending)</p>
+  steps:
+  - column_name: custom_steps
+    id: 9516
+    case_id: 9006
+    text1: <p>Tap on the Additional Driver card</p>
+    text2: null
+    text3: <p>User should see the Additional Driver screen load and open [DriverInvites
+      - iOS]<br /><br />User should see Add A Driver button is disabled</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 9517
+    case_id: 9006
+    text1: <p>Tap on Add A Driver</p>
+    text2: null
+    text3: <p>User should see an error modal - Max Invites Reached</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 9518
+    case_id: 9006
+    text1: <p>Tap OK</p>
+    text2: null
+    text3: <p>User should see error modal dismiss</p>
+    text4: null
+    display_order: 3

@@ -1,0 +1,38 @@
+testmo:
+  case_id: 29854
+  folder_id: 3775
+  project_id: 2
+  folder_path: login-flow/browser-login
+  folder_name_ui: Browser Login
+  created_at: '2025-01-07 14:49:42.484745'
+  updated_at: '2025-08-21 13:37:26.368176'
+  last_sync: '2026-01-30T18:21:06.573610Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/29854
+metadata:
+  name: Happy Path of Browser login
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has updated app version on phone that has browser Login enabled. </p>
+  steps:
+  - column_name: custom_steps
+    id: 48727
+    case_id: 29854
+    text1: <ul><li><p>User taps on app icon to open it</p><p> </p></li></ul>
+    text2: null
+    text3: <ul><li><p>User is on Landing page</p><p> </p></li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 48728
+    case_id: 29854
+    text1: <p>Log in to app</p>
+    text2: null
+    text3: <ul><li>User successfully logs in</li><li>User is directed to Terms and
+      Conditions screen (if fresh install)</li><li>If not, then user is directed to
+      Home page. </li></ul>
+    text4: null
+    display_order: 2

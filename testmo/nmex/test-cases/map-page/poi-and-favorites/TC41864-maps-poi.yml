@@ -1,0 +1,130 @@
+testmo:
+  case_id: 41864
+  folder_id: 6772
+  project_id: 6
+  folder_path: map-page/poi-and-favorites
+  folder_name_ui: POI and Favorites
+  created_at: '2025-06-09 15:26:04.732482'
+  updated_at: '2026-01-27 17:57:15.480730'
+  last_sync: '2026-01-30T18:20:45.226252Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/41864
+metadata:
+  name: Maps - POI
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>Have a car with Location and Preferred Dealer</p>
+  steps:
+  - column_name: custom_steps
+    id: 71871
+    case_id: 41864
+    text1: '<p>No service code param is sent for <strong>NMEX INF</strong> user (<strong>GENERAL</strong>)</p><ol><li>Login
+      as NMEX INF user</li><li>Trigger dealer search with <code>serviceCode: GENERAL</code></li></ol>'
+    text2: null
+    text3: <ul><li>Supergraph sends a request to Globant endpoint</li><li>The query
+      param <code>servicesCode</code> is <strong>not included</strong> (or sent as
+      empty)</li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 71872
+    case_id: 41864
+    text1: '<p>Correct <code>servicesCode</code> param is sent for <strong>NMEX INF</strong>
+      user (<strong>SALES</strong>)</p><ol><li>Login as NMEX INF user</li><li>Trigger
+      dealer search with <code>serviceCode: SALES</code></li></ol>'
+    text2: null
+    text3: <ul><li>Supergraph sends a request to the Globant endpoint</li><li>The
+      query param <code>servicesCode=VE,1</code> is used</li></ul>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 71873
+    case_id: 41864
+    text1: '<p>Correct <code>servicesCode</code> param is sent for <strong>NMEX INF</strong>
+      user (<strong>SERVICE</strong>)</p><ol><li>Login as NMEX INF user</li><li>Trigger
+      dealer search with <code>serviceCode: SERVICE</code></li></ol>'
+    text2: null
+    text3: <ul><li>Supergraph sends a request to Globant endpoint</li><li>The query
+      param <code>servicesCode=VO,2</code> is used</li></ul>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 71874
+    case_id: 41864
+    text1: '<p>Correct <code>servicesCode</code> param is sent for <strong>NMEX INF</strong>
+      user (<strong>TEST_DRIVE</strong>)</p><ol><li>Login as NMEX INF user</li><li>Trigger
+      dealer search with <code>serviceCode: TEST_DRIVE</code></li></ol>'
+    text2: null
+    text3: <ul><li>Supergraph sends a request to Globant endpoint</li><li>The query
+      param <code>servicesCode=TD,3</code> is used</li></ul>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 71877
+    case_id: 41864
+    text1: '<p>Correct <code>servicesCode</code> param is sent for <strong>NMEX NIS</strong>
+      user (<strong>SERVICE</strong>)</p><ol><li>Login as NMEX NIS user</li><li>Trigger
+      dealer search with <code>serviceCode: SERVICE</code></li></ol>'
+    text2: null
+    text3: <ul><li>Supergraph sends a request to Globant endpoint</li><li>The query
+      param <code>servicesCode=0</code> is used</li></ul>
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 71876
+    case_id: 41864
+    text1: '<p>Correct <code>servicesCode</code> param is sent for <strong>NMEX NIS</strong>
+      user (<strong>SALES</strong>)</p><ol><li>Login as NMEX NIS user</li><li>Trigger
+      dealer search with <code>serviceCode: NISSAN_SALES</code></li></ol>'
+    text2: null
+    text3: <ul><li>Supergraph sends a request to Globant endpoint</li><li>The query
+      param <code>servicesCode=1</code> is used</li></ul>
+    text4: null
+    display_order: 6
+  - column_name: custom_steps
+    id: 71878
+    case_id: 41864
+    text1: '<p>Correct <code>servicesCode</code> param is sent for <strong>NMEX NIS</strong>
+      user (<strong>BODY_AND_PAINT</strong>)</p><ol><li>Login as NMEX NIS user</li><li>Trigger
+      dealer search with <code>serviceCode: BODY_AND_PAINT</code></li></ol>'
+    text2: null
+    text3: <ul><li>Supergraph sends a request to Globant endpoint</li><li>The query
+      param <code>servicesCode=2</code> is used</li></ul>
+    text4: null
+    display_order: 7
+  - column_name: custom_steps
+    id: 71883
+    case_id: 41864
+    text1: '<p>Correct <code>servicesCode</code> param is sent for <strong>NMEX NIS</strong>
+      user (<strong>FLEET</strong>)</p><ol><li>Login as NMEX NIS user</li><li>Trigger
+      dealer search with <code>serviceCode: FLEET</code></li></ol>'
+    text2: null
+    text3: <ul><li>Supergraph sends a request to Globant endpoint</li><li>The query
+      param <code>servicesCode=7</code> is used</li></ul>
+    text4: null
+    display_order: 8
+  - column_name: custom_steps
+    id: 71884
+    case_id: 41864
+    text1: '<p>Correct <code>servicesCode</code> param is sent for <strong>NMEX NIS</strong>
+      user (<strong>SERVICE_LEAF</strong>)</p><ol><li>Login as NMEX NIS user</li><li>Trigger
+      dealer search with <code>serviceCode: SERVICE_LEAF</code></li></ol>'
+    text2: null
+    text3: <ul><li>Supergraph sends a request to Globant endpoint</li><li>The query
+      param <code>servicesCode=8</code> is used</li></ul>
+    text4: null
+    display_order: 9
+  - column_name: custom_steps
+    id: 102456
+    case_id: 41864
+    text1: '<p>Correct <code>servicesCode</code> param is sent for <strong>NMEX NIS</strong>
+      user (<strong>VALUE_ADVANTAGE</strong>)</p><ol><li>Login as NMEX NIS user</li><li>Trigger
+      dealer search with <code>serviceCode: VALUE_ADVANTAGE</code></li></ol>'
+    text2: null
+    text3: <ul><li>Supergraph sends a request to Globant endpoint</li><li>The query
+      param <code>servicesCode=</code>12 is used</li></ul>
+    text4: null
+    display_order: 10

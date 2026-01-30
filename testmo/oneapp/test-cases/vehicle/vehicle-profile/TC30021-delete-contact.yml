@@ -1,0 +1,34 @@
+testmo:
+  case_id: 30021
+  folder_id: 90
+  project_id: 2
+  folder_path: vehicle/vehicle-profile
+  folder_name_ui: Vehicle Profile
+  created_at: '2025-01-21 17:11:01.149637'
+  updated_at: '2025-10-10 17:32:13.628603'
+  last_sync: '2026-01-30T18:21:06.383081Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/30021
+metadata:
+  name: Delete Contact
+  priority: 3
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is on an Update Contact sheet</p>
+  steps:
+  - column_name: custom_steps
+    id: 48903
+    case_id: 30021
+    text1: <p>1. Tap DELETE CONTACT<br />2. Tap No<br />3. Tap DELETE CONTACT<br />4.
+      Tap Yes<br />5. Wait for deletion to succeed</p>
+    text2: null
+    text3: '<p>1. User should see alert modal<br />2. User should see alert modal
+      dismiss<br />3. User should see alert modal<br />4. User should see all fields
+      become disabled and a loading state as the delete call is being made<br />5.
+      User should be taken back to the emergency contacts screen and see updated data
+      when the deletion succeeds<br /><br />NOTE: If deletion fails, there should
+      no longer be a loading state and user should see fields become enabled</p>'
+    text4: null
+    display_order: 1

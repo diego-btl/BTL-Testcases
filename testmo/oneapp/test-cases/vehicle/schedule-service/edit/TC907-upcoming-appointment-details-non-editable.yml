@@ -1,0 +1,111 @@
+testmo:
+  case_id: 907
+  folder_id: 6795
+  project_id: 2
+  folder_path: vehicle/schedule-service/edit
+  folder_name_ui: Edit
+  created_at: '2023-08-04 13:55:01.493072'
+  updated_at: '2026-01-20 21:19:15.717988'
+  last_sync: '2026-01-30T18:21:08.417884Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/907
+metadata:
+  name: Upcoming Appointment - Details - Non-Editable
+  priority: 1
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<ul><li>User has booked service appointment with <code>isEditable:
+    false</code></li><li>User taps on Upcoming Appointment card</li></ul>'
+  steps:
+  - column_name: custom_steps
+    id: 96389
+    case_id: 907
+    text1: '<p>Tap on Upcoming Appointment card where <code>isEditable: false</code></p>'
+    text2: null
+    text3: <ul><li>User is navigated to <code>Upcoming Appointment</code> screen</li><li>Screen
+      title is <code>Upcoming Appointment</code></li><li><strong>Back arrow</strong>
+      is displayed at top left</li><li>Vehicle image is displayed</li><li>Vehicle
+      <strong>nickname</strong> from <code>VehicleStaticData</code> is displayed</li><li>Vehicle
+      <strong>year, model, and color</strong> from <code>VehicleStaticData</code>
+      are displayed</li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 96390
+    case_id: 907
+    text1: <p>Verify <code>Dealer</code> card displays correctly</p>
+    text2: null
+    text3: '<ul><li><strong>Location icon</strong> is displayed</li><li>Card title:
+      <code>Dealer</code></li><li>Dealer name from appointment data is displayed</li><li>Dealer
+      address from appointment data is displayed</li><li><strong>NO Edit button</strong>
+      on dealer card</li></ul>'
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 96391
+    case_id: 907
+    text1: <p>Verify <code>Selected Service</code> card displays correctly</p>
+    text2: null
+    text3: '<ul><li><strong>Wrench icon</strong> is displayed</li><li>Card title:
+      <code>Selected Service</code></li><li>Selected service name(s) from appointment
+      data is displayed</li><li><strong>NO Edit button</strong> (card is read-only)</li></ul>'
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 96392
+    case_id: 907
+    text1: <p>Verify <code>Appointment Details</code> card displays correctly</p>
+    text2: null
+    text3: '<ul><li><strong>Calendar icon</strong> is displayed</li><li>Card title:
+      <code>Appointment Details</code></li><li>Date from appointment data displayed
+      in format: <code>Date: [Day], [Month] [Date], [Year]</code></li><li>Time from
+      appointment data displayed in format: <code>Time: [HH:MM AM/PM]</code></li><li>Service
+      Advisor name from appointment data is displayed (if selected)</li><li><strong>NO
+      Edit button</strong> (card is read-only)</li></ul>'
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 96393
+    case_id: 907
+    text1: <p>Verify <code>Transportation</code> card displays correctly (if applicable)</p>
+    text2: null
+    text3: '<ul><li><strong>Car icon</strong> is displayed</li><li>Card title: <code>Transportation</code></li><li>Transportation
+      preference from appointment data is displayed</li><li>Pick Up and Drop Off addresses
+      displayed (if Valet Service selected)</li><li><strong>NO Edit button</strong>
+      (card is read-only)</li></ul>'
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 96394
+    case_id: 907
+    text1: <p>Verify <code>Contact Information</code> card displays correctly</p>
+    text2: null
+    text3: '<ul><li><strong>Phone icon</strong> is displayed</li><li>Card title: <code>Contact
+      Information</code></li><li>Email address from appointment data displayed in
+      <strong>correct case</strong></li><li>Phone number from appointment data is
+      displayed</li><li><strong>NO Edit button</strong> (card is read-only)</li></ul>'
+    text4: null
+    display_order: 6
+  - column_name: custom_steps
+    id: 96395
+    case_id: 907
+    text1: <p>Tap <code>CALL DEALER</code> link (NISSAN) or <code>CALL RETAILER</code>
+      link (INFINITI)</p>
+    text2: null
+    text3: <ul><li>Phone number is retrieved from <code>VehiclePreferredDealer</code>
+      query phone field</li><li><strong>Android:</strong> Phone dialer opens with
+      dealer/retailer contact number</li><li><strong>iOS:</strong> Phone call drawer/sheet
+      opens with dealer/retailer contact number and Call/Cancel options</li></ul>
+    text4: null
+    display_order: 7
+  - column_name: custom_steps
+    id: 96396
+    case_id: 907
+    text1: <p>Verify <code>DELETE SERVICE REQUEST</code> button is available</p>
+    text2: null
+    text3: <ul><li><code>DELETE SERVICE REQUEST</code> button is displayed and <strong>enabled</strong></li><li>Button
+      has <strong>black/dark styling</strong></li></ul>
+    text4: null
+    display_order: 8

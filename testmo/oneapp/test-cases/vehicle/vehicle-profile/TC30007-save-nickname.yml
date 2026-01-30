@@ -1,0 +1,28 @@
+testmo:
+  case_id: 30007
+  folder_id: 90
+  project_id: 2
+  folder_path: vehicle/vehicle-profile
+  folder_name_ui: Vehicle Profile
+  created_at: '2025-01-21 17:11:01.149637'
+  updated_at: '2025-10-10 14:51:19.146751'
+  last_sync: '2026-01-30T18:21:06.419783Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/30007
+metadata:
+  name: Save Nickname
+  priority: 3
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  steps:
+  - column_name: custom_steps
+    id: 48884
+    case_id: 30007
+    text1: <p>1. Tap Save button</p>
+    text2: null
+    text3: <p>User's new nickname should be saved and they should be returned to the
+      vehicle profile sheet</p>
+    text4: null
+    display_order: 1

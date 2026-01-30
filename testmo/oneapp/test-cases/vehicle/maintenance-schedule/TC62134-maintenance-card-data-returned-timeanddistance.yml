@@ -1,0 +1,112 @@
+testmo:
+  case_id: 62134
+  folder_id: 91
+  project_id: 2
+  folder_path: vehicle/maintenance-schedule
+  folder_name_ui: Maintenance Schedule
+  created_at: '2025-12-10 22:07:47.073564'
+  updated_at: '2025-12-18 22:06:55.161765'
+  last_sync: '2026-01-30T18:21:04.799538Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/62134
+metadata:
+  name: Maintenance Card - Data returned TimeAndDistance Based
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<ul><li><p>Card is on Time Track and driving type was selected</p><ul><li><strong>GenerateAllVisits</strong>
+    API response should have: <code>"Alignment": "TimeAndDistanceBased"</code> (Attaching
+    mocks)</li></ul><p> </p></li></ul>'
+  steps:
+  - column_name: custom_steps
+    id: 96255
+    case_id: 62134
+    text1: <p><i>Mock <strong>GenerateAllVisits</strong> &amp; <strong>VehicleDynamicData
+      </strong>APIs (use mock - Not close to Overdue ) </i></p><p>Go to vehicle screen
+      &gt; Tap on Maintenance schedule &gt; Set a driving condition&gt; GenerateAllVisits
+      + PartsReminders calls are triggered&gt; Observe UI</p>
+    text2: null
+    text3: <ol><li>Card with time remaining:<ol><li><strong>Title Text</strong>: <br
+      /><code>X mi until Est. Next Service until next service</code></li></ol></li><li>Green
+      Progress bar with percentage according to the service done<ol><li><code>X of
+      Y mi</code></li></ol></li><li>Estimated Next Service card<ol><li>Displays past
+      Service in miles</li><li>The upcoming one will be selected and the next one
+      unselected</li><li>The colour will be green</li></ol></li></ol>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 96256
+    case_id: 62134
+    text1: <p>Tap on any of the scheduled services</p>
+    text2: null
+    text3: <p>Verify that the Service Details screen displays the correct information
+      for the selected service/date, including all <strong>ServiceComponentName</strong>
+      entries associated with that service.</p><figure class="image"><img src="/attachments/view/8901"
+      alt="8901" /></figure>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 96257
+    case_id: 62134
+    text1: <p>Go back to the vehicle screen </p>
+    text2: null
+    text3: <p>The <code>Maintenance Schedule</code> card should display a green progress
+      bar:</p><ol><li><strong>Title Text</strong>: <br /><code>X mi until Est. Next
+      Service until next service</code></li><li>Green Progress bar with percentage
+      according to the service done<ol><li><code>X of Y mi</code></li></ol></li></ol>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 96258
+    case_id: 62134
+    text1: <p><i>Mock <strong>GenerateAllVisits</strong> &amp; <strong>VehicleDynamicData</strong>
+      APIs (use mock - Overdue/ Close to Overdue) </i></p><p>Go to vehicle screen
+      &gt; Tap on Maintenance schedule &gt; Set a driving condition&gt; GenerateAllVisits
+      + PartsReminders calls are triggered&gt; Observe UI</p>
+    text2: null
+    text3: <ol><li>Card with time remaining:<ol><li><strong>Title Text:</strong><ol><li><code>0
+      mi until Est. Next Service until next service</code></li></ol></li></ol></li><li>Orange
+      Progress bar fully filled<ol><li><code>X of Y mi/mo - Expected Soon</code></li></ol></li><li><code>Schedule
+      Service</code> CTA</li><li><code>Service Expected Soon</code> card<ol><li>Displays
+      past Service in Miles</li><li>The upcoming one will be unselected</li><li>color
+      will be orange</li></ol></li></ol><figure class="image"><img src="/attachments/view/8898"
+      alt="8898" /></figure>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 96259
+    case_id: 62134
+    text1: <p>Go back to the vehicle screen </p>
+    text2: null
+    text3: <p>The <code>Maintenance Schedule</code> card should display a green progress
+      bar:</p><ol><li><strong>Title Text</strong>: <br /><code>0 mi until Est. Next
+      Service until next service</code></li><li>Orange Progress bar with percentage
+      according to the service done<ol><li><code>X of Y mi - Expected soon</code></li></ol></li><li><code>Schedule
+      Service</code> CTA</li></ol><figure class="image"><img src="/attachments/view/8897"
+      alt="8897" /></figure>
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 96260
+    case_id: 62134
+    text1: <p>Tapping on Schedule Service CTA</p>
+    text2: null
+    text3: <p>Leads the user to the Selected Services screen, which is part of the
+      Schedule Appointment flow.</p>
+    text4: null
+    display_order: 6
+  - column_name: custom_steps
+    id: 96261
+    case_id: 62134
+    text1: <p>Delete any previous visits, bg/fg the app, and wait for apis to load</p>
+    text2: null
+    text3: <ol><li>Progress bar should be empty for time track if there are no previous
+      visits</li><li>Expected Soon verbiage should be hidden</li></ol>
+    text4: null
+    display_order: 7
+  notes: <ul><li>If manually entry was done, card also shows a timestamp for when
+    it was last updated</li><li>If month progress is within 60 days, then a "Book
+    a Service" CTA is also shown.</li><li>Dates are calculated using the end of the
+    month  (e.g Jan 2023 uses Jan 31st 2023 as target )</li></ul>

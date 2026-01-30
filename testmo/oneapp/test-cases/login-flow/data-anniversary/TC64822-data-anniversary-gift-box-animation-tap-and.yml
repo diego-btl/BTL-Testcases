@@ -1,0 +1,54 @@
+testmo:
+  case_id: 64822
+  folder_id: 7144
+  project_id: 2
+  folder_path: login-flow/data-anniversary
+  folder_name_ui: Data Anniversary
+  created_at: '2026-01-21 15:41:21.221869'
+  updated_at: '2026-01-21 16:54:31.136683'
+  last_sync: '2026-01-30T18:21:03.637085Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/64822
+metadata:
+  name: Data Anniversary - Gift Box Animation - Tap and Dismiss
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ol><li><code>EnableOwnerAnniversary</code> FF = <code>true</code></li><li><code>isAnniversary</code>
+    = <code>true</code></li><li><code>anniversaryYear</code> = <code>1</code>, <code>2</code>,
+    <code>3</code>, <code>4</code>, or <code>5</code></li><li>VIN is NOT lost/stolen,
+    finance vehicle, or pending</li><li>User has NOT seen anniversary message for
+    this VIN at current anniversary year</li><li>User is logged in</li></ol>
+  steps:
+  - column_name: custom_steps
+    id: 102413
+    case_id: 64822
+    text1: <p>Login to the app with VIN in focus meeting all precondition requirements</p>
+    text2: null
+    text3: <ul><li>Gift box animation screen is triggered and displayed</li><li>Gift
+      box with decorative elements (stars, circles) is displayed</li><li>Gift box
+      animation plays smoothly</li><li>Text <code>Tap the box to open</code> is displayed
+      below gift box</li><li><strong>Close (X) button</strong> is displayed in top
+      right corner</li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 102414
+    case_id: 64822
+    text1: <p>Tap <strong>Close (X) button</strong></p>
+    text2: null
+    text3: <ul><li>User is redirected to <code>Home</code> screen</li></ul>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 102415
+    case_id: 64822
+    text1: <p>Clear app cache or reinstall app, relaunch app, and login with same
+      VIN meeting preconditions, then tap on the gift box</p>
+    text2: null
+    text3: <ul><li>Gift box animation appears again</li><li>Opening animation plays</li><li>User
+      is redirected to welcome message screen</li></ul>
+    text4: null
+    display_order: 3

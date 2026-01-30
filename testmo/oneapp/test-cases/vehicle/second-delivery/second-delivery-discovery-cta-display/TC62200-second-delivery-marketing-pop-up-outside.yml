@@ -1,0 +1,40 @@
+testmo:
+  case_id: 62200
+  folder_id: 6818
+  project_id: 2
+  folder_path: vehicle/second-delivery/second-delivery-discovery-cta-display
+  folder_name_ui: Second Delivery - Discovery & CTA Display
+  created_at: '2025-12-19 17:16:43.668140'
+  updated_at: '2026-01-06 18:51:58.000168'
+  last_sync: '2026-01-30T18:21:04.293518Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/62200
+metadata:
+  name: Second Delivery - Marketing Pop-up - Outside Marketing Window
+  priority: 1
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>Feature Flag <code>EnableSecondDelivery</code> is set to
+    <code>true</code></li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 97035
+    case_id: 62200
+    text1: "<p>Mock <code>SecondDeliveryEligibility</code> with:</p><pre><code>{\n\
+      \  \"marketingMessage\": {\n    \"versionToDisplay\": \"REMIND_ME_LATER\",\n\
+      \    \"displayMarketingMessageThresholdInDays\": 60,\n    \"remindMeLaterThresholdInDays\"\
+      : 8\n  },\n  \"daysSincePurchased\": 65\n}</code></pre><p>Login to app</p>"
+    text2: null
+    text3: '<ul><li>Marketing pop-up does NOT appear</li><li>Second Delivery Card
+      is displayed</li><li>Card shows <code>MyINFINITI Expert</code> with <code>Discover
+      more about your {vehicle model}</code></li><li>Chevron (&gt;) icon displayed
+      on right</li><li><strong>Card visibility based on prioritization:</strong></li><li>If
+      <code>prioritized: true</code> (daysSincePurchased &lt; 30): Card appears on
+      Home screen AND Vehicle screen at top</li><li>If <code>prioritized: false</code>
+      (daysSincePurchased &gt;= 30): Card appears ONLY on Vehicle screen (not on Home
+      screen)</li><li>At 65 days, card is non-prioritized, so appears on Vehicle screen
+      only</li></ul>'
+    text4: null
+    display_order: 1

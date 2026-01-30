@@ -1,0 +1,46 @@
+testmo:
+  case_id: 31595
+  folder_id: 3872
+  project_id: 5
+  folder_path: landing-page/registration
+  folder_name_ui: Registration
+  created_at: '2025-04-01 15:54:15.628359'
+  updated_at: null
+  last_sync: '2026-01-30T18:20:38.081778Z'
+  url: https://bethinklabs.testmo.net/repositories/5/cases/31595
+metadata:
+  name: Registration - Legal Links
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is on the password screen</p>
+  steps:
+  - column_name: custom_steps
+    id: 52006
+    case_id: 31595
+    text1: <p>Tap on <code>Termos de servicos </code></p>
+    text2: null
+    text3: <p>User should see the <code>Terms of Service</code> page open in the same
+      webview</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 52007
+    case_id: 31595
+    text1: <p>Tap on the back button to go to the previous page</p>
+    text2: null
+    text3: <p>User should land on the password screen</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 52008
+    case_id: 31595
+    text1: <p>Tap on <code>Politica de Privacidade</code> </p>
+    text2: null
+    text3: <p>User should see the <code>Privacy Policy</code> page open in the same
+      webview</p>
+    text4: null
+    display_order: 3

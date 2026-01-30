@@ -1,0 +1,35 @@
+testmo:
+  case_id: 1581
+  folder_id: 46
+  project_id: 2
+  folder_path: map
+  folder_name_ui: Map
+  created_at: '2023-08-28 20:13:24.508777'
+  updated_at: '2024-10-17 17:56:23.776593'
+  last_sync: '2026-01-30T18:21:07.984607Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/1581
+metadata:
+  name: Charge Station Chip Disabled
+  priority: 3
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has an EV selected</p>
+  steps:
+  - column_name: custom_steps
+    id: 1946
+    case_id: 1581
+    text1: <p>1. Disable both plug types in EV Map Settings<br />2. Close Map Settings<br
+      />3. Tap on Charge Stations chip<br />4. Tap on Cancel<br />5. Tap on Charge
+      Stations chip<br />6. Tap on Select Plug Type<br />7. Toggle on a plug type<br
+      />8. Close Map Settings</p>
+    text2: null
+    text3: <p>1. User should see both plug types toggled off<br />2. User should see
+      the Map<br />3. User should see Select Plug Type prompt<br />4. User should
+      see prompt dismiss<br />5. User should see Select Plug Type prompt<br />6. User
+      should see Map Settings open<br />7. User should see plug type toggled on<br
+      />8. User should see Charge Station chip enabled</p>
+    text4: null
+    display_order: 1

@@ -1,0 +1,54 @@
+testmo:
+  case_id: 61980
+  folder_id: 90
+  project_id: 2
+  folder_path: vehicle/vehicle-profile
+  folder_name_ui: Vehicle Profile
+  created_at: '2025-11-11 20:47:36.969691'
+  updated_at: '2025-11-11 21:10:03.905358'
+  last_sync: '2026-01-30T18:21:05.350654Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/61980
+metadata:
+  name: Verify the Health report card is not displayed under the Vehicle profile screen
+  priority: 3
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>Attaching mock response for <code>VehicleCapabilities</code>
+    response</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 95422
+    case_id: 61980
+    text1: <p>Mock VehicleCapabilities response to have <code>VEHICLE_HEALTH_REPORT=true</code>
+      &gt; call VehicleCapabilities api from the app &gt; Tap on <strong>Vehicle</strong>
+      nav button &gt; Tap on <code>Vehicle Profile</code> cta</p>
+    text2: null
+    text3: <p>Verify <code>Vehicle Health Report</code> card is not shown under <strong>Vehicle
+      Profile</strong> screen.</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 95423
+    case_id: 61980
+    text1: <p>Mock VehicleCapabilities response to have <code>VEHICLE_HEALTH_REPORT=false</code>
+      &gt; call VehicleCapabilities api from the app &gt; Tap on <strong>Vehicle</strong>
+      nav button &gt; Tap on <code>Vehicle Profile</code> cta</p>
+    text2: null
+    text3: <p>Verify <code>Vehicle Health Report</code> card is not shown under <strong>Vehicle
+      Profile</strong> screen.</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 95424
+    case_id: 61980
+    text1: <p>Mock VehicleCapabilities response to remove <code>VEHICLE_HEALTH_REPORT</code>
+      &gt; call VehicleCapabilities api from the app &gt; Tap on <strong>Vehicle</strong>
+      nav button &gt; Tap on <code>Vehicle Profile</code> cta</p>
+    text2: null
+    text3: <p>Verify <code>Vehicle Health Report</code> card is not shown under <strong>Vehicle
+      Profile</strong> screen</p>
+    text4: null
+    display_order: 3

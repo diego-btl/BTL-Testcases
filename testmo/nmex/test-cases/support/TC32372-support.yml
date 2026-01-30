@@ -1,0 +1,59 @@
+testmo:
+  case_id: 32372
+  folder_id: 4088
+  project_id: 6
+  folder_path: support
+  folder_name_ui: Support
+  created_at: '2025-04-01 17:50:44.960212'
+  updated_at: '2025-10-30 17:56:54.052190'
+  last_sync: '2026-01-30T18:20:45.543020Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/32372
+metadata:
+  name: Support
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is on the <code>Soporte</code> screen</p>
+  steps:
+  - column_name: custom_steps
+    id: 52743
+    case_id: 32372
+    text1: <ol><li>Login into the app</li><li>User goes to <code>Soporte</code> screen</li></ol>
+    text2: null
+    text3: "<ul><li>User should see <code>¿Necesitas ayuda?</code> section at the\
+      \ top</li><li>User should see <code>¿Necesitas ayuda?</code> with the next subsections:<ul><li><code>Asistencia\
+      \ Vial</code></li><li><code>Asistente de Accidentes</code></li><li><code>Vehículo\
+      \ Robado</code></li><li><code>911</code></li></ul></li><li><code>Nissan Concierge/Asistente\
+      \ Personal</code> card should display if:</li></ul><pre><code class=\"editor-json\
+      \ language-json code-block\">          {\n            \"__typename\": \"ServiceCapability\"\
+      ,\n            \"type\": \"CONCIERGE_PERSONAL_ASSISTANCE\",\n            \"\
+      enabled\": true\n          }</code></pre><ul><li><code>Preguntas Frecuentes</code>\
+      \ card it is showing</li><li><code>Contactos de Emergencia</code> card it is\
+      \ showing</li><li><code>WhatsApp</code> card it is showing</li><li>The <code>Atención\
+      \ al Cliente</code> CTA it is displaying<ul><li>The phone number is:<ul><li>Nissan\
+      \  &gt; <code>+52 800 964 7726</code></li><li>INFINITI  &gt; <code>+52 800 5465\
+      \ 3463   </code> </li></ul></li></ul></li></ul>"
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 94801
+    case_id: 32372
+    text1: <ol><li>Login into the app</li><li>User goes to <code>Soporte</code> screen
+      (vehicle NC)</li></ol>
+    text2: null
+    text3: "<ul><li>User should see <code>¿Necesitas ayuda?</code> section at the\
+      \ top</li><li>User should see <code>¿Necesitas ayuda?</code> with the next subsections:<ul><li><code>Asistencia\
+      \ Vial</code></li><li><code>Asistente de Accidentes</code></li><li><code>911</code></li></ul></li><li><code>Nissan\
+      \ Concierge/Asistente Personal</code> card should display if:</li></ul><pre><code\
+      \ class=\"editor-json language-json code-block\">          {\n            \"\
+      __typename\": \"ServiceCapability\",\n            \"type\": \"CONCIERGE_PERSONAL_ASSISTANCE\"\
+      ,\n            \"enabled\": true\n          }</code></pre><ul><li><code>Preguntas\
+      \ Frecuentes</code> card it is showing</li><li><code>WhatsApp</code> card it\
+      \ is showing</li><li>The <code>Atención al Cliente</code> CTA it is displaying<ul><li>The\
+      \ phone number is:<ul><li>Nissan  &gt; <code>+52 800 964 7726</code></li><li>INFINITI\
+      \  &gt; <code>+52 800 5465 3463   </code> </li></ul></li></ul></li></ul>"
+    text4: null
+    display_order: 2

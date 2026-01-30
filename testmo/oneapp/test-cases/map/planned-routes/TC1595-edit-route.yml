@@ -1,0 +1,86 @@
+testmo:
+  case_id: 1595
+  folder_id: 102
+  project_id: 2
+  folder_path: map/planned-routes
+  folder_name_ui: Planned Routes
+  created_at: '2023-08-28 20:13:24.749186'
+  updated_at: '2025-12-17 19:15:51.080284'
+  last_sync: '2026-01-30T18:21:07.938245Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/1595
+metadata:
+  name: Edit Route
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>User is viewing the <strong>Estimate Route*</strong> section</li><li>The
+    user selects an <code>EV</code> or <code>EVAVK2</code> vehicles</li><li>The user
+    should have a <code>Planned Route</code> create</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 96448
+    case_id: 1595
+    text1: <ol><li>Tap <code>Edit Route</code> in default collapsed, and expanded
+      info drawer positions</li></ol>
+    text2: null
+    text3: <ul><li>User should see be redirect to the <strong>Edit Route</strong>
+      screen with previously entered info shown</li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 96449
+    case_id: 1595
+    text1: <ol><li>Click over <code>+ADD A STOP</code> on the Estimated Route* screen</li></ol>
+    text2: null
+    text3: <ul><li>The screen <code>Add a Stop</code> shows</li></ul>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 96450
+    case_id: 1595
+    text1: <ol><li>Tap <code>Edit Route</code> in default collapsed</li><li>Click
+      over <code>+ADD A STOP</code></li><li>Type any address to the Search field</li><li>Select
+      an autocomplete result</li><li>Click over <code>ESTIMATE NEW ROUTE</code></li></ol>
+    text2: null
+    text3: <ul><li>The user should see the autocomplete result filled into the field
+      and stay in the <code>Add a Stop</code> screen</li><li>The user should be redirected
+      to the Edit Route screen and see the updated screen with the new stop added</li></ul>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 96451
+    case_id: 1595
+    text1: <ol><li>Click over <code>Estimate New Route</code></li></ol>
+    text2: null
+    text3: <ul><li>User is redirected to the Estimated Route* screen</li><li>The new
+      Stop should be added to the Route</li></ul>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 96774
+    case_id: 1595
+    text1: <ol><li>Click over the <code>Save Route</code> </li></ol>
+    text2: null
+    text3: <ol><li>The loading state is displayed</li><li>User is redirected to the
+      Planned Routes screen</li><li>The <code>Route Saved</code> success toast is
+      displayed</li></ol>
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 96452
+    case_id: 1595
+    text1: "<ol><li>Edit a planned route</li><li>Update any of the fields/stops or\
+      \ values</li><li>Click over <code>Save Route</code></li><li><p>The UpdateRoute\
+      \ API fails</p><pre><code class=\"editor-plain language-plain code-block\">{\n\
+      \  \"message\": \"Internal Server Error\"\n}</code></pre></li></ol>"
+    text2: null
+    text3: <ul><li>The user stays in the <code>Estimated Route*</code> screen</li><li>A
+      toast is displaying &gt; <code>Failed to save route</code></li></ul>
+    text4: null
+    display_order: 6
+  notes: <p>Documentation link &gt; <a href="https://www.notion.so/bethinklabs/Create-Route-340d662e2eec4d7c89b3a5c9d4140ad9">https://www.notion.so/bethinklabs/Create-Route-340d662e2eec4d7c89b3a5c9d4140ad9</a></p><p>The
+    API triggered for this functionality is <strong>UpdateRoute</strong>, <strong>CheckRouteServiceRequest</strong>
+    and <strong>VehiclePlannedRoutes</strong> after the user update a Previous Route.</p>

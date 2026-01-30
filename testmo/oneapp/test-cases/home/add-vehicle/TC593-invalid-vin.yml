@@ -1,0 +1,46 @@
+testmo:
+  case_id: 593
+  folder_id: 56
+  project_id: 2
+  folder_path: home/add-vehicle
+  folder_name_ui: Add vehicle
+  created_at: '2023-08-01 23:08:20.198721'
+  updated_at: '2025-10-09 05:36:43.597369'
+  last_sync: '2026-01-30T18:21:09.099228Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/593
+metadata:
+  name: Invalid VIN
+  priority: 1
+  type: functional
+  status: active
+  estimate: 120000000
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>User is already on the <code>Add Vehicle</code> screen</li><li>User
+    has already input an Invalid VIN</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 762
+    case_id: 593
+    text1: <p>Tap on <code>VALIDATE VIN</code> CTA<br /> </p>
+    text2: null
+    text3: <ul><li>The VIN text field should present a red background</li><li>There
+      should be a error message below the field with text "Invalid VIN"</li><li>A
+      CTA button with "Call Owner Services" button should appear above the <code>VALIDATE
+      VIN</code>CTA</li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 1795
+    case_id: 593
+    text1: <p>Tap on <code>Call Owner Services</code> CTA</p>
+    text2: null
+    text3: '<p><strong>Android: </strong>The app should drive the user to the Native
+      Phone app and prepoluate the phone number</p><p><strong>iOS: </strong>The app
+      should present the native call action with the phone prepopulated</p><figure
+      class="table"><table><tbody><tr><td>NNA</td><td>1-855-426-6628</td></tr><tr><td>NCI</td><td>1-800-387-0122</td></tr></tbody></table></figure>'
+    text4: null
+    display_order: 2
+  notes: '<p>iOS automation: can''t automate tapping on Call CTA as simulator doesn''t
+    have a phone/dialer app to validate number</p>'

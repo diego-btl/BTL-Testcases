@@ -1,0 +1,69 @@
+testmo:
+  case_id: 8999
+  folder_id: 411
+  project_id: 2
+  folder_path: home/additional-driver
+  folder_name_ui: Additional Driver
+  created_at: '2023-11-21 07:55:47.567088'
+  updated_at: '2025-08-21 19:21:14.411948'
+  last_sync: '2026-01-30T18:21:07.359811Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/8999
+metadata:
+  name: PD - Additional Driver Card
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has an AVK2 vehicle and is PRIMARY_DRIVER</p><p>User is on
+    the home screen</p>
+  steps:
+  - column_name: custom_steps
+    id: 9484
+    case_id: 8999
+    text1: <ol><li>Modify <code>capabilities.status</code> so that it is <code>ENROLLED</code></li><li>Tap
+      on the Additional Driver card</li></ol>
+    text2: null
+    text3: <ol><li>User should see the Additional Driver card enabled</li><li>User
+      should see the Additional Driver screen</li></ol>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 9485
+    case_id: 8999
+    text1: <ol><li>Modify <code>capabilities.status</code> so that it is <code>NOT_ENROLLED</code>
+      or <code>FAILED</code> or <code>EXPIRED</code></li><li>Tap on the Additional
+      Driver card</li></ol>
+    text2: null
+    text3: <ol><li>User should see the Additional Driver card disabled</li><li>User
+      should see the Account Expired modal with options to Cancel/Call</li></ol>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 46206
+    case_id: 8999
+    text1: <ol><li><p>Modify <code>capabilities.status</code> so that it is <code>STOLEN</code></p><figure
+      class="image"><img src="/attachments/view/2918" alt="2918" /></figure></li><li>Tap
+      on the Additional Driver card</li></ol>
+    text2: null
+    text3: <ol><li>User should see ALL CARDS including the Additional Driver card
+      disabled (except for NMAC card)</li><li>User should see 'Vehicle is reported
+      Stolen' message on hero image. and a message under that "Stolen Vehicle Locator
+      has been activated. This automatically disables all services. <br />For questions
+      or updated, speak with a Customer Care Specialist.' </li><li>User should see
+      a Call Customer Care CTA button right under this mesage.</li></ol>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 9486
+    case_id: 8999
+    text1: <ol><li>Modify <code>capabilities.status</code> so that it is <code>UNKNOWN</code></li></ol>
+    text2: null
+    text3: <ol><li>User should not see the Additional Driver card</li></ol>
+    text4: null
+    display_order: 4
+  notes: '<p>[GS] Add phone number when calling:</p><ul><li> The Phone number for
+    an expired module for NNA is: 1855426628</li><li>If you mock the VehicleCapabilities
+    API by using Map Local then, you will see above behaviour on all vehicles</li><li>You
+    can use script for mocking individual VINS</li></ul>'

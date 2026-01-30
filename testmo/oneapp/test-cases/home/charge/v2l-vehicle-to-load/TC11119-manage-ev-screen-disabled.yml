@@ -1,0 +1,39 @@
+testmo:
+  case_id: 11119
+  folder_id: 1454
+  project_id: 2
+  folder_path: home/charge/v2l-vehicle-to-load
+  folder_name_ui: V2L - Vehicle-to-Load
+  created_at: '2024-02-04 10:19:27.410563'
+  updated_at: '2025-12-09 17:40:24.104835'
+  last_sync: '2026-01-30T18:21:07.133416Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/11119
+metadata:
+  name: Manage EV Screen - Disabled
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has an EV AVK2 vehicle</p><p>V2L capability is returning
+    true </p><p>User is on the Charge screen</p>
+  steps:
+  - column_name: custom_steps
+    id: 11761
+    case_id: 11119
+    text1: <p>Tap on the Manage EV button</p>
+    text2: null
+    text3: <p>User should see the Manage EV screen load and open</p><p>V2lStatus API
+      is triggered</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 11762
+    case_id: 11119
+    text1: <p>Data returned for <code>v2lStatus.State</code> is <code>DISABLED</code></p>
+    text2: null
+    text3: <p>User should see the Vehicle-to_Load card in the enabled state. The Vehicle-to_Load
+      card should display the relevant secondary text "Disabled" under the card title</p>
+    text4: null
+    display_order: 2

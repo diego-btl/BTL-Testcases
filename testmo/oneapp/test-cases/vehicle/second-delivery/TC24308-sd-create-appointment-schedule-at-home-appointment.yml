@@ -1,0 +1,33 @@
+testmo:
+  case_id: 24308
+  folder_id: 1453
+  project_id: 2
+  folder_path: vehicle/second-delivery
+  folder_name_ui: Second Delivery
+  created_at: '2024-10-18 14:43:02.701727'
+  updated_at: '2026-01-06 18:51:33.721783'
+  last_sync: '2026-01-30T18:21:06.822798Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/24308
+metadata:
+  name: SD - Create Appointment - Schedule At Home Appointment
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<p>Vehicle is eligible within the valid period from purchase.</p><p>In
+    the Firebase config &gt; <code>"EnableSecondDelivery": "true"</code></p>'
+  steps:
+  - column_name: custom_steps
+    id: 37876
+    case_id: 24308
+    text1: <ol><li>Choose to schedule a <strong>at_home</strong> appointment.</li><li>Select
+      date/time.</li><li>Confirm the appointment.</li><li>Check confirmation.</li></ol>
+    text2: null
+    text3: <p>The virtual appointment is scheduled successfully, and the user receives
+      a confirmation.</p>
+    text4: null
+    display_order: 1
+  notes: '<ul><li>Account: <a href="mailto:alansurenasd@btl.ca">alansurenasd@btl.ca</a>
+    / Nissan@123</li></ul>'

@@ -1,0 +1,125 @@
+testmo:
+  case_id: 1446
+  folder_id: 6807
+  project_id: 2
+  folder_path: demo-mode/home/climate
+  folder_name_ui: Climate
+  created_at: '2023-08-28 20:13:22.194794'
+  updated_at: '2025-12-18 17:01:18.805998'
+  last_sync: '2026-01-30T18:21:08.273085Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/1446
+metadata:
+  name: Demo Mode - Climate - EV2
+  priority: 3
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has EV2 selected</p>
+  steps:
+  - column_name: custom_steps
+    id: 96679
+    case_id: 1446
+    text1: <p>Navigate to <strong>Home</strong> screen &gt; Tap on the <code>Climate</code>
+      card</p>
+    text2: null
+    text3: <p>The Climate screen is displayed:</p><ul><li>Climate Control card</li><li>Scheduled
+      Card</li><li><code>TURN CLIMATE &amp; ACCESSORIES ON </code>CTA</li><li><code>CREATE
+      DELAYED START</code> CTA</li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 96685
+    case_id: 1446
+    text1: <p>Validate the Climate dial and Current temp parameters</p>
+    text2: null
+    text3: <ul><li>The Current Int. Temp should be 70 <i><strong>(Fahrenheit)</strong></i></li><li>The
+      Current Ext. Temp should be <i><strong>&lt;Dynamics value in Fahrenheit&gt;</strong></i></li><li><p>The
+      Target Temp dial should be set to 75</p><figure class="image image_resized"
+      style="width:49.57%;"><img src="/attachments/view/8983" alt="8983" /></figure></li></ul>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 96686
+    case_id: 1446
+    text1: <p>Increase / decrease the target temperature by interacting with the dial
+      or using the + or - buttons</p>
+    text2: null
+    text3: <p>The user should be able to set the desired temperature in Fahrenheit </p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 96687
+    case_id: 1446
+    text1: <p>Validate the climate accessories (defrost and deicer) and interact with
+      them</p>
+    text2: null
+    text3: <p>The screen should display Off / On settings for:</p><ul><li>Defrost
+      &amp; Deicer</li></ul><p>User should be able to toggle the displayed settings</p>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 96680
+    case_id: 1446
+    text1: <p>Tap on a climate schedule</p>
+    text2: null
+    text3: <p>User should see the climate schedule details screen</p>
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 96681
+    case_id: 1446
+    text1: <p>Change details for the climate schedule</p>
+    text2: null
+    text3: <p>User can change details for the climate schedule</p>
+    text4: null
+    display_order: 6
+  - column_name: custom_steps
+    id: 96682
+    case_id: 1446
+    text1: <p>Tap Save/Delete Schedule</p>
+    text2: null
+    text3: <p>User should see a dismissable alert informing them the feature is not
+      available in demo mode</p>
+    text4: null
+    display_order: 7
+  - column_name: custom_steps
+    id: 96683
+    case_id: 1446
+    text1: <p>Tap to toggle climate schedule</p>
+    text2: null
+    text3: <p>User should see climate schedule toggle on/off after the following toasts
+      are displayed:</p><ul><li>Contacting &lt;year and model&gt; to toggle climate
+      schedule...</li><li>Waking &lt;year and model&gt; to toggle climate schedule...</li><li>Initiating
+      toggle climate schedule on &lt;year and model&gt;...</li><li>Climate schedule
+      toggled</li></ul>
+    text4: null
+    display_order: 8
+  - column_name: custom_steps
+    id: 96684
+    case_id: 1446
+    text1: <p>Tap on <code>TURN CLIMATE &amp; ACCESSORIES ON </code>CTA</p>
+    text2: null
+    text3: <p>User should see a dismissable alert informing them the feature is not
+      available in demo mode</p>
+    text4: null
+    display_order: 9
+  - column_name: custom_steps
+    id: 96688
+    case_id: 1446
+    text1: <p>Tap on <code>CREATE DELAYED START</code> CTA</p>
+    text2: null
+    text3: <p>Use is led to the <strong>Delayed Climate Start</strong> screen and
+      the user can change details for the current schedule</p>
+    text4: null
+    display_order: 10
+  - column_name: custom_steps
+    id: 96689
+    case_id: 1446
+    text1: <p>Tap on <code>SAVE DELAYED START</code> cta</p>
+    text2: null
+    text3: <p>A loading state and icon are displayed and the user is taken to the
+      Climate screen, followed by a toast:</p><ul><li>Delayed Start created</li></ul>
+    text4: null
+    display_order: 11

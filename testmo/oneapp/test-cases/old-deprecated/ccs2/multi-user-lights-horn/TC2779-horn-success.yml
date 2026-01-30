@@ -1,0 +1,30 @@
+testmo:
+  case_id: 2779
+  folder_id: 422
+  project_id: 2
+  folder_path: old-deprecated/ccs2/multi-user-lights-horn
+  folder_name_ui: Multi-user lights/horn
+  created_at: '2023-09-08 16:34:28.116625'
+  updated_at: '2026-01-06 17:48:27.745195'
+  last_sync: '2026-01-30T18:21:07.564576Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/2779
+metadata:
+  name: Horn - Success
+  priority: 13
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has sent a horn request<br />User is a PRIMARY_DRIVER or
+    SHARED_DRIVER (to be tested for both for AVK2)</p>
+  steps:
+  - column_name: custom_steps
+    id: 3144
+    case_id: 2779
+    text1: <p>Horn request has resolved into a success</p>
+    text2: null
+    text3: <p>User should see a &lt;model&gt; Horn On toast appear<br /><br />Horn
+      button will have a blinking animation</p>
+    text4: null
+    display_order: 1

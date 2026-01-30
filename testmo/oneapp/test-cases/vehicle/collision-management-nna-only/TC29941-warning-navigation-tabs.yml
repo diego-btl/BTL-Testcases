@@ -1,0 +1,59 @@
+testmo:
+  case_id: 29941
+  folder_id: 3800
+  project_id: 2
+  folder_path: vehicle/collision-management-nna-only
+  folder_name_ui: Collision Management - NNA only
+  created_at: '2025-01-14 19:07:44.826253'
+  updated_at: '2025-01-28 13:39:27.766111'
+  last_sync: '2026-01-30T18:21:06.489514Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/29941
+metadata:
+  name: Warning - Navigation Tabs
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>The user is on the  <code>Collision Report</code> screen</p>
+  steps:
+  - column_name: custom_steps
+    id: 48822
+    case_id: 29941
+    text1: <p>Tap on any  <code>Navigation tab</code></p>
+    text2: null
+    text3: <p>A warning modal appears with the message "<i>All information will be
+      lost if you navigate away,</i>" and options <code>Cancel </code>and<code> Yes,
+      Leave</code> </p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 48823
+    case_id: 29941
+    text1: <p> Tap the <code>Cancel</code> option</p>
+    text2: null
+    text3: <p>The user stays on the current screen, and the warning modal is closed</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 48824
+    case_id: 29941
+    text1: <p>Tap on the <code>Navigation tab</code></p>
+    text2: null
+    text3: <p>A warning modal appears with the message "<code>All information will
+      be lost if you navigate away</code>" and options <code>Cancel </code>and <code>Yes,
+      Leave </code></p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 48825
+    case_id: 29941
+    text1: <p>Tap the <code>Yes, Leave</code> option</p>
+    text2: null
+    text3: <p>The user is redirected to the appropriate navigation screen (e.g., Settings,
+      Support, Map ...).</p>
+    text4: null
+    display_order: 4
+  notes: <p><img src="/attachments/view/3162" alt="3162" /></p><p><img class="image_resized"
+    style="width:51.09%;" src="/attachments/view/3180" alt="3180" /></p>

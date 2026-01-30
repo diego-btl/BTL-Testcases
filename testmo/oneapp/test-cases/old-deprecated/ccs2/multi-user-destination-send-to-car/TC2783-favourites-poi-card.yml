@@ -1,0 +1,49 @@
+testmo:
+  case_id: 2783
+  folder_id: 423
+  project_id: 2
+  folder_path: old-deprecated/ccs2/multi-user-destination-send-to-car
+  folder_name_ui: Multi-user Destination send-to-car
+  created_at: '2023-09-08 16:39:41.059217'
+  updated_at: '2026-01-06 17:49:24.766320'
+  last_sync: '2026-01-30T18:21:07.553828Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/2783
+metadata:
+  name: Favourites POI card
+  priority: 13
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: 'User is viewing POI search results<br />
+
+    User is a PRIMARY_DRIVER or SHARED_DRIVER (to be tested for both for AVK2)'
+  steps:
+  - column_name: custom_steps
+    id: 3148
+    case_id: 2783
+    text1: '1. Tap the heart icon on one of the POI cards<br />
+
+      2. Enter at least one character in the name field<br />
+
+      3. Tap Save Favorite<br />
+
+      4. Force save to fail<br />
+
+      5. Try to Save Favorite again and wait for save to succeed'
+    text2: null
+    text3: '1. User should see a modal appear. Name field should be autofilled if
+      POI has returned a name<br />
+
+      2. User should see Save Favorite become enabled<br />
+
+      3. User should see a loading spinner where the heart icon was<br />
+
+      4. User should see a failure toast and the heart icon should show the non-saved
+      state<br />
+
+      5. User should see a success toast and the heart icon should show the saved
+      state'
+    text4: null
+    display_order: 1

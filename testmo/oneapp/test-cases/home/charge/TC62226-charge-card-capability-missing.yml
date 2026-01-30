@@ -1,0 +1,29 @@
+testmo:
+  case_id: 62226
+  folder_id: 66
+  project_id: 2
+  folder_path: home/charge
+  folder_name_ui: Charge
+  created_at: '2025-12-19 18:45:20.390927'
+  updated_at: '2025-12-19 19:13:37.046627'
+  last_sync: '2026-01-30T18:21:03.918940Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/62226
+metadata:
+  name: Charge Card - Capability missing
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is on the Home screen</p><p>User has an EV</p><p> <code>REMOTE_CHARGING</code>
+    caps is missing</p>
+  steps:
+  - column_name: custom_steps
+    id: 97024
+    case_id: 62226
+    text1: <p>User lands on the home page withpit  <code>REMOTE_CHARGING</code> </p>
+    text2: null
+    text3: <p>Charge card is hidden</p>
+    text4: null
+    display_order: 1

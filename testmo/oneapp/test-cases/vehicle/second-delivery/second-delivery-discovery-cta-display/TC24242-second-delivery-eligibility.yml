@@ -1,0 +1,54 @@
+testmo:
+  case_id: 24242
+  folder_id: 6818
+  project_id: 2
+  folder_path: vehicle/second-delivery/second-delivery-discovery-cta-display
+  folder_name_ui: Second Delivery - Discovery & CTA Display
+  created_at: '2024-10-17 17:01:55.554119'
+  updated_at: '2026-01-06 18:51:58.000168'
+  last_sync: '2026-01-30T18:21:06.907029Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/24242
+metadata:
+  name: Second Delivery - Eligibility
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>User is logged in</li><li>Feature Flag <code>EnableSecondDelivery</code>
+    is set to <code>true</code></li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 97031
+    case_id: 24242
+    text1: "<p>Mock <code>SecondDeliveryEligibility</code> with ineligible response:</p><pre><code>{\n\
+      \  \"eligibility\": {\n    \"__typename\": \"SecondDeliveryEligibilityResponseIneligible\"\
+      \n  }\n}</code></pre><p>Login to app</p>"
+    text2: null
+    text3: <ul><li>Second Delivery Card does NOT appear</li><li>No eligibility indicators
+      displayed</li><li>Only standard vehicle information shown</li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 97032
+    case_id: 24242
+    text1: "<p>Mock <code>SecondDeliveryEligibility</code> with eligible response:</p><pre><code>{\n\
+      \  \"eligibility\": {\n    \"__typename\": \"SecondDeliveryEligibilityResponseRDRRecordFound\"\
+      ,\n    \"hub\": {...},\n    \"leadCar\": {...}\n  },\n  \"cta\": {\n    \"discover\"\
+      : {\n      \"__typename\": \"SecondDeliveryDiscoverCTA\",\n      \"prioritized\"\
+      : true\n    },\n    \"daysSincePurchased\": 10\n  }\n}</code></pre><p>Login\
+      \ to app</p>"
+    text2: null
+    text3: '<ul><li>Eligibility check passed for Second Delivery program</li><li>Second
+      Delivery Card is displayed</li><li>Card title: <code>MyINFINITI Expert</code></li><li>Card
+      subtitle: <code>Discover more about your {vehicle model}</code></li><li>Chevron
+      (&gt;) icon displayed on right</li><li><strong>Card visibility based on prioritization:</strong></li><li>If
+      <code>prioritized: true</code> (daysSincePurchased &lt; 30): Card appears on
+      Home screen AND Vehicle screen at top</li><li>If <code>prioritized: false</code>
+      (daysSincePurchased &gt;= 30): Card appears ONLY on Vehicle screen (not on Home
+      screen)</li></ul>'
+    text4: null
+    display_order: 2
+  notes: '<ul><li>Account: natemie@btl.ca/Telematics123! - INF</li><li>Account: alansurenasd@btl.ca
+    / Nissan@123 - NIS</li></ul>'

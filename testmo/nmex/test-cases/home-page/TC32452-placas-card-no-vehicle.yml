@@ -1,0 +1,28 @@
+testmo:
+  case_id: 32452
+  folder_id: 4085
+  project_id: 6
+  folder_path: home-page
+  folder_name_ui: Home Page
+  created_at: '2025-04-01 19:05:00.709485'
+  updated_at: '2025-04-07 15:30:50.649315'
+  last_sync: '2026-01-30T18:20:45.372264Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/32452
+metadata:
+  name: Placas card - No vehicle
+  priority: 3
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  steps:
+  - column_name: custom_steps
+    id: 52860
+    case_id: 32452
+    text1: <ol><li>Login into the app</li><li>No vehicle is added</li></ol>
+    text2: null
+    text3: <ul><li><strong>NOT</strong> see a button for <code>Agregar Placas</code>
+      and <strong>NO PLACAS CARD</strong></li></ul>
+    text4: null
+    display_order: 1

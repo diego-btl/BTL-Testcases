@@ -1,0 +1,81 @@
+testmo:
+  case_id: 52128
+  folder_id: 49
+  project_id: 2
+  folder_path: home/notifications
+  folder_name_ui: Notifications
+  created_at: '2025-06-13 12:58:26.779458'
+  updated_at: '2025-06-13 15:53:20.988787'
+  last_sync: '2026-01-30T18:21:05.849237Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/52128
+metadata:
+  name: Nissan Energy Notification Preferences - AccountStatus Active
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  steps:
+  - column_name: custom_steps
+    id: 82241
+    case_id: 52128
+    text1: <p>Log into app &gt; Tap on <code>envelope</code> icon from the <strong>Home</strong>
+      screen &gt; Tap on the gear icon</p>
+    text2: null
+    text3: <p>Observe that there is an additional api <code>NissanEnergyNotificationPreferences</code>
+      triggered retrieving the follwoing parameters:</p><ol><li>emailStatus</li><li>pushStatus</li><li>smsStatus</li></ol>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 82242
+    case_id: 52128
+    text1: <p>Mock <code>NissanEnergyNotificationPreferences</code> call to retrieve
+      TRUE values &gt; Go to <code>EV Notification</code> section from the <strong>Notification
+      Preferences</strong> screen</p>
+    text2: null
+    text3: '<p>Verify that there is a new notification called: <code>NISSAN ENERGY
+      Charge Network</code> with toggles displayed as enabled</p>'
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 82243
+    case_id: 52128
+    text1: <p>Mock <code>NissanEnergyNotificationPreferences</code> call to retrieve
+      <i>some</i> NULL values &gt; Go to <code>EV Notification</code> section from
+      the <strong>Notification Preferences</strong> screen</p>
+    text2: null
+    text3: <p>Verify that only the toggle retrieved as null is hidden</p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 82244
+    case_id: 52128
+    text1: <p>Mock <code>NissanEnergyNotificationPreferences</code> call to retrieve
+      FALSE values &gt; Go to <code>EV Notification</code> section from the <strong>Notification
+      Preferences</strong> screen</p>
+    text2: null
+    text3: '<p>Verify that there is a new notification called: <code>NISSAN ENERGY
+      Charge Network</code> with toggles displayed as disabled</p>'
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 82245
+    case_id: 52128
+    text1: <p>Mock <code>NissanEnergyNotificationPreferences</code> call to retrieve
+      NULL values &gt; Go to <code>EV Notification</code> section from the <strong>Notification
+      Preferences</strong> screen</p>
+    text2: null
+    text3: <p>Verify the entire <code>NISSAN ENERGY Charge Network</code> The notification
+      is hidden</p>
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 82246
+    case_id: 52128
+    text1: <p>Tap to collapse and expand the <code>NISSAN ENERGY Charge Network</code>
+      section</p>
+    text2: null
+    text3: <p>Verify user can perform this action without problems</p>
+    text4: null
+    display_order: 6

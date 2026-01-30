@@ -1,0 +1,45 @@
+testmo:
+  case_id: 30112
+  folder_id: 86
+  project_id: 2
+  folder_path: support/faqs
+  folder_name_ui: FAQs
+  created_at: '2025-02-03 19:21:01.988623'
+  updated_at: '2025-09-22 15:08:22.170412'
+  last_sync: '2026-01-30T18:21:06.349829Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/30112
+metadata:
+  name: FAQ Details
+  priority: 12
+  type: functional
+  status: active
+  estimate: 60000000
+  automation: 'no'
+  tags: []
+test_case:
+  steps:
+  - column_name: custom_steps
+    id: 49048
+    case_id: 30112
+    text1: <p>1. Tap an FAQ question</p>
+    text2: null
+    text3: <p>User should be taken to the detail screen to view the question and the
+      answer</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 49049
+    case_id: 30112
+    text1: <p>Tap on a link</p>
+    text2: null
+    text3: <p>User should see the link open in a webview or browser</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 49050
+    case_id: 30112
+    text1: <p>Tap on a phone number</p>
+    text2: null
+    text3: <p>User should see the phone number prepopulated </p>
+    text4: null
+    display_order: 3

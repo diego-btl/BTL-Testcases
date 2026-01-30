@@ -1,0 +1,33 @@
+testmo:
+  case_id: 818
+  folder_id: 48
+  project_id: 2
+  folder_path: settings
+  folder_name_ui: Settings
+  created_at: '2023-08-01 23:08:23.173954'
+  updated_at: '2025-10-06 07:13:12.960973'
+  last_sync: '2026-01-30T18:21:08.664755Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/818
+metadata:
+  name: Terms of Service
+  priority: 12
+  type: functional
+  status: active
+  estimate: 60000000
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is on the Settings screen</p>
+  steps:
+  - column_name: custom_steps
+    id: 987
+    case_id: 818
+    text1: <p>1. Tap Terms of Service<br />2. Tap on a link</p>
+    text2: null
+    text3: <p>1. User should see the terms of use link open in a webview<br />2. User
+      should see link open in webview or browser</p>
+    text4: null
+    display_order: 1
+  notes: '<p>Automation: open a link within terms of service can''t be automated as
+    the whole section is retrieved as one component and can''t search for an individual
+    link</p>'

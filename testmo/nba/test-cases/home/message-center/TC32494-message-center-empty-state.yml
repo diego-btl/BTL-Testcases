@@ -1,0 +1,30 @@
+testmo:
+  case_id: 32494
+  folder_id: 3767
+  project_id: 5
+  folder_path: home/message-center
+  folder_name_ui: Message Center
+  created_at: '2025-04-02 17:57:09.103490'
+  updated_at: '2025-04-02 17:57:19.111067'
+  last_sync: '2026-01-30T18:20:38.077469Z'
+  url: https://bethinklabs.testmo.net/repositories/5/cases/32494
+metadata:
+  name: Message Center - empty state
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>user has entered the message center</p><p>user does not have any
+    inbox messages</p>
+  steps:
+  - column_name: custom_steps
+    id: 53010
+    case_id: 32494
+    text1: <p>User should see the empty state</p><figure class="image"><img src="/attachments/view/4005"
+      alt="4005" /></figure>
+    text2: null
+    text3: null
+    text4: null
+    display_order: 1

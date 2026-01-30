@@ -1,0 +1,73 @@
+testmo:
+  case_id: 61901
+  folder_id: 49
+  project_id: 2
+  folder_path: home/notifications
+  folder_name_ui: Notifications
+  created_at: '2025-10-29 19:50:27.770091'
+  updated_at: '2025-12-05 20:53:55.264666'
+  last_sync: '2026-01-30T18:21:05.618012Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/61901
+metadata:
+  name: Smart Charging Notifications - V1G
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<p>Nissan NNA and NCI only</p><p>EV or EV AVK2 only</p><p>PD only</p><p>"v1GMonitoredChargingAccountStatus":
+    "ACTIVE"</p>'
+  steps:
+  - column_name: custom_steps
+    id: 94746
+    case_id: 61901
+    text1: <p>User is on the Notification Preferences screen</p>
+    text2: null
+    text3: <p>1. Smart Charging Notification section is displayed at the bottom according
+      to the V1GMonitoredChargingAccountStatus API response</p><p>2. There are 4 categories:<br
+      />- New PrimeTime Hours<br />- PrimeTime Upcoming Reminder<br />- Monthly Insights<br
+      />- PrimeTime Stats Updates</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 94747
+    case_id: 61901
+    text1: <p>Expand/Collapse the group/arrows</p>
+    text2: null
+    text3: <p>1. The groups are expanded/collapsed</p><p>2. Notification options (push,
+      email, sms) are shown according to the V1GMonitoredChargingAccountStatus API
+      response </p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 94751
+    case_id: 61901
+    text1: <p>Toggle ON/OFF any of the notifications under any of the notification
+      groups</p>
+    text2: null
+    text3: <p>1. V1GUpdateNotificationPreferences API is triggered, returning the
+      updated value for the updated notification status</p><p>2. Toggle state is updated
+      accordingly </p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 94752
+    case_id: 61901
+    text1: '<p>1. Mock the V1GUpdateNotificationPreferences API response to return
+      "statusCode": "4000/"statusCode": "5000 or breakpoint and abort it</p><p>2.
+      Toggle ON/OFF any of the notifications under any of the notification groups</p>'
+    text2: null
+    text3: <p>1. The SWW modal is NOT displayed</p><p>2. The toggle is quietly moved
+      back to the original position </p>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 94753
+    case_id: 61901
+    text1: <p>1. Mock V1GMonitoredChargingAccountStatus API response to return "v1GMonitoredChargingAccountStatus"
+      =! "ACTIVE"</p><p>2. Navigate to the Notification Preferences screen</p>
+    text2: null
+    text3: <p>Smart Charging Notification section is hidden</p>
+    text4: null
+    display_order: 5

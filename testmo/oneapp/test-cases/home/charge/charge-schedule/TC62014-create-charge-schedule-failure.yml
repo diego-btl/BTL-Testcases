@@ -1,0 +1,60 @@
+testmo:
+  case_id: 62014
+  folder_id: 6781
+  project_id: 2
+  folder_path: home/charge/charge-schedule
+  folder_name_ui: Charge Schedule
+  created_at: '2025-11-21 20:53:30.851903'
+  updated_at: '2025-11-21 21:20:36.261391'
+  last_sync: '2026-01-30T18:21:05.124667Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/62014
+metadata:
+  name: Create Charge Schedule - Failure
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has an EV/EV2</p><p>User is on the Manage EV screen </p><p>There're
+    0, 1 or 2 charge schedules created</p>
+  steps:
+  - column_name: custom_steps
+    id: 95612
+    case_id: 62014
+    text1: <p>Tap the 'Add' button on the 'Scheduled' card</p>
+    text2: null
+    text3: <p>User is redirected to the Charge Schedule screen</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 95613
+    case_id: 62014
+    text1: <p>Set the Start Time, End Time from the dropdowns</p>
+    text2: null
+    text3: <p>1. Selected time is displayed in the Start Time and End Time fields</p><p>2.
+      The 'CREATE SCHEDULE' CTA is disabled</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 95614
+    case_id: 62014
+    text1: <p>Set the day/days for the charge schedule, selecting any option in the
+      Quick Option or Days of the Week sections </p>
+    text2: null
+    text3: <p>1. The particular button/buttons get selected</p><p>2. The 'CREATE SCHEDULE'
+      CTA gets enabled</p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 95615
+    case_id: 62014
+    text1: <p>Tap the 'CREATE SCHEDULE' CTA</p>
+    text2: null
+    text3: '<p>1. The CreateChargeSchedule API is triggered, sending selected parameters
+      in the request</p><p>2. The CheckChargeServiceRequest starts polling; the last
+      API returns "status": "FAILED"</p><p>3. The failure toast ''Charge schedule
+      failed to create'' is displayed</p><p>4. The ''CREATE SCHEDULE'' CTA remains
+      enabled</p>'
+    text4: null
+    display_order: 4

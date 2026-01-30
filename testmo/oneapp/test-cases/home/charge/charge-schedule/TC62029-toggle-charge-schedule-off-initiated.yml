@@ -1,0 +1,37 @@
+testmo:
+  case_id: 62029
+  folder_id: 6781
+  project_id: 2
+  folder_path: home/charge/charge-schedule
+  folder_name_ui: Charge Schedule
+  created_at: '2025-11-21 22:41:11.621938'
+  updated_at: '2026-01-09 21:19:50.168465'
+  last_sync: '2026-01-30T18:21:05.062070Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/62029
+metadata:
+  name: Toggle Charge Schedule OFF - Initiated
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has an EV/EV2</p><p>At least 1 charge schedule exists with
+    the toggle in enabled state</p><p>User is on the Manage EV screen </p>
+  steps:
+  - column_name: custom_steps
+    id: 95696
+    case_id: 62029
+    text1: <p>Tap the toggle OFF for one of the created charge schedule</p>
+    text2: null
+    text3: '<p>1. The ToggleChargeSchedule API is triggered, sending <strong>"enable":
+      false</strong> in the request</p><p>2. The CheckChargeServiceRequest starts
+      polling, returning "status": "PENDING"</p><p>3. The loading state with the Charge
+      icon is displayed</p><p>4. The DeleteChargeSchedule API is triggered</p><p>5.
+      The CheckChargeServiceRequest starts polling, returning "status": "PENDING"</p><p>6.
+      The loading state with the Charge icon is displayed</p><p>7. The toasts are
+      displayed in the following order:<br />- ''Contacting &lt;year model&gt; to
+      toggle charge schedule...''<br />- ''Waking &lt;year model&gt; to toggle charge
+      schedule...''<br />- ''Initiating toggle charge schedule on &lt;year model&gt;...''</p>'
+    text4: null
+    display_order: 1

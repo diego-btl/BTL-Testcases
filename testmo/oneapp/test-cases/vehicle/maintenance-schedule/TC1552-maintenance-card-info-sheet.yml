@@ -1,0 +1,31 @@
+testmo:
+  case_id: 1552
+  folder_id: 91
+  project_id: 2
+  folder_path: vehicle/maintenance-schedule
+  folder_name_ui: Maintenance Schedule
+  created_at: '2023-08-28 20:13:24.005032'
+  updated_at: '2025-10-11 10:18:07.004446'
+  last_sync: '2026-01-30T18:21:08.061757Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/1552
+metadata:
+  name: Maintenance Card Info Sheet
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is on the maintnance schedule details sheet</p>
+  steps:
+  - column_name: custom_steps
+    id: 1917
+    case_id: 1552
+    text1: <p>1. Tap on the "i" icon<br />2. Tap on the "x" icon or pull down the
+      screen</p>
+    text2: null
+    text3: <p>1. User should see the info sheet open with details/differences between
+      Standard/Severe Driving<br />2. User should see the info sheet close and return
+      to the maintenance schedule details sheet</p>
+    text4: null
+    display_order: 1

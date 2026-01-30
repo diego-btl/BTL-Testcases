@@ -1,0 +1,50 @@
+testmo:
+  case_id: 62037
+  folder_id: 6783
+  project_id: 2
+  folder_path: home/nissan-store
+  folder_name_ui: Nissan Store
+  created_at: '2025-11-28 19:24:16.272658'
+  updated_at: '2025-11-28 19:52:40.566133'
+  last_sync: '2026-01-30T18:21:05.040508Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/62037
+metadata:
+  name: 'Home: FOD Store Card Visibility - EVO Vehicles'
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>User logged in</li><li>EVO or ElectricEVO vehicle</li><li><code>vehicle.capabilities.status
+    = ENROLLED</code></li><li>BSM FF = true</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 95714
+    case_id: 62037
+    text1: <p>Log into the app and go to <strong>Home</strong> screen &gt; Scroll
+      to the bottom of the screen</p>
+    text2: null
+    text3: <p>A Store card is displayed at the <strong>bottom position</strong></p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 95715
+    case_id: 62037
+    text1: <p>Validate card text</p>
+    text2: null
+    text3: <p>Validate localization: </p><ul><li><strong>NNA EN:</strong> Nissan Store
+      / MyINFINITI Store</li><li><strong>NCI EN:</strong> same as NNA</li><li><strong>NCI
+      FR:</strong> Magasin Nissan / Boutique MaINFINITI</li><li><strong>NMEX ES:</strong>
+      Tienda Nissan / Tienda MiINFINITI</li></ul>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 95716
+    case_id: 62037
+    text1: <p>Validate card design</p>
+    text2: null
+    text3: <p>Icon matches <a href="https://www.figma.com/design/nfHiD1ESLolBaUblm59SpN/FOD---MyNissan-iOS?node-id=2474-5753&amp;t=MdGLx2Vpy9gqJx9H-0">Figma</a>
+      Home tab design</p>
+    text4: null
+    display_order: 3

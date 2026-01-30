@@ -1,0 +1,31 @@
+testmo:
+  case_id: 841
+  folder_id: 76
+  project_id: 2
+  folder_path: wearables/wearable-telematics
+  folder_name_ui: Wearable - Telematics
+  created_at: '2023-08-01 23:08:23.345918'
+  updated_at: '2024-10-17 17:57:05.010933'
+  last_sync: '2026-01-30T18:21:08.608330Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/841
+metadata:
+  name: Horn & Lights - Success
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has a vehicle that supports horn/lights and is on the telematics
+    screen</p>
+  steps:
+  - column_name: custom_steps
+    id: 1010
+    case_id: 841
+    text1: <p>1. Tap the Horn &amp; Lights button<br />2. Wait for call to succeed</p>
+    text2: null
+    text3: <p>1. Horn &amp; Lights command should be sent. User should see status
+      updates as the call is being made<br />2. User should see the success message
+      (Horn On) for three seconds when the call succeeds</p>
+    text4: null
+    display_order: 1

@@ -1,0 +1,45 @@
+testmo:
+  case_id: 61875
+  folder_id: 6755
+  project_id: 2
+  folder_path: home/charge/v1g-vehicle-to-grid
+  folder_name_ui: V1G - Vehicle-to-Grid
+  created_at: '2025-10-24 18:42:46.058621'
+  updated_at: '2025-12-16 18:20:15.189428'
+  last_sync: '2026-01-30T18:21:05.714954Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/61875
+metadata:
+  name: GrantV1G Feature flag - ON
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>Nissan NNA and NCI only</p><p>User has an EV or EV AVK2 vehicle</p><p>PD
+    only</p>
+  steps:
+  - column_name: custom_steps
+    id: 94675
+    case_id: 61875
+    text1: '<p>1. Mock remote config to "GrantV1G": "{\"enabled\": true, \"checkCapability\":
+      false}" </p><p>2. VehicleCapabilities returns "status" =! "STOLEN" </p><p>3.
+      eVehicleEligibility API returns "v1GEligible": true</p>'
+    text2: null
+    text3: '<p>1. V1GMonitoredChargingAccountStatus API is called when landing on
+      the home page, returning "v1GMonitoredChargingAccountStatus": "ACTIVE"</p><p>2.
+      Status, Optimize, and Insights tabs are displayed</p>'
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 94676
+    case_id: 61875
+    text1: '<p>1. Mock remote config to "GrantV1G": "{\"enabled\": true, \"checkCapability\":
+      false}" </p><p>2. VehicleCapabilities returns "status": "STOLEN" </p>'
+    text2: null
+    text3: '<p>1. eVehicleEligibility API and V1GMonitoredChargingAccountStatus API
+      are not called (note: mocking VehicleCapabilities perform bg/fg or cold start
+      2 times, the API will not be called after the second attempt)</p><p>2. User
+      is blocked from navigating to the Charge screen</p>'
+    text4: null
+    display_order: 2

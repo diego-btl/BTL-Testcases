@@ -1,0 +1,29 @@
+testmo:
+  case_id: 32321
+  folder_id: 4086
+  project_id: 6
+  folder_path: vehicle-page
+  folder_name_ui: Vehicle Page
+  created_at: '2025-04-01 17:50:44.562788'
+  updated_at: '2025-04-02 20:04:57.114410'
+  last_sync: '2026-01-30T18:20:45.658904Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/32321
+metadata:
+  name: Tire Pressure
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>User has an <code>EV/AVK</code> vehicle with a valid subscription</li><li>User
+    is already on the <code>Vehicle Page</code></li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 52692
+    case_id: 32321
+    text1: <p>Validate the Tire Pressure Section</p>
+    text2: null
+    text3: <p>User should see tire pressure information in the <code>Vehicle Page</code></p>
+    text4: null
+    display_order: 1

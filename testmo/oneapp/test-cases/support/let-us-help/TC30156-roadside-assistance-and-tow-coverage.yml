@@ -1,0 +1,33 @@
+testmo:
+  case_id: 30156
+  folder_id: 81
+  project_id: 2
+  folder_path: support/let-us-help
+  folder_name_ui: Let Us Help
+  created_at: '2025-02-05 15:06:27.429679'
+  updated_at: '2025-08-22 12:48:05.714897'
+  last_sync: '2026-01-30T18:21:06.324251Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/30156
+metadata:
+  name: Roadside Assistance and Tow Coverage
+  priority: 12
+  type: functional
+  status: active
+  estimate: 60000000
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>The user is on the Roadside Assistance screen</p>
+  steps:
+  - column_name: custom_steps
+    id: 49070
+    case_id: 30156
+    text1: <p>1. Tap Call Roadside Assistance</p>
+    text2: null
+    text3: '<p>User should be able to call the following number: 1-800-225-2476</p>'
+    text4: null
+    display_order: 1
+  notes: '<ul><li>INF NCI - 1-800-363-4520</li><li>NIS NCI - 1- 800-267-5936</li><li>INF
+    NNA - 1-800-835-0221</li></ul><p>iOS automation: can''t automate tapping on Call
+    CTA as simulator doesn''t have a phone/dialer app to validate number<br />JT:
+    phone number changed for NIS NNA as per https://www.pivotaltracker.com/n/projects/2626604/stories/187546171</p>'

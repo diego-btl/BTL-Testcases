@@ -1,0 +1,30 @@
+testmo:
+  case_id: 687
+  folder_id: 72
+  project_id: 2
+  folder_path: home/nmac-account
+  folder_name_ui: NMAC Account
+  created_at: '2023-08-01 23:08:21.393728'
+  updated_at: '2025-10-14 02:25:48.099481'
+  last_sync: '2026-01-30T18:21:08.842476Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/687
+metadata:
+  name: NMAC app
+  priority: 3
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  steps:
+  - column_name: custom_steps
+    id: 856
+    case_id: 687
+    text1: <p>1. Tap on NMAC card or IFS card for Infiniti</p>
+    text2: null
+    text3: <p>User should see app open a URL which deeplinks the user to an existing
+      NMAC app on their device, or to a website where they can get links to the NMAC
+      app or IFS Account for Infiniti</p>
+    text4: null
+    display_order: 1
+  notes: '<p>Case needs an update: IFS Account in Infiniti</p>'

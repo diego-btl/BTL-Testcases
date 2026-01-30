@@ -1,0 +1,30 @@
+testmo:
+  case_id: 2708
+  folder_id: 412
+  project_id: 2
+  folder_path: vehicle/proactive-maintenance
+  folder_name_ui: Proactive Maintenance
+  created_at: '2023-09-07 21:32:22.598631'
+  updated_at: '2024-10-17 17:57:34.769274'
+  last_sync: '2026-01-30T18:21:07.714201Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/2708
+metadata:
+  name: Proactive Maintenance capability - disabled/missing
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li><code>PROACTIVE_MAINTENANCE</code> is returning <code>false</code>
+    or is missing</li><li>User is on the vehicle tab</li><li>Maintenance Schedule
+    is returning data</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 3073
+    case_id: 2708
+    text1: <ol><li>Tap on the maintenance schedule card</li></ol>
+    text2: null
+    text3: <p>User should not see the proactive maintenance card at the bottom</p>
+    text4: null
+    display_order: 1

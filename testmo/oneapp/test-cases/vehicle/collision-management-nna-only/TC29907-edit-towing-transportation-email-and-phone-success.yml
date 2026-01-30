@@ -1,0 +1,44 @@
+testmo:
+  case_id: 29907
+  folder_id: 3800
+  project_id: 2
+  folder_path: vehicle/collision-management-nna-only
+  folder_name_ui: Collision Management - NNA only
+  created_at: '2025-01-10 18:01:47.286086'
+  updated_at: '2025-01-28 02:01:12.764739'
+  last_sync: '2026-01-30T18:21:06.546372Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/29907
+metadata:
+  name: Edit Towing /Transportation -   Email and Phone Success
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>The user is already on the Edit <code>Towing/Transportation </code>screen </p>
+  steps:
+  - column_name: custom_steps
+    id: 48781
+    case_id: 29907
+    text1: <p>Enter valid email</p>
+    text2: null
+    text3: <p>The user should see the enabled <code>Save</code> button</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 48782
+    case_id: 29907
+    text1: <p>Delete email</p>
+    text2: null
+    text3: <p>The user should see the disabled <code>Save </code>button</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 48783
+    case_id: 29907
+    text1: <p>Enter a completed  Phone Number </p>
+    text2: null
+    text3: <p>The user should see the enabled <code>Save </code>button</p>
+    text4: null
+    display_order: 3

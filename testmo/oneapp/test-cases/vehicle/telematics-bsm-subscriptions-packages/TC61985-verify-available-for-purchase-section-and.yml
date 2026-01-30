@@ -1,0 +1,53 @@
+testmo:
+  case_id: 61985
+  folder_id: 3863
+  project_id: 2
+  folder_path: vehicle/telematics-bsm-subscriptions-packages
+  folder_name_ui: Telematics BSM - Subscriptions Packages
+  created_at: '2025-11-12 13:43:03.599633'
+  updated_at: '2025-12-09 17:22:57.349962'
+  last_sync: '2026-01-30T18:21:05.334630Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/61985
+metadata:
+  name: Verify “Available for Purchase” Section and ProductID Filtering Logic
+  priority: 1
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>A VIN &gt;= MY26 is linked to the user.</li><li><code>EnableTelematicsBSM
+    = True</code>.</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 95444
+    case_id: 61985
+    text1: <p>Navigate to <strong>Vehicle &gt; Subscription Packages</strong>.</p>
+    text2: null
+    text3: <p>Verify <strong>VehicleSubscriptions</strong> and <strong>ProductCatalog</strong>
+      APIs are called</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 95445
+    case_id: 61985
+    text1: <p>Retrieve ProductIDs from both APIs:</p><ul><li>From <strong>VehicleSubscriptions</strong>
+      (active).</li><li>From <strong>ProductCatalog</strong> (available).</li></ul>
+    text2: null
+    text3: <p>Validate each package displayed in the “Available for Purchase” section:</p><ul><li>If
+      a ProductID <strong>exists in VehicleSubscriptions</strong>, it <strong>must
+      NOT appear</strong> in the Available for Purchase list.</li><li>If a ProductID
+      <strong>is not found</strong> in VehicleSubscriptions, it <strong>must appear</strong>
+      in the list.</li></ul>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 95446
+    case_id: 61985
+    text1: <p>Go to “Available for Purchase”</p>
+    text2: null
+    text3: <p>Verify:</p><ul><li>Section contains one card per valid package.</li><li>No
+      duplicates between Active Packages and Available for Purchase.</li><li>Each
+      visible card correctly shows the package name, price, and “Learn More” CTA.</li></ul>
+    text4: null
+    display_order: 3

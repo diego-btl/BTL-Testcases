@@ -1,0 +1,69 @@
+testmo:
+  case_id: 11093
+  folder_id: 411
+  project_id: 2
+  folder_path: home/additional-driver
+  folder_name_ui: Additional Driver
+  created_at: '2023-11-27 09:40:25.299912'
+  updated_at: '2024-10-17 17:57:34.769274'
+  last_sync: '2026-01-30T18:21:07.212116Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/11093
+metadata:
+  name: SD - Code Verification Screen
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is logged into an account with a pending AD invite</p><p>User
+    is on the Code Verification screen</p><p>In order to receive the OTP code, you
+    will need to have mocked user own number in <code>VehiclesStaticData</code> and
+    <code>UserMobileNumber</code> or setting a breakpoint on <code>GenerateOTPForSharedDriver</code>
+    and modifying the request with your own number</p>
+  steps:
+  - column_name: custom_steps
+    id: 11685
+    case_id: 11093
+    text1: null
+    text2: null
+    text3: <p>User should see a section for description text about code verification,
+      an empty field for entering the code, a Send New Code link, and a disabled Verify
+      and Proceed button</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 11686
+    case_id: 11093
+    text1: <p>Tap on the empty field</p>
+    text2: null
+    text3: <p>User should see the number pad appear</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 11687
+    case_id: 11093
+    text1: <p>Enter less than 5 digits</p>
+    text2: null
+    text3: <p>User should see corresponding number shown in the field, Verify and
+      Proceed button remains disabled</p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 11688
+    case_id: 11093
+    text1: <p>Enter 5 digits</p>
+    text2: null
+    text3: <p>User should see corresponding number shown in the field, Verify and
+      Proceed button become enabled</p>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 11689
+    case_id: 11093
+    text1: <p>Tap on delete/backspace</p>
+    text2: null
+    text3: <p>User should see the last number deleted, Verify and Proceed button becomes
+      disabled</p>
+    text4: null
+    display_order: 5

@@ -1,0 +1,30 @@
+testmo:
+  case_id: 61949
+  folder_id: 3863
+  project_id: 2
+  folder_path: vehicle/telematics-bsm-subscriptions-packages
+  folder_name_ui: Telematics BSM - Subscriptions Packages
+  created_at: '2025-11-08 00:43:57.758492'
+  updated_at: '2026-01-20 20:25:17.374296'
+  last_sync: '2026-01-30T18:21:05.475582Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/61949
+metadata:
+  name: CANCEL SUBSCRIPTION CTA visible for active paid subscription
+  priority: 1
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>EnableTelematicsBSM FF = true</li><li>subscriptionServiceType
+    = "Subscription"</li><li>subscriptionEndDate = null or 0</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 95276
+    case_id: 61949
+    text1: <p>Launch the app &gt; Navigate to the <strong>Vehicle screen &gt; </strong>Tap
+      on <strong>Subscription Packages</strong>.</p>
+    text2: null
+    text3: <p>Verify <code>CANCEL SUBSCRIPTION</code> CTA is visible at bottom (non-sticky)</p>
+    text4: null
+    display_order: 1

@@ -1,0 +1,29 @@
+testmo:
+  case_id: 746
+  folder_id: 46
+  project_id: 2
+  folder_path: map
+  folder_name_ui: Map
+  created_at: '2023-08-01 23:08:22.150120'
+  updated_at: '2025-08-22 12:43:25.256633'
+  last_sync: '2026-01-30T18:21:08.821132Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/746
+metadata:
+  name: Category Chips
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is on Map tab</p>
+  steps:
+  - column_name: custom_steps
+    id: 915
+    case_id: 746
+    text1: <p>1. Tap any of the category search chips</p>
+    text2: null
+    text3: <p>User should see the category text in the search bar and the category
+      text should be used to show search results on the map screen</p>
+    text4: null
+    display_order: 1

@@ -1,0 +1,32 @@
+testmo:
+  case_id: 32221
+  folder_id: 4086
+  project_id: 6
+  folder_path: vehicle-page
+  folder_name_ui: Vehicle Page
+  created_at: '2025-04-01 17:50:43.900138'
+  updated_at: '2025-10-20 18:42:55.349964'
+  last_sync: '2026-01-30T18:20:45.850282Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/32221
+metadata:
+  name: No Vehicle
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is signed in to an account with no vehicles</p>
+  steps:
+  - column_name: custom_steps
+    id: 52603
+    case_id: 32221
+    text1: <ol><li>Launch app to home screen</li><li>Tap on Vehicle tab</li><li>Tap
+      on Map tab</li></ol>
+    text2: null
+    text3: <ul><li>User should see the no vehicle home screen (only support button
+      and add vehicle are enabled)</li><li>User should see the no vehicle vehicle
+      screen (everything is disabled)</li><li>User should see the no vehicle map screen
+      (everything is disabled)</li></ul>
+    text4: null
+    display_order: 1

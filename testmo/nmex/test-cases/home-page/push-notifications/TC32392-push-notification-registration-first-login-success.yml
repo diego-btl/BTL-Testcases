@@ -1,0 +1,36 @@
+testmo:
+  case_id: 32392
+  folder_id: 4159
+  project_id: 6
+  folder_path: home-page/push-notifications
+  folder_name_ui: Push Notifications
+  created_at: '2025-04-01 17:50:45.074428'
+  updated_at: null
+  last_sync: '2026-01-30T18:20:45.460947Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/32392
+metadata:
+  name: Push Notification Registration - First Login Success
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<ol><li>Feature Flag: <code>EnableNewMutationForPushNotificationRegistration</code><ol><li>Enabled:
+    <code>true</code> --&gt; <code>RegisterDeviceForPushNotifications</code> endpoint</li></ol></li><li>No
+    token is cached (e.g., clean installation).</li></ol><p><br /> </p>'
+  steps:
+  - column_name: custom_steps
+    id: 52761
+    case_id: 32392
+    text1: '<p>Login to app</p>
+
+      <p>Close the app and reopen</p>'
+    text2: null
+    text3: "<p>Verify <code>RegisterDeviceForPushNotifications</code> call is made.</p><pre><code\
+      \ class=\"editor-plain language-plain code-block\">Example response:\n{\n  \"\
+      data\": {\n    \"registerDeviceForPushNotifications\": {\n      \"__typename\"\
+      : \"GeneralMessage\",\n      \"message\": \"Device Registered successfully\"\
+      \n    }\n  }\n}</code></pre>\n<p>There shouldn't be any additional call to <code>RegisterDeviceForPushNotifications</code></p>"
+    text4: null
+    display_order: 1

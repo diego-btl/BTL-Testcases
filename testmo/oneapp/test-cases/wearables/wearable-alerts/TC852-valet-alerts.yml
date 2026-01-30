@@ -1,0 +1,44 @@
+testmo:
+  case_id: 852
+  folder_id: 77
+  project_id: 2
+  folder_path: wearables/wearable-alerts
+  folder_name_ui: Wearable - Alerts
+  created_at: '2023-08-01 23:08:23.430629'
+  updated_at: '2025-04-30 14:33:19.694750'
+  last_sync: '2026-01-30T18:21:08.576980Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/852
+metadata:
+  name: Valet Alerts
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is on the Alerts page</p>
+  steps:
+  - column_name: custom_steps
+    id: 1021
+    case_id: 852
+    text1: <ol><li>Tap the Valet Alert toggle</li><li>User should see a list of all
+      existing valet alerts</li><li>The user tap in the toggle button</li><li>The
+      request was successful</li></ol>
+    text2: null
+    text3: <ul><li>User should be able to toggle the alert on/off and see a spinner
+      until the call is complete</li><li>When The Alert Success the toggle gets updated
+      properly</li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 1147
+    case_id: 852
+    text1: <ol><li>Tap the Valet Alert toggle</li><li>User should see a list of all
+      existing valet alerts</li><li>The user tap in the toggle button</li><li>The
+      request fails</li></ol>
+    text2: null
+    text3: <ul><li>User should be able to toggle the alert on/off and see a spinner
+      until the call is complete</li><li>When The Alert Success the "Your valet alert
+      alert failed to turn on, Please try your request again" message  should be displayed</li></ul>
+    text4: null
+    display_order: 2

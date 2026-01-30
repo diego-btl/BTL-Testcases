@@ -1,0 +1,30 @@
+testmo:
+  case_id: 602
+  folder_id: 59
+  project_id: 2
+  folder_path: home/quick-actions/lock-unlock
+  folder_name_ui: Lock/Unlock
+  created_at: '2023-08-01 23:08:20.311281'
+  updated_at: '2025-09-19 18:16:09.070065'
+  last_sync: '2026-01-30T18:21:09.072681Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/602
+metadata:
+  name: Lock - Success - TCU2K
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has a TCU2K vehicle</p><p>User has sent a lock request</p>
+  steps:
+  - column_name: custom_steps
+    id: 771
+    case_id: 602
+    text1: <p>Lock request has resolved into a success</p>
+    text2: null
+    text3: <p>User should see a toast "&lt;year and model&gt; locked." at the bottom
+      of the screen.</p><p>"Lock" and "Unlock" buttons are displayed in the default
+      state.</p>
+    text4: null
+    display_order: 1

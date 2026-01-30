@@ -1,0 +1,67 @@
+testmo:
+  case_id: 41879
+  folder_id: 3800
+  project_id: 2
+  folder_path: vehicle/collision-management-nna-only
+  folder_name_ui: Collision Management - NNA only
+  created_at: '2025-06-09 22:00:28.184481'
+  updated_at: '2025-06-09 22:08:35.089244'
+  last_sync: '2026-01-30T18:21:05.907904Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/41879
+metadata:
+  name: Photos Screen -  Add Photo  from Gallery - Success
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>User is on the<code> Photos</code> screen</li><li>App has
+    permission to access the device’s photo gallery </li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 71962
+    case_id: 41879
+    text1: <p>Tap any photo placeholder or camera icon</p>
+    text2: null
+    text3: <p>System pop-up appears with:</p><ul><li> Add from Gallery</li><li>Take
+      a Photo</li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 71963
+    case_id: 41879
+    text1: <p>Tap Add from Gallery</p>
+    text2: null
+    text3: <p>The device’s gallery opens for selection</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 71964
+    case_id: 41879
+    text1: <p>Select a photo from Gallery</p>
+    text2: null
+    text3: <p>User is navigated to the Photo Details screen</p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 71965
+    case_id: 41879
+    text1: <p>Verify Photo Details Screen</p>
+    text2: null
+    text3: '<p>Details screen showing the: </p><ul><li>Photo preview is displayed</li><li>Photo
+      name is shown (non-editable)</li><li>Buttons: Use Photo, Add Different Photo,
+      Delete Photo</li></ul>'
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 71966
+    case_id: 41879
+    text1: <p>Tap <code>Use Photo</code></p>
+    text2: null
+    text3: <ul><li>The app triggers the <code>UploadPhotoForCollisionReport </code>API</li><li>A
+      loading state is shown during the request</li><li>User is redirected to the
+      <code>Photos</code> screen</li><li>The uploaded photo is shown in the photo
+      grid</li></ul>
+    text4: null
+    display_order: 5

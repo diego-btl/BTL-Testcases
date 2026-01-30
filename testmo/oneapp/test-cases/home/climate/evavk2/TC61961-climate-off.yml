@@ -1,0 +1,39 @@
+testmo:
+  case_id: 61961
+  folder_id: 6778
+  project_id: 2
+  folder_path: home/climate/evavk2
+  folder_name_ui: EVAVK2
+  created_at: '2025-11-10 18:39:30.870629'
+  updated_at: '2025-11-14 23:08:50.964069'
+  last_sync: '2026-01-30T18:21:05.420348Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/61961
+metadata:
+  name: Climate off
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>Climate is turned on </p>
+  steps:
+  - column_name: custom_steps
+    id: 95535
+    case_id: 61961
+    text1: <p>Tap on Turn Climate off</p>
+    text2: null
+    text3: <p>. User should see Stop Climate button disable and status shows loading
+      state<br /><br />User should see a toast message that transitions from (3 seconds
+      each):<br />Contacting {vehicle model} to turn {on/off} climate...<br />Waking
+      {vehicle model} to turn {on/off} climate...<br />Initiating climate {on/off}
+      for {vehicle model}...</p><p>User should see a toast saying<br />'{vehicle model}
+      climate turned {on/off}.' (5 seconds)<br /><br />User should see button update
+      to Stop Climate button<br /><br />User should see Climate status update to show
+      climate off state (Off label, temperature dial shows grey)</p><p>On home screen,
+      while the toasts are showing, the Climate button is disabled </p><p>After success
+      toast, the climate icon doesn't show on Hero image</p><p>And Climate card on
+      Home screen reads sub text Off. - Interior Temp &lt;the temp&gt; F for NNA,
+      C for NCI</p>
+    text4: null
+    display_order: 1

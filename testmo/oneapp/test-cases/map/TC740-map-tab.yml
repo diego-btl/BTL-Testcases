@@ -1,0 +1,28 @@
+testmo:
+  case_id: 740
+  folder_id: 46
+  project_id: 2
+  folder_path: map
+  folder_name_ui: Map
+  created_at: '2023-08-01 23:08:22.071773'
+  updated_at: '2025-09-19 18:41:52.249469'
+  last_sync: '2026-01-30T18:21:08.833313Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/740
+metadata:
+  name: Map tab
+  priority: 1
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is logged in</p>
+  steps:
+  - column_name: custom_steps
+    id: 909
+    case_id: 740
+    text1: <p>1. Tap on Map tab</p>
+    text2: null
+    text3: <p>User should see the Map screen</p>
+    text4: null
+    display_order: 1

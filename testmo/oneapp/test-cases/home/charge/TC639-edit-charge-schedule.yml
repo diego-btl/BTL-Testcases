@@ -1,0 +1,35 @@
+testmo:
+  case_id: 639
+  folder_id: 66
+  project_id: 2
+  folder_path: home/charge
+  folder_name_ui: Charge
+  created_at: '2023-08-01 23:08:20.781125'
+  updated_at: '2025-09-22 14:39:45.452236'
+  last_sync: '2026-01-30T18:21:08.970603Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/639
+metadata:
+  name: Edit Charge Schedule
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is on Charge screen with existing charge schedule</p>
+  steps:
+  - column_name: custom_steps
+    id: 808
+    case_id: 639
+    text1: <p>1. Tap on an existing Charge Schedule<br />2. Modify start/end time
+      and days of the week<br />3. Tap to Save Schedule</p>
+    text2: null
+    text3: '<p>1. User should see Charge Schedule screen with schedule details filled
+      in and save button disabled<br />2. User should see corresponding modifications
+      made to start/end time and days of the week and save button enable<br />3. User
+      should see a loading spinner while schedule is being saved<br />User should
+      see a success toast if schedule was saved successfully<br />User should be returned
+      to the Charge screen with modified schedule shown<br /><br />Note: If save schedule
+      fails, user should see a failure toast and remain on the Charge Schedule screen</p>'
+    text4: null
+    display_order: 1

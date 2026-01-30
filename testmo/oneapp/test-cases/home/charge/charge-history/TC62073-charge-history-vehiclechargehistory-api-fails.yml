@@ -1,0 +1,81 @@
+testmo:
+  case_id: 62073
+  folder_id: 2443
+  project_id: 2
+  folder_path: home/charge/charge-history
+  folder_name_ui: Charge History
+  created_at: '2025-12-02 18:44:39.271792'
+  updated_at: '2025-12-02 22:22:53.880928'
+  last_sync: '2026-01-30T18:21:04.934569Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/62073
+metadata:
+  name: Charge History - VehicleChargeHistory API fails
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is a PD and has an EV/EV2</p><p>None of the FF is checked</p><p>User
+    is on the Manage EV screen &gt; Charge History card is in the enabled state (it
+    should always be enabled for PD)</p><p>EV &gt; VehicleCapabilities &gt; "DRIVING_ANALYSIS"
+    is true</p><p>EV2 &gt; VehicleCapabilities &gt; "CHARGE_HISTORY" is true</p><p>The
+    app is fresh installed</p>
+  steps:
+  - column_name: custom_steps
+    id: 95867
+    case_id: 62073
+    text1: <p>1. User is on the 'In-network' tab</p><p>1. Add a breakpoint to the
+      VehicleChargeHistory API</p><p>3. Tap the 'All Sessions' tab</p>
+    text2: null
+    text3: <p>1. VehicleChargeHistory API is triggered and failed</p><p>2. User is
+      navigated to the All Sessions tab</p><p>3. The 'Something Went Wrong' modal
+      with the copy 'Sorry, something went wrong. Please try again.' and buttons 'Cancel'
+      and 'Retry' is displayed</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 95868
+    case_id: 62073
+    text1: <p>Tap the 'Cancel' button</p>
+    text2: null
+    text3: <p>1. The modal is dismissed</p><p>2. User remains on the In-network tab</p><p>3.
+      The copy ' No Charge History' is displayed on the screen</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 95869
+    case_id: 62073
+    text1: <p>Tap the 'Refresh' button</p>
+    text2: null
+    text3: <p>1. VehicleChargeHistory API is triggered and failed</p><p>2. The 'Something
+      Went Wrong' modal with the copy 'Sorry, something went wrong. Please try again.'
+      and buttons 'Cancel' and 'Retry' is displayed</p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 95870
+    case_id: 62073
+    text1: <p>Tap the 'Retry' button</p>
+    text2: null
+    text3: <p>The VehicleChargeHistory API is triggered again</p>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 95871
+    case_id: 62073
+    text1: <p>Tap 'Execute' to return the data for the VehicleChargeHistory API response</p>
+    text2: null
+    text3: <p>UI shows the correct data according to the  returned VehicleChargeHistory
+      API response</p>
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 95874
+    case_id: 62073
+    text1: <p>Navigate to the In-network tab and return to the All Sessions tab</p>
+    text2: null
+    text3: <p>1. VehicleChargeHistory API is not triggered </p><p>2. The previously
+      cached data is displayed</p>
+    text4: null
+    display_order: 6

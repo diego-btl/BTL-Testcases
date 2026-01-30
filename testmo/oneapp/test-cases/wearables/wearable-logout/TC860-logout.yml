@@ -1,0 +1,30 @@
+testmo:
+  case_id: 860
+  folder_id: 80
+  project_id: 2
+  folder_path: wearables/wearable-logout
+  folder_name_ui: Wearable - Logout
+  created_at: '2023-08-01 23:08:23.496007'
+  updated_at: '2025-09-19 21:20:55.587734'
+  last_sync: '2026-01-30T18:21:08.552341Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/860
+metadata:
+  name: Logout
+  priority: 1
+  type: functional
+  status: active
+  estimate: 60000000
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>Mobile App is logged in with a valid account with a Connected
+    Vehicle</li><li>Mobile App is open</li><li>Wearable App is open</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 1029
+    case_id: 860
+    text1: <p>Logout from the Mobile App and validate the Wearable App</p>
+    text2: null
+    text3: <p>User should be logged out on the Wearable App</p>
+    text4: null
+    display_order: 1

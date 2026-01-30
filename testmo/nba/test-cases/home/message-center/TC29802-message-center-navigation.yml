@@ -1,0 +1,35 @@
+testmo:
+  case_id: 29802
+  folder_id: 3767
+  project_id: 5
+  folder_path: home/message-center
+  folder_name_ui: Message Center
+  created_at: '2024-12-20 15:21:40.308281'
+  updated_at: null
+  last_sync: '2026-01-30T18:20:38.393599Z'
+  url: https://bethinklabs.testmo.net/repositories/5/cases/29802
+metadata:
+  name: Message Center - Navigation
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  steps:
+  - column_name: custom_steps
+    id: 48629
+    case_id: 29802
+    text1: <p>Tap on message center icon on home page</p>
+    text2: null
+    text3: <p>User should see message center open</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 48630
+    case_id: 29802
+    text1: <p>Tap on the back chevron</p>
+    text2: null
+    text3: <p>User should be navigated back to home</p>
+    text4: null
+    display_order: 2

@@ -1,0 +1,32 @@
+testmo:
+  case_id: 1551
+  folder_id: 91
+  project_id: 2
+  folder_path: vehicle/maintenance-schedule
+  folder_name_ui: Maintenance Schedule
+  created_at: '2023-08-28 20:13:23.987010'
+  updated_at: '2024-10-17 17:57:05.010933'
+  last_sync: '2026-01-30T18:21:08.064131Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/1551
+metadata:
+  name: Vehicle Mileage Update Now CTA
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<p>App hasn''t returned/User hasn''t entered mileage data for over
+    3 months</p><p><code>VehicleDynamicData</code> call &gt; Mock the m<code>ileage</code>
+    &gt; <code>recordedTime</code></p><p><code>"mileage": {</code><br /><code>...</code><br
+    /><code>"recordedTime": "2023-09-20T03:02:47.000Z",</code><br /><code>}</code></p>'
+  steps:
+  - column_name: custom_steps
+    id: 1916
+    case_id: 1551
+    text1: <p>Tap on Update Now CTA</p>
+    text2: null
+    text3: <p>User should be able to update their mileage and see the card timestamp
+      update</p>
+    text4: null
+    display_order: 1

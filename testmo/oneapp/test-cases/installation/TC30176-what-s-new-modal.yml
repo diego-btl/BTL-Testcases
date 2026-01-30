@@ -1,0 +1,80 @@
+testmo:
+  case_id: 30176
+  folder_id: 39
+  project_id: 2
+  folder_path: installation
+  folder_name_ui: Installation
+  created_at: '2025-02-06 17:55:47.012906'
+  updated_at: '2025-04-29 20:23:26.305816'
+  last_sync: '2026-01-30T18:21:06.285368Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/30176
+metadata:
+  name: What's New Modal
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<p>In Firebase (on proxyman), you should see the field <code>WhatsNew</code>
+    parameter with some value against it. Below is an example. </p><p> <code>"WhatsNew":
+    "{\"version\":\"6.4.27\",\"messages\":[\"This is the WNM For NNA Only!\",\"And
+    just for Android 6.4.27\",\"We''re good!\"]}"</code></p><figure class="image"><img
+    src="/attachments/view/3194" alt="3194" /></figure><figure class="image"><img
+    src="/attachments/view/3193" alt="3193" /></figure><p>In Firebase console, under
+    Remote Config, ensure  that there are parameters/conditions for the version you
+    are testing on. We are doing this to ensure that the app picks up new copy from
+    Firebase dynamically. Example screenshots above. </p><figure class="image"><img
+    src="/attachments/view/3195" alt="3195" /></figure>'
+  steps:
+  - column_name: custom_steps
+    id: 49118
+    case_id: 30176
+    text1: <p>Install an older version of app. </p>
+    text2: null
+    text3: <p>Then Onboarding cards should show </p><p>Whats new Modal should show**
+      only if onboarding cards DON'T show</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 49119
+    case_id: 30176
+    text1: <p>If What's new Modal shows, then Tap on Don't show this again</p>
+    text2: null
+    text3: null
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 49120
+    case_id: 30176
+    text1: <p>Exit out of app</p>
+    text2: null
+    text3: null
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 49121
+    case_id: 30176
+    text1: <p>Go back to app</p>
+    text2: null
+    text3: <p>You shouldn't see onboarding cards and the What's new Modal</p>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 49122
+    case_id: 30176
+    text1: <p>You can also log out and log back in</p>
+    text2: null
+    text3: <p>You shouldn't see onboarding cards and the What's new Modal</p>
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 49123
+    case_id: 30176
+    text1: <p>Now update the app version to the version that's configured in Firebase
+      Console (with the new copy)</p>
+    text2: null
+    text3: <p>You should NOT see onboarding cards</p><p>You should see the What's
+      new Modal with the new copy</p>
+    text4: null
+    display_order: 6

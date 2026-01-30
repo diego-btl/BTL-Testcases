@@ -1,0 +1,34 @@
+testmo:
+  case_id: 640
+  folder_id: 66
+  project_id: 2
+  folder_path: home/charge
+  folder_name_ui: Charge
+  created_at: '2023-08-01 23:08:20.794248'
+  updated_at: '2025-10-14 01:13:45.683015'
+  last_sync: '2026-01-30T18:21:08.967998Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/640
+metadata:
+  name: Toggle Charge Schedule
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is on Manage EV screen with existing charge schedule</p>
+  steps:
+  - column_name: custom_steps
+    id: 809
+    case_id: 640
+    text1: <p>1. Tap to toggle charge schedule on/off</p>
+    text2: null
+    text3: '<p>1. User should see loading spinner while charge schedule is toggling<br
+      />User should see toggle change state and a success toast if toggling is successful<br
+      /><br />Note: If toggling schedule fails, user should see a failure toast with
+      toggle state unchanged</p>'
+    text4: null
+    display_order: 1
+  notes: '<p>Automation: can''t automate failure scenario as it required mocking call<br
+    /><br />Need to add cases when "EnableV2L": "true/false", from Firebase config</p><p><br
+    /> </p>'

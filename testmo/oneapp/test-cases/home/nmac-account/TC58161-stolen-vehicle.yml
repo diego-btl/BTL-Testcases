@@ -1,0 +1,29 @@
+testmo:
+  case_id: 58161
+  folder_id: 72
+  project_id: 2
+  folder_path: home/nmac-account
+  folder_name_ui: NMAC Account
+  created_at: '2025-08-14 20:05:49.059781'
+  updated_at: '2025-08-14 20:09:21.930806'
+  last_sync: '2026-01-30T18:21:05.806687Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/58161
+metadata:
+  name: STOLEN VEHICLE
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>vehicle status is STOLEN in Capabilities, </p>
+  steps:
+  - column_name: custom_steps
+    id: 88868
+    case_id: 58161
+    text1: <p>Log in to app</p>
+    text2: null
+    text3: <p>On Home screen, most cards will be disabled but NMAC will stay enabled
+      and clickable</p>
+    text4: null
+    display_order: 1

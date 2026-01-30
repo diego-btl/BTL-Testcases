@@ -1,0 +1,34 @@
+testmo:
+  case_id: 780
+  folder_id: 101
+  project_id: 2
+  folder_path: map/route-planner
+  folder_name_ui: Route Planner
+  created_at: '2023-08-01 23:08:22.589219'
+  updated_at: '2025-12-02 19:35:24.485241'
+  last_sync: '2026-01-30T18:21:08.735387Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/780
+metadata:
+  name: Route Info Drawer - Expanded
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>The user is in the <strong>Estimate Route*</strong> screen</li><li>The
+    user already pass the create route first step</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 949
+    case_id: 780
+    text1: <ol><li>Drag to expand info drawer</li><li>Tap on Back button</li></ol>
+    text2: null
+    text3: <ul><li>User should see info drawer maximize showing additional information:<ul><li>Total
+      time of the route + distance</li><li><code>EDIT ROUTE</code> button</li><li>Departure
+      date/time</li><li>Arrival date/time</li><li>Charge time</li><li>Origin, stops,
+      EV waypoints, destination and their corresponding address, time, charge time
+      (for EV waypoints), and battery level</li><li><code>+ADD A STOP</code> button</li><li><strong>Save</strong>
+      button</li></ul></li></ul>
+    text4: null
+    display_order: 1

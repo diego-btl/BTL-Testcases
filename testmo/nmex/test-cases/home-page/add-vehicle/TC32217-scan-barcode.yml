@@ -1,0 +1,31 @@
+testmo:
+  case_id: 32217
+  folder_id: 4145
+  project_id: 6
+  folder_path: home-page/add-vehicle
+  folder_name_ui: Add vehicle
+  created_at: '2025-04-01 17:50:43.873957'
+  updated_at: '2025-10-22 15:51:18.611635'
+  last_sync: '2026-01-30T18:20:45.854582Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/32217
+metadata:
+  name: Scan Barcode
+  priority: 3
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has accepted camera permissions</p>
+  steps:
+  - column_name: custom_steps
+    id: 52599
+    case_id: 32217
+    text1: <p>Tap on Scan Barcode and Scan the following:</p><figure class="image"><img
+      src="/attachments/view/8561" alt="8561" /></figure>
+    text2: null
+    text3: <ul><li>User should be able to scan their VIN barcode and see the VIN field
+      populate</li><li>It should load <code>2C4RDGCG0FR805928</code> on the VIN text
+      field</li></ul>
+    text4: null
+    display_order: 1

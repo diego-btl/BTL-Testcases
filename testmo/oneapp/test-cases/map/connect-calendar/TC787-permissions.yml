@@ -1,0 +1,63 @@
+testmo:
+  case_id: 787
+  folder_id: 103
+  project_id: 2
+  folder_path: map/connect-calendar
+  folder_name_ui: Connect Calendar
+  created_at: '2023-08-01 23:08:22.966277'
+  updated_at: '2025-12-19 15:39:12.352575'
+  last_sync: '2026-01-30T18:21:08.703274Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/787
+metadata:
+  name: Permissions
+  priority: 2
+  type: functional
+  status: active
+  estimate: 300000000
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>The user selects an <code>EV</code> or <code>EVAVK2</code>
+    vehicles</li><li>The user is in the <strong>Map</strong> screen</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 956
+    case_id: 787
+    text1: <ol><li>Check the <strong>Route Planner</strong> section</li></ol>
+    text2: null
+    text3: <ul><li>The user should see the <strong>Connect Calendar</strong> option</li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 1262
+    case_id: 787
+    text1: <ol><li>Tap the <strong>Connect Calendar</strong> card for the first time</li></ol>
+    text2: null
+    text3: <ul><li>The user should see the calendar permissions modal</li></ul>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 1263
+    case_id: 787
+    text1: <ol><li>Deny permissions</li></ol>
+    text2: null
+    text3: <ul><li>The user should see the modal close and remain on the same page</li></ul>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 1264
+    case_id: 787
+    text1: <ol><li>Tap on the card again</li></ol>
+    text2: null
+    text3: <ul><li>The user should see unable to access the calendar modal</li></ul>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 1265
+    case_id: 787
+    text1: <ol><li>Tap on Cancel/Settings</li></ol>
+    text2: null
+    text3: <ul><li>Cancel will close the modal, and Settings will bring users to app
+      settings where they can enable calendar permissions</li></ul>
+    text4: null
+    display_order: 5

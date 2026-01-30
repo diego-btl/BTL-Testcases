@@ -1,0 +1,35 @@
+testmo:
+  case_id: 550
+  folder_id: 105
+  project_id: 2
+  folder_path: old-deprecated
+  folder_name_ui: Old / Deprecated
+  created_at: '2023-08-01 23:08:19.619026'
+  updated_at: '2025-09-19 21:13:59.475462'
+  last_sync: '2026-01-30T18:21:09.207549Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/550
+metadata:
+  name: Biometrics
+  priority: 13
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is on the login screen and has not yet used biometrics</p>
+  steps:
+  - column_name: custom_steps
+    id: 719
+    case_id: 550
+    text1: <p>1. Tap the face/touch ID icon<br />2. Sign in<br />3. Accept the biometric
+      alert<br />4. Accept the iOS biometrics permissions</p>
+    text2: null
+    text3: '<p>1. User should see an alert explaining how to turn on biometrics<br
+      />2. User should see an biometric alert<br />3. User should see the iOS biometrics
+      permissions modal (for Face ID)<br />4. User should see biometric authentication
+      should occur to enable biometrics. If biometric authentication fails twice,
+      user should see the fallback alert with the option to enter password to enable
+      biometrics<br /><br />Note: If user declines either of pop ups, biometrics should
+      be disabled</p>'
+    text4: null
+    display_order: 1

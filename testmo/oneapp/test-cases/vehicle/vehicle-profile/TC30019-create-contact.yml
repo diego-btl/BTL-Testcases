@@ -1,0 +1,41 @@
+testmo:
+  case_id: 30019
+  folder_id: 90
+  project_id: 2
+  folder_path: vehicle/vehicle-profile
+  folder_name_ui: Vehicle Profile
+  created_at: '2025-01-21 17:11:01.149637'
+  updated_at: '2025-10-16 16:59:39.171198'
+  last_sync: '2026-01-30T18:21:06.389237Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/30019
+metadata:
+  name: Create Contact
+  priority: 3
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is on the Emergency Contacts sheet and has less than 4 emergency
+    contacts already created</p>
+  steps:
+  - column_name: custom_steps
+    id: 48901
+    case_id: 30019
+    text1: '<p>1. Tap + ADD A CONTACT<br />2. Fill in all the required information
+      ensuring the criteria is met for each field<br />3. Tap SAVE<br />4. Wait for
+      saving to succeed<br /><br />Emergency Contact Criteria:<br />First name: At
+      least 2 characters entered (letters &amp; numbers only, no special characters)<br
+      />Last name: At least 2 characters entered (letters &amp; numbers only, no special
+      characters)<br />Primary phone: Exactly 10 digits entered<br />Relationship:
+      An item selected</p>'
+    text2: null
+    text3: '<p>1. User should be taken to the Add a Contact sheet<br />2. User should
+      see SAVE button should be enabled when they fill in all fields<br />3. User
+      should see all fields become disabled and a loading state as the saving call
+      is being made<br />4. User should be brought back to the emergency contacts
+      screen and see updated data when saving succeeds<br /><br />NOTE: If saving
+      fails, there should no longer be a loading state and user should see fields
+      become enabled</p>'
+    text4: null
+    display_order: 1

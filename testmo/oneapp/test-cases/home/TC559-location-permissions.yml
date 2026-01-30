@@ -1,0 +1,32 @@
+testmo:
+  case_id: 559
+  folder_id: 44
+  project_id: 2
+  folder_path: home
+  folder_name_ui: Home
+  created_at: '2023-08-01 23:08:19.731524'
+  updated_at: '2024-10-17 17:56:23.776593'
+  last_sync: '2026-01-30T18:21:09.187420Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/559
+metadata:
+  name: Location Permissions
+  priority: 3
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  steps:
+  - column_name: custom_steps
+    id: 728
+    case_id: 559
+    text1: null
+    text2: null
+    text3: <p>Location permission prompt appears once the home screen loads<br /><br
+      />Available options:<br />- Precise - on/off<br />- Allow Once<br />- Allow
+      While Using App<br />- Don't Allow (will not be able to use features relating
+      to user location until access has been allowed)</p>
+    text4: null
+    display_order: 1
+  notes: <p>The Location Permission appears on first launch on the later versions
+    of Android, this test case needs update</p>

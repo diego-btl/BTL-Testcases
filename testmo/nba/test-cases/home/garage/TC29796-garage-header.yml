@@ -1,0 +1,43 @@
+testmo:
+  case_id: 29796
+  folder_id: 3768
+  project_id: 5
+  folder_path: home/garage
+  folder_name_ui: Garage
+  created_at: '2024-12-20 15:21:40.308281'
+  updated_at: null
+  last_sync: '2026-01-30T18:20:38.414487Z'
+  url: https://bethinklabs.testmo.net/repositories/5/cases/29796
+metadata:
+  name: Garage Header
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  steps:
+  - column_name: custom_steps
+    id: 48614
+    case_id: 29796
+    text1: <p>Sign into an account with no vehicle</p>
+    text2: null
+    text3: <p>Sem Veiculous should be displayed as the garage text</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 48615
+    case_id: 29796
+    text1: <p>Sign into an account and select a vehicle with no set nickname</p>
+    text2: null
+    text3: <p>Vehicle modal name should be displayed</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 48616
+    case_id: 29796
+    text1: <p>Sign into an account and select a vehicle with a set nickname</p>
+    text2: null
+    text3: <p>Set vehicle nickname should be displayed</p>
+    text4: null
+    display_order: 3

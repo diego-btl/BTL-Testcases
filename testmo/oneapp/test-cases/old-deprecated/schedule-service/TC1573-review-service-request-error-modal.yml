@@ -1,0 +1,37 @@
+testmo:
+  case_id: 1573
+  folder_id: 7143
+  project_id: 2
+  folder_path: old-deprecated/schedule-service
+  folder_name_ui: Schedule Service
+  created_at: '2023-08-28 20:13:24.366070'
+  updated_at: '2024-10-17 17:57:05.010933'
+  last_sync: '2026-01-30T18:21:08.004011Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/1573
+metadata:
+  name: Review Service Request - error modal
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: User is on Review Service Request screen
+  steps:
+  - column_name: custom_steps
+    id: 1938
+    case_id: 1573
+    text1: '1. Tap on Schedule My Service and trigger an error<br />
+
+      2. Tap on Retry<br />
+
+      3. Tap on Cancel'
+    text2: null
+    text3: '1. User should see an error modal appear with options to cancel and retry<br
+      />
+
+      2. User should see loading spinner as API is triggered again<br />
+
+      3. User should see error modal dismissed'
+    text4: null
+    display_order: 1

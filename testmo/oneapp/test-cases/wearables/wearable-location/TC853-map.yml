@@ -1,0 +1,32 @@
+testmo:
+  case_id: 853
+  folder_id: 78
+  project_id: 2
+  folder_path: wearables/wearable-location
+  folder_name_ui: Wearable - Location
+  created_at: '2023-08-01 23:08:23.438563'
+  updated_at: '2025-09-19 21:21:34.634962'
+  last_sync: '2026-01-30T18:21:08.574712Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/853
+metadata:
+  name: Map
+  priority: 12
+  type: functional
+  status: active
+  estimate: 60000000
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User's vehicle has a location</p>
+  steps:
+  - column_name: custom_steps
+    id: 1022
+    case_id: 853
+    text1: <ol><li>Login into the app</li><li>Navigate to the Vehicle Location from
+      Home &gt;My Car finder OR Map&gt;Vehicle Location card.</li><li>See the vehicle
+      in the Map screen</li><li>All the data loads correctly</li></ol>
+    text2: null
+    text3: <ul><li>User should see a static map view with a pin at the currently selected
+      vehicle's location</li></ul>
+    text4: null
+    display_order: 1

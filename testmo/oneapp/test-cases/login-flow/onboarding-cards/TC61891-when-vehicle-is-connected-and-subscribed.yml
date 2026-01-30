@@ -1,0 +1,74 @@
+testmo:
+  case_id: 61891
+  folder_id: 6757
+  project_id: 2
+  folder_path: login-flow/onboarding-cards
+  folder_name_ui: Onboarding cards
+  created_at: '2025-10-28 20:41:12.043138'
+  updated_at: '2025-10-28 22:47:28.431368'
+  last_sync: '2026-01-30T18:21:05.658748Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/61891
+metadata:
+  name: When vehicle is Connected and Subscribed
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>Ensure the account has only the 1 Connected and Subscribed(enrolled)
+    Vin OR its the first Vin on VehicleStaticData that's Connected and Subscribed. </p>
+  steps:
+  - column_name: custom_steps
+    id: 94710
+    case_id: 61891
+    text1: <p>Launch app</p><p>Log in</p><p>After all 4-5 apis are resolved ie Static
+      data, pendingvehicles, vehiclesubscriptions, vehiclecapabilities (and financialvehicles
+      if NCI), the modal shoud show</p><p>Tap on Yes</p>
+    text2: null
+    text3: '<ul><li>The title will read Hello!</li></ul><p>            The body will
+      read </p><p><strong>           Welcome to the [MyNISSAN / MyINFINITI] app!</strong></p><p><strong> 
+              IF PRIMARY DRIVER: We''re so excited for you to embark on        the
+      journey of being [a Nissan / an INFINITI] owner.</strong></p><p><br />     
+        <strong>IF AD: You''re the additional driver of &lt;PD NAME&gt;.</strong></p><p><strong> 
+            Your vehicle is chock full of incredible connected features with     a
+      [IF TRIAL: Add Trial Duration] [NissanConnect Services / INFINITI InTouch Services]
+      subscription !</strong></p><p><strong>       IF NO IVI LOGIN: (ownershipstatus.isSignedin=false)</strong></p><p><strong> 
+          Before we start the tour, you''ll want to ensure you''ve done a   login
+      in your head unit of the vehicle.</strong></p><p><strong>     CTA 1: Take me
+      there (Show IVI popup)</strong></p><p><strong>     IF YES IVI LOGIN (ownershipstatus.isSignedin=true):</strong></p><p><strong> 
+         Let''s take a tour of what you can do in the app!</strong></p><ul><li>Continue
+      CTA</li><li>There are more cards as you tap on Continue or Swipe through the
+      dots found at the bottom of the screen</li><li>The Onboarding Features api is
+      also triggered</li></ul>'
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 94711
+    case_id: 61891
+    text1: <p>Compare the title, image and order of the different onboarding features
+      in the api response with what you see on the app</p>
+    text2: null
+    text3: '<p>They should match. </p><p>NOTE: attached document 8_25_Onboarding_R3
+      has the copy for the Features card. But note, that the FE shows what''s sent
+      via the api response</p><p>NOTE: no subscription card should show as the last
+      onboarding card as the Vin is already subscribed to)</p>'
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 94723
+    case_id: 61891
+    text1: <p>Go to Support Screen</p>
+    text2: null
+    text3: <p>App Key Features card is shown on the screen </p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 94724
+    case_id: 61891
+    text1: <p>Tap on the App Key Features card on support screen</p>
+    text2: null
+    text3: <p>The Status(Hello) card should be the same as seen when app is launched,
+      with the same flow </p>
+    text4: null
+    display_order: 4

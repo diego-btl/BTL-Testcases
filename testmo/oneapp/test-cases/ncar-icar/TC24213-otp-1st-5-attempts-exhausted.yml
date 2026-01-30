@@ -1,0 +1,43 @@
+testmo:
+  case_id: 24213
+  folder_id: 3081
+  project_id: 2
+  folder_path: ncar-icar
+  folder_name_ui: Ncar/Icar
+  created_at: '2024-08-28 18:59:39.110072'
+  updated_at: '2024-10-17 17:57:51.445740'
+  last_sync: '2026-01-30T18:21:06.972736Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/24213
+metadata:
+  name: OTP - 1st 5 attempts exhausted
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: User is on OTP screen
+  steps:
+  - column_name: custom_steps
+    id: 37767
+    case_id: 24213
+    text1: '1. Enter an incorrect code in the OTP field<br />
+
+      2. Tap on Verify and Proceed<br />
+
+      3. Enter another incorrect code<br />
+
+      4. Exhaust all 5 attempts'
+    text2: null
+    text3: '1. User should be able to enter a numerical code in the field<br />
+
+      User should see Verify CTA enable once 5 numbers have been entered<br />
+
+      2. User should see an error text with number of attempts remaining<br />
+
+      3. User should be able to modify the OTP field with another code<br />
+
+      4. User should see a message that too many attempts have been made and a new
+      code is required'
+    text4: null
+    display_order: 1

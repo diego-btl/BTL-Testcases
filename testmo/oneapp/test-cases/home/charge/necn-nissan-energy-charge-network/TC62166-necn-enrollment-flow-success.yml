@@ -1,0 +1,120 @@
+testmo:
+  case_id: 62166
+  folder_id: 2444
+  project_id: 2
+  folder_path: home/charge/necn-nissan-energy-charge-network
+  folder_name_ui: NECN - NISSAN ENERGY Charge Network
+  created_at: '2025-12-16 21:56:22.016441'
+  updated_at: '2026-01-15 21:56:26.183535'
+  last_sync: '2026-01-30T18:21:04.592118Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/62166
+metadata:
+  name: NECN - Enrollment Flow - SUCCESS
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<p>User has an EV/EV2</p><p>"EnablePlugAndCharge": "true"</p><p>AccountStatus
+    API &gt; "status": "NOT_ENROLLED"/"FAILED"/"CANCELLED"</p><p>User is on the Manage
+    EV screen</p>'
+  steps:
+  - column_name: custom_steps
+    id: 96604
+    case_id: 62166
+    text1: <p>Tap the 'NISSAN ENERGY Charge Network' card</p>
+    text2: null
+    text3: <p>The loading state is displayed</p><p>AccountStatus, NissanPay, and ChargeProduct
+      APIs are triggered</p><p>User is navigated to the NISSAN ENERGY Charge Network
+      screen</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 96605
+    case_id: 62166
+    text1: <p>Tap  the 'Add Payment Method' button</p>
+    text2: null
+    text3: <p>UpsertNissanPayAccount API is triggered (if it hasn't been called before)</p><p>The
+      loading state is displayed</p><p>User is navigated to the Nissan Store Wallet
+      screen</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 96606
+    case_id: 62166
+    text1: <p>Tap the 'ADD NEW PAYMENT METHOD' button</p>
+    text2: null
+    text3: <p>User is redirected to the Nissan Store Wallet screen</p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 96728
+    case_id: 62166
+    text1: <p>Enter a correct card number in the 'Card Number' field and any number
+      in the 'Expiry' field and 'CVC/CVV' fields </p><p>Enter the postal code in the
+      'Postal Code' filed and check the 'By checking this box...' checkmark</p>
+    text2: null
+    text3: <p>Particular numbers are displayed in the proper fields</p>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 96729
+    case_id: 62166
+    text1: <p>Tap the 'SAVE' button</p>
+    text2: null
+    text3: <p>The loading state is displayed</p><p>The toast 'Payment method added
+      successfully' is displayed</p><p>The card information is displayed on the Nissan
+      Store Wallet screen </p>
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 96730
+    case_id: 62166
+    text1: <p>Tap '&lt;' back button</p>
+    text2: null
+    text3: <p>The loading state is displayed</p><p>AccountStatus, NissanPay, and ChargeProduct
+      APIs are triggered</p><p>User is navigated to the NISSAN ENERGY Charge Network
+      screen</p><p>The 'ACTIVATE' CTA is displayed on the 'Account Status' card</p><p>The
+      'Payment Method' card is displayed:</p><ul><li>Copy is 'Your default payment
+      method will be used for charging transactions.'</li><li>Added card info</li><li>'Change
+      Payment Method' CTA</li></ul>
+    text4: null
+    display_order: 6
+  - column_name: custom_steps
+    id: 96731
+    case_id: 62166
+    text1: <p>Tap 'ACTIVATE' CTA</p>
+    text2: null
+    text3: <p>The loading state is displayed</p><p>UpsertNissanPayAccount, EnrollChargePlan
+      and AccountStatus APIs are triggered</p>
+    text4: null
+    display_order: 7
+  - column_name: custom_steps
+    id: 96732
+    case_id: 62166
+    text1: '<p>AccountStatus returns "status": "ENROLLING"</p>'
+    text2: null
+    text3: <p>The 'Activation is pending' toast is displayed</p><p>The 'Account Status'
+      card's status is 'Processing'</p>
+    text4: null
+    display_order: 8
+  - column_name: custom_steps
+    id: 96733
+    case_id: 62166
+    text1: '<p>AccountStatus returns "status": "ACTIVE"</p>'
+    text2: null
+    text3: <p>The 'Charge Network Activated' success toast is displayed</p><p>The
+      'Deactivate Account' CTA is displayed on the Account Status card</p><p>The 'Account
+      Status' card's status is changed to 'Active'</p>
+    text4: null
+    display_order: 9
+  - column_name: custom_steps
+    id: 96734
+    case_id: 62166
+    text1: <p>Tap '&lt;' back button</p>
+    text2: null
+    text3: <p>User is navigated to the Manage EV screen</p><p>The subtitle of the
+      'NISSAN ENERGY Charge Network' card is 'Active'</p>
+    text4: null
+    display_order: 10

@@ -1,0 +1,30 @@
+testmo:
+  case_id: 575
+  folder_id: 51
+  project_id: 2
+  folder_path: home/vehicle-status
+  folder_name_ui: Vehicle Status
+  created_at: '2023-08-01 23:08:19.941135'
+  updated_at: '2025-10-11 13:48:34.847074'
+  last_sync: '2026-01-30T18:21:09.148474Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/575
+metadata:
+  name: Vehicle status card
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has a Vehicle status indictor active</p>
+  steps:
+  - column_name: custom_steps
+    id: 744
+    case_id: 575
+    text1: <p>1. Vehicle data returned<br />2. Tap on Vehicle status card</p>
+    text2: null
+    text3: <p>1. User should see Vehicle status card with secondary text containing
+      Vehicle status warning name - if there are warnings, will also show '+# more'<br
+      />2. User should see Vehicle Status screen with Vehicle tab</p>
+    text4: null
+    display_order: 1

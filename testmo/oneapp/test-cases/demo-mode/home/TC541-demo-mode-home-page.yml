@@ -1,0 +1,109 @@
+testmo:
+  case_id: 541
+  folder_id: 6799
+  project_id: 2
+  folder_path: demo-mode/home
+  folder_name_ui: Home
+  created_at: '2023-08-01 23:08:19.512068'
+  updated_at: '2025-12-18 15:53:20.417174'
+  last_sync: '2026-01-30T18:21:09.239659Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/541
+metadata:
+  name: Demo Mode - Home Page
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is already in Demo Mode <code>Home Page</code></p>
+  steps:
+  - column_name: custom_steps
+    id: 710
+    case_id: 541
+    text1: <p>Validate the <code>Hero Section</code></p>
+    text2: null
+    text3: <p>The user should see data for:</p><ol><li>Est. Range (EV) / Fuel Remaining
+      (ICE)</li><li>Weather icon/info</li><li>Lock Status</li><li>Vehicle Image</li><li>Support
+      Icon</li><li>Notifications Icon</li><li>Vehicle Selector</li></ol>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 1275
+    case_id: 541
+    text1: <p>Tap on the <code>Vehicle Selector</code> dropdown</p>
+    text2: null
+    text3: <p>The user should see a full-page modal with the title <code>Select Vehicle</code>
+      and two vehicles:</p><figure class="table"><table><tbody><tr><td><p style="text-align:center;">Nissan</p></td><td><p
+      style="text-align:center;">Infiniti</p></td></tr><tr><td><ol><li>Rogue</li><li>LEAF</li><li>Rogue
+      AVK2</li></ol></td><td><ol><li>QX60</li><li>QX55</li><li>QX80</li></ol></td></tr></tbody></table></figure>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 1276
+    case_id: 541
+    text1: <p>NISSAN - Select the <code>LEAF</code></p>
+    text2: null
+    text3: <p>The user should be navigated to the <code>Home Page</code> showing all
+      the data for the LEAF, including the Telematics Controls and Cards for an Electric
+      Vehicle</p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 1277
+    case_id: 541
+    text1: <p>NISSAN - Tap on the <code>Vehicle Selector</code> dropdown and select
+      the <code>Rogue</code></p>
+    text2: null
+    text3: <p>The user should be navigated to the <code>Home Page</code> showing all
+      the data for the Rogue, including the Telematics Controls and Cards for an AVK
+      Vehicle</p>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 21248
+    case_id: 541
+    text1: <p>NISSAN - Tap on the <code>Vehicle Selector</code> dropdown and select
+      the <code>Rogue AVK2</code></p>
+    text2: null
+    text3: <p>The user should be navigated to the <code>Home Page</code> showing all
+      the data for the Rogue, including the Telematics Controls and Cards for an AVK2
+      Vehicle</p>
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 9420
+    case_id: 541
+    text1: <p>INFINITI - Tap on the <code>Vehicle Selector</code> dropdown and select
+      the QX60</p>
+    text2: null
+    text3: <p>The user should be navigated to the <code>Home Page</code> showing all
+      the data for the QX60, including the Telematics Controls and Cards for an AVK
+      Vehicle</p>
+    text4: null
+    display_order: 6
+  - column_name: custom_steps
+    id: 9421
+    case_id: 541
+    text1: <p>INFINITI - Tap on the <code>Vehicle Selector</code> dropdown and select
+      the QX55</p>
+    text2: null
+    text3: <p>The user should be navigated to the <code>Home Page</code> showing all
+      the data for the QX55, including the Telematics Controls and Cards for an AVK
+      Vehicle</p>
+    text4: null
+    display_order: 7
+  - column_name: custom_steps
+    id: 96785
+    case_id: 541
+    text1: <p>INFINITI - Tap on the <code>Vehicle Selector</code> dropdown and select
+      the QX80</p>
+    text2: null
+    text3: <p>The user should be navigated to the <code>Home Page</code> showing all
+      the data for the QX80, including the Telematics Controls and Cards for an AVK2
+      Vehicle</p>
+    text4: null
+    display_order: 8
+  notes: '<p>Automatio: for step 1, only elements in header will be validated (support
+    icon, notifications icon &amp; vehicle selector) as elements in hero can''t be
+    retrieved because it''s a dynamic image</p>'

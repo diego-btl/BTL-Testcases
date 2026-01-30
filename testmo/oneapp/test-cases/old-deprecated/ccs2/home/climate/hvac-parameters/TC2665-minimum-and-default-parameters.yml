@@ -1,0 +1,32 @@
+testmo:
+  case_id: 2665
+  folder_id: 406
+  project_id: 2
+  folder_path: old-deprecated/ccs2/home/climate/hvac-parameters
+  folder_name_ui: HVAC Parameters
+  created_at: '2023-09-07 17:39:18.538981'
+  updated_at: '2026-01-06 17:49:50.264545'
+  last_sync: '2026-01-30T18:21:07.836301Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/2665
+metadata:
+  name: Minimum and Default Parameters
+  priority: 13
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>AVK2 vehicle</p><p>Climate screen</p>
+  steps:
+  - column_name: custom_steps
+    id: 3025
+    case_id: 2665
+    text1: <p>HVAC parameters returns empty</p>
+    text2: null
+    text3: <p>Climate details displays:</p><ul><li>Temperature dial set to default
+      temperature set of 75 (NNA) </li></ul><p>Does not display</p><ul><li>Any seat
+      temperature controls</li><li>Any steering wheel temperature controls</li><li>Any
+      defrost/deice options</li></ul>
+    text4: null
+    display_order: 1
+  notes: '<p>Todo: Add example of mocked response body</p><p>Todo: Add NCI defaults</p>'

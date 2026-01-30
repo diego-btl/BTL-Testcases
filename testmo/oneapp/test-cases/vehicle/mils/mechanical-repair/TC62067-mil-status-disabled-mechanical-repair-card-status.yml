@@ -1,0 +1,111 @@
+testmo:
+  case_id: 62067
+  folder_id: 432
+  project_id: 2
+  folder_path: vehicle/mils/mechanical-repair
+  folder_name_ui: Mechanical Repair
+  created_at: '2025-12-02 00:13:32.009474'
+  updated_at: '2025-12-02 00:31:26.269353'
+  last_sync: '2026-01-30T18:21:04.995119Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/62067
+metadata:
+  name: MIL Status DISABLED - Mechanical Repair card status
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<ul><li>AVK2 or EVO vehicle (AVK2, EVAVK2, EVO, EVEVO)</li><li>User
+    has NO active MILs and at least one Vehicle status enabled (e.g: tire pressure
+    PSI)</li><li>User has MECHANICAL_REPAIR capability enabled</li><li><code>GrantMechanicalRepair</code>
+    FF is <strong>enabled</strong></li></ul>'
+  steps:
+  - column_name: custom_steps
+    id: 95792
+    case_id: 62067
+    text1: <p>Mock <code>vehicle.preferences.communication.milDataSharing.enabled
+      == false</code> &gt; Tap on the Vehicle status card on the vehicle screen &gt;
+      Tap on MIL tab</p>
+    text2: null
+    text3: <p>User should be brought to the Vehicle Status screen with MIL tab also
+      displayed</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 95799
+    case_id: 62067
+    text1: <p>Tap on the MIL tab</p>
+    text2: null
+    text3: '<p>User should be brought to the MIL tab showing:</p><ul><li>Info panel
+      is shown <strong>at the top</strong> of the tab</li><li>Panel has <strong>red
+      border</strong> per design</li><li>CTA text is <strong>“Enable Data Sharing”</strong></li><li>The
+      subtitle: Not Sharing</li></ul><figure class="image"><img src="/attachments/view/8836"
+      alt="8836" /></figure>'
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 95793
+    case_id: 62067
+    text1: <p>Tap on the <strong>Enable Data Sharing</strong> CTA on the info panel</p>
+    text2: null
+    text3: <p>User is navigated to <strong>Vehicle Maintenance Data Sharing screen</strong></p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 95794
+    case_id: 62067
+    text1: <p>Toggle ON Enabled Data Sharing toggle</p>
+    text2: null
+    text3: <p>Verified that a call is triggered for <code>UpdateVehiclePreferences</code>,
+      the request is sent with all toggles set to true and all sub-toggles are true
+      by default.</p>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 95795
+    case_id: 62067
+    text1: <p>Tab on the back button </p>
+    text2: null
+    text3: '<p>Verify the user is taken to the Vehicle Status screen &gt; MIL tab
+      and the info panel is shown now at the bottom of the screen</p><ul><li>Info
+      panel is shown <strong>at the bottom</strong> of the tab </li><li>Panel appears
+      <strong>below a horizontal rule</strong> per design </li><li>CTA text is <strong>“Manage
+      Preferences”</strong></li><li>The subtitle: Sharing</li></ul><figure class="image"><img
+      src="/attachments/view/8837" alt="8837" /></figure>'
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 95796
+    case_id: 62067
+    text1: <p>Tap on the <strong>Manage Preferences</strong> CTA on the info panel</p>
+    text2: null
+    text3: <p>User is navigated to <strong>Vehicle Maintenance Data Sharing screen</strong></p>
+    text4: null
+    display_order: 6
+  - column_name: custom_steps
+    id: 95797
+    case_id: 62067
+    text1: <p>Toggle Off the Enable Data Sharing toggle</p>
+    text2: null
+    text3: <p>Verify <code>UpdateVehiclePreferences</code> api is triggered and the
+      request is sent with all toggles set to false</p>
+    text4: null
+    display_order: 7
+  notes: "<p>Active Recall (VehicleRecall endpoint):</p><pre><code class=\"editor-plain\
+    \ language-plain code-block\">{\n  \"data\": {\n    \"vehicle\": {\n      \"__typename\"\
+    : \"AVK2Vehicle\",\n      \"recalls\": [\n        {\n          \"__typename\"\
+    : \"VehicleRecall\",\n          \"type\": \"RECALL\",\n          \"nhtsaId\":\
+    \ \"24V-748\",\n          \"title\": \"IVI UPDATE\",\n          \"effectiveDate\"\
+    : \"2024-10-03T00:00:00.000Z\",\n          \"primaryDescription\": \"A POTENTIAL\
+    \ COMMUNICATION CONCERN BETWEEN THE IN-VEHICLE INFOTAINMENT (IVI) SYSTEM AND THE\
+    \ CENTER INFORMATION DISPLAY (CID) MAY RESULT IN THE DISPLAY SCREEN GOING BLANK\
+    \ WHEN THE VEHICLE IS SHIFTED INTO  REVERSE . THIS CONDITION WOULD NOT BE COMPLIANT\
+    \ WITH FMVSS 111 S.5.5  REAR VISIBILITY .\",\n          \"remedyDescription\"\
+    : \"DEALERS WILL REPROGRAM THE VEHICLES IVI SYSTEM TO REMEDY THIS CONCERN.\",\n\
+    \          \"riskDescription\": \"A POTENTIAL COMMUNICATION CONCERN BETWEEN THE\
+    \ IN-VEHICLE INFOTAINMENT (IVI) SYSTEM AND THE CENTER INFORMATION DISPLAY (CID)\
+    \ MAY RESULT IN THE DISPLAY SCREEN GOING BLANK WHEN THE VEHICLE IS SHIFTED INTO\
+    \  REVERSE .  IF THE REAR-VIEW IMAGE IS NOT AVAILABLE, REARWARD VISIBILITY MAY\
+    \ BE REDUCED, POTENTIALLY INCREASING THE RISK OF A CRASH.\"\n        }\n     \
+    \ ]\n    }\n  }\n}</code></pre>"

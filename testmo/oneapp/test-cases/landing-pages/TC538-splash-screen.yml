@@ -1,0 +1,30 @@
+testmo:
+  case_id: 538
+  folder_id: 40
+  project_id: 2
+  folder_path: landing-pages
+  folder_name_ui: Landing Pages
+  created_at: '2023-08-01 23:08:19.470133'
+  updated_at: '2025-10-06 00:59:35.783355'
+  last_sync: '2026-01-30T18:21:09.258391Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/538
+metadata:
+  name: Splash screen
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>App must be installed</li><li>App is either a fresh installation
+    or the cache is cleared</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 707
+    case_id: 538
+    text1: <p>Launch app by clicking on the app icon</p>
+    text2: null
+    text3: <p>User should see a splash screen with the brand logo while the rest of
+      the app loads</p>
+    text4: null
+    display_order: 1

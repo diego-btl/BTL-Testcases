@@ -1,0 +1,68 @@
+testmo:
+  case_id: 62021
+  folder_id: 6781
+  project_id: 2
+  folder_path: home/charge/charge-schedule
+  folder_name_ui: Charge Schedule
+  created_at: '2025-11-21 22:02:36.570227'
+  updated_at: '2025-11-21 22:07:31.983789'
+  last_sync: '2026-01-30T18:21:05.086794Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/62021
+metadata:
+  name: Delete Charge Schedule - Failure
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has an EV/EV2</p><p>At least 1 charge schedule exists </p><p>User
+    is on the Manage EV screen </p>
+  steps:
+  - column_name: custom_steps
+    id: 95651
+    case_id: 62021
+    text1: <p>Tap the created schedule inside the Scheduled card</p>
+    text2: null
+    text3: <p>1. User is redirected to the Charge Schedule screen</p><p>2. The 'DELETE
+      SCHEDULE' button is enabled</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 95652
+    case_id: 62021
+    text1: <p>Tap the 'DELETE SCHEDULE' button</p>
+    text2: null
+    text3: <p>The 'Delete Schedule?' modal with 'No' and 'Yes' buttons, and the copy
+      'Are you sure you want to delete this charging schedule? This action cannot
+      be undone' is displayed</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 95653
+    case_id: 62021
+    text1: <p>Tap the 'No' button</p>
+    text2: null
+    text3: <p>The modal is dismissed</p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 95654
+    case_id: 62021
+    text1: <p>Tap the 'DELETE SCHEDULE' button</p>
+    text2: null
+    text3: <p>The 'Delete Schedule?' modal with 'No' and 'Yes' buttons, and the copy
+      'Are you sure you want to delete this charging schedule? This action cannot
+      be undone' is displayed</p>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 95655
+    case_id: 62021
+    text1: <p>Tap the 'Yes' button</p>
+    text2: null
+    text3: '<p>1. The DeleteChargeSchedule API is triggered</p><p>2. The CheckChargeServiceRequest
+      starts polling, returning "status": "FAILED"</p><p>3. The failure toast ''Charge
+      schedule failed to delete'' is displayed</p>'
+    text4: null
+    display_order: 5

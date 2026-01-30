@@ -1,0 +1,55 @@
+testmo:
+  case_id: 62214
+  folder_id: 66
+  project_id: 2
+  folder_path: home/charge
+  folder_name_ui: Charge
+  created_at: '2025-12-19 17:53:42.608390'
+  updated_at: '2025-12-19 18:29:02.409573'
+  last_sync: '2026-01-30T18:21:03.969970Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/62214
+metadata:
+  name: NISSAN ENERGY Charge Network - Not Activated - AD
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<p>User has an EV/EV2</p><p>"EnablePlugAndCharge": "true"</p><p>"GrantFullPlugAndCharge":
+    "{\"enabled\": true, \"checkCapability\": true}"</p><p>VehicleStaticData &gt;
+    "driverType": "SHARED_DRIVER"</p>'
+  steps:
+  - column_name: custom_steps
+    id: 96933
+    case_id: 62214
+    text1: '<p>User is on the Charge screen </p><p>AccountStatus API &gt; "status":
+      "INACTIVE"/"NOT_ENROLLED"/"FAILED"/"CANCELLED"/"CLOSED"/"ENROLLING"</p>'
+    text2: null
+    text3: <p>NISSAN ENERGY Charge Network card is displayed</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 96934
+    case_id: 62214
+    text1: <p>Tap  the `Start Activation` CTA</p>
+    text2: null
+    text3: <p>AccountStatus API is called</p><p>NissanPay API is not called</p><p>User
+      is navigated to the NISSAN ENERGY Charge Network screen</p><p>Status of the
+      Account Status card is 'Not Activated'</p><p>The copy of the Account Status
+      card is:</p><ul><li>'NISSAN ENERGY Charge Network'</li><li>'The NISSAN ENERGY
+      Charge Network allows drivers to initiate and pay for charging sessions through
+      the MyNISSAN app. If you would like to utilize this feature, please contact
+      the primary account holder for activation.' </li></ul><p>The 'ACTIVATE' button
+      is hidden</p><p>There's the text 'Need more information?' and the 'CALL OUR
+      HELP LINE' button</p><p>The Payment Method card is hidden</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 96998
+    case_id: 62214
+    text1: <p>Tap on <code>CALL OUR HELP LINE</code> </p>
+    text2: null
+    text3: <p>User can call 1 (833) 283-1888</p>
+    text4: null
+    display_order: 3

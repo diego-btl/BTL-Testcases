@@ -1,0 +1,37 @@
+testmo:
+  case_id: 1483
+  folder_id: 49
+  project_id: 2
+  folder_path: home/notifications
+  folder_name_ui: Notifications
+  created_at: '2023-08-28 20:13:22.830555'
+  updated_at: '2026-01-16 21:58:25.130080'
+  last_sync: '2026-01-30T18:21:08.163281Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/1483
+metadata:
+  name: Notification Preferences - Capabilities
+  priority: 1
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is on notification preferences</p>
+  steps:
+  - column_name: custom_steps
+    id: 1851
+    case_id: 1483
+    text1: <p>1. Disable or delete each of the following capabilities:<br /><br />REMOTE_DOOR_LOCK_UNLOCK<br
+      />REMOTE_ENGINE<br />REMOTE_HORN_LIGHTS<br />PARKED_CAR_FINDER<br />CURFEW_ALERT<br
+      />SPEED_ALERT<br />BOUNDARY_ALERT<br />VALET_ALERT<br />ALARM_NOTIFICATION<br
+      />REMOTE_VEHICLE_STATUS - Reminder after Leaving Vehicle<br />STOLEN_VEHICLE_LOCATOR<br
+      />DOOR_TO_DOOR_NAVIGATION - last mile navigation (EV)<br />INTELLECTUAL_ROUTE_PLANNER<br
+      />REMOTE_CLIMATE_CONTROL<br />REMOTE_CHARGING - plug in reminder, charge status<br
+      />LAST_MILE_NAVIGATION - only Push option should be shown</p>
+    text2: null
+    text3: <p>User should see the corresponding notification preferences hidden if
+      the corresponding capabilities are disabled or missing</p>
+    text4: null
+    display_order: 1
+  notes: <ul><li>For a SHARED driver, if the capability is missing or disabled, the
+    item should be hidden</li></ul>

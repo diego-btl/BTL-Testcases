@@ -1,0 +1,34 @@
+testmo:
+  case_id: 32382
+  folder_id: 6765
+  project_id: 6
+  folder_path: support/emergency-contacts
+  folder_name_ui: Emergency Contacts
+  created_at: '2025-04-01 17:50:45.014856'
+  updated_at: '2025-10-30 15:27:22.099010'
+  last_sync: '2026-01-30T18:20:45.491978Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/32382
+metadata:
+  name: Emergency Contacts - Empty
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>Usesr does not have saved contacts</p>
+  steps:
+  - column_name: custom_steps
+    id: 52751
+    case_id: 32382
+    text1: <ol><li>Go to <code>Soporte</code> option</li><li>Tap <code>Contactos de
+      Emergencia</code> card</li></ol>
+    text2: null
+    text3: '<ul><li>User should be taken to the emergency contacts sheet and see the
+      empty state showing the next text:<ul><li><code>Agrega hasta cuatro personas
+      a las que podemos llamar en caso de emergencia.</code></li><li><code>No hay
+      contactos guardados</code></li></ul></li><li>CTA button: <ul><li><code>AGREGAR
+      UN CONTACTO</code></li></ul></li><li>The <i><strong>EmergencyContacts</strong></i>
+      api is triggered</li></ul>'
+    text4: null
+    display_order: 1

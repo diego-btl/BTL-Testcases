@@ -1,0 +1,144 @@
+testmo:
+  case_id: 55572
+  folder_id: 6251
+  project_id: 6
+  folder_path: vehicle-page/past-services
+  folder_name_ui: Past Services
+  created_at: '2025-08-06 17:52:52.074796'
+  updated_at: '2025-08-21 16:28:05.274886'
+  last_sync: '2026-01-30T18:20:45.145027Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/55572
+metadata:
+  name: Historial de Servicio - INF
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>User has selected a <strong>AVK/AVK2</strong> vehicle</li><li>The
+    user has a Service &amp; Maintenance success response</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 85552
+    case_id: 55572
+    text1: <ol><li>Login into the app</li><li>Tap the S&amp;M card</li><li>Go to <code>Historial
+      de Servicio</code> screen</li><li>Tap the <code>AGREGAR SERVICIO PASADO</code>
+      CTA</li></ol>
+    text2: null
+    text3: '<ul><li>User is navigated to the <code>Agregar servicio pasado</code>
+      screen</li><li>Date field placeholder: <code>DD/MM/AAAA</code></li><li>Mileage
+      field shows mileage from dynamic data</li><li>Comment field placeholder: <code>¿Deseas
+      proporcionar más detalles?</code></li><li>Comment field has a 200-character
+      limit and character counter</li><li><code>GUARDAR</code> button is greyed out</li><li>Buttons
+      visible: <code>GUARDAR</code>, <code>CANCELAR</code>, back arrow</li></ul>'
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 85553
+    case_id: 55572
+    text1: <ol><li>Login into the app</li><li>Tap the S&amp;M card</li><li>Go to <code>Historial
+      de Servicio</code> screen</li><li>Tap the <code>AGREGAR SERVICIO PASADO</code>
+      CTA</li></ol>
+    text2: null
+    text3: <ul><li>Same UI is shown</li><li>Mileage field uses <code>vehicle.manualMileage</code></li><li>GUARDAR
+      is greyed out initially</li></ul>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 85554
+    case_id: 55572
+    text1: <ol><li>Login into the app</li><li>Tap the S&amp;M card</li><li>Go to <code>Historial
+      de Servicio</code> screen</li><li>Tap the <code>AGREGAR SERVICIO PASADO</code>
+      CTA</li><li>Tap on the date field</li></ol>
+    text2: null
+    text3: <ul><li>The date picker appears (Day/Month/Year)</li><li>Today's date is
+      selected by default</li></ul>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 85555
+    case_id: 55572
+    text1: <ol><li>Login into the app</li><li>Tap the S&amp;M card</li><li>Go to <code>Historial
+      de Servicio</code> screen</li><li>Tap the <code>AGREGAR SERVICIO PASADO</code>
+      CTA</li><li>Tap <code>Buscar distribuidores</code></li><li>Observe search screen</li><li>Type
+      in the search bar</li><li>Tap <code>Seleccionar</code> for a dealer</li></ol>
+    text2: null
+    text3: <ul><li>Dealer list loads</li><li>Textbox shows placeholder <code>Buscar
+      distribuidores</code></li><li>Filter applies based on dealer <strong>name</strong>/<strong>group</strong>/<strong>address</strong>/<strong>city</strong>/<strong>service</strong></li><li>Upon
+      selection, return to previous screen with <strong>dealerName</strong> displayed</li><li><code>GUARDAR</code>
+      button is enabled</li></ul>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 85556
+    case_id: 55572
+    text1: <ol><li>Login into the app</li><li>Tap the S&amp;M card</li><li>Go to <code>Historial
+      de Servicio</code> screen</li><li>Tap the <code>AGREGAR SERVICIO PASADO</code>
+      CTA</li><li>Tap <code>Buscar distribuidores</code></li><li>Observe search screen</li><li>Type
+      in the search bar</li><li>Tap <code>Seleccionar</code> for a dealer</li><li>Tap
+      the <code>X</code> on dealer field</li></ol>
+    text2: null
+    text3: <ul><li>Dealer name is cleared</li><li><code>GUARDAR</code> is disabled
+      again</li></ul>
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 85557
+    case_id: 55572
+    text1: <ol><li>Login into the app</li><li>Tap the S&amp;M card</li><li>Go to <code>Historial
+      de Servicio</code> screen</li><li>Tap the <code>AGREGAR SERVICIO PASADO</code>
+      CTA</li><li>Fill required fields</li><li>Tap <code>GUARDAR</code></li></ol>
+    text2: null
+    text3: '<ul><li>API call is made to save service</li><li>Navigated back to <code>Historial
+      de Servicio</code></li><li>Toast: <code>Se guardó correctamente</code></li></ul>'
+    text4: null
+    display_order: 6
+  - column_name: custom_steps
+    id: 85572
+    case_id: 55572
+    text1: <ol><li>Login into the app</li><li>Tap the S&amp;M card</li><li>Go to <code>Historial
+      de Servicio</code> screen</li><li>Tap the <code>AGREGAR SERVICIO PASADO</code>
+      CTA</li><li>Fill required fields</li><li>Tap <code>GUARDAR</code></li><li>Tap
+      the <code>X</code> or <code>ACEPTAR</code> confirmation screen</li></ol>
+    text2: null
+    text3: <ul><li>The user is taken to the <code>Historial de servicio</code> screen
+      with the list of all Past Services</li><li>Each record will show:<ul><li>Date
+      &gt; DD/MM/YYY</li><li>Dealer name &gt; <code>INFINITI Satélite</code></li><li>Kilometers
+      &gt; <code>66,999 km</code></li><li>Comment &gt;<code> This is a test</code></li></ul></li></ul>
+    text4: null
+    display_order: 7
+  - column_name: custom_steps
+    id: 85558
+    case_id: 55572
+    text1: <ol><li>Login into the app</li><li>Tap the S&amp;M card</li><li>Go to <code>Historial
+      de Servicio</code> screen</li><li>Tap the <code>AGREGAR SERVICIO PASADO</code>
+      CTA</li><li>Fill required fields (<strong>Submit a service that already exists</strong>)</li><li>Tap
+      <code>GUARDAR</code></li></ol>
+    text2: null
+    text3: '<ul><li>Stay on current screen</li><li>Toast: <code>Tú servicio ya está
+      registrado</code></li></ul>'
+    text4: null
+    display_order: 8
+  - column_name: custom_steps
+    id: 85559
+    case_id: 55572
+    text1: <ol><li>Login into the app</li><li>Tap the S&amp;M card</li><li>Go to <code>Historial
+      de Servicio</code> screen</li><li>Tap <code>&lt;</code> or <code>CANCELAR</code><ol><li>Tap
+      <code>Continuar</code> in dialog</li></ol></li></ol>
+    text2: null
+    text3: <ul><li>Dialog appears with <code>Cancelar</code> and <code>Continuar</code></li><li><code>Continuar</code>
+      discards unsaved edits and returns to <code>Historial de Servicio</code></li></ul>
+    text4: null
+    display_order: 9
+  - column_name: custom_steps
+    id: 85560
+    case_id: 55572
+    text1: <ol><li>Login into the app</li><li>Tap the S&amp;M card</li><li>Go to <code>Historial
+      de Servicio</code> screen</li><li>Tap <code>&lt;</code> or <code>CANCELAR</code><ol><li>Tap
+      <code>Cancelar</code> in dialog</li></ol></li></ol>
+    text2: null
+    text3: <ul><li>Dialog appears with <code>Cancelar</code> and <code>Continuar</code></li><li><code>Cancelar</code>
+      dismisses the dialog and retains edits</li></ul>
+    text4: null
+    display_order: 10

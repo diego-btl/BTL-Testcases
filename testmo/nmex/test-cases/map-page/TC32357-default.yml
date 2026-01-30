@@ -1,0 +1,28 @@
+testmo:
+  case_id: 32357
+  folder_id: 4087
+  project_id: 6
+  folder_path: map-page
+  folder_name_ui: Map Page
+  created_at: '2025-04-01 17:50:44.854857'
+  updated_at: '2025-10-30 19:55:37.694413'
+  last_sync: '2026-01-30T18:20:45.624575Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/32357
+metadata:
+  name: Default
+  priority: 1
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  steps:
+  - column_name: custom_steps
+    id: 52728
+    case_id: 32357
+    text1: <ol><li>Login into the app</li><li>Go to the <code>Mapa</code> screen</li></ol>
+    text2: null
+    text3: <ul><li>User should see the info drawer in its default state (25% of the
+      total screen height)</li></ul>
+    text4: null
+    display_order: 1

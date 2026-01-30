@@ -1,0 +1,41 @@
+testmo:
+  case_id: 62227
+  folder_id: 66
+  project_id: 2
+  folder_path: home/charge
+  folder_name_ui: Charge
+  created_at: '2025-12-19 19:56:26.225078'
+  updated_at: '2025-12-19 21:04:19.624289'
+  last_sync: '2026-01-30T18:21:03.907268Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/62227
+metadata:
+  name: P&C Toggle - Failed to Install pncStatusReason 01
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has an EV</p><p>User is on Charge screen</p><p><code>GrantFullPlugAndCharge</code>
+    FF is enabled</p><p>NECN AccountStatus is 'Active'</p><p>User is a Primary Driver</p>
+  steps:
+  - column_name: custom_steps
+    id: 97042
+    case_id: 62227
+    text1: <p>Mock <code>pncStatus</code> to be <code>FAILED</code> and <code>pncStatusReason</code>
+      to be <code>01</code> </p>
+    text2: null
+    text3: <p>App should display the Failed to Install card with the <code>Call our
+      Help Line</code> CTA and <code>Failed to Install</code> as the Status</p><figure
+      class="image"><img src="/attachments/view/9015" alt="9015" /></figure>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 97043
+    case_id: 62227
+    text1: <p>Tap on Call Our Help Line</p>
+    text2: null
+    text3: <p>User should be able to call the <code>plugAndChargeSupport</code> phone
+      number from <code>ContactUs</code></p>
+    text4: null
+    display_order: 2

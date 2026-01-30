@@ -1,0 +1,33 @@
+testmo:
+  case_id: 2732
+  folder_id: 413
+  project_id: 2
+  folder_path: vehicle/mils
+  folder_name_ui: MILs
+  created_at: '2023-09-07 21:38:18.016023'
+  updated_at: '2024-10-17 17:57:34.769274'
+  last_sync: '2026-01-30T18:21:07.638842Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/2732
+metadata:
+  name: Electric Shift Control
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>AVK2 vehicle<br />User has REMOTE_VEHICLE_STATUS capability enabled</p>
+  steps:
+  - column_name: custom_steps
+    id: 3097
+    case_id: 2732
+    text1: <ol><li>Vehicle.mils includes<br />-{..."type":PARK_FAILURE, "active":true}</li><li>Tap
+      on the MIL Status card</li><li>Tap on the Electric Shift Control<a href="https://www.figma.com/file/qBlmM8HxQxxd6cpiZpMKLZ/%5BSHARE%5D-MyNissan-CCS-2.0-%5BNNA%5D---iOS-%26-Android-Light?type=design&amp;node-id=269%3A67101&amp;mode=design&amp;t=aP9rGSatE1HTq9ee-1"><strong>
+      </strong></a>card</li></ol>
+    text2: null
+    text3: <ol><li> User should see <code>Electric Shift Control</code> MIL is listed
+      on MIL Status card on home screen and vehicle screen</li><li>User should see
+      the Vehicle Status screen with the MIL tab in focus with the corresponding MIL
+      listed</li><li>User should see the MIL description screen</li></ol>
+    text4: null
+    display_order: 1

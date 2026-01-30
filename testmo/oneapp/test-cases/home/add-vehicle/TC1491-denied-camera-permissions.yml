@@ -1,0 +1,47 @@
+testmo:
+  case_id: 1491
+  folder_id: 56
+  project_id: 2
+  folder_path: home/add-vehicle
+  folder_name_ui: Add vehicle
+  created_at: '2023-08-28 20:13:22.951662'
+  updated_at: '2025-10-09 05:38:29.930621'
+  last_sync: '2026-01-30T18:21:08.148071Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/1491
+metadata:
+  name: Denied Camera Permissions
+  priority: 3
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has denied camera permissions</p>
+  steps:
+  - column_name: custom_steps
+    id: 1856
+    case_id: 1491
+    text1: <p>Tap camera field<br /> </p>
+    text2: null
+    text3: '<p>User should see a No Camera Access modal as follows<br />Header:  Camera
+      disabled</p><ul><li>Text:  MyNISSAN would like to access the camera. Please
+      enable your camera for this app in Settings.</li><li>Buttons:  Ok</li><li>Button:
+        Settings</li></ul>'
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 37751
+    case_id: 1491
+    text1: <p>Tap on <code>Ok</code> button</p>
+    text2: null
+    text3: <p>Modal is dismissed</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 37752
+    case_id: 1491
+    text1: <p>Tap on <code>Settings</code></p>
+    text2: null
+    text3: <p>User is directed to device settings</p>
+    text4: null
+    display_order: 3

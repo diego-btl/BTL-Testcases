@@ -1,0 +1,37 @@
+testmo:
+  case_id: 61928
+  folder_id: 102
+  project_id: 2
+  folder_path: map/planned-routes
+  folder_name_ui: Planned Routes
+  created_at: '2025-11-04 03:06:44.958007'
+  updated_at: '2025-12-12 18:40:03.151704'
+  last_sync: '2026-01-30T18:21:05.553092Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/61928
+metadata:
+  name: Planned Routes - Reorder Stop
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>Route Already Created with at least 3 stops</li><li>Route
+    is more than 48 hours away</li><li>User is on Maps Screen</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 94967
+    case_id: 61928
+    text1: <ol><li>Tap on Planned Routes</li><li>Tap on <code>View Route</code> to
+      Edit the route</li><li>Validate the number of stops displayed</li><li>Tap on
+      <code>EDIT ROUTE</code> button</li><li>After the Edit Route page is displayed,
+      Tap on the <code>Edit</code> button</li><li>The UI should display a hamburguer
+      and a X button</li><li>Long press the hamburguer menu and reorder the stops</li><li>After
+      the stop is reordered from the view, tap  on the <code>Done</code> button</li><li>Scroll
+      Down and tap on <code>ESTIMATE NEW ROUTE</code></li><li>After being navigated
+      to the <code>Estimated Route*</code> page, validate the Stop was properly rearranged</li><li>Tap
+      on Save Route</li><li>Check the Success toast is displayed</li></ol>
+    text2: null
+    text3: null
+    text4: null
+    display_order: 1

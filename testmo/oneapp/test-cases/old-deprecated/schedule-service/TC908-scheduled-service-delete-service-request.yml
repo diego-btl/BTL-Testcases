@@ -1,0 +1,31 @@
+testmo:
+  case_id: 908
+  folder_id: 7143
+  project_id: 2
+  folder_path: old-deprecated/schedule-service
+  folder_name_ui: Schedule Service
+  created_at: '2023-08-04 13:55:31.323258'
+  updated_at: '2025-10-24 16:25:04.871738'
+  last_sync: '2026-01-30T18:21:08.415481Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/908
+metadata:
+  name: Scheduled Service - Delete Service Request
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>User already has a scheduled service</li><li>User is in the
+    <code>Upcoming Appointment Details</code> Page</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 1113
+    case_id: 908
+    text1: <p>Tap on Delete Service Request</p>
+    text2: null
+    text3: <p>User should see loading spinner while it is processing, once successful
+      user should be brought back to Vehicle tab with Scheduled Service cards updated
+      and Service Request removed</p>
+    text4: null
+    display_order: 1

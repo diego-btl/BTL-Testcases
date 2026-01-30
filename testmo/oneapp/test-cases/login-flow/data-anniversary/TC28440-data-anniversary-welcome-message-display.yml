@@ -1,0 +1,41 @@
+testmo:
+  case_id: 28440
+  folder_id: 7144
+  project_id: 2
+  folder_path: login-flow/data-anniversary
+  folder_name_ui: Data Anniversary
+  created_at: '2024-11-22 18:12:56.223203'
+  updated_at: '2026-01-21 16:54:31.136683'
+  last_sync: '2026-01-30T18:21:06.689365Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/28440
+metadata:
+  name: Data Anniversary - Welcome Message - Display
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ol><li><code>EnableOwnerAnniversary</code> FF = <code>true</code></li><li><code>isAnniversary</code>
+    = <code>true</code></li><li><code>anniversaryYear</code> = <code>1</code>, <code>2</code>,
+    <code>3</code>, <code>4</code>, or <code>5</code></li><li>VIN is NOT lost/stolen,
+    finance vehicle, or pending</li><li>User has NOT seen anniversary message for
+    this VIN at current anniversary year</li><li>User is logged in</li><li>User is
+    on gift box animation screen</li></ol>
+  steps:
+  - column_name: custom_steps
+    id: 102402
+    case_id: 28440
+    text1: <p>Tap on the gift box</p>
+    text2: null
+    text3: '<ul><li>Opening animation plays:<ul><li><strong>INFINITI:</strong> Curtain
+      image displays and opens</li><li><strong>NISSAN:</strong> Confetti animation
+      plays</li></ul></li><li><strong>NISSAN only:</strong> Star background is displayed</li><li>Vehicle
+      image is displayed (dynamic from VIN)</li><li>Welcome message copy is displayed:<ul><li>Title:
+      <code>Happy [anniversaryYear]-year Anniversary!</code></li><li>Message: <code>[firstName],
+      congratulations on a year of adventures with your [VehicleModel]! As you journey
+      ahead, may each drive bring many more unforgettable experiences.</code></li><li>Signature:
+      <code>Your [Brand] Family</code></li></ul></li><li>Buttons are displayed:<ul><li><code>TURN
+      ON ANNIVERSARY MODE</code> button</li><li><code>SKIP</code> button</li></ul></li></ul>'
+    text4: null
+    display_order: 1

@@ -1,0 +1,39 @@
+testmo:
+  case_id: 29867
+  folder_id: 3772
+  project_id: 5
+  folder_path: vehicle/recall-screen
+  folder_name_ui: Recall Screen
+  created_at: '2025-01-09 17:52:38.393106'
+  updated_at: null
+  last_sync: '2026-01-30T18:20:38.274267Z'
+  url: https://bethinklabs.testmo.net/repositories/5/cases/29867
+metadata:
+  name: Verify Clicking on Warning Icon Opens Recall Screen
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>Vehicle has an active recall (determined by recall status in API
+    response).</p>
+  steps:
+  - column_name: custom_steps
+    id: 48757
+    case_id: 29867
+    text1: <ol><li>Open the application.</li><li>Navigate to the <strong>Home Screen</strong>.</li><li>Click
+      on the <strong>red warning sign</strong>.</li></ol>
+    text2: null
+    text3: <p>The <strong>Recall Screen</strong> should open.</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 48758
+    case_id: 29867
+    text1: <ol><li>Navigate to the <strong>Vehicle Screen</strong>.</li><li>Click
+      on the <strong>red warning sign</strong>.</li></ol>
+    text2: null
+    text3: <p>The <strong>Recall Screen</strong> should open.</p>
+    text4: null
+    display_order: 2

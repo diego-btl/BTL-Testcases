@@ -1,0 +1,29 @@
+testmo:
+  case_id: 770
+  folder_id: 101
+  project_id: 2
+  folder_path: map/route-planner
+  folder_name_ui: Route Planner
+  created_at: '2023-08-01 23:08:22.459595'
+  updated_at: '2025-12-02 19:34:02.011354'
+  last_sync: '2026-01-30T18:21:08.782227Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/770
+metadata:
+  name: Create Route
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>User is viewing the <strong>Route Planner</strong> section</li><li>The
+    user selects an <code>EV</code> or <code>EVAVK2</code> vehicles</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 939
+    case_id: 770
+    text1: <ol><li>Tap <strong>Route Planner</strong></li></ol>
+    text2: null
+    text3: <ul><li>User should be taken to the <strong>Create a Route</strong> screen</li></ul>
+    text4: null
+    display_order: 1

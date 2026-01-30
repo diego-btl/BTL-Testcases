@@ -1,0 +1,62 @@
+testmo:
+  case_id: 61753
+  folder_id: 6734
+  project_id: 6
+  folder_path: home-page/cards/credit/leasing-closed
+  folder_name_ui: Leasing - Closed
+  created_at: '2025-10-14 15:22:21.016776'
+  updated_at: '2025-10-14 22:28:10.273405'
+  last_sync: '2026-01-30T18:20:44.951019Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/61753
+metadata:
+  name: View Closed Credit Screen and Disclaimer
+  priority: 1
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>User is authenticated</li><li>A VIN is selected with <code>creditStatus
+    = closed</code> and <code>creditType = leasing</code></li><li>App built with NMEX/Selectiviti
+    feature enabled</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 94426
+    case_id: 61753
+    text1: <ol><li>Launch the app</li><li>Select the relevant VIN</li><li>Tap on the
+      Credits card</li><li>Wait for Closed Credit screen</li></ol>
+    text2: null
+    text3: <ul><li>Greeting title displays <code>¡Felicidades &lt;NAME&gt;! Has concluido
+      tu arrendamiento</code> (or localized equivalent)</li><li>Support cards and
+      <code>¿Cómo obtener la factura de mi auto?</code> card are present</li><li>Disclaimer
+      text shows:<ul><li><code>Tu arrendamiento ha finalizado, ahora puedes seleccionar:</code><ul><li><code>Renovar
+       y volver a estrenar un vehículo nuevo, solo acude con tu distribuidor autorizado</code></li><li><code>Financiar
+      el valor residual</code></li><li><code>Compra de contado</code></li><li><code>Devuelve
+      el vehículo, solo agenda tu cita con nosotros ¡Esperamos verte pronto!</code></li></ul></li></ul></li><li>A
+      clickable email link is visible with correct address &gt; <a href="mailto:findesuarrendamiento@nrfm.com.mx">findesuarrendamiento@nrfm.com.mx</a></li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 94442
+    case_id: 61753
+    text1: <ol><li>Launch the app</li><li>Select the relevant VIN</li><li>Tap on the
+      Credits card</li><li>Wait for Closed Credit screen</li><li>Click the option
+      &gt; <code>¿Cómo obtener la factura de mi auto?</code></li></ol>
+    text2: null
+    text3: <ul><li>Greeting title displays <code>Estados de cuenta y facturas</code></li><li>Subtitle
+      displays <code>Últimos estados de cuenta</code></li><li>Disclaimer text shows:<ul><li><code>Te
+      recordamos que tus estados de cuenta y facturas las puedes descargar desde Portal
+      MiNissan®/Infiniti Finance</code></li><li><code>Para obtener la factura de tu
+      vehículo deberás de:</code><ul><li><code>Financiar el valor residual.</code></li><li><code>Compra
+      de contado.</code></li></ul></li><li><code>Solo ponte en contacto con nosotros
+      y compártenos tu decisión a </code><a href="mailto:findesuarrendamiento@nrfm.com.mx"><code>findesuarrendamiento@nrfm.com.mx</code></a></li></ul></li><li>The
+      section <code>¿Cómo podemos ayudarte?</code> shows after the previous text</li></ul>
+    text4: null
+    display_order: 2
+  notes: "<p>Figma Links: NIS Android, INF Android<br />Test Account: <a href=\"mailto:infinitiuser72@yopmail.com\"\
+    >infinitiuser72@yopmail.com</a> | N1iss4n123$<br />GraphQL Credit object example:</p><pre><code\
+    \ class=\"editor-plain language-plain code-block\">{\n  \"credit\": {\n    \"\
+    creditType\": \"credit\",\n    \"creditStatus\": \"closed\",\n    \"supportEmail\"\
+    : \"cacinfiniti@nrfm.com.mx\",\n    \"supportPhoneNumber\": \"+528005463464\"\
+    ,\n    \"termsAndConditions\": \"https://www.infinitifinance.mx/terminos-y-condiciones/infiniti\"\
+    \n  }\n}\n</code></pre>"

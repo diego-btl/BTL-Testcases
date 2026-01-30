@@ -1,0 +1,64 @@
+testmo:
+  case_id: 30029
+  folder_id: 3764
+  project_id: 5
+  folder_path: support
+  folder_name_ui: Support
+  created_at: '2025-01-22 15:32:04.990849'
+  updated_at: '2025-01-22 15:47:01.053123'
+  last_sync: '2026-01-30T18:20:38.242323Z'
+  url: https://bethinklabs.testmo.net/repositories/5/cases/30029
+metadata:
+  name: Verify Navigation to the Support Page and Its Layout
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>The app is installed and running.</p>
+  steps:
+  - column_name: custom_steps
+    id: 48928
+    case_id: 30029
+    text1: <p><strong>Click on the "Suporte" tab in the navigation bar.</strong></p>
+    text2: null
+    text3: '<ul><li>The app navigates to the <strong>Support page</strong>, displaying
+      the following:<ul><li>The header showing the vehicle name (e.g., "MY NISSAN
+      ARIYA") or "SEM VEÍCULOS".</li><li>The <strong>"Canais de Suporte"</strong>
+      section with three icons: <strong>Nissan Assistance</strong>, <strong>SAC</strong>,
+      and <strong>Agendar Serviço</strong>.</li><li>Four cards: <strong>Manual do
+      Veículo</strong>, <strong>Garantia Nissan</strong>, <strong>SAC por WhatsApp</strong>,
+      and <strong>FAQs</strong>.</li></ul></li></ul>'
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 48929
+    case_id: 30029
+    text1: <p><strong>Verify the header.</strong></p>
+    text2: null
+    text3: <ol><li>The header displays the vehicle name or "SEM VEÍCULOS" centered
+      at the top.</li><li>If a vehicle name is displayed, clicking on it should open
+      the Garage screen.</li></ol>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 48930
+    case_id: 30029
+    text1: <p><strong>Verify the "Canais de Suporte" section.</strong></p>
+    text2: null
+    text3: <ul><li>The section displays the following icons in a row:<ul><li><strong>Nissan
+      Assistance</strong> on the left.</li><li><strong>SAC</strong> in the center.</li><li><strong>Agendar
+      Serviço</strong> on the right.</li></ul></li></ul>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 48931
+    case_id: 30029
+    text1: <p><strong>Verify the cards section below the "Canais de Suporte".</strong></p>
+    text2: null
+    text3: <ul><li>The following cards are displayed in the correct order:<ul><li><strong>Manual
+      do Veículo</strong>.</li><li><strong>Garantia Nissan</strong>.</li><li><strong>SAC
+      por WhatsApp</strong>.</li><li><strong>FAQs</strong>.</li></ul></li></ul>
+    text4: null
+    display_order: 4

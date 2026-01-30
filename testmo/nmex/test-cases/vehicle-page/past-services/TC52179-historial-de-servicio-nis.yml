@@ -1,0 +1,221 @@
+testmo:
+  case_id: 52179
+  folder_id: 6251
+  project_id: 6
+  folder_path: vehicle-page/past-services
+  folder_name_ui: Past Services
+  created_at: '2025-06-24 17:24:16.764934'
+  updated_at: '2025-08-21 16:28:21.001625'
+  last_sync: '2026-01-30T18:20:45.180981Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/52179
+metadata:
+  name: Historial de Servicio - NIS
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>User has selected a <strong>AVK/AVK2</strong> vehicle</li><li>The
+    user has a Service &amp; Maintenance success response</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 82287
+    case_id: 52179
+    text1: <ol><li>Login into the app</li><li>Tap the S&amp;M card</li><li>Go to <code>Historial
+      de Servicio</code> screen</li><li>Tap the <code>AGREGAR SERVICIO PASADO</code>
+      CTA</li></ol>
+    text2: null
+    text3: '<ul><li>User is navigated to the <code>Agregar servicio pasado</code>
+      screen</li><li>The select boxes are showing:<ul><li><code>Categoría de servicio</code></li><li><code>Tipo
+      de servicio</code></li></ul></li><li>Date field placeholder: <code>DD/MM/AAAA</code></li><li>Mileage
+      field shows mileage from dynamic data</li><li>Comment field placeholder: <code>¿Deseas
+      proporcionar más detalles?</code></li><li>Comment field has a 200-character
+      limit and character counter</li><li><code>GUARDAR</code> button is greyed out</li><li>Buttons
+      visible: <code>GUARDAR</code>, <code>CANCELAR</code>, back arrow</li></ul>'
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 85567
+    case_id: 52179
+    text1: <ol><li>Login into the app</li><li>Tap the S&amp;M card</li><li>Go to <code>Historial
+      de Servicio</code> screen</li><li>Tap the <code>AGREGAR SERVICIO PASADO</code>
+      CTA</li><li>Click over a new <code>Categoría de servicio box</code></li></ol>
+    text2: null
+    text3: <ul><li>The user sees all the  options:<ul><li><code>Servicio de mantenimiento</code></li><li><code>Servicio
+      Express</code></li><li><code>Servicio de reparación</code></li><li><code>Otro
+      tipo de servicio</code></li></ul></li></ul>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 85568
+    case_id: 52179
+    text1: <ol><li>Login into the app</li><li>Tap the S&amp;M card</li><li>Go to <code>Historial
+      de Servicio</code> screen</li><li>Tap the <code>AGREGAR SERVICIO PASADO</code>
+      CTA</li><li>Click over a new <code>Categoría de servicio box</code></li><li>Select
+      the option:<ol><li><code>Servicio de mantenimiento</code></li></ol></li></ol>
+    text2: null
+    text3: '<ul><li>The field &gt; <code>"serviceCategoryId": 1</code></li><li>The
+      next options for <code>Servicio de mantenimiento</code> will show:<ul><li><code>6
+      meses y/o 10,000 Km</code><strong> </strong>("opCodeID": 10)</li><li><code>12
+      meses y/o 20,000 Km</code> ("opCodeID": 11)</li><li><code>18 meses y/o 30,000
+      Km</code> ("opCodeID": 12)</li><li><code>24 meses y/o 40,000 Km</code> ("opCodeID":
+      13)</li><li><code>30 meses y/o 50,000 Km</code> ("opCodeID": 14)</li><li><code>36
+      meses y/o 60,000 Km</code> ("opCodeID": 15)</li><li><code>Más de 60,000 Km</code>
+      ("opCodeID": 16)</li></ul></li></ul>'
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 85569
+    case_id: 52179
+    text1: <ol><li>Login into the app</li><li>Tap the S&amp;M card</li><li>Go to <code>Historial
+      de Servicio</code> screen</li><li>Tap the <code>AGREGAR SERVICIO PASADO</code>
+      CTA</li><li>Click over a new <code>Categoría de servicio box</code></li><li>Select
+      the option:<ol><li><code>Servicio Express</code></li></ol></li></ol>
+    text2: null
+    text3: '<ul><li>The field &gt; <code>"serviceCategoryId": 2</code></li><li>The
+      next options for <code>Servicio Express</code> will show:<ul><li><code>6 meses
+      y/o 10,000 Km</code> ("opCodeID": 20)</li><li><code>18 meses y/o 30,000 Km</code>
+      ("opCodeID": 22)</li><li><code>30 meses y/o 50,000 Km</code> ("opCodeID": 23)</li></ul></li></ul>'
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 85570
+    case_id: 52179
+    text1: <ol><li>Login into the app</li><li>Tap the S&amp;M card</li><li>Go to <code>Historial
+      de Servicio</code> screen</li><li>Tap the <code>AGREGAR SERVICIO PASADO</code>
+      CTA</li><li>Click over a new <code>Categoría de servicio box</code></li><li>Select
+      the option:<ol><li><code>Servicio de reparación</code></li></ol></li></ol>
+    text2: null
+    text3: '<ul><li>The field &gt; <code>"serviceCategoryId": 3</code></li><li>The
+      next options for <code>Servicio de reparación</code> will show:<ul><li><code>Hojalatería
+      y pintura</code> ("opCodeID": 30)</li><li><code>Instalación de accesorios</code>
+      ("opCodeID": 31)</li><li><code>Reparación mecánica y/o eléctrica</code> ("opCodeID":
+      32)</li></ul></li></ul>'
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 85571
+    case_id: 52179
+    text1: <ol><li>Login into the app</li><li>Tap the S&amp;M card</li><li>Go to <code>Historial
+      de Servicio</code> screen</li><li>Tap the <code>AGREGAR SERVICIO PASADO</code>
+      CTA</li><li>Click over a new <code>Categoría de servicio box</code></li><li>Select
+      the option:<ol><li><code>Otro tipo de servicio</code></li></ol></li></ol>
+    text2: null
+    text3: '<ul><li>The field &gt; <code>"serviceCategoryId": 4</code></li><li>The
+      next options for <code>Otro tipo de servicio</code> will show:<ul><li><code>Llantas</code>
+      ("opCodeID": 40)</li><li><code>Baterías</code> ("opCodeID": 41)</li><li><code>Balatas/Frenos</code>
+      ("opCodeID": 42)</li><li><code>Limpieza del motor</code>("opCodeID": 43)</li><li><code>Pulido
+      y encerado</code>("opCodeID": 44)</li><li><code>Recambio de aire acondicionado</code>("opCodeID":
+      45)</li><li><code>Llamado a revisión</code>("opCodeID": 46)</li></ul></li></ul>'
+    text4: null
+    display_order: 6
+  - column_name: custom_steps
+    id: 82288
+    case_id: 52179
+    text1: <ol><li>Login into the app</li><li>Tap the S&amp;M card</li><li>Go to <code>Historial
+      de Servicio</code> screen</li><li>Tap the <code>AGREGAR SERVICIO PASADO</code>
+      CTA</li></ol>
+    text2: null
+    text3: <ul><li>Same UI is shown</li><li>Mileage field uses <code>vehicle.manualMileage</code></li><li>GUARDAR
+      is greyed out initially</li></ul>
+    text4: null
+    display_order: 7
+  - column_name: custom_steps
+    id: 82289
+    case_id: 52179
+    text1: <ol><li>Login into the app</li><li>Tap the S&amp;M card</li><li>Go to <code>Historial
+      de Servicio</code> screen</li><li>Tap the <code>AGREGAR SERVICIO PASADO</code>
+      CTA</li><li>Tap on the date field</li></ol>
+    text2: null
+    text3: <ul><li>The date picker appears (Day/Month/Year)</li><li>Today's date is
+      selected by default</li></ul>
+    text4: null
+    display_order: 8
+  - column_name: custom_steps
+    id: 82290
+    case_id: 52179
+    text1: <ol><li>Login into the app</li><li>Tap the S&amp;M card</li><li>Go to <code>Historial
+      de Servicio</code> screen</li><li>Tap the <code>AGREGAR SERVICIO PASADO</code>
+      CTA</li><li>Tap <code>Buscar distribuidores</code></li><li>Observe search screen</li><li>Type
+      in the search bar</li><li>Tap <code>Seleccionar</code> for a dealer</li></ol>
+    text2: null
+    text3: <ul><li>Dealer list loads</li><li>Textbox shows placeholder <code>Buscar
+      distribuidores</code></li><li>Filter applies based on dealer <strong>name</strong>/<strong>group</strong>/<strong>address</strong>/<strong>city</strong>/<strong>service</strong></li><li>Upon
+      selection, return to previous screen with <strong>dealerName</strong> displayed</li><li><code>GUARDAR</code>
+      button is enabled</li></ul>
+    text4: null
+    display_order: 9
+  - column_name: custom_steps
+    id: 82291
+    case_id: 52179
+    text1: <ol><li>Login into the app</li><li>Tap the S&amp;M card</li><li>Go to <code>Historial
+      de Servicio</code> screen</li><li>Tap the <code>AGREGAR SERVICIO PASADO</code>
+      CTA</li><li>Tap <code>Buscar distribuidores</code></li><li>Observe search screen</li><li>Type
+      in the search bar</li><li>Tap <code>Seleccionar</code> for a dealer</li><li>Tap
+      the <code>X</code> on dealer field</li></ol>
+    text2: null
+    text3: <ul><li>Dealer name is cleared</li><li><code>GUARDAR</code> is disabled
+      again</li></ul>
+    text4: null
+    display_order: 10
+  - column_name: custom_steps
+    id: 82292
+    case_id: 52179
+    text1: <ol><li>Login into the app</li><li>Tap the S&amp;M card</li><li>Go to <code>Historial
+      de Servicio</code> screen</li><li>Tap the <code>AGREGAR SERVICIO PASADO</code>
+      CTA</li><li>Fill required fields</li><li>Tap <code>GUARDAR</code></li></ol>
+    text2: null
+    text3: '<ul><li>API call is made to save service</li><li>Navigated back to <code>Historial
+      de Servicio</code></li><li>Toast: <code>Se guardó correctamente</code></li></ul>'
+    text4: null
+    display_order: 11
+  - column_name: custom_steps
+    id: 85573
+    case_id: 52179
+    text1: <ol><li>Login into the app</li><li>Tap the S&amp;M card</li><li>Go to <code>Historial
+      de Servicio</code> screen</li><li>Tap the <code>AGREGAR SERVICIO PASADO</code>
+      CTA</li><li>Fill required fields</li><li>Tap <code>GUARDAR</code></li><li>Tap
+      the <code>X</code> or <code>ACEPTAR</code> confirmation screen</li></ol>
+    text2: null
+    text3: <ul><li>The user is taken to the <code>Historial de servicio</code> screen
+      with the list of all Past Services</li><li>Each record will show:<ul><li>Date
+      &gt; DD/MM/YYY</li><li>Dealer name &gt; <code>MAGDALENA DE KINO</code></li><li>Category
+      Service &gt; <code>Servicio de reparación</code></li><li>Service Type &gt; <code>Instalación
+      de accesorios</code></li><li>Comment &gt; <code>This is a test</code></li></ul></li></ul>
+    text4: null
+    display_order: 12
+  - column_name: custom_steps
+    id: 82293
+    case_id: 52179
+    text1: <ol><li>Login into the app</li><li>Tap the S&amp;M card</li><li>Go to <code>Historial
+      de Servicio</code> screen</li><li>Tap the <code>AGREGAR SERVICIO PASADO</code>
+      CTA</li><li>Fill required fields (<strong>Submit a service that already exists</strong>)</li><li>Tap
+      <code>GUARDAR</code></li></ol>
+    text2: null
+    text3: '<ul><li>Stay on current screen</li><li>Toast: <code>Tú servicio ya está
+      registrado</code></li></ul>'
+    text4: null
+    display_order: 13
+  - column_name: custom_steps
+    id: 82294
+    case_id: 52179
+    text1: <ol><li>Login into the app</li><li>Tap the S&amp;M card</li><li>Go to <code>Historial
+      de Servicio</code> screen</li><li>Tap <code>&lt;</code> or <code>CANCELAR</code><ol><li>Tap
+      <code>Continuar</code> in dialog</li></ol></li></ol>
+    text2: null
+    text3: <ul><li>Dialog appears with <code>Cancelar</code> and <code>Continuar</code></li><li><code>Continuar</code>
+      discards unsaved edits and returns to <code>Historial de Servicio</code></li></ul>
+    text4: null
+    display_order: 14
+  - column_name: custom_steps
+    id: 82295
+    case_id: 52179
+    text1: <ol><li>Login into the app</li><li>Tap the S&amp;M card</li><li>Go to <code>Historial
+      de Servicio</code> screen</li><li>Tap <code>&lt;</code> or <code>CANCELAR</code><ol><li>Tap
+      <code>Cancelar</code> in dialog</li></ol></li></ol>
+    text2: null
+    text3: <ul><li>Dialog appears with <code>Cancelar</code> and <code>Continuar</code></li><li><code>Cancelar</code>
+      dismisses the dialog and retains edits</li></ul>
+    text4: null
+    display_order: 15

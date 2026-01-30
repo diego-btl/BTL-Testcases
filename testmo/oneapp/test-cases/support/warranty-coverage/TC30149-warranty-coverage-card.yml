@@ -1,0 +1,19 @@
+testmo:
+  case_id: 30149
+  folder_id: 83
+  project_id: 2
+  folder_path: support/warranty-coverage
+  folder_name_ui: Warranty Coverage
+  created_at: '2025-02-05 15:05:55.694966'
+  updated_at: '2025-10-08 20:18:41.806197'
+  last_sync: '2026-01-30T18:21:06.336713Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/30149
+metadata:
+  name: Warranty Coverage card
+  priority: 1
+  type: functional
+  status: active
+  estimate: 60000000
+  automation: 'no'
+  tags: []
+test_case: {}

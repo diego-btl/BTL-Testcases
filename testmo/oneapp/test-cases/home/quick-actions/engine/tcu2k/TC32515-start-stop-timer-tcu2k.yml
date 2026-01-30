@@ -1,0 +1,32 @@
+testmo:
+  case_id: 32515
+  folder_id: 4166
+  project_id: 2
+  folder_path: home/quick-actions/engine/tcu2k
+  folder_name_ui: TCU2K
+  created_at: '2025-04-04 19:58:04.457729'
+  updated_at: '2025-09-22 14:02:08.335554'
+  last_sync: '2026-01-30T18:21:06.183907Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/32515
+metadata:
+  name: Start/Stop Timer - TCU2K
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>The vehicle engine has been started successfully</p><p>The Countdown
+    timer is displayed in the Hero section (10 min)</p>
+  steps:
+  - column_name: custom_steps
+    id: 53124
+    case_id: 32515
+    text1: <p>Wait for 10 minutes to check the app's behavior</p>
+    text2: null
+    text3: <p>User should see:</p><ul><li>the countdown timer is dismissed in the
+      Hero section, Fuel Remaining is displayed in the Hero section instead</li><li>the
+      STOP Engine button is changed to the default state</li><li>the toast "&lt;year
+      and model&gt; engine turned off" is displayed at the bottom of the screen</li></ul>
+    text4: null
+    display_order: 1

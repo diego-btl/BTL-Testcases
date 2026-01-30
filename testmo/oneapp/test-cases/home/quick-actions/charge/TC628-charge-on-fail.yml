@@ -1,0 +1,33 @@
+testmo:
+  case_id: 628
+  folder_id: 63
+  project_id: 2
+  folder_path: home/quick-actions/charge
+  folder_name_ui: Charge
+  created_at: '2023-08-01 23:08:20.639251'
+  updated_at: '2025-08-21 19:08:22.033583'
+  last_sync: '2026-01-30T18:21:08.998249Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/628
+metadata:
+  name: Charge On - Fail
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has sent a StartCharge request</p>
+  steps:
+  - column_name: custom_steps
+    id: 797
+    case_id: 628
+    text1: '<p>Charge On request has resolved into a failure:</p><ul><li>CheckChargeServiceRequest
+      API &gt; "status": "FAILED"</li><li>VehicleBatteryStatus API &gt; "isPluggedIn":
+      true</li></ul>'
+    text2: null
+    text3: <p>User should see the following toast saying:</p><ul><li>&lt;year and
+      model&gt; failed to start charging.' (5 seconds)</li></ul><p>User should see
+      the Charge card with secondary text showing Plug In and Charging statuses</p><p>Charge
+      On button is in enabled state</p>
+    text4: null
+    display_order: 1

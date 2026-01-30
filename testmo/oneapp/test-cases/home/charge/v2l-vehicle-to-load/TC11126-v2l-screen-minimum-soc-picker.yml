@@ -1,0 +1,53 @@
+testmo:
+  case_id: 11126
+  folder_id: 1454
+  project_id: 2
+  folder_path: home/charge/v2l-vehicle-to-load
+  folder_name_ui: V2L - Vehicle-to-Load
+  created_at: '2024-02-05 18:48:46.732532'
+  updated_at: '2025-12-09 17:41:06.032407'
+  last_sync: '2026-01-30T18:21:07.106030Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/11126
+metadata:
+  name: V2L Screen - Minimum SoC picker
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has an EV AVK2 vehicle</p><p><code>V2L</code> capability
+    is returning true </p><p>User is on the Manage EV screen and Vehicle-to_Load card
+    is enabled</p>
+  steps:
+  - column_name: custom_steps
+    id: 11787
+    case_id: 11126
+    text1: <p>Tap on the Vehicle-to_Load card</p>
+    text2: null
+    text3: <p>User should see the Vehicle-to_Load screen with Minimum SoC field showing
+      the value corresponding to <code>v2lStatus.chargeLimitationLevel</code></p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 11788
+    case_id: 11126
+    text1: <p>Tap on the Minimum SoC picker</p>
+    text2: null
+    text3: <p>User should see values incrementing by 5%, the minimum value should
+      correspond with <code>v2lStatus.chargeMinimumLimitationLevel</code> and the
+      maximum value is hardcoded to 95%</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 11789
+    case_id: 11126
+    text1: <ol><li>Mock <code>V2lStatus</code> so that <code>chargeMinimumLimitationLevel</code>
+      is returning null</li><li>Tap Refresh on the Manage EV screen</li><li>Tap on
+      the V2L card</li><li>Tap on the Minimum SoC picker</li></ol>
+    text2: null
+    text3: <p>2. <code>V2lStatus</code> should be triggered again<br />3/4. User should
+      see the Vehicle-to_Load screen and the minimum value in the Minimum SoC picker
+      is 10%</p>
+    text4: null
+    display_order: 3

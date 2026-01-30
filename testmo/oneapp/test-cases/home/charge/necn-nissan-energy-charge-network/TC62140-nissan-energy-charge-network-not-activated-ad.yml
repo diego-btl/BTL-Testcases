@@ -1,0 +1,56 @@
+testmo:
+  case_id: 62140
+  folder_id: 2444
+  project_id: 2
+  folder_path: home/charge/necn-nissan-energy-charge-network
+  folder_name_ui: NECN - NISSAN ENERGY Charge Network
+  created_at: '2025-12-11 20:29:43.788463'
+  updated_at: '2026-01-15 19:22:04.020952'
+  last_sync: '2026-01-30T18:21:04.767873Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/62140
+metadata:
+  name: NISSAN ENERGY Charge Network - Not Activated - AD
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<p>User has an EV/EV2</p><p>"EnablePlugAndCharge": "true"</p><p>VehicleStaticData
+    &gt; "driverType": "SHARED_DRIVER"</p>'
+  steps:
+  - column_name: custom_steps
+    id: 96342
+    case_id: 62140
+    text1: '<p>User is on the Manage EV screen </p><p>AccountStatus API &gt; "status":
+      "INACTIVE"/"NOT_ENROLLED"/"FAILED"/"CANCELLED"/"CLOSED"/"ENROLLING"</p>'
+    text2: null
+    text3: <p>NISSAN ENERGY Charge Network card is displayed</p><p>Subtitle of the
+      NISSAN ENERGY Charge Network card is 'Not Activated'</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 96343
+    case_id: 62140
+    text1: <p>Tap  the NISSAN ENERGY Charge Network card</p>
+    text2: null
+    text3: <p>AccountStatus API is called</p><p>NissanPay API is not called</p><p>User
+      is navigated to the NISSAN ENERGY Charge Network screen</p><p>Status of the
+      Account Status card is 'Not Activated' <i>(If AccountStatus is ENROLLING &gt;
+      the status will be Prosessing)</i></p><p>The copy of the Account Status card
+      is:</p><ul><li>'NISSAN ENERGY Charge Network'</li><li>'The NISSAN ENERGY Charge
+      Network allows drivers to initiate and pay for charging sessions through the
+      MyNISSAN app. If you would like to utilize this feature, please contact the
+      primary account holder for activation.' </li></ul><p>The 'ACTIVATE' button is
+      hidden</p><p>There's the text 'Need more information?' and the 'CALL OUR HELP
+      LINE' button</p><p>The Payment Method card is hidden</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 96344
+    case_id: 62140
+    text1: <p>Tap the 'CALL OUR HELP LINE' button</p>
+    text2: null
+    text3: <p>The phone number from the ContactUs.plugAndChargeSupport is populated</p>
+    text4: null
+    display_order: 3

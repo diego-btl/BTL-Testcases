@@ -1,0 +1,85 @@
+testmo:
+  case_id: 36730
+  folder_id: 4085
+  project_id: 6
+  folder_path: home-page
+  folder_name_ui: Home Page
+  created_at: '2025-05-22 21:16:36.720786'
+  updated_at: '2025-10-16 07:09:39.698697'
+  last_sync: '2026-01-30T18:20:45.241657Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/36730
+metadata:
+  name: MIL description - Recall
+  priority: 1
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has a MIL status indicator active for AVK or AVK2</p>
+  steps:
+  - column_name: custom_steps
+    id: 61561
+    case_id: 36730
+    text1: <ol><li>Cold start the app</li><li>Ensure <code>GetRecalls</code> API is
+      called</li></ol>
+    text2: null
+    text3: '<ul><li>Red warning icon appears over the vehicle image on the home screen</li><li>I
+      want to visualize the MIL card on the home screen with the red warning icon
+      and the following title and subtitle:<ul><li><strong>Title</strong>: <code>Campaña
+      de calidad</code></li><li><strong>Subtitle</strong>: <code>Llamados a revisión</code></li></ul></li><li>If
+      more than 1 MILS are active will be &gt; <code>Llamados a revisión, <strong>+&lt;number&gt;</strong></code></li></ul>'
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 61562
+    case_id: 36730
+    text1: <ol><li>Cold start the app and wait for <code>GetRecalls</code> to return
+      data</li><li>Tap on the red warning icon displayed over the hero image</li></ol>
+    text2: null
+    text3: <ul><li>User should navigate to the <strong>Vehicle Status screen</strong></li><li>The
+      <code>Llamados a revisión</code> card should appear at the top of the screen</li></ul>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 61563
+    case_id: 36730
+    text1: <ol><li>Cold start the app and wait for <code>GetRecalls</code> to return
+      data</li><li>Tap the <code>Llamados a revisión</code> card on the home screen</li></ol>
+    text2: null
+    text3: <ul><li>User should navigate to the <strong>Vehicle Status screen</strong></li><li>The
+      <code>Llamados a revisión</code> card should be visible at the top</li></ul>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 61564
+    case_id: 36730
+    text1: <ol><li>From the Vehicle Status screen, tap on the “Llamado a revisión”
+      card</li></ol>
+    text2: null
+    text3: <ul><li>User should navigate to the <strong>Recall screen</strong></li><li>All
+      recall campaigns should be listed under the <code>Campañas de calidad</code>
+      section</li><li>Each recall card should include a warning icon, service description,
+      and service code</li></ul>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 61565
+    case_id: 36730
+    text1: <ol><li>From the Recall screen, tap on a recall item</li></ol>
+    text2: null
+    text3: '<ul><li>User should navigate to the <strong>Recall Details screen</strong></li><li>The
+      screen should show:<ul><li>Service code at the top</li><li><strong>Descripción</strong>:
+      service description</li><li><strong>Modelo</strong>: vehicle model</li><li><strong>VIN/Número
+      de serie</strong>: VIN number</li></ul></li></ul>'
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 61566
+    case_id: 36730
+    text1: <ol><li>From the Recall Details screen, tap on the <code>Programar Servicio</code>
+      button</li></ol>
+    text2: null
+    text3: <ul><li>User should navigate to the <strong>Service Booking screen</strong></li></ul>
+    text4: null
+    display_order: 6

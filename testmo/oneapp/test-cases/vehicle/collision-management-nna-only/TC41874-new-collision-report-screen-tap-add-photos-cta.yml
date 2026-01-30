@@ -1,0 +1,54 @@
+testmo:
+  case_id: 41874
+  folder_id: 3800
+  project_id: 2
+  folder_path: vehicle/collision-management-nna-only
+  folder_name_ui: Collision Management - NNA only
+  created_at: '2025-06-09 21:13:28.294907'
+  updated_at: '2025-06-10 17:26:23.847329'
+  last_sync: '2026-01-30T18:21:05.932097Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/41874
+metadata:
+  name: New Collision Report screen - Tap "Add Photos" CTA - Error
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>User is on the Collision Report screen</li><li>Mocking <code>CreateCollisionReport</code>
+    API call fails</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 71943
+    case_id: 41874
+    text1: <p> Fill out all required fields  or leave them empty</p>
+    text2: null
+    text3: null
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 71944
+    case_id: 41874
+    text1: <p> Tap the <code>Add Photos</code> CTA</p>
+    text2: null
+    text3: null
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 71945
+    case_id: 41874
+    text1: <p>Simulate a failure in the <code>CreateCollisionReport API</code> call</p>
+    text2: null
+    text3: null
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 71946
+    case_id: 41874
+    text1: <p>In the confirmation modal, tap <code>Yes</code> /<code>Continue</code></p>
+    text2: null
+    text3: <ul><li>The app automatically retries the API call once.</li><li>If the
+      retry also fails, the <strong>"Something Went Wrong"</strong> modal is displayed.</li></ul>
+    text4: null
+    display_order: 4

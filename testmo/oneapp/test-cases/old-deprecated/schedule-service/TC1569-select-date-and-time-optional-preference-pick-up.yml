@@ -1,0 +1,37 @@
+testmo:
+  case_id: 1569
+  folder_id: 7143
+  project_id: 2
+  folder_path: old-deprecated/schedule-service
+  folder_name_ui: Schedule Service
+  created_at: '2023-08-28 20:13:24.297558'
+  updated_at: '2025-09-19 20:40:52.003707'
+  last_sync: '2026-01-30T18:21:08.015381Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/1569
+metadata:
+  name: Select Date and Time - Optional Preference - Pick up & Delivery
+  priority: 1
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is on Optional Preference screen</p>
+  steps:
+  - column_name: custom_steps
+    id: 1934
+    case_id: 1569
+    text1: <p>1. Tap on Pick up &amp; Delivery<br />2. Tap on either address field<br
+      />3. Enter an address and select an autocomplete entry<br />4. Tap on either
+      'I don't need' checkbox<br />5. Tap on Save</p>
+    text2: null
+    text3: '<p>1. User should see Pickup/dropoff fields enable and populate with user''s
+      address<br />2. User should be able to enter an address<br />3. User should
+      see their selected entry in the corresponding address field<br />4. User should
+      see address field cleared and disabled<br />5. User should be brought back to
+      Select Date and Time screen with updated time slots and pickup/dropoff addresses
+      shown<br /><br />Note: Save button is disabled if both fields have ''I don''t
+      need'' checked. If ''I don''t need'' is not checked, then an address must be
+      filled in to proceed.</p>'
+    text4: null
+    display_order: 1

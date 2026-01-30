@@ -1,0 +1,33 @@
+testmo:
+  case_id: 61915
+  folder_id: 6761
+  project_id: 6
+  folder_path: support/let-us-help
+  folder_name_ui: Let Us Help
+  created_at: '2025-10-30 17:41:50.115913'
+  updated_at: null
+  last_sync: '2026-01-30T18:20:44.882658Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/61915
+metadata:
+  name: Let us Help
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is on the <code>Soporte</code> screen</p>
+  steps:
+  - column_name: custom_steps
+    id: 94800
+    case_id: 61915
+    text1: <ol><li>Login into the app</li><li>User goes to <code>Soporte</code> screen</li><li>Check
+      the <code>¿Necesitas ayuda?</code> section</li></ol>
+    text2: null
+    text3: <ul><li>User should see <code>¿Necesitas ayuda?</code> section at the top</li><li>User
+      should see <code>¿Necesitas ayuda?</code> with the next subsections:<ul><li><code>Asistencia
+      Vial</code></li><li><code>Asistente de Accidentes</code></li><li><code>Vehículo
+      Robado</code></li><li><code>911</code></li></ul></li><li>Icons for above sub-sections
+      should match the ss attached. </li></ul>
+    text4: null
+    display_order: 1

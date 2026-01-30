@@ -1,0 +1,64 @@
+testmo:
+  case_id: 58199
+  folder_id: 411
+  project_id: 2
+  folder_path: home/additional-driver
+  folder_name_ui: Additional Driver
+  created_at: '2025-08-22 12:30:28.164491'
+  updated_at: null
+  last_sync: '2026-01-30T18:21:05.750164Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/58199
+metadata:
+  name: PD - AD  List Screen - View Accepted - Error Loading Configurations
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has an AVK2 vehicle and is PRIMARY_DRIVER</p><p>User has
+    an accepted invitation</p><p>User is on AD List screen</p>
+  steps:
+  - column_name: custom_steps
+    id: 88945
+    case_id: 58199
+    text1: "<p>Mock an error for <code>ShareableCapabilitiesForInvitation</code> [iOS]\
+      \ with the following:</p><pre><code class=\"editor-json language-json code-block\"\
+      >HTTP/1.1 500 Internal Server Error\nContent-Type: application/json\nConnection:\
+      \ keep-alive\nDate: Tue, 12 Apr 2022 21:13:27 GMT\nx-amzn-RequestId: 09ac326c-1732-4547-8e2b-1faeea8c8d91\n\
+      x-amzn-ErrorType: InternalServerErrorException\nx-amz-apigw-id: QfG6rHG8IAMFsRg=\n\
+      X-Amzn-Trace-Id: Root=1-6255eb77-105c5ed61e98e8a165b5327b\nX-Cache: Error from\
+      \ cloudfront\nVia: 1.1 e67372c9495347d4b38267a785100068.cloudfront.net (CloudFront)\n\
+      X-Amz-Cf-Pop: YTO50-C1\nX-Amz-Cf-Id: O2KyBq1ze9JBQkEMlhlljmI6uTmvYeNx4aTXjtNOXnPaXoNocJMjBw==\n\
+      \n{\n  \"message\": \"Internal server error\"\n}</code></pre>"
+    text2: null
+    text3: null
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 88946
+    case_id: 58199
+    text1: <p>Tap on accepted invitation</p>
+    text2: null
+    text3: <p>User should see a loading spinner and then the Invite Details screen
+      with the top section, Selected Vehicle section, and Additional Driver section
+      with the corresponding info<br /><br />User should see a <code>Something Went
+      Wrong</code> modal with options - Cancel/Retry</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 88947
+    case_id: 58199
+    text1: <p>Tap on Cancel</p>
+    text2: null
+    text3: <p>User should be brought back to the AD List screen</p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 88948
+    case_id: 58199
+    text1: <p>Tap on Retry</p>
+    text2: null
+    text3: <p>User should see the same API call triggered again</p>
+    text4: null
+    display_order: 4

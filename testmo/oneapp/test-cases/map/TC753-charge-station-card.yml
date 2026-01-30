@@ -1,0 +1,29 @@
+testmo:
+  case_id: 753
+  folder_id: 46
+  project_id: 2
+  folder_path: map
+  folder_name_ui: Map
+  created_at: '2023-08-01 23:08:22.241482'
+  updated_at: '2025-09-22 14:58:39.224440'
+  last_sync: '2026-01-30T18:21:08.801963Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/753
+metadata:
+  name: Charge Station Card
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has an EV selected and performed a charge station search</p>
+  steps:
+  - column_name: custom_steps
+    id: 922
+    case_id: 753
+    text1: null
+    text2: null
+    text3: <p>User should see POI cards for charge stations including charge station
+      info (should match the selected plug types)</p>
+    text4: null
+    display_order: 1

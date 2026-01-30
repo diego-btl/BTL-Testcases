@@ -1,0 +1,102 @@
+testmo:
+  case_id: 62081
+  folder_id: 6787
+  project_id: 2
+  folder_path: vehicle/schedule-service/create
+  folder_name_ui: Create
+  created_at: '2025-12-03 01:40:17.310911'
+  updated_at: '2026-01-20 21:18:43.679975'
+  last_sync: '2026-01-30T18:21:04.877626Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/62081
+metadata:
+  name: Create Schedule Service - Review Service Request - Details
+  priority: 1
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>User has completed Select Services, Additional Information,
+    Select Date and Time, and Optional Preferences screens</li><li>User is on <code>Review
+    Service Request</code> screen</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 96397
+    case_id: 62081
+    text1: <p>User navigates to <code>Review Service Request</code> screen after Optional
+      Preferences</p>
+    text2: null
+    text3: <ul><li>Screen title is <code>Review Service Request</code></li><li>Progress
+      indicator shows 4 blue tabs (Step 4 of 4)</li><li><strong>Back arrow</strong>
+      is displayed at top left</li><li><strong>Close (X) button</strong> is displayed
+      at top right</li><li>Vehicle image is displayed</li><li>Vehicle <strong>nickname</strong>
+      is displayed</li><li>Vehicle <strong>year, model, and color</strong> are displayed</li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 96398
+    case_id: 62081
+    text1: <p>Verify <code>Dealer</code> card display</p>
+    text2: null
+    text3: '<ul><li><strong>Location icon</strong> is displayed</li><li>Card label:
+      <code>Dealer</code></li><li>Dealer name is displayed</li><li>Dealer address
+      is displayed</li><li><strong>Edit</strong> button (blue text) is displayed on
+      right side</li></ul>'
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 96399
+    case_id: 62081
+    text1: <p>Verify <code>Selected Service</code> card display</p>
+    text2: null
+    text3: '<ul><li><strong>Wrench icon</strong> is displayed</li><li>Card label:
+      <code>Selected Service</code></li><li>Selected service name is displayed</li><li><strong>Edit</strong>
+      button (blue text) is displayed on right side</li></ul>'
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 96400
+    case_id: 62081
+    text1: <p>Verify <code>Appointment Details</code> card display</p>
+    text2: null
+    text3: '<ul><li><strong>Calendar icon</strong> is displayed</li><li>Card label:
+      <code>Appointment Details</code></li><li>Date is displayed in format: <code>Date:
+      [Day], [Month] [Date], [Year]</code></li><li>Time is displayed in format: <code>Time:
+      [HH:MM AM/PM]</code></li><li>Service Advisor name is displayed (if selected)</li><li><strong>Edit</strong>
+      button (blue text) is displayed on right side</li></ul>'
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 96401
+    case_id: 62081
+    text1: <p>Verify <code>Transportation</code> card display (if selected)</p>
+    text2: null
+    text3: '<ul><li>If transportation was selected in Optional Preferences:<ul><li><strong>Car
+      icon</strong> is displayed</li><li>Card label: <code>Transportation</code></li><li>Transport
+      type is displayed</li><li>If Valet Service selected: Pick Up and Drop Off addresses
+      are displayed</li><li><strong>Edit</strong> button (blue text) is displayed
+      on right side</li></ul></li><li>If transportation was NOT selected: Card is
+      NOT displayed</li></ul>'
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 96402
+    case_id: 62081
+    text1: <p>Verify <code>Contact Information</code> card display</p>
+    text2: null
+    text3: '<ul><li><strong>Phone icon</strong> is displayed</li><li>Card label: <code>Contact
+      Information</code></li><li>Email address is displayed</li><li>Phone number is
+      displayed</li><li><strong>Edit</strong> button (blue text) is displayed on right
+      side</li></ul>'
+    text4: null
+    display_order: 6
+  - column_name: custom_steps
+    id: 96403
+    case_id: 62081
+    text1: <p>Verify bottom buttons display</p>
+    text2: null
+    text3: <ul><li><code>SCHEDULE SERVICE</code> button is displayed (black/dark button,
+      ALL CAPS)</li><li><code>CANCEL</code> button is displayed (outlined button,
+      ALL CAPS)</li></ul>
+    text4: null
+    display_order: 7

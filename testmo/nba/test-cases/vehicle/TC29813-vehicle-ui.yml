@@ -1,0 +1,79 @@
+testmo:
+  case_id: 29813
+  folder_id: 3763
+  project_id: 5
+  folder_path: vehicle
+  folder_name_ui: Vehicle
+  created_at: '2024-12-20 15:21:40.308281'
+  updated_at: '2025-04-09 13:26:52.048567'
+  last_sync: '2026-01-30T18:20:38.347681Z'
+  url: https://bethinklabs.testmo.net/repositories/5/cases/29813
+metadata:
+  name: Vehicle - UI
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is on the vehicle tab and has a vehicle</p>
+  steps:
+  - column_name: custom_steps
+    id: 48666
+    case_id: 29813
+    text1: null
+    text2: null
+    text3: <p>User should see the vehicle nickname on top as the garage header</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 48667
+    case_id: 29813
+    text1: null
+    text2: null
+    text3: <p>User should see the envelope icon for message center on the right hand
+      top side of screen</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 48668
+    case_id: 29813
+    text1: null
+    text2: null
+    text3: <p>User should see the vehicle image and a disclaimer underneath with the
+      copy <code>Imagem ilustrativa</code></p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 48669
+    case_id: 29813
+    text1: null
+    text2: null
+    text3: <p>User should see the active <code>Detalhes do Veiculo</code> CTA</p>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 48670
+    case_id: 29813
+    text1: null
+    text2: null
+    text3: <p>User should see three rounded buttons / quick links with the following:<br
+      /> - Agendar Serviço<br /> - Encontrar uma Concessionária<br /> - Histórico
+      de Serviços</p>
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 48671
+    case_id: 29813
+    text1: null
+    text2: null
+    text3: '<p>The <code>Ultimo Servico Executado</code> card should display the last
+      executed service with the following fields:<br />- "Serviço" (Service)<br />-
+      "Concessionária" (Dealer)<br />- " Data" (Date)<br /> - Format: DD/MM/YYYY<br
+      />-  "Quilometragem do veículo" (Mileage) Format: `XXX.XXX km`</p><p>- The above
+      data should match what''s in <code>VehicleServiceHistory</code> api response.</p><p>See
+      attached ss to compare the icons and placement of different elements on the
+      screen. </p><p><strong>Note: if there is no service history, then the card should
+      be hidden</strong></p>'
+    text4: null
+    display_order: 6

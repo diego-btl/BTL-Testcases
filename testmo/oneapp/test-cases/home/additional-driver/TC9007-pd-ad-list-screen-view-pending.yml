@@ -1,0 +1,51 @@
+testmo:
+  case_id: 9007
+  folder_id: 411
+  project_id: 2
+  folder_path: home/additional-driver
+  folder_name_ui: Additional Driver
+  created_at: '2023-11-21 08:09:36.509252'
+  updated_at: '2024-10-17 17:57:34.769274'
+  last_sync: '2026-01-30T18:21:07.331173Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/9007
+metadata:
+  name: PD - AD  List Screen - View Pending
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has an AVK2 vehicle and is PRIMARY_DRIVER</p><p>User has
+    a valid pending invitation</p><p>User is on AD List screen</p>
+  steps:
+  - column_name: custom_steps
+    id: 11607
+    case_id: 9007
+    text1: <p>Tap on the pending invitation</p>
+    text2: null
+    text3: <p>User should see a section with the date the invite was sent, the name
+      of the person the invitation was sent to, days remaining until the invite expires,
+      and CTAs to Resend or Cancel Invite<br /><br />User should see Selected Vehicle
+      section with the vehicle nickname<br /><br />User should see Additional Driver
+      section with Name, Email, and Phone number</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 11608
+    case_id: 9007
+    text1: <ol><li>Change the device date a few days in the future</li><li>Return
+      to the app</li></ol>
+    text2: null
+    text3: <p>2. User should see the days remaining until expiry update dynamically</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 11609
+    case_id: 9007
+    text1: <ol><li>Change the device date beyond the expiry date of the invite</li><li>Go
+      back to the AD List screen</li></ol>
+    text2: null
+    text3: <p>2. User should no longer see pending invite shown in the list</p>
+    text4: null
+    display_order: 3

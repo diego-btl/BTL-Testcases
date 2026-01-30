@@ -1,0 +1,41 @@
+testmo:
+  case_id: 2795
+  folder_id: 426
+  project_id: 2
+  folder_path: old-deprecated/ccs2/multi-user-car-finder
+  folder_name_ui: Multi-user Car Finder
+  created_at: '2023-09-08 16:45:17.725069'
+  updated_at: '2026-01-06 17:49:17.280921'
+  last_sync: '2026-01-30T18:21:07.523237Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/2795
+metadata:
+  name: Vehicle could not be located
+  priority: 13
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: 'User''s selected vehicle is not returning a location<br />
+
+    User has location permissions denied<br />
+
+    User is a PRIMARY_DRIVER or SHARED_DRIVER (to be tested for both for AVK2)'
+  steps:
+  - column_name: custom_steps
+    id: 3160
+    case_id: 2795
+    text1: 1. Navigate to the Map screen
+    text2: null
+    text3: '1. User should see Map centered Franklin, TN (NNA)<br />
+
+      <br />
+
+      User should see User location and Vehicle location button disabled<br />
+
+      <br />
+
+      User should see Vehicle could not be located message and empty state for timestamp
+      in Vehicle Location'
+    text4: null
+    display_order: 1

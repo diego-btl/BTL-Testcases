@@ -1,0 +1,51 @@
+testmo:
+  case_id: 61756
+  folder_id: 6733
+  project_id: 6
+  folder_path: home-page/cards/credit/selectiviti-closed
+  folder_name_ui: Selectiviti - Closed
+  created_at: '2025-10-14 15:22:21.016776'
+  updated_at: null
+  last_sync: '2026-01-30T18:20:44.942881Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/61756
+metadata:
+  name: UI Layout and Visual Compliance
+  priority: 1
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<ul>
+
+    <li>Closed credit screen is fully loaded</li>
+
+    </ul>'
+  steps:
+  - column_name: custom_steps
+    id: 94429
+    case_id: 61756
+    text1: '<ol>
+
+      <li>Open Closed Credit screen</li>
+
+      <li>Inspect greeting, disclaimer paragraphs, email link</li>
+
+      <li>Scroll to bottom and inspect support cards and factura card</li>
+
+      </ol>'
+    text2: null
+    text3: '<ul>
+
+      <li>All text renders per design (correct fonts, sizes, color)</li>
+
+      <li>No text truncation or overlap</li>
+
+      <li>Email link styled (underline/color) as in design</li>
+
+      <li>Support cards and factura card aligned and sized correctly</li>
+
+      </ul>'
+    text4: null
+    display_order: 1
+  notes: <p>Compare against Figma NIS Android / INF Android</p>

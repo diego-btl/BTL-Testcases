@@ -1,0 +1,60 @@
+testmo:
+  case_id: 32369
+  folder_id: 6773
+  project_id: 6
+  folder_path: map-page/dealers
+  folder_name_ui: Dealers
+  created_at: '2025-04-01 17:50:44.939512'
+  updated_at: '2025-10-30 20:18:39.566132'
+  last_sync: '2026-01-30T18:20:45.550625Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/32369
+metadata:
+  name: Distribuidores cercanos
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is viewing 2 of the near by dealers</p>
+  steps:
+  - column_name: custom_steps
+    id: 52740
+    case_id: 32369
+    text1: <ol><li>Tap <code>Mapa</code> option</li><li>Scroll to <code>Distribuidores
+      cercanos</code></li></ol>
+    text2: null
+    text3: <ul><li>The user should see 2 dealer displaying, this ones are based in
+      the vehicle location, if the vehicle location it is <code>NULL</code>, they
+      will show the ones closer to the user location</li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 94809
+    case_id: 32369
+    text1: <ol><li>Tap <code>Mapa</code> option</li><li>Scroll to <code>Distribuidores
+      cercanos</code></li><li>Tap on the <code>Dealer</code> option</li></ol>
+    text2: null
+    text3: <ul><li>The user should be seeing the Map view with the Dealer selected</li></ul>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 94810
+    case_id: 32369
+    text1: <ol><li>Tap <code>Mapa</code> option</li><li>Scroll to <code>Distribuidores
+      cercanos</code></li><li>Tap on the <code>Dealer</code> option</li><li>Tap <code>Ver
+      Lista</code></li></ol>
+    text2: null
+    text3: <ul><li>The user should be seeing the List view with the Dealer selected</li></ul>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 94808
+    case_id: 32369
+    text1: <ol><li>Tap <code>Mapa</code> option</li><li>Scroll to <code>Distribuidores
+      cercanos</code></li><li>Tap in the option <code>Ver más</code></li></ol>
+    text2: null
+    text3: <ul><li>The user should be redirect to the List view with the 2 dealers
+      showing in the previous screen</li></ul>
+    text4: null
+    display_order: 4

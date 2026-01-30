@@ -1,0 +1,64 @@
+testmo:
+  case_id: 870
+  folder_id: 45
+  project_id: 2
+  folder_path: vehicle
+  folder_name_ui: Vehicle
+  created_at: '2023-08-04 11:10:53.276806'
+  updated_at: '2024-10-17 17:56:23.776593'
+  last_sync: '2026-01-30T18:21:08.523340Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/870
+metadata:
+  name: MIL description - Recall
+  priority: 1
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has a MIL status indicator active for EV/AVK</p>
+  steps:
+  - column_name: custom_steps
+    id: 1041
+    case_id: 870
+    text1: <p>Recall data returned (RECALL or SERVICE type)</p>
+    text2: null
+    text3: <p>User should see MIL status card with secondary text containing MIL name
+      - if there are multiple MIL, will also show '+# more'</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 1042
+    case_id: 870
+    text1: <p>Tap on MIL status card</p>
+    text2: null
+    text3: <p>User should see Vehicle Status screen with MIL tab</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 1043
+    case_id: 870
+    text1: <p>Tap on Active Recall</p>
+    text2: null
+    text3: <p>User should see Open Campaigns screen with Recall and Service Campaigns</p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 1044
+    case_id: 870
+    text1: <p>Tap on Recall/Service Campaign</p>
+    text2: null
+    text3: <ul><li>User is able view Recall Campaign Information for both campaign
+      types,</li><li> User should see data corresponding to the response</li></ul>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 1045
+    case_id: 870
+    text1: <p>Tap on Book a Service</p>
+    text2: null
+    text3: <p>User should enter into Book a Service flow as above</p>
+    text4: null
+    display_order: 5
+  notes: '<p>Automation: using <strong>nnaqa</strong> account for this as backend
+    is returning active recall, is this changes later test or account should be updated</p>'

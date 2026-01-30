@@ -1,0 +1,98 @@
+testmo:
+  case_id: 62155
+  folder_id: 2444
+  project_id: 2
+  folder_path: home/charge/necn-nissan-energy-charge-network
+  folder_name_ui: NECN - NISSAN ENERGY Charge Network
+  created_at: '2025-12-15 19:21:28.846920'
+  updated_at: '2026-01-30 21:26:00.072302'
+  last_sync: '2026-01-30T18:21:04.673951Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/62155
+metadata:
+  name: NECN - Plug & Charge Toggle - ENABLING
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<p>User has an EV/EV2</p><p>"EnablePlugAndCharge": "true"</p><p>VehicleStaticData
+    &gt; "driverType": "PRIMARY_DRIVER"</p><p>AccountStatus &gt; "status": "ACTIVE"</p>'
+  steps:
+  - column_name: custom_steps
+    id: 96484
+    case_id: 62155
+    text1: '<p>Mock AccountStatus API to return "pncStatus": "READY" and "toggleStatus":
+      "DISABLED"</p><p>Navigate to the NISSAN ENERGY Charge Network screen</p><p>Tap
+      the toggle to enable it</p>'
+    text2: null
+    text3: '<p>UpdatePnCServiceStatus API is called with the current VIN and "pncServiceStatus":
+      "ENABLE" as inputs</p><p>PNCServiceStatus API is called returning "pncServiceStatus":
+      "ENABLING" every 3 seconds</p><p>The toast ''Enabling Plug &amp; Charge'' is
+      displayed while PNCServiceStatus API returning "pncServiceStatus": "ENABLING </p>'
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 96485
+    case_id: 62155
+    text1: '<p>Mock PNCServiceStatus API to return "pncServiceStatus": "ENABLED"</p>'
+    text2: null
+    text3: <p>The toast 'Plug &amp; Charge enabled' is displayed</p><p>The toggle
+      is moved to the 'ON' state</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 96486
+    case_id: 62155
+    text1: '<p>Mock PNCServiceStatus API to return "pncServiceStatus": "ENABLING"
+      and then mock it to "DISABLED"</p>'
+    text2: null
+    text3: <p>The toggle should remain in the 'OFF' state and be enabled</p><p>The
+      error toast 'Failed to enable Plug &amp; Charge' is displayed</p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 96488
+    case_id: 62155
+    text1: '<p>Mock AccountStatus API to return "pncStatus": "READY" and "toggleStatus":
+      "DISABLING"</p><p>Navigate to the NISSAN ENERGY Charge Network screen</p><p>Tap
+      the toggle to enable it</p>'
+    text2: null
+    text3: <p>The toggle is in 'OFF' state and is disabled</p><p>User is not able
+      to toggle it ON</p>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 96498
+    case_id: 62155
+    text1: '<p>Return to the first step and Mock AccountStatus API to return "pncStatus":
+      "READY" and "toggleStatus": "DISABLED"</p><p>Navigate to the NISSAN ENERGY Charge
+      Network screen</p><p>Tap the toggle to enable it</p>'
+    text2: null
+    text3: "<p>UpdatePnCServiceStatus API returns \"statusCode\": \"2004\"</p><pre><code\
+      \ class=\"editor-plain language-plain code-block\">{\n  \"data\": {\n    \"\
+      updatePnCServiceStatus\": {\n      \"__typename\": \"EmpUpdatePnCServiceStatusResponse\"\
+      ,\n      \"statusCode\": \"2004\",\n      \"statusMessage\": \"Vehicle is currently\
+      \ in Charge Mode. Please try after completing the charge.\",\n      \"timestamp\"\
+      : \"2025-08-09T16:19:27.431Z\",\n      \"data\": null\n    }\n  }\n}</code></pre><p>The\
+      \ \"Charging Session Ongoing\" modal is displayed</p><p>The toggle remains in\
+      \ the same state</p>"
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 96499
+    case_id: 62155
+    text1: '<p>Return to the first step and Mock AccountStatus API to return "pncStatus":
+      "READY" and "toggleStatus": "DISABLED"</p><p>Navigate to the NISSAN ENERGY Charge
+      Network screen</p><p>Tap the toggle to enable it</p>'
+    text2: null
+    text3: "<p>UpdatePnCServiceStatus API returns \"statusCode\": \"3015\"</p><pre><code\
+      \ class=\"editor-plain language-plain code-block\">{\n  \"data\": {\n    \"\
+      updatePnCServiceStatus\": {\n      \"__typename\": \"EmpUpdatePnCServiceStatusResponse\"\
+      ,\n      \"statusCode\": \"3015\",\n      \"statusMessage\": \"Previous action\
+      \ is in progress, Please try after sometime.\",\n      \"timestamp\": \"2025-08-09T16:19:27.431Z\"\
+      ,\n      \"data\": null\n    }\n  }\n}</code></pre><p>The toast 'Failed to enable\
+      \ Plug &amp; Charge' is displayed</p><p>The toggle remains in the same state</p>"
+    text4: null
+    display_order: 6
+  notes: <p>https://bethinklabs.slack.com/archives/C052PH0HNHJ/p1765919773660919</p>

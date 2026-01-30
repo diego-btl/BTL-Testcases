@@ -1,0 +1,123 @@
+testmo:
+  case_id: 28574
+  folder_id: 3600
+  project_id: 2
+  folder_path: home/dealer-offers
+  folder_name_ui: Dealer Offers
+  created_at: '2024-11-30 00:41:53.072333'
+  updated_at: '2025-12-19 15:16:15.293081'
+  last_sync: '2026-01-30T18:21:06.621389Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/28574
+metadata:
+  name: Dealer Offers Page - Preferred Dealer Selected
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<ul><li>The user has a valid vehicle selected</li><li>The user has
+    a preferred dealer selected</li><li>The user has a valid set of dealer offers</li><li>The
+    user is already in the Home Screen</li><li>The FF needs to be <code>"EnableDealerOffers":
+    "true"</code></li></ul>'
+  steps:
+  - column_name: custom_steps
+    id: 46192
+    case_id: 28574
+    text1: <ol><li>The user taps on the <strong>Offers and Promotions</strong> card</li></ol>
+    text2: null
+    text3: <ul><li>The user should be taken to the <strong>Dealer Offers</strong>
+      screen </li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 46191
+    case_id: 28574
+    text1: <ol><li>Validate the screen</li></ol>
+    text2: null
+    text3: <ul><li>The app should display:<ul><li>Preferred dealer section at the
+      top with only the Header, Address, Directions Icon, Call Icon and Languages
+      Spoken</li><li>The Dealer Offers section</li><li>The offers returned from the
+      middleware</li></ul></li></ul>
+    text4: null
+    display_order: 2
+  notes: "<p>The API should be called is <strong>DealsAndImagesByDealerId</strong>:</p><pre><code\
+    \ class=\"editor-plain language-plain code-block\">{\n  \"data\": {\n    \"dealsByDealerId\"\
+    : {\n      \"__typename\": \"Deals\",\n      \"coupon\": [\n        {\n      \
+    \    \"__typename\": \"Coupon\",\n          \"couponId\": \"NCRCS\",\n       \
+    \   \"couponTitle\": \"Complimentary Rental Car With Service of $300 or more*\"\
+    ,\n          \"standardDisclaimer\": \"*Basic transportation included. Insurance,\
+    \ upgrades, and fuel extra. Subject to rental company's age, credit card and license\
+    \ requirements. Certain restrictions apply. See dealer for details. Price and\
+    \ offer availability may vary by model. Taxes and fees additional. No cash value.\
+    \ Must present offer to redeem. May not be combined with other offers. Nissan\
+    \ vehicles only. Void where prohibited.\"\n        },\n        {\n          \"\
+    __typename\": \"Coupon\",\n          \"couponId\": \"NGNRBI_ES\",\n          \"\
+    couponTitle\": \"Genuine Nissan Battery Replacement &amp; Installation* - Express\
+    \ Service\",\n          \"standardDisclaimer\": \"*Genuine Nissan Battery only.\
+    \ See warranty information booklet for battery limited warranty details. Certain\
+    \ restrictions apply. See dealer for details. Price and offer availability may\
+    \ vary by model. Taxes and fees additional. No cash value. Must present offer\
+    \ to redeem. May not be combined with other offers. Nissan vehicles only. Void\
+    \ where prohibited.\"\n        },\n        {\n          \"__typename\": \"Coupon\"\
+    ,\n          \"couponId\": \"NGNSSR\",\n          \"couponTitle\": \"Genuine Nissan\
+    \ Shocks or Struts Replacement*\",\n          \"standardDisclaimer\": \"*Lifetime\
+    \ Limited Warranty available on dealer-installed Genuine Nissan Shocks or Struts\
+    \ only. See Warranty Information Booklet for details. Certain restrictions apply.\
+    \ See dealer for details. Price and offer availability may vary by model. Taxes\
+    \ and fees additional. No cash value. Must present offer to redeem. May not be\
+    \ combined with other offers. Nissan vehicles only. Void where prohibited.\"\n\
+    \        },\n        {\n          \"__typename\": \"Coupon\",\n          \"couponId\"\
+    : \"NNOTORLP\",\n          \"couponTitle\": \"MyNISSAN Rewards Loyalty Program*\"\
+    ,\n          \"standardDisclaimer\": \"*Reward Points are non-transferable, have\
+    \ no monetary value and are not redeemable for value other than through the MyNISSAN\
+    \ Rewards program. Offer valid at participating dealers. Certain restrictions\
+    \ apply. See dealer for details. Price and offer availability may vary by model.\
+    \ Taxes and fees additional. No cash value. Must present offer to redeem. May\
+    \ not be combined with other offers. Nissan vehicles only. Void where prohibited.\"\
+    \n        },\n        {\n          \"__typename\": \"Coupon\",\n          \"couponId\"\
+    : \"NNRS_ES\",\n          \"couponTitle\": \"Nissan Recommended Services* - Express\
+    \ Service\",\n          \"standardDisclaimer\": \"*Offer only applies to Manufacturer's\
+    \ Recommended Scheduled Maintenance services. See Owner's Manual for maintenance\
+    \ schedule details. Certain restrictions apply. See dealer for details. Price\
+    \ and offer availability may vary by model. Taxes and fees additional. No cash\
+    \ value. Must present offer to redeem. May not be combined with other offers.\
+    \ Nissan vehicles only. Void where prohibited.\"\n        },\n        {\n    \
+    \      \"__typename\": \"Coupon\",\n          \"couponId\": \"NPLB\",\n      \
+    \    \"couponTitle\": \"Parts and Labor Bonus*\",\n          \"standardDisclaimer\"\
+    : \"*Offer only applies to services that include labor. Discount based on individual\
+    \ dealer's pricing guide. Certain restrictions apply. See dealer for details.\
+    \ Price and offer availability may vary by model. Taxes and fees additional. No\
+    \ cash value. Must present offer to redeem. May not be combined with other offers.\
+    \ Nissan vehicles only. Void where prohibited.\"\n        },\n        {\n    \
+    \      \"__typename\": \"Coupon\",\n          \"couponId\": \"NSOCGNOF_ES\",\n\
+    \          \"couponTitle\": \"Synthetic Oil &amp; Filter Change* - Express Service\"\
+    ,\n          \"standardDisclaimer\": \"*Excludes diesel models. Using Genuine\
+    \ Nissan Oil Filter and multi-grade oil up to vehicle specification. Certain restrictions\
+    \ apply. See dealer for details. Price and offer availability may vary by model.\
+    \ Taxes and fees additional. No cash value. Must present offer to redeem. May\
+    \ not be combined with other offers. Nissan vehicles only. Void where prohibited.\"\
+    \n        },\n        {\n          \"__typename\": \"Coupon\",\n          \"couponId\"\
+    : \"NTR\",\n          \"couponTitle\": \"Tire Rotation and Balance*\",\n     \
+    \     \"standardDisclaimer\": \"*Certain restrictions apply. See dealer for details.\
+    \ Price and offer availability may vary by model. Taxes and fees additional. No\
+    \ cash value. Must present offer to redeem. May not be combined with other offers.\
+    \ Nissan vehicles only. Void where prohibited.\"\n        }\n      ]\n    },\n\
+    \    \"dealsImagesByDealerId\": {\n      \"__typename\": \"DealsImages\",\n  \
+    \    \"coupons\": [\n        {\n          \"__typename\": \"CouponImage\",\n \
+    \         \"couponId\": \"NCRCS\",\n          \"couponImageUrl\": \"https://axis-api-gw.epsilonrms.com/ENROLLAPI/genericdataservice/getCouponImage/NissanDigitalServiceMarketing/CouponImage/64344_5008_NCRCS.png?encoding=true\"\
+    \n        },\n        {\n          \"__typename\": \"CouponImage\",\n        \
+    \  \"couponId\": \"NGNRBI_ES\",\n          \"couponImageUrl\": \"https://axis-api-gw.epsilonrms.com/ENROLLAPI/genericdataservice/getCouponImage/NissanDigitalServiceMarketing/CouponImage/64344_5004_NGNRBI_ES.png?encoding=true\"\
+    \n        },\n        {\n          \"__typename\": \"CouponImage\",\n        \
+    \  \"couponId\": \"NGNSSR\",\n          \"couponImageUrl\": \"https://axis-api-gw.epsilonrms.com/ENROLLAPI/genericdataservice/getCouponImage/NissanDigitalServiceMarketing/CouponImage/64344_5016_NGNSSR.png?encoding=true\"\
+    \n        },\n        {\n          \"__typename\": \"CouponImage\",\n        \
+    \  \"couponId\": \"NNOTORLP\",\n          \"couponImageUrl\": \"https://axis-api-gw.epsilonrms.com/ENROLLAPI/genericdataservice/getCouponImage/NissanDigitalServiceMarketing/CouponImage/64344_5012_NNOTORLP.png?encoding=true\"\
+    \n        },\n        {\n          \"__typename\": \"CouponImage\",\n        \
+    \  \"couponId\": \"NNRS_ES\",\n          \"couponImageUrl\": \"https://axis-api-gw.epsilonrms.com/ENROLLAPI/genericdataservice/getCouponImage/NissanDigitalServiceMarketing/CouponImage/64344_5009_NNRS_ES.png?encoding=true\"\
+    \n        },\n        {\n          \"__typename\": \"CouponImage\",\n        \
+    \  \"couponId\": \"NPLB\",\n          \"couponImageUrl\": \"https://axis-api-gw.epsilonrms.com/ENROLLAPI/genericdataservice/getCouponImage/NissanDigitalServiceMarketing/CouponImage/64344_5007_NPLB.png?encoding=true\"\
+    \n        },\n        {\n          \"__typename\": \"CouponImage\",\n        \
+    \  \"couponId\": \"NSOCGNOF_ES\",\n          \"couponImageUrl\": \"https://axis-api-gw.epsilonrms.com/ENROLLAPI/genericdataservice/getCouponImage/NissanDigitalServiceMarketing/CouponImage/64344_5524_NSOCGNOF_ES.png?encoding=true\"\
+    \n        },\n        {\n          \"__typename\": \"CouponImage\",\n        \
+    \  \"couponId\": \"NTR\",\n          \"couponImageUrl\": \"https://axis-api-gw.epsilonrms.com/ENROLLAPI/genericdataservice/getCouponImage/NissanDigitalServiceMarketing/CouponImage/64344_5013_NTR.png?encoding=true\"\
+    \n        }\n      ]\n    }\n  }\n}</code></pre>"

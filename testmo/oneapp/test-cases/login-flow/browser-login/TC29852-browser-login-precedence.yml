@@ -1,0 +1,19 @@
+testmo:
+  case_id: 29852
+  folder_id: 3775
+  project_id: 2
+  folder_path: login-flow/browser-login
+  folder_name_ui: Browser Login
+  created_at: '2025-01-07 14:33:34.626097'
+  updated_at: '2025-01-07 14:39:06.787068'
+  last_sync: '2026-01-30T18:21:06.578768Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/29852
+metadata:
+  name: Browser login precedence
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>EnableWebviewLogin = 'true' and EnableBrowserLogin = 'true'. </p>

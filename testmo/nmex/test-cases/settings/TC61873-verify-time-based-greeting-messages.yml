@@ -1,0 +1,61 @@
+testmo:
+  case_id: 61873
+  folder_id: 4089
+  project_id: 6
+  folder_path: settings
+  folder_name_ui: Settings
+  created_at: '2025-10-23 15:52:49.600476'
+  updated_at: '2025-10-30 17:13:29.653632'
+  last_sync: '2026-01-30T18:20:44.913349Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/61873
+metadata:
+  name: Verify Time-Based Greeting Messages
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>User logged in and on the <code>Más</code> (Settings) screen</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 94670
+    case_id: 61873
+    text1: <ol><li>Set device time to <strong>6:00 AM – 11:59 AM. </strong></li><li>Launch
+      the app and navigate to <code>Más</code>. </li><li>Observe the greeting message
+      at the top.</li></ol>
+    text2: null
+    text3: '<ul><li>Greeting message displays: <ul><li><code>''Buenos días, [name]''
+      (Good morning)</code></li></ul></li></ul>'
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 94671
+    case_id: 61873
+    text1: <ol><li>Set device time to <strong>12:00 PM – 5:59 PM. </strong></li><li>Relaunch
+      the app or refresh the screen. </li><li>Observe the greeting message.</li></ol>
+    text2: null
+    text3: '<ul><li>Greeting message displays: <ul><li><code>''Buenas tardes, [name]''
+      (Good afternoon)</code></li></ul></li></ul>'
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 94672
+    case_id: 61873
+    text1: <ol><li>Set device time to <strong>6:00 PM – 11:59 PM. </strong></li><li>Relaunch
+      the app or refresh the screen. </li><li>Observe the greeting message.</li></ol>
+    text2: null
+    text3: '<ul><li>Greeting message displays: <ul><li><code>''Buenas noches, [name]''
+      (Good evening)</code></li></ul></li></ul>'
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 94673
+    case_id: 61873
+    text1: <ol><li>Set device time to <strong>12:00 AM – 5:59 AM. </strong></li><li>Relaunch
+      the app or refresh the screen. </li><li>Observe the greeting message.</li></ol>
+    text2: null
+    text3: '<ul><li>Greeting message displays: <ul><li><code>''Buenas noches, [name]''
+      (Good night)</code></li></ul></li></ul>'
+    text4: null
+    display_order: 4

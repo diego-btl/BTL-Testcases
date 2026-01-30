@@ -1,0 +1,52 @@
+testmo:
+  case_id: 29908
+  folder_id: 3800
+  project_id: 2
+  folder_path: vehicle/collision-management-nna-only
+  folder_name_ui: Collision Management - NNA only
+  created_at: '2025-01-10 18:05:29.597125'
+  updated_at: '2025-01-28 02:03:14.887442'
+  last_sync: '2026-01-30T18:21:06.542420Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/29908
+metadata:
+  name: Edit Insurance Provider field - Success
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>The user is already on the <code>Collision Report</code>
+    start screen</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 48789
+    case_id: 29908
+    text1: <p>Tap on the<code> Edit </code>CTA for the <code>Insurance Provider </code>card</p>
+    text2: null
+    text3: '<ul><li>The user is redirected  to the edit screen</li><li>They should
+      see the following field: <code>Insurance Provider </code></li><li>The field
+      should not be marked as required</li><li>The <code>Save </code>button should
+      be inactive (disabled).</li></ul>'
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 48790
+    case_id: 29908
+    text1: <p>Enter the Insurance Provider's Name</p>
+    text2: null
+    text3: <ul><li>The user should see the <code>Save</code> button becomes enabled</li></ul>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 48791
+    case_id: 29908
+    text1: <p>Tap  on <code>Save</code> button</p>
+    text2: null
+    text3: <ul><li>The user should be redirected to the  <code>Collision Report</code>
+       start screen</li><li>The user should see the updated company name on the Insurance
+      Provider's card</li></ul>
+    text4: null
+    display_order: 3
+  notes: <p><img src="/attachments/view/3163" alt="3163" /></p><figure class="image"><img
+    src="/attachments/view/3164" alt="3164" /></figure>

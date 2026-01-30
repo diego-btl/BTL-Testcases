@@ -1,0 +1,31 @@
+testmo:
+  case_id: 637
+  folder_id: 66
+  project_id: 2
+  folder_path: home/charge
+  folder_name_ui: Charge
+  created_at: '2023-08-01 23:08:20.754904'
+  updated_at: '2026-01-06 21:06:00.293221'
+  last_sync: '2026-01-30T18:21:08.978929Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/637
+metadata:
+  name: Schedules
+  priority: 1
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is on Manage EV screen</p>
+  steps:
+  - column_name: custom_steps
+    id: 806
+    case_id: 637
+    text1: <p>1. No existing charge schedules<br />2. At least one charge schedule<br
+      />3. 3 charge schedules</p>
+    text2: null
+    text3: <p>1. User should see empty state for schedules<br />2. User should see
+      charge schedule with days of the week, start time, and toggle state<br />3.
+      User should see all charge schedules and add button disabled</p>
+    text4: null
+    display_order: 1

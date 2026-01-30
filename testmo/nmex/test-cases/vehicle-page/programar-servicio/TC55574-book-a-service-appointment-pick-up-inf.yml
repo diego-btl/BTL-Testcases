@@ -1,0 +1,171 @@
+testmo:
+  case_id: 55574
+  folder_id: 6250
+  project_id: 6
+  folder_path: vehicle-page/programar-servicio
+  folder_name_ui: Programar Servicio
+  created_at: '2025-08-07 14:06:55.742939'
+  updated_at: null
+  last_sync: '2026-01-30T18:20:45.108211Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/55574
+metadata:
+  name: Book a service appointment - Pick Up - INF
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has set a Preferred Dealer</p>
+  steps:
+  - column_name: custom_steps
+    id: 85594
+    case_id: 55574
+    text1: <ol><li>Navigate to the service booking flow from any navigation entry
+      point</li><li>Select the option &gt; <code>Servicio a mi puerta</code></li></ol>
+    text2: null
+    text3: <ul><li>The user will be able to select between:<ul><li><code>Llevaré mi
+      vehículo al Distribuidor Infiniti</code> <strong>(Default)</strong></li><li><code>Servicio
+      a mi puerta</code> &gt; <strong>Checked</strong></li></ul></li><li><code>SIGUIENTE</code>
+      button is enable </li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 85595
+    case_id: 55574
+    text1: <ol><li>Type one address where the vehicle will be picked up from</li></ol>
+    text2: null
+    text3: <ul><li>The suggestion box will show 5 addresses</li><li><code>SIGUIENTE</code>
+      button is disabled till the user types an address </li></ul>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 85596
+    case_id: 55574
+    text1: <ol><li>Arrive at the <code>Elige la fecha y hora</code> page</li></ol>
+    text2: null
+    text3: <ul><li>Arrive at the <code>Elige la fecha y hora</code> page</li><li>Maximum
+      of 5 days with hours will be showing for the user</li><li><code>SIGUIENTE</code>
+      button is disabled till user selects a day and hour</li></ul>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 85597
+    case_id: 55574
+    text1: <ol><li>Select a valid date and time slot on the <code>Elige la fecha y
+      hora</code> page</li><li>Tap on the <code>SIGUIENTE</code> button</li></ol>
+    text2: null
+    text3: <ul><li>The <code>Comentarios adicionales</code> screen will show</li><li>This
+      is not a mandatory field it can be empty</li><li><code>SIGUIENTE</code> button
+      is enable </li></ul>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 85598
+    case_id: 55574
+    text1: <ol><li>Tap on the <code>SIGUIENTE</code> button</li></ol>
+    text2: null
+    text3: <ul><li>User is taken to the Preview screen:<ul><li><code>Distribuidor</code></li><li><code>Fecha
+      y Hora</code></li><li><code>¿Como quieres realizar tu servicio?</code></li><li><code>¿Dónde
+      recogeremos el vehículo?</code></li><li><code>Comentarios adicionales</code></li></ul></li></ul>
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 85599
+    case_id: 55574
+    text1: <ol><li>Tap <code>AGENDAR CITA</code> on the Preview screen</li></ol>
+    text2: null
+    text3: <ul><li>Service booking request is sent to middleware</li><li>A loading
+      state is shown while waiting for response</li><li>A confirmation screen will
+      show:<ul><li><code>¡Cita agendada!</code></li><li><code>Recibirás un correo
+      electrónico confirmando la cita con todos los detalles</code></li><li><code>AGREGAR
+      A MI CALENDARIO</code> &gt; link to add it to you native calendar</li></ul></li></ul>
+    text4: null
+    display_order: 6
+  - column_name: custom_steps
+    id: 85600
+    case_id: 55574
+    text1: <ol><li>Booking is successful after tapping <code>AGENDAR CITA</code></li></ol>
+    text2: null
+    text3: <ul><li>User is redirected to Vehículo tab</li><li>Upcoming service card
+      appears at the top</li><li>Card shows dealer, date, and time</li></ul>
+    text4: null
+    display_order: 7
+  - column_name: custom_steps
+    id: 85601
+    case_id: 55574
+    text1: <ol><li>Middleware responds with an error after tapping <code>AGENDAR CITA</code></li></ol>
+    text2: null
+    text3: <ul><li>User stays on the Preview screen</li><li>Toast error message appears
+      with the mapped copy</li></ul>
+    text4: null
+    display_order: 8
+  - column_name: custom_steps
+    id: 85602
+    case_id: 55574
+    text1: <ol><li>Tap <code>CANCELAR</code> or <code>X</code> on any screen before
+      successful booking</li></ol>
+    text2: null
+    text3: <ul><li>Native modal appears asking to confirm cancellation</li><li>If
+      confirmed, user returns to Vehículo tab</li><li>If cancelled, modal dismisses
+      and user stays in flow</li></ul>
+    text4: null
+    display_order: 9
+  - column_name: custom_steps
+    id: 85603
+    case_id: 55574
+    text1: <ol><li>Tap  <code>&lt;</code> button on any booking screen</li></ol>
+    text2: null
+    text3: <ul><li>User goes back to previous screen</li><li>Previously entered/selected
+      data remains filled</li></ul>
+    text4: null
+    display_order: 10
+  - column_name: custom_steps
+    id: 85604
+    case_id: 55574
+    text1: <ol><li>Tap "Editar" on any section of Preview page</li></ol>
+    text2: null
+    text3: <ul><li>User is taken to correct page based on section:<ul><li><code>Distribuidor</code>
+      → Shows warning dialog</li><li><code>Fecha y Hora </code>→ Back to date/time
+      picker</li><li><code>¿Dónde recogeremos el vehículo? </code> → Agregar tu dirección
+      page</li><li><code>Comentarios adicionales</code> → Comentarios page</li></ul></li></ul>
+    text4: null
+    display_order: 11
+  - column_name: custom_steps
+    id: 85605
+    case_id: 55574
+    text1: <ol><li>Tap "Editar" on Distribuidor section</li><li>Confirm dialog by
+      tapping <code>Sí, reintentar</code></li></ol>
+    text2: null
+    text3: '<ul><li>Dialog shows:<ul><li>Title: <code>¿Reiniciar programación de servicio?</code></li><li>Body:
+      <code>¿Estás seguro de que deseas cambiar esto? Tendrás que empezar de nuevo
+      con una nueva cita de servicio.</code></li><li>CTAs: <code>Sí, reintentar</code>
+      and <code>No, cancelar</code></li></ul></li><li>On confirmation, user is navigated
+      to Mapa tab</li><li>On cancel, dialog is dismissed and user stays on Preview
+      page</li></ul>'
+    text4: null
+    display_order: 12
+  - column_name: custom_steps
+    id: 85606
+    case_id: 55574
+    text1: <ol><li>Complete the service booking flow until the <code>Preview</code>
+      page.</li><li>Select a time slot that becomes unavailable before booking.</li><li>Tap
+      <code>AGENDAR CITA</code>.</li></ol>
+    text2: null
+    text3: <ul><li>The user remains on the <code>Preview</code> screen.</li><li>A
+      <strong>toast error</strong> appears with the following message:<ul><li><code>La
+      hora de cita elegida ya no está disponible.</code></li></ul></li></ul>
+    text4: null
+    display_order: 13
+  - column_name: custom_steps
+    id: 85607
+    case_id: 55574
+    text1: <ol><li>Complete the service booking flow until the <code>Preview</code>
+      page.</li><li>Cause a generic failure (e.g., network issue, backend failure).</li><li>Tap
+      <code>AGENDAR CITA</code>.</li></ol>
+    text2: null
+    text3: <ul><li>The user remains on the <code>Preview</code> screen.</li><li>A
+      <strong>toast error</strong> appears with the following message:<ul><li><code>Se
+      ha producido un error. Inténtelo de nuevo más tarde.</code></li></ul></li></ul>
+    text4: null
+    display_order: 14

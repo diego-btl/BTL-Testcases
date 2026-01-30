@@ -1,0 +1,33 @@
+testmo:
+  case_id: 11131
+  folder_id: 1452
+  project_id: 2
+  folder_path: map/irp-weather
+  folder_name_ui: IRP Weather
+  created_at: '2024-02-06 10:13:55.308562'
+  updated_at: '2024-10-17 17:57:34.769274'
+  last_sync: '2026-01-30T18:21:07.090170Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/11131
+metadata:
+  name: Estimated Route Screen - Weather Info - Out of range
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has an EV</p><p>User is on the Create a Route Screen</p>
+  steps:
+  - column_name: custom_steps
+    id: 11810
+    case_id: 11131
+    text1: <ol><li>Fill in all the fields and set the date to 30 days or more</li><li>Tap
+      on Estimate Route</li><li>Scroll up on the Info Drawer</li></ol>
+    text2: null
+    text3: <p>2. User should see the Estimate Route screen load and open, <a href="https://pro.openweathermap.org/">https://pro.openweathermap.org</a>
+      API is <strong>not</strong> triggered<br />3. User should see the following
+      out of range message in place of the weather information:</p><p><code>Weather
+      data in &lt;location&gt; is only available within 30 days of a trip, please
+      check back later</code></p>
+    text4: null
+    display_order: 1

@@ -1,0 +1,32 @@
+testmo:
+  case_id: 1555
+  folder_id: 96
+  project_id: 2
+  folder_path: vehicle/battery-status
+  folder_name_ui: Battery Status
+  created_at: '2023-08-28 20:13:24.056120'
+  updated_at: '2024-10-17 17:57:05.010933'
+  last_sync: '2026-01-30T18:21:08.055009Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/1555
+metadata:
+  name: Capabilities
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has an EV</p>
+  steps:
+  - column_name: custom_steps
+    id: 1920
+    case_id: 1555
+    text1: <p>1. Remove REMOTE_CHARGING capability<br />2. Disable REMOTE_CHARGING
+      capability</p>
+    text2: null
+    text3: <p>1. User should not see Battery card<br />2. User should see Battery
+      card disabled</p>
+    text4: null
+    display_order: 1
+  notes: <ul><li>For a SHARED driver, if the capability is missing or disabled, the
+    item should be hidden</li></ul>

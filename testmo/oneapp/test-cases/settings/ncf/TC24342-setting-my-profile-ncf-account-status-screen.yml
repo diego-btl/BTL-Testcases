@@ -1,0 +1,68 @@
+testmo:
+  case_id: 24342
+  folder_id: 3085
+  project_id: 2
+  folder_path: settings/ncf
+  folder_name_ui: NCF
+  created_at: '2024-10-18 16:38:51.453842'
+  updated_at: '2024-10-22 21:17:15.051820'
+  last_sync: '2026-01-30T18:21:06.705748Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/24342
+metadata:
+  name: Setting - My Profile - NCF Account Status Screen
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>Login with an NCF account &gt; <a href="https://www.notion.so/bethinklabs/d0f8f58385a94c51ab27ce3ee1ef1e51?v=caf06428a7ac41aa96541666be242cd7">https://www.notion.so/bethinklabs/d0f8f58385a94c51ab27ce3ee1ef1e51?v=caf06428a7ac41aa96541666be242cd7</a></p><p><strong>NCF
+    Account Connected or Disconnected</strong></p>
+  steps:
+  - column_name: custom_steps
+    id: 37927
+    case_id: 24342
+    text1: <ol><li>Login into the app</li><li>Go to <strong>Settings</strong></li><li>Click
+      <strong>My Profile</strong></li><li>Click <strong>NCF Account Status </strong>card</li></ol>
+    text2: null
+    text3: "<p>The user is seeing the screen <strong>NCF Settings</strong> with the\
+      \ next information:</p><pre><code class=\"editor-plain language-plain code-block\"\
+      >Account Status\n\nCurrently your NCF account is not connected to OneApp.\n\
+      \ \nConnect\n\nOR \n\nAccount Status\n\nYour NCF account is currently synced\
+      \ to OneApp. You may wish to sign out at anytime out of the OneApp experience.\
+      \ Some more disclaimer verbiage here.\n\nDisconnect</code></pre>"
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 37928
+    case_id: 24342
+    text1: <ol><li>Login into the app</li><li>Go to <strong>Settings</strong></li><li>Click
+      <strong>My Profile</strong></li><li>Click <strong>NCF Account Status </strong>card</li><li>Click
+      <strong>Disconnect</strong></li></ol>
+    text2: null
+    text3: <p>The user is getting disconnected from the NCF account and a toast appears
+      saying:</p><p><code>You have disconnected successfully </code></p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 37929
+    case_id: 24342
+    text1: <ol><li>Login into the app</li><li>Go to <strong>Settings</strong></li><li>Click
+      <strong>My Profile</strong></li><li>Click <strong>NCF Account Status </strong>card</li><li>Click
+      <strong>Connect</strong></li></ol>
+    text2: null
+    text3: <p>The user is redirect to <strong>Add Financial Account </strong>flow
+      <code>(if vehicle is connected)</code></p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 37930
+    case_id: 24342
+    text1: <ol><li>Login into the app</li><li>Go to <strong>Settings</strong></li><li>Click
+      <strong>My Profile</strong></li><li>Click <strong>NCF Account Status </strong>card</li><li>Click
+      <strong>Connect</strong></li></ol>
+    text2: null
+    text3: <p>The user is redirect to <strong>Add Financial Vehicle </strong>flow
+      <code>(if vehicle is non-connected)</code></p>
+    text4: null
+    display_order: 4

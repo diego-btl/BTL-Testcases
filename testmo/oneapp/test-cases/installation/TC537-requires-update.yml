@@ -1,0 +1,41 @@
+testmo:
+  case_id: 537
+  folder_id: 39
+  project_id: 2
+  folder_path: installation
+  folder_name_ui: Installation
+  created_at: '2023-08-01 23:08:19.458628'
+  updated_at: '2025-08-21 13:36:12.457137'
+  last_sync: '2026-01-30T18:21:09.260578Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/537
+metadata:
+  name: Requires Update
+  priority: 12
+  type: functional
+  status: active
+  estimate: 28000000
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<ul><li>App is installed</li><li>Add a breakpoint or map local to
+    the <code>Firebase Remote Config</code> call and modify the response of the parameter:</li></ul><pre><code
+    class="editor-plain language-plain code-block">"UpdateVersion": "{\"storeUrl\":\"$store_url",\"updateVersion\":\"15.4.10\"}",</code></pre>'
+  steps:
+  - column_name: custom_steps
+    id: 706
+    case_id: 537
+    text1: <p>Click on the app icon</p>
+    text2: null
+    text3: <p>User should see 'App Update Required' modal</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 1139
+    case_id: 537
+    text1: <p>User click on the 'Update' CTA</p>
+    text2: null
+    text3: <p>User should be driven to the respective Store Page</p>
+    text4: null
+    display_order: 2
+  notes: <ul><li>Update Required modal cannot be dismissed</li><li>Check occurs on
+    launch and foreground</li></ul>

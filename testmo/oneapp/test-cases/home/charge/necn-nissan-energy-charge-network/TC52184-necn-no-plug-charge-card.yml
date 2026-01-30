@@ -1,0 +1,39 @@
+testmo:
+  case_id: 52184
+  folder_id: 2444
+  project_id: 2
+  folder_path: home/charge/necn-nissan-energy-charge-network
+  folder_name_ui: NECN - NISSAN ENERGY Charge Network
+  created_at: '2025-06-27 20:09:39.440298'
+  updated_at: '2026-01-15 19:04:50.574434'
+  last_sync: '2026-01-30T18:21:05.828371Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/52184
+metadata:
+  name: NECN - No Plug & Charge Card
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<p>User has an EV/EV2</p><p>"EnablePlugAndCharge": "true"</p><p>VehicleStaticData
+    &gt; "driverType": "PRIMARY_DRIVER"</p>'
+  steps:
+  - column_name: custom_steps
+    id: 82305
+    case_id: 52184
+    text1: '<p>Mock AccountStatus API to return "status": "ACTIVE" and "pncStatus":
+      "NA"/null/""</p><p>Navigate to the NISSAN ENERGY Charge Network screen</p>'
+    text2: null
+    text3: <p>Plug &amp; Charge card is hidden</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 96502
+    case_id: 52184
+    text1: '<p>Mock AccountStatus API to return </p><ul><li>"status" =! "ACTIVE" ("INACTIVE"/"NOT_ENROLLED"/"FAILED"/"CANCELLED"/"CLOSED"/"ENROLLING")</li><li>"pncStatus":
+      "READY"/"PENDING"/"INSTALLING"/"RENEWING"/"FAILED"</li></ul>'
+    text2: null
+    text3: <p>Plug &amp; Charge card is hidden</p>
+    text4: null
+    display_order: 2

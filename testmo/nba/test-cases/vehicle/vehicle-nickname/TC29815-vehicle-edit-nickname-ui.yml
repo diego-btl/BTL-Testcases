@@ -1,0 +1,53 @@
+testmo:
+  case_id: 29815
+  folder_id: 3771
+  project_id: 5
+  folder_path: vehicle/vehicle-nickname
+  folder_name_ui: Vehicle Nickname
+  created_at: '2024-12-20 15:21:40.308281'
+  updated_at: null
+  last_sync: '2026-01-30T18:20:38.338590Z'
+  url: https://bethinklabs.testmo.net/repositories/5/cases/29815
+metadata:
+  name: Vehicle - Edit Nickname UI
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is on Vehicle profile</p>
+  steps:
+  - column_name: custom_steps
+    id: 48676
+    case_id: 29815
+    text1: <p>Tap on the <code>Apelido</code> card</p>
+    text2: null
+    text3: <p>User should be brought to the Edit Vehicle Nickname flow</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 48677
+    case_id: 29815
+    text1: null
+    text2: null
+    text3: <p>Page header should be <code>Apelido do Veiculo</code> </p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 48678
+    case_id: 29815
+    text1: null
+    text2: null
+    text3: <p>User should see a text field prefilled with their current name and with
+      the title <code>Apelido do Veiculo</code></p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 48679
+    case_id: 29815
+    text1: null
+    text2: null
+    text3: <p>User should see a disabled <code>SALVAR</code> CTA</p>
+    text4: null
+    display_order: 4

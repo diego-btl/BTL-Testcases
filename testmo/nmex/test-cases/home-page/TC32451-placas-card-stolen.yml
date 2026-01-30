@@ -1,0 +1,57 @@
+testmo:
+  case_id: 32451
+  folder_id: 4085
+  project_id: 6
+  folder_path: home-page
+  folder_name_ui: Home Page
+  created_at: '2025-04-01 19:05:00.709485'
+  updated_at: '2025-08-19 16:23:26.555306'
+  last_sync: '2026-01-30T18:20:45.374350Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/32451
+metadata:
+  name: Placas card - Stolen
+  priority: 1
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>The licence plate has some restrictions:</p><ul><li>Minimum of
+    4 characters and max of 7</li><li>No special characters (Not able to type special
+    characters)</li><li>The combination can be <strong>letters</strong> and <strong>numbers</strong></li><li>More
+    info about Licence Plate for <a href="https://en.wikipedia.org/wiki/Vehicle_registration_plates_of_Mexico">NMEX</a> </li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 52846
+    case_id: 32451
+    text1: <ol><li>Login into the app</li><li>Check the card for <code>Placas</code></li></ol>
+    text2: null
+    text3: <ul><li>The <code>Placas</code> card should be at the top of the List</li><li>The
+      <code>Placas</code> card shouldn't be editable (you can't reorganized)</li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 52847
+    case_id: 32451
+    text1: <ol><li>Login into the app</li><li>Check the card for <code>Placas</code></li></ol>
+    text2: null
+    text3: <ul><li>The card should be displaying <strong>GREYED OUT</strong></li></ul>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 52848
+    case_id: 32451
+    text1: <ol><li>Login into the app</li><li>Check the card for <code>Placas</code></li></ol>
+    text2: null
+    text3: <ul><li>The card should be displaying <strong>DISABLED</strong></li></ul>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 52849
+    case_id: 32451
+    text1: <ol><li>Login into the app</li><li>Check the card for <code>Garantía</code></li></ol>
+    text2: null
+    text3: <ul><li>The card shows the asset, title and subtitle with the <code>Placas</code>
+      value, all disabled and <strong>GREYED OUT</strong></li></ul>
+    text4: null
+    display_order: 4

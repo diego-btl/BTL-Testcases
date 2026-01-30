@@ -1,0 +1,37 @@
+testmo:
+  case_id: 536
+  folder_id: 39
+  project_id: 2
+  folder_path: installation
+  folder_name_ui: Installation
+  created_at: '2023-08-01 23:08:19.443964'
+  updated_at: '2025-08-21 13:35:52.122542'
+  last_sync: '2026-01-30T18:21:09.263738Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/536
+metadata:
+  name: Overinstall
+  priority: 12
+  type: functional
+  status: active
+  estimate: 106000000
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>The previous market version of the app is installed and logged
+    into an account</li><li>Validate the <code>Keep Me Signed In</code> feature status</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 705
+    case_id: 536
+    text1: <p>Update to the latest build</p>
+    text2: null
+    text3: <ul><li>App launches without any issues</li><li>User is driven to the Home
+      Page after Logging in (if the <code>Keep Me Signed In</code> wasn't check-marked)</li><li>User
+      is driven to the Home Page (if the <code>Keep Me Signed In</code> was check-marked)</li></ul>
+    text4: null
+    display_order: 1
+  notes: <p>If the <code>Keep Me Signed In</code> feature was enabled the previous
+    version,  the user should remain signed in after overinstall</p><ul><li>Android
+    - overinstall needs to be done with the play store (the app is signed differently
+    compared to our builds from github)</li><li>Please list the version you're updating
+    from and to</li></ul>

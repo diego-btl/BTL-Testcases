@@ -1,0 +1,35 @@
+testmo:
+  case_id: 619
+  folder_id: 62
+  project_id: 2
+  folder_path: home/quick-actions/climate
+  folder_name_ui: Climate
+  created_at: '2023-08-01 23:08:20.521825'
+  updated_at: '2025-09-22 14:32:09.817811'
+  last_sync: '2026-01-30T18:21:09.028169Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/619
+metadata:
+  name: Climate On - Initiated
+  priority: 1
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is on the Home screen</p><p>"Climate On" and "Climate Off"
+    buttons are present in the Telematics row</p>
+  steps:
+  - column_name: custom_steps
+    id: 788
+    case_id: 619
+    text1: <p>User taps the "Climate On" button</p>
+    text2: null
+    text3: <p><code>StartClimate</code> API and <code>CheckRemoteClimateRequest</code>
+      API are triggered</p><p>User should see the "Climate On" button is changed to
+      a spinner and the "Climate Off" button is changed to a disabled state</p><p>Climate
+      card secondary text is replaced with 3 dots (...)<br /><br />User should see
+      the following toast messages:</p><ul><li>Contacting &lt;year and model&gt; to
+      turn on climate...</li><li>Waking &lt;year and model&gt; to turn on climate...</li><li>Initiating
+      climate on for &lt;year and model&gt;...</li></ul>
+    text4: null
+    display_order: 1

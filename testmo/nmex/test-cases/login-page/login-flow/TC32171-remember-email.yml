@@ -1,0 +1,48 @@
+testmo:
+  case_id: 32171
+  folder_id: 4143
+  project_id: 6
+  folder_path: login-page/login-flow
+  folder_name_ui: Login Flow
+  created_at: '2025-04-01 17:50:43.537583'
+  updated_at: '2025-04-16 15:41:36.999052'
+  last_sync: '2026-01-30T18:20:45.943678Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/32171
+metadata:
+  name: Remember Email
+  priority: 1
+  type: functional
+  status: active
+  estimate: 36000000000
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>Fresh installation or app cache cleared</li><li>User is already
+    on the <code>Login</code> page</li><li>Biometric flow is not covered, must be
+    skipped</li><li>Onboarding cards are not covered, must be skipped</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 52553
+    case_id: 32171
+    text1: <ul><li>Enter a valid email on the <code>Email</code> text field</li><li>Enter
+      a valid password on the <code>Password</code> text field</li><li>Select the
+      <code>Remember Email</code> checkmark below the <code>Password</code> text field</li></ul><p>With
+      the <code>Remember Email</code> checkmark selected, tap on the <code>SIGN IN</code>
+      button</p><p>if <code>Terms of Service</code> page is displayed, select the
+      <code>I have read and accept the <strong>App Terms of Service</strong></code>
+      checkmark and tap on the <code>SAVE</code> button</p><ul><li>Close the app by
+      triggering the Recent Apps interaction and closing swiping away the app</li><li>Reopen
+      the app by tapping on the app icon</li><li>Enter the valid password for the
+      prefilled email</li><li>Deselect the <code>Remember Email</code> checkmark and
+      tap on the <code>SIGN IN</code> button</li><li>Close the app by triggering the
+      Recent Apps interaction and closing swiping away the app</li><li>Reopen the
+      app by tapping on the app icon</li></ul>
+    text2: null
+    text3: <p>The checkmark is selected or deselected depending of the user interaction</p><p>The
+      Login flow is triggered</p><p>User is driven to the <code>Home</code> page</p><p>The
+      user is driven to the <code>Login</code> page and the email used in Step 1 is
+      prefilled in the <code>Email</code> text field</p><ul><li>User is driven to
+      the <code>Home</code> page</li></ul><p>The user is driven to the <code>Login</code>
+      page with both <code>Email</code> and <code>Password</code> text fields empty</p>
+    text4: null
+    display_order: 1

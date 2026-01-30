@@ -1,0 +1,228 @@
+testmo:
+  case_id: 32364
+  folder_id: 6772
+  project_id: 6
+  folder_path: map-page/poi-and-favorites
+  folder_name_ui: POI and Favorites
+  created_at: '2025-04-01 17:50:44.901082'
+  updated_at: '2025-10-31 16:47:20.545516'
+  last_sync: '2026-01-30T18:20:45.576896Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/32364
+metadata:
+  name: POI chips - NIS
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is viewing POI at the top of the screen:</p><p><a href="https://www.figma.com/design/iFq4V36f8sx0YkPUCGFtgO/MiINFINITI-(NMEX)---iOS?node-id=2297-48719&amp;t=SLiWHmkrFmm4E6FT-1)">Figma
+    Link</a></p>
+  steps:
+  - column_name: custom_steps
+    id: 52735
+    case_id: 32364
+    text1: <ol><li>Login into the app</li><li>Go to <code>Mapa</code></li></ol>
+    text2: null
+    text3: <p>Be able to see the POI for NIS:</p><ul><li><code>Servicio</code></li><li><code>Venta
+      de autos</code></li><li><code>Carrocería y pintura</code></li><li><code>Fleet
+      Solution</code></li><li><code>Servicio Leaf</code></li><li><code>Value Advantage</code></li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 94830
+    case_id: 32364
+    text1: <ol><li>Login into the app</li><li>Go to <code>Mapa</code></li><li>Be able
+      to see 6 POI chips</li><li>Click the POI &gt; <code>Servicio</code></li></ol>
+    text2: null
+    text3: <ul><li>The query should show all the Dealer for <code>Servicio</code>
+      and the results should displaying in the <strong>Map</strong> or in a <strong>ListView</strong> </li></ul>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 94831
+    case_id: 32364
+    text1: <ol><li>Login into the app</li><li>Go to <code>Mapa</code></li><li>Be able
+      to see 6 POI chips</li><li>Click the POI &gt; <code>Venta de autos</code></li></ol>
+    text2: null
+    text3: <ul><li>The query should show all the Dealer for <code>Venta de autos</code>
+      and the results should displaying in the <strong>Map</strong> or in a <strong>ListView</strong> </li></ul>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 94832
+    case_id: 32364
+    text1: <ol><li>Login into the app</li><li>Go to <code>Mapa</code></li><li>Be able
+      to see 6 POI chips</li><li>Click the POI &gt; <code>Carrocería y pintura</code></li></ol>
+    text2: null
+    text3: <ul><li>The query should show all the Dealer for <code>Carrocería y pintura</code>
+      and the results should displaying in the <strong>Map</strong> or in a <strong>ListView</strong> </li></ul>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 94833
+    case_id: 32364
+    text1: <ol><li>Login into the app</li><li>Go to <code>Mapa</code></li><li>Be able
+      to see 6 POI chips</li><li>Click the POI &gt; <code>Fleet Solution</code></li></ol>
+    text2: null
+    text3: <ul><li>The query should show all the Dealer for <code>Fleet Solution</code>
+      and the results should displaying in the <strong>Map</strong> or in a <strong>ListView</strong> </li></ul>
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 94834
+    case_id: 32364
+    text1: <ol><li>Login into the app</li><li>Go to <code>Mapa</code></li><li>Be able
+      to see 6 POI chips</li><li>Click the POI &gt; <code>Servicio Leaf</code></li></ol>
+    text2: null
+    text3: <ul><li>The query should show all the Dealer for <code>Servicio Leaf</code>
+      and the results should displaying in the <strong>Map</strong> or in a <strong>ListView</strong> </li></ul>
+    text4: null
+    display_order: 6
+  - column_name: custom_steps
+    id: 94835
+    case_id: 32364
+    text1: <ol><li>Login into the app</li><li>Go to <code>Mapa</code></li><li>Be able
+      to see 6 POI chips</li><li>Click the POI &gt; <code>Value Advantage</code></li></ol>
+    text2: null
+    text3: <ul><li>The query should show all the Dealer for <code>Value Advantage</code>
+      and the results should displaying in the <strong>Map</strong> or in a <strong>ListView</strong> </li></ul>
+    text4: null
+    display_order: 7
+  - column_name: custom_steps
+    id: 94836
+    case_id: 32364
+    text1: <ol><li>Login into the app</li><li>Go to <code>Mapa</code></li><li>Be able
+      to see 6 POI chips</li><li>Click the POI &gt; <code>Servicio</code></li><li>Click
+      over one of the results</li></ol>
+    text2: null
+    text3: <p>The query should show all the Dealer for details like:</p><ul><li><code>Detalles
+      del distribuidor</code></li><li>Dealer name + distance (km)</li><li>Address</li><li>4
+      assets<ul><li><code>Directions - Phone - Email - Website</code></li></ul></li><li>Map</li><li>3
+      buttons<ul><li><code>Guardar como mi distribuidor</code></li><li><code>Programar
+      Servicio</code></li><li><code>Buscar Distribuidores</code></li></ul></li><li>Horas
+      de operación (Depends on the query result can show)<ul><li><code>Servicio</code></li><li><code>Venta
+      de autos</code></li><li><code>Carrocería y pintura</code></li><li><code>Fleet
+      Solution</code></li><li><code>Servicio Leaf</code></li><li><code>Value Advantage</code></li></ul></li></ul>
+    text4: null
+    display_order: 8
+  - column_name: custom_steps
+    id: 94837
+    case_id: 32364
+    text1: <ol><li>Login into the app</li><li>Go to <code>Mapa</code></li><li>Be able
+      to see 6 POI chips</li><li>Click the POI &gt; <code>Servicio</code></li><li>Click
+      over one of the results</li><li>Click over <code>Directions</code> icon</li></ol>
+    text2: null
+    text3: <ul><li>The OS Map by default should open with the address of the dealer</li></ul>
+    text4: null
+    display_order: 9
+  - column_name: custom_steps
+    id: 94838
+    case_id: 32364
+    text1: <ol><li>Login into the app</li><li>Go to <code>Mapa</code></li><li>Be able
+      to see 6 POI chips</li><li>Click the POI &gt; <code>Servicio</code></li><li>Click
+      over one of the results</li><li>Click over <code>Phone</code> icon</li></ol>
+    text2: null
+    text3: <ul><li>The OS Phone by default should open with the phone of the dealer</li></ul>
+    text4: null
+    display_order: 10
+  - column_name: custom_steps
+    id: 94839
+    case_id: 32364
+    text1: <ol><li>Login into the app</li><li>Go to <code>Mapa</code></li><li>Be able
+      to see 6 POI chips</li><li>Click the POI &gt; <code>Servicio</code></li><li>Click
+      over one of the results</li><li>Click over <code>Email</code> icon</li></ol>
+    text2: null
+    text3: <ul><li>The OS Email by default should open with the email of the dealer </li></ul>
+    text4: null
+    display_order: 11
+  - column_name: custom_steps
+    id: 94840
+    case_id: 32364
+    text1: <ol><li>Login into the app</li><li>Go to <code>Mapa</code></li><li>Be able
+      to see 6 POI chips</li><li>Click the POI &gt; <code>Servicio</code></li><li>Click
+      over one of the results</li><li>Click over <code>Website</code> icon</li></ol>
+    text2: null
+    text3: <ul><li>The OS Browser by default should open with the external link of
+      the dealer </li></ul>
+    text4: null
+    display_order: 12
+  - column_name: custom_steps
+    id: 94841
+    case_id: 32364
+    text1: <ol><li>Login into the app</li><li>Go to <code>Mapa</code></li><li>Be able
+      to see 6 POI chips</li><li>Click the POI &gt; <code>Servicio</code></li><li>Click
+      over one of the results</li><li>Click over <code>Guardar como mi distribuidor</code>
+      icon</li></ol>
+    text2: null
+    text3: <ul><li>The dealer will be set like you Preferred Dealer and the query
+      <code>VehiclePreferredDealer</code> will be update with it</li><li>A toast should
+      display saying &gt; <code>Se ha guardado tu distribuidor</code></li></ul>
+    text4: null
+    display_order: 13
+  - column_name: custom_steps
+    id: 94842
+    case_id: 32364
+    text1: <ol><li>Login into the app</li><li>Go to <code>Mapa</code></li><li>Be able
+      to see 6 POI chips</li><li>Click the POI &gt; <code>Servicio</code></li><li>Click
+      over one of the results</li><li>Click over <code>Guardar como mi distribuidor</code>
+      icon (make it fail the call)</li></ol>
+    text2: null
+    text3: <ul><li>The dealer won't be set like you Preferred Dealer and the query
+      <code>VehiclePreferredDealer</code> won't update with it</li><li>A toast should
+      display saying &gt; <code>No se ha guardado un distribuidor</code></li></ul>
+    text4: null
+    display_order: 14
+  - column_name: custom_steps
+    id: 94843
+    case_id: 32364
+    text1: <ol><li>Login into the app</li><li>Go to <code>Mapa</code></li><li>Be able
+      to see 6 POI chips</li><li>Click the POI &gt; <code>Servicio</code></li><li>Click
+      over one of the results</li><li>Click over <code>Programar Servicio</code> icon</li></ol>
+    text2: null
+    text3: <ul><li>The button will open the Service Booking flow</li></ul>
+    text4: null
+    display_order: 15
+  - column_name: custom_steps
+    id: 94844
+    case_id: 32364
+    text1: <ol><li>Login into the app</li><li>Go to <code>Mapa</code></li><li>Be able
+      to see 6 POI chips</li><li>Click the POI &gt; <code>Servicio</code></li><li>Click
+      over one of the results</li><li>Click over <code>Buscar Distribuidores</code>
+      icon</li></ol>
+    text2: null
+    text3: <ul><li>The user will be redirect to the <code>Mapa</code> screen</li></ul>
+    text4: null
+    display_order: 16
+  - column_name: custom_steps
+    id: 94829
+    case_id: 32364
+    text1: <ol><li>Login into the app</li><li>Go to <code>Mapa</code></li><li>Be able
+      to see 6 POI chips</li><li>Click the POI &gt; <code>Servicio</code></li><li>Check
+      the hours for all the sections (12 hour format)</li><li>If any of the <code>Sunday</code>
+      values are set to <code>FALSE</code></li><li>The <code>Sunday</code> value should
+      display - <code>Cerrado</code></li></ol>
+    text2: null
+    text3: '<p>The sections that can be display are: (if any of the values)</p><ul><li><code>Dealer</code>:<ul><li>Lunes
+      - Viernes</li><li>Sábado</li><li>Domingo</li></ul></li><li><code>Servicio</code><ul><li>Lunes
+      - Viernes</li><li>Sábado</li><li>Domingo</li></ul></li><li><code>Venta de autos</code><ul><li>Lunes
+      - Viernes</li><li>Sábado</li><li>Domingo</li></ul></li><li><code>Carrocería
+      y pintura</code><ul><li>Lunes - Viernes</li><li>Sábado</li><li>Domingo</li></ul></li><li><code>Fleet
+      Solution</code><ul><li>Lunes - Viernes</li><li>Sábado</li><li>Domingo</li></ul></li><li><code>Servicio
+      Leaf</code><ul><li>Lunes - Viernes</li><li>Sábado</li><li>Domingo</li></ul></li><li><code>Value
+      Advantage</code><ul><li>Lunes - Viernes</li><li>Sábado</li><li>Domingo</li></ul></li></ul>'
+    text4: null
+    display_order: 17
+  notes: '<pre><code class="editor-plain language-plain code-block">{
+
+    "__typename": "DealerSchedule",
+
+    "dayOfWeek": "sunday",
+
+    "endTime": "18:00:00",
+
+    "opened": false,
+
+    "startTime": "11:00:00"
+
+    }</code></pre>'

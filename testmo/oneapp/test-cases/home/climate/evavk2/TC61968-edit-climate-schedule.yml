@@ -1,0 +1,41 @@
+testmo:
+  case_id: 61968
+  folder_id: 6778
+  project_id: 2
+  folder_path: home/climate/evavk2
+  folder_name_ui: EVAVK2
+  created_at: '2025-11-10 20:35:37.532830'
+  updated_at: '2025-11-10 21:36:34.623461'
+  last_sync: '2026-01-30T18:21:05.389971Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/61968
+metadata:
+  name: Edit Climate Schedule
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is on Climate screen with existing charge schedule</p>
+  steps:
+  - column_name: custom_steps
+    id: 95338
+    case_id: 61968
+    text1: <p>1. Tap on an existing Climate Schedule<br />2. Modify departure time,
+      temperature, and days of the week<br />3. Tap to Save Schedule</p>
+    text2: null
+    text3: '<p>1. User should see Climate Schedule screen with schedule details filled
+      in and save button disabled<br />2. User should see corresponding modifications
+      made to departure time, temperature, and days of the week and save button enable</p><p>3.
+      User should see Driver Seat, Front Passenger Seat with three options to choose:
+      Off, Cool, Heat - one of them selected. </p><ul><li>Rear Left Seat, Rear Right
+      Seat with Off and Heat options - one of them selected</li><li><p>Steering Wheel
+      Heater and Defrost &amp; Deicer with off and on options - one of them selected</p><p><i>All
+      settings above are as per Default settings</i></p><p>4. User should see a loading
+      spinner while schedule is being saved<br />User should see all three toasts
+      - Contacting, Waking, Initiating and success toast if schedule was saved successfully<br
+      />User should be returned to the Climate screen with modified schedule shown<br
+      /><br />Note: If save schedule fails, user should see a failure toast and remain
+      on the Climate Schedule screen</p></li></ul>'
+    text4: null
+    display_order: 1

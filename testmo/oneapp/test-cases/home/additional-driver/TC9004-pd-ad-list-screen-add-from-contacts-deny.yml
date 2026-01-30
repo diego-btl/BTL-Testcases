@@ -1,0 +1,75 @@
+testmo:
+  case_id: 9004
+  folder_id: 411
+  project_id: 2
+  folder_path: home/additional-driver
+  folder_name_ui: Additional Driver
+  created_at: '2023-11-21 08:08:29.920325'
+  updated_at: '2024-10-17 17:57:34.769274'
+  last_sync: '2026-01-30T18:21:07.342256Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/9004
+metadata:
+  name: PD - AD  List Screen - Add from Contacts - Deny Permissions
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has an AVK2 vehicle and is PRIMARY_DRIVER</p><p>User is on
+    the Additional Driver screen</p><p>There are less than 4 invites</p>
+  steps:
+  - column_name: custom_steps
+    id: 9502
+    case_id: 9004
+    text1: <p>Tap on Add A Driver</p>
+    text2: null
+    text3: <p>User should see options for <code>Add from Contacts</code>, <code>Add
+      New</code>, and <code>Cancel</code></p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 9503
+    case_id: 9004
+    text1: <p>Tap on Add from Contacts</p>
+    text2: null
+    text3: <p>User should see permissions modal to access Contacts with options -
+      Don't Allow and OK</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 9504
+    case_id: 9004
+    text1: <p>Tap on Don't Allow</p>
+    text2: null
+    text3: <p>User should see modal dismissed</p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 9505
+    case_id: 9004
+    text1: <p>Tap on Add from Contacts</p>
+    text2: null
+    text3: <p>User should see a Contacts Permissions Needed modal with options - Cancel
+      and Settings</p>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 9506
+    case_id: 9004
+    text1: <p>Tap on Cancel</p>
+    text2: null
+    text3: <p>User should see modal dismissed</p>
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 9507
+    case_id: 9004
+    text1: <ol><li>Tap on Add from Contacts</li><li>Tap on Settings</li><li>Enable
+      contacts permissions</li><li>Return to the app and select Add from Contacts</li></ol>
+    text2: null
+    text3: <ol><li>User should see permissions modal</li><li>User should see App Settings
+      screen</li><li>User is able to enable contact permissions</li><li>User should
+      see Contacts list appear</li></ol>
+    text4: null
+    display_order: 6

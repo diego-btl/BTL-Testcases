@@ -1,0 +1,28 @@
+testmo:
+  case_id: 30080
+  folder_id: 3873
+  project_id: 5
+  folder_path: landing-page
+  folder_name_ui: Landing Page
+  created_at: '2025-01-27 08:26:09.854290'
+  updated_at: '2025-03-17 19:11:17.571903'
+  last_sync: '2026-01-30T18:20:38.187072Z'
+  url: https://bethinklabs.testmo.net/repositories/5/cases/30080
+metadata:
+  name: Landing page - UI
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  steps:
+  - column_name: custom_steps
+    id: 48999
+    case_id: 30080
+    text1: <p>User launches the app </p>
+    text2: null
+    text3: '<p>User does not see a background video</p><p>User sees the Nissan Logo</p><p>User
+      sees two CTAs: <code>Entrar</code> and <code>Novo Usuário</code></p>'
+    text4: null
+    display_order: 1

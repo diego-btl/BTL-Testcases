@@ -1,0 +1,35 @@
+testmo:
+  case_id: 2793
+  folder_id: 426
+  project_id: 2
+  folder_path: old-deprecated/ccs2/multi-user-car-finder
+  folder_name_ui: Multi-user Car Finder
+  created_at: '2023-09-08 16:45:17.709135'
+  updated_at: '2026-01-06 17:49:17.280921'
+  last_sync: '2026-01-30T18:21:07.528325Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/2793
+metadata:
+  name: Vehicle Location
+  priority: 13
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: 'User''s selected vehicle is returning a location<br />
+
+    User is a PRIMARY_DRIVER or SHARED_DRIVER (to be tested for both for AVK2)'
+  steps:
+  - column_name: custom_steps
+    id: 3158
+    case_id: 2793
+    text1: 1. Navigate to the Map screen
+    text2: null
+    text3: '1. User should see an icon placed at the vehicle''s lat/long location
+      on the map<br />
+
+      <br />
+
+      User should see location address in Vehicle Location'
+    text4: null
+    display_order: 1

@@ -1,0 +1,66 @@
+testmo:
+  case_id: 55582
+  folder_id: 6250
+  project_id: 6
+  folder_path: vehicle-page/programar-servicio
+  folder_name_ui: Programar Servicio
+  created_at: '2025-08-07 14:55:20.326139'
+  updated_at: '2025-08-07 15:14:42.856268'
+  last_sync: '2026-01-30T18:20:45.059502Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/55582
+metadata:
+  name: Cut Off - Drop Off - INF
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has a Drop Off appointment book</p><p>The appointment is
+    in the cut off time (24h before the appoinment)</p>
+  steps:
+  - column_name: custom_steps
+    id: 85715
+    case_id: 55582
+    text1: <ol><li>Login into the app</li><li>Go to <code>Vehicle</code> screen</li><li>See
+      the upcoming appointment</li><li>Select a <code>Drop Off</code> appointment</li></ol>
+    text2: null
+    text3: <ul><li>The user will see the Title:<ul><li><code>Tu Próximo Servicio</code></li></ul></li><li>The
+      user shouldn't see the <code>Edit</code> button in the screen</li><li>The next
+      fields are showing:<ul><li><code>Distribuidor</code></li><li><code>Fecha y Hora</code></li><li><code>¿Como
+      quieres realizar tu servicio?</code></li><li><code>Comentarios adicionales</code></li></ul></li><li>The
+      button cancel it is showing:<ul><li><code>CANCELAR CITA</code></li></ul></li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 85716
+    case_id: 55582
+    text1: <ol><li>Login into the app</li><li>Go to <code>Vehicle</code> screen</li><li>See
+      the upcoming appointment</li><li>Select a <code>Drop Off</code> appointment</li><li>Press
+      the button <code>CANCELAR CITA</code></li></ol>
+    text2: null
+    text3: <ul><li>Display the modal:<ul><li><code>Ups! Faltan menos de 24 horas para
+      tu cita y no puedes modificarla, llama a un agente para obtener ayuda.</code></li><li><code>Llamar</code></li><li><code>Cancelar</code></li></ul></li></ul>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 85717
+    case_id: 55582
+    text1: <ol><li>Login into the app</li><li>Go to <code>Vehicle</code> screen</li><li>See
+      the upcoming appointment</li><li>Select a <code>Drop Off</code> appointment</li><li>Press
+      the button <code>CANCELAR CITA</code></li><li>Press <code>Llamar</code></li></ol>
+    text2: null
+    text3: <ul><li>The native calling system opens</li><li>The number should be &gt;
+      <a href="tel:5586609763"><code>558 660 9763</code></a></li></ul>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 85718
+    case_id: 55582
+    text1: <ol><li>Login into the app</li><li>Go to <code>Vehicle</code> screen</li><li>See
+      the upcoming appointment</li><li>Select a <code>Drop Off</code> appointment</li><li>Press
+      the button <code>CANCELAR CITA</code></li><li>Press <code>Cancelar</code></li></ol>
+    text2: null
+    text3: <ul><li>The modal it is dismissed</li></ul>
+    text4: null
+    display_order: 4

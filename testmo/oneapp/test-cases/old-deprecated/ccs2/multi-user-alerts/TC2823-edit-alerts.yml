@@ -1,0 +1,30 @@
+testmo:
+  case_id: 2823
+  folder_id: 417
+  project_id: 2
+  folder_path: old-deprecated/ccs2/multi-user-alerts
+  folder_name_ui: Multi-user Alerts
+  created_at: '2023-09-11 07:47:18.404668'
+  updated_at: '2026-01-06 17:48:54.843582'
+  last_sync: '2026-01-30T18:21:07.460086Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/2823
+metadata:
+  name: Edit Alerts
+  priority: 13
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is a SHARED_DRIVER</p>
+  steps:
+  - column_name: custom_steps
+    id: 3188
+    case_id: 2823
+    text1: <ol><li>Tap on each of the different alert types</li></ol>
+    text2: null
+    text3: <ol><li>User should be able to see the edit alert screen for the corresponding
+      alert but all options (text fields, buttons, checkboxes, sliders, etc.) are
+      disabled</li></ol>
+    text4: null
+    display_order: 1

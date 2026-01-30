@@ -1,0 +1,32 @@
+testmo:
+  case_id: 879
+  folder_id: 91
+  project_id: 2
+  folder_path: vehicle/maintenance-schedule
+  folder_name_ui: Maintenance Schedule
+  created_at: '2023-08-04 12:27:57.239390'
+  updated_at: '2025-12-10 22:07:40.053941'
+  last_sync: '2026-01-30T18:21:08.500460Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/879
+metadata:
+  name: Maintenance Card - Data Returned, No Driving Type selected
+  priority: 1
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>User is in the <code>Vehicle Page</code></li><li>Odometer
+    data has been returned or manually entered in the past 3 months</li><li>User has
+    not selected a driving type </li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 1798
+    case_id: 879
+    text1: <p>Scroll down and check the <code>View Maintenance Schedule</code> card</p>
+    text2: null
+    text3: '<p>The card should display:</p><ul><li><strong>Title</strong>: View Maintenance
+      Schedule</li><li>An empty progress bar</li><li><strong>Text</strong>: "Please
+      select a driving condition to see your maintenance schedule estimates."</li></ul>'
+    text4: null
+    display_order: 1

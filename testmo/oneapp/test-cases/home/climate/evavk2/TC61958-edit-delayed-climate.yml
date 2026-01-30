@@ -1,0 +1,32 @@
+testmo:
+  case_id: 61958
+  folder_id: 6778
+  project_id: 2
+  folder_path: home/climate/evavk2
+  folder_name_ui: EVAVK2
+  created_at: '2025-11-10 18:38:11.855416'
+  updated_at: '2025-11-14 21:59:06.625035'
+  last_sync: '2026-01-30T18:21:05.430584Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/61958
+metadata:
+  name: Edit Delayed Climate
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>You have a delayed Climate Start card existing on Climate screen
+    for EV2 vehicle</p>
+  steps:
+  - column_name: custom_steps
+    id: 95510
+    case_id: 61958
+    text1: <p>Tap on Edit in the Delayed Climate Start Card </p><p>Make the changes
+      you want to make to Day or time. </p><p>And tap on Save Delayed Climate Start
+      CTA</p>
+    text2: null
+    text3: <p>You will see loading indicator</p><p>And then user is taken back to
+      Climate screen and a success toast of Delayed Start Saved </p>
+    text4: null
+    display_order: 1

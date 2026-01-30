@@ -1,0 +1,38 @@
+testmo:
+  case_id: 671
+  folder_id: 70
+  project_id: 2
+  folder_path: home/alerts
+  folder_name_ui: Alerts
+  created_at: '2023-08-01 23:08:21.190439'
+  updated_at: '2024-10-17 17:57:05.010933'
+  last_sync: '2026-01-30T18:21:08.890569Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/671
+metadata:
+  name: Edit Drive Zone Alert -  Location
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is on a drive zone radius sheet</p>
+  steps:
+  - column_name: custom_steps
+    id: 840
+    case_id: 671
+    text1: <p>1. Edit drive zone (address, type (arrival/departure), distance)<br
+      />2. Tap Save</p>
+    text2: null
+    text3: <p>1. User should see Save CTA become enabled once changes have been made<br
+      />2. User should be taken to the main alerts sheet and see their alert updated</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 1128
+    case_id: 671
+    text1: <p>Fail to save the alert </p>
+    text2: null
+    text3: <p>The user will see an error alert and remain on the edit alert sheet</p>
+    text4: null
+    display_order: 2

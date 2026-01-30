@@ -1,0 +1,80 @@
+testmo:
+  case_id: 61905
+  folder_id: 6757
+  project_id: 2
+  folder_path: login-flow/onboarding-cards
+  folder_name_ui: Onboarding cards
+  created_at: '2025-10-30 12:50:51.514226'
+  updated_at: '2026-01-09 18:34:40.735304'
+  last_sync: '2026-01-30T18:21:05.595832Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/61905
+metadata:
+  name: VIN is a NC LEAF of MY 2025 or lower
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<p>Ensure the account you log in to have only 1 Vin that is NON-CONNECTED
+    LEAF of MY 2025 or lower OR at least the first vin in garage (VehicleStaticData)
+    is Non-connected LEAF of MY 2025 or lower. </p><p>NOTE: This is only for NNA and
+    NCI</p>'
+  steps:
+  - column_name: custom_steps
+    id: 94775
+    case_id: 61905
+    text1: <p>Log in to account as per pre-condition above</p>
+    text2: null
+    text3: <p>The 4-5 apis i.e. staticdata, pendingvehicles, subscriptions, capabilities
+      will be resolved</p><p>Modal will show</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 94776
+    case_id: 61905
+    text1: <p>Tap on Yes</p>
+    text2: null
+    text3: '<ul><li>The. title of the card will read: Hello!</li></ul><p>         
+         The body of the card will read: </p><p>            For 2025 Nissan LEAF models
+      and prior, stay connected with the NissanConnect EV &amp; Services app powered
+      by SiriusXM® [If Canada: Nissan LEAF Canada App]. Control select vehicle functions
+      and keep tabs on your LEAF from your compatible smartphone while on-the-go.</p><ul><li>Continue
+      CTA</li><li>There are more cards as you tap on Continue or Swipe through the
+      dots found at the bottom of the screen</li><li>The Onboarding Features api is
+      also triggered</li></ul><p>NOTE: Ensure the Regd Trademark shows correctly for
+      Sirius XM and the different copy for NCI and NNA</p>'
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 94777
+    case_id: 61905
+    text1: <p>Compare the title, image and order of the different onboarding features
+      in the api response with what you see on the app (The Onboarding Features api
+      will need to be mocked)</p>
+    text2: null
+    text3: '<p>They should match. </p><p>NOTE: attached document 8_25_Onboarding_R3
+      has the copy for the Features card. But note, that the FE shows what''s sent
+      via the api response</p><p>NOTE: no subscription card should show as the last
+      onboarding card as an NC vehicle would have no subscriptions</p>'
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 94778
+    case_id: 61905
+    text1: <p>Go to Support Screen</p>
+    text2: null
+    text3: <p>App Key Features card is shown on the screen </p>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 94779
+    case_id: 61905
+    text1: <p>Tap on the App Key Features card on support screen</p>
+    text2: null
+    text3: <p>The Status(Hello) card should be the same as seen when app is launched,
+      with the same flow </p>
+    text4: null
+    display_order: 5
+  notes: <p>Tested on rc-fy25r4 - 6.8.46(2) PROD NGW</p><p><a href="mailto:nnaqa@bethinklabs.com">nnaqa@bethinklabs.com</a></p><p>iphone
+    13 os 18.7.1</p>

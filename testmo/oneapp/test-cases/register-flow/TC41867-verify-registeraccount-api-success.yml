@@ -1,0 +1,50 @@
+testmo:
+  case_id: 41867
+  folder_id: 43
+  project_id: 2
+  folder_path: register-flow
+  folder_name_ui: Register Flow
+  created_at: '2025-06-09 15:49:30.669483'
+  updated_at: '2025-06-09 15:57:24.206482'
+  last_sync: '2026-01-30T18:21:05.953644Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/41867
+metadata:
+  name: Verify RegisterAccount API - SUCCESS
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<ul><li><code>"EnableNCIMarketingPreferences": "true"</code> FF
+    should be on</li><li>Connect the device to Proxyman to check the APIs calls</li></ul>'
+  steps:
+  - column_name: custom_steps
+    id: 71905
+    case_id: 41867
+    text1: <p>On Register flow continue the flow until reaching Nissan Updates screen
+      &gt; Check some boxes &gt; Tap on Finalize Registration CTA</p>
+    text2: null
+    text3: <p>Verify that <code>RegisterAccount</code> api is triggered, sending in
+      the request, the <code>marketingPreferences</code> section with the section
+      or preferences selected on the UI.</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 71906
+    case_id: 41867
+    text1: <p>The response is retrieved</p>
+    text2: null
+    text3: <p>Verify the response is retrieved successfully</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 71908
+    case_id: 41867
+    text1: <p>Log into the app with the recently created account &gt; Settings &gt;
+      Marketing Preferences</p>
+    text2: null
+    text3: <p>Verify Preferences selected during registrations are the same displayed
+      as enabled on the Marketing Preferences UI.</p>
+    text4: null
+    display_order: 3

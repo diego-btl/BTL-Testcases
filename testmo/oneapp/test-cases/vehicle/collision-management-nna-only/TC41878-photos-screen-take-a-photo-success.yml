@@ -1,0 +1,77 @@
+testmo:
+  case_id: 41878
+  folder_id: 3800
+  project_id: 2
+  folder_path: vehicle/collision-management-nna-only
+  folder_name_ui: Collision Management - NNA only
+  created_at: '2025-06-09 21:49:45.410389'
+  updated_at: '2025-06-09 22:00:37.310265'
+  last_sync: '2026-01-30T18:21:05.913059Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/41878
+metadata:
+  name: Photos Screen -  Take a Photo -  Success
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>User is on the <code>Photos</code> screen</li><li>App has
+    permission to access the device camera</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 71956
+    case_id: 41878
+    text1: <p>Tap any photo placeholder or camera icon<br /> </p>
+    text2: null
+    text3: <p>A system pop-up appears with:</p><ul><li><code>Add from Gallery</code></li><li><code>Take
+      a Photo</code></li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 71957
+    case_id: 41878
+    text1: <p> Tap Take a Photo</p>
+    text2: null
+    text3: <p>The device camera opens</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 71958
+    case_id: 41878
+    text1: <p>Take a photo using the camera</p>
+    text2: null
+    text3: <p>User is redirected to the Photo Details screen</p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 71959
+    case_id: 41878
+    text1: <p>Verify Photo Details Screen</p>
+    text2: null
+    text3: <ul><li>Photo preview is displayed</li><li><code>Photo name</code> is shown
+      (non-editable)</li><li><code>Use Photo</code> CTA  is visible</li><li><code>Add
+      Different Photo</code> CTA  is visible</li><li><code>Delete Photo CTA</code>
+      is visible</li></ul>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 71960
+    case_id: 41878
+    text1: <p>Tap the <code>info</code> icon</p>
+    text2: null
+    text3: <p> Photo information is displayed</p><ul><li>On Android, as a separate
+      screen</li><li>On iOS, as a bottom sheet</li></ul>
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 71961
+    case_id: 41878
+    text1: <p>Tap <code>Use Photo</code> CTA</p>
+    text2: null
+    text3: <ul><li>App triggers <code>UploadPhotoForCollisionReport</code> API call</li><li>User
+      sees a loading state during the upload</li><li>User is redirected to the main
+      <code>Photos</code> screen</li><li>The newly uploaded photo is shown in the
+      photo list/grid</li></ul>
+    text4: null
+    display_order: 6

@@ -1,0 +1,105 @@
+testmo:
+  case_id: 30086
+  folder_id: 3872
+  project_id: 5
+  folder_path: landing-page/registration
+  folder_name_ui: Registration
+  created_at: '2025-01-27 08:41:26.072832'
+  updated_at: '2025-04-02 15:26:10.064817'
+  last_sync: '2026-01-30T18:20:38.162222Z'
+  url: https://bethinklabs.testmo.net/repositories/5/cases/30086
+metadata:
+  name: Registration - Validation
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  steps:
+  - column_name: custom_steps
+    id: 49006
+    case_id: 30086
+    text1: null
+    text2: null
+    text3: <p>All fields must be filled for the <code>Proxima</code> CTA to enable</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 49007
+    case_id: 30086
+    text1: <p>First and Last Name</p>
+    text2: null
+    text3: '<ul><li>Both First and Last Name can accept spaces</li><li>It should accept
+      accents (á, é, ê, ã,õ, ç)</li><li>It should <mark class="marker-yellow"><strong>NOT</strong></mark>
+      accept:<ul><li>Special characters:  <code>@, $, %, &amp;</code></li><li>Quotes:
+      <code>", '',</code></li><li>Brackets: <code> (, ), [, ], {, }</code></li><li>Symbols: <code>
+      &lt;, &gt;, /, \, |, ;, : </code><br /> </li></ul></li></ul>'
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 49008
+    case_id: 30086
+    text1: <p>CPF</p>
+    text2: null
+    text3: "<ul><li>Same digit CPFs should not be allowed (i.e <code>00000000000</code>\
+      \ , <code>11111111111</code>, <code>22222222222</code>, <code>33333333333</code>,\
+      \ etc.)</li></ul><pre><code class=\"editor-plain language-plain code-block\"\
+      >First digit validation\n- for each of the first nine digits of the CPF, assign\
+      \ a multiplier from 10 to 2\n- Multiply each of the digits by each multiplier\
+      \ and sum up\n- Divide the result by 11\n- If the remainder is smaller than\
+      \ 2, DV = 0\n- If not, DV = 11 - remainder (modulo)\n- DV should be the first\
+      \ digit</code></pre><p> </p><pre><code class=\"editor-plain language-plain code-block\"\
+      >Second digit validation\n- for each of the first 10 digits of the CPF, assign\
+      \ a multiplier from 11 to 2\n- Multiply each of the digits by each multiplier\
+      \ and sum up\n- Divide the result by 11 and obtain the remainder (modulo)\n\
+      - If the remainder is smaller than 2, DV = 0\n- If not, DV = 11 - remainder</code></pre><pre><code\
+      \ class=\"editor-plain language-plain code-block\">Example:\nCPF: 14063203077\n\
+      - Expected value for First DV (FDV): 7\n - Sum = 10*1 + 9*4 + 8*0 + 7*6 + 6*3\
+      \ + 5*2 + 4*0 + 3*3 + 2*0 = 125\n - 125%11 = 4\n - First DV = 11 - 4 = 7\n\n\
+      - Expected value for Second DV (FDV): 7\n - Sum = 11*1 + 10*4 + 9*0 + 8*6 +\
+      \ 7*3 + 6*2 + 5*0 + 4*3 + 3*0 + 2*7= 158\n - 158%11 = 4\n - Second DV = 11 -\
+      \ 4 = 7\n\n</code></pre>"
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 49009
+    case_id: 30086
+    text1: <p>Phone Number</p>
+    text2: null
+    text3: <ul><li>Phone number will have 10 or 11 numeric digits:</li><li>Format
+      for 10 digits: <code> (XX) XXXX-XXXX</code></li><li>Format for 11 digits: <code>
+      (XX) X XXXX-XXXX </code></li></ul>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 49010
+    case_id: 30086
+    text1: <p>Email</p>
+    text2: null
+    text3: '<p>For email, it should have the same validation logic as NNA:</p><ul><li>at
+      least one character before <code>@</code></li><li>at least one character after
+      <code>@</code></li><li>at least two characters after <code>.</code></li><li>This
+      feature should respect the NNA behavior for warning messages</li><li>iOS: always
+      displayed at the bottom</li><li>Android: always displayed right below the correspondent
+      text box</li></ul>'
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 52000
+    case_id: 30086
+    text1: <p>Go to the next screen by filling all info and tapping the <code>PROXIMA</code>
+      cta</p>
+    text2: null
+    text3: null
+    text4: null
+    display_order: 6
+  - column_name: custom_steps
+    id: 52001
+    case_id: 30086
+    text1: <p>Password</p>
+    text2: null
+    text3: <p>Password should follow the specified validation rules on the create
+      password screen </p>
+    text4: null
+    display_order: 7

@@ -1,0 +1,51 @@
+testmo:
+  case_id: 62216
+  folder_id: 66
+  project_id: 2
+  folder_path: home/charge
+  folder_name_ui: Charge
+  created_at: '2025-12-19 17:53:42.608390'
+  updated_at: '2025-12-19 18:38:32.782659'
+  last_sync: '2026-01-30T18:21:03.937407Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/62216
+metadata:
+  name: NISSAN ENERGY Charge Network - Not Activated
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<p>User has an EV/EV2</p><p>"EnablePlugAndCharge": "true"</p><p>"GrantFullPlugAndCharge":
+    "{\"enabled\": true, \"checkCapability\": true}"</p><p>VehicleStaticData &gt;
+    "driverType": "PRIMARY_DRIVER"</p>'
+  steps:
+  - column_name: custom_steps
+    id: 96941
+    case_id: 62216
+    text1: '<p>User is on the Charge screen </p><p>AccountStatus API &gt; "status":
+      "INACTIVE"/"NOT_ENROLLED"/"FAILED"/"CANCELLED"/"CLOSED"/"ENROLLING"</p>'
+    text2: null
+    text3: <p>NISSAN ENERGY Charge Network card is displayed with the <code>Start
+      Activation</code> CTA</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 96944
+    case_id: 62216
+    text1: <p>Tap the 'Start Activation' CTA</p>
+    text2: null
+    text3: <p>AccountStatus, NissanPay, ChargeProduct are called</p><p>User is navigated
+      to the NISSAN ENERGY Charge Network screen</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 97012
+    case_id: 62216
+    text1: <p>Tap '&lt;' back button</p>
+    text2: null
+    text3: <p>User is redirected to the Charge screen</p>
+    text4: null
+    display_order: 3
+  notes: <p>* NOTE</p><p>NCI - NISSAN ENERGY Charge Network screen - 'Charge Network'
+    is removed from the copy text - it's just NISSAN ENERGY</p>

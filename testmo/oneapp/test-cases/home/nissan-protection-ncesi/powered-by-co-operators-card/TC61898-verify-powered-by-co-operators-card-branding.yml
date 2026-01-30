@@ -1,0 +1,58 @@
+testmo:
+  case_id: 61898
+  folder_id: 6759
+  project_id: 2
+  folder_path: home/nissan-protection-ncesi/powered-by-co-operators-card
+  folder_name_ui: Powered by Co-operators card
+  created_at: '2025-10-29 15:55:11.071155'
+  updated_at: '2025-10-29 16:05:33.047473'
+  last_sync: '2026-01-30T18:21:05.631963Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/61898
+metadata:
+  name: Verify "powered by Co-operators" card branding
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>User is on the Nissan Protection Screen</li><li>User has
+    a valid province in VehicleStaticData that is returned in the feature flag</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 94735
+    case_id: 61898
+    text1: <p>Launch the MyINFINITI app and enter the INFINITI protection screen</p>
+    text2: null
+    text3: <p>User should see the card with the copy <code>Insure my INFINITI powered
+      by Co-operators</code></p><figure class="image"><img src="/attachments/view/8646"
+      alt="8646" /></figure>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 94736
+    case_id: 61898
+    text1: <p>Tap on the card</p>
+    text2: null
+    text3: <p>All brandings should be for INFINITI</p><p> </p><figure class="image"><img
+      src="/attachments/view/8649" alt="8649" /></figure>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 94737
+    case_id: 61898
+    text1: <p>Launch the MyNissan app and enter the Nissan Protection screen</p>
+    text2: null
+    text3: <p>User should see the <code>Insure my Nissan powered by Co-operators</code>
+      card</p><figure class="image"><img src="/attachments/view/8647" alt="8647" /></figure>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 94738
+    case_id: 61898
+    text1: <p>Tap on the card</p>
+    text2: null
+    text3: <p>All brandings should be for Nissan</p><figure class="image"><img src="/attachments/view/8648"
+      alt="8648" /></figure>
+    text4: null
+    display_order: 4

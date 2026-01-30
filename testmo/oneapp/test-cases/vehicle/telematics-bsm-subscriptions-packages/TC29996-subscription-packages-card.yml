@@ -1,0 +1,49 @@
+testmo:
+  case_id: 29996
+  folder_id: 3863
+  project_id: 2
+  folder_path: vehicle/telematics-bsm-subscriptions-packages
+  folder_name_ui: Telematics BSM - Subscriptions Packages
+  created_at: '2025-01-17 21:46:27.176655'
+  updated_at: '2025-09-22 14:56:56.702749'
+  last_sync: '2026-01-30T18:21:06.454820Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/29996
+metadata:
+  name: Subscription Packages Card
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<ul><li>FF "EnableTelematicsBSM": "true"</li><li>MY26 and above</li></ul>'
+  steps:
+  - column_name: custom_steps
+    id: 48859
+    case_id: 29996
+    text1: <p>Choose an active vehicle and navigate to the Vehicle screen</p>
+    text2: null
+    text3: '<p>The user should see the <code>Subscription Packages</code>Card at the
+      bottom of the screen with the following content:</p><p>Nissan<br />Title: Subscription
+      Packages <br />Body: NissanConnect® Services</p><p>INFINITI<br />Title: Subscription
+      Packages <br />Body: INFINITI InTouch Services®</p>'
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 48860
+    case_id: 29996
+    text1: <p>Tap the <code>Subscription Packages</code>Card</p>
+    text2: null
+    text3: <p>The user should see the landing screen and then be redirected to the
+      Subscriptions screen</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 48861
+    case_id: 29996
+    text1: <p>Navigate to the Vehicle &gt; Vehicle Profile &gt; Vehicle Preferences
+       </p>
+    text2: null
+    text3: <p>User should not see <code>Package Info</code> card</p>
+    text4: null
+    display_order: 3

@@ -1,0 +1,33 @@
+testmo:
+  case_id: 1616
+  folder_id: 105
+  project_id: 2
+  folder_path: old-deprecated
+  folder_name_ui: Old / Deprecated
+  created_at: '2023-08-28 20:13:25.109527'
+  updated_at: '2025-01-28 22:54:28.895090'
+  last_sync: '2026-01-30T18:21:07.894659Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/1616
+metadata:
+  name: Failed Registration Call
+  priority: 13
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>API Failures should be a 503 response, do this by doing a map
+    local to the Register Push Notifications Endpoints</p>
+  steps:
+  - column_name: custom_steps
+    id: 1981
+    case_id: 1616
+    text1: <p>Log in or launch the App and Fail the Register Push Notifications</p>
+    text2: null
+    text3: <p>The app should retry the call with the following schedule:</p><ol><li>First
+      Retry 30 seconds after the first API call failed.</li><li>Second Retry 60 seconds
+      after the previous API call fails.</li><li>Third Retry 90 seconds after the
+      previous API call fails.</li><li>Fourth and Last Retry 120 seconds after the
+      last API call fails.</li></ol>
+    text4: null
+    display_order: 1

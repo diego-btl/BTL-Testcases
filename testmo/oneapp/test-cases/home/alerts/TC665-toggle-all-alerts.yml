@@ -1,0 +1,67 @@
+testmo:
+  case_id: 665
+  folder_id: 70
+  project_id: 2
+  folder_path: home/alerts
+  folder_name_ui: Alerts
+  created_at: '2023-08-01 23:08:21.113382'
+  updated_at: '2026-01-13 00:52:44.326267'
+  last_sync: '2026-01-30T18:21:08.903569Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/665
+metadata:
+  name: Toggle All Alerts
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is on the Alerts sheet and has alerts set for their vehicle</p>
+  steps:
+  - column_name: custom_steps
+    id: 834
+    case_id: 665
+    text1: <p>Toggle valet alert on/off</p>
+    text2: null
+    text3: <ul><li>User should be able to toggle alerts on/off</li><li>User should
+      see a loading spinner while alert is toggling</li><li>Valet alert will default
+      back to 0.25 miles (0.4 km for NCI) when toggled off</li><li>Success/failure
+      toast will show</li><li>If toggle fails, toggle will revert to it's previous
+      state</li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 1123
+    case_id: 665
+    text1: <p>Toggle drive zone alert (which is now Boundary alert) on/off</p>
+    text2: null
+    text3: <ul><li>The user should be able to toggle alerts on/off</li><li>The user
+      should see a loading spinner while the alert is toggling</li><li>Success/failure
+      toast will show</li><li>If the toggle fails, the toggle will revert to its previous
+      state</li></ul>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 1124
+    case_id: 665
+    text1: <p>Toggle curfew alert on/off</p>
+    text2: null
+    text3: <ul><li>The user should be able to toggle alerts on/off</li><li>The user
+      should see a loading spinner while the alert is toggling</li><li>Success/failure
+      toast will show</li><li>If the toggle fails, the toggle will revert to its previous
+      state</li></ul>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 1125
+    case_id: 665
+    text1: <p>Toggle speed alert on/off</p>
+    text2: null
+    text3: <ul><li>The user should be able to toggle alerts on/off</li><li>The user
+      should see a loading spinner while the alert is toggling</li><li>Success/failure
+      toast will show</li><li>If the toggle fails, the toggle will revert to its previous
+      state</li></ul>
+    text4: null
+    display_order: 4
+  notes: '<p>Automation: fails for each alert can''t be validated as it requires mock
+    to breakpoint the action</p>'

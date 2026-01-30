@@ -1,0 +1,75 @@
+testmo:
+  case_id: 61923
+  folder_id: 6755
+  project_id: 2
+  folder_path: home/charge/v1g-vehicle-to-grid
+  folder_name_ui: V1G - Vehicle-to-Grid
+  created_at: '2025-11-03 20:14:12.552503'
+  updated_at: '2026-01-18 17:35:42.704450'
+  last_sync: '2026-01-30T18:21:05.571837Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/61923
+metadata:
+  name: V1G - Enrollment - FAILURE
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<p>Nissan NNA and NCI only</p><p>EV or EV AVK2 only</p><p>PD only</p><p>"v1GMonitoredChargingAccountStatus":
+    "CANCELLED" or "NOT_ENROLLED"</p>'
+  steps:
+  - column_name: custom_steps
+    id: 94950
+    case_id: 61923
+    text1: <p>1. User is on the Optimize screen</p><p>2. Tap the 'Activate Now' button</p>
+    text2: null
+    text3: <p>1. The loading state is displayed (Processing your enrollment)</p><p>2.
+      The V1GEnrollMonitoredChargingPlan API is triggered</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 94951
+    case_id: 61923
+    text1: '<p>Breakpoint and abort the V1GEnrollMonitoredChargingPlan API or mock
+      it to return "data": null</p>'
+    text2: null
+    text3: <p>The SWW modal with 'Ok' button is displayed</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 94952
+    case_id: 61923
+    text1: <p>Tap the 'Ok' button</p>
+    text2: null
+    text3: <p>1. The modal is dismissed</p><p>2. User remains on the same (Optimize)
+      screen</p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 94953
+    case_id: 61923
+    text1: <p>1. Navigate to the Insights screen</p><p>2. Tap the 'Activate Now' button</p>
+    text2: null
+    text3: <p>1. The loading state is displayed (Processing your enrollment)</p><p>2.
+      The V1GEnrollMonitoredChargingPlan API is triggered</p>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 94954
+    case_id: 61923
+    text1: '<p>Breakpoint and abort the V1GEnrollMonitoredChargingPlan API or mock
+      it to return "data": null</p>'
+    text2: null
+    text3: <p>The SWW modal with 'Ok' button is displayed</p>
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 94955
+    case_id: 61923
+    text1: <p>Tap the 'Ok' button</p>
+    text2: null
+    text3: <p>1. The modal is dismissed</p><p>2. User remains on the same (Insights)
+      screen</p>
+    text4: null
+    display_order: 6

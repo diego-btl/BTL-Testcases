@@ -1,0 +1,69 @@
+testmo:
+  case_id: 11125
+  folder_id: 1454
+  project_id: 2
+  folder_path: home/charge/v2l-vehicle-to-load
+  folder_name_ui: V2L - Vehicle-to-Load
+  created_at: '2024-02-04 11:04:08.991034'
+  updated_at: '2025-12-09 17:40:55.426264'
+  last_sync: '2026-01-30T18:21:07.110023Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/11125
+metadata:
+  name: Manage EV Screen - V2L null or missing
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has an EV AVK2 vehicle</p><p><code>V2L</code> capability
+    is returning true </p><p>User is on the Charge screen</p>
+  steps:
+  - column_name: custom_steps
+    id: 11784
+    case_id: 11125
+    text1: "<p>Mock <code>V2lStatus</code> with the following:</p><pre><code class=\"\
+      editor-json language-json code-block\">{\n  \"data\": {\n    \"vehicle\": {\n\
+      \      \"__typename\": \"ElectricAVK2Vehicle\",\n      \"v2lStatus\": null\n\
+      \    }\n  }\n}</code></pre>"
+    text2: null
+    text3: "<p>Or </p><pre><code class=\"editor-plain language-plain code-block\"\
+      >{\n  \"data\": {\n    \"vehicle\": {\n      \"__typename\": \"ElectricAVK2Vehicle\"\
+      ,\n      \"v2lStatus\": \"\"\n    }\n  }\n}</code></pre>"
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 11783
+    case_id: 11125
+    text1: <p>Tap on the Manage EV button</p>
+    text2: null
+    text3: <p>User should see the Vehicle-to_Load card in the enabled state without
+      any secondary text</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 88898
+    case_id: 11125
+    text1: <p>Tap on the Vehicle-to_Load card</p>
+    text2: null
+    text3: <p>User should see a Something Went Wrong error modal with options Cancel/Retry</p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 88900
+    case_id: 11125
+    text1: <p>Tap on Cancel</p>
+    text2: null
+    text3: <p>User should see error modal dismiss and remain on the Manage EV screen</p>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 88901
+    case_id: 11125
+    text1: <p>Tap on Retry</p>
+    text2: null
+    text3: <p>User should see the same API call triggered again</p><p>If an error
+      is still returned, then it should show the error modal again</p><p>If a valid
+      response is returned, then user should be navigated to the Vehicle-to_Load screen</p>
+    text4: null
+    display_order: 5

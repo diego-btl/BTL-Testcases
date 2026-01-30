@@ -1,0 +1,29 @@
+testmo:
+  case_id: 30113
+  folder_id: 85
+  project_id: 2
+  folder_path: support/customer-care
+  folder_name_ui: Customer Care
+  created_at: '2025-02-03 19:44:55.957001'
+  updated_at: '2025-10-08 17:30:48.386110'
+  last_sync: '2026-01-30T18:21:06.347757Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/30113
+metadata:
+  name: Customer Care card
+  priority: 1
+  type: functional
+  status: active
+  estimate: 60000000
+  automation: 'no'
+  tags: []
+test_case:
+  steps:
+  - column_name: custom_steps
+    id: 49053
+    case_id: 30113
+    text1: null
+    text2: null
+    text3: <p>User should see Customer Care card</p>
+    text4: null
+    display_order: 1
+  notes: <p>update thi tst case withthe next one. and consider deleting that one. </p>

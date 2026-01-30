@@ -1,0 +1,78 @@
+testmo:
+  case_id: 36699
+  folder_id: 2444
+  project_id: 2
+  folder_path: home/charge/necn-nissan-energy-charge-network
+  folder_name_ui: NECN - NISSAN ENERGY Charge Network
+  created_at: '2025-05-13 20:26:34.673168'
+  updated_at: '2025-12-15 22:54:22.005006'
+  last_sync: '2026-01-30T18:21:05.999084Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/36699
+metadata:
+  name: NECN - Plug & Charge - Splash Screen
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<p>User has an EV/EV2</p><p>"EnablePlugAndCharge": "true"</p><p>VehicleStaticData
+    &gt; "driverType": "PRIMARY_DRIVER."</p><p>AccountStatus &gt; "status" =! "ACTIVE"
+    ("INACTIVE"/"NOT_ENROLLED"/"FAILED"/"CANCELLED"/"CLOSED"/"ENROLLING")</p>'
+  steps:
+  - column_name: custom_steps
+    id: 96503
+    case_id: 36699
+    text1: <p>Navigate to the NISSAN ENERGY Charge Network screen</p>
+    text2: null
+    text3: <p>ChargeProduct API is triggered</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 96504
+    case_id: 36699
+    text1: "<p>Mock ChargeProduct API to return the  letter 'P' in the \"productSKU\"\
+      : \"V2G-<strong>P</strong>01\"</p><pre><code class=\"editor-plain language-plain\
+      \ code-block\">{\n  \"data\": {\n    \"chargeProduct\": {\n      \"__typename\"\
+      : \"EmpChargeProductResponse\",\n      \"statusCode\": \"1000\",\n      \"statusMessage\"\
+      : \"Success\",\n      \"timestamp\": \"2025-03-26T15:18:23.376Z\",\n      \"\
+      data\": {\n        \"__typename\": \"EmpChargeProductData\",\n        \"productSKU\"\
+      : \"V2G-P01\",\n        \"price\": \"0.0\",\n        \"description\": \"Foundation\
+      \ First Owner\"\n      }\n    }\n  }\n}</code></pre><p>Tap 'ACTIVATE' CTA</p>"
+    text2: null
+    text3: <p>The Plug &amp; Charge splash screen is displayed:</p><ul><li>Title 'Want
+      to make charging even easier?'</li><li>Copy <br />- Confirm your MyNISSAN credentials
+      are entered on the "Accounts" page in the vehicle's head unit.<br />- Park the
+      vehicle with a clear view of the sky. Activation make take up to 24 hours.<br
+      />- Once activated, simply plug into a compatible charger - your session will
+      automatically be billed to the default card in your Nissan Store Wallet<br />-
+      To find compatible chargers, use the Plug &amp; Charge filter in the map section
+      of the MyNISSAN app.</li><li>'CONFIRM' CTA</li><li>'CANCEL' CTA</li></ul>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 96505
+    case_id: 36699
+    text1: <p>Tap 'CANCEL'</p>
+    text2: null
+    text3: <p>The splash screen is dismissed</p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 96506
+    case_id: 36699
+    text1: <p>Tap 'CONFIRM'</p>
+    text2: null
+    text3: <p>The loading state is displayed</p><p>UpsertNissanPayAccount and EnrollChargePlan
+      APIs are triggered</p>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 96507
+    case_id: 36699
+    text1: '<p>Mock ChargeProduct API to return the "productSKU": "V2G-B01" instead
+      of "productSKU": "V2G-P01"</p><p>Tap ''ACTIVATE'' CTA</p>'
+    text2: null
+    text3: <p>The splash screen is not displayed</p>
+    text4: null
+    display_order: 5

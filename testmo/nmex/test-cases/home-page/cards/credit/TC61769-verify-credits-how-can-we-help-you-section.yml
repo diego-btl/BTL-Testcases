@@ -1,0 +1,69 @@
+testmo:
+  case_id: 61769
+  folder_id: 6253
+  project_id: 6
+  folder_path: home-page/cards/credit
+  folder_name_ui: Credit
+  created_at: '2025-10-14 22:35:36.937990'
+  updated_at: '2025-10-14 22:45:45.542814'
+  last_sync: '2026-01-30T18:20:44.918797Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/61769
+metadata:
+  name: Verify Credits - How can we help you section
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>User is logged in with a valid account</li><li>A vehicle
+    (VIN) with an active credit service is selected</li><li><code>GetCredit</code>
+    API returns valid credit data for that VIN</li><li>User is on the Home screen
+    with the <strong>Credits card visible</strong></li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 94446
+    case_id: 61769
+    text1: <ol><li>Tap on the Credits card from the Home screen</li></ol>
+    text2: null
+    text3: <ul><li>The Credits detail screen is displayed</li><li>The screen opens
+      in <strong>collapsed state</strong></li><li><code>Ver más</code> button is visible
+      at the bottom</li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 94450
+    case_id: 61769
+    text1: <ol><li>Tap on the Credits card from the Home screen</li><li>Check the
+      section &gt; <code>¿Cómo podemos ayudarte?</code></li></ol>
+    text2: null
+    text3: '<ul><li>This is divide in 3 sections:<ul><li><code>Atención a clientes</code>:<ul><li>NIS<ul><li>Selectiviti:
+      <code>+524499944825</code></li><li>Tradicional / Leasing: <code>+524491395871</code></li></ul></li><li>INF:
+      <code>+528005463464</code></li></ul></li><li><code>Enviar consulta</code>:<ul><li>NIS<ul><li>Leasing:
+      <a href="mailto:Atencion.leasing@nrfm.com.mx">Atencion.leasing@nrfm.com.mx</a></li><li>Tradicional
+      / Selectiviti: <a href="mailto:atencion.cliente@nrfm.com.mx">atencion.cliente@nrfm.com.mx</a></li></ul></li><li>INF
+      - <a href="mailto:membershipexperience@nissan.com.mx">membershipexperience@nissan.com.mx</a></li></ul></li><li><code>Preguntar
+      Frecuentes</code> &gt; Open the FAQ section just for credits section</li></ul></li></ul>'
+    text4: null
+    display_order: 2
+  notes: "<ul><li>Verify if all the links are being pulled from <code>Credits</code>\
+    \ object<ul><li><code>supportEmail</code></li><li><code>supportPhoneNumber</code></li><li><code>termsAndConditions</code></li></ul></li><li>Verify\
+    \ if the fallback links are called when <code>Credits </code>object doesn't return\
+    \ the parameters<ul><li><code>supportEmail</code></li><li><code>supportPhoneNumber</code></li><li><code>termsAndConditions</code></li></ul></li></ul><pre><code\
+    \ class=\"editor-json language-json code-block\">{\n                \"__typename\"\
+    : \"Vehicle\",\n                \"vin\": \"3N6AD33A3RK855695\",\n            \
+    \    \"credit\": {\n                    \"currentQuota\": 5,\n               \
+    \     \"creditType\": \"credit\",\n                    \"creditStatus\": \"upcoming\"\
+    ,\n                    \"statusText\": \"Tu pago vence pronto.\",\n          \
+    \          \"nextPaymentAmount\": 8159,\n                    \"nextPaymentDate\"\
+    : \"2025-02-22\",\n                    \"contractNumber\": \"1302152000047\",\n\
+    \                    \"term\": 36,\n                    \"overdueQuotas\": \"\
+    0\",\n                    \"id\": \"15416\",\n                    \"balance\"\
+    : 187721.36,\n                    \"accountDomiciliation\": \"012672029588845605\"\
+    ,\n                    \"lastUpdate\": \"2025-02-07\",\n                    \"\
+    overdueAmount\": 0,\n                    \"startDate\": \"2024-08-30\",\n    \
+    \                \"endDate\": \"2027-09-01\",\n                    \"totalOverdueAmount\"\
+    : 8159.01,\n                    \"extendedRent\": 0,\n                    \"supportEmail\"\
+    : \"atencion.cliente@nrfm.com.mx\",\n                    \"supportPhoneNumber\"\
+    : \"+524491395871\",\n                    \"termsAndConditions\": \"https://www.nrfm.mx/terminos-y-condiciones\"\
+    \n                }\n            }\n</code></pre>"

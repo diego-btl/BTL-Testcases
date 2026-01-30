@@ -1,0 +1,87 @@
+testmo:
+  case_id: 62207
+  folder_id: 66
+  project_id: 2
+  folder_path: home/charge
+  folder_name_ui: Charge
+  created_at: '2025-12-19 17:19:25.742705'
+  updated_at: '2026-01-15 22:16:30.694075'
+  last_sync: '2026-01-30T18:21:04.147893Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/62207
+metadata:
+  name: P&C Toggle Primary Driver - Active
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has an EV</p><p>User is on charge screen</p><p><code>GrantFullPlugAndCharge</code>
+    FF is enabled</p><p>NECN AccountStatus is <code>Active</code></p><p>User is a
+    Primary driver</p>
+  steps:
+  - column_name: custom_steps
+    id: 96884
+    case_id: 62207
+    text1: <p>Mock <code>pncStatus</code> as <code>READY</code> and <code>toggleStatus</code>
+      as <code>ENABLED</code></p>
+    text2: null
+    text3: <p>PnC toggle card should be visible with the toggle enabled</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 96885
+    case_id: 62207
+    text1: <p>Mock <code>pncStatus</code> as <code>READY</code> and <code>toggleStatus</code>
+      as <code>DISABLED</code></p>
+    text2: null
+    text3: <p>PnC toggle card should be visible with the toggle disabled</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 96902
+    case_id: 62207
+    text1: <p>Mock <code>pncStatus</code> as <code>PENDING</code></p>
+    text2: null
+    text3: <p>PnC toggle card should be visible with the status <code>Installing...</code>
+      and no toggle</p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 96903
+    case_id: 62207
+    text1: <p>Mock <code>pncStatus</code> as <code>INSTALLING</code></p>
+    text2: null
+    text3: <p>PnC toggle card should be visible with the status <code>Installing...</code>
+      and no toggle</p>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 96904
+    case_id: 62207
+    text1: <p>Mock <code>pncStatus</code> as <code>RENEWING</code></p>
+    text2: null
+    text3: <p>PnC toggle card should be visible with the status <code>Renewing...</code>
+      and no toggle</p>
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 96908
+    case_id: 62207
+    text1: <p>Mock <code>pncStatus</code> as <code>READY</code> and <code>toggleStatus</code>
+      as <code>NA</code>/<code>null</code></p>
+    text2: null
+    text3: <p>PnC toggle card should be visible with the copy <code>ERROR</code> and
+      no toggle</p>
+    text4: null
+    display_order: 6
+  - column_name: custom_steps
+    id: 97040
+    case_id: 62207
+    text1: '<p>Mock <code>pncStatus</code> as <code>FAILED</code> and "pncStatusReason":
+      "00" or "pncStatusReason": "01"</p>'
+    text2: null
+    text3: <p>PnC toggle card should be visible with the status <code>Failed to Install</code>
+      and no toggle</p>
+    text4: null
+    display_order: 7

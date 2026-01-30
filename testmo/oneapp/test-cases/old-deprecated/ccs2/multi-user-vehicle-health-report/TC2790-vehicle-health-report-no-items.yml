@@ -1,0 +1,30 @@
+testmo:
+  case_id: 2790
+  folder_id: 425
+  project_id: 2
+  folder_path: old-deprecated/ccs2/multi-user-vehicle-health-report
+  folder_name_ui: Multi-user Vehicle Health Report
+  created_at: '2023-09-08 16:41:59.360023'
+  updated_at: '2026-01-06 17:48:13.084747'
+  last_sync: '2026-01-30T18:21:07.535249Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/2790
+metadata:
+  name: Vehicle Health Report - No Items
+  priority: 13
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is on the Vehicle Profile sheet, has the VHR capability and
+    has no VHR items<br />User is a PRIMARY_DRIVER or SHARED_DRIVER (to be tested
+    for both for AVK2)</p>
+  steps:
+  - column_name: custom_steps
+    id: 3155
+    case_id: 2790
+    text1: <p>1. Tap Vehicle Health Report</p>
+    text2: null
+    text3: <p>User should see the empty state</p>
+    text4: null
+    display_order: 1

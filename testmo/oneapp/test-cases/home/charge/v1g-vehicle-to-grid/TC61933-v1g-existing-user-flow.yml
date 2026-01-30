@@ -1,0 +1,90 @@
+testmo:
+  case_id: 61933
+  folder_id: 6755
+  project_id: 2
+  folder_path: home/charge/v1g-vehicle-to-grid
+  folder_name_ui: V1G - Vehicle-to-Grid
+  created_at: '2025-11-05 18:40:43.445502'
+  updated_at: null
+  last_sync: '2026-01-30T18:21:05.525855Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/61933
+metadata:
+  name: V1G - Existing User Flow
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<p>Nissan NNA and NCI only</p><p>EV or EV AVK2 only</p><p>PD only</p><p>"v1GMonitoredChargingAccountStatus":
+    "ACTIVE"</p>'
+  steps:
+  - column_name: custom_steps
+    id: 95210
+    case_id: 61933
+    text1: <p>1. The app is fresh installed</p><p>2. Navigate to the Charge &gt; Optimize
+      or Charge &gt; Insights screen</p>
+    text2: null
+    text3: <p>1. V1GTokenizedUrl API is triggered</p><p>2. The loading state is displayed </p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 95211
+    case_id: 61933
+    text1: <p>V1GTokenizedUrl API returns the valid URL</p>
+    text2: null
+    text3: '<p>The URL is displayed within the webview according to the following
+      logic:</p><pre><code class="editor-plain language-plain code-block">
+
+      view=optimize|insights
+
+
+      theme=light|dark
+
+
+      languageCode=en-US | Fr-CA | en-CA
+
+
+      TimeFormat = 12h | 24h
+
+      </code></pre>'
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 95212
+    case_id: 61933
+    text1: <p>1. Bg/fg or cold start the app</p><p>2. Navigate to the Charge &gt;
+      Optimize or Charge &gt; Insights screen</p>
+    text2: null
+    text3: <p>1. V1GTokenizedUrl API is NOT triggered</p><p>2. The loading state is
+      NOT displayed since the value is cached</p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 95213
+    case_id: 61933
+    text1: <p>1. Change the theme in the app or in the device settings</p><p>2. Navigate
+      to the Charge &gt; Optimize or Charge &gt; Insights screen</p>
+    text2: null
+    text3: <p>The content of the webview is displayed accordingly </p>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 95214
+    case_id: 61933
+    text1: <p>Navigate to the Charge &gt; Optimize</p>
+    text2: null
+    text3: <p>Time format is correct according to the app region and language settings:<br
+      />- Nissan NNA - 12h<br />- Nissan NCI - EN - 12h<br />- Nissan NCI - FR - 24h</p>
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 95215
+    case_id: 61933
+    text1: <p>1. Set device to FR</p><p>2. Navigate to the Charge &gt; Optimize or
+      Charge &gt; Insights screen</p>
+    text2: null
+    text3: <p>The content of the webview is displayed accordingly:<br />- Nissan NNA
+      - in English<br />- Nissan NCI - in French</p>
+    text4: null
+    display_order: 6

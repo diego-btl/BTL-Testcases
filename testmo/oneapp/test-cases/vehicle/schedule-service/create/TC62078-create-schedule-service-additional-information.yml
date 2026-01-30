@@ -1,0 +1,94 @@
+testmo:
+  case_id: 62078
+  folder_id: 6787
+  project_id: 2
+  folder_path: vehicle/schedule-service/create
+  folder_name_ui: Create
+  created_at: '2025-12-02 23:25:24.944379'
+  updated_at: '2026-01-20 21:18:43.679975'
+  last_sync: '2026-01-30T18:21:04.905385Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/62078
+metadata:
+  name: Create Schedule Service - Additional Information
+  priority: 1
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has selected one or more services from the <code>Select Services</code>
+    screen and tapped <code>NEXT</code></p>
+  steps:
+  - column_name: custom_steps
+    id: 96043
+    case_id: 62078
+    text1: <p>Verify user arrives on <code>Additional Information</code> screen after
+      tapping <code>NEXT</code> from <code>Select Services</code> screen</p>
+    text2: null
+    text3: <ul><li>Screen title is <code>Additional Information</code></li><li>Progress
+      indicator shows current step (Step 2 of 4)</li><li><code>Vehicle Concern Information</code>
+      section displays with selected service-specific text fields</li><li><code>NEXT</code>
+      button is <strong>disabled</strong> (grayed out) until vehicle mileage is entered</li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 96044
+    case_id: 62078
+    text1: <p>Verify <code>Tell Us More</code> section displays with text input field</p>
+    text2: null
+    text3: <ul><li>Text field label shows <code>Can you provide any more details?</code></li><li>Text
+      field is empty and ready for input</li><li>Placeholder text is visible</li></ul>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 96045
+    case_id: 62078
+    text1: <p>Enter comments in the <code>Tell Us More</code> text field</p>
+    text2: null
+    text3: <ul><li>Text is entered successfully in the text field</li><li>Characters
+      are displayed as typed</li><li><code>NEXT</code> button remains <strong>disabled</strong></li></ul>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 96046
+    case_id: 62078
+    text1: <p>Verify <code>Vehicle Mileage</code> section displays</p>
+    text2: null
+    text3: <ul><li><code>Vehicle Mileage</code> label is displayed</li><li>Input field
+      shows current vehicle mileage (or 0 if not available)</li><li>Field is editable</li></ul>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 96047
+    case_id: 62078
+    text1: <p>Enter or modify vehicle mileage in the mileage field</p>
+    text2: null
+    text3: <ul><li>Mileage value is updated in the field</li><li>Numeric input is
+      accepted</li><li><code>NEXT</code> button becomes <strong>enabled</strong> (active
+      state)</li></ul>
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 96048
+    case_id: 62078
+    text1: <p>Tap <code>NEXT</code> button with vehicle mileage entered</p>
+    text2: null
+    text3: <ul><li>User proceeds to <code>Select Date and Time</code> screen</li><li>Entered
+      information is passed to next step</li></ul>
+    text4: null
+    display_order: 6
+  - column_name: custom_steps
+    id: 96049
+    case_id: 62078
+    text1: <p>Tap <code>Call Dealer</code> link (NISSAN) or <code>Call Retailer</code>
+      link (INFINITI)</p>
+    text2: null
+    text3: <ul><li>Phone number is retrieved from <code>VehiclePreferredDealer </code>query
+      phone field</li><li><strong>Android:</strong> Phone dialer opens with dealer/retailer
+      contact number</li><li><strong>iOS:</strong> Phone call drawer/sheet opens with
+      dealer/retailer contact number and Call/Cancel options</li></ul>
+    text4: null
+    display_order: 7
+  notes: '<p>Note: If services with maintenance flag set to true are selected, the
+    Estimated Next Service Interval section will appear, if not, then that section
+    does not show up</p>'

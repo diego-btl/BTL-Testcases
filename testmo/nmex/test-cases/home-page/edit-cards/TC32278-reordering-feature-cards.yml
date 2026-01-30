@@ -1,0 +1,31 @@
+testmo:
+  case_id: 32278
+  folder_id: 4155
+  project_id: 6
+  folder_path: home-page/edit-cards
+  folder_name_ui: Edit Cards
+  created_at: '2025-04-01 17:50:44.272723'
+  updated_at: '2025-10-22 14:30:45.169109'
+  last_sync: '2026-01-30T18:20:45.728056Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/32278
+metadata:
+  name: Reordering feature cards
+  priority: 1
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  steps:
+  - column_name: custom_steps
+    id: 52657
+    case_id: 32278
+    text1: <ol><li>Go to home screen</li><li>Tap <code>Edit</code> Cards</li><li><code>Reorder</code>
+      Cards</li><li>Tap <code>Done</code></li></ol>
+    text2: null
+    text3: '<ul><li>User should see feature cards in edit mode, quick action buttons
+      should be disabled</li><li>User should be able to drag and reorder cards</li><li>User
+      should see order saved</li></ul><p><strong>Note: If there is a MIL/Vehicle status
+      active, that card will always be at the top and cannot be reordered</strong></p>'
+    text4: null
+    display_order: 1

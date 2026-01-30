@@ -1,0 +1,35 @@
+testmo:
+  case_id: 904
+  folder_id: 7143
+  project_id: 2
+  folder_path: old-deprecated/schedule-service
+  folder_name_ui: Schedule Service
+  created_at: '2023-08-04 13:45:57.301440'
+  updated_at: '2025-10-24 16:23:36.523052'
+  last_sync: '2026-01-30T18:21:08.433182Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/904
+metadata:
+  name: Review Service Request
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is on Select Date and Time screen. And chooses a transportation
+    option.</p>
+  steps:
+  - column_name: custom_steps
+    id: 1108
+    case_id: 904
+    text1: <p>Tap on Save</p>
+    text2: null
+    text3: <p>User should see Review Service Request screen:</p><ul><li> Vehicle image/info
+      at the top</li><li>Retailer card/Dealer card</li><li>Selected Service card</li><li>Appointment
+      Details card</li><li>Transportation card</li><li>Contact Information card</li><li>Schedule
+      My Service/Call Retailer/Cancel CTAs</li></ul>
+    text4: null
+    display_order: 1
+  notes: '<p>Need update: <br />Call Retailer CTA moved into Contact Information screen<br
+    /><br />App version: 3.1.90 (2) - Prod - Nissan-Gateway<br />Test Device:  iPhone
+    11 (17.2.1)     <br />Account: telematics97@gmail.com // Telematics123</p>'

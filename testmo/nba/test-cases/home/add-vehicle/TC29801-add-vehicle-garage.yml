@@ -1,0 +1,45 @@
+testmo:
+  case_id: 29801
+  folder_id: 3769
+  project_id: 5
+  folder_path: home/add-vehicle
+  folder_name_ui: Add Vehicle
+  created_at: '2024-12-20 15:21:40.308281'
+  updated_at: '2025-03-19 18:14:58.453107'
+  last_sync: '2026-01-30T18:20:38.396773Z'
+  url: https://bethinklabs.testmo.net/repositories/5/cases/29801
+metadata:
+  name: Add Vehicle - Garage
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has an existing vehicle in account</p>
+  steps:
+  - column_name: custom_steps
+    id: 48626
+    case_id: 29801
+    text1: <p>Tap on Garage</p>
+    text2: null
+    text3: <p>User should see garage open</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 48627
+    case_id: 29801
+    text1: <p>Tap on <code>Adicionar Veiculo</code></p>
+    text2: null
+    text3: <p>User enters add vehicle flow</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 48628
+    case_id: 29801
+    text1: <p>Tap on back chevron</p>
+    text2: null
+    text3: <p>User should be navigated back to Home screen</p><p>For Android, user
+      will be navigated back to garage.</p>
+    text4: null
+    display_order: 3

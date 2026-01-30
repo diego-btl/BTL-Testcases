@@ -1,0 +1,44 @@
+testmo:
+  case_id: 648
+  folder_id: 4169
+  project_id: 2
+  folder_path: home/climate/ev
+  folder_name_ui: EV
+  created_at: '2023-08-01 23:08:20.897822'
+  updated_at: '2025-12-19 17:39:34.059881'
+  last_sync: '2026-01-30T18:21:08.946577Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/648
+metadata:
+  name: Add Climate Schedule
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is on Climate screen</p>
+  steps:
+  - column_name: custom_steps
+    id: 817
+    case_id: 648
+    text1: <p>1. Tap on Add button<br />2. Fill in a departure time (at least 15 mins
+      from now)<br />3. Tap on arrows or drag dial to change temperature<br />4. Tap
+      one of the quick options<br />5. Tap on days of the week<br />6. Tap to Create
+      Schedule</p>
+    text2: null
+    text3: '<p>1. User should see Climate Schedule screen in the empty state, create
+      button disabled<br />2. User should see selected times filled into field<br
+      />3. User should see selected temperature between 61-87 (after 87 it says hi)
+      degrees<br />4. User should see the corresponding days of the week highlighted<br
+      />5. User should see corresponding days of the week selected/unselected<br />6.
+      User should see a loading spinner while schedule is being created</p><p>User
+      should see folowing toasts: Contacting {vehicle year, model} to Create Climate
+      Schedule...<br />Waking {vehicle year, model} o Create Climate Schedule...<br
+      />Initiating o Climate Schedule on {vehicle year, model}...<br />User should
+      see a success toast if schedule was created successfully<br />User should be
+      returned to the Climate screen with newly added schedule shown<br /><br />Departure
+      time, temperature, and days of the week are required fields<br /><br />Note:
+      If create schedule fails, user should see a failure toast and remain on the
+      Climate Schedule screen</p>'
+    text4: null
+    display_order: 1

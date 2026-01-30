@@ -1,0 +1,43 @@
+testmo:
+  case_id: 835
+  folder_id: 76
+  project_id: 2
+  folder_path: wearables/wearable-telematics
+  folder_name_ui: Wearable - Telematics
+  created_at: '2023-08-01 23:08:23.295303'
+  updated_at: '2024-10-17 17:57:05.010933'
+  last_sync: '2026-01-30T18:21:08.624424Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/835
+metadata:
+  name: Lock - Fail
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has a vehicle that supports lock/unlock and is on the telematics
+    screen</p>
+  steps:
+  - column_name: custom_steps
+    id: 1004
+    case_id: 835
+    text1: <ol><li>Tap the Lock button</li><li>Tap Yes</li><li>Force call to fail</li><li>Try
+      again</li></ol>
+    text2: null
+    text3: <ol><li>User should see a confirmation modal</li><li>Lock command should
+      be sent and user should see the modal dismiss itself. User should see status
+      updates as the call is being made. User should see the status updates as the
+      call is being made</li><li>User should see a failure modal when the call fails</li><li>User
+      should see Lock flow try again</li></ol>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 1156
+    case_id: 835
+    text1: <ol><li>Tap the Lock button</li><li>Tap Yes</li><li>Force call to fail</li><li>Tap
+      No</li></ol>
+    text2: null
+    text3: <p>The modal should be dismissed and command should not be sent</p>
+    text4: null
+    display_order: 2

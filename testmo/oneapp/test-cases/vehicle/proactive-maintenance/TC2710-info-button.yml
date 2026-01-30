@@ -1,0 +1,28 @@
+testmo:
+  case_id: 2710
+  folder_id: 412
+  project_id: 2
+  folder_path: vehicle/proactive-maintenance
+  folder_name_ui: Proactive Maintenance
+  created_at: '2023-09-07 21:32:22.611198'
+  updated_at: '2024-10-17 17:57:34.769274'
+  last_sync: '2026-01-30T18:21:07.712188Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/2710
+metadata:
+  name: Info button
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is on the main Proactive Maintenance Screen </p>
+  steps:
+  - column_name: custom_steps
+    id: 3075
+    case_id: 2710
+    text1: <p>1. Tap info button</p>
+    text2: null
+    text3: <p>Information about Parts Service Reminders is displayed and can be dismissed</p>
+    text4: null
+    display_order: 1

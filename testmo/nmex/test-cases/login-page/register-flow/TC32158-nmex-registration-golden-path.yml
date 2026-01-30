@@ -1,0 +1,76 @@
+testmo:
+  case_id: 32158
+  folder_id: 4142
+  project_id: 6
+  folder_path: login-page/register-flow
+  folder_name_ui: Register Flow
+  created_at: '2025-04-01 17:50:43.425153'
+  updated_at: '2025-04-04 21:12:26.695213'
+  last_sync: '2026-01-30T18:20:46.006135Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/32158
+metadata:
+  name: NMEX - Registration - Golden Path
+  priority: 12
+  type: functional
+  status: active
+  estimate: 36000000000
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>The user is already in the <code>First Page</code> of the
+    Registration Flow</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 52540
+    case_id: 32158
+    text1: <p>Enter a valid <code>Nombre</code> , <code>Apellido Paterno</code> &amp;
+      <code>Apellido Materno</code> using only alphabetical characters</p><p>Enter
+      any email on the <code>Correo Electrónico</code> field </p><p>Enter the same
+      email used in the previous step on the <code>Confirmar Correo Electrónico</code>
+      field</p><p>Tap on the <code>SIGUIENTE</code> button</p><ul><li>Enter any address
+      on the <code>Calle</code> field</li><li>Enter any value on the <code>No Exterior</code>
+      field</li><li>Enter any value on the <code>No Interior(Opcional)</code> field</li><li>Enter
+      any value on the <code>Colonia</code> field</li><li>Enter any value on the <code>Municipio
+      (Delegación)</code> field</li><li>Enter any value on the <code>Ciudad</code>
+      field</li><li>Select any state from the <code>Estado</code> selector</li></ul><p><strong>Don't
+      accept special characters</strong></p><p>Enter any valid Zip Code on the <code>Código
+      Postal</code> field</p><p>Enter any valid phone number on the <code>Número Celular</code>
+      field</p><p>Tap on the <code>SIGUIENTE</code> button</p><p>Enter any valid password
+      on the <code>Contraseña</code> field, follow up the password rules displayed
+      on the screen</p><p>Enter the same password used on the previous step on the
+      <code>Confirmar Contraseña</code> field</p><p>Tap on both of the password fields
+      show / hide icons</p><p>Mark the <code>He leído y acepto los Términos de Servicios
+      y la Política de Privacidad</code> checkmark</p><p>Click on all the links in
+      the <code>He leído y acepto los Términos de Servicios y la Política de Privacidad</code>
+      section</p><p>Click on the <code>CREAR CUENTA</code> button</p><p>Switch the
+      device to dark mode and repeat previous steps again</p>
+    text2: null
+    text3: <p>The fields display the input data without issues</p><p>The <code>Correo
+      Electrónico</code> field will show a red background and display a <code>* Dirección
+      de correo electrónico inválida</code> error message until the input matches
+      a valid email</p><ul><li>The <code>Confirmar Correo Electrónico</code> field
+      will show a red background and display a <code>* Las direcciones de correo electrónico
+      no coinciden</code> error message until the input matches a the value input
+      in the previous step</li><li>The <code>SIGUIENTE</code> button at the bottom,
+      remains inactive until all the previous validations are completed</li></ul><p>The
+      user is navigated to the Second Page of the Registration flow</p><p>The fields
+      display the input data without issues</p><ul><li>The device keyboard should
+      only display numbers</li><li>The <code>Código Postal</code> field will show
+      a red background and display a <code>* Código Postal inválido, por favor ingresa
+      5 dígitos</code> error message until the input has 5 digits</li><li>The device
+      keyboard should only display numbers</li><li>The <code>Número Celular</code>
+      field will show a red background and display a <code>* Número celular inválido,
+      por favor ingresa 10 dígitos</code> error message until the input has 10 digits</li></ul><p>The
+      user is navigated to the Third Page of the Registration flow</p><p>The <code>Contraseña</code>
+      field will show a red background until the password rules are met</p><p>The
+      <code>Confirmar Contraseña</code> field will show a red background and display
+      a <code>* Las contraseñas no coinciden</code> error message until the input
+      matches a the value input in the previous step</p><p>The switch should show
+      / hide the text on the fields</p><ul><li>The checkmark is selected or deselected
+      depending of the user interaction</li><li>The <code>CREAR CUENTA</code> button
+      at the bottom, remains inactive until all the previous validations are completed</li></ul><p>The
+      three links are displayed in a native webview inside the app</p><ul><li>The
+      user is driven to the Login page</li><li>The email used in the Registration
+      flow should be prefilled in the Login Email field</li></ul><p>Behaviour is consistent</p>
+    text4: null
+    display_order: 1

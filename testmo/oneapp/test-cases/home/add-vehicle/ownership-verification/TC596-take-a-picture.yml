@@ -1,0 +1,32 @@
+testmo:
+  case_id: 596
+  folder_id: 57
+  project_id: 2
+  folder_path: home/add-vehicle/ownership-verification
+  folder_name_ui: Ownership Verification
+  created_at: '2023-08-01 23:08:20.239297'
+  updated_at: '2025-03-03 20:58:27.056442'
+  last_sync: '2026-01-30T18:21:09.089329Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/596
+metadata:
+  name: Take a Picture
+  priority: 1
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is on the Upload Ownership Document screen and has selected
+    a file type</p>
+  steps:
+  - column_name: custom_steps
+    id: 765
+    case_id: 596
+    text1: <p>1. Tap Take a Picture<br />2. Take a photo<br />3. Tap Take a Different
+      Picture and take a photo<br />4. Tap UPLOAD</p>
+    text2: null
+    text3: <p>1. User should see device camera open<br />2. User should see an option
+      to take a different picture and UPLOAD should become enabled<br />3. User should
+      be able to take a different picture<br />4. Photo should be uploaded</p>
+    text4: null
+    display_order: 1

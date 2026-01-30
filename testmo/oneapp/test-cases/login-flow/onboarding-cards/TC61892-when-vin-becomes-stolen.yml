@@ -1,0 +1,39 @@
+testmo:
+  case_id: 61892
+  folder_id: 6757
+  project_id: 2
+  folder_path: login-flow/onboarding-cards
+  folder_name_ui: Onboarding cards
+  created_at: '2025-10-28 21:10:37.690137'
+  updated_at: '2025-10-28 21:18:51.940222'
+  last_sync: '2026-01-30T18:21:05.655600Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/61892
+metadata:
+  name: When Vin becomes Stolen
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>Have 1 Vin in account (Connected and subscribed, or Connected
+    and not subscribed, or Not_Connected) </p><p>See the relevant onboarding modal
+    as per the above conditions</p><p>Now, mock the capabilities api to status = STOLEN</p>
+  steps:
+  - column_name: custom_steps
+    id: 94712
+    case_id: 61892
+    text1: <p>Open app </p>
+    text2: null
+    text3: <p>Wait for all apis to be resolved</p><p>On home screen, you will see
+      Vehicle Stolen message</p><p>NO Onboarding modal should show</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 94713
+    case_id: 61892
+    text1: <p>Go to Support tab</p>
+    text2: null
+    text3: <p>You shouldn't see the App Key Features card on Support screen</p>
+    text4: null
+    display_order: 2

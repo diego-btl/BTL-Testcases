@@ -1,0 +1,48 @@
+testmo:
+  case_id: 29918
+  folder_id: 3800
+  project_id: 2
+  folder_path: vehicle/collision-management-nna-only
+  folder_name_ui: Collision Management - NNA only
+  created_at: '2025-01-10 20:06:42.063712'
+  updated_at: '2025-01-28 02:24:31.073688'
+  last_sync: '2026-01-30T18:21:06.531206Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/29918
+metadata:
+  name: Update existing Towing/Transportation Info
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>The user is on the <code>Collision Report </code>start screen </p>
+  steps:
+  - column_name: custom_steps
+    id: 48786
+    case_id: 29918
+    text1: <p>Tap on the Edit CTA for the <code>Towing/Transportation</code> card.</p>
+    text2: null
+    text3: <ul><li>The user is redirected  to the edit screen</li><li>The user should
+      see the current information (Company Name, Address, etc.) pre-filled</li><li>The
+      user should see the disabled  <code>Save </code>button</li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 48787
+    case_id: 29918
+    text1: <p>Update the existing Company Name and  Address information</p>
+    text2: null
+    text3: <p>The user should see the enabled  <code>Save </code>button, indicating
+      that changes have been made</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 48788
+    case_id: 29918
+    text1: <p>Tap  on <code>Save button</code></p>
+    text2: null
+    text3: <ul><li>The user should be redirected to the start screen</li><li>The <code>Towing/Transportation
+      card </code>should display the updated information (Company Name, Address, etc.)</li></ul>
+    text4: null
+    display_order: 3

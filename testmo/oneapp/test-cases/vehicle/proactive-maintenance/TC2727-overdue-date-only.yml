@@ -1,0 +1,56 @@
+testmo:
+  case_id: 2727
+  folder_id: 412
+  project_id: 2
+  folder_path: vehicle/proactive-maintenance
+  folder_name_ui: Proactive Maintenance
+  created_at: '2023-09-07 21:32:22.747873'
+  updated_at: '2024-10-17 17:57:34.769274'
+  last_sync: '2026-01-30T18:21:07.650956Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/2727
+metadata:
+  name: Overdue - date only
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is on Maintenance Schedule Details screen<br />Reminder only
+    has date and is overdue</p>
+  steps:
+  - column_name: custom_steps
+    id: 3092
+    case_id: 2727
+    text1: <p>Observe Parts Service Reminders card</p>
+    text2: null
+    text3: <p>User should see reminder showing the overdue pill, date, and Book a
+      Service CTA (text should say No Mileage with date)</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 9478
+    case_id: 2727
+    text1: <p>Tap on Book a Service</p>
+    text2: null
+    text3: <p>User should enter the Book a Service flow</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 9479
+    case_id: 2727
+    text1: <p>Tap See All on Parts Service Reminders card</p>
+    text2: null
+    text3: <p>User should see the Parts Service Reminders screen<br />User should
+      see the corresponding reminder in the Overdue section with the date and the
+      Book a Service CTA<br /> </p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 9480
+    case_id: 2727
+    text1: <p>Tap on Book a Service</p>
+    text2: null
+    text3: <p>User should enter the Book a Service flow</p>
+    text4: null
+    display_order: 4

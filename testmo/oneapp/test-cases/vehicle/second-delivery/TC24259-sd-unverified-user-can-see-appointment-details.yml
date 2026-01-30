@@ -1,0 +1,34 @@
+testmo:
+  case_id: 24259
+  folder_id: 1453
+  project_id: 2
+  folder_path: vehicle/second-delivery
+  folder_name_ui: Second Delivery
+  created_at: '2024-10-17 17:50:08.239742'
+  updated_at: '2026-01-06 18:51:33.721783'
+  last_sync: '2026-01-30T18:21:06.901640Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/24259
+metadata:
+  name: SD - Unverified user can see Appointment Details
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<p>Vehicle is eligible within the valid period from purchase &amp;
+    have a unverified user(QX80 - 9/QX80 10).</p><p>In the Firebase config &gt; <code>"EnableSecondDelivery":
+    "true"</code></p>'
+  steps:
+  - column_name: custom_steps
+    id: 37828
+    case_id: 24259
+    text1: <ol><li>Navigate to vehicle tab</li><li>Check the event at the top of the
+      screen</li><li>Click over the appointment</li><li>Click Verify Identity</li><li>Get
+      the OTP code in your phone and type it in the app</li><li>Click Verify and Proceed</li><li>See
+      the details for the appointment</li></ol>
+    text2: null
+    text3: <p>The user should be able to see the appointment details</p>
+    text4: null
+    display_order: 1
+  notes: '<ul><li>Account: natemie@btl.ca/Telematics123!</li></ul>'

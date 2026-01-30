@@ -1,0 +1,37 @@
+testmo:
+  case_id: 2855
+  folder_id: 434
+  project_id: 2
+  folder_path: vehicle/remote-data-wipe-tcu
+  folder_name_ui: Remote Data Wipe (TCU)
+  created_at: '2023-09-13 15:52:41.881158'
+  updated_at: '2024-10-17 17:57:34.769274'
+  last_sync: '2026-01-30T18:21:07.382263Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/2855
+metadata:
+  name: Remote Data Wipe - Wipe - Failure
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has REMOTE_DATA_WIPE capability enabled<br />Remote Data
+    Wipe screen</p>
+  steps:
+  - column_name: custom_steps
+    id: 3223
+    case_id: 2855
+    text1: <ol><li>Toggle on at least one of the toggles</li><li>Tap on Reset</li><li>Tap
+      on No</li><li>Mock an error for <code>DataWipe</code> (iOS) or let the API call
+      timeout<br />Tap on Reset and tap Yes</li></ol>
+    text2: null
+    text3: <ol><li>User should see corresponding toggle toggled on</li><li>User should
+      see a confirmation prompt</li><li>User should see confirmation prompt dismiss</li><li>User
+      should see confirmation prompt dismiss and a loading spinner<br />User should
+      see dataWipeType correspond with the selected toggle</li></ol><ul><li>Reset
+      Monitoring &amp; Alerts = <code>TCU_WIPE</code></li><li>Reset Vehicle Settings
+      = <code>HU_WIPE</code></li><li>Reset All = <code>WIPE</code><br /><br />Upon
+      failure, user should see a failure toast</li></ul>
+    text4: null
+    display_order: 1

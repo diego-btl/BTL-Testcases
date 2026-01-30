@@ -1,0 +1,31 @@
+testmo:
+  case_id: 32270
+  folder_id: 4154
+  project_id: 6
+  folder_path: home-page/climate
+  folder_name_ui: Climate
+  created_at: '2025-04-01 17:50:44.222041'
+  updated_at: '2025-10-23 21:00:38.579203'
+  last_sync: '2026-01-30T18:20:45.748555Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/32270
+metadata:
+  name: Climate Control Status
+  priority: 1
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is on Climate screen</p>
+  steps:
+  - column_name: custom_steps
+    id: 52649
+    case_id: 32270
+    text1: null
+    text2: null
+    text3: <p>User should see climate status on/off, default dial temperature 21 (if
+      climate off), interior temperature, exterior temperature, and Stop/Start Climate
+      CTA<br /><br />If climate is on, then the dial will show the target temperature
+      that was set</p>
+    text4: null
+    display_order: 1

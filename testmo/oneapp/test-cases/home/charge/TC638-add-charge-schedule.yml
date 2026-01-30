@@ -1,0 +1,73 @@
+testmo:
+  case_id: 638
+  folder_id: 66
+  project_id: 2
+  folder_path: home/charge
+  folder_name_ui: Charge
+  created_at: '2023-08-01 23:08:20.767961'
+  updated_at: '2025-09-22 14:39:26.783625'
+  last_sync: '2026-01-30T18:21:08.973384Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/638
+metadata:
+  name: Add Charge Schedule
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is on Charge screen</p>
+  steps:
+  - column_name: custom_steps
+    id: 807
+    case_id: 638
+    text1: <p>Tap on the Add button</p>
+    text2: null
+    text3: <p>The user should see the Charge Schedule screen in the empty state, create
+      button disabled</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 9388
+    case_id: 638
+    text1: <p>Fill in a start time and the end time</p>
+    text2: null
+    text3: <p>User should see the corresponding days of the week highlighted</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 9389
+    case_id: 638
+    text1: <p>Tap one of the quick options</p>
+    text2: null
+    text3: <p>User should see the corresponding days of the week highlighted</p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 9390
+    case_id: 638
+    text1: <p>Tap on days of the week</p>
+    text2: null
+    text3: <p>User should see the corresponding days of the week selected/unselected</p>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 9391
+    case_id: 638
+    text1: <p>Tap to Create Schedule</p>
+    text2: null
+    text3: <ul><li>The user should see a loading spinner while the schedule is being
+      created</li><li>The user should see a success toast if the schedule was created
+      successfully</li><li>The user should be returned to the Charge screen with the
+      newly added schedule shown</li></ul>
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 9392
+    case_id: 638
+    text1: <p>Fail the create a schedule</p>
+    text2: null
+    text3: <p>The user should see a failure toast and remain on the Charge Schedule
+      screen</p>
+    text4: null
+    display_order: 6

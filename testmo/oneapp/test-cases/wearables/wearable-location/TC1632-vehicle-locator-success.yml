@@ -1,0 +1,29 @@
+testmo:
+  case_id: 1632
+  folder_id: 78
+  project_id: 2
+  folder_path: wearables/wearable-location
+  folder_name_ui: Wearable - Location
+  created_at: '2023-08-28 20:13:25.370657'
+  updated_at: '2024-10-17 17:57:05.010933'
+  last_sync: '2026-01-30T18:21:07.856219Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/1632
+metadata:
+  name: Vehicle Locator Success
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: User received a vehicle locator success notification (vehicle location
+    is refreshed and is successfully returned)
+  steps:
+  - column_name: custom_steps
+    id: 1997
+    case_id: 1632
+    text1: 1. Tap the notification on the wearable device
+    text2: null
+    text3: User should see the wearable app open to the location screen
+    text4: null
+    display_order: 1

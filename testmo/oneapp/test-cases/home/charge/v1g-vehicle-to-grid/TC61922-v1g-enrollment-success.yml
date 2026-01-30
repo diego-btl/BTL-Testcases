@@ -1,0 +1,56 @@
+testmo:
+  case_id: 61922
+  folder_id: 6755
+  project_id: 2
+  folder_path: home/charge/v1g-vehicle-to-grid
+  folder_name_ui: V1G - Vehicle-to-Grid
+  created_at: '2025-11-03 19:52:06.883516'
+  updated_at: '2025-12-16 18:20:15.189428'
+  last_sync: '2026-01-30T18:21:05.577609Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/61922
+metadata:
+  name: V1G - Enrollment - SUCCESS
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<p>Nissan NNA and NCI only</p><p>EV or EV AVK2 only</p><p>PD only</p><p>"v1GMonitoredChargingAccountStatus":
+    "CANCELLED" or "NOT_ENROLLED"</p>'
+  steps:
+  - column_name: custom_steps
+    id: 94937
+    case_id: 61922
+    text1: <p>1. User is on the Optimize or Insights screen</p><p>2. Tap the 'Activate
+      Now' button</p>
+    text2: null
+    text3: <p>1. The loading state is displayed (Processing your enrollment)</p><p>2.
+      The V1GEnrollMonitoredChargingPlan API is triggered</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 94941
+    case_id: 61922
+    text1: "<p>1. The V1GEnrollMonitoredChargingPlan API is triggered, returning the\
+      \ proper response</p><pre><code class=\"editor-plain language-plain code-block\"\
+      >{\n  \"data\": {\n    \"v1GEnrollMonitoredChargingPlan\": {\n      \"__typename\"\
+      : \"V1GEnrollMonitoredChargingPlanResponse\",\n      \"data\": {\n        \"\
+      __typename\": \"V1GEnrollChargePlanData\",\n        \"v1GMonitoredChargingAccountStatus\"\
+      : \"ACTIVE\"\n      }\n    }\n  }\n}</code></pre>"
+    text2: null
+    text3: <p>1. 'You've successfully enrolled!' success toast is displayed</p><p>2.
+      V1GTokenizedUrl API is triggered, returning the valid URL</p><p>3. The Optimize
+      and Insights screens are updated, displaying the URL in a webview </p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 94942
+    case_id: 61922
+    text1: <p>1. Bg/fg or cold start the app</p><p>2. Navigate to the Optimize/Insights
+      screen</p>
+    text2: null
+    text3: <p>1. The access token is cached</p><p>2. The tabs show the context of
+      the webview</p><p>3. The V1GTokenizedUrl API is NOT triggered</p>
+    text4: null
+    display_order: 3

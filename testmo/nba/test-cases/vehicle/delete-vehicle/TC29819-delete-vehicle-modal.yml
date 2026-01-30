@@ -1,0 +1,48 @@
+testmo:
+  case_id: 29819
+  folder_id: 3770
+  project_id: 5
+  folder_path: vehicle/delete-vehicle
+  folder_name_ui: Delete Vehicle
+  created_at: '2024-12-20 15:21:40.308281'
+  updated_at: null
+  last_sync: '2026-01-30T18:20:38.326183Z'
+  url: https://bethinklabs.testmo.net/repositories/5/cases/29819
+metadata:
+  name: Delete Vehicle - Modal
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is on Vehicle Profile screen</p>
+  steps:
+  - column_name: custom_steps
+    id: 48686
+    case_id: 29819
+    text1: <p>Tap on <code>REMOVER VEICULO</code></p>
+    text2: null
+    text3: '<p>A modal with the following copy should appear:</p><p><code>Title: Você
+      tem certeza de que deseja continuar?</code><br /><code>Description: Ao excluir
+      este veículo da sua garagem, você perderá o acesso às funcionalidades de agendamento,
+      histórico de serviços e outras relacionadas a ele.</code><br /><code>CTA1: Remover
+      Veículo</code><br /><code>CTA2: Cancelar</code></p>'
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 48687
+    case_id: 29819
+    text1: <p>Tap <code>Cancelar</code></p>
+    text2: null
+    text3: <p>User should stay on vehicle profile and modal should dismiss</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 48688
+    case_id: 29819
+    text1: <p>Tap on <code>Remover Veiculo</code></p>
+    text2: null
+    text3: <p>Delete vehicle flow should be triggered</p>
+    text4: null
+    display_order: 3

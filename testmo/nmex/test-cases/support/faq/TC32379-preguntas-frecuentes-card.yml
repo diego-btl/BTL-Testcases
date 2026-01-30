@@ -1,0 +1,272 @@
+testmo:
+  case_id: 32379
+  folder_id: 6762
+  project_id: 6
+  folder_path: support/faq
+  folder_name_ui: FAQ
+  created_at: '2025-04-01 17:50:45.005292'
+  updated_at: '2025-10-30 17:37:04.645302'
+  last_sync: '2026-01-30T18:20:45.499761Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/32379
+metadata:
+  name: Preguntas Frecuentes card
+  priority: 1
+  type: functional
+  status: active
+  estimate: 3600000000
+  automation: 'no'
+  tags: []
+test_case:
+  steps:
+  - column_name: custom_steps
+    id: 94799
+    case_id: 32379
+    text1: <ol><li>Login into the app</li><li>Go to <code>Soporte</code> option</li><li>Tap
+      the card <code>Preguntas Frecuentes &gt;</code></li></ol>
+    text2: null
+    text3: <ul><li>The title &gt;  <code>Preguntas Frecuentes</code> should be showing</li><li>All
+      the sections with all the cards should be displaying</li></ul>
+    text4: null
+    display_order: 1
+  notes: "<p>Response</p><pre><code class=\"editor-json language-json code-block\"\
+    >{\n  \"data\": {\n    \"faqs\": [\n      {\n        \"__typename\": \"FAQ\",\n\
+    \        \"category\": \"Servicio de mantenimiento\",\n        \"data\": [\n \
+    \         {\n            \"__typename\": \"FAQData\",\n            \"question\"\
+    : \"¿Cada cuándo se realiza el servicio de mantenimiento?\",\n            \"answer\"\
+    : \"El servicio se realiza cada 6 meses o 10,000 KM, lo que suceda primero o si\
+    \ es de uso intensivo cada 3 meses o 5,000 KM.\"\n          },\n          {\n\
+    \            \"__typename\": \"FAQData\",\n            \"question\": \"¿Por qué\
+    \ se tiene que hacer el servicio cada 6 meses, aunque aún no llegue a los 10 mil\
+    \ Kilómetros?\",\n            \"answer\": \"Es lo que estipula su póliza de garantía\
+    \ que el fabricante recomienda, a los seis meses, aunque no se hayan transcurrido\
+    \ los 10,000KM es necesario que se revise para verificar que este en buenas condiciones,\
+    \ ya que la falta de uso también puede ser un detonante de fallas a largo plazo\
+    \ en el automóvil además es un requisito para mantener activa su póliza de garantía.\"\
+    \n          },\n          {\n            \"__typename\": \"FAQData\",\n      \
+    \      \"question\": \"¿Qué debo llevar a la agencia, además de mi vehículo?\"\
+    ,\n            \"answer\": \"Es importante lleves contigo tu póliza de garantía,\
+    \ este documento es para certificar que ha sido llevado a cabo el trabajo especificado\
+    \ en el Programa de Mantenimiento y mantener tu garantía vigente.\"\n        \
+    \  },\n          {\n            \"__typename\": \"FAQData\",\n            \"question\"\
+    : \"¿Qué le realizan al automóvil en el servicio?\",\n            \"answer\":\
+    \ \"Lo que se le realiza al vehículo va depender del manual de conductor, póliza\
+    \ o modelo del auto. Se hace la inspección y/o reemplazo de piezas que aplican\
+    \ por tiempo y KM. De forma general algunas de las cosas que se realizan son el\
+    \ cambio de aceite y filtro de aceite, reemplace del filtro de aire, inspección\
+    \ general del vehículo, rellenado de algunos niveles, además de la revisión de\
+    \ la presión de llantas y si es necesario se hará la permuta de las mismas.\"\n\
+    \          },\n          {\n            \"__typename\": \"FAQData\",\n       \
+    \     \"question\": \"¿Qué diferencia tiene el servicio express y el servicio\
+    \ normal?\",\n            \"answer\": \"La unidad en un servicio exprés tarda\
+    \ un lapso de 45 min a 1 hora y media, a diferencia con el normal que tarda de\
+    \ 4 horas a 4 horas y media. Pero en el servicio exprés no se hace lavado de carrocería.\"\
+    \n          },\n          {\n            \"__typename\": \"FAQData\",\n      \
+    \      \"question\": \"Llevé mi vehículo a servicio y me cobraron más de lo que\
+    \ me habían dicho\",\n            \"answer\": \"Puedes comunicarte al 800 964\
+    \ 77 26 -Opción 7 para iniciar el proceso de aclaración. Necesitaremos que nos\
+    \ compartas el precio que le dieron y si sé mencionó que sería un servicio de\
+    \ transparencia, si sí fue así, se le piden datos para levantar reporte, si no,\
+    \ se le explica que los precios que le dan en el distribuidor son de servicios\
+    \ más completos que van de acuerdo al uso y desgaste de su vehículo.\"\n     \
+    \     }\n        ]\n      },\n      {\n        \"__typename\": \"FAQ\",\n    \
+    \    \"category\": \"Garantía Nissan\",\n        \"data\": [\n          {\n  \
+    \          \"__typename\": \"FAQData\",\n            \"question\": \"¿Cuánto dura\
+    \ la garantía de fábrica del vehículo?\",\n            \"answer\": \"3 años o\
+    \ 60.000 kilómetros lo que ocurra primero. Para mantenerla hay que realizar los\
+    \ servicios de mantenimiento en tiempo y forma de acuerdo al uso de la unidad\
+    \ cada 6 meses o 10 mil km o si es de uso intensivo cada 3 meses o 5 mil km.\"\
+    \n          },\n          {\n            \"__typename\": \"FAQData\",\n      \
+    \      \"question\": \"¿Qué cubre mi garantía Nissan? \",\n            \"answer\"\
+    : \"El vehículo está protegido contra defectos de materiales y mano de obra utilizados\
+    \ durante su fabricación, a partir de la fecha de venta al comprador original\
+    \ y durante el tiempo y/o kilometraje especificado en la Póliza de garantía.\"\
+    \n          },\n          {\n            \"__typename\": \"FAQData\",\n      \
+    \      \"question\": \"Si mi vehículo está fallando y está dentro de garantía\
+    \ ¿qué puedo hacer?\",\n            \"answer\": \"Si detecta alguna situación\
+    \ con su unidad y es posible que pueda moverla al distribuidor para diagnóstico,\
+    \ es necesario ingresar para su valoración. Si su unidad no enciende o no se puede\
+    \ mover y está dentro de los 3 años favor de comunicarse al número de asistencia\
+    \ vial que puede encontrar en su manual o 800 9647726 en la Opción 3 de Asistencia\
+    \ Vial.\"\n          },\n          {\n            \"__typename\": \"FAQData\"\
+    ,\n            \"question\": \"Si mi vehículo está fallando y no está dentro de\
+    \ garantía ¿qué puedo hacer?\",\n            \"answer\": \"Debes acudir con tu\
+    \ distribuidor Nissan para una revisión. Al ya no contar con garantía los costos\
+    \ por las reparaciones deben ser por cuenta propia. Para aclaraciones del proceso\
+    \ se puede comunicar al 800 964 77 26 -Opción 7.\"\n          }\n        ]\n \
+    \     },\n      {\n        \"__typename\": \"FAQ\",\n        \"category\": \"\
+    Asistencia Vial Nissan, Partes y Refacciones\",\n        \"data\": [\n       \
+    \   {\n            \"__typename\": \"FAQData\",\n            \"question\": \"\
+    ¿Cuál es el teléfono y horario de Asistencia Vial?\",\n            \"answer\"\
+    : \"5558094787, cuentan con un servicio de 24 horas.\"\n          },\n       \
+    \   {\n            \"__typename\": \"FAQData\",\n            \"question\": \"\
+    ¿Tiene costo el servicio de Asistencia Vial?\",\n            \"answer\": \"El\
+    \ servicio es gratuito mientras cuente con su garantía Nissan de lo contrario\
+    \ tendrá un costo que le será proporcionado por Asistencia Vial.\"\n         \
+    \ },\n          {\n            \"__typename\": \"FAQData\",\n            \"question\"\
+    : \"¿Cómo puedo cotizar el precio de refacciones y accesorios?\",\n          \
+    \  \"answer\": \"Es necesario comunicarse a distribuidor para obtener el costo\
+    \ de la refacción, directo al área de refacciones, se te solicitará el modelo\
+    \ de vehículo y refacción deseada. Puedes consultar el directorio de distribuidores\
+    \ en la liga: [https://www.nissan.com.mx/distribuidores.html](https://www.nissan.com.mx/distribuidores.html).\"\
+    \n          },\n          {\n            \"__typename\": \"FAQData\",\n      \
+    \      \"question\": \"¿Hay algún precio en el reemplazo de refacciones si mi\
+    \ vehículo está dentro del periodo de garantía?\",\n            \"answer\": \"\
+    Para revisar si una pieza entra dentro de garantía, es necesario acudir al distribuidor\
+    \ para revisar las condiciones y especificaciones de la pieza en cuestión. Puedes\
+    \ consultar el directorio de distribuidores en la liga: [https://www.nissan.com.mx/distribuidores.html](https://www.nissan.com.mx/distribuidores.html).\"\
+    \n          }\n        ]\n      },\n      {\n        \"__typename\": \"FAQ\",\n\
+    \        \"category\": \"Seguros\",\n        \"data\": [\n          {\n      \
+    \      \"__typename\": \"FAQData\",\n            \"question\": \"¿Ya liquidé mi\
+    \ vehículo y deseo adquirir un seguro de contado?\",\n            \"answer\":\
+    \ \"Es importante ponerte en contacto al tel. 4499944842 o en el correo [Anzen.paratodos@nrfm.com.mx](mailto:Anzen.paratodos@nrfm.com.mx),\
+    \ del departamento de Seguro de Contado Post Venta.\"\n          }\n        ]\n\
+    \      },\n      {\n        \"__typename\": \"FAQ\",\n        \"category\": \"\
+    Créditos, CrediNissan\",\n        \"data\": [\n          {\n            \"__typename\"\
+    : \"FAQData\",\n            \"question\": \"¿Dónde se pagan las mensualidades?\"\
+    ,\n            \"answer\": \"Tus mensualidades se domicilian automáticamente a\
+    \ tu cuenta bancaria, para tu mayor comodidad y seguridad.\"\n          },\n \
+    \         {\n            \"__typename\": \"FAQData\",\n            \"question\"\
+    : \"¿Cómo puedo hacer un pago o un aporte a capital?\",\n            \"answer\"\
+    : \"Tenemos dos opciones disponibles para ti: \\r\\n\\r\\nTRANSFERENCIA\\r\\n\\\
+    r\\n- Banco: BBVA\\r\\n- Cuenta CLABE: 012914002016122478\\r\\n- Cuenta a nombre\
+    \ de: NR FINANCE MEXICO SA DE CV\\r\\n- En la Referencia y Concepto escribe tu\
+    \ número de contrato\\r\\n\\r\\nVENTANILLA\\r\\n\\r\\n- Banco: BBVA\\r\\n- Convenio:\
+    \ CIE 1612247\\r\\n- Cuenta a nombre de: NR FINANCE MEXICO SA DE CV\\r\\n- En\
+    \ la Referencia y Concepto escribe tu número de contrato\\r\\n\\r\\n**EVITA FRAUDES**:\
+    \ Recuerda que estas cuentas son nuestras únicas cuentas autorizadas de pago\"\
+    \n          },\n          {\n            \"__typename\": \"FAQData\",\n      \
+    \      \"question\": \"¿Cómo puedo hacer una solicitud de crédito?\",\n      \
+    \      \"answer\": \"Puedes obtener tu solicitud de crédito de dos maneras muy\
+    \ sencillas:\\r\\n\\r\\n1. Llenando el formulario de Cotización en este sitio.\\\
+    r\\n2. Acudir al Distribuidor Autorizado Nissan de tu preferencia con:\\r\\n\\\
+    r\\n- Comprobante de domicilio (antigüedad no mayor a dos meses)\\r\\n- Comprobantes\
+    \ de ingresos (recibos de nómina de mes o estados de cuenta de los últimos 3 meses).\\\
+    r\\n- Identificación oficial (pasaporte, cédula profesional o credencial del INE,\
+    \ IFE).\"\n          },\n          {\n            \"__typename\": \"FAQData\"\
+    ,\n            \"question\": \"¿Qué documentación es necesaria para solicitar\
+    \ un crédito?\",\n            \"answer\": \"Esta es la documentación básica que\
+    \ necesitas para solicitar un crédito:\\r\\n\\r\\n- Comprobante de domicilio (antigüedad\
+    \ no mayor a dos meses).\\r\\n- Comprobantes de ingresos (recibos de nómina de\
+    \ mes o estado de cuenta de los últimos 3 meses).\\r\\n- Identificación oficial\
+    \ (pasaporte, cédula profesional o credencial del INE, IFE).\"\n          },\n\
+    \          {\n            \"__typename\": \"FAQData\",\n            \"question\"\
+    : \"No puedo comprobar ingresos ¿puedo obtener un crédito?\",\n            \"\
+    answer\": \"Sí, tenemos un plan dirigido a personas que no pueden comprobar ingresos\
+    \ con Credi Nissan®: nuestro Plan Súbete\"\n          },\n          {\n      \
+    \      \"__typename\": \"FAQData\",\n            \"question\": \"¿Cómo puedo pagar\
+    \ mi seguro de contado?\",\n            \"answer\": \"Recuerda que la mejor opción\
+    \ es contar con tu seguro financiado, el cual año con año se financia de manera\
+    \ automática en tu crédito sin necesidad de llamar a nuestro Centro de Atención\
+    \ a Clientes.\\r\\n\\r\\nSi quieres pagar tu seguro de contado, entonces recuerda\
+    \ lo siguiente:\\r\\n\\r\\nEl seguro se debe de pagar entre los 10 y 5 días antes\
+    \ de la primera mensualidad después de su aniversario. Es decir, 10 días antes\
+    \ de la mensualidad 13, 25, 37, 49. \\r\\n\\r\\nRecuerda realizar tu pago en la\
+    \ cuenta autorizada:\\r\\n\\r\\n- Banco BBVA \\r\\n- Convenio CIE 1738658.\\r\\\
+    n- Cuenta a nombre de: NR Finance Mexico S.A. de C.V. \\r\\n- CLABE interbancaria:\
+    \ 012914002017386585.\\r\\n- Referencia: N° de Contrato (sin letras o números\
+    \ adicionales). \\r\\n- Concepto: N° de Contrato (sin letras o números adicionales).\\\
+    r\\n- El pago se aplicará de manera automática.\"\n          },\n          {\n\
+    \            \"__typename\": \"FAQData\",\n            \"question\": \"¿Cómo puedo\
+    \ consultar mi póliza de seguro, mi factura y estado de cuenta?\",\n         \
+    \   \"answer\": \"Recuerda que puedes consultar esos documentos en MiNissan® App,\
+    \ en la sección de Crédito o en el sitio Portal [MiNissan®](https://portalclientes.nissan.com.mx/s)\
+    \ en la sección Mis Documentos.\"\n          },\n          {\n            \"__typename\"\
+    : \"FAQData\",\n            \"question\": \"¿Qué hago en caso de un siniestro?\"\
+    ,\n            \"answer\": \"Contacta de inmediato a tu aseguradora. Recuerda\
+    \ mantener la póliza en tu auto dentro de la sección de guantera o revisa la póliza\
+    \ dentro del sitio  Portal [MiNissan®](https://portalclientes.nissan.com.mx/s)\
+    \ o en MiNissan® App dentro de la sección de Guantera.\"\n          },\n     \
+    \     {\n            \"__typename\": \"FAQData\",\n            \"question\": \"\
+    ¿Cuánto tarda la aprobación del crédito?\",\n            \"answer\": \"Tenemos\
+    \ un proceso de autorización automática en la cual, si cumples con todos los requisitos,\
+    \ consigues la aprobación inmediata.\"\n          },\n          {\n          \
+    \  \"__typename\": \"FAQData\",\n            \"question\": \"¿Cómo califico para\
+    \ un crédito?\",\n            \"answer\": \"Consideramos tus ingresos e historial\
+    \ crediticio. En caso de no contar con comprobantes, podríamos realizar una validación\
+    \ personalizada.\"\n          },\n          {\n            \"__typename\": \"\
+    FAQData\",\n            \"question\": \"Si ya tengo mi crédito ¿cómo puedo obtener\
+    \ mi factura?\",\n            \"answer\": \"Al finalizar tu contrato, recibirás\
+    \ tu factura en el distribuidor donde adquiriste tu Nissan, o en su defecto, te\
+    \ será enviada por correo electrónico.\"\n          },\n          {\n        \
+    \    \"__typename\": \"FAQData\",\n            \"question\": \"¿Cómo sabré si\
+    \ aprueban mi crédito?\",\n            \"answer\": \"Tu asesor de ventas o gerente\
+    \ de financiamiento te notificará la respuesta sobre la evaluación de tu crédito\
+    \ vía telefónica o correo electrónico.\"\n          },\n          {\n        \
+    \    \"__typename\": \"FAQData\",\n            \"question\": \"¿Qué tipo de auto\
+    \ puedo comprar con el financiamiento de MiNissan®?\",\n            \"answer\"\
+    : \"Vehículos nuevos y seminuevos para uso particular y flotillas para la marca\
+    \ Nissan.\"\n          },\n          {\n            \"__typename\": \"FAQData\"\
+    ,\n            \"question\": \"Si nunca he solicitado un crédito, ¿de qué forma\
+    \ me pueden apoyar?\",\n            \"answer\": \"El asesor de ventas de la agencia\
+    \ o gerente de financiamiento puede brindar apoyo desde el proceso de llenado\
+    \ de solicitud, autorización de crédito, firma de contrato y entrega de la unidad.\"\
+    \n          },\n          {\n            \"__typename\": \"FAQData\",\n      \
+    \      \"question\": \"Si no me aprueban el crédito ¿puedo volver a solicitar?\"\
+    ,\n            \"answer\": \"Sí, siempre y cuando el rechazo no haya sido por\
+    \ mala experiencia crediticia.\"\n          },\n          {\n            \"__typename\"\
+    : \"FAQData\",\n            \"question\": \"¿Ya liquidé mi vehículo y deseo adquirir\
+    \ un seguro de contado?\",\n            \"answer\": \"¡Claro! \\r\\n\\r\\nEstaremos\
+    \ encantados de asistirte personalmente. Por favor, comunícate con nuestro equipo\
+    \ especializado en seguros postventa:\\r\\n\\r\\n449 994 4842\\r\\nanzen.paratodos@nrfm.com.mx\"\
+    \n          },\n          {\n            \"__typename\": \"FAQData\",\n      \
+    \      \"question\": \"¿Puedo cambiar mis datos de facturación o solicitar una\
+    \ refacturación?\",\n            \"answer\": \"Sí. Puedes hacerlo fácilmente desde\
+    \ nuestro portal. \\r\\n\\r\\nAsegúrate de contar con tus datos fiscales completos.\
+    \ (como nombre, RFC, domicilio fiscal, etc.)\\r\\n\\r\\n[https://emision-nrfm-portal-auto-prod.pegasotecnologia.mx/](https://emision-nrfm-portal-auto-prod.pegasotecnologia.mx/)\"\
+    \n          },\n          {\n            \"__typename\": \"FAQData\",\n      \
+    \      \"question\": \"La información de mi contrato no se muestra.\",\n     \
+    \       \"answer\": \"Por favor, escríbenos desde el correo que registraste al\
+    \ contratar, incluyendo tu nombre completo y número de contrato:\\r\\n\\r\\natencion.cliente@nrfm.com.mx\"\
+    \n          },\n          {\n            \"__typename\": \"FAQData\",\n      \
+    \      \"question\": \"Línea de atención WhatsApp disponible 24/7\",\n       \
+    \     \"answer\": \"Contáctanos al 55 4909 0094 donde podrás consultar la información\
+    \ de tu crédito las 24 horas los 7 días de la semana.\"\n          }\n       \
+    \ ]\n      },\n      {\n        \"__typename\": \"FAQ\",\n        \"category\"\
+    : \"Llamados a revisión\",\n        \"data\": [\n          {\n            \"__typename\"\
+    : \"FAQData\",\n            \"question\": \"¿Qué problema puede presentarse?\"\
+    ,\n            \"answer\": \"Algunas bolsas de aire ensambladas en las instalaciones\
+    \ de la empresa TAKATA se fabricaron con un inflador que no correspondía a las\
+    \ especificaciones necesarias. Esta falla de manufactura puede llegar a crear\
+    \ una reducción en el flujo de gas, lo cual potencialmente puede causar la ruptura\
+    \ de la bolsa de aire al momento de su activación.\"\n          },\n         \
+    \ {\n            \"__typename\": \"FAQData\",\n            \"question\": \"¿Hay\
+    \ señales de advertencia sobre fallas en estas bolsas de aire?\",\n          \
+    \  \"answer\": \"No hay ninguna señal de advertencia sobre esta condición. Por\
+    \ eso es esencial responder al llamado a revisión que hace Nissan.\"\n       \
+    \   },\n          {\n            \"__typename\": \"FAQData\",\n            \"\
+    question\": \"¿Qué bolsas de aire son las que pueden presentar el problema?\"\
+    ,\n            \"answer\": \"El llamado a revisión solo aplica a ciertos infladores\
+    \ de bolsa de aire del lado del conductor o pasajero.\"\n          },\n      \
+    \    {\n            \"__typename\": \"FAQData\",\n            \"question\": \"\
+    ¿En qué consiste el llamado a revisión?\",\n            \"answer\": \"Se realiza\
+    \ una inspección y, de ser necesario, el reemplazo del módulo de la bolsa de aire.\"\
+    \n          },\n          {\n            \"__typename\": \"FAQData\",\n      \
+    \      \"question\": \"¿Tiene algún costo el llamado a revisión?\",\n        \
+    \    \"answer\": \"Todas las reparaciones por motivos de llamados a revisión son\
+    \ gratuitas en los Distribuidores Autorizados Nissan. Te recomendamos que tomes\
+    \ acción inmediata para reparar tu vehículo sin ningún costo.\"\n          },\n\
+    \          {\n            \"__typename\": \"FAQData\",\n            \"question\"\
+    : \"¿Cuánto tiempo tardará la reparación?\",\n            \"answer\": \"El tiempo\
+    \ de reparación varía dependiendo del modelo, pero usualmente se requiere de 1\
+    \ a 2 horas.\"\n          },\n          {\n            \"__typename\": \"FAQData\"\
+    ,\n            \"question\": \"¿Actualmente Nissan está manufacturando vehículos\
+    \ con infladores de bolsas de aire Takata?\",\n            \"answer\": \"No, ya\
+    \ no se fabrican vehículos con estos infladores.\"\n          },\n          {\n\
+    \            \"__typename\": \"FAQData\",\n            \"question\": \"¿Existe\
+    \ algún accidente registrado en México por esta condición?\",\n            \"\
+    answer\": \"Nissan Mexicana no cuenta con ningún reporte de algún incidente relacionado\
+    \ con el posible defecto en México.\"\n          },\n          {\n           \
+    \ \"__typename\": \"FAQData\",\n            \"question\": \"¿Qué acciones se están\
+    \ tomando para controlar riesgos?\",\n            \"answer\": \"Nissan Mexicana,\
+    \ en conjunto con su Red de Distribuidores, está llevando a cabo diversos esfuerzos\
+    \ de comunicación con sus clientes y autoridades correspondientes, para brindar\
+    \ la atención necesaria.\"\n          },\n          {\n            \"__typename\"\
+    : \"FAQData\",\n            \"question\": \"¿Cómo puedo saber si mi vehículo está\
+    \ dentro de algún llamado a revisión?\",\n            \"answer\": \"En caso de\
+    \ no recibir un comunicado por los diferentes medios de contacto oficial de la\
+    \ marca (SMS, Mail, carta o publicaciones de PROFECO) puedes consultar en el sitio\
+    \ oficial [https://www.nissan.com.mx/servicio-nissan/llamados-a- revision.html](https://www.nissan.com.mx/servicio-nissan/llamados-a-revision.html)\
+    \ con tu VIN para verificar si tu vehículo cuenta con un llamado a revisión. En\
+    \ caso de ser así, podrás agendar una cita sin costo en el Distribuidor Autorizado\
+    \ Nissan de tu preferencia a través de MiNissan® App.\"\n          }\n       \
+    \ ]\n      }\n    ]\n  }\n}</code></pre>"

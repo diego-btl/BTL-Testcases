@@ -1,0 +1,54 @@
+testmo:
+  case_id: 2848
+  folder_id: 432
+  project_id: 2
+  folder_path: vehicle/mils/mechanical-repair
+  folder_name_ui: Mechanical Repair
+  created_at: '2023-09-13 15:39:16.830415'
+  updated_at: '2025-12-02 00:47:34.282627'
+  last_sync: '2026-01-30T18:21:07.395669Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/2848
+metadata:
+  name: Mechanical Repair - Enable Data Sharing,  SMS/Cell/Email - toggle failure
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: "<ul><li>AVK2 or EVO vehicle (AVK2, EVAVK2, EVO, EVEVO)</li><li>User\
+    \ does not need to have active MILs</li><li>User has at least one Vehicle status\
+    \ enabled (e.g: tire pressure PSI)</li><li>User has MECHANICAL_REPAIR capability\
+    \ enabled</li><li><code>GrantMechanicalRepair</code> FF is <strong>enabled</strong></li></ul><p>Mock\
+    \ an error for <code>UpdateVehiclePreferences</code> or for <code>success</code>\
+    \ to be <code>false</code></p><p> </p><p>Mock sample</p><p><code>UpdateVehiclePreferences</code>\
+    \ - false</p><pre><code class=\"editor-plain language-plain code-block\">{\n\"\
+    data\": {\n\"updateVehiclePreferences\": {\n\"__typename\": \"ResponseStatus\"\
+    ,\n\"success\": false\n        }\n    }\n}</code></pre>"
+  steps:
+  - column_name: custom_steps
+    id: 3235
+    case_id: 2848
+    text1: <ol><li>Tap toggle to enable/disable Enable Data Sharing</li><li>Wait for
+      the failure, tap Ok</li><li>Tap toggle to disable/enable Enable Data Sharing</li><li>Wait
+      for the failure, tap Ok</li></ol>
+    text2: null
+    text3: <p>1. User should see a loading spinner while API is loading<br />2. User
+      should see a Something went wrong error modal<br />User should see the error
+      modal dismiss and the UI revert back to the previous setting<br />3/4. User
+      should see the same behaviour as steps 2/3</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 11831
+    case_id: 2848
+    text1: <ol><li>Tap toggle to enable/disable SMS/Cell/Email</li><li>Wait for the
+      failure, tap Ok</li><li>Tap toggle to enable/disable SMS/Cell/Email</li><li>Wait
+      for the failure, tap Ok</li></ol>
+    text2: null
+    text3: <p>1. User should see a loading spinner while API is loading<br />2. User
+      should see a Something went wrong error modal<br />User should see the error
+      modal dismiss and the toggle revert back to the previous setting<br />3/4. User
+      should see the same behaviour as steps 2/3</p>
+    text4: null
+    display_order: 2

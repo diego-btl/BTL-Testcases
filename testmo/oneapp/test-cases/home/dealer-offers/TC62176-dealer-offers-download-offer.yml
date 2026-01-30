@@ -1,0 +1,50 @@
+testmo:
+  case_id: 62176
+  folder_id: 3600
+  project_id: 2
+  folder_path: home/dealer-offers
+  folder_name_ui: Dealer Offers
+  created_at: '2025-12-17 15:51:48.013860'
+  updated_at: '2026-01-15 10:42:51.710341'
+  last_sync: '2026-01-30T18:21:04.542505Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/62176
+metadata:
+  name: Dealer Offers - Download Offer
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<ul><li>The user already selected one offer from the list</li><li>The
+    FF needs to be <code>"EnableDealerOffers": "true"</code></li></ul>'
+  steps:
+  - column_name: custom_steps
+    id: 96711
+    case_id: 62176
+    text1: <ol><li>The user selects one offer from the List</li></ol>
+    text2: null
+    text3: <ul><li>The user should see the <strong>Offer Details</strong> screen</li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 96712
+    case_id: 62176
+    text1: <ol><li>The user clicks <code>Download Offer</code> link(blue color)</li></ol>
+    text2: null
+    text3: '<ul><li>The OS pop-up will show to give permissions to storage images
+      in the phone</li><li>The toast shows saying the image was saved correctly<ul><li><code>Imaged
+      saved in the phone</code></li></ul></li><li>The offer was saved correctly in
+      the phone storage</li></ul><p>NOTE: For Android, you will not see the OS pop
+      up as it is controlled now on the OS for newer versions. </p>'
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 96725
+    case_id: 62176
+    text1: <ol><li>The user opens the offer downloaded</li></ol>
+    text2: null
+    text3: <ul><li>The details of the offer should display correctly</li></ul>
+    text4: null
+    display_order: 3
+  notes: <p>The app will call the API <strong>DealsAndImagesByDealerId</strong></p>

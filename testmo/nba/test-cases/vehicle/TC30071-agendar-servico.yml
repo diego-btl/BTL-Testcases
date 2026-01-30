@@ -1,0 +1,50 @@
+testmo:
+  case_id: 30071
+  folder_id: 3763
+  project_id: 5
+  folder_path: vehicle
+  folder_name_ui: Vehicle
+  created_at: '2025-01-27 07:45:33.260884'
+  updated_at: '2025-04-09 13:34:51.911698'
+  last_sync: '2026-01-30T18:20:38.224039Z'
+  url: https://bethinklabs.testmo.net/repositories/5/cases/30071
+metadata:
+  name: Agendar Servico
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  steps:
+  - column_name: custom_steps
+    id: 48970
+    case_id: 30071
+    text1: <p>User taps on the <code>Agendar Servico</code> button</p>
+    text2: null
+    text3: <p>A webview should open with the header <code>Agendar Servico</code></p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 48971
+    case_id: 30071
+    text1: null
+    text2: null
+    text3: <p>User should see the schedule service page </p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 48972
+    case_id: 30071
+    text1: null
+    text2: null
+    text3: '<p>If a vehicle is selected, the <code>Placa</code>, <code>model</code>
+      and <code>model year</code> should be prefilled (this depends on the link, check
+      <code>VehicleDataStatic</code> and check because some links do not pass it.)
+      For more info, see commments in this ticket: <a href="https://www.pivotaltracker.com/story/show/188700633">https://www.pivotaltracker.com/story/show/188700633</a></p><p>Essentially,
+      even though the url has the model no. and year, if the model year is not from
+      the drop down list of Model years in the Book a service form (the actual web
+      page), it won''t show as pre-populated)</p><figure class="image"><img src="/attachments/view/3887"
+      alt="3887" /></figure>'
+    text4: null
+    display_order: 3

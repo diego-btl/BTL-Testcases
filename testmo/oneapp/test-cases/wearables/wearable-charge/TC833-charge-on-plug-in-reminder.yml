@@ -1,0 +1,47 @@
+testmo:
+  case_id: 833
+  folder_id: 75
+  project_id: 2
+  folder_path: wearables/wearable-charge
+  folder_name_ui: Wearable - Charge
+  created_at: '2023-08-01 23:08:23.286180'
+  updated_at: '2024-10-17 17:57:05.010933'
+  last_sync: '2026-01-30T18:21:08.630145Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/833
+metadata:
+  name: Charge On - Plug In Reminder
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>The user is logged in to an account on a mobile</li><li>The
+    app is launched on wearable</li><li> The vehicle is not plugged in (mock data
+    if it is plugged in)</li></ul><p><br /> </p>
+  steps:
+  - column_name: custom_steps
+    id: 1002
+    case_id: 833
+    text1: <p>Switch vehicles to the Ariya</p>
+    text2: null
+    text3: <p>The Home screen of Ariya is displayed</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 9405
+    case_id: 833
+    text1: <p>Swipe left to view the battery level screen</p>
+    text2: null
+    text3: <p>Battery level screen is displayed</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 9406
+    case_id: 833
+    text1: <p>Tap on the charge button</p>
+    text2: null
+    text3: <p>"Not Plugged In, Please plug in your vehicle in order to start charging"
+      error message should be displayed. <a href="https://app.sympli.io/app#!/designs/6327b8431e86105c9134d0eb/specs/assets?tags=3.4%20%7C%20Route%20Planner">Design</a></p>
+    text4: null
+    display_order: 3

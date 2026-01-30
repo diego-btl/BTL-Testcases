@@ -1,0 +1,18 @@
+testmo:
+  case_id: 29856
+  folder_id: 3775
+  project_id: 2
+  folder_path: login-flow/browser-login
+  folder_name_ui: Browser Login
+  created_at: '2025-01-07 15:11:42.860998'
+  updated_at: '2025-01-07 15:13:32.026055'
+  last_sync: '2026-01-30T18:21:06.568779Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/29856
+metadata:
+  name: UI of Login Browser screen
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case: {}

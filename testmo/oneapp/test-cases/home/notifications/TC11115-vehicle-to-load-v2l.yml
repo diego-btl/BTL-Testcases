@@ -1,0 +1,39 @@
+testmo:
+  case_id: 11115
+  folder_id: 49
+  project_id: 2
+  folder_path: home/notifications
+  folder_name_ui: Notifications
+  created_at: '2024-02-02 06:46:37.483054'
+  updated_at: '2025-12-05 20:55:01.613890'
+  last_sync: '2026-01-30T18:21:07.145182Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/11115
+metadata:
+  name: Vehicle-to-Load - V2L
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has an EV AVK2 vehicle</p><p><code>V2L</code> capability
+    is returning true </p><p>User is on the Notification Preferences screen</p>
+  steps:
+  - column_name: custom_steps
+    id: 11801
+    case_id: 11115
+    text1: <p>Scroll to the EV Notifications section and tap on Vehicle-to-Load</p>
+    text2: null
+    text3: <p>User should see a Vehicle-to-Load section expand with options for Push,
+      Text and Email notifications corresponding to the data returned in <code>NotificationPreferences</code> </p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 11802
+    case_id: 11115
+    text1: <p>Toggle ON/OFF any of the notifications under the notification group</p>
+    text2: null
+    text3: <p>1. SetNotificationPreferences API is triggered, returning the updated
+      value for the updated notification status</p><p>2. Toggle state is updated accordingly </p>
+    text4: null
+    display_order: 2

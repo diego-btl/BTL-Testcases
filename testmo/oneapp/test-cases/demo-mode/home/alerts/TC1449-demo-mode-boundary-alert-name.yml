@@ -1,0 +1,31 @@
+testmo:
+  case_id: 1449
+  folder_id: 6809
+  project_id: 2
+  folder_path: demo-mode/home/alerts
+  folder_name_ui: Alerts
+  created_at: '2023-08-28 20:13:22.246497'
+  updated_at: '2025-12-18 17:02:00.078251'
+  last_sync: '2026-01-30T18:21:08.264150Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/1449
+metadata:
+  name: Demo Mode - Boundary Alert - Name
+  priority: 3
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  steps:
+  - column_name: custom_steps
+    id: 1817
+    case_id: 1449
+    text1: <p>1. Tap on a Boundary alert<br />2. Interact with the name field<br />3.
+      Tap on 'Display Alert in Vehicle' checkbox<br />4. Tap on the save alert or
+      delete alert button</p>
+    text2: null
+    text3: <p>1. User should see the edit boundary alert sheet<br />2. User should
+      be able to edit the name<br />3. User should be able to  check/uncheck 'Display
+      Alert in Vehicle' checkbox<br />4. User should see the demo mode alert modal</p>
+    text4: null
+    display_order: 1

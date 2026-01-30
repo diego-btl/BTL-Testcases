@@ -1,0 +1,51 @@
+testmo:
+  case_id: 2668
+  folder_id: 406
+  project_id: 2
+  folder_path: old-deprecated/ccs2/home/climate/hvac-parameters
+  folder_name_ui: HVAC Parameters
+  created_at: '2023-09-07 17:58:51.967728'
+  updated_at: '2026-01-06 17:49:50.264545'
+  last_sync: '2026-01-30T18:21:07.828716Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/2668
+metadata:
+  name: Without Cooling
+  priority: 13
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>AVK2 vehicle</p>
+  steps:
+  - column_name: custom_steps
+    id: 3030
+    case_id: 2668
+    text1: <p>HVAC parameters returns 2 seat configuration without Cool option</p><p>Open
+      Climate details screen</p>
+    text2: null
+    text3: <p>2 seat, steering, and defrost/deice controls are displayed, with <strong>Off/Heat</strong>
+      options</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 3031
+    case_id: 2668
+    text1: <p>HVAC parameters returns 4 seat configuration without Cool option</p><p>Open
+      Climate details screen</p>
+    text2: null
+    text3: <p>4 seat, steering, and defrost/deice controls are displayed, with <strong>Off/Heat</strong>
+      options</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 3032
+    case_id: 2668
+    text1: <p>HVAC parameters returns 7 seat configuration without Cool option</p><p>Open
+      Climate details screen</p>
+    text2: null
+    text3: <p>7 seat, steering, and defrost/deice controls are displayed, with <strong>Off/Heat</strong>
+      options</p>
+    text4: null
+    display_order: 3
+  notes: '<p>Todo: Add mock response body</p>'

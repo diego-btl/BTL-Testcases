@@ -1,0 +1,63 @@
+testmo:
+  case_id: 2723
+  folder_id: 412
+  project_id: 2
+  folder_path: vehicle/proactive-maintenance
+  folder_name_ui: Proactive Maintenance
+  created_at: '2023-09-07 21:32:22.715388'
+  updated_at: '2024-10-17 17:57:34.769274'
+  last_sync: '2026-01-30T18:21:07.667857Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/2723
+metadata:
+  name: Edit reminder - Discard changes
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is on PSR screen<br />User has an existing reminder</p>
+  steps:
+  - column_name: custom_steps
+    id: 3088
+    case_id: 2723
+    text1: <p>Tap on Edit on existing reminder</p>
+    text2: null
+    text3: <p>User should see Edit Reminder screen with the corresponding settings
+      for that reminder</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 9460
+    case_id: 2723
+    text1: <p>Modify anything in the reminder (ex. Current Parts, Reminder Interval
+      - mileage, date)</p>
+    text2: null
+    text3: <p>User is able to modify the reminder</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 9461
+    case_id: 2723
+    text1: <p>Tap on Back button</p>
+    text2: null
+    text3: <p>User should see discard changes modal</p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 9462
+    case_id: 2723
+    text1: <p>Tap on No on modal</p>
+    text2: null
+    text3: <p>User should see discard changes modal dismiss</p>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 9463
+    case_id: 2723
+    text1: <p>Tap on Yes on modal</p>
+    text2: null
+    text3: <p>User should be returned to the Parts Service Reminders without any changes
+      made to the existing reminder</p>
+    text4: null
+    display_order: 5

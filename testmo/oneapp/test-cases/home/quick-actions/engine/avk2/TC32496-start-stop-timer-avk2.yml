@@ -1,0 +1,33 @@
+testmo:
+  case_id: 32496
+  folder_id: 4168
+  project_id: 2
+  folder_path: home/quick-actions/engine/avk2
+  folder_name_ui: AVK2
+  created_at: '2025-04-02 19:55:15.013470'
+  updated_at: '2025-09-22 14:08:30.124941'
+  last_sync: '2026-01-30T18:21:06.255856Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/32496
+metadata:
+  name: Start/Stop Timer - AVK2
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>The vehicle engine has been started successfully</p><p>The Countdown
+    timer is displayed in the Hero section (10 min or 20 min)</p>
+  steps:
+  - column_name: custom_steps
+    id: 53013
+    case_id: 32496
+    text1: <p>Wait for 10 mins or 20 mins to check the app's behavior</p>
+    text2: null
+    text3: <p>User should see:</p><ul><li>the countdown timer and the climate icon
+      are dismissed in the Hero section, Fuel Remaining is displayed in the Hero section
+      instead</li><li>the STOP Engine button is changed to the default state</li><li>the
+      toast "&lt;year and model&gt; engine turned off" is displayed in the bottom
+      of the screen</li></ul>
+    text4: null
+    display_order: 1

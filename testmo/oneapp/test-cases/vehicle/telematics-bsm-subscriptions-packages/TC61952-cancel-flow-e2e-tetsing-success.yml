@@ -1,0 +1,133 @@
+testmo:
+  case_id: 61952
+  folder_id: 3863
+  project_id: 2
+  folder_path: vehicle/telematics-bsm-subscriptions-packages
+  folder_name_ui: Telematics BSM - Subscriptions Packages
+  created_at: '2025-11-08 00:49:15.120403'
+  updated_at: '2026-01-20 20:25:17.374296'
+  last_sync: '2026-01-30T18:21:05.459725Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/61952
+metadata:
+  name: CANCEL flow E2E tetsing - SUCCESS
+  priority: 1
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<ul><li>EnableTelematicsBSM FF = true</li><li><code>Cancel subscription</code>
+    cta must be visible: For this EndDate of the package should be null or 0</li><li>subscriptionServiceType
+    = "Subscription"</li></ul>'
+  steps:
+  - column_name: custom_steps
+    id: 95285
+    case_id: 61952
+    text1: <p>On the Vehicle page, tap on the <strong>Subscription Packages</strong>
+      card </p>
+    text2: null
+    text3: <p>Verify the <strong>Subscriptions</strong> screen is shown</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 95344
+    case_id: 61952
+    text1: <p>Tap on the package  &gt; Tap on <code>Cancel Subscription</code> cta</p>
+    text2: null
+    text3: '<p>Verify the <strong>Cancel subscription</strong> screen is shown:</p><ul><li><strong>Header
+      Text:</strong> <code>Wait! We are sorry to see you go</code></li><li><strong>Body
+      text: </strong><code>When you cancel your subscription you will immediately
+      lose access to great features, such as...</code></li><li><strong>services listed:
+      </strong>These come from the services fetched on VehicleSubscription response
+      for the package under testing. If there are more than 6 services, then list
+      the first 6 and then the text: <code>and so much more.</code></li><li><code>YES,
+      CANCEL SUBSCRIPTION</code> CTA</li><li><strong>NO I CHANGED MY MIND</strong>
+      option</li></ul><figure class="image"><img src="/attachments/view/8752" alt="8752"
+      /></figure>'
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 95345
+    case_id: 61952
+    text1: <p>Tap on <strong>NO, I CHANGED MY MIND</strong> option</p>
+    text2: null
+    text3: <p>Verify user is taken back to Package Details</p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 95346
+    case_id: 61952
+    text1: <p>Tap on <code>CANCEL SUBSCRIPTION</code> cta again &gt; <code>YES, CANCEL
+      SUBSCRIPTION</code> cta</p>
+    text2: null
+    text3: '<p>Verify user is taken to a new <strong>Cancel Subscription</strong>
+      screen:</p><ul><li><strong>Header Text:</strong> <code>Are you sure you want
+      to cancel your subscription?</code></li><li><strong>Body text:</strong><ul><li><code>After
+      cancelling your [Package name] subscription your [Package name] benefits will
+      continue until the subscription end date.</code></li><li><code>You will not
+      be billed after your subscription end date.</code></li></ul></li><li><strong>Checkbox</strong>:
+      <code>Yes, I confirm I want to cancel my subscription</code></li><li><code>YES,
+      CANCEL SUBSCRIPTION</code> CTA (disabled by default)</li><li><strong>NO, I CHANGED
+      MY MIND</strong> option</li></ul><figure class="image"><img src="/attachments/view/8753"
+      alt="8753" /></figure>'
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 95347
+    case_id: 61952
+    text1: <p>Tap on <strong>NO, I CHANGED MY MIND</strong> option</p>
+    text2: null
+    text3: <p>Verify user is taken back to Package Details</p>
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 95348
+    case_id: 61952
+    text1: <p>Tap on <code>CANCEL SUBSCRIPTION</code> cta again &gt; <code>YES, CANCEL
+      SUBSCRIPTION</code> cta &gt; Select the checkbox</p>
+    text2: null
+    text3: <p>Verify <code>YES, CANCEL SUBSCRIPTION</code> cta gets enabled</p>
+    text4: null
+    display_order: 6
+  - column_name: custom_steps
+    id: 95349
+    case_id: 61952
+    text1: <p>Unselect the checkbox</p>
+    text2: null
+    text3: <p>Verify <code>YES, CANCEL SUBSCRIPTION</code> cta gets disabled</p>
+    text4: null
+    display_order: 7
+  - column_name: custom_steps
+    id: 95350
+    case_id: 61952
+    text1: <p>Select the checkbox &gt; Tap on <code>YES, CANCEL SUBSCRIPTION</code>
+      cta</p>
+    text2: null
+    text3: <p>Verify a new <strong>Cancel Subscription</strong> screen is shown:</p><p>App
+      triggers the <code>CancelSubscription</code>  API.</p><ul><li><strong>Header
+      text:</strong> <code>Your subscription is now cancelled</code></li><li><strong>Body
+      Text:</strong><ul><li>Your confirmation</li><li>Your [Package Name] benefits
+      will continue until the subscription end date on [EndDate of the CancelSubscription
+      API] &lt;&lt;MM DD, YYYY&gt;&gt;.</li></ul></li><li><code>MANAGE SERVICES</code>
+      CTA</li><li><strong>CLOSE</strong> option</li></ul><figure class="image"><img
+      src="/attachments/view/8754" alt="8754" /></figure>
+    text4: null
+    display_order: 8
+  - column_name: custom_steps
+    id: 95351
+    case_id: 61952
+    text1: <p>Taps on MANAGE SERVICES cta</p>
+    text2: null
+    text3: <p>Verify user is taken to <strong>Subscriptions</strong> screen with subscriptions
+      recently cancelled under the <strong>Your Packages</strong> section, with EndDate
+      updated </p>
+    text4: null
+    display_order: 9
+  - column_name: custom_steps
+    id: 95352
+    case_id: 61952
+    text1: <p>Taps on  <strong>CLOSE</strong> option</p>
+    text2: null
+    text3: <p>Verify user is taken to <strong>Home</strong> screen</p>
+    text4: null
+    display_order: 10

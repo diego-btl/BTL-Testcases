@@ -1,0 +1,50 @@
+testmo:
+  case_id: 32374
+  folder_id: 6761
+  project_id: 6
+  folder_path: support/let-us-help
+  folder_name_ui: Let Us Help
+  created_at: '2025-04-01 17:50:44.973858'
+  updated_at: '2025-10-30 17:40:26.289537'
+  last_sync: '2026-01-30T18:20:45.534780Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/32374
+metadata:
+  name: Asistente de Accidentes screen
+  priority: 12
+  type: functional
+  status: active
+  estimate: 7200000000
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is on the <code>Soporte</code> screen</p>
+  steps:
+  - column_name: custom_steps
+    id: 52745
+    case_id: 32374
+    text1: <ol><li>Login into the app</li><li>User goes to <code>Soporte</code> screen</li><li>Tap
+      the <code>Asistente de Accidentes</code> item</li></ol>
+    text2: null
+    text3: '<p>I should see 3 sections:</p><p><strong>Información del Vehículo</strong></p><ul><li><code>Vehicle
+      name</code> &gt; IE: 2024 QX80</li><li><code>VIN</code> &gt; IE: XXXXXXXXXXXXXXXXX
+      (17 characters)</li><li><code>Ir a guantera</code> &gt; Redirects to <code>Guantera</code>
+      screen</li></ul><p><strong>Icon + text</strong></p><ul><li>Icon (should match
+      the ss attached)</li><li>Text:<ul><li><code>Un accidente es justamente eso -
+      un accidente. No importa quién tenga la culpa, si estas involucrado, necesitas
+      saber qué decir, qué hacer y a quién llamar. </code></li></ul></li></ul><p><strong>En
+      el lugar </strong>&gt; Collapsable option with info (see ss attached)</p><p><strong>Seguro
+      </strong>&gt; Collapsable option with info (see ss attached)</p><p><strong>Button</strong>
+      &gt; <code>Atención al Cliente</code></p><ul><li>Phone number:<ul><li>INF &gt;
+      <code>+52 (800) 546-3464</code></li><li>NIS &gt; <code>+52 8009647726</code></li></ul></li><li>Cancel
+      option</li></ul>'
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 88866
+    case_id: 32374
+    text1: <ol><li>Tap the <code>Asistente de Accidentes</code> item</li><li>Tap on
+      the <code>&lt;</code> button</li></ol>
+    text2: null
+    text3: <ul><li>The app should redirect to the previous screen - <code>Soporte</code></li></ul>
+    text4: null
+    display_order: 2

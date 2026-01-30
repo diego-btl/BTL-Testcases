@@ -1,0 +1,33 @@
+testmo:
+  case_id: 633
+  folder_id: 65
+  project_id: 2
+  folder_path: home/controls
+  folder_name_ui: Controls
+  created_at: '2023-08-01 23:08:20.704236'
+  updated_at: '2025-11-04 18:41:23.341492'
+  last_sync: '2026-01-30T18:21:08.989316Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/633
+metadata:
+  name: Controls screen
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is on home screen</p>
+  steps:
+  - column_name: custom_steps
+    id: 802
+    case_id: 633
+    text1: <p>1. Tap on Controls card</p>
+    text2: null
+    text3: '<p>1. User should see the Controls screen<br /><br />User should see quick
+      action buttons in Favorites and More Controls sections<br /><br />Default favorites<br
+      />ICE: Lock, Unlock, Engine, Lights, Horn<br />EV: Lock, Unlock, Climate On,
+      Charge On, Lights<br /><br />For ICE - available quick actions are: Lock, Unlock,
+      Engine, Horn, Lights<br />For EV - available quick actions are: Lock, Unlock,
+      Horn, Lights, Climate On, Climate Off, Charge On</p>'
+    text4: null
+    display_order: 1

@@ -1,0 +1,57 @@
+testmo:
+  case_id: 902
+  folder_id: 7143
+  project_id: 2
+  folder_path: old-deprecated/schedule-service
+  folder_name_ui: Schedule Service
+  created_at: '2023-08-04 13:40:23.078358'
+  updated_at: '2024-10-17 17:57:05.010933'
+  last_sync: '2026-01-30T18:21:08.442368Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/902
+metadata:
+  name: Additional Information
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has selected at least one service</p>
+  steps:
+  - column_name: custom_steps
+    id: 1097
+    case_id: 902
+    text1: <p>Tap Next on Select Services screen</p>
+    text2: null
+    text3: <p>User should see Additional Information screen with text boxes corresponding
+      to the selected services for adding additional comments</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 1098
+    case_id: 902
+    text1: <p>Enter comment in the text boxes</p>
+    text2: null
+    text3: <p>User is able to add comments in the text boxes</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 1099
+    case_id: 902
+    text1: <p>Tap on Select Interval and change intervals</p>
+    text2: null
+    text3: <p>User is able to update the selected interval to view maintenance options
+      for different intervals</p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 1100
+    case_id: 902
+    text1: <p>Tap Next</p>
+    text2: null
+    text3: <p>User should proceed to Select Date and Time screen</p>
+    text4: null
+    display_order: 4
+  notes: '<p>Note: If services with maintenance flag set to true are selected, the
+    Estimated Next Service Interval section will appear, if not, then that section
+    does not show up</p>'

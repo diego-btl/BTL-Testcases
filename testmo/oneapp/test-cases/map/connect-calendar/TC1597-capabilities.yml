@@ -1,0 +1,45 @@
+testmo:
+  case_id: 1597
+  folder_id: 103
+  project_id: 2
+  folder_path: map/connect-calendar
+  folder_name_ui: Connect Calendar
+  created_at: '2023-08-28 20:13:24.783587'
+  updated_at: '2025-12-19 16:11:17.102084'
+  last_sync: '2026-01-30T18:21:07.930266Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/1597
+metadata:
+  name: Capabilities
+  priority: 3
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>The user selects an <code>EV</code> or <code>EVAVK2</code>
+    vehicles</li><li>Calendar permissions are allowed</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 1962
+    case_id: 1597
+    text1: <ol><li>Remove <code>INTELLECTUAL_ROUTE_PLANNER</code> capability</li></ol>
+    text2: null
+    text3: <ul><li>User should not see <strong>Route Planner</strong> in the Info
+      Drawer</li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 96518
+    case_id: 1597
+    text1: <ol><li>Disable <code>INTELLECTUAL_ROUTE_PLANNER</code> capability</li></ol>
+    text2: null
+    text3: <ul><li>User should see <strong>Route Planner</strong> disabled in the
+      Info Drawer and upon tapping, user should see an alert modal with the option
+      to call an agent<ul><li>NNA/NCI &gt; <code>1-855-426-6628</code></li></ul></li></ul>
+    text4: null
+    display_order: 2
+  notes: "<ul><li>For a <strong>SHARED</strong> driver, if the capability is missing\
+    \ or disabled, the item should be hidden</li></ul><pre><code class=\"editor-plain\
+    \ language-plain code-block\">          {\n            \"__typename\": \"ServiceCapability\"\
+    ,\n            \"type\": \"INTELLECTUAL_ROUTE_PLANNER\",\n            \"enabled\"\
+    : false,\n            \"subscribed\": true\n          }</code></pre>"

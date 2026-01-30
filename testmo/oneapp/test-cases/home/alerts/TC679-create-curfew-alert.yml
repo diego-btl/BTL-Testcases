@@ -1,0 +1,44 @@
+testmo:
+  case_id: 679
+  folder_id: 70
+  project_id: 2
+  folder_path: home/alerts
+  folder_name_ui: Alerts
+  created_at: '2023-08-01 23:08:21.293376'
+  updated_at: '2025-10-24 16:45:51.107702'
+  last_sync: '2026-01-30T18:21:08.873022Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/679
+metadata:
+  name: Create Curfew Alert
+  priority: 1
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has not reached the maximum number (2) of curfew alerts</p>
+  steps:
+  - column_name: custom_steps
+    id: 848
+    case_id: 679
+    text1: <p>1. Tap Create Alert<br />2. Tap curfew alert CTA<br />3. Fill in the
+      required fields (alert name, start/end time, at least 1 day of the week)<br
+      />4. Tap Save</p>
+    text2: null
+    text3: '<p>1. User should see the Create alert sheet open<br />2. User should
+      see be able to edit the following alert properties: alert name, start &amp;
+      end times, displaying an alert in vehicle, days of the week that alert is active<br
+      />3. User should see Save CTA become enabled<br />4. User should see the alert
+      be successfully saved and taken to the main alerts sheet</p><p>5. Success toast
+      should show</p>'
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 1133
+    case_id: 679
+    text1: <p>Fail to save the alert </p>
+    text2: null
+    text3: <p>The user will see an error alert and remain on the create alert sheet</p>
+    text4: null
+    display_order: 2
+  notes: '<p>Automation: step 2 can''t be automated as it requires mocking</p>'

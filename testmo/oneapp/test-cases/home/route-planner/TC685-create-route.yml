@@ -1,0 +1,155 @@
+testmo:
+  case_id: 685
+  folder_id: 71
+  project_id: 2
+  folder_path: home/route-planner
+  folder_name_ui: Route Planner
+  created_at: '2023-08-01 23:08:21.370432'
+  updated_at: '2025-10-06 08:11:56.911234'
+  last_sync: '2026-01-30T18:21:08.846879Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/685
+metadata:
+  name: Create Route
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>User has an EV with INTELLIGENT_ROUTE_PLANNER capability</li><li>User
+    has the EV Selected</li><li>User is on the Home Page</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 854
+    case_id: 685
+    text1: <p>Tap on Route Planner card</p>
+    text2: null
+    text3: <p>User should see the Create a Route screen</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 46176
+    case_id: 685
+    text1: <p>Find the <code>Your destinations</code> section</p>
+    text2: null
+    text3: <ul><li>Validate the first text field is prepopulated with the text "Your
+      Vehicle's Location"</li><li>Validate the Vehicle Image is displayed on the left
+      side of this first text field</li><li>Validate the second text field is empty,
+      with a circle star as icon on the left side</li><li>Validate that tapping on
+      any of the text fields will drive the user to a Search page</li></ul>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 46177
+    case_id: 685
+    text1: <p>Tap on the destination text field (second text field of the <code>Your
+      destinations</code> section</p>
+    text2: null
+    text3: <p>The user is navigated to a Search page</p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 46178
+    case_id: 685
+    text1: <p>Type in <code>NTCNA</code></p>
+    text2: null
+    text3: <p>The app will show results for the Nissan Technical Center North America</p>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 46179
+    case_id: 685
+    text1: <p>Tap on the first result (Nissan Technical Center North America - Arizona)</p>
+    text2: null
+    text3: <p>The user is navigated to the Create a Route page again</p>
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 46180
+    case_id: 685
+    text1: <p>Find the <code>Plug in Options</code> section</p>
+    text2: null
+    text3: <ul><li>Validate the Select Date date picker</li><li>Validate the Select
+      Time time picker</li><li>Validate the Send to car now checkbox</li><li>Validate
+      the Est. Battery Level at Departure picker</li><li>Validate the Plug Types switches</li></ul>
+    text4: null
+    display_order: 6
+  - column_name: custom_steps
+    id: 46181
+    case_id: 685
+    text1: <p>Tap on the Date picker and select any date in the future</p>
+    text2: null
+    text3: <p>The user is navigated to the Create a Route page again with the Date
+      selected and the hour picker with the current time prefilled</p>
+    text4: null
+    display_order: 7
+  - column_name: custom_steps
+    id: 46182
+    case_id: 685
+    text1: <p>Find the <code>Climate Options</code> section</p>
+    text2: null
+    text3: <ul><li>Validate the Climate Pre-Conditioning switch</li><li>Validate the
+      Scheduled Temp. at Departure picker</li><li>Validate the Save as preferred climate
+      settings</li></ul>
+    text4: null
+    display_order: 8
+  - column_name: custom_steps
+    id: 46183
+    case_id: 685
+    text1: <p>Tap on the <code>ESTIMATE ROUTE</code> CTA</p>
+    text2: null
+    text3: <ul><li>The app shows a loading indicator (map and location icon)</li><li>The
+      user is navigated to the Estimated Route* Page with:<ul><li>A map with a calculated
+      route and possibly charging icon POI in the route</li><li>Estimated time and
+      mileage</li><li>EDIT ROUTE Button</li><li>A section with information about Starting
+      point, destination, start time and end time alongside the amount of stops (same
+      amount as POI in the map</li></ul></li></ul>
+    text4: null
+    display_order: 9
+  - column_name: custom_steps
+    id: 46184
+    case_id: 685
+    text1: <p>Tap on the EDIT ROUTE Button</p>
+    text2: null
+    text3: <p>The user is navigated to the previous page</p>
+    text4: null
+    display_order: 10
+  - column_name: custom_steps
+    id: 46185
+    case_id: 685
+    text1: <p>Tap on the <code>ESTIMATE ROUTE</code> CTA again</p>
+    text2: null
+    text3: <p>The user is navigated to the Estimated Route* page again</p>
+    text4: null
+    display_order: 11
+  - column_name: custom_steps
+    id: 46186
+    case_id: 685
+    text1: <p>Scroll the information section drawer up</p>
+    text2: null
+    text3: <ul><li>The app shows expanded information about the weather in the destination
+      point</li><li>Information about departure, ETA, time and date and charge time</li><li>Information
+      about departure location, arrival and the suggested charging stations with departure
+      / arrival times and charging time needed</li><li>Under every charging station
+      stop should be a ADD TO ROUTE button and a Information tooltip</li><li>Tapping
+      on the tooltip should display a small informative modal</li></ul>
+    text4: null
+    display_order: 12
+  - column_name: custom_steps
+    id: 46187
+    case_id: 685
+    text1: <p>Tap on any of the charging stations ADD TO ROUTE buttons</p>
+    text2: null
+    text3: <ul><li>The app shows a loading indicator (map and location icon)</li><li>The
+      user is kept on the same screen</li></ul>
+    text4: null
+    display_order: 13
+  - column_name: custom_steps
+    id: 46188
+    case_id: 685
+    text1: <p>Tap on the <code>Save Route</code> button</p>
+    text2: null
+    text3: <ul><li>The app shows a loading indicator (map and location icon)</li><li>The
+      user is navigated to the Planned Routes page</li></ul>
+    text4: null
+    display_order: 14

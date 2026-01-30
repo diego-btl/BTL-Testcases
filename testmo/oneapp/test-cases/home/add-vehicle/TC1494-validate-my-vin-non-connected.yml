@@ -1,0 +1,31 @@
+testmo:
+  case_id: 1494
+  folder_id: 56
+  project_id: 2
+  folder_path: home/add-vehicle
+  folder_name_ui: Add vehicle
+  created_at: '2023-08-28 20:13:23.003180'
+  updated_at: '2024-10-17 17:56:23.776593'
+  last_sync: '2026-01-30T18:21:08.141366Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/1494
+metadata:
+  name: Validate My Vin - Non-connected
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has entered a valid VIN for a non-connected vehicle that
+    has previously been added</p>
+  steps:
+  - column_name: custom_steps
+    id: 1859
+    case_id: 1494
+    text1: <p>1. Tap Validate VIN<br />2. Tap Ok</p>
+    text2: null
+    text3: <p>1. User should see modal appear indicating successful VIN validation<br
+      />2. Modal is dismissed, user is taken to the home screen with vehicle added</p>
+    text4: null
+    display_order: 1
+  notes: <p>[VW] don't have VINs for this right now - need to ask Narek</p>

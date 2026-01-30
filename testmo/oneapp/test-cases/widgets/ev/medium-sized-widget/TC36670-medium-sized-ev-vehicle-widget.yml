@@ -1,0 +1,47 @@
+testmo:
+  case_id: 36670
+  folder_id: 4183
+  project_id: 2
+  folder_path: widgets/ev/medium-sized-widget
+  folder_name_ui: Medium Sized widget
+  created_at: '2025-04-29 16:07:49.320177'
+  updated_at: '2026-01-16 12:06:21.684333'
+  last_sync: '2026-01-30T18:21:06.068344Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/36670
+metadata:
+  name: Medium Sized EV vehicle widget
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<p>User is logged in</p><p>User has added Medium sized widget to
+    device</p><p>User ha following capabilties turned on in <code>VehicleCapabilties</code>
+    api</p><p>Turn on the follow caps: <code>REMOTE_DOOR_LOCK_UNLOCK</code> , <code>REMOTE_VEHICLE_STATUS</code>
+    , <code>REMOTE_CLIMATE_CONTROL</code> ,and <code>REMOTE_REMOTE_BATTERY_STATUS</code></p>'
+  steps:
+  - column_name: custom_steps
+    id: 61452
+    case_id: 36670
+    text1: <p>On app, select EV vehicle</p><p>Go to Widgets</p><p>OR choose a vehicle
+      on Widget by long pressing, tapping on Modify Widget</p><p>Choose EV vehicle</p>
+    text2: null
+    text3: '<p>EV vehicle should show as selected on the small widget</p><p>the user
+      should see the model name and vehicle image available from <code>GetVehicle</code>
+      call</p><p>AND: user should see Climate with status on or off. </p><p>AND: Locked/unlocked
+      with lock icon</p><p>AND: Charging (in blue) if isPluggedin and isCharging=true
+      (in Dynamic data)  or </p><p>Not Charging</p><p><strong>AND: </strong>the user
+      should see remaining mileage from <code>GetBatteryStatus</code> call and remaining
+      battery charge (if available)</p><p>Battery percentage should show in green
+      if its 20% or higher next to the mileage remaining</p><p>If remaining battery
+      percentage is 19% or lower, it should show in red and in bigger font before
+      the remaining mileage </p><p><strong>AND: </strong>the user should see climate
+      status from <code>GetClimateStatus</code> call</p><p><strong>AND: </strong>the
+      user should see lock status from <code>LockStatus</code> call</p><p><strong>AND:
+      </strong>the user should see buttons for <code>Climate</code></p><p><strong>AND:
+      </strong>the user should see buttons for<strong> </strong>Lock <code>Unlock</code></p><p><strong>AND:
+      </strong>the user should see buttons for <code>Lights</code></p><p> </p><p> </p><p> </p><p>See
+      attached ss for reference</p>'
+    text4: null
+    display_order: 1

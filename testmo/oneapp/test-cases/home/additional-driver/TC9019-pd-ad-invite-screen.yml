@@ -1,0 +1,78 @@
+testmo:
+  case_id: 9019
+  folder_id: 411
+  project_id: 2
+  folder_path: home/additional-driver
+  folder_name_ui: Additional Driver
+  created_at: '2023-11-21 08:31:31.487086'
+  updated_at: '2025-08-21 19:21:14.411948'
+  last_sync: '2026-01-30T18:21:07.289022Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/9019
+metadata:
+  name: PD - AD Invite Screen
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has an AVK2 vehicle and is PRIMARY_DRIVER</p><p>User is on
+    the AD Invite screen</p>
+  steps:
+  - column_name: custom_steps
+    id: 9519
+    case_id: 9019
+    text1: null
+    text2: null
+    text3: <p>User should see empty state of the invite screen:<br />- Vehicle Nickname
+      in vehicle card<br />- First Name<br />- Last Name<br />- Email<br />- Confirm
+      Email<br />- Phone Number<br />- Permissions checkbox<br />- Disable Next button</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 9520
+    case_id: 9019
+    text1: <p>Fill in the First and Last Name field</p>
+    text2: null
+    text3: <p>User is able to fill in the name fields<br /><br />Fields only accept
+      letters, minimum one letter required, any other characters will trigger a validation
+      error</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 9521
+    case_id: 9019
+    text1: <p>Fill in the Email fields</p>
+    text2: null
+    text3: <p>User is able to fill in the email fields<br /><br />Email must be in
+      <a href="mailto:a@a.com"><code>a@a.com</code></a> format or it will trigger
+      a validation error<br /><br />If the emails don't match, there will also be
+      a validation error</p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 9522
+    case_id: 9019
+    text1: <p>Fill in the Phone Number field</p>
+    text2: null
+    text3: <p>User is able to fill in the phone number field<br /><br />Field only
+      accepts exactly 10 digits or it will trigger a validation error</p>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 9523
+    case_id: 9019
+    text1: <p>Tap on the checkbox</p>
+    text2: null
+    text3: <p>User should see Next button enable if all required fields are filled
+      in, checkbox is enabled, and there are no validation error</p>
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 9524
+    case_id: 9019
+    text1: <p>Tap on Next</p>
+    text2: null
+    text3: <p>User should see Configuration Details screen load and open</p>
+    text4: null
+    display_order: 6

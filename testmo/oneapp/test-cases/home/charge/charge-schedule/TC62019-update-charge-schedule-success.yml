@@ -1,0 +1,62 @@
+testmo:
+  case_id: 62019
+  folder_id: 6781
+  project_id: 2
+  folder_path: home/charge/charge-schedule
+  folder_name_ui: Charge Schedule
+  created_at: '2025-11-21 21:51:20.515707'
+  updated_at: '2025-11-21 21:54:41.074675'
+  last_sync: '2026-01-30T18:21:05.097211Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/62019
+metadata:
+  name: Update Charge Schedule - Success
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has an EV/EV2</p><p>At least 1 charge schedule exists </p><p>User
+    is on the Manage EV screen </p>
+  steps:
+  - column_name: custom_steps
+    id: 95642
+    case_id: 62019
+    text1: <p>Tap the created schedule inside the Scheduled card</p>
+    text2: null
+    text3: <p>User is redirected to the Charge Schedule screen</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 95643
+    case_id: 62019
+    text1: <p>Modify any of the set parameters (Start Time, End Time, Quick Options,
+      Days of the Week)</p>
+    text2: null
+    text3: <p>1. Parameters are updated</p><p>2. The 'SAVE SCHEDULE' CTA gets enabled</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 95644
+    case_id: 62019
+    text1: <p>Tap the 'SAVE SCHEDULE' CTA </p>
+    text2: null
+    text3: '<p>1. The UpdateChargeSchedule API is triggered, sending selected parameters
+      in the request</p><p>2. The CheckChargeServiceRequest starts polling; the last
+      API returns "status": "SUCCESS"</p><p>3. User is redirected to the Manage EV
+      screen, and the success toast ''Charge schedule updated'' is displayed</p><p>4.
+      The updated schedule is displayed inside the Scheduled card with the toggle
+      enabled</p><p>5. The VehicleChargeSchedules API is triggered, returning the
+      updated response</p>'
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 95645
+    case_id: 62019
+    text1: <p>Tap the updated schedule inside the Scheduled card</p>
+    text2: null
+    text3: <p>1. User is redirected to the Charge Schedule screen</p><p>2. Parameters
+      are set according to the VehicleChargeSchedules API response</p><p>3. The 'SAVE
+      SCHEDULE' CTA (disabled) and the 'DELETE SCHEDULE' button (enabled) are displayed </p>
+    text4: null
+    display_order: 4

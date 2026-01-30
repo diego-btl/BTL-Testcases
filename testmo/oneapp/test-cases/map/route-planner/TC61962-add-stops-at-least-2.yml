@@ -1,0 +1,50 @@
+testmo:
+  case_id: 61962
+  folder_id: 101
+  project_id: 2
+  folder_path: map/route-planner
+  folder_name_ui: Route Planner
+  created_at: '2025-11-10 18:44:27.578155'
+  updated_at: '2025-12-03 15:06:16.839314'
+  last_sync: '2026-01-30T18:21:05.416488Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/61962
+metadata:
+  name: Add stops - at least 2
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>The user selects an <code>EV</code> or <code>EVAVK2</code>
+    vehicles</li><li>The user is in the <strong>Create Route</strong> screen</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 95314
+    case_id: 61962
+    text1: <ol><li>Tab on the <code>+ADD A STOP</code> button</li></ol>
+    text2: null
+    text3: <ul><li>User should see the Search field </li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 95315
+    case_id: 61962
+    text1: <ol><li>Type any destination to add to the Route</li><li>Select an autocomplete
+      result</li></ol>
+    text2: null
+    text3: <ul><li>The user should see the autocomplete result filled into the field
+      and return to the <code>Create Screen</code></li><li>The user should see the
+      updated screen with the new stop added</li></ul>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 95316
+    case_id: 61962
+    text1: <ol><li>Tap on the <code>+ADD A STOP</code> button again to add more stops.</li></ol>
+    text2: null
+    text3: <ul><li>The user should see the updated screen with the new stops successfully
+      added to the route</li><li>The stops added should be placed under the previous
+      stop added</li></ul>
+    text4: null
+    display_order: 3

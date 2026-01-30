@@ -1,0 +1,62 @@
+testmo:
+  case_id: 62233
+  folder_id: 6820
+  project_id: 2
+  folder_path: vehicle/second-delivery/second-delivery-booking-virtual
+  folder_name_ui: Second Delivery - Booking (Virtual)
+  created_at: '2025-12-19 20:19:25.739108'
+  updated_at: '2025-12-19 20:33:44.874999'
+  last_sync: '2026-01-30T18:21:03.820659Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/62233
+metadata:
+  name: Second Delivery - Select Date and Time
+  priority: 1
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<ul><li>User logged in</li><li>Eligible VIN in focus</li><li>Eligibility:
+    <code>SecondDeliveryEligibilityResponseRDRRecordFound</code></li><li>Feature Flag:
+    <code>EnableSecondDelivery=true</code></li><li>User is on Select Date and Time
+    screen</li><li>Time slots are available from API: <code>SecondDeliveryAppointmentsAtVirtual</code></li><li>This
+    is Step 1 of 3 in the flow (Select Date and Time → Contact and Notes → Review)</li></ul>'
+  steps:
+  - column_name: custom_steps
+    id: 97106
+    case_id: 62233
+    text1: <p>Verify <code>Select Date and Time</code> screen is displayed with calendar</p>
+    text2: null
+    text3: '<ul><li>Screen title: <code>Select Date and Time</code></li><li>Progress
+      indicator shows Step 1 of 3</li><li>Calendar is displayed</li><li>At least one
+      selectable/available date is present</li><li><code>Select an Available Time</code>
+      section is visible</li><li><code>NEXT</code> button is disabled by default</li></ul>'
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 97107
+    case_id: 62233
+    text1: <p>Tap an available date</p>
+    text2: null
+    text3: <ul><li>Date is selected</li><li>Time slots list updates for the selected
+      date in <code>Select an Available Time</code> section</li></ul>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 97108
+    case_id: 62233
+    text1: <p>Tap an available time slot</p>
+    text2: null
+    text3: <ul><li>Time slot is selected</li><li><code>NEXT</code> button becomes
+      enabled</li></ul>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 97109
+    case_id: 62233
+    text1: <p>Tap <code>NEXT</code> button</p>
+    text2: null
+    text3: <ul><li>User is redirected to <code>Contact and Notes</code> screen</li><li>Progress
+      indicator on Contact and Notes shows Step 2 of 3</li></ul>
+    text4: null
+    display_order: 4

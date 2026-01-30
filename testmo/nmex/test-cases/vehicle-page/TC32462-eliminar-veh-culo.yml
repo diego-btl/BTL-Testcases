@@ -1,0 +1,54 @@
+testmo:
+  case_id: 32462
+  folder_id: 4086
+  project_id: 6
+  folder_path: vehicle-page
+  folder_name_ui: Vehicle Page
+  created_at: '2025-04-01 19:06:14.234890'
+  updated_at: '2025-04-02 20:06:36.348262'
+  last_sync: '2026-01-30T18:20:45.356085Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/32462
+metadata:
+  name: Eliminar Vehículo
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has at least one vehicle</p>
+  steps:
+  - column_name: custom_steps
+    id: 52880
+    case_id: 32462
+    text1: <p>Tap DELETE VEHICLE button</p>
+    text2: null
+    text3: <p>User should see alert modal</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 52881
+    case_id: 32462
+    text1: <p>Tap Cancel</p>
+    text2: null
+    text3: <p>User should see alert modal dismiss</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 52882
+    case_id: 32462
+    text1: <p>Tap DELETE VEHICLE button</p>
+    text2: null
+    text3: <p>User should see alert modal</p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 52883
+    case_id: 32462
+    text1: <p>Tap Data Cleared, Delete Vehicle</p>
+    text2: null
+    text3: <p>User should be taken back to the updated home screen and a success toast
+      when the delete call is complete</p>
+    text4: null
+    display_order: 4
+  notes: <p>The modal before deleting the car should be showing in Spanish</p>

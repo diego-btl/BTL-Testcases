@@ -1,0 +1,87 @@
+testmo:
+  case_id: 55585
+  folder_id: 6253
+  project_id: 6
+  folder_path: home-page/cards/credit
+  folder_name_ui: Credit
+  created_at: '2025-08-07 15:05:59.617752'
+  updated_at: '2025-08-07 17:45:06.443292'
+  last_sync: '2026-01-30T18:20:45.042179Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/55585
+metadata:
+  name: Verify Credits card is displayed on the Home screen
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>User is logged in with a valid account that has at least
+    one VIN linked to a credit service</li><li><code>GetCredit</code> API returns
+    valid credit data for the selected VIN</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 85736
+    case_id: 55585
+    text1: <p>Log in to the app and verify the Credits card is displayed with the
+      subtitle on the Home screen</p>
+    text2: null
+    text3: '<ul><li>The Credits card is displayed on the Home screen</li><li><strong>For
+      Nissan vehicles:</strong> the card title is <code>CrediNissan</code></li><li><strong>For
+      Infiniti vehicles:</strong> the card title is <code>INFINITI Financial Services</code></li><li>The
+      subtitle displays: <code>Próximo pago: $&lt;nextPaymentAmount&gt;</code> pulled
+      from the <code>GetCredit</code> API</li></ul>'
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 85737
+    case_id: 55585
+    text1: <p>Switch to a VIN with no credit service linked or mock the <code>GetCredit</code>
+      API to return no credit data for that VIN</p>
+    text2: null
+    text3: <ul><li>Credits card is <strong>not displayed</strong> on the Home screen</li><li>Confirms
+      that card is not cached or reused from previously selected VIN</li><li>No empty
+      state or placeholder is shown</li></ul>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 85738
+    case_id: 55585
+    text1: <p>Switch back to the original VIN that has an active credit service linked</p>
+    text2: null
+    text3: '<ul><li>Credits card is displayed again on the Home screen</li><li>Title
+      matches the vehicle brand (<code>CrediNissan</code> or <code>INFINITI Financial
+      Services</code>)</li><li>Subtitle shows the correct <code>Próximo pago: $&lt;nextPaymentAmount&gt;</code>
+      based on the current API response</li><li>Confirms that the app dynamically
+      refreshes and renders the correct card without caching incorrect state</li></ul>'
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 85791
+    case_id: 55585
+    text1: <p>Mock the GetCredit API to return <code>nextPaymentAmount</code> as <code>null</code>
+      for a vehicle with credit. </p>
+    text2: null
+    text3: '<ul><li>The Credits card is displayed</li><li>The subtitle shows: <code>Próximo
+      pago: -</code></li></ul>'
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 85792
+    case_id: 55585
+    text1: <p>Mock the GetCredit API to return <code>nextPaymentAmount</code> as <code>0</code>
+      for a vehicle with credit. </p>
+    text2: null
+    text3: '<ul><li>The Credits card is displayed</li><li>The subtitle shows: <code>Próximo
+      pago: $0.00</code></li></ul>'
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 85739
+    case_id: 55585
+    text1: <p>Tap the Credits card on the Home screen</p>
+    text2: null
+    text3: <ul><li>User is navigated to the Credits detail screen</li><li>Screen opens
+      in collapsed state, showing credit summary info</li></ul>
+    text4: null
+    display_order: 6

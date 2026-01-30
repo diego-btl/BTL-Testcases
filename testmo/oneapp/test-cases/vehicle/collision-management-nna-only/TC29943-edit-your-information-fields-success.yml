@@ -1,0 +1,42 @@
+testmo:
+  case_id: 29943
+  folder_id: 3800
+  project_id: 2
+  folder_path: vehicle/collision-management-nna-only
+  folder_name_ui: Collision Management - NNA only
+  created_at: '2025-01-14 20:27:10.204121'
+  updated_at: '2025-01-28 13:44:08.882234'
+  last_sync: '2026-01-30T18:21:06.483067Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/29943
+metadata:
+  name: Edit Your Information fields -Success
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>The user is already on the<code> Edit Your Information</code>
+    screen</li><li>The user should see the information pre-filled( First Name, Last
+    Name, Phone Number, and Email)</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 48827
+    case_id: 29943
+    text1: <p>Edit  follows  fields:</p><ul><li>Enter at least one character in both
+      the First Name and Last Name fields</li><li>Enter a Valid email address</li><li>Enter
+      Full phone number</li></ul>
+    text2: null
+    text3: <p>The <code>SAVE</code> button should be active</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 48828
+    case_id: 29943
+    text1: <p>Tap on the <code>SAVE</code>  button</p>
+    text2: null
+    text3: <ul><li>The user should be redirected to the <code>Collision Report</code>
+      start screen</li><li>The user should see the updated Name, Phone, and Email
+       information  on <code>Your Information </code>card </li></ul>
+    text4: null
+    display_order: 2

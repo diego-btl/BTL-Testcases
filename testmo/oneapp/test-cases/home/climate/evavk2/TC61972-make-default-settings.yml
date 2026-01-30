@@ -1,0 +1,59 @@
+testmo:
+  case_id: 61972
+  folder_id: 6778
+  project_id: 2
+  folder_path: home/climate/evavk2
+  folder_name_ui: EVAVK2
+  created_at: '2025-11-11 14:03:23.206199'
+  updated_at: '2025-11-11 19:26:20.248658'
+  last_sync: '2026-01-30T18:21:05.372366Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/61972
+metadata:
+  name: Make Default Settings
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is logged into an account that has an EVAVK2</p><p>And Climate
+    is turned off</p>
+  steps:
+  - column_name: custom_steps
+    id: 95370
+    case_id: 61972
+    text1: <p>On the Home screen, tap on Climate card </p><p>Once on the Climate screen,
+      change default temperature and some climate accessories</p><p>Tap on MAKE DEFAULT</p><p>Tap
+      on TURN CLIMATE &amp; ACCESSORIES ON CTA</p>
+    text2: null
+    text3: '<p>User sees the toast Contacting, Waking, Initiating...</p><p>User also
+      sees toast re: Changes are now saved as your default</p>'
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 95371
+    case_id: 61972
+    text1: <p>While climate is on, make chnges to the climate accessories</p>
+    text2: null
+    text3: <p>You will see a message - You made changes to your climate settings while
+      climate is turned on. Would you like to apply these changes now? </p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 95372
+    case_id: 61972
+    text1: <p>Tap on Make Default</p><p>Tap on Apply Changes </p>
+    text2: null
+    text3: <p>You get the toast of Changes applied </p><p>you get the toasts of Contacting,
+      Waking, Initiating..</p><p>You  get success toast of Climate adjusted </p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 95373
+    case_id: 61972
+    text1: <p>Tap on back arrow or go back to Home screen</p><p>Tap on Climate card</p>
+    text2: null
+    text3: <p>You should see the climate acessories settings as you had chosen as
+      Default  on the Climate Screen</p>
+    text4: null
+    display_order: 4

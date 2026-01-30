@@ -1,0 +1,28 @@
+testmo:
+  case_id: 688
+  folder_id: 45
+  project_id: 2
+  folder_path: vehicle
+  folder_name_ui: Vehicle
+  created_at: '2023-08-01 23:08:21.405255'
+  updated_at: '2025-10-28 06:17:14.016010'
+  last_sync: '2026-01-30T18:21:08.840289Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/688
+metadata:
+  name: Vehicle tab
+  priority: 1
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is logged in</p>
+  steps:
+  - column_name: custom_steps
+    id: 857
+    case_id: 688
+    text1: <p>1. Tap on Vehicle tab</p>
+    text2: null
+    text3: <p>User should see the Vehicle screen</p>
+    text4: null
+    display_order: 1

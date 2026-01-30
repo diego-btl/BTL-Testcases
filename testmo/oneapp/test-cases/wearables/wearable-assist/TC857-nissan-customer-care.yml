@@ -1,0 +1,62 @@
+testmo:
+  case_id: 857
+  folder_id: 79
+  project_id: 2
+  folder_path: wearables/wearable-assist
+  folder_name_ui: Wearable - Assist
+  created_at: '2023-08-01 23:08:23.468811'
+  updated_at: '2025-09-19 21:21:12.605722'
+  last_sync: '2026-01-30T18:21:08.561698Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/857
+metadata:
+  name: Nissan Customer Care
+  priority: 12
+  type: functional
+  status: active
+  estimate: 120000000
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is on the Assist screen</p>
+  steps:
+  - column_name: custom_steps
+    id: 1026
+    case_id: 857
+    text1: <ol><li>Tap NISSAN Customer Care</li><li>Tap Call</li></ol>
+    text2: null
+    text3: <ol><li>User should see a modal to call the Customer Care phone number</li><li>User
+      should be able to call:</li></ol><figure class="table"><table><tbody><tr><td> </td><td>NNA</td><td>NCI</td></tr><tr><td>Nissan</td><td>1
+      (855) 426-6628</td><td>1-800-387-0122</td></tr><tr><td>Infiniti</td><td>1 (855)
+      444-7244</td><td>1-800-361-4792</td></tr></tbody></table></figure>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 1145
+    case_id: 857
+    text1: <ol><li>Tap NISSAN Customer Care</li><li>Tap Call</li><li>Tap Cancel</li></ol>
+    text2: null
+    text3: <p>Modal should dismiss itself</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 42026
+    case_id: 857
+    text1: <ol><li>Tap NISSAN Customer Care</li><li>Tap Call Client Experience Coordinator</li><li>Tap
+      Cancel</li></ol>
+    text2: null
+    text3: <p>User should see a modal to call the Customer Care phone number:</p><ul><li>1
+      (877) 980-4968</li></ul>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 42027
+    case_id: 857
+    text1: <ol><li>Tap NISSAN Customer Care</li><li>Tap Email Client Experience Coordinator</li><li>Tap
+      Cancel</li></ol>
+    text2: null
+    text3: <p>User should be seeing the Email default app opening with email:</p><ul><li><a
+      href="mailto:QX80ClientExperienceCoordinator@Infiniti.com"><u>QX80ClientExperienceCoordinator@Infiniti.com</u></a></li></ul>
+    text4: null
+    display_order: 4
+  notes: <ul><li>Nissan NNA number is accurate as of Oct. 24, 2023 - phone numbers
+    to be moved out to a more central location at a later time</li></ul>

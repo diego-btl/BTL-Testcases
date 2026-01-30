@@ -1,0 +1,56 @@
+testmo:
+  case_id: 621
+  folder_id: 62
+  project_id: 2
+  folder_path: home/quick-actions/climate
+  folder_name_ui: Climate
+  created_at: '2023-08-01 23:08:20.547901'
+  updated_at: '2025-04-15 20:38:22.345862'
+  last_sync: '2026-01-30T18:21:09.019260Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/621
+metadata:
+  name: Climate On - Fail
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is on the Home screen</p><p>User has sent a StartClimate
+    request</p>
+  steps:
+  - column_name: custom_steps
+    id: 790
+    case_id: 621
+    text1: '<p>Climate on request has resolved into a failure</p><p>CheckRemoteClimateRequest
+      API:</p><p><code>{</code></p><p><code>  "data": {</code></p><p><code>    "checkRemoteClimateRequest":
+      {</code></p><p><code>      "__typename": "ServiceRequestResult",</code></p><p><code> 
+          "status": "FAILED"</code></p><p><code>    }</code></p><p><code>  }</code></p><p><code>}</code></p>'
+    text2: null
+    text3: <p>User should see a toast "&lt;year and model&gt; failed to turn on climate"<br
+      /><br />"Climate On" and "Climate Off" buttons are returned to the default state<br
+      /><br />User should see the "Climate" card with the secondary text "Off - Interior
+      Temp &lt;temperature&gt;"</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 53106
+    case_id: 621
+    text1: '<p>Climate on request has resolved into a failure</p><p>CheckRemoteClimateRequest
+      API:</p><p><code>{</code></p><p><code>  "data": {</code></p><p><code>    "checkRemoteClimateRequest":
+      {</code></p><p><code>      "__typename": "ServiceRequestResult",</code></p><p><code> 
+          "status": "SUCCESS"</code></p><p><code>    }</code></p><p><code>  }</code></p><p><code>}</code></p><p>VehicleClimateStatus
+      API:</p><p><code>{</code></p><p><code>  "data": {</code></p><p><code>    "vehicle":
+      {</code></p><p><code>      "__typename": "ElectricVehicle",</code></p><p><code> 
+          "climateStatus": {</code></p><p><code>        "__typename": "ClimateStatus",</code></p><p><code> 
+            "state": "OFF",</code></p><p><code>        "temperature": {</code></p><p><code> 
+              "__typename": "Temperature",</code></p><p><code>          "value": 70,</code></p><p><code> 
+              "unit": "FAHRENHEIT"</code></p><p><code>        }</code></p><p><code> 
+          }</code></p><p><code>    }</code></p><p><code>  }</code></p><p><code>}</code></p>'
+    text2: null
+    text3: <p>User should see a toast "&lt;year and model&gt; failed to turn on climate"<br
+      /><br />"Climate On" and "Climate Off" buttons are returned to the default state<br
+      /><br />User should see the "Climate" card with the secondary text "Off - Interior
+      Temp &lt;temperature&gt;"</p>
+    text4: null
+    display_order: 2

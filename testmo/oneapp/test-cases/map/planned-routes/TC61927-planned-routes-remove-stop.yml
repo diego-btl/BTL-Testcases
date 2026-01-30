@@ -1,0 +1,37 @@
+testmo:
+  case_id: 61927
+  folder_id: 102
+  project_id: 2
+  folder_path: map/planned-routes
+  folder_name_ui: Planned Routes
+  created_at: '2025-11-04 03:05:33.735572'
+  updated_at: '2025-12-12 18:40:13.741013'
+  last_sync: '2026-01-30T18:21:05.556451Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/61927
+metadata:
+  name: Planned Routes - Remove Stop
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>Route Already Created with at least 3 stops</li><li>Route
+    is more than 48 hours away</li><li>User is on Maps Screen</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 94966
+    case_id: 61927
+    text1: <ol><li>Tap on Planned Routes</li><li>Tap on <code>View Route</code> to
+      Edit the route</li><li>Validate the number of stops displayed</li><li>Tap on
+      <code>EDIT ROUTE</code> button</li><li>After the Edit Route page is displayed,
+      Tap on the <code>Edit</code> button</li><li>The UI should display a hamburguer
+      and a X button</li><li>On any Stop, tap on the X button</li><li>After the stop
+      is deleted from the view, tap  on the <code>Done</code> button</li><li>Scroll
+      Down and tap on <code>ESTIMATE NEW ROUTE</code></li><li>After being navigated
+      to the <code>Estimated Route*</code> page, validate the Stop was properly removed</li><li>Tap
+      on Save Route</li><li>Check the Success toast is displayed</li></ol>
+    text2: null
+    text3: null
+    text4: null
+    display_order: 1

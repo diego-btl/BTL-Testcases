@@ -1,0 +1,51 @@
+testmo:
+  case_id: 1610
+  folder_id: 48
+  project_id: 2
+  folder_path: settings
+  folder_name_ui: Settings
+  created_at: '2023-08-28 20:13:25.002626'
+  updated_at: '2024-10-17 17:56:23.776593'
+  last_sync: '2026-01-30T18:21:07.910945Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/1610
+metadata:
+  name: PIN - error state
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: 'User has not set up their pin/voice code<br />
+
+    <br />
+
+    User is on the My Profile Screen'
+  steps:
+  - column_name: custom_steps
+    id: 1975
+    case_id: 1610
+    text1: '1. Tap the security questions CTA and select a security question<br />
+
+      2. Tap the security answer field and enter a security answer<br />
+
+      3. Tap the PIN field and enter a 4 digit number<br />
+
+      4. Tap the confirm PIN field and enter a different 4 digit number'
+    text2: null
+    text3: '1. User should be able to select a security question to answer<br />
+
+      2. User should be able to enter a security answer<br />
+
+      3. User should be able to enter a 4 digit number<br />
+
+      4. User should be able to enter a different 4 digit number and see an error
+      state and message indicating mismatched PINs<br />
+
+      User should see the pin labels turn red<br />
+
+      <br />
+
+      NOTE: N/A for NCI'
+    text4: null
+    display_order: 1

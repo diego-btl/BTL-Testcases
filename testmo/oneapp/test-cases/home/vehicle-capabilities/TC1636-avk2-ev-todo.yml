@@ -1,0 +1,18 @@
+testmo:
+  case_id: 1636
+  folder_id: 54
+  project_id: 2
+  folder_path: home/vehicle-capabilities
+  folder_name_ui: Vehicle Capabilities
+  created_at: '2023-09-01 19:33:53.144183'
+  updated_at: '2024-10-17 17:56:23.776593'
+  last_sync: '2026-01-30T18:21:07.849033Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/1636
+metadata:
+  name: AVK2 EV - todo
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case: {}

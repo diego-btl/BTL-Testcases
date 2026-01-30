@@ -1,0 +1,49 @@
+testmo:
+  case_id: 2686
+  folder_id: 4170
+  project_id: 2
+  folder_path: home/climate/avk2
+  folder_name_ui: AVK2
+  created_at: '2023-09-07 21:10:07.720629'
+  updated_at: '2024-10-17 17:57:34.769274'
+  last_sync: '2026-01-30T18:21:07.775862Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/2686
+metadata:
+  name: Climate Details - Defaults
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>AVK2 vehicle<br />User is on Home screen<br /> </p>
+  steps:
+  - column_name: custom_steps
+    id: 3052
+    case_id: 2686
+    text1: <ol><li>Mock <code>ClimateDefaults</code> to return null</li><li>Tap on
+      Climate card</li></ol>
+    text2: null
+    text3: <p>2. User should see hardcoded temperature set to 75 (NNA) and all other
+      present parameters set to OFF<br /><br />User should see the Make Default button
+      is disabled</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 3198
+    case_id: 2686
+    text1: <ol><li>Tap on Climate card (without mocking <code>ClimateDefaults</code>)</li></ol>
+    text2: null
+    text3: <ol><li>User should see the corresponding states for HVAC parameters<ul><li>climate
+      - if this is null, temperature should also default to 75 (NNA)</li><li>defrostAndDeicerState</li><li>seatsClimate</li><li>steeringWheelHeaterState</li></ul></li></ol>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 3199
+    case_id: 2686
+    text1: <ol><li>Mock <code>ClimateDefaults</code> so that any seatsClimate parameters
+      are null</li><li>Tap on Climate card</li></ol>
+    text2: null
+    text3: <p>2. User should not see the affected parameter returning null</p>
+    text4: null
+    display_order: 3

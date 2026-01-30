@@ -1,0 +1,98 @@
+testmo:
+  case_id: 62241
+  folder_id: 6821
+  project_id: 2
+  folder_path: vehicle/second-delivery/second-delivery-manage-appointment
+  folder_name_ui: Second Delivery - Manage Appointment
+  created_at: '2025-12-19 23:29:48.304675'
+  updated_at: '2026-01-06 18:52:39.690786'
+  last_sync: '2026-01-30T18:21:03.709843Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/62241
+metadata:
+  name: Second Delivery - Edit Appointment - Success
+  priority: 1
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  steps:
+  - column_name: custom_steps
+    id: 97154
+    case_id: 62241
+    text1: "<p>Mock the <code>SecondDeliveryAppointment</code> query to return:</p><pre><code\
+      \ class=\"editor-plain language-plain code-block\">{\n  \"data\": {\n    \"\
+      vehicle\": {\n      \"__typename\": \"Vehicle\",\n      \"secondDelivery\":\
+      \ {\n        \"__typename\": \"SecondDelivery\",\n        \"appointment\": {\n\
+      \          \"__typename\": \"SecondDeliveryExistingBookedAppointment\",\n  \
+      \        \"id\": 20498452,\n          \"activityId\": 20498452,\n          \"\
+      beginsAt\": \"2026-01-02T19:30:00.000Z\",\n          \"address\": {\n      \
+      \      \"__typename\": \"Address\",\n            \"address1\": \"1413 test address\"\
+      ,\n            \"address2\": null,\n            \"city\": \"los angeles\",\n\
+      \            \"state\": \"CA\",\n            \"postalCode\": \"90012\",\n  \
+      \          \"country\": \"US\"\n          },\n          \"contact\": {\n   \
+      \         \"__typename\": \"SecondDeliveryContactInformation\",\n          \
+      \  \"firstName\": \"Nna\",\n            \"lastName\": \"Qa\",\n            \"\
+      phoneNumber\": \"5487545464\",\n            \"email\": \"nnaqa@bethinklabs.com\"\
+      \n          },\n          \"redeliveryNotes\": \"Test appointment notes\",\n\
+      \          \"featureNotes\": null,\n          \"hub\": {\n            \"__typename\"\
+      : \"SecondDeliveryHub\",\n            \"id\": 1000000,\n            \"timezone\"\
+      : \"US/Pacific\",\n            \"dealer\": {\n              \"__typename\":\
+      \ \"SecondDeliveryDealer\",\n              \"code\": \"999991\",\n         \
+      \     \"address\": {\n                \"__typename\": \"SecondDeliveryDealerAddress\"\
+      ,\n                \"coordinates\": null,\n                \"address1\": \"\
+      325 W Gardena Blvd\",\n                \"address2\": null,\n               \
+      \ \"state\": \"CA\",\n                \"city\": \"Gardena\",\n             \
+      \   \"country\": \"US\",\n                \"id\": 132498250,\n             \
+      \   \"postalCode\": \"90248\"\n              }\n            }\n          },\n\
+      \          \"mode\": \"VIRTUAL\"\n        }\n      }\n    }\n  }\n}</code></pre><p>Navigate\
+      \ to <code>Upcoming Appointment</code> screen</p>"
+    text2: null
+    text3: <ul><li>Mock data is set for <code>SecondDeliveryAppointment</code> query</li><li>User
+      is on <code>Upcoming Appointment</code> screen</li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 97155
+    case_id: 62241
+    text1: <p>Tap <code>Edit Appointment</code> button</p>
+    text2: null
+    text3: '<ul><li>User is navigated to <code>Select Date and Time</code> screen</li><li>Screen
+      title: <code>Select Date and Time</code> is displayed</li><li>Current appointment
+      date and time are pre-selected</li><li>Progress indicator shows step 1 of 3</li><li><code>NEXT</code>
+      button is enabled</li></ul>'
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 97156
+    case_id: 62241
+    text1: <p>Select a different date and time slot, then tap <code>NEXT</code></p>
+    text2: null
+    text3: '<ul><li>User is navigated to <code>Contact and Notes</code> screen</li><li>Screen
+      title: <code>Contact and Notes</code> is displayed</li><li>Existing contact
+      information is pre-populated in all fields</li><li>Progress indicator shows
+      step 2 of 3</li><li><code>NEXT</code> button is enabled</li></ul>'
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 97157
+    case_id: 62241
+    text1: <p>Modify any contact field or special instructions, then tap <code>NEXT</code></p>
+    text2: null
+    text3: '<ul><li>User is navigated to <code>Review</code> screen</li><li>Screen
+      title: <code>Review</code> is displayed</li><li>Updated appointment details
+      are displayed</li><li><code>Save Changes</code> button is displayed and <strong>enabled</strong>
+      (because changes were made)</li><li><strong>Note:</strong> If no changes were
+      made, <code>Save Changes</code> button would be <strong>disabled</strong></li><li><code>CANCEL</code>
+      button is displayed</li><li>Progress indicator shows step 3 of 3</li></ul>'
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 97158
+    case_id: 62241
+    text1: <p>Tap <code>Save Changes</code> button</p>
+    text2: null
+    text3: <ul><li><code>UpdateSecondDeliveryAppointment</code> mutation is triggered</li><li><p>User
+      is redirected to <code>Appointment Scheduled</code> screen</p><p> </p></li></ul>
+    text4: null
+    display_order: 5

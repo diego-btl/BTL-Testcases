@@ -1,0 +1,39 @@
+testmo:
+  case_id: 30078
+  folder_id: 3766
+  project_id: 5
+  folder_path: settings
+  folder_name_ui: Settings
+  created_at: '2025-01-27 08:15:13.297049'
+  updated_at: '2025-03-17 18:08:50.970998'
+  last_sync: '2026-01-30T18:20:38.192798Z'
+  url: https://bethinklabs.testmo.net/repositories/5/cases/30078
+metadata:
+  name: Legal
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  steps:
+  - column_name: custom_steps
+    id: 48994
+    case_id: 30078
+    text1: <p>User taps on the <code>Termos de Servico</code> card</p>
+    text2: null
+    text3: '<p>User should see the Nissan Terms &amp; Conditions page open in a webview.
+      This url should be fetched from <code>ContactUs - termsAndConditions : "Termos
+      de Serviço"</code>.<br /><br />The header should be <code>Termos de Servico</code> </p>'
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 48995
+    case_id: 30078
+    text1: <p>User taps on the <code>Politica de Privacidade</code> card</p>
+    text2: null
+    text3: '<p>User should see the Nissan Privacy Policy page open in a webview. This
+      url should be fetched from <code>ContactUs - termsAndConditions : "Termos de
+      Serviço"</code>.<br /><br />The header should be <code>Politica de Privacidade</code> </p>'
+    text4: null
+    display_order: 2

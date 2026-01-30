@@ -1,0 +1,37 @@
+testmo:
+  case_id: 1460
+  folder_id: 6800
+  project_id: 2
+  folder_path: demo-mode/vehicle
+  folder_name_ui: Vehicle
+  created_at: '2023-08-28 20:13:22.439843'
+  updated_at: '2025-12-18 17:04:10.091070'
+  last_sync: '2026-01-30T18:21:08.232282Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/1460
+metadata:
+  name: Data Wipe
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is on the Vehicle Profile sheet</p>
+  steps:
+  - column_name: custom_steps
+    id: 1828
+    case_id: 1460
+    text1: <p>Tap the data wipe item</p>
+    text2: null
+    text3: <p>User is taken to Remote Data Wipe screen</p><p>It has an explanation
+      of what this function does with a warning</p><p>Delete Data CTA</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 11730
+    case_id: 1460
+    text1: <p>Tap on that button </p>
+    text2: null
+    text3: <p>Demo alert modal is shown</p>
+    text4: null
+    display_order: 2

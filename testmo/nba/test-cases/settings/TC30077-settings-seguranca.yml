@@ -1,0 +1,27 @@
+testmo:
+  case_id: 30077
+  folder_id: 3766
+  project_id: 5
+  folder_path: settings
+  folder_name_ui: Settings
+  created_at: '2025-01-27 08:14:44.823874'
+  updated_at: '2025-01-27 08:20:07.469524'
+  last_sync: '2026-01-30T18:20:38.195994Z'
+  url: https://bethinklabs.testmo.net/repositories/5/cases/30077
+metadata:
+  name: Settings - Seguranca
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  steps:
+  - column_name: custom_steps
+    id: 48993
+    case_id: 30077
+    text1: <p>User taps on the <code>Permissoes do Dispositivo</code> card</p>
+    text2: null
+    text3: <p>User should be brought to their app settings in the native devices settings</p>
+    text4: null
+    display_order: 1

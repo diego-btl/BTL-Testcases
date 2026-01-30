@@ -1,0 +1,43 @@
+testmo:
+  case_id: 29936
+  folder_id: 3800
+  project_id: 2
+  folder_path: vehicle/collision-management-nna-only
+  folder_name_ui: Collision Management - NNA only
+  created_at: '2025-01-14 17:10:48.373758'
+  updated_at: '2025-01-28 13:33:18.300174'
+  last_sync: '2026-01-30T18:21:06.502468Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/29936
+metadata:
+  name: Collision Management Card - Stolen/ Pending  Vehicle
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<p>- Verify the Feature Flag: "<code>EnableCollisionManagement</code>":
+    "true”.<br />-  Account  has the vehicle is in the ''STOLEN''  and  ''PENDING''
+    status  </p><p>- User is on the <code>Home Screen</code></p>'
+  steps:
+  - column_name: custom_steps
+    id: 49021
+    case_id: 29936
+    text1: <ul><li>Select Vehicle is in 'STOLEN' status  </li><li>Navigate to the
+      Vehicle Screen</li></ul>
+    text2: null
+    text3: <p>The user should not see the <code>Collision Management </code>card</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 49023
+    case_id: 29936
+    text1: <ul><li>Select Vehicle is in 'PENDING' status </li><li>Navigate to the
+      Vehicle Screen</li></ul>
+    text2: null
+    text3: <p>The user should not see the <code>Collision Management </code>card</p>
+    text4: null
+    display_order: 2
+  notes: <figure class="image"><img src="/attachments/view/3152" alt="3152" /></figure><figure
+    class="image"><img src="https://bethinklabs.testmo.net/attachments/view_preview/3153"
+    alt="3153" /></figure>

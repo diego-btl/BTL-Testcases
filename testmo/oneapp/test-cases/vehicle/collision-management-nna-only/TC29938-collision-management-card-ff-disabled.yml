@@ -1,0 +1,33 @@
+testmo:
+  case_id: 29938
+  folder_id: 3800
+  project_id: 2
+  folder_path: vehicle/collision-management-nna-only
+  folder_name_ui: Collision Management - NNA only
+  created_at: '2025-01-14 17:37:34.801859'
+  updated_at: '2026-01-13 20:01:21.380137'
+  last_sync: '2026-01-30T18:21:06.499403Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/29938
+metadata:
+  name: Collision Management Card - FF Disabled
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<p>- <strong>Verify the Feature flag:</strong> <br /> <code>"EnableCollisionManagement":
+    "false”</code></p><p><code>"GrantCollisionManagement": "{\"enabled\": false, \"checkCapability\":false}",</code></p><p>CAPS:
+     <code>ACCIDENT_REPORT_SERVICE</code> , <code>COLLISION_MANAGEMENT</code></p><p><br
+    />- Use any account with a Connected and Enrolled Vehicles (<code>status</code>:
+    <code>ENROLLED</code>)<br />- The user is in the <code>Home</code> Screen</p>'
+  steps:
+  - column_name: custom_steps
+    id: 48818
+    case_id: 29938
+    text1: <p>Navigate to the Vehicle Screen</p>
+    text2: null
+    text3: <ul><li><p>The user should not  see the <code>Collision Management </code>card</p><p> </p></li></ul>
+    text4: null
+    display_order: 1
+  notes: <figure class="image"><img src="/attachments/view/3155" alt="3155" /></figure>

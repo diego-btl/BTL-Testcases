@@ -1,0 +1,41 @@
+testmo:
+  case_id: 41863
+  folder_id: 43
+  project_id: 2
+  folder_path: register-flow
+  folder_name_ui: Register Flow
+  created_at: '2025-06-09 15:19:12.785579'
+  updated_at: '2025-06-10 13:55:57.992458'
+  last_sync: '2026-01-30T18:21:05.957604Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/41863
+metadata:
+  name: Verify RegisterAccount API - FAILED
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<ul><li><code>"EnableNCIMarketingPreferences": "true"</code> FF
+    should be on</li><li>Connect the device to Proxyman to check the APIs calls</li></ul>'
+  steps:
+  - column_name: custom_steps
+    id: 71868
+    case_id: 41863
+    text1: <p>On Register flow continue the flow until reaching Nissan Updates screen
+      &gt; Check some boxes &gt; Mock <code>RegisterAccount</code> API to fail &gt;
+      Tap on Finalize Registration CTA</p>
+    text2: null
+    text3: <p>Verify that an error modal is shown and the app takes the user back
+      to the Password screen</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 71869
+    case_id: 41863
+    text1: <p>Tap again on the <code>CREATE ACCOUNT</code> cta</p>
+    text2: null
+    text3: <p>Verify that the user is led to the <code>Nissan Updates</code> screen
+      again with the same selection from the previous interaction</p>
+    text4: null
+    display_order: 2

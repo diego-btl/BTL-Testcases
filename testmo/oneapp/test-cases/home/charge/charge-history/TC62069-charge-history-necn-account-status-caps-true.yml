@@ -1,0 +1,212 @@
+testmo:
+  case_id: 62069
+  folder_id: 2443
+  project_id: 2
+  folder_path: home/charge/charge-history
+  folder_name_ui: Charge History
+  created_at: '2025-12-02 17:05:01.037804'
+  updated_at: '2026-01-08 21:41:07.514332'
+  last_sync: '2026-01-30T18:21:04.970627Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/62069
+metadata:
+  name: Charge History - NECN Account Status - Caps TRUE
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has EV2 or EV1</p><p>EV &gt; VehicleCapabilities &gt; "DRIVING_ANALYSIS"
+    is TRUE</p><p>EV2 &gt; VehicleCapabilities &gt; "CHARGE_HISTORY" is TRUE<br /><br
+    />User is a PRIMARY_DRIVER</p><p>User is on the Manage EV screen</p>
+  steps:
+  - column_name: custom_steps
+    id: 95815
+    case_id: 62069
+    text1: "<p>1. Mock AccountStatus &gt; \"status\" =! \"ACTIVE\" (FAILED/INACTIVE/CANCELLED/CLOSED/ENROLLING/NOT_ENROLLED)</p><p>2.\
+      \ Tap the 'Charge History' card </p><p>3. NissanPayOrderHistory API returns\
+      \ an empty response</p><pre><code class=\"editor-plain language-plain code-block\"\
+      >{\n  \"data\": {\n    \"nissanPay\": {\n      \"__typename\": \"NissanPay\"\
+      ,\n      \"orderHistory\": {\n        \"__typename\": \"NissanPayOrderHistoryResponse\"\
+      ,\n        \"items\": [],\n        \"pagination\": {\n          \"__typename\"\
+      : \"NissanPayOrderHistoryPagination\",\n          \"nextPageCursor\": null,\n\
+      \          \"totalSize\": 0\n        }\n      }\n    }\n  }\n}</code></pre>"
+    text2: null
+    text3: <p>1. User should be navigated to the 'In-network' tab  with a dialog:</p><p><code><strong>NISSAN
+      ENERGY Charge Network</strong></code></p><p><code>Activate the NISSAN ENERGY
+      Charge Network today for access to Nissan's in-network charging partners.</code></p><p>2.
+      The 'Start Activation' CTA is enabled</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 95816
+    case_id: 62069
+    text1: <p>Tap the 'Start Activation' CTA</p>
+    text2: null
+    text3: <p>User is redirected to the NECN screen</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 95822
+    case_id: 62069
+    text1: "<p>1. Tap the 'All Sessions' tab</p><p>2. VehicleChargeHistory API is\
+      \ triggered, returning an empty response </p><pre><code class=\"editor-plain\
+      \ language-plain code-block\">{\n  \"data\": {\n    \"vehicle\": {\n      \"\
+      __typename\": \"ElectricAVK2Vehicle\",\n      \"chargeHistory\": {\n       \
+      \ \"__typename\": \"ChargeStatistics\",\n        \"chargeSummaries\": [],\n\
+      \        \"charges\": []\n      }\n    }\n  }\n}</code></pre>"
+    text2: null
+    text3: <p>The user should see the 'All Sessions' tab with the dialog 'No Charge
+      History' </p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 95817
+    case_id: 62069
+    text1: "<p>1. Tap the 'Charge History' card </p><p>2. NissanPayOrderHistory API\
+      \ returns some data in the response </p><pre><code class=\"editor-plain language-plain\
+      \ code-block\">{\n  \"data\": {\n    \"nissanPay\": {\n      \"__typename\"\
+      : \"NissanPay\",\n      \"orderHistory\": {\n        \"__typename\": \"NissanPayOrderHistoryResponse\"\
+      ,\n        \"items\": [\n          {\n            \"__typename\": \"NissanPayEnergyChargeSession\"\
+      ,\n            \"orderDate\": \"2025-05-21T13:32:55.000Z\",\n            \"\
+      totalCost\": 4.04,\n            \"address\": {\n              \"__typename\"\
+      : \"NissanPayEnergyChargeSessionAddress\",\n              \"city\": \"Northville\"\
+      ,\n              \"country\": \"United States\",\n              \"countryCode\"\
+      : \"US\",\n              \"latitude\": null,\n              \"longitude\": null,\n\
+      \              \"postalCode\": \"48167\",\n              \"state\": \"Michigan\"\
+      ,\n              \"stateCode\": \"MI\",\n              \"street\": \"20401,\
+      \ Haggerty Road\"\n            },\n            \"paymentMethod\": {\n      \
+      \        \"__typename\": \"NissanPayEnergyChargeSessionPaymentMethod\",\n  \
+      \            \"type\": \"CreditCard\",\n              \"processor\": \"VISA\"\
+      ,\n              \"last4\": \"7025\"\n            },\n            \"cpoBrand\"\
+      : \"Tesla Supercharger\",\n            \"chargeStartTime\": \"05/21/2025 09:29\
+      \ AM\",\n            \"chargeEndTime\": \"05/21/2025 09:32 AM\",\n         \
+      \   \"chargeDuration\": \"4 min\",\n            \"connectorType\": \"NACS\"\
+      ,\n            \"totalEnergy\": 7.64,\n            \"serviceFeeTotal\": null,\n\
+      \            \"subtotal\": 4.04,\n            \"sessionType\": \"FOUNDATIONAL\"\
+      \n          },\n          {\n            \"__typename\": \"NissanPayOrderHistoryItem\"\
+      \n          },\n          {\n            \"__typename\": \"NissanPayOrderHistoryItem\"\
+      \n          },\n          {\n            \"__typename\": \"NissanPayOrderHistoryItem\"\
+      \n          },\n          {\n            \"__typename\": \"NissanPayOrderHistoryItem\"\
+      \n          }\n        ],\n        \"pagination\": {\n          \"__typename\"\
+      : \"NissanPayOrderHistoryPagination\",\n          \"nextPageCursor\": null,\n\
+      \          \"totalSize\": 5\n        }\n      }\n    }\n  }\n}</code></pre>"
+    text2: null
+    text3: <p>1. User should see the  'In-network' tab with data correlated to the
+      NissanPayOrderHistory API response</p><p>2. The 'Start Activation' CTA is hidden</p>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 95818
+    case_id: 62069
+    text1: <p>Tap the 'See More' dropdown </p>
+    text2: null
+    text3: <p>1. The 'See More' section is expanded, showing the details for the particular
+      NissanPayEnergyChargeSession</p><p>2. The 'See More' button is replaced with
+      the 'See Less' </p>
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 95819
+    case_id: 62069
+    text1: <p>Tap the 'See Less' dropdown </p>
+    text2: null
+    text3: <p>1. The section should be collapsed</p><p>2. The 'See Less' button is
+      replaced with the 'See More' </p>
+    text4: null
+    display_order: 6
+  - column_name: custom_steps
+    id: 95823
+    case_id: 62069
+    text1: "<p>1. Tap the 'All Sessions' tab</p><p>2. VehicleChargeHistory API is\
+      \ triggered, returning some data </p><pre><code class=\"editor-plain language-plain\
+      \ code-block\">{\n  \"data\": {\n    \"vehicle\": {\n      \"__typename\": \"\
+      ElectricVehicle\",\n      \"chargeHistory\": {\n        \"__typename\": \"ChargeStatistics\"\
+      ,\n        \"chargeSummaries\": [\n          {\n            \"__typename\":\
+      \ \"ChargeSummary\",\n            \"day\": 27,\n            \"month\": 11,\n\
+      \            \"year\": 2025,\n            \"numberOfChargeSessions\": 2,\n \
+      \           \"totalEnergyRecovered\": 9.8,\n            \"totalDuration\": 106,\n\
+      \            \"numberOfErrors\": null,\n            \"userId\": null,\n    \
+      \        \"roleType\": null\n          },\n          {\n            \"__typename\"\
+      : \"ChargeSummary\",\n            \"day\": 30,\n            \"month\": 10,\n\
+      \            \"year\": 2025,\n            \"numberOfChargeSessions\": 1,\n \
+      \           \"totalEnergyRecovered\": 21.6,\n            \"totalDuration\":\
+      \ 234,\n            \"numberOfErrors\": null,\n            \"userId\": null,\n\
+      \            \"roleType\": null\n          },\n          {\n            \"__typename\"\
+      : \"ChargeSummary\",\n            \"day\": 12,\n            \"month\": 10,\n\
+      \            \"year\": 2025,\n            \"numberOfChargeSessions\": 3,\n \
+      \           \"totalEnergyRecovered\": 17.15,\n            \"totalDuration\"\
+      : 188,\n            \"numberOfErrors\": null,\n            \"userId\": null,\n\
+      \            \"roleType\": null\n          }\n        ],\n        \"charges\"\
+      : [\n          {\n            \"__typename\": \"ChargeSession\",\n         \
+      \   \"start\": \"2025-10-12T17:34:13.000Z\",\n            \"end\": \"2025-10-12T17:52:01.000Z\"\
+      ,\n            \"duration\": \"PT18M\",\n            \"recoveredEnergy\": 1.5\n\
+      \          },\n          {\n            \"__typename\": \"ChargeSession\",\n\
+      \            \"start\": \"2025-10-12T18:14:19.000Z\",\n            \"end\":\
+      \ \"2025-10-12T18:15:00.000Z\",\n            \"duration\": \"PT1M\",\n     \
+      \       \"recoveredEnergy\": 0.099998474\n          },\n          {\n      \
+      \      \"__typename\": \"ChargeSession\",\n            \"start\": \"2025-10-12T18:17:04.000Z\"\
+      ,\n            \"end\": \"2025-10-12T21:06:04.000Z\",\n            \"duration\"\
+      : \"PT2H49M\",\n            \"recoveredEnergy\": 15.549999\n          },\n \
+      \         {\n            \"__typename\": \"ChargeSession\",\n            \"\
+      start\": \"2025-10-30T16:40:58.000Z\",\n            \"end\": \"2025-10-30T20:34:55.000Z\"\
+      ,\n            \"duration\": \"PT3H54M\",\n            \"recoveredEnergy\":\
+      \ 21.6\n          },\n          {\n            \"__typename\": \"ChargeSession\"\
+      ,\n            \"start\": \"2025-11-27T17:20:27.000Z\",\n            \"end\"\
+      : \"2025-11-27T19:05:58.000Z\",\n            \"duration\": \"PT1H46M\",\n  \
+      \          \"recoveredEnergy\": 9.75\n          },\n          {\n          \
+      \  \"__typename\": \"ChargeSession\",\n            \"start\": \"2025-11-27T19:32:22.000Z\"\
+      ,\n            \"end\": \"2025-11-27T19:32:31.000Z\",\n            \"duration\"\
+      : \"PT1M\",\n            \"recoveredEnergy\": 0.049999237\n          }\n   \
+      \     ]\n      }\n    }\n  }\n}</code></pre>"
+    text2: null
+    text3: <p>The user should see the 'All Sessions' tab with the data correlated
+      to the VehicleChargeHistory API response </p>
+    text4: null
+    display_order: 7
+  - column_name: custom_steps
+    id: 95820
+    case_id: 62069
+    text1: "<p>1. Mock AccountStatus &gt; \"status\" = \"ACTIVE\" </p><p>2. Tap the\
+      \ 'Charge History' card </p><p>3. NissanPayOrderHistory API returns an empty\
+      \ response</p><pre><code class=\"editor-plain language-plain code-block\">{\n\
+      \  \"data\": {\n    \"nissanPay\": {\n      \"__typename\": \"NissanPay\",\n\
+      \      \"orderHistory\": {\n        \"__typename\": \"NissanPayOrderHistoryResponse\"\
+      ,\n        \"items\": [],\n        \"pagination\": {\n          \"__typename\"\
+      : \"NissanPayOrderHistoryPagination\",\n          \"nextPageCursor\": null,\n\
+      \          \"totalSize\": 0\n        }\n      }\n    }\n  }\n}</code></pre>"
+    text2: null
+    text3: <p>1. The user should see the Charge History card with the dialog 'No Charge
+      History' </p><p>2. The 'Start Activation' CTA is hidden</p>
+    text4: null
+    display_order: 8
+  - column_name: custom_steps
+    id: 95821
+    case_id: 62069
+    text1: <p>Tap the 'Refresh' button</p>
+    text2: null
+    text3: <p>1. NissanPayOrderHistory API is triggered</p><p>2. The loading state
+      is displayed</p><p>3. The data on the screen correlates with the NissanPayOrderHistory
+      API response</p>
+    text4: null
+    display_order: 9
+  - column_name: custom_steps
+    id: 95824
+    case_id: 62069
+    text1: <p>1. Tap the 'All Sessions' tab</p><p>2. The loading state is displayed</p><p>3.
+      VehicleChargeHistory API is triggered</p>
+    text2: null
+    text3: <p>The data on the screen correlates with the NissanPayOrderHistory API
+      response</p>
+    text4: null
+    display_order: 10
+  - column_name: custom_steps
+    id: 95825
+    case_id: 62069
+    text1: <p>Tap the 'Refresh' button</p>
+    text2: null
+    text3: <p>1. VehicleChargeHistory API is triggered</p><p>2. The loading state
+      is displayed</p><p>3. The data on the screen correlates with the VehicleChargeHistory
+      API response</p>
+    text4: null
+    display_order: 11

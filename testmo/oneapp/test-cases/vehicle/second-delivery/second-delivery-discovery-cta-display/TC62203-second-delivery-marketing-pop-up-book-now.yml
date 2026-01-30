@@ -1,0 +1,42 @@
+testmo:
+  case_id: 62203
+  folder_id: 6818
+  project_id: 2
+  folder_path: vehicle/second-delivery/second-delivery-discovery-cta-display
+  folder_name_ui: Second Delivery - Discovery & CTA Display
+  created_at: '2025-12-19 17:16:58.194785'
+  updated_at: '2026-01-06 18:51:58.000168'
+  last_sync: '2026-01-30T18:21:04.237954Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/62203
+metadata:
+  name: Second Delivery - Marketing Pop-up - Book Now
+  priority: 1
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>Feature Flag <code>EnableSecondDelivery</code> is set to
+    <code>true</code></li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 96896
+    case_id: 62203
+    text1: "<p>Mock <code>SecondDeliveryEligibility</code> with:</p><pre><code>{\n\
+      \  \"marketingMessage\": {\n    \"versionToDisplay\": \"REMIND_ME_LATER\",\n\
+      \    \"displayMarketingMessageThresholdInDays\": 60,\n    \"remindMeLaterThresholdInDays\"\
+      : 8\n  },\n  \"daysSincePurchased\": 15\n}</code></pre><p>Login to app</p>"
+    text2: null
+    text3: <ul><li>Marketing pop-up appears</li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 96897
+    case_id: 62203
+    text1: <p>Tap <code>BOOK NOW</code> button</p>
+    text2: null
+    text3: <ul><li>Pop-up closes</li><li>User navigates directly to virtual appointment
+      booking screen</li><li>Date and time selection screen appears (Virtual mode
+      only)</li><li>No appointment type selection (Virtual is forced)</li></ul>
+    text4: null
+    display_order: 2

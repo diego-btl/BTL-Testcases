@@ -1,0 +1,42 @@
+testmo:
+  case_id: 29990
+  folder_id: 3863
+  project_id: 2
+  folder_path: vehicle/telematics-bsm-subscriptions-packages
+  folder_name_ui: Telematics BSM - Subscriptions Packages
+  created_at: '2025-01-17 02:00:08.848240'
+  updated_at: '2025-12-09 17:21:27.116331'
+  last_sync: '2026-01-30T18:21:06.472368Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/29990
+metadata:
+  name: Subscriptions Landing Page - FAILED
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<ol><li>FF "EnableTelematicsBSM": "true"</li><li>Fresh install the
+    app</li><li>Go to Proxyman and <strong>breakpoint</strong> the <code>VehicleSubscriptions</code>API</li></ol>'
+  steps:
+  - column_name: custom_steps
+    id: 48846
+    case_id: 29990
+    text1: <p>Login to app &gt; Go to vehicles screen &gt; Tap on Subscription Packages
+      card</p>
+    text2: null
+    text3: '<p>Verify  Subscription screen display an empty state with the following
+      card:</p><ul><li><strong>Title: </strong>No Subscription Package</li><li><strong>Body:</strong>
+      If you feel like this is an error, please use the call button to speak with
+      an agent.</li><li><strong>Call</strong> cta</li></ul>'
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 48847
+    case_id: 29990
+    text1: <p>Tap on the <code>Call</code> cta</p>
+    text2: null
+    text3: '<p>Verify native call mod is displayd with the following phone number:
+      <code>1-855-426-6628</code></p>'
+    text4: null
+    display_order: 2

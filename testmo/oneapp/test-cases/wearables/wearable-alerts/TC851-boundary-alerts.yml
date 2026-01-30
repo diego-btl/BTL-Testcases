@@ -1,0 +1,40 @@
+testmo:
+  case_id: 851
+  folder_id: 77
+  project_id: 2
+  folder_path: wearables/wearable-alerts
+  folder_name_ui: Wearable - Alerts
+  created_at: '2023-08-01 23:08:23.422709'
+  updated_at: '2025-09-19 21:22:16.880163'
+  last_sync: '2026-01-30T18:21:08.580657Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/851
+metadata:
+  name: Boundary Alerts
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is on the Alerts page</p>
+  steps:
+  - column_name: custom_steps
+    id: 1020
+    case_id: 851
+    text1: <p>1. Tap Boundary Alerts<br />2. User should see a list of all existing
+      drive zone alerts</p>
+    text2: null
+    text3: <p>User should be able to toggle the alert on/off and see a spinner until
+      the call is complete</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 1148
+    case_id: 851
+    text1: <p>Fail Boundary Alert call</p>
+    text2: null
+    text3: <p>The toggle reverts to the previous position</p>
+    text4: null
+    display_order: 2
+  notes: <p>1. When The Alert Fails the "Your Boundary Alert alert failed to turn
+    on, Please try your request again" message  should be displayed</p>

@@ -1,0 +1,46 @@
+testmo:
+  case_id: 29795
+  folder_id: 3767
+  project_id: 5
+  folder_path: home/message-center
+  folder_name_ui: Message Center
+  created_at: '2024-12-20 15:21:40.308281'
+  updated_at: null
+  last_sync: '2026-01-30T18:20:38.417868Z'
+  url: https://bethinklabs.testmo.net/repositories/5/cases/29795
+metadata:
+  name: Message Center - populated
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User entered the message center</p>
+  steps:
+  - column_name: custom_steps
+    id: 48611
+    case_id: 29795
+    text1: null
+    text2: null
+    text3: <p>User should see messages loaded in sequence from most recent to oldest</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 48612
+    case_id: 29795
+    text1: null
+    text2: null
+    text3: <p>User should see the date of the message on the card (<code>Hoje</code>
+      if the message was sent today)</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 48613
+    case_id: 29795
+    text1: null
+    text2: null
+    text3: <p>User should see new messages with a closed blue envelope icon and bolded
+      title. Opened messages should have a black envelope icon and unbolded title</p>
+    text4: null
+    display_order: 3

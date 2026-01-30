@@ -1,0 +1,32 @@
+testmo:
+  case_id: 562
+  folder_id: 54
+  project_id: 2
+  folder_path: home/vehicle-capabilities
+  folder_name_ui: Vehicle Capabilities
+  created_at: '2023-08-01 23:08:19.767635'
+  updated_at: '2025-02-19 15:52:05.107063'
+  last_sync: '2026-01-30T18:21:09.180461Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/562
+metadata:
+  name: Pending Vehicle
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has a pending vehicle</p>
+  steps:
+  - column_name: custom_steps
+    id: 731
+    case_id: 562
+    text1: <p>1. Launch app to home screen<br />2. Tap on Vehicle tab<br />3. Tap
+      on Map tab</p>
+    text2: null
+    text3: <p>1. User should see pending vehicle homescreen (only support button,
+      vehicle selector, and OV card are enabled)<br />2. User should see pending vehicle
+      vehicle screen (schedule service and find a dealer are disabled)<br />3. User
+      should see pending vehicle map screen (everything is disabled)</p>
+    text4: null
+    display_order: 1

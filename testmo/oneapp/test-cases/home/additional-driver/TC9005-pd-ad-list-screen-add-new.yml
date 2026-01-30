@@ -1,0 +1,46 @@
+testmo:
+  case_id: 9005
+  folder_id: 411
+  project_id: 2
+  folder_path: home/additional-driver
+  folder_name_ui: Additional Driver
+  created_at: '2023-11-21 08:08:39.660447'
+  updated_at: '2025-08-21 19:21:14.411948'
+  last_sync: '2026-01-30T18:21:07.338777Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/9005
+metadata:
+  name: PD - AD  List Screen - Add New
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has an AVK2 vehicle and is PRIMARY_DRIVER</p><p>User is on
+    the Additional Driver screen</p><p>There are less than 4 invites</p>
+  steps:
+  - column_name: custom_steps
+    id: 9499
+    case_id: 9005
+    text1: <p>Tap on Add A Driver</p>
+    text2: null
+    text3: <p>User should see options for <code>Add from Contacts</code>, <code>Add
+      New</code>, and <code>Cancel</code></p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 9500
+    case_id: 9005
+    text1: <p>Tap on Cancel</p>
+    text2: null
+    text3: <p>User should see options dismiss</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 9501
+    case_id: 9005
+    text1: <p>Tap on Add New</p>
+    text2: null
+    text3: <p>User should see the empty state of the create invite screen</p>
+    text4: null
+    display_order: 3

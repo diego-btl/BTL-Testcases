@@ -1,0 +1,30 @@
+testmo:
+  case_id: 586
+  folder_id: 49
+  project_id: 2
+  folder_path: home/notifications
+  folder_name_ui: Notifications
+  created_at: '2023-08-01 23:08:20.075140'
+  updated_at: '2024-10-17 17:56:23.776593'
+  last_sync: '2026-01-30T18:21:09.122190Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/586
+metadata:
+  name: Alerts History
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is on notification center</p>
+  steps:
+  - column_name: custom_steps
+    id: 755
+    case_id: 586
+    text1: <p>1. Tap on Alerts</p>
+    text2: null
+    text3: <p>User should be able to see alert breaches in reverse chronological order
+      grouped by Today and Previous<br /><br />User should be able to see empty states
+      if there is no alert breach history</p>
+    text4: null
+    display_order: 1

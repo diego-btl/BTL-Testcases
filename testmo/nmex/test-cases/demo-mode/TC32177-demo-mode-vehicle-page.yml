@@ -1,0 +1,66 @@
+testmo:
+  case_id: 32177
+  folder_id: 4144
+  project_id: 6
+  folder_path: demo-mode
+  folder_name_ui: Demo Mode
+  created_at: '2025-04-01 17:50:43.587652'
+  updated_at: '2025-04-02 20:04:39.025893'
+  last_sync: '2026-01-30T18:20:45.913475Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/32177
+metadata:
+  name: Demo Mode - Vehicle Page
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  steps:
+  - column_name: custom_steps
+    id: 52559
+    case_id: 32177
+    text1: '<p>Tap Vehicle in the bottom nav </p>
+
+      <p>Tap on the Vehicle Profile button</p>
+
+      <p>Tap any of the cards in the Vehicle Profile screen, except for <code>Remote
+      Data Wipe</code></p>
+
+      <p>Tap on <code>Remote Data Wipe</code></p>
+
+      <p>While on the Page above, click on the <code>Delete Data</code> CTA</p>
+
+      <p>Return to the Vehicle Page and tap on the Schedule Service/Find a Dealer
+      buttons</p>
+
+      <p>Tap on the Service History button</p>
+
+      <p>Tap on the Est. Mileage card (Driving History also for EV)</p>
+
+      <p>Tap on the Battery Level card (only for EV)</p>'
+    text2: null
+    text3: '<p>User should see dummy data for three vehicles on INF and three vehicles
+      on NIS</p>
+
+      <p>User should be navigated to Vehicle Profile screen and see dummy data for
+      both vehicles - INF, three vehicles - NIS</p>
+
+      <p>User should see the demo mode alert modal</p>
+
+      <p>The user should be navigated to the <code>Remote Data Wipe</code> page</p>
+
+      <p>User should see the demo mode alert modal</p>
+
+      <p>User should be navigated to a Find a Dealer screen with no search results
+      screen</p>
+
+      <p>User should see the demo mode alert modal</p>
+
+      <p>User should see the demo mode alert modal</p>
+
+      <p>User should be navigated to the Charge screen and see dummy data</p>'
+    text4: null
+    display_order: 1
+  notes: <p><strong>Battery Level card - </strong> Need to add <code>Enable V2L</code>
+    cases from Firebase </p>

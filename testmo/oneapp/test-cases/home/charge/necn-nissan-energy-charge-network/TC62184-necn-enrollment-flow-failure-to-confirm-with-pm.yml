@@ -1,0 +1,65 @@
+testmo:
+  case_id: 62184
+  folder_id: 2444
+  project_id: 2
+  folder_path: home/charge/necn-nissan-energy-charge-network
+  folder_name_ui: NECN - NISSAN ENERGY Charge Network
+  created_at: '2025-12-17 17:21:25.277571'
+  updated_at: '2026-01-15 19:06:13.155702'
+  last_sync: '2026-01-30T18:21:04.488350Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/62184
+metadata:
+  name: NECN - Enrollment Flow - FAILURE - TO CONFIRM WITH PM
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<p>User has an EV/EV2</p><p>"EnablePlugAndCharge": "true"</p><p>AccountStatus
+    API &gt; "status": "NOT_ENROLLED"/"FAILED"/"CANCELLED"</p><p>User is on the NECN
+    screen</p><p>Payment Method is added</p>'
+  steps:
+  - column_name: custom_steps
+    id: 96763
+    case_id: 62184
+    text1: <p>Add a breakpoint to the UpsertNissanPayAccount API</p><p>Tap 'ACTIVATE'
+      CTA</p><p>Abort the UpsertNissanPayAccount API</p>
+    text2: null
+    text3: <p>The loading state is displayed</p><p>The 'Something Went Wrong' modal
+      with the copy 'Sorry, something went wrong, please try again.' and 'Cancel'
+      and 'Retry' buttons is triggered</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 96764
+    case_id: 62184
+    text1: <p>Tap 'Cancel'</p>
+    text2: null
+    text3: <p>The modal is dismissed</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 96765
+    case_id: 62184
+    text1: <p>Tap 'Retry' and let the UpsertNissanPayAccount API to be executed</p><p>Add
+      a breakpoint and abort the EnrollChargePlan API</p>
+    text2: null
+    text3: <p>The loading state is displayed</p><p>The 'Activation failed' toast is
+      displayed *</p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 96766
+    case_id: 62184
+    text1: <p>Tap 'ACTIVATE' and let the EnrollChargePlan API to return the success
+      response</p><p>Add a breakpoint and abort the AccountStatus API</p>
+    text2: null
+    text3: <p>The loading state is displayed</p><p>The 'Activation failed' toast is
+      displayed</p><p>User remains on the same NECN screen</p><p>'Account Status'
+      card status is 'Not Activated'</p>
+    text4: null
+    display_order: 4
+  notes: <p>* This Test case needs to be updated based on the PM's confirmation &gt;
+    if EnrollChargePlan API fails iOS shows the 'Activation failed' toast, Android
+    doesn't</p><p><a href="https://bethinklabs.slack.com/archives/C052PH0HNHJ/p1765994919925809">https://bethinklabs.slack.com/archives/C052PH0HNHJ/p1765994919925809</a></p>

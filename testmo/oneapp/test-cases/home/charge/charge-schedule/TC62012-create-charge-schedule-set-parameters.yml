@@ -1,0 +1,175 @@
+testmo:
+  case_id: 62012
+  folder_id: 6781
+  project_id: 2
+  folder_path: home/charge/charge-schedule
+  folder_name_ui: Charge Schedule
+  created_at: '2025-11-21 19:56:46.015504'
+  updated_at: '2025-11-21 20:53:59.799460'
+  last_sync: '2026-01-30T18:21:05.134394Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/62012
+metadata:
+  name: Create Charge Schedule - Set Parameters
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has an EV/EV2</p><p>User is on the Manage EV screen</p><p>There're
+    0, 1 or 2 charge schedules created</p>
+  steps:
+  - column_name: custom_steps
+    id: 95589
+    case_id: 62012
+    text1: <p>Tap the 'Add' button on the 'Scheduled' card</p>
+    text2: null
+    text3: <p>User is redirected to the Charge Schedule screen</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 95590
+    case_id: 62012
+    text1: <p>Tap the 'Start Time' dropdown</p>
+    text2: null
+    text3: <p>The dropdown with the selected current time is displayed</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 95592
+    case_id: 62012
+    text1: <p>Tap outside the dropdown (iOS) or 'OK' button (Android)</p>
+    text2: null
+    text3: <p>The dropdown is hidden, the time is shown in the 'Start Time' field</p><p>*Note
+      on Android selected time is displayed in both 'Start Time' and 'End Time' fields</p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 95593
+    case_id: 62012
+    text1: <p>Tap the 'End Time' dropdown</p>
+    text2: null
+    text3: <p>The dropdown showing the current time is displayed.</p>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 95594
+    case_id: 62012
+    text1: <p>Select time and tap outside the dropdown (iOS) or 'OK' button (Android)</p>
+    text2: null
+    text3: <p>The dropdown is hidden, the time is shown in the 'End Time' field</p>
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 95595
+    case_id: 62012
+    text1: <p>In the 'Quick Options' section, tap any of the buttons</p>
+    text2: null
+    text3: <p>1. The button is in the selected state</p><p>2. 'Days of the Week' buttons
+      get selected accordingly</p><p>3. 'CREATE SCHEDULE' CTA gets enabled  </p>
+    text4: null
+    display_order: 6
+  - column_name: custom_steps
+    id: 95596
+    case_id: 62012
+    text1: <p>Tap the selected button in the 'Quick Options' section</p>
+    text2: null
+    text3: <p>1. The button returns to the previous non-selected state</p><p>2. 'Days
+      of the Week' buttons return to the previous non-selected state</p><p>3. 'CREATE
+      SCHEDULE' CTA gets disabled </p>
+    text4: null
+    display_order: 7
+  - column_name: custom_steps
+    id: 95597
+    case_id: 62012
+    text1: <p>Tap the 'M' (Monday) button in the 'Days of the Week' section</p>
+    text2: null
+    text3: <p>1. The button is in the selected state</p><p>2. 'Quick Option' buttons
+      are not selected</p><p>3. 'CREATE SCHEDULE' CTA gets enabled </p>
+    text4: null
+    display_order: 8
+  - column_name: custom_steps
+    id: 95598
+    case_id: 62012
+    text1: <p>Tap the selected 'M' (Monday) button in the 'Days of the Week' section</p>
+    text2: null
+    text3: <p>1. The button returns to the previous non-selected state</p><p>2. 'CREATE
+      SCHEDULE' CTA gets disabled </p>
+    text4: null
+    display_order: 9
+  - column_name: custom_steps
+    id: 95599
+    case_id: 62012
+    text1: <p>Tap the 'Su' and 'Sa' buttons in the 'Days of the Week' section</p>
+    text2: null
+    text3: <p>1. The buttons are in the selected state</p><p>2. The 'Weekends' button
+      gets selected in the 'Quick Options' section</p><p>3. 'CREATE SCHEDULE' CTA
+      gets enabled </p>
+    text4: null
+    display_order: 10
+  - column_name: custom_steps
+    id: 95600
+    case_id: 62012
+    text1: <p>Tap the 'Su' selected button</p>
+    text2: null
+    text3: <p>1. The 'Su' button gets non-selected</p><p>2. The 'Sa' button remains
+      selected</p><p>3. The 'Weekends button' returns to the previous non-selected
+      state</p><p>4. 'CREATE SCHEDULE' CTA remains enabled </p>
+    text4: null
+    display_order: 11
+  - column_name: custom_steps
+    id: 95601
+    case_id: 62012
+    text1: <p>Tap the 'Sa' button</p>
+    text2: null
+    text3: <p>Both the 'Sa' and 'CREATE SCHEDULE' gets non-selected</p>
+    text4: null
+    display_order: 12
+  - column_name: custom_steps
+    id: 95602
+    case_id: 62012
+    text1: <p>Tap the 'Every Day' button in the 'Quick Option' section</p>
+    text2: null
+    text3: <p>1. The 'Every Day' button gets selected</p><p>2. All the buttons in
+      the 'Days of the Week' section are selected</p><p>3. 'CREATE SCHEDULE' CTA gets
+      enabled </p>
+    text4: null
+    display_order: 13
+  - column_name: custom_steps
+    id: 95603
+    case_id: 62012
+    text1: <p>Tap the selected 'Every Day' button in the 'Quick Option' section</p>
+    text2: null
+    text3: <p>1. The 'Every Day' button gets non-selected</p><p>2. All the buttons
+      in the 'Days of the Week' return to the previous state</p><p>3. 'CREATE SCHEDULE'
+      CTA gets disabled </p>
+    text4: null
+    display_order: 14
+  - column_name: custom_steps
+    id: 95604
+    case_id: 62012
+    text1: <p>Tap all the buttons in the 'Days of the Week' section</p>
+    text2: null
+    text3: <p>1. All the buttons gets selected</p><p>2. The 'Every Day' button gets
+       selected</p><p>3. 'CREATE SCHEDULE' CTA gets enabled </p>
+    text4: null
+    display_order: 15
+  - column_name: custom_steps
+    id: 95605
+    case_id: 62012
+    text1: <p>Tap the 'Weekdays' button</p>
+    text2: null
+    text3: <p>1. The 'Weekdays' button gets selected</p><p>2. The 'Every Day', 'Su',
+      'Sa' buttons get non-selected</p><p>3. 'CREATE SCHEDULE' CTA remains enabled </p>
+    text4: null
+    display_order: 16
+  - column_name: custom_steps
+    id: 95606
+    case_id: 62012
+    text1: <p>Tap the 'Weekends' button</p>
+    text2: null
+    text3: <p>1. The 'Weekends', 'Su', 'Sa' button gets selected</p><p>2. The 'Weekdays',
+      'M', 'Tu'. 'W', 'Th', 'Fr' buttons get non-selected</p><p>3. 'CREATE SCHEDULE'
+      CTA remains enabled </p>
+    text4: null
+    display_order: 17

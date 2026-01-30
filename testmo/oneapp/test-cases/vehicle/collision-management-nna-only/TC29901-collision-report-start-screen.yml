@@ -1,0 +1,43 @@
+testmo:
+  case_id: 29901
+  folder_id: 3800
+  project_id: 2
+  folder_path: vehicle/collision-management-nna-only
+  folder_name_ui: Collision Management - NNA only
+  created_at: '2025-01-09 21:42:14.085229'
+  updated_at: '2025-07-14 20:27:24.156579'
+  last_sync: '2026-01-30T18:21:06.557862Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/29901
+metadata:
+  name: Collision Report start Screen
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>The user is already on the <code>Collision Management</code>
+    screen</li><li>The <code>Vehicle Data</code> section depends on the following
+    capability <code>COLLISION_MANAGEMENT</code></li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 48769
+    case_id: 29901
+    text1: <p>Tap on the <code>New Collision Report</code> card</p>
+    text2: null
+    text3: '<ul><li>The user is redirected to the <code>Collision Report</code> start
+      screen</li><li>The user should see the following card :  <br />- Title: <code><i>Your
+      Information</i></code><i> with ( Name, Phone Number, Email)</i><br /><i>- Title:
+       </i><code><i>Towing/Transportation</i></code><i>  with  (Name: --,  Address:
+      --) </i><br /><i>- Title:  </i><code><i>Insurance Provider</i></code><i> (Company:
+      --)</i><br /><i>- T<s>itle: Vehicle Data with (Location, Vehicle Info)</s></i><br
+      /><i>- Title:  </i><code><i>Collision Center</i></code><i>  with ( Name:-- ,
+      Address:--, Email :--)</i></li><li>The user information on the <code><i>Your
+      Information</i> </code>card should be filled out using the User info stored
+      in the app</li><li><s>The </s><code><s>Vehicle Data</s></code><s> information
+      should be prefilled according to the stored data in the app</s></li><li>The
+      user should see the blank state for the rest of the cards</li><li><code>ADD
+      PHOTOS </code>CTA should always be active</li></ul>'
+    text4: null
+    display_order: 1
+  notes: <figure class="image"><img src="/attachments/view/3150" alt="3150" /></figure>

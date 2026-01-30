@@ -1,0 +1,30 @@
+testmo:
+  case_id: 32273
+  folder_id: 4154
+  project_id: 6
+  folder_path: home-page/climate
+  folder_name_ui: Climate
+  created_at: '2025-04-01 17:50:44.240235'
+  updated_at: '2025-10-23 20:58:34.222128'
+  last_sync: '2026-01-30T18:20:45.740792Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/32273
+metadata:
+  name: Start Climate - Fail
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has sent a start climate request</p>
+  steps:
+  - column_name: custom_steps
+    id: 52652
+    case_id: 32273
+    text1: <p>Start climate request has resolved into a failure</p>
+    text2: null
+    text3: <p>User should see a toast saying<br />'{vehicle model} failed to turn
+      {on/off} climate.' (5 seconds)<br /><br />User should see Climate status update
+      accordingly (status remains off, Start Climate button is enabled)</p>
+    text4: null
+    display_order: 1

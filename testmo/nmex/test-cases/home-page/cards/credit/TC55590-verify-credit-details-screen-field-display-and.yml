@@ -1,0 +1,89 @@
+testmo:
+  case_id: 55590
+  folder_id: 6253
+  project_id: 6
+  folder_path: home-page/cards/credit
+  folder_name_ui: Credit
+  created_at: '2025-08-07 16:24:07.396293'
+  updated_at: '2025-08-07 16:47:10.657855'
+  last_sync: '2026-01-30T18:20:45.014528Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/55590
+metadata:
+  name: Verify credit details screen field display and formatting
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>User is logged in with a valid account</li><li>A vehicle
+    (VIN) with the target credit type (<code>Credit</code>, <code>Leasing</code>,
+    or <code>Selectiviti</code>) is selected <strong>or</strong> the <code>GetCredit</code>
+    API response is mocked to return the required data</li><li>User is on the Credits
+    detail screen in either collapsed or expanded state, as required by the step</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 85777
+    case_id: 55590
+    text1: '<p>Use an account with a VIN that returns <code>creditType = Credit</code>
+      or mock the GetCredit API to return <code>creditType: "credit"</code>. Tap the
+      Credits card to open the Credits detail screen.</p>'
+    text2: null
+    text3: <ul><li>The Credits detail screen is displayed in collapsed state</li><li>The
+      following fields are shown (with values from the API, or a hyphen if null):<ul><li>Credit
+      type (<code>creditType</code>)</li><li>Contract number (<code>contractNumber</code>)</li><li>Status
+      text (<code>statusText</code>)</li><li>Next payment amount (<code>nextPaymentAmount</code>)</li><li>Next
+      payment date (<code>nextPaymentDate</code>)</li><li>Current quota (<code>currentQuota</code>)</li><li>Term
+      (<code>term</code>)</li><li><strong>Balance</strong> (<code>balance</code>)</li><li>Start
+      date (<code>startDate</code>)</li><li>Domiciliation masked as <code>CLABE ***
+      XXXX</code> (<code>accountDomiciliation</code>)</li><li>Last update displayed
+      as “Última actualización” (<code>lastUpdate</code>)</li></ul></li><li>All values
+      are formatted according to design requirements</li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 85778
+    case_id: 55590
+    text1: <p>Use an account with a VIN that returns <code>creditType = Leasing</code>
+      or <code>creditType = Selectiviti</code>, or mock the GetCredit API accordingly.
+      Tap the Credits card to open the Credits detail screen.</p>
+    text2: null
+    text3: <ul><li>The Credits detail screen is displayed in collapsed state</li><li>The
+      following fields are shown (with values from the API, or a hyphen if null):<ul><li>Credit
+      type (<code>creditType</code>)</li><li>Contract number (<code>contractNumber</code>)</li><li>Status
+      text (<code>statusText</code>)</li><li>Next payment amount (<code>nextPaymentAmount</code>)</li><li>Next
+      payment date (<code>nextPaymentDate</code>)</li><li>Current quota (<code>currentQuota</code>)</li><li>Term
+      (<code>term</code>)</li><li>Start date (<code>startDate</code>)</li><li>Domiciliation
+      masked as <code>CLABE *** XXXX</code> (<code>accountDomiciliation</code>)</li><li>Last
+      update displayed as “Última actualización” (<code>lastUpdate</code>)</li></ul></li><li><strong>Balance</strong>
+      field is <strong>not</strong> shown</li><li>All values are formatted according
+      to design requirements</li></ul>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 85779
+    case_id: 55590
+    text1: <p>On the Credits detail screen (with any credit type), tap the <code>Ver
+      más</code> button to expand the screen, then tap <code>Ver menos</code> to collapse
+      it again.</p>
+    text2: null
+    text3: <ul><li>Tapping <code>Ver más</code> expands the screen to show all available
+      credit details, following the same field logic as in collapsed state</li><li>Any
+      additional fields required by design are visible when expanded</li><li>Tapping
+      <code>Ver menos</code> collapses the screen back to the summary view</li><li>Field
+      visibility and formatting remain correct in both states</li></ul>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 85780
+    case_id: 55590
+    text1: <p>Mock the GetCredit API to return <code>null</code> or omit one or more
+      fields (e.g., <code>contractNumber</code>, <code>nextPaymentAmount</code>, etc.)
+      for any credit type. Open the Credits detail screen.</p>
+    text2: null
+    text3: <ul><li>Any field with a <code>null</code> or missing value displays a
+      hyphen (<code>-</code>) instead of being blank or showing an error</li><li>The
+      screen layout and formatting remain correct and consistent</li><li>No broken
+      or placeholder UI elements are visible</li></ul>
+    text4: null
+    display_order: 4

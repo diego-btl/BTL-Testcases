@@ -1,0 +1,57 @@
+testmo:
+  case_id: 1479
+  folder_id: 54
+  project_id: 2
+  folder_path: home/vehicle-capabilities
+  folder_name_ui: Vehicle Capabilities
+  created_at: '2023-08-28 20:13:22.762582'
+  updated_at: '2025-08-21 15:43:32.193384'
+  last_sync: '2026-01-30T18:21:08.173262Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/1479
+metadata:
+  name: Vehicle Capabilities
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<p>Capabilities list to test:<br />- `REMOTE_ENGINE` (Controls card
+    + button)<br />- `REMOTE_DOOR_LOCK` (Controls card + button)<br />- `REMOTE_DOOR_UNLOCK`
+    (Controls card + button)<br />- `REMOTE_HORN_LIGHTS` (Controls card + button)<br
+    />- `REMOTE_CLIMATE_CONTROL` (Climate + Controls card + button) or HVAC_ACCESSORIES
+    (for AVK2 vehicles)<br />- `REMOTE_CHARGING` (Charge + Controls card + button)<br
+    />- `SPEED_ALERT` (Alerts card)<br />- `CURFEW_ALERT` (Alerts card)<br />- `BOUNDARY_ALERT`
+    (Alerts card)<br />- `VALET_ALERT` (Alerts card)<br />- `PARKED_CAR_FINDER` (Location
+    card)<br />- `INTELLIGENT_ROUTE_PLANNER` (Route Planner card)<br />- REMOTE_VEHICLE_STATUS
+    (Controls card) <a href="https://bethinklabs.slack.com/archives/C052PH0HNHJ/p1694533419340549">slack</a></p><p>NOTE:
+    AVK2  doesn''t have a climate button as RES and Climate are paired. </p>'
+  steps:
+  - column_name: custom_steps
+    id: 1847
+    case_id: 1479
+    text1: <p>1. Remove an item from the capabilities list<br />2. Repeat steps 1,
+      but disable the status instead of removing it from the capabilities list, then
+      tap on the item</p>
+    text2: null
+    text3: '<p>1. User should not see the item on the home screen<br />2. User should
+      see the item in disabled state and upon tapping, user should see an alert modal
+      with the option to call an agent (1-855-426-6628)<br /><br />Notes: <br />-
+      If all controls capabilities are disabled, then the controls card should be
+      disabled<br />- If all controls capabilities are missing, then the controls
+      card should be hidden<br />- If all alerts are missing, then the alerts card
+      should be hidden</p><p>-- If all alerts are disabled, then the alerts card should
+      be disabled.  Tapping on it. </p><p>NOTE: All alerts work together - either
+      all true or all false. <br /><br />- Lock/Unlock are paired together, if one
+      is disabled/hidden, both will be disabled/hidden</p>'
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 9415
+    case_id: 1479
+    text1: <ol><li>log in as a shared driver</li><li>Remove/Disable capabilities from
+      the list</li></ol>
+    text2: null
+    text3: <p>The corresponding item should be hidden</p>
+    text4: null
+    display_order: 2

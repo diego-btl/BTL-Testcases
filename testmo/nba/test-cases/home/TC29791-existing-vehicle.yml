@@ -1,0 +1,32 @@
+testmo:
+  case_id: 29791
+  folder_id: 3762
+  project_id: 5
+  folder_path: home
+  folder_name_ui: Home
+  created_at: '2024-12-20 15:21:40.308281'
+  updated_at: '2025-04-02 17:54:54.637056'
+  last_sync: '2026-01-30T18:20:38.431165Z'
+  url: https://bethinklabs.testmo.net/repositories/5/cases/29791
+metadata:
+  name: Existing Vehicle
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>The user is already logged in</li><li>The account has a vehicle
+    added</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 48603
+    case_id: 29791
+    text1: <ol><li>Sign into an account with a vehicle</li></ol>
+    text2: null
+    text3: <ol><li>User should see their vehicle name on their garage</li><li>Vehicle
+      image should be displayed (if no image is returned in static call, then show
+      placeholder instead)</li><li>All cards, ctas, message center and whatsapp should
+      be displayed and active</li><li>Vehicle garage should be active</li></ol>
+    text4: null
+    display_order: 1

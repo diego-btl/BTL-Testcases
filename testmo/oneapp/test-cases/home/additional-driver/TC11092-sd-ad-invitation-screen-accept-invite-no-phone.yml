@@ -1,0 +1,86 @@
+testmo:
+  case_id: 11092
+  folder_id: 411
+  project_id: 2
+  folder_path: home/additional-driver
+  folder_name_ui: Additional Driver
+  created_at: '2023-11-27 09:39:47.121821'
+  updated_at: '2025-09-19 21:25:13.537041'
+  last_sync: '2026-01-30T18:21:07.217387Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/11092
+metadata:
+  name: SD - AD Invitation Screen - Accept invite - No Phone Number
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has an account with a pending AD invite</p>
+  steps:
+  - column_name: custom_steps
+    id: 11664
+    case_id: 11092
+    text1: "<ol><li>Mock <code>VehiclesStaticData</code> so that <code>user.mobileNumber</code>\
+      \ is null</li><li>Mock <code>UserMobileNumber</code> [iOS] with the following:</li></ol><pre><code\
+      \ class=\"editor-json language-json code-block\">{\n  \"data\": {\n    \"user\"\
+      : {\n      \"__typename\": \"User\",\n      \"mobileNumber\": null\n    }\n\
+      \  }\n}</code></pre>"
+    text2: null
+    text3: null
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 11665
+    case_id: 11092
+    text1: <p>Login to the account</p>
+    text2: null
+    text3: <p>User is able to login to the account and see the Additional Driver Invite
+      card on the home screen</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 11666
+    case_id: 11092
+    text1: <p>Tap on the Additional Driver Invite card</p>
+    text2: null
+    text3: <p>User should see the Pending Invitation screen with the pending invite</p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 11667
+    case_id: 11092
+    text1: <p>Tap on the Pending Invite</p>
+    text2: null
+    text3: <p>User should see a loading spinner, then the invite is shown on the Invitation
+      screen</p>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 11668
+    case_id: 11092
+    text1: <p>Tap on Accept Invite</p>
+    text2: null
+    text3: <p>User should see a <code>Phone Number Not Found</code> modal with options
+      - Cancel/Update Number</p>
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 11669
+    case_id: 11092
+    text1: <p>Tap on Cancel</p>
+    text2: null
+    text3: <p>User should see error modal dismiss and remain on the Invitation screen</p>
+    text4: null
+    display_order: 6
+  - column_name: custom_steps
+    id: 11670
+    case_id: 11092
+    text1: <p>Tap on Update Number</p>
+    text2: null
+    text3: '<p>User should be redirected to the link from <code>ContactUs</code> -
+      <code>"editContactInformationAndChangePassword"</code> - in the external browser<br
+      /><br />Note: the links should be the following:</p><ul><li>Nissan <a href="https://www.nissanusa.com/mynissan/profile.html">https://www.nissanusa.com/mynissan/profile.html</a></li><li>Infiniti
+      <a href="https://www.infinitiusa.com/myinfiniti/profile.html">https://www.infinitiusa.com/myinfiniti/profile.html</a></li></ul>'
+    text4: null
+    display_order: 7

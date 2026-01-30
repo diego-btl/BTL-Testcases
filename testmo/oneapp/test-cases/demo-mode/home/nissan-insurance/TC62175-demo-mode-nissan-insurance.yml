@@ -1,0 +1,28 @@
+testmo:
+  case_id: 62175
+  folder_id: 6815
+  project_id: 2
+  folder_path: demo-mode/home/nissan-insurance
+  folder_name_ui: Nissan Insurance
+  created_at: '2025-12-17 02:12:19.351417'
+  updated_at: '2025-12-18 17:03:30.547332'
+  last_sync: '2026-01-30T18:21:04.554547Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/62175
+metadata:
+  name: Demo mode - Nissan Insurance
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  steps:
+  - column_name: custom_steps
+    id: 96709
+    case_id: 62175
+    text1: <p>Navigate to <strong>Home</strong> screen &gt; tap on Nissan Insurance
+      card</p>
+    text2: null
+    text3: <p>Verify Demo mode modal is displayed</p>
+    text4: null
+    display_order: 1

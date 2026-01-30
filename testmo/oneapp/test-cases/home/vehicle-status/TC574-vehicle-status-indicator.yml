@@ -1,0 +1,29 @@
+testmo:
+  case_id: 574
+  folder_id: 51
+  project_id: 2
+  folder_path: home/vehicle-status
+  folder_name_ui: Vehicle Status
+  created_at: '2023-08-01 23:08:19.927985'
+  updated_at: '2025-10-11 13:48:09.004951'
+  last_sync: '2026-01-30T18:21:09.150721Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/574
+metadata:
+  name: Vehicle status indicator
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has a Vehicle status indictor active</p>
+  steps:
+  - column_name: custom_steps
+    id: 743
+    case_id: 574
+    text1: <p>1. Vehicle data returned<br />2. Tap on Vehicle status indicator</p>
+    text2: null
+    text3: <p>1. User should see Vehicle status indicator on vehicle image<br />1.
+      User should see Vehicle Status screen with Vehicle tab showing Vehicle statuses</p>
+    text4: null
+    display_order: 1

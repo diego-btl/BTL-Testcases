@@ -1,0 +1,31 @@
+testmo:
+  case_id: 24330
+  folder_id: 3084
+  project_id: 2
+  folder_path: home/ncf
+  folder_name_ui: NCF
+  created_at: '2024-10-18 16:26:21.066144'
+  updated_at: '2024-11-30 00:16:30.915169'
+  last_sync: '2026-01-30T18:21:06.725282Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/24330
+metadata:
+  name: Contract Details - Buyer Details
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>Login with an NCF account &gt; <a href="https://www.notion.so/bethinklabs/d0f8f58385a94c51ab27ce3ee1ef1e51?v=caf06428a7ac41aa96541666be242cd7">https://www.notion.so/bethinklabs/d0f8f58385a94c51ab27ce3ee1ef1e51?v=caf06428a7ac41aa96541666be242cd7</a></p>
+  steps:
+  - column_name: custom_steps
+    id: 37910
+    case_id: 24330
+    text1: <ol><li>Login into the app</li><li>In the Home page screen</li><li>Click
+      over <strong>NCF Account</strong> card</li><li>Open the <strong>NCF Account</strong>
+      screen</li><li>Click the option <strong>Contract Details</strong></li><li>Open
+      the <strong>Buyer Details</strong> screen</li></ol>
+    text2: null
+    text3: <p>The data it is displaying correctly</p>
+    text4: null
+    display_order: 1

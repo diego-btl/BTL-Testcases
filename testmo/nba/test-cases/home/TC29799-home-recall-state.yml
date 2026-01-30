@@ -1,0 +1,47 @@
+testmo:
+  case_id: 29799
+  folder_id: 3762
+  project_id: 5
+  folder_path: home
+  folder_name_ui: Home
+  created_at: '2024-12-20 15:21:40.308281'
+  updated_at: '2025-04-02 17:55:03.457349'
+  last_sync: '2026-01-30T18:20:38.403087Z'
+  url: https://bethinklabs.testmo.net/repositories/5/cases/29799
+metadata:
+  name: Home - Recall State
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>The user is already logged in</li><li>Have an vehicle with
+    a recall</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 48622
+    case_id: 29799
+    text1: <p>Select a vehicle with a recall</p>
+    text2: null
+    text3: <p>User should see the recall state:</p><ul><li>greyed tint on vehicle
+      image</li><li>orange glow around vehicle image</li><li>red exclamation symbol</li><li><code>Agendar
+      Servico de Recall</code> CTA</li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 49017
+    case_id: 29799
+    text1: <p>Tap on the recall symbol on the vehicle image</p>
+    text2: null
+    text3: <p>User should be brought to the recall page</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 48623
+    case_id: 29799
+    text1: <p>Tap on the <code>Agendar Servico de Recall</code> CTA</p>
+    text2: null
+    text3: <p>User should see a webview open to continue recall flow</p>
+    text4: null
+    display_order: 3

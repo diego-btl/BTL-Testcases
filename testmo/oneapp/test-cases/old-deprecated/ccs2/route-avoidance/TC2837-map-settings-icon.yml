@@ -1,0 +1,28 @@
+testmo:
+  case_id: 2837
+  folder_id: 6788
+  project_id: 2
+  folder_path: old-deprecated/ccs2/route-avoidance
+  folder_name_ui: Route Avoidance
+  created_at: '2023-09-13 08:57:12.713164'
+  updated_at: '2026-01-06 17:47:49.611971'
+  last_sync: '2026-01-30T18:21:07.444595Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/2837
+metadata:
+  name: Map Settings icon
+  priority: 13
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>AVK2 Vehicle</p>
+  steps:
+  - column_name: custom_steps
+    id: 3204
+    case_id: 2837
+    text1: <ol><li>Tap on Map tab</li></ol>
+    text2: null
+    text3: <ol><li>User should see the Map screen with Map Settings icon</li></ol>
+    text4: null
+    display_order: 1

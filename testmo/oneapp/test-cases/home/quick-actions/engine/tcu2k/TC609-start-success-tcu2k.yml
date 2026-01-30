@@ -1,0 +1,36 @@
+testmo:
+  case_id: 609
+  folder_id: 4166
+  project_id: 2
+  folder_path: home/quick-actions/engine/tcu2k
+  folder_name_ui: TCU2K
+  created_at: '2023-08-01 23:08:20.396436'
+  updated_at: '2025-09-22 14:01:52.754015'
+  last_sync: '2026-01-30T18:21:09.060346Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/609
+metadata:
+  name: Start - Success - TCU2K
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<p>User has a TCU2K vehicle</p><p>User is on the Home screen</p><p>User
+    has sent an Engine Start request</p><p>CheckEngineServiceRequest API response:<br
+    /><code>{</code></p><p><code>  "data": {</code></p><p><code>    "checkEngineServiceRequest":
+    {</code></p><p><code>      "__typename": "ServiceRequestResult",</code></p><p><code> 
+        "status": "SUCCESS",</code></p><p><code>      "statusDetails": null</code></p><p><code> 
+      }</code></p><p><code>  }</code></p><p><code>}</code></p>'
+  steps:
+  - column_name: custom_steps
+    id: 778
+    case_id: 609
+    text1: <p>Engine Start request has been resolved into success</p>
+    text2: null
+    text3: <p>An "Engine" button icon changed to "STOP"</p><p>A success toast "&lt;year
+      and model&gt; Engine Started" is displayed at the bottom<br /><br />A countdown
+      timer (10 min) and "Engine Running" text are displayed in the Hero section instead
+      of Fuel Remaining</p>
+    text4: null
+    display_order: 1

@@ -1,0 +1,39 @@
+testmo:
+  case_id: 9002
+  folder_id: 411
+  project_id: 2
+  folder_path: home/additional-driver
+  folder_name_ui: Additional Driver
+  created_at: '2023-11-21 08:00:56.484976'
+  updated_at: '2024-10-17 17:57:34.769274'
+  last_sync: '2026-01-30T18:21:07.350996Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/9002
+metadata:
+  name: PD - AD  List Screen - Accepted Invites
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has an AVK2 vehicle and is PRIMARY_DRIVER</p><p>User is on
+    the home screen</p>
+  steps:
+  - column_name: custom_steps
+    id: 9489
+    case_id: 9002
+    text1: <p>Tap on the Additional Driver card</p>
+    text2: null
+    text3: <p>User should see the Additional Driver screen load and open [DriverInvites
+      - iOS]</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 9497
+    case_id: 9002
+    text1: <p>Data returned contains <code>ACCEPTED</code> invites</p>
+    text2: null
+    text3: <p>User should see the accepted invites listed with First Name, Last Name,
+      and accepted status</p>
+    text4: null
+    display_order: 2

@@ -1,0 +1,33 @@
+testmo:
+  case_id: 32318
+  folder_id: 4086
+  project_id: 6
+  folder_path: vehicle-page
+  folder_name_ui: Vehicle Page
+  created_at: '2025-04-01 17:50:44.543956'
+  updated_at: '2025-04-02 20:04:57.114410'
+  last_sync: '2026-01-30T18:20:45.665766Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/32318
+metadata:
+  name: Vehicle Selector
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: User is on Map tab
+  steps:
+  - column_name: custom_steps
+    id: 52689
+    case_id: 32318
+    text1: '1. Tap on Vehicle Selector<br />
+
+      2. Select another vehicle'
+    text2: null
+    text3: '1. User should see the vehicle selector<br />
+
+      2. User should see vehicle selector close and corresponding vehicle selected
+      on Map tab'
+    text4: null
+    display_order: 1

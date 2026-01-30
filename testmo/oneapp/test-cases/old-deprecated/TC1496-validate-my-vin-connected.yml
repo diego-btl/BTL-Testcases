@@ -1,0 +1,37 @@
+testmo:
+  case_id: 1496
+  folder_id: 105
+  project_id: 2
+  folder_path: old-deprecated
+  folder_name_ui: Old / Deprecated
+  created_at: '2023-08-28 20:13:23.040217'
+  updated_at: '2025-09-19 21:13:59.475462'
+  last_sync: '2026-01-30T18:21:08.136290Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/1496
+metadata:
+  name: Validate My Vin - Connected
+  priority: 13
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has entered a valid VIN for a connected vehicle that has
+    previously been added</p>
+  steps:
+  - column_name: custom_steps
+    id: 1861
+    case_id: 1496
+    text1: <p>1. Tap Validate VIN<br />2. Tap on a phone number<br />3. Tap on a link<br
+      />4. Tap the checkbox<br />5. Tap SAVE<br />6. Tap Ok</p>
+    text2: null
+    text3: <p>1. User should see the Terms and Conditions screen for connected vehicles
+      and SAVE should be disabled<br />2. User should see dialer open with phone number<br
+      />3. User should see link open in webview or browser<br />4. User should see
+      SAVE become enabled<br />5. User should see modal appear indicating successful
+      VIN validation<br />6. Modal is dismissed, user is taken to home screen with
+      vehicle added</p>
+    text4: null
+    display_order: 1
+  notes: <p>[VW] only use the pathfinder and frontier accounts for add/remove vehicle<br
+    />- this depends on MW response</p>

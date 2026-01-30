@@ -1,0 +1,32 @@
+testmo:
+  case_id: 61887
+  folder_id: 6757
+  project_id: 2
+  folder_path: login-flow/onboarding-cards
+  folder_name_ui: Onboarding cards
+  created_at: '2025-10-28 16:43:12.605128'
+  updated_at: '2025-10-28 16:45:36.729555'
+  last_sync: '2026-01-30T18:21:05.682205Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/61887
+metadata:
+  name: User taps NO on onboarding modal
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has launched the app</p><p>All 4.5 apis have been resolved
+    i,e. VehicleStaticData, FinancialVehicles(NCI only), PendingVehicles, VehicleSubscriptions,
+    VehicleCapabilities</p><p>Modal shows on app</p>
+  steps:
+  - column_name: custom_steps
+    id: 94701
+    case_id: 61887
+    text1: <p>Tap on No</p>
+    text2: null
+    text3: <p>Modal dismisses</p><p>User is on Home screen now unless before the modal
+      appeared, user has navigated to anywhere else on app, once the modal is dismissed,
+      user is shown the screen he was on last</p>
+    text4: null
+    display_order: 1

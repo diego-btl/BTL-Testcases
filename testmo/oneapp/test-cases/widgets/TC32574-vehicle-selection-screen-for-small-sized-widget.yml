@@ -1,0 +1,50 @@
+testmo:
+  case_id: 32574
+  folder_id: 4176
+  project_id: 2
+  folder_path: widgets
+  folder_name_ui: Widgets
+  created_at: '2025-04-25 12:54:59.135842'
+  updated_at: '2025-04-29 16:32:37.163707'
+  last_sync: '2026-01-30T18:21:06.082899Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/32574
+metadata:
+  name: Vehicle Selection screen for Small Sized widget
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>Either Nissan and/or Infiniti app is installed on ios</p><p>Related
+    small Widget has been added on Device home screen.</p>
+  steps:
+  - column_name: custom_steps
+    id: 53254
+    case_id: 32574
+    text1: <p>Long press Widget</p><p>Choose Edit Widget option</p>
+    text2: null
+    text3: '<ul><li>For small sized widget: user sees<ul><li>Vehicle Status</li></ul></li><li>Name
+      under header: MyNissan/ MyInfiniti</li><li>Description: "See your vehicle status
+      at a glance"</li><li>Selector title: Vehicle</li><li><p>Button: Choose</p><p> </p></li></ul>'
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 53255
+    case_id: 32574
+    text1: <p>Tap on Choose </p><p>Select a vehicle</p>
+    text2: null
+    text3: <p>The front face of widget should show the vehicle chosen along with its
+      relevant status</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 53256
+    case_id: 32574
+    text1: <p>Tap on the front face of widget</p>
+    text2: null
+    text3: '<p>App should open with the vehicle chosen on widget as the selected behivle
+      on garage</p><p>Along with all the APIs get triggered when app is launched,</p><p><code>wdgetdynamicdata</code>
+      api also gets triggered. (NOTE: this api gets triggered once every 30 mins)</p>'
+    text4: null
+    display_order: 3

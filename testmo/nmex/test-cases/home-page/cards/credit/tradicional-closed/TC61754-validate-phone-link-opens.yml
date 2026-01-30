@@ -1,0 +1,31 @@
+testmo:
+  case_id: 61754
+  folder_id: 6735
+  project_id: 6
+  folder_path: home-page/cards/credit/tradicional-closed
+  folder_name_ui: Tradicional - Closed
+  created_at: '2025-10-14 15:22:21.016776'
+  updated_at: '2025-10-14 15:49:16.154553'
+  last_sync: '2026-01-30T18:20:44.948184Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/61754
+metadata:
+  name: Validate Phone Link Opens
+  priority: 1
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>Closed Credit screen is visible</li><li>Phone button is rendered</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 94427
+    case_id: 61754
+    text1: <ol><li>Tap the phone link</li><li>Wait for the phone client to open</li></ol>
+    text2: null
+    text3: <ul><li>Phone compose UI opens</li><li>Recipient field is prefilled with
+      the API’s phone or fallback address if API is null<ul><li>INF &gt; <code>+528005463464</code></li><li>NIS<ul><li>Tradicional
+      / Leasing &gt;<code> +524491395871</code></li><li>Selectiviti &gt; <code>+524499944825</code></li></ul></li></ul></li></ul>
+    text4: null
+    display_order: 1
+  notes: '<p>Fallback Email: <a href="mailto:membershipexperience@nissan.com.mx">membershipexperience@nissan.com.mx</a></p>'

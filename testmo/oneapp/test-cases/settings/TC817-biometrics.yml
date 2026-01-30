@@ -1,0 +1,63 @@
+testmo:
+  case_id: 817
+  folder_id: 48
+  project_id: 2
+  folder_path: settings
+  folder_name_ui: Settings
+  created_at: '2023-08-01 23:08:23.166023'
+  updated_at: '2025-06-04 21:36:42.736281'
+  last_sync: '2026-01-30T18:21:08.667309Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/817
+metadata:
+  name: Biometrics
+  priority: 1
+  type: functional
+  status: active
+  estimate: 120000000
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is on the Settings screen and has biometrics on</p>
+  steps:
+  - column_name: custom_steps
+    id: 986
+    case_id: 817
+    text1: <p>Tap to toggle biometrics off</p>
+    text2: null
+    text3: <p>User should see biometrics toggled off and disabled<br /> </p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 1163
+    case_id: 817
+    text1: <p>Tap to toggle biometrics on</p>
+    text2: null
+    text3: <p>User should see an alert modal to enter their password</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 1164
+    case_id: 817
+    text1: <p>Enter an incorrect password</p>
+    text2: null
+    text3: <p>User should see an error in the alert modal</p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 1165
+    case_id: 817
+    text1: <p> Enter correct password</p>
+    text2: null
+    text3: <p>User should see the biometrics prompt</p>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 1166
+    case_id: 817
+    text1: <p>Accept the biometrics prompt</p>
+    text2: null
+    text3: <p>User should see biometrics toggled on and enabled<br />User should see
+      the success toast &lt;Biometric Sign In turned on&gt;</p>
+    text4: null
+    display_order: 5
+  notes: <p> iOS does not need to enter password to enable biometrics, only Android</p>

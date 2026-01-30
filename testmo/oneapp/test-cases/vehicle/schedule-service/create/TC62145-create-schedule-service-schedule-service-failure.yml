@@ -1,0 +1,55 @@
+testmo:
+  case_id: 62145
+  folder_id: 6787
+  project_id: 2
+  folder_path: vehicle/schedule-service/create
+  folder_name_ui: Create
+  created_at: '2025-12-12 15:21:34.108839'
+  updated_at: '2026-01-20 21:18:43.679975'
+  last_sync: '2026-01-30T18:21:04.743401Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/62145
+metadata:
+  name: Create Schedule Service - Schedule Service - Failure
+  priority: 1
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>User has completed all screens and arrived at Review Service
+    Request screen</li><li>All booking information is filled and ready for submission</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 97174
+    case_id: 62145
+    text1: "<p>Mock the <code>CreateServiceAppointment</code> mutation to return failure:</p><pre><code>{\n\
+      \  \"data\": {\n    \"createServiceAppointment\": {\n      \"__typename\": \"\
+      ResponseStatus\",\n      \"success\": false\n    }\n  }\n}</code></pre><p>On\
+      \ <code>Review Service Request</code> screen, tap <code>SCHEDULE SERVICE</code>\
+      \ button</p>"
+    text2: null
+    text3: '<ul><li><code>CreateServiceAppointment</code> mutation is triggered</li><li>Error
+      modal appears with title: <code>Failed to Schedule Service</code></li><li>Modal
+      message: <code>Sorry, something went wrong when scheduling your service appointment.
+      Would you like to retry?</code></li><li><code>No, cancel</code> button is displayed</li><li><code>Yes,
+      retry</code> button is displayed</li></ul>'
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 97175
+    case_id: 62145
+    text1: <p>Tap <code>No, cancel</code> button on error modal</p>
+    text2: null
+    text3: <ul><li>Modal is dismissed</li><li>User remains on <code>Review Service
+      Request</code> screen</li><li>All booking information is preserved</li></ul>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 97176
+    case_id: 62145
+    text1: <p>Tap <code>SCHEDULE SERVICE</code> button again, then tap <code>Yes,
+      retry</code> button on error modal</p>
+    text2: null
+    text3: <ul><li><code>CreateServiceAppointment</code> mutation is triggered again</li></ul>
+    text4: null
+    display_order: 3

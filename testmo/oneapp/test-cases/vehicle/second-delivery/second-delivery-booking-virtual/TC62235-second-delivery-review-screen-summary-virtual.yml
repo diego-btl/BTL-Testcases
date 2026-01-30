@@ -1,0 +1,44 @@
+testmo:
+  case_id: 62235
+  folder_id: 6820
+  project_id: 2
+  folder_path: vehicle/second-delivery/second-delivery-booking-virtual
+  folder_name_ui: Second Delivery - Booking (Virtual)
+  created_at: '2025-12-19 20:54:29.342479'
+  updated_at: '2025-12-19 23:48:32.348748'
+  last_sync: '2026-01-30T18:21:03.795870Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/62235
+metadata:
+  name: Second Delivery - Review Screen Summary (Virtual)
+  priority: 1
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<ul><li>User logged in</li><li>Eligible VIN in focus</li><li>Eligibility:
+    <code>SecondDeliveryEligibilityResponseRDRRecordFound</code></li><li>Feature Flag:
+    <code>EnableSecondDelivery=true</code></li><li>User has selected a valid date/time
+    on Select Date and Time screen</li><li>User has entered contact information and
+    optional notes on Contact and Notes screen</li><li>User tapped NEXT on Contact
+    and Notes and is on Review screen</li></ul>'
+  steps:
+  - column_name: custom_steps
+    id: 97115
+    case_id: 62235
+    text1: <p>Verify <code>Review</code> screen is displayed</p>
+    text2: null
+    text3: '<ul><li>Screen title: <code>Review</code></li><li>Progress indicator shows
+      Step 3 of 3</li><li><code>MyINFINITI Expert</code> header is displayed</li><li><code>1-hr
+      Virtual Appointment</code> subtitle is displayed</li><li>Vehicle image is displayed
+      (in-focus VIN model)</li><li><strong>Date and Time summary card</strong> with:<ul><li><strong>Calendar
+      icon</strong> on left</li><li>Card title: <code>Date and Time</code></li><li><code>Edit</code>
+      button on right</li><li>Date and time values displayed (e.g., "Date: Monday,
+      December 22, 2025", "Time: 11:00 AM")</li></ul></li><li><strong>Contact Information
+      summary card</strong> with:<ul><li><strong>Phone icon</strong> on left</li><li>Card
+      title: <code>Contact Information</code></li><li><code>Edit</code> button on
+      right</li><li>Contact values displayed (First Name, Last Name, Phone Number,
+      Email)</li></ul></li><li><code>BOOK VIRTUAL APPOINTMENT</code> button is visible
+      and enabled</li><li><code>CANCEL</code> button is visible</li></ul>'
+    text4: null
+    display_order: 1

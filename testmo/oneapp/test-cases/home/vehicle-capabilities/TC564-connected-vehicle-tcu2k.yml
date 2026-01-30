@@ -1,0 +1,34 @@
+testmo:
+  case_id: 564
+  folder_id: 54
+  project_id: 2
+  folder_path: home/vehicle-capabilities
+  folder_name_ui: Vehicle Capabilities
+  created_at: '2023-08-01 23:08:19.795137'
+  updated_at: '2024-10-17 17:56:23.776593'
+  last_sync: '2026-01-30T18:21:09.175056Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/564
+metadata:
+  name: Connected Vehicle (TCU2K)
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User's vehicle is TCU2K and enrolled</p><p>Accounts:</p><figure
+    class="table"><table><tbody><tr><td> </td><td>NNA</td><td>NCI</td></tr><tr><td>Nissan</td><td><a
+    href="mailto:muranoprod2@gmail.com">muranoprod2@gmail.com</a> / Telematics123!</td><td><a
+    href="mailto:nci037@nissancanada.com">nci037@nissancanada.com</a> / 2020qashqai</td></tr><tr><td>Infiniti</td><td><a
+    href="mailto:prodqx60@gmail.com">prodqx60@gmail.com</a> / QATester@123$   ???</td><td><a
+    href="mailto:alan.kot+20@bethinklabs.com">alan.kot+20@bethinklabs.com</a> / Telematics123!</td></tr></tbody></table></figure>
+  steps:
+  - column_name: custom_steps
+    id: 733
+    case_id: 564
+    text1: <p> Login to account with a connected vehicle</p>
+    text2: null
+    text3: <p>The user should see the home screen with the connected vehicle <a href="https://app.sympli.io/app#!/designs/628fec4d4a54c25cceeb1e47/specs/assets?tags=1.0%20-%201.4%20%7C%20Home%20Landing">design</a> <br
+      /> </p>
+    text4: null
+    display_order: 1

@@ -1,0 +1,41 @@
+testmo:
+  case_id: 62178
+  folder_id: 3600
+  project_id: 2
+  folder_path: home/dealer-offers
+  folder_name_ui: Dealer Offers
+  created_at: '2025-12-17 15:52:05.062250'
+  updated_at: '2025-12-19 15:16:46.418693'
+  last_sync: '2026-01-30T18:21:04.535348Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/62178
+metadata:
+  name: Dealer Offers - Search Dealers
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<ul><li>The user is on the <strong>Dealer Offers</strong> screen</li><li>The
+    FF needs to be <code>"EnableDealerOffers": "true"</code></li></ul>'
+  steps:
+  - column_name: custom_steps
+    id: 96717
+    case_id: 62178
+    text1: <ol><li>Tap on<strong> Search Dealers</strong></li></ol>
+    text2: null
+    text3: <ul><li>The user should be redirect to <strong>Find a Dealer </strong>screen</li><li>The
+      searchBox should display with the placeholder <code>Search</code> and the icon</li><li>The
+      list should be empty with the text:<ul><li>No search results found in your area.
+      Search by <strong>ZIP Code</strong></li></ul></li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 96775
+    case_id: 62178
+    text1: <ol><li>Enter a ZIP code - <strong>37067</strong></li><li>Click DONE(in
+      iOS)</li></ol>
+    text2: null
+    text3: <ul><li>The results should display in the UI</li></ul>
+    text4: null
+    display_order: 2

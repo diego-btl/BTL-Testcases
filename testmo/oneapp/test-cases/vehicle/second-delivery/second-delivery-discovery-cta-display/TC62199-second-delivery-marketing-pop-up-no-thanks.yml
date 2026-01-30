@@ -1,0 +1,57 @@
+testmo:
+  case_id: 62199
+  folder_id: 6818
+  project_id: 2
+  folder_path: vehicle/second-delivery/second-delivery-discovery-cta-display
+  folder_name_ui: Second Delivery - Discovery & CTA Display
+  created_at: '2025-12-19 17:16:43.668140'
+  updated_at: '2026-01-06 18:51:58.000168'
+  last_sync: '2026-01-30T18:21:04.297775Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/62199
+metadata:
+  name: Second Delivery - Marketing Pop-up - No Thanks
+  priority: 1
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>Feature Flag <code>EnableSecondDelivery</code> is set to
+    <code>true</code></li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 97037
+    case_id: 62199
+    text1: "<p>Mock <code>SecondDeliveryEligibility</code> with:</p><pre><code>{\n\
+      \  \"marketingMessage\": {\n    \"versionToDisplay\": \"NO_THANKS\",\n    \"\
+      displayMarketingMessageThresholdInDays\": 60,\n    \"remindMeLaterThresholdInDays\"\
+      : 8\n  },\n  \"daysSincePurchased\": 15\n}</code></pre><p>Login to app</p>"
+    text2: null
+    text3: <ul><li>Marketing pop-up appears</li><li><code>BOOK NOW</code> button displayed
+      (primary)</li><li><code>NO THANKS</code> button displayed (secondary)</li><li><strong>Pop-up
+      Title:</strong> <code>MyINFINITI Expert</code></li><li><strong>Pop-up Body:</strong>
+      <code>Discover more about your new {vehicle model}</code></li><li><strong>Pop-up
+      Description:</strong> <code>MyINFINITI Expert is a complimentary meeting with
+      an INFINITI product and technology expert to demonstrate the features of your
+      new {vehicle model}. Schedule your one-hour virtual meeting to learn more about
+      the technology features and product functions that suit your lifestyle.</code></li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 97038
+    case_id: 62199
+    text1: <p>Tap <code>NO THANKS</code> button, then kill app and relaunch</p>
+    text2: null
+    text3: '<ul><li>Pop-up closes on dismissal</li><li>Backend tracks dismissal and
+      sets <code>versionToDisplay: null</code></li></ul>'
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 97039
+    case_id: 62199
+    text1: <p>Verify pop-up never returns on next launch</p>
+    text2: null
+    text3: <ul><li>Marketing pop-up does NOT appear</li><li>User goes directly to
+      Home screen</li><li>Backend permanently dismissed the popup for this vehicle</li></ul>
+    text4: null
+    display_order: 3

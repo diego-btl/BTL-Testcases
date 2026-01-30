@@ -1,0 +1,89 @@
+testmo:
+  case_id: 36706
+  folder_id: 4085
+  project_id: 6
+  folder_path: home-page
+  folder_name_ui: Home Page
+  created_at: '2025-05-21 13:52:14.373060'
+  updated_at: '2025-10-28 16:36:36.274422'
+  last_sync: '2026-01-30T18:20:45.264034Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/36706
+metadata:
+  name: Garantía screen - Logic
+  priority: 3
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>Have an account with the next vehicles:</p><ul><li>Connected</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 61514
+    case_id: 36706
+    text1: <ol><li>Login into the app</li><li>Check the card for <code>Garantía</code></li></ol>
+    text2: null
+    text3: <ul><li>The <code>Garantía</code> card should be under the <code>Servicio
+      y mantenimiento</code> card</li><li>The <code>Garantía</code> card shouldn't
+      be editable (you can't reorganized)</li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 61515
+    case_id: 36706
+    text1: '<ol><li>Login into the app</li><li>Check the card for <code>Garantía</code><ol><li><code>"colorStatus":
+      "GREEN"</code></li><li><code>"warrantyStatus": "ACTIVE"</code></li></ol></li></ol>'
+    text2: null
+    text3: <ul><li>The icon/asset should be displaying <strong>GREEN </strong>and
+      the subtitle:<ul><li><code>Tu garantía está vigente</code></li></ul></li></ul>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 61516
+    case_id: 36706
+    text1: '<ol><li>Check the card for <code>Garantía</code><ol><li><code>"colorStatus":
+      "YELLOW"</code></li><li><code>"warrantyStatus": "ACTIVE"</code></li></ol></li></ol>'
+    text2: null
+    text3: <ul><li>The icon/asset should be displaying <strong>GREEN </strong>and
+      the subtitle:<ul><li><code>Tu garantía está en riesgo</code></li></ul></li></ul>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 61517
+    case_id: 36706
+    text1: '<ol><li>Check the card for <code>Garantía</code><ol><li><code>"colorStatus":
+      "RED"</code></li><li><code>"warrantyStatus": "ACTIVE"</code></li></ol></li></ol>'
+    text2: null
+    text3: <ul><li>The icon/asset should be displaying <strong>GREEN </strong>and
+      the subtitle:<ul><li><code>Tu garantía está en riesgo</code></li></ul></li></ul>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 61518
+    case_id: 36706
+    text1: '<ol><li>Check the card for <code>Garantía</code><ol><li><code>"colorStatus":
+      "RED"</code></li><li><code>"warrantyStatus": "EXPIRED"</code></li></ol></li></ol>'
+    text2: null
+    text3: <ul><li>The icon/asset should be displaying <strong>GREEN </strong>and
+      the subtitle:<ul><li><code>Tu garantía está finalizada</code></li></ul></li></ul>
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 61519
+    case_id: 36706
+    text1: <ol><li>Login into the app</li><li>Check the card for <code>Garantía</code></li></ol>
+    text2: null
+    text3: <ul><li>The card should be displaying the correct asset (Check images attached)</li></ul>
+    text4: null
+    display_order: 6
+  - column_name: custom_steps
+    id: 61520
+    case_id: 36706
+    text1: <ol><li>Login into the app</li><li>Check the card for <code>Garantía</code></li><li>The
+      response is <strong>ERROR</strong>, <strong>EMPTY</strong> or <strong>NO DATA</strong></li></ol>
+    text2: null
+    text3: <ul><li>The card shouldn't be displaying</li></ul><figure class="image
+      image_resized" style="width:53.16%;"><img src="/attachments/view/8639" alt="8639"
+      /></figure>
+    text4: null
+    display_order: 7

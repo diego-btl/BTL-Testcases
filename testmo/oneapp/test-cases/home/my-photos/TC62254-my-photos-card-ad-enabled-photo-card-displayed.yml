@@ -1,0 +1,35 @@
+testmo:
+  case_id: 62254
+  folder_id: 3083
+  project_id: 2
+  folder_path: home/my-photos
+  folder_name_ui: My Photos
+  created_at: '2026-01-06 21:26:40.850839'
+  updated_at: '2026-01-07 22:00:12.989307'
+  last_sync: '2026-01-30T18:21:03.641513Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/62254
+metadata:
+  name: My Photos Card - AD - Enabled - Photo card displayed
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<ul><li>The user has a CCS2 - AVK2 Vehicle MY 26 or older OR MY27
+    and newer</li><li>User is an AD</li><li>VehicleCapabilities return REMOTE_PHOTOS_SHOCK
+    and REMOTE_PHOTOS_COMMAND</li></ul><p>NOTE: the AD account: <a href="mailto:enrique.alcaide@bethinklabs.com">enrique.alcaide@bethinklabs.com</a>/Telematics123!</p>'
+  steps:
+  - column_name: custom_steps
+    id: 97231
+    case_id: 62254
+    text1: '<p>1. Mock VehicleCapabilities to return "enabled": true, "subscribed":
+      true for both REMOTE_PHOTOS_SHOCK and REMOTE_PHOTOS_COMMAND services</p><p>2.
+      Navigate to the Home screen</p>'
+    text2: null
+    text3: <p>The 'My Photos' card is displayed on the Home screen in the enabled
+      state</p>
+    text4: null
+    display_order: 1
+  notes: '<p>Note: The card could have a different Icon and subtitle if the Photo
+    Consent is not accepted (MyINFINITI)</p>'

@@ -1,0 +1,33 @@
+testmo:
+  case_id: 30165
+  folder_id: 81
+  project_id: 2
+  folder_path: support/let-us-help
+  folder_name_ui: Let Us Help
+  created_at: '2025-02-05 15:06:27.429679'
+  updated_at: null
+  last_sync: '2026-01-30T18:21:06.299074Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/30165
+metadata:
+  name: Accident Helper Items
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: User is on the accident helper screen
+  steps:
+  - column_name: custom_steps
+    id: 49085
+    case_id: 30165
+    text1: 1. Expand and collapse each item
+    text2: null
+    text3: '1. User should see each item expand to display text with an accompanying
+      image and collapse<br />
+
+      <br />
+
+      Note: Only one section should be able to be expanded at a time'
+    text4: null
+    display_order: 1

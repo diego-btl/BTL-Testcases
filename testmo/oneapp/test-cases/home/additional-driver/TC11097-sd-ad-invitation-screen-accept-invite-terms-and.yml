@@ -1,0 +1,72 @@
+testmo:
+  case_id: 11097
+  folder_id: 411
+  project_id: 2
+  folder_path: home/additional-driver
+  folder_name_ui: Additional Driver
+  created_at: '2023-11-29 08:34:32.651324'
+  updated_at: '2025-09-22 15:10:43.308947'
+  last_sync: '2026-01-30T18:21:07.196448Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/11097
+metadata:
+  name: SD - AD Invitation Screen - Accept invite - Terms and Conditions
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is logged into an account with a pending AD invite</p><p>User
+    is on the Invitation screen</p>
+  steps:
+  - column_name: custom_steps
+    id: 11676
+    case_id: 11097
+    text1: <p>Tap on Accept Invite</p>
+    text2: null
+    text3: <p>User should see a loading spinner, then the Terms and Conditions screen
+      with terms in the body, an unchecked check box for accepting the terms, and
+      a disabled save button</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 11677
+    case_id: 11097
+    text1: <p>Scroll through the terms</p>
+    text2: null
+    text3: <p>User should be able to scroll through and view the terms</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 11678
+    case_id: 11097
+    text1: <p>Tap on a hyperlinked phone number</p>
+    text2: null
+    text3: <p>User should see the option to call the number</p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 11682
+    case_id: 11097
+    text1: <p>Tap on a hyperlinked web link</p>
+    text2: null
+    text3: <p>User should see web link open in the external browser</p>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 11683
+    case_id: 11097
+    text1: <p>Tap to check the check box</p>
+    text2: null
+    text3: <p>User should see check box checked and Save button enabled</p>
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 11684
+    case_id: 11097
+    text1: <p>Tap on Save</p>
+    text2: null
+    text3: <p>User should see a loading spinner, then redirected to the Code Verification
+      screen</p>
+    text4: null
+    display_order: 6

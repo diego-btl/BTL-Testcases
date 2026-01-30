@@ -1,0 +1,68 @@
+testmo:
+  case_id: 913
+  folder_id: 41
+  project_id: 2
+  folder_path: login-flow
+  folder_name_ui: Login Flow
+  created_at: '2023-08-14 23:48:59.188955'
+  updated_at: '2025-02-06 20:28:35.438804'
+  last_sync: '2026-01-30T18:21:08.401037Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/913
+metadata:
+  name: Biometrics - First Login
+  priority: 2
+  type: functional
+  status: active
+  estimate: 600000000
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>Fresh installation or app cache cleared</li><li>User is already
+    on the <code>Login</code> page</li><li>User has Biometrics enabled on their device</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 1194
+    case_id: 913
+    text1: <ul><li>Enter a valid email on the <code>Email</code> text field</li><li>Enter
+      a valid password on the <code>Password</code> text field</li></ul>
+    text2: null
+    text3: <ul><li>The text fields should display the input from the user</li><li>The
+      <code>SIGN IN</code> button should remain inactive until both fields are filled</li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 1195
+    case_id: 913
+    text1: <p>Tap on the <code>SIGN IN</code> button</p>
+    text2: null
+    text3: <ul><li>A loading spinner should be displayed on the screen</li><li>A <code>Biometrics</code>
+      / <code>Face ID</code> modal is displayed on the screen</li></ul>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 1196
+    case_id: 913
+    text1: <p>Tap <code>Yes</code> on the <code>Biometrics</code> / <code>Face ID</code>
+      modal</p>
+    text2: null
+    text3: <ul><li>On Android devices, a <code>Native Biometric Login</code> prompt
+      should appear</li><li>On iOS devices, the user should be driven to the <code>Terms
+      of Service</code> page</li></ul>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 1197
+    case_id: 913
+    text1: <p><strong>On Android devices</strong>, place the finger on the Fingerprint
+      sensor</p>
+    text2: null
+    text3: <ul><li>If the Fingerprint validation is incorrect, the <code>Native Biometric
+      Login</code> prompt will display the proper error message</li><li>If the Fingerprint
+      validation is correct the user should be driven to the <code>Terms of Service</code>
+      page</li></ul>
+    text4: null
+    display_order: 4
+  notes: <ul><li>If biometric authentication fails twice, user should see the fallback
+    alert with the option to enter password to enable biometrics</li><li>If user declines
+    either of pop ups, biometrics should be disabled</li></ul><p> </p><p>Update needed
+    for FaceID</p>

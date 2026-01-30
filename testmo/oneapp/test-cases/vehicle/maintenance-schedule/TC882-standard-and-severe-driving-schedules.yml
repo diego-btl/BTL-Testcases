@@ -1,0 +1,30 @@
+testmo:
+  case_id: 882
+  folder_id: 91
+  project_id: 2
+  folder_path: vehicle/maintenance-schedule
+  folder_name_ui: Maintenance Schedule
+  created_at: '2023-08-04 12:31:21.046529'
+  updated_at: '2025-10-11 10:16:29.883695'
+  last_sync: '2026-01-30T18:21:08.492671Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/882
+metadata:
+  name: Standard and Severe Driving Schedules
+  priority: 1
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  steps:
+  - column_name: custom_steps
+    id: 1061
+    case_id: 882
+    text1: <p>Switch between standard and severe driving schedules</p>
+    text2: null
+    text3: <p>User should see the maintenance card and milestones update accordingly.
+      The selected driving schedule should be saved in the local cache.</p>
+    text4: null
+    display_order: 1
+  notes: '<p>Automation: just checking UI elements are displayed as can''t be compared
+    against backed response</p>'

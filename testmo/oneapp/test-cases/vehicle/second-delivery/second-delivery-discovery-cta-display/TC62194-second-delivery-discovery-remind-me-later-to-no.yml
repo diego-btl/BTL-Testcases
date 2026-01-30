@@ -1,0 +1,54 @@
+testmo:
+  case_id: 62194
+  folder_id: 6818
+  project_id: 2
+  folder_path: vehicle/second-delivery/second-delivery-discovery-cta-display
+  folder_name_ui: Second Delivery - Discovery & CTA Display
+  created_at: '2025-12-19 16:22:42.291865'
+  updated_at: '2026-01-06 18:51:58.000168'
+  last_sync: '2026-01-30T18:21:04.362978Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/62194
+metadata:
+  name: Second Delivery - Discovery - Remind Me Later to No Thanks
+  priority: 1
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>Feature Flag <code>EnableSecondDelivery</code> is set to
+    <code>true</code></li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 97013
+    case_id: 62194
+    text1: "<p>Mock <code>SecondDeliveryEligibility</code> with:</p><pre><code class=\"\
+      editor-plain language-plain code-block\">{\n  \"marketingMessage\": {\n    \"\
+      versionToDisplay\": \"REMIND_ME_LATER\",\n    \"displayMarketingMessageThresholdInDays\"\
+      : 60,\n    \"remindMeLaterThresholdInDays\": 8\n  },\n  \"daysSincePurchased\"\
+      : 15\n}</code></pre><p>Login to app</p>"
+    text2: null
+    text3: <ul><li>Marketing pop-up appears</li><li><code>BOOK NOW</code> button displayed
+      (primary)</li><li><code>REMIND ME LATER</code> button displayed (secondary)</li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 97014
+    case_id: 62194
+    text1: <p>Tap <code>REMIND ME LATER</code> button</p>
+    text2: null
+    text3: <ul><li>Pop-up closes</li><li>Backend tracks user dismissal with 8-day
+      reminder timer</li><li>User returns to Home screen</li></ul>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 97015
+    case_id: 62194
+    text1: <p>Logout and wait 8+ days, then login again</p>
+    text2: null
+    text3: <ul><li>Marketing pop-up appears again (re-prompt after 8-day timer)</li><li><code>BOOK
+      NOW</code> button displayed (primary)</li><li><code>NO THANKS</code> button
+      displayed (secondary, replaces REMIND ME LATER)</li><li>Backend has changed
+      <code>versionToDisplay</code> to <code>"NO_THANKS"</code></li></ul>
+    text4: null
+    display_order: 3

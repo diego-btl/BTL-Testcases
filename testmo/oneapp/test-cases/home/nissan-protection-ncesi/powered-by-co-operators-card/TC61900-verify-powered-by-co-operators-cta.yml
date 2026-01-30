@@ -1,0 +1,60 @@
+testmo:
+  case_id: 61900
+  folder_id: 6759
+  project_id: 2
+  folder_path: home/nissan-protection-ncesi/powered-by-co-operators-card
+  folder_name_ui: Powered by Co-operators card
+  created_at: '2025-10-29 16:28:22.267371'
+  updated_at: '2025-10-29 16:35:07.635069'
+  last_sync: '2026-01-30T18:21:05.624132Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/61900
+metadata:
+  name: Verify "powered by Co-operators" CTA
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>user is on the main powered by Co-operators screen</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 94740
+    case_id: 61900
+    text1: <p>Tap on the <code>Learn More</code> CTA</p>
+    text2: null
+    text3: '<p>A modal should appear with the following</p><ul><li>Title: <code>Learn
+      More</code></li><li>Body: <code>You are now being redirected to Co-operators
+      website</code></li><li>Button: <code>Continue</code></li></ul><figure class="image"><img
+      src="/attachments/view/8651" alt="8651" /></figure>'
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 94741
+    case_id: 61900
+    text1: <p>Tap on Continue</p>
+    text2: null
+    text3: <p>The correct link from the feature flag should be opened based on brand
+      and language in an <strong>EXTERNAL</strong> browser</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 94742
+    case_id: 61900
+    text1: <p>Tap on the Log In CTA</p>
+    text2: null
+    text3: '<p>A modal should appear with the following</p><ul><li>Title: <code>Log
+      In</code></li><li>Body: <code>You are now being redirected to Co-operators website</code></li><li>Button:
+      <code>Continue</code></li></ul><figure class="image"><img src="/attachments/view/8652"
+      alt="8652" /></figure>'
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 94743
+    case_id: 61900
+    text1: <p>Tap on Continue</p>
+    text2: null
+    text3: <p>The correct link from the feature flag should be opened based on brand
+      and language in an <strong>EXTERNAL</strong> browser</p>
+    text4: null
+    display_order: 4

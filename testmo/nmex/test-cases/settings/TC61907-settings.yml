@@ -1,0 +1,32 @@
+testmo:
+  case_id: 61907
+  folder_id: 4089
+  project_id: 6
+  folder_path: settings
+  folder_name_ui: Settings
+  created_at: '2025-10-30 16:26:15.320960'
+  updated_at: '2025-10-30 17:11:09.007449'
+  last_sync: '2026-01-30T18:20:44.903085Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/61907
+metadata:
+  name: Settings
+  priority: 1
+  type: functional
+  status: active
+  estimate: 60000000
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is logged in</p>
+  steps:
+  - column_name: custom_steps
+    id: 94787
+    case_id: 61907
+    text1: <ol><li>Tap <code>Más</code> option</li></ol>
+    text2: null
+    text3: <ul><li>User should see the <code>Más</code> screen</li><li>The next sections
+      should be displaying<ul><li>Greetings message + Name</li><li>Distributor card</li><li>Account
+      Preferences</li><li>Theme</li><li>Security</li><li>Legal</li><li>Banner</li><li>CTA
+      to Close Session</li><li>Version number &gt; X.X.X</li></ul></li></ul>
+    text4: null
+    display_order: 1

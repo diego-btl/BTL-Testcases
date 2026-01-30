@@ -1,0 +1,41 @@
+testmo:
+  case_id: 30160
+  folder_id: 81
+  project_id: 2
+  folder_path: support/let-us-help
+  folder_name_ui: Let Us Help
+  created_at: '2025-02-05 15:06:27.429679'
+  updated_at: '2025-08-22 12:49:04.236485'
+  last_sync: '2026-01-30T18:21:06.313076Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/30160
+metadata:
+  name: Stolen Vehicle
+  priority: 12
+  type: functional
+  status: active
+  estimate: 60000000
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is on the Support screen</p>
+  steps:
+  - column_name: custom_steps
+    id: 49076
+    case_id: 30160
+    text1: <p>Tap the Stolen Vehicle item</p>
+    text2: null
+    text3: <p>The user should see the stolen vehicle screen<br /> </p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 49077
+    case_id: 30160
+    text1: <p>Tap Call Stolen Vehicle Locator</p>
+    text2: null
+    text3: '<p>The user should be able to call the following number: 1(844)711-8100
+      (NIS NNA)</p>'
+    text4: null
+    display_order: 2
+  notes: '<ul><li>INF NCI - 1-855-892-7418</li><li>NIS NCI - 1-844-711-8200</li><li>INF
+    NNA - 1- 800-334-7858</li></ul><p> </p><p>iOS automation: can''t automate tapping
+    on Call CTA as simulator doesn''t have a phone/dialer app to validate number</p>'

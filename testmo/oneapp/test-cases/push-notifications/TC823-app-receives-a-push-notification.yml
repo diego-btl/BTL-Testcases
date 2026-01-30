@@ -1,0 +1,29 @@
+testmo:
+  case_id: 823
+  folder_id: 73
+  project_id: 2
+  folder_path: push-notifications
+  folder_name_ui: Push Notifications
+  created_at: '2023-08-01 23:08:23.211747'
+  updated_at: '2025-09-19 21:19:54.507180'
+  last_sync: '2026-01-30T18:21:08.654137Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/823
+metadata:
+  name: App Receives a Push Notification
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ol><li>User is logged in</li><li>App has Push Notifications registered</li><li>Device
+    allows Push Notifications</li></ol>
+  steps:
+  - column_name: custom_steps
+    id: 992
+    case_id: 823
+    text1: <p>Trigger a push notification</p>
+    text2: null
+    text3: <p>User should be able to see the push notifications arrive</p>
+    text4: null
+    display_order: 1

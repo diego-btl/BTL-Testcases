@@ -1,0 +1,41 @@
+testmo:
+  case_id: 790
+  folder_id: 103
+  project_id: 2
+  folder_path: map/connect-calendar
+  folder_name_ui: Connect Calendar
+  created_at: '2023-08-01 23:08:22.990185'
+  updated_at: '2025-12-19 15:42:30.872395'
+  last_sync: '2026-01-30T18:21:08.690791Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/790
+metadata:
+  name: Calendar chip
+  priority: 2
+  type: functional
+  status: active
+  estimate: 120000000
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>User is in the <strong>Upcoming Events</strong> screen</li><li>The
+    user selects an <code>EV</code> or <code>EVAVK2</code> vehicles</li><li>Calendar
+    permissions are allowed</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 959
+    case_id: 790
+    text1: <ol><li>Tap on the <strong>Calendar Events</strong> chip</li></ol>
+    text2: null
+    text3: <ul><li>User should see map view show location of vehicle + user + event
+      locations with POI cards (able to scroll through them if there are more than
+      one)</li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 1256
+    case_id: 790
+    text1: <ol><li>Tap on the list view</li></ol>
+    text2: null
+    text3: <ul><li>The user should see the <strong>Upcoming Events</strong> screen</li></ul>
+    text4: null
+    display_order: 2

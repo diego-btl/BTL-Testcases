@@ -1,0 +1,51 @@
+testmo:
+  case_id: 62206
+  folder_id: 6818
+  project_id: 2
+  folder_path: vehicle/second-delivery/second-delivery-discovery-cta-display
+  folder_name_ui: Second Delivery - Discovery & CTA Display
+  created_at: '2025-12-19 17:18:11.585340'
+  updated_at: '2026-01-06 18:51:58.000168'
+  last_sync: '2026-01-30T18:21:04.185304Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/62206
+metadata:
+  name: Second Delivery - Marketing Pop-up - QX80 Exclusion
+  priority: 1
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>Feature Flag <code>EnableSecondDelivery</code> is set to
+    <code>true</code></li><li>Vehicle is Infiniti QX80</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 96922
+    case_id: 62206
+    text1: "<p>Mock <code>SecondDeliveryEligibility</code> with:</p><pre><code>{\n\
+      \  \"leadCar\": {\n    \"brand\": \"Infiniti\",\n    \"model\": \"QX80\",\n\
+      \    \"retailSalesDate\": \"2024-09-15\"\n  },\n  \"marketingMessage\": {\n\
+      \    \"versionToDisplay\": \"REMIND_ME_LATER\",\n    \"displayMarketingMessageThresholdInDays\"\
+      : 0,\n    \"remindMeLaterThresholdInDays\": 8\n  },\n  \"daysSincePurchased\"\
+      : 15\n}</code></pre><p>Login to app</p>"
+    text2: null
+    text3: '<ul><li>Marketing pop-up does NOT appear</li><li>Threshold check: <code>daysSincePurchased
+      (15) &gt; displayMarketingMessageThresholdInDays (0)</code> = Hidden</li><li>User
+      sees only CTA cards (no modal popup)</li></ul>'
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 96923
+    case_id: 62206
+    text1: "<p>Mock <code>SecondDeliveryEligibility</code> with:</p><pre><code>{\n\
+      \  \"leadCar\": {\n    \"brand\": \"Infiniti\",\n    \"model\": \"QX80\",\n\
+      \    \"retailSalesDate\": \"2024-10-01\"\n  },\n  \"marketingMessage\": {\n\
+      \    \"versionToDisplay\": \"REMIND_ME_LATER\",\n    \"displayMarketingMessageThresholdInDays\"\
+      : 60,\n    \"remindMeLaterThresholdInDays\": 8\n  },\n  \"daysSincePurchased\"\
+      : 15\n}</code></pre><p>Login to app</p>"
+    text2: null
+    text3: '<ul><li>Marketing pop-up appears</li><li>Threshold check: <code>daysSincePurchased
+      (15) &lt;= displayMarketingMessageThresholdInDays (60)</code> = Shown</li><li><code>BOOK
+      NOW</code> and <code>REMIND ME LATER</code> buttons displayed</li></ul>'
+    text4: null
+    display_order: 2

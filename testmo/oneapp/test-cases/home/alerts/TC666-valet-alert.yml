@@ -1,0 +1,19 @@
+testmo:
+  case_id: 666
+  folder_id: 70
+  project_id: 2
+  folder_path: home/alerts
+  folder_name_ui: Alerts
+  created_at: '2023-08-01 23:08:21.126568'
+  updated_at: '2025-10-11 18:31:06.709871'
+  last_sync: '2026-01-30T18:21:08.902007Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/666
+metadata:
+  name: Valet Alert
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>The user is on the Alerts sheet and has alerts set for their vehicle</p>

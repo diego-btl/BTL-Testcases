@@ -1,0 +1,19 @@
+testmo:
+  case_id: 678
+  folder_id: 70
+  project_id: 2
+  folder_path: home/alerts
+  folder_name_ui: Alerts
+  created_at: '2023-08-01 23:08:21.280432'
+  updated_at: '2025-10-24 16:46:19.477604'
+  last_sync: '2026-01-30T18:21:08.876767Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/678
+metadata:
+  name: Create Curfew Alert Max number reached
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has reached the maximum number (2) of curfew alerts</p>

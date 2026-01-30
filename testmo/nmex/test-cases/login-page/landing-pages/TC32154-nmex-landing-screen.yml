@@ -1,0 +1,35 @@
+testmo:
+  case_id: 32154
+  folder_id: 4141
+  project_id: 6
+  folder_path: login-page/landing-pages
+  folder_name_ui: Landing Pages
+  created_at: '2025-04-01 17:50:43.394789'
+  updated_at: '2025-04-03 17:59:46.675796'
+  last_sync: '2026-01-30T18:20:46.037155Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/32154
+metadata:
+  name: NMEX - Landing screen
+  priority: 1
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>App is either a fresh installation or the cache is cleared</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 52536
+    case_id: 32154
+    text1: <p>Launch app by tapping on the app icon</p>
+    text2: null
+    text3: <ul><li>The splash screen is displayed</li><li>The <code>Allow access to
+      device's location</code> modal may appear (depending on the OS version)</li></ul><p>The
+      landing screen is displayed with the following CTAs:</p><ul><li>"Iniciar Sesión"
+      button</li><li>"Registrarse" button</li><li>"Modo Demostración"</li><li>"PRIVACIDAD
+      Y TÉRMINOS"</li></ul><p>See attached screenshot as reference for Placement and
+      colours etc of the different elements on the screen</p>
+    text4: null
+    display_order: 1
+  notes: <ul><li>Test case needs updating - location prompt occurs after successful
+    login, appears once onboarding is shown (iOS)</li></ul>

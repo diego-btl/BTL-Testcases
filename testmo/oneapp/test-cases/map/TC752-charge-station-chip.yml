@@ -1,0 +1,30 @@
+testmo:
+  case_id: 752
+  folder_id: 46
+  project_id: 2
+  folder_path: map
+  folder_name_ui: Map
+  created_at: '2023-08-01 23:08:22.228531'
+  updated_at: '2025-09-22 14:58:22.335204'
+  last_sync: '2026-01-30T18:21:08.804195Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/752
+metadata:
+  name: Charge Station Chip
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has an EV selected</p>
+  steps:
+  - column_name: custom_steps
+    id: 921
+    case_id: 752
+    text1: <p>1. Go to the map screen<br />2. Tap the Charge Stations chip</p>
+    text2: null
+    text3: <p>1. User should see Charge Stations as the first category button<br />2.
+      User should see a search for EV charge stations according to EV map settings
+      and results are shown on the map with lightning icons</p>
+    text4: null
+    display_order: 1

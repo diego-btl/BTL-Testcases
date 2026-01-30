@@ -1,0 +1,45 @@
+testmo:
+  case_id: 62183
+  folder_id: 2444
+  project_id: 2
+  folder_path: home/charge/necn-nissan-energy-charge-network
+  folder_name_ui: NECN - NISSAN ENERGY Charge Network
+  created_at: '2025-12-17 17:07:39.295662'
+  updated_at: '2026-01-15 19:06:05.008073'
+  last_sync: '2026-01-30T18:21:04.494773Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/62183
+metadata:
+  name: NECN - Unenrollment Flow - FAILURE - TO CONFIRM WITH PM
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<p>User has an EV/EV2</p><p>"EnablePlugAndCharge": "true"</p><p>AccountStatus
+    API &gt; "status": "ACTIVE"</p><p>User is on the NECN screen</p>'
+  steps:
+  - column_name: custom_steps
+    id: 96751
+    case_id: 62183
+    text1: <p>Tap  the 'Deactivate Account' button on the 'Account Status' card</p>
+    text2: null
+    text3: <p>ChargeSessionStatus API is triggered </p><p>The loading state is displayed</p><p>The
+      'Deactivate Account?' modal is triggered:</p><ul><li>The copy is 'Are you sure
+      you want to deactivate your NISSAN ENERGY Charge Network account?'</li><li>'Deactivate'
+      and 'Cancel' buttons</li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 96753
+    case_id: 62183
+    text1: <p>Tap the 'Deactivate' button</p><p>Breakpoint and abort the CancelChargePlan
+      API</p>
+    text2: null
+    text3: <p>The 'Failed to deactivate account, try again' toast is displayed</p><p>User
+      remains on the same 'NISSAN ENERGY Charge Network' screen</p>
+    text4: null
+    display_order: 2
+  notes: <p>* This test case needs confirmation from the PM since iOS shows the 'Something
+    went wrong' toast, Android 'Failed to deactivate account, try again' toast</p><p><a
+    href="https://bethinklabs.slack.com/archives/C052PH0HNHJ/p1765994919925809">https://bethinklabs.slack.com/archives/C052PH0HNHJ/p1765994919925809</a></p>

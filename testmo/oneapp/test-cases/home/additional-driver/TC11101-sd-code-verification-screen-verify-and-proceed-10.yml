@@ -1,0 +1,36 @@
+testmo:
+  case_id: 11101
+  folder_id: 411
+  project_id: 2
+  folder_path: home/additional-driver
+  folder_name_ui: Additional Driver
+  created_at: '2023-11-29 09:58:55.132237'
+  updated_at: '2024-10-17 17:57:34.769274'
+  last_sync: '2026-01-30T18:21:07.177741Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/11101
+metadata:
+  name: SD - Code Verification Screen - Verify and Proceed - 10 attempts - Return
+    Home
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is logged into an account with a pending AD invite</p><p>User
+    is on the Code Verification screen</p><p>User has exhausted all 10 attempts</p><p>In
+    order to receive the OTP code, you will need to have mocked user own number in
+    <code>VehiclesStaticData</code> and <code>UserMobileNumber</code> or setting a
+    breakpoint on <code>GenerateOTPForSharedDriver</code> and modifying the request
+    with your own number</p>
+  steps:
+  - column_name: custom_steps
+    id: 11715
+    case_id: 11101
+    text1: <p>Tap on Return to Home</p>
+    text2: null
+    text3: <p>User should see a loading spinner, then redirected to the home screen
+      which updates and no longer shows the pending invite (since code verification
+      has failed and invitation has been declined)</p>
+    text4: null
+    display_order: 1

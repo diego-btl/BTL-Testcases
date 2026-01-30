@@ -1,0 +1,31 @@
+testmo:
+  case_id: 854
+  folder_id: 78
+  project_id: 2
+  folder_path: wearables/wearable-location
+  folder_name_ui: Wearable - Location
+  created_at: '2023-08-01 23:08:23.446663'
+  updated_at: '2025-09-19 21:21:41.546506'
+  last_sync: '2026-01-30T18:21:08.572484Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/854
+metadata:
+  name: Address
+  priority: 12
+  type: functional
+  status: active
+  estimate: 60000000
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User's vehicle has a location and is on the Location screen </p><p>(Home
+    screen &gt; My Car Finder</p><p>Map&gt; Vehicle location</p>
+  steps:
+  - column_name: custom_steps
+    id: 1023
+    case_id: 854
+    text1: null
+    text2: null
+    text3: <p>User should see the vehicle's address under the map. User should see
+      3 dots as the loading state.</p>
+    text4: null
+    display_order: 1

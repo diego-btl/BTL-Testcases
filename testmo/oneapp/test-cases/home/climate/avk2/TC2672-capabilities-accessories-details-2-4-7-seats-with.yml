@@ -1,0 +1,39 @@
+testmo:
+  case_id: 2672
+  folder_id: 4170
+  project_id: 2
+  folder_path: home/climate/avk2
+  folder_name_ui: AVK2
+  created_at: '2023-09-07 21:10:07.533427'
+  updated_at: '2024-10-17 17:57:34.769274'
+  last_sync: '2026-01-30T18:21:07.818957Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/2672
+metadata:
+  name: Capabilities - Accessories Details - 2, 4, 7 seats with Cool
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>AVK2 vehicle<br /><br />User is on Climate Details screen</p>
+  steps:
+  - column_name: custom_steps
+    id: 3038
+    case_id: 2672
+    text1: <ol><li>Accessories Details returns 2 seat configuration with <code>HEATING_AND_COOLING</code></li><li>Accessories
+      Details returns 4 seat configuration with <code>HEATING_AND_COOLING</code></li><li>Accessories
+      Details returns 7 seat configuration with <code>HEATING_AND_COOLING</code></li></ol>
+    text2: null
+    text3: <p>1/2/3. User should see {n} seat configuration with heat and cool options
+      + defrost/deice options in the Climate Control</p>
+    text4: null
+    display_order: 1
+  notes: "<pre><code class=\"editor-plain language-plain code-block\">          \"\
+    seatHeater\": {\n            \"__typename\": \"SeatHeaterAccessoryCapability\"\
+    ,\n            \"enabled\": true,\n            \"accessories\": {\n          \
+    \    \"__typename\": \"SeatHeaterAccessory\",\n              \"driverSeat\": \"\
+    HEATING_AND_COOLING\",\n              \"assistantSeat\": \"HEATING_AND_COOLING\"\
+    ,\n              \"secondLeftSeat\": null,\n              \"secondRightSeat\"\
+    : null,\n              \"secondCentreSeat\": null,\n              \"thirdLeftSeat\"\
+    : null,\n              \"thirdRightSeat\": null\n            }\n          },</code></pre>"

@@ -1,0 +1,35 @@
+testmo:
+  case_id: 2670
+  folder_id: 4170
+  project_id: 2
+  folder_path: home/climate/avk2
+  folder_name_ui: AVK2
+  created_at: '2023-09-07 21:10:07.504090'
+  updated_at: '2025-09-22 14:48:02.577540'
+  last_sync: '2026-01-30T18:21:07.825789Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/2670
+metadata:
+  name: Capabilities - Accessories Details - Minimum parameters
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>AVK2 vehicle<br /><br />User is on Climate Details screen</p>
+  steps:
+  - column_name: custom_steps
+    id: 3036
+    case_id: 2670
+    text1: <ol><li>Accessories Details does not return any parameters for seatHeater
+      or steeringHeat (or they're set to false)</li></ol>
+    text2: null
+    text3: <ol><li>User should not see any seat controls + steering wheel  options
+      in the Climate Control card<ol><li>User should see Climate Control status</li><li>User
+      should see default temperature set to 75 (add a breakpoint for the VehicleClimate
+      Defaults and fresh install the app to see 75 default temp) (range from 61-88)
+      (NNA)</li><li>User should see current ext temp (if vehicle has location)</li><li>User
+      should see Make Default button set to off</li><li>User should see Turn Climate
+      On/Off (depending on whether climate is on/off)</li></ol></li></ol>
+    text4: null
+    display_order: 1

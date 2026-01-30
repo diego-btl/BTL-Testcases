@@ -1,0 +1,33 @@
+testmo:
+  case_id: 2730
+  folder_id: 413
+  project_id: 2
+  folder_path: vehicle/mils
+  folder_name_ui: MILs
+  created_at: '2023-09-07 21:38:17.987674'
+  updated_at: '2024-10-17 17:57:34.769274'
+  last_sync: '2026-01-30T18:21:07.644112Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/2730
+metadata:
+  name: 12-Volt Battery Warning
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>AVK2 vehicle<br />User has REMOTE_VEHICLE_STATUS capability enabled</p>
+  steps:
+  - column_name: custom_steps
+    id: 3095
+    case_id: 2730
+    text1: <ol><li>Vehicle.mils includes<br />-{..."type":BATTERY_HIGH, "active":true}
+      OR<br />-{..."type":BATTERY_LOW, "active":true}</li><li>Tap on the MIL Status
+      card</li><li>Tap on the 12-Volt Battery Warning card</li></ol>
+    text2: null
+    text3: <ol><li> User should see <code>12-Volt Battery Warning</code> MIL is listed
+      on MIL Status card on home screen and vehicle screen</li><li>User should see
+      the Vehicle Status screen with the MIL tab in focus with the corresponding MIL
+      listed</li><li>User should see the MIL description screen</li></ol>
+    text4: null
+    display_order: 1

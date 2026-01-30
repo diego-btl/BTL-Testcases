@@ -1,0 +1,38 @@
+testmo:
+  case_id: 1571
+  folder_id: 7143
+  project_id: 2
+  folder_path: old-deprecated/schedule-service
+  folder_name_ui: Schedule Service
+  created_at: '2023-08-28 20:13:24.331783'
+  updated_at: '2024-10-17 17:57:05.010933'
+  last_sync: '2026-01-30T18:21:08.009360Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/1571
+metadata:
+  name: Review Service Request - Appointment Details
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: User is on Review Sevice Request screen
+  steps:
+  - column_name: custom_steps
+    id: 1936
+    case_id: 1571
+    text1: '1. Tap on Appointment Details caret<br />
+
+      2. Modify any of the appointment details (change date, modify optional preferences,
+      etc.)<br />
+
+      3. Tap on Next'
+    text2: null
+    text3: '1. User should be brought back to the Select Date and Time screen<br />
+
+      2. User should be able to modify appointment details<br />
+
+      3. User should see Review Service Request screen with the modified appointment
+      details'
+    text4: null
+    display_order: 1

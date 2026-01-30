@@ -1,0 +1,99 @@
+testmo:
+  case_id: 62167
+  folder_id: 6800
+  project_id: 2
+  folder_path: demo-mode/vehicle
+  folder_name_ui: Vehicle
+  created_at: '2025-12-16 22:41:45.025124'
+  updated_at: '2025-12-18 17:03:42.669952'
+  last_sync: '2026-01-30T18:21:04.583415Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/62167
+metadata:
+  name: Demo Mode - Vehicle Page - AVK2
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>Vehicle selected is the <code>Rogue AVK2</code> (Rogue Platinum
+    Demo)</p>
+  steps:
+  - column_name: custom_steps
+    id: 96612
+    case_id: 62167
+    text1: <p>Tap Vehicle in the bottom nav </p>
+    text2: null
+    text3: <p>User should see dummy data for the Rogue Platinum Demo on the Status
+      Section:</p><ul><li>MIL Icon</li><li>Vehicle Status Icon</li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 96619
+    case_id: 62167
+    text1: <p>Tap on the MIL Status card (12-Volt Battery Warning) or the Vehicle
+      Status card (Window Open)</p>
+    text2: null
+    text3: <p>The user should be navigated to the Vehicle Status Page showing the
+      tab depending on the user selection</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 96620
+    case_id: 62167
+    text1: <p>On the Vehicle Status Page, tap on the MIL tab and click the <code>12-Volt
+      Battery Warning</code> card</p>
+    text2: null
+    text3: <p>The user should see the <code>12-Volt Battery Warning</code> MIL Page,
+      tapping on the <code>Schedule Service</code> CTA should trigger the demo mode
+      alert modal</p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 96621
+    case_id: 62167
+    text1: <p>Return to the Vehicle Status Page, tap on the Vehicle tab</p>
+    text2: null
+    text3: <p>User should se a card for <code>Vehicle Status card (Front Window)</code>
+      without any caret, or being clickable</p>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 96622
+    case_id: 62167
+    text1: <p>Return to the Vehicle Page and Tap on the <code>View Maintenance Schedule</code>
+      card</p>
+    text2: null
+    text3: <p>The user should be driven to the Maintenance Schedule page with dummy
+      data for the Rogue AVK2, the sections that should be displayed are:</p><ul><li>Driving
+      Conditions</li><li>Mileage Until Next Service</li><li>Estimated Next Service</li><li>Maintenance
+      Reminders</li><li>Vehicle Mileage</li></ul>
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 96623
+    case_id: 62167
+    text1: <p>Tap on any of the elements of the page except for the <code>See All</code>
+      button on the Parts Replacement Reminder Section</p>
+    text2: null
+    text3: <p>User should see the demo mode alert modal</p>
+    text4: null
+    display_order: 6
+  - column_name: custom_steps
+    id: 96624
+    case_id: 62167
+    text1: <p>Tap on  the <code>See All</code> button on the Maintenance Reminders
+      Section </p>
+    text2: null
+    text3: <p>The user should be navigated to the Maintenance Reminders page with
+      data for future and overdue parts reminders</p>
+    text4: null
+    display_order: 7
+  - column_name: custom_steps
+    id: 96625
+    case_id: 62167
+    text1: <p>Tap on any of the elements of the page except (i)</p>
+    text2: null
+    text3: <p>User should see the demo mode alert modal</p>
+    text4: null
+    display_order: 8

@@ -1,0 +1,61 @@
+testmo:
+  case_id: 29805
+  folder_id: 3769
+  project_id: 5
+  folder_path: home/add-vehicle
+  folder_name_ui: Add Vehicle
+  created_at: '2024-12-20 15:21:40.308281'
+  updated_at: null
+  last_sync: '2026-01-30T18:20:38.381183Z'
+  url: https://bethinklabs.testmo.net/repositories/5/cases/29805
+metadata:
+  name: Add Vehicle - Permissions
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has no accepted permissions previously</p>
+  steps:
+  - column_name: custom_steps
+    id: 48640
+    case_id: 29805
+    text1: <p>Tap on the camera field and decline permissions</p>
+    text2: null
+    text3: <p>User should see a modal prompting them to enable their camera permissions
+      in settings</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 48641
+    case_id: 29805
+    text1: <p>Tap Ajustes</p>
+    text2: null
+    text3: <p>Device Settings should open</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 48642
+    case_id: 29805
+    text1: <p>Tap OK</p>
+    text2: null
+    text3: <p>Modal should close</p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 48643
+    case_id: 29805
+    text1: <p>Repeat step 1 but accept permissions</p>
+    text2: null
+    text3: <p>User should see their camera view on the screen</p>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 48644
+    case_id: 29805
+    text1: <p>Tap on the flashlight button</p>
+    text2: null
+    text3: <p>User should see their flashlight toggle on/off</p>
+    text4: null
+    display_order: 5

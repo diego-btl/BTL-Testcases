@@ -1,0 +1,30 @@
+testmo:
+  case_id: 62033
+  folder_id: 6782
+  project_id: 2
+  folder_path: login-flow/garage-load-optimization
+  folder_name_ui: Garage Load optimization
+  created_at: '2025-11-27 15:45:51.530621'
+  updated_at: '2026-01-20 20:12:09.337180'
+  last_sync: '2026-01-30T18:21:05.054106Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/62033
+metadata:
+  name: Hero image
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>Clean device without app installed.</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 95710
+    case_id: 62033
+    text1: <ol><li>Do a fresh install of app</li><li>Log in with any valid account</li><li>Wait
+      until all the APIs are loaded (spinning icon disappears)</li><li>Kill the app</li><li>Cold
+      start (Reopen) the app</li></ol>
+    text2: null
+    text3: <p>The vehicle image in the Hero Section should show right away</p>
+    text4: null
+    display_order: 1

@@ -1,0 +1,77 @@
+testmo:
+  case_id: 62210
+  folder_id: 66
+  project_id: 2
+  folder_path: home/charge
+  folder_name_ui: Charge
+  created_at: '2025-12-19 17:48:34.922965'
+  updated_at: '2025-12-19 19:48:48.312407'
+  last_sync: '2026-01-30T18:21:04.043177Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/62210
+metadata:
+  name: P&C Toggle - Toggle initially disabled States
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has an EV</p><p>User is on charge screen</p><p><code>GrantFullPlugAndCharge</code>
+    FF is enabled</p><p>NECN AccountStatus is <code>Active</code></p><p>User is a
+    Primary driver</p><p>Toggle is disabled</p>
+  steps:
+  - column_name: custom_steps
+    id: 96915
+    case_id: 62210
+    text1: <p>Tap on the disabled toggle</p>
+    text2: null
+    text3: '<p><code>updatedPnCServiceStatus</code> api is triggered and passes the
+      current VIN and <code>"pncServiceStatus": "ENABLE"</code> as parameters</p><p><code>PNCServiceStatus</code>
+      api is polled every 3 seconds</p>'
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 96916
+    case_id: 62210
+    text1: <p>Mock <code>pncStatus</code> response to be <code>DISABLING</code></p>
+    text2: null
+    text3: <p>Toggle should stay in the disabled state but should become inactive
+      (cannot be tapped) </p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 96917
+    case_id: 62210
+    text1: <p>Repeat step 1 and mock <code>pncStatus</code> response to be <code>DISABLED</code></p>
+    text2: null
+    text3: <p>Toggle should stay in the disabled state but should become inactive
+      (cannot be tapped) and an error toast should be displayed</p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 96918
+    case_id: 62210
+    text1: <p>Repeat step 1 and mock <code>pncStatus</code> response to be <code>PENDING/NA/null</code></p>
+    text2: null
+    text3: <p>Toggle should display the copy <code>ERROR</code> instead of the toggle
+      and an error toast should be displayed</p>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 96919
+    case_id: 62210
+    text1: <p>Mock <code>pncStatus</code> response to be ENABLED</p>
+    text2: null
+    text3: <p>Toggle should flip to on and continue to be active (can be tapped again)</p>
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 96920
+    case_id: 62210
+    text1: <p>Tap on the (now enabled) toggle again</p>
+    text2: null
+    text3: '<p><code>updatedPnCServiceStatus</code> api is triggered and passes the
+      current VIN and <code>"pncServiceStatus": "DISABLE"</code> as parameters</p><p><code>PNCServiceStatus</code>
+      api is polled every 3 seconds</p>'
+    text4: null
+    display_order: 6

@@ -1,0 +1,33 @@
+testmo:
+  case_id: 11106
+  folder_id: 59
+  project_id: 2
+  folder_path: home/quick-actions/lock-unlock
+  folder_name_ui: Lock/Unlock
+  created_at: '2024-01-04 07:51:27.805210'
+  updated_at: '2025-09-19 18:16:36.039962'
+  last_sync: '2026-01-30T18:21:07.172623Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/11106
+metadata:
+  name: Unlock - Success - AVK/EV/AVK2
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has an AVK/EV/AVK2 vehicle</p><p>User has sent an Unlock
+    request</p>
+  steps:
+  - column_name: custom_steps
+    id: 11726
+    case_id: 11106
+    text1: <p>Unlock request has been resolved into a success</p>
+    text2: null
+    text3: <p>User should see a toast "&lt;year and model&gt; unlocked." at the bottom
+      of the screen.</p><p>"Lock" and "Unlock" buttons are displayed in the default
+      state.</p><p>"Unlocked" status is displayed in the Hero section.</p><p>"Unlocked"
+      status is displayed on the Controls card, the last updated time is changed to
+      "Just Now"</p>
+    text4: null
+    display_order: 1

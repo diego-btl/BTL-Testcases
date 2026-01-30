@@ -1,0 +1,234 @@
+testmo:
+  case_id: 32450
+  folder_id: 4085
+  project_id: 6
+  folder_path: home-page
+  folder_name_ui: Home Page
+  created_at: '2025-04-01 19:05:00.709485'
+  updated_at: '2025-08-22 17:34:00.064759'
+  last_sync: '2026-01-30T18:20:45.379513Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/32450
+metadata:
+  name: Placas card - Connected
+  priority: 1
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>The licence plate has some restrictions:</p><ul><li>Minimum of
+    4 characters and max of 7</li><li>No special characters (Not able to type special
+    characters)</li><li>The combination can be <strong>letters</strong> and <strong>numbers</strong></li><li>More
+    info about Licence Plate for <a href="https://en.wikipedia.org/wiki/Vehicle_registration_plates_of_Mexico">NMEX</a> </li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 52832
+    case_id: 32450
+    text1: <p>1. See <code>Placas</code> card</p>
+    text2: null
+    text3: <ul><li>The Placa card should be at the top of the List</li><li>The Placas
+      card shouldn't be editable (you can't reorganized)</li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 52833
+    case_id: 32450
+    text1: <p>1. Tap <code>Placas</code> card</p>
+    text2: null
+    text3: '<p>User should see the <code>Placa</code> screen</p><ul><li>The Title
+      should be displaying &gt; Placas</li><li>The title of the Vehicle should be
+      displaying IE: <code>Mi 2024 QX80</code></li><li>The car placeholder should
+      be showing</li><li>If the user doesn''t have Placa, the placeholder should be
+      showing &gt; <code>#######</code></li><li>The field for placas should be editable</li><li>The
+      subtitle <code>Holograma (Opcional)</code> should be showing</li><li>The list
+      of Hologramas should be clickable and be able to selected and deselected  </li><li>The
+      <code>GUARDAR</code> button won''t be enable till user types a license plate
+      with the minimum requirements<br /> </li></ul><p><strong>Note: Fields should
+      be empty if user has not previously saved license plate to app</strong></p>'
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 52834
+    case_id: 32450
+    text1: <ol><li>Tap <code>Placas</code> card</li><li>Edit the <code>Placa</code>
+      field</li><li>Click the button <code>GUARDAR</code></li><li>Force the call to
+      <strong>FAIL</strong></li></ol>
+    text2: null
+    text3: <p>A failing toast will be displaying  &gt; <code>Placa no agregada, por
+      favor inténtalo de nuevo.</code></p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 52835
+    case_id: 32450
+    text1: <ol><li>Tap <code>Placas</code> card</li><li>Edit the <code>Placa</code>
+      field</li><li>Change it end with <strong>even</strong> number</li><li>Select
+      a <code>Holograma</code> with <code>E</code> value</li><li>Click the button
+      <code>GUARDAR</code></li></ol>
+    text2: null
+    text3: <p>A successful toast will be displaying  &gt; <code>Placa agregada</code></p><p>The
+      card should be showing:</p><ul><li>The placa value &gt; <code>XXXXXXX • <mark
+      class="marker-green">Hoy circulas</mark></code> (in green)</li><li>The text
+      underneath &gt; <code>Circulas diario</code> </li></ul>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 52836
+    case_id: 32450
+    text1: <ol><li>Tap <code>Placas</code> card</li><li>Edit the <code>Placa</code>
+      field</li><li>Change it end with <strong>even</strong> number</li><li>Select
+      a <code>Holograma</code> with <code>00</code> value</li><li>Click the button
+      <code>GUARDAR</code></li></ol>
+    text2: null
+    text3: <p>A successful toast will be displaying  &gt; <code>Placa agregada</code></p><p>The
+      card should be showing:</p><ul><li>The placa value &gt; <code>XXXXXXX • <mark
+      class="marker-green">Hoy circulas</mark></code> (in green)</li><li>The text
+      underneath &gt; <code>Circulas diario</code> </li></ul>
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 52837
+    case_id: 32450
+    text1: <ol><li>Tap <code>Placas</code> card</li><li>Edit the <code>Placa</code>
+      field</li><li>Change it end with <strong>even</strong> number</li><li>Select
+      a <code>Holograma</code> with <code>0</code> value</li><li>Click the button
+      <code>GUARDAR</code></li></ol>
+    text2: null
+    text3: <p>A successful toast will be displaying  &gt; <code>Placa agregada</code></p><p>The
+      card should be showing:</p><ul><li>The placa value &gt; <code>XXXXXXX • <mark
+      class="marker-green">Hoy circulas</mark></code> (in green)</li><li>The text
+      underneath &gt; <code>Circulas diario</code> </li></ul>
+    text4: null
+    display_order: 6
+  - column_name: custom_steps
+    id: 52838
+    case_id: 32450
+    text1: "<ol><li>Tap <code>Placas</code> card</li><li>Edit the <code>Placa</code>\
+      \ field</li><li>Change it end with <strong>even</strong> number</li><li>Select\
+      \ a <code>Holograma</code> with <code>1</code> value</li><li>Click the button\
+      \ <code>GUARDAR</code></li><li>Check the response if the value for:</li></ol><pre><code\
+      \ class=\"editor-plain language-plain code-block\">          \"today\": {\n\
+      \            \"allowed\": XXX\n          }</code></pre>"
+    text2: null
+    text3: '<p>A successful toast will be displaying  &gt; <code>Placa agregada</code></p><p>The
+      card should be showing:</p><ul><li>If the value <code>"today": { "allowed":
+      true }</code><ul><li>The placa value &gt; <code>XXXXXXX • <mark class="marker-green">Hoy
+      circulas</mark></code> (in green)</li></ul></li><li>If the value <code>"today":
+      { "allowed": false }</code><ul><li>The placa value &gt; <code>XXXXXXX • <mark
+      class="marker-pink">Hoy no circulas</mark></code> (in red)</li></ul></li><li>The
+      text underneath &gt; <code>No circulas los días xxx(day of the week) ni el 2do
+      y 4to sábado del mes</code></li></ul>'
+    text4: null
+    display_order: 7
+  - column_name: custom_steps
+    id: 52839
+    case_id: 32450
+    text1: "<ol><li>Tap <code>Placas</code> card</li><li>Edit the <code>Placa</code>\
+      \ field</li><li>Change it end with <strong>even OR uneven</strong> number</li><li>Select\
+      \ a <code>Holograma</code> with <code>1</code> value</li><li>Click the button\
+      \ <code>GUARDAR</code></li><li>Check the response if the value for:</li></ol><pre><code\
+      \ class=\"editor-plain language-plain code-block\">          \"today\": {\n\
+      \            \"allowed\": XXX\n          }</code></pre>"
+    text2: null
+    text3: '<p>A successful toast will be displaying  &gt; <code>Placa agregada</code></p><p>The
+      card should be showing:</p><ul><li>If the value <code>"today": { "allowed":
+      true }</code><ul><li>The placa value &gt; <code>XXXXXXX • <mark class="marker-green">Hoy
+      circulas</mark></code> (in green)</li></ul></li><li>If the value <code>"today":
+      { "allowed": false }</code><ul><li>The placa value &gt; <code>XXXXXXX • <mark
+      class="marker-pink">Hoy no circulas</mark></code> (in red)</li></ul></li><li>The
+      text underneath &gt; <code>No circulas los días xxx(day of the week) ni el 1er
+      y 3er sábado del mes</code></li></ul>'
+    text4: null
+    display_order: 8
+  - column_name: custom_steps
+    id: 52840
+    case_id: 32450
+    text1: "<ol><li>Tap <code>Placas</code> card</li><li>Edit the <code>Placa</code>\
+      \ field</li><li>Change it end with <strong>even OR uneven</strong> number</li><li>Select\
+      \ a <code>Holograma</code> with <code>2</code> value</li><li>Click the button\
+      \ <code>GUARDAR</code></li><li>Check the response if the value for:</li></ol><pre><code\
+      \ class=\"editor-plain language-plain code-block\">          \"today\": {\n\
+      \            \"allowed\": XXX\n          }</code></pre>"
+    text2: null
+    text3: '<p>A successful toast will be displaying  &gt; <code>Placa agregada</code></p><p>The
+      card should be showing:</p><ul><li>If the value <code>"today": { "allowed":
+      true }</code><ul><li>The placa value &gt; <code>XXXXXXX • <mark class="marker-green">Hoy
+      circulas</mark></code> (in green)</li></ul></li><li>If the value <code>"today":
+      { "allowed": false }</code><ul><li>The placa value &gt; <code>XXXXXXX • <mark
+      class="marker-pink">Hoy no circulas</mark></code> (in red)</li></ul></li><li>The
+      text underneath &gt; <code>No circulas los días xxx(day of the week) ni los
+      sábados</code></li></ul>'
+    text4: null
+    display_order: 9
+  - column_name: custom_steps
+    id: 52841
+    case_id: 32450
+    text1: <ol><li>Tap <code>Placas</code> card</li><li>Edit the <code>Placa</code>
+      field</li><li>Select <strong>NO</strong> a <code>Holograma</code></li><li>Click
+      the button <code>GUARDAR</code></li></ol>
+    text2: null
+    text3: <p>A successful toast will be displaying  &gt; <code>Placa agregada</code></p><p>The
+      card should be showing:</p><ul><li>The placa value &gt; <code>XXXXXXX</code></li><li>No
+      other information about circulation logic</li></ul>
+    text4: null
+    display_order: 10
+  - column_name: custom_steps
+    id: 52842
+    case_id: 32450
+    text1: <ol><li>Tap <code>Placas</code> card</li><li>Edit the <code>Placa</code>
+      field</li><li>Add less than 4 characters</li><li>Click the button <code>GUARDAR</code></li></ol>
+    text2: null
+    text3: <p>The button <code>GUARDAR</code> it is disable until user types a minimum
+      of 4 characters</p>
+    text4: null
+    display_order: 11
+  - column_name: custom_steps
+    id: 52843
+    case_id: 32450
+    text1: <p>Users gets an error in the Placas/Hologram values</p><ol><li>The card
+      for <code>Placas</code> should be displaying</li></ol>
+    text2: null
+    text3: <p>It should be displaying the card like this:</p><ul><li>Placas &gt;<code>
+      -- • --</code></li><li>Not other information should be displayed</li></ul>
+    text4: null
+    display_order: 12
+  - column_name: custom_steps
+    id: 52844
+    case_id: 32450
+    text1: <p>If the user doesn't have <strong>Placas</strong> &amp; <strong>Hologram</strong>
+      saved</p><ol><li>Login into the app</li><li>Select a vehicle</li><li>The card
+      for <code>Placas</code> shouldn't be displaying</li></ol>
+    text2: null
+    text3: <p>The user should be seeing a button <code>Agregar placas</code> in the
+      home screen</p>
+    text4: null
+    display_order: 13
+  - column_name: custom_steps
+    id: 52845
+    case_id: 32450
+    text1: <ol><li>Tap <code>Placas</code> card</li><li>Click over <code>¿DONDE ENCUENTRO
+      MI HOLOGRAMA? &gt; </code></li></ol>
+    text2: null
+    text3: <p>A pop up screen should open about the details where to find my <strong>Hologram</strong></p><figure
+      class="image image_resized" style="width:56.9%;"><img src="/attachments/view/3176"
+      alt="3176" /></figure>
+    text4: null
+    display_order: 14
+  - column_name: custom_steps
+    id: 85369
+    case_id: 32450
+    text1: <ol><li>Go to the home page</li></ol>
+    text2: null
+    text3: '<ul><li>If the API <code>VehicleDynamicData</code> has the <code>fuelAutonomy</code>
+      is lower than 20% the CTA <code>Buscar Gasolinera</code> will show</li><li>If
+      the API <code>VehicleDynamicData</code> has the <code>MILS</code> with any value
+      set as <code>TRUE</code>, the CTA for <code>Programar Servicio</code> will show</li><li>If
+      <code>fuelAutonomy</code> is gather than 20% &amp; the vehicle doesn''t have
+      any warning about <code>MILS</code> the CTA <code>Agregar Placas</code> will
+      show if the values are:<ul><li>"plate": <code>NULL</code></li><li>"hologram":
+      <code>NULL</code></li></ul></li><li>If none of the previous values meets, none
+      of the cards will show</li><li>Any of the cards won''t appear together only
+      separately </li></ul><figure class="image image_resized" style="width:48.9%;"><img
+      src="/attachments/view/6691" alt="6691" /></figure>'
+    text4: null
+    display_order: 15

@@ -1,0 +1,36 @@
+testmo:
+  case_id: 2697
+  folder_id: 4170
+  project_id: 2
+  folder_path: home/climate/avk2
+  folder_name_ui: AVK2
+  created_at: '2023-09-07 21:10:07.863036'
+  updated_at: '2025-09-22 14:47:36.120108'
+  last_sync: '2026-01-30T18:21:07.743458Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/2697
+metadata:
+  name: Capabilities - ICE Climate Card
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>AVK2 vehicle</p>
+  steps:
+  - column_name: custom_steps
+    id: 3062
+    case_id: 2697
+    text1: <ol><li>HVAC_ACCESSORIES capability is missing</li><li>HVAC_ACCESSORIES
+      capability is disabled</li><li>HVAC_ACCESSORIES capability is enabled and engine
+      is OFF</li><li>HVAC_ACCESSORIES capability is enabled and engine is ON</li></ol>
+    text2: null
+    text3: <ol><li>User should not see the ICE Climate card</li><li>User should see
+      the ICE Climate card on home screen in disabled state</li><li>User should see
+      the ICE Climate card on home screen with secondary text Off</li><li>User should
+      see ICE Climate card on home screen with secondary text On</li></ol>
+    text4: null
+    display_order: 1
+  notes: <ul><li>behaviour of secondary text might still be changing - TBD</li><li>For
+    a SHARED driver, if the capability is missing or disabled, the item should be
+    hidden</li></ul>

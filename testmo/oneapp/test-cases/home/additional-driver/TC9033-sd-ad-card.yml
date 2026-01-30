@@ -1,0 +1,42 @@
+testmo:
+  case_id: 9033
+  folder_id: 411
+  project_id: 2
+  folder_path: home/additional-driver
+  folder_name_ui: Additional Driver
+  created_at: '2023-11-21 21:29:54.841149'
+  updated_at: '2025-08-21 19:21:14.411948'
+  last_sync: '2026-01-30T18:21:07.252889Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/9033
+metadata:
+  name: SD - AD Card
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is logged into an account with a pending AD invite</p><p>User
+    is on the home screen</p>
+  steps:
+  - column_name: custom_steps
+    id: 11650
+    case_id: 9033
+    text1: null
+    text2: null
+    text3: '<p>User should see an Additional Driver Invite card at the top of the
+      stack that includes the number of pending invites (with <code>expiresIn</code>
+      greater than 0)<br /><br />Note: If there are any MIL/Vehicle Status cards,
+      those should be on top</p>'
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 11651
+    case_id: 9033
+    text1: '<ol><li>Mock <code>VehiclesStaticData</code> so that <code>pendingDriverInvitations.invites</code>
+      is either empty [] or <code>pendingDriverInvitations: null</code></li><li>Background,
+      foreground the app</li></ol>'
+    text2: null
+    text3: <p>2. User should not see the Additional Driver Invite card</p>
+    text4: null
+    display_order: 2

@@ -1,0 +1,59 @@
+testmo:
+  case_id: 31285
+  folder_id: 3800
+  project_id: 2
+  folder_path: vehicle/collision-management-nna-only
+  folder_name_ui: Collision Management - NNA only
+  created_at: '2025-03-07 18:20:05.098464'
+  updated_at: '2025-05-02 16:40:48.036826'
+  last_sync: '2026-01-30T18:21:06.274259Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/31285
+metadata:
+  name: Capability Check for Collision Management
+  priority: 1
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<p>FF `"EnableCollisionManagement": "true"`<br />Vehicle is non
+    pending, not stolen</p>'
+  steps:
+  - column_name: custom_steps
+    id: 51387
+    case_id: 31285
+    text1: <p>Check the `VehicleCapabilities` API response </p>
+    text2: null
+    text3: '<p>The `VehicleCapabilities` API response includes <code>ACCIDENT_REPORT_SERVICE</code>
+      <i><strong>AND</strong></i> <code>COLLISION_MANAGEMENT</code> caps in <code>"enabled":
+      true</code> <i><strong>OR</strong></i> <code>"enabled": false`</code> states</p>'
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 51388
+    case_id: 31285
+    text1: '<p>Mock <code>ACCIDENT_REPORT_SERVICE</code> <i><strong>AND</strong></i>
+      <code>COLLISION_MANAGEMENT</code> caps to <code>"enabled": true</code>  </p>'
+    text2: null
+    text3: <p>"Vehicle Data" Card is present in the Collision Report screen</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 51389
+    case_id: 31285
+    text1: '<p>Mock <code>ACCIDENT_REPORT_SERVICE</code> to <code>"enabled": true</code>
+        <i><strong>AND</strong></i> <code>COLLISION_MANAGEMENT</code> caps to <code>"enabled":
+      false</code> </p>'
+    text2: null
+    text3: <p>"Vehicle Data" Card is NOT present in the Collision Report screen</p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 51390
+    case_id: 31285
+    text1: '<p>Mock <code>ACCIDENT_REPORT_SERVICE</code> to <code>"enabled": false </code></p>'
+    text2: null
+    text3: <p>Collision Management Card is hidden. UI reacts as if the Feature Flag
+      is OFF</p>
+    text4: null
+    display_order: 4

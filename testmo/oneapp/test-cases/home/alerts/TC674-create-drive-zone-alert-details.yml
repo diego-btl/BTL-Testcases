@@ -1,0 +1,39 @@
+testmo:
+  case_id: 674
+  folder_id: 70
+  project_id: 2
+  folder_path: home/alerts
+  folder_name_ui: Alerts
+  created_at: '2023-08-01 23:08:21.229779'
+  updated_at: '2024-10-17 17:57:05.010933'
+  last_sync: '2026-01-30T18:21:08.882517Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/674
+metadata:
+  name: Create Drive Zone alert - Details
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has started creating a zone alert</p>
+  steps:
+  - column_name: custom_steps
+    id: 843
+    case_id: 674
+    text1: <p>1. Tap on the boundary details<br />2. Tap Save</p>
+    text2: null
+    text3: <p>1. User should be able to adjust the distance slider to edit the zone
+      radius. User should also be able to toggle between Arrival and Departure<br
+      />2. User should see the alert be successfully saved and taken to the main alerts
+      sheet</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 1130
+    case_id: 674
+    text1: <p>Fail to save the alert </p>
+    text2: null
+    text3: <p>The user will see an error alert and remain on the create alert sheet</p>
+    text4: null
+    display_order: 2

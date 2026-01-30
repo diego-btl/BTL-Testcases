@@ -1,0 +1,36 @@
+testmo:
+  case_id: 24238
+  folder_id: 3083
+  project_id: 2
+  folder_path: home/my-photos
+  folder_name_ui: My Photos
+  created_at: '2024-10-07 17:23:41.993582'
+  updated_at: '2026-01-13 20:55:02.421585'
+  last_sync: '2026-01-30T18:21:06.911561Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/24238
+metadata:
+  name: Take Photos - Initiated
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<ul><li>The user has a CCS2 - AVK2 Vehicle</li><li>Capabilities
+    return <code>enabled: true</code>  and <code>subscribed: true</code> for both
+    <code>REMOTE_PHOTOS_COMMAND</code> and <code>REMOTE_PHOTOS_SHOCK</code></li><li>Photos
+    Consent is <code>ACCEPTED</code></li><li>The user is in the My Photos Page</li><li>The
+    <code>LastKnownCameraUsageCounter</code> has 1 or more on the <code>"counter"</code>
+    parameter</li></ul>'
+  steps:
+  - column_name: custom_steps
+    id: 37808
+    case_id: 24238
+    text1: <p>The user taps on the <code>TAKE PHOTO</code> button</p>
+    text2: null
+    text3: <p>The app triggers the <code>TakePhotosAroundVehicle</code> mutation<br
+      />The app shows the following toasts:</p><ol><li>Contacting <code>year</code>
+      <code>model</code> to take photos...</li><li>Waking  <code>year</code> <code>model</code>
+      to take photos...</li><li>Initiating take photos on <code>year</code> <code>model</code>...</li></ol>
+    text4: null
+    display_order: 1

@@ -1,0 +1,35 @@
+testmo:
+  case_id: 2677
+  folder_id: 4170
+  project_id: 2
+  folder_path: home/climate/avk2
+  folder_name_ui: AVK2
+  created_at: '2023-09-07 21:10:07.600692'
+  updated_at: '2025-10-10 18:17:43.869007'
+  last_sync: '2026-01-30T18:21:07.804552Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/2677
+metadata:
+  name: Climate Details - Turn Climate On - DOUBLERES_FAILED
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>AVK2 vehicle<br />Climate Details<br />Engine is PENDING</p>
+  steps:
+  - column_name: custom_steps
+    id: 3043
+    case_id: 2677
+    text1: <ol><li><code>statusDetails</code> returns with <code>DOUBLERES_FAILED</code></li><li>Go
+      back to home screen</li></ol>
+    text2: null
+    text3: <ul><li>You should see the toast &gt; <code>Remote engine and climate are
+      ending soon for</code> <strong>&lt;VEHICLE YEAR&gt;</strong></li><li>After that
+      you should see the toast &gt; <strong>&lt;VEHICLE YEAR&gt; </strong><code>Engine
+      turned off</code></li><li>User should see engine countdown timer reduce by 10
+      mins</li></ul>
+    text4: null
+    display_order: 1
+  notes: <figure class="image image_resized" style="width:50.78%;"><img src="/attachments/view/8384"
+    alt="8384" /></figure>

@@ -1,0 +1,35 @@
+testmo:
+  case_id: 1478
+  folder_id: 54
+  project_id: 2
+  folder_path: home/vehicle-capabilities
+  folder_name_ui: Vehicle Capabilities
+  created_at: '2023-08-28 20:13:22.745277'
+  updated_at: '2024-10-17 17:56:23.776593'
+  last_sync: '2026-01-30T18:21:08.178395Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/1478
+metadata:
+  name: Stolen Vehicle
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<p>User''s vehicle is in the stolen state (status: "STOLEN")</p>'
+  steps:
+  - column_name: custom_steps
+    id: 1846
+    case_id: 1478
+    text1: <p>1. Launch app to home screen<br />2. Tap on Call Customer Care<br />3.
+      Tap on Vehicle tab<br />4. Tap on Map tab</p>
+    text2: null
+    text3: <p>1. User should see all feature cards disabled except for the NMAC card.
+      User should see the stolen badge displayed on the vehicle in the carousel<br
+      />2. User should see call button <s>1-844-711-8100</s>   1-855-444-7244<br />3.
+      User should see items in the stolen state with the stolen badge. </p><p>4. User
+      should only be able to tap the Vehicle Profile button<br />5. User should not
+      see the vehicle's location and the vehicle pin is hidden, info drawer shows
+      stolen badge</p>
+    text4: null
+    display_order: 1

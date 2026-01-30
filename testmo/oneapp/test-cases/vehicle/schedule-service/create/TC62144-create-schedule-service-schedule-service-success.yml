@@ -1,0 +1,36 @@
+testmo:
+  case_id: 62144
+  folder_id: 6787
+  project_id: 2
+  folder_path: vehicle/schedule-service/create
+  folder_name_ui: Create
+  created_at: '2025-12-12 15:11:13.366681'
+  updated_at: '2026-01-20 21:18:43.679975'
+  last_sync: '2026-01-30T18:21:04.748583Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/62144
+metadata:
+  name: Create Schedule Service - Schedule Service - Success
+  priority: 1
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>User has completed all screens and arrived at Review Service
+    Request screen</li><li>All booking information is filled and ready for submission</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 96423
+    case_id: 62144
+    text1: <p>On <code>Review Service Request</code> screen, tap <code>SCHEDULE SERVICE</code>
+      button</p>
+    text2: null
+    text3: '<ul><li><code>CreateServiceAppointment</code> mutation is triggered with
+      all booking details as payload</li><li>User is redirected to <code>Service Request
+      Submitted</code> screen</li><li>Screen title is <code>Service Request Submitted</code></li><li><strong>Green
+      checkmark icon</strong> is displayed</li><li>Success message is displayed: <code>Your
+      Service Request has been submitted! We may contact you if we need more information
+      prior to your service.</code></li><li><code>ADD TO CALENDAR</code> link is displayed</li><li><strong>Close
+      (X) button</strong> is displayed at top right</li></ul>'
+    text4: null
+    display_order: 1

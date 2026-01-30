@@ -1,0 +1,55 @@
+testmo:
+  case_id: 847
+  folder_id: 77
+  project_id: 2
+  folder_path: wearables/wearable-alerts
+  folder_name_ui: Wearable - Alerts
+  created_at: '2023-08-01 23:08:23.390006'
+  updated_at: '2024-10-17 17:57:05.010933'
+  last_sync: '2026-01-30T18:21:08.593528Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/847
+metadata:
+  name: Alerts Query
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  steps:
+  - column_name: custom_steps
+    id: 1016
+    case_id: 847
+    text1: <p>1. Foreground app to or land on the alerts screen<br />2. Tap the speed
+      alerts item</p>
+    text2: null
+    text3: <p><br />App should query for speed alerts</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 1153
+    case_id: 847
+    text1: <p>1. Foreground app to or land on the alerts screen<br />2. Tap the curfew
+      alerts item</p>
+    text2: null
+    text3: <p>App should query for curfew alerts</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 1154
+    case_id: 847
+    text1: <p>1. Foreground app to or land on the alerts screen<br />2. Tap the drive
+      zone alerts item</p>
+    text2: null
+    text3: <p>App should query for drive zone alerts</p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 1155
+    case_id: 847
+    text1: <p>1. Foreground app to or land on the alerts screen<br />2. Tap the valet
+      alerts item</p>
+    text2: null
+    text3: <p>App should query for valert alert</p>
+    text4: null
+    display_order: 4

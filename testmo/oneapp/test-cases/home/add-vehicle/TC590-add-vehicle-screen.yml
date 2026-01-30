@@ -1,0 +1,38 @@
+testmo:
+  case_id: 590
+  folder_id: 56
+  project_id: 2
+  folder_path: home/add-vehicle
+  folder_name_ui: Add vehicle
+  created_at: '2023-08-01 23:08:20.162762'
+  updated_at: '2025-10-09 05:36:06.163295'
+  last_sync: '2026-01-30T18:21:09.109615Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/590
+metadata:
+  name: Add Vehicle screen
+  priority: 1
+  type: functional
+  status: active
+  estimate: 60000000
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>User is already signed in</li><li>User is on the <code>Home
+    Screen</code></li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 759
+    case_id: 590
+    text1: <p>Tap on the <code>Vehicle Selector</code> dropdown<br /> </p>
+    text2: null
+    text3: <p>User should see vehicle selector screen<br /> </p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 1791
+    case_id: 590
+    text1: <p>Tap <code>Add Vehicle</code> button</p>
+    text2: null
+    text3: <p>User should be navigated to the Add Vehicle screen</p>
+    text4: null
+    display_order: 2

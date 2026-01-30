@@ -1,0 +1,33 @@
+testmo:
+  case_id: 2712
+  folder_id: 412
+  project_id: 2
+  folder_path: vehicle/proactive-maintenance
+  folder_name_ui: Proactive Maintenance
+  created_at: '2023-09-07 21:32:22.627108'
+  updated_at: '2024-10-17 17:57:34.769274'
+  last_sync: '2026-01-30T18:21:07.707453Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/2712
+metadata:
+  name: 1 parts reminder
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is on the main Proactive Maintenance Sheet</p><p>User has
+    an existing part reminder</p>
+  steps:
+  - column_name: custom_steps
+    id: 3077
+    case_id: 2712
+    text1: <p>User should see the following:</p>
+    text2: null
+    text3: <ol><li>Info button in top right</li><li>A card with info about current
+      reminders <ol><li>mileage and date in header (if data is null they should see
+      <code>No Date/Mileage</code> for whichever is missing)</li><li>edit CTA</li><li>parts
+      selected for reminder</li></ol></li><li>Label saying <code>You can save up to
+      4 reminders</code></li><li>Active <code>Create New</code> CTA </li></ol>
+    text4: null
+    display_order: 1

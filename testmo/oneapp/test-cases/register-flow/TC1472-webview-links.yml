@@ -1,0 +1,76 @@
+testmo:
+  case_id: 1472
+  folder_id: 43
+  project_id: 2
+  folder_path: register-flow
+  folder_name_ui: Register Flow
+  created_at: '2023-08-28 20:13:22.643797'
+  updated_at: '2025-07-04 15:47:20.569763'
+  last_sync: '2026-01-30T18:21:08.187668Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/1472
+metadata:
+  name: Webview links*
+  priority: 1
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is on the final registration screen</p>
+  steps:
+  - column_name: custom_steps
+    id: 1840
+    case_id: 1472
+    text1: <p>Tap on Terms of Service link</p>
+    text2: null
+    text3: '<p>User should be able to open Terms of Service web-view   <br />Header
+      is displayed as <code>Terms of Service</code> </p><p>Note:  For Android it includes
+      a back <code>&lt;</code> button and  an  <code>X</code> icon for IOS<br /><br
+      /> </p>'
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 37744
+    case_id: 1472
+    text1: <p>Tap on return arrow / close icon  from Terms of Service screen</p>
+    text2: null
+    text3: <p>User is able to see the final Registration screen</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 37745
+    case_id: 1472
+    text1: <p>Tap on Privacy Notice link</p>
+    text2: null
+    text3: '<p>User should be able to open the Privacy Notice web-view   <br />Header
+      is displayed as <code>Privacy Notice</code> </p><p>Note:  For Android it includes
+      a back <code>&lt;</code> button and  an  <code>X</code> icon for IOS</p>'
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 37746
+    case_id: 1472
+    text1: <p>Tap on return arrow / close icon  from Privacy Notice screen</p>
+    text2: null
+    text3: <p>User is able to see the final Registration screen</p>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 37747
+    case_id: 1472
+    text1: <p>Tap on Data Privacy Notice link</p>
+    text2: null
+    text3: '<p>User should be able to open Privacy Notice web-view   <br />Header
+      is displayed as <code>Data Privacy Notice </code></p><p><br />NOTE: Data Privacy
+      should be removed for NCI<br />Note:  For Android it includes a back <code>&lt;</code>
+      button and  an  <code>X</code> icon for IOS</p>'
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 37748
+    case_id: 1472
+    text1: <p>Tap on return arrow / close icon  from Data Privacy Notice screen</p>
+    text2: null
+    text3: <p>User is able to see the final Registration screen</p>
+    text4: null
+    display_order: 6

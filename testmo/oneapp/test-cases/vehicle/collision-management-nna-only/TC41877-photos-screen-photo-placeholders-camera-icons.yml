@@ -1,0 +1,64 @@
+testmo:
+  case_id: 41877
+  folder_id: 3800
+  project_id: 2
+  folder_path: vehicle/collision-management-nna-only
+  folder_name_ui: Collision Management - NNA only
+  created_at: '2025-06-09 21:42:37.726474'
+  updated_at: '2025-06-09 21:48:14.931433'
+  last_sync: '2026-01-30T18:21:05.919123Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/41877
+metadata:
+  name: Photos Screen - Photo placeholders (Camera icons)
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>The user is on the <code>Photos </code>screen</p>
+  steps:
+  - column_name: custom_steps
+    id: 71951
+    case_id: 41877
+    text1: <p>Tap <strong>Info</strong> Icon</p>
+    text2: null
+    text3: '<p> The Info screen is displayed, showing the message: ''<code>You can
+      now upload photos using different angles into your report</code>.''</p>'
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 71952
+    case_id: 41877
+    text1: <p>Tap any <code>photo placeholder</code> (Camera icons) in one of the
+      <code>photo</code> sections</p>
+    text2: null
+    text3: '<p>A system pop-up appears with: "Add from Gallery" / "Take Photo"</p>'
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 71953
+    case_id: 41877
+    text1: <p>Tap Near Vehicle Image</p>
+    text2: null
+    text3: <p> The same system pop-up appears</p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 71954
+    case_id: 41877
+    text1: <p>Tap "<code>Add More Photos</code>" CTA</p>
+    text2: null
+    text3: <p>One new row of 3 photo placeholders is added below the existing ones</p>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 71955
+    case_id: 41877
+    text1: <p>Repeat step 4 multiple times until a total of 18 photo placeholders
+      are displayed</p>
+    text2: null
+    text3: <p>After reaching 18 placeholders, the <code>Add More Photos</code> CTA
+      is hidden</p>
+    text4: null
+    display_order: 5

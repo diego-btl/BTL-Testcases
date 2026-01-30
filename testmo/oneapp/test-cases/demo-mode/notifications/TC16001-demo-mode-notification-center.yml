@@ -1,0 +1,155 @@
+testmo:
+  case_id: 16001
+  folder_id: 6804
+  project_id: 2
+  folder_path: demo-mode/notifications
+  folder_name_ui: Notifications
+  created_at: '2024-04-30 20:50:59.687338'
+  updated_at: '2026-01-15 10:45:26.931015'
+  last_sync: '2026-01-30T18:21:07.053487Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/16001
+metadata:
+  name: Demo Mode - Notification Center
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is in the Home Screen with any vehicle selected</p>
+  steps:
+  - column_name: custom_steps
+    id: 21266
+    case_id: 16001
+    text1: <p>Validate the Notification Icon at the top right of the Hero Section</p>
+    text2: null
+    text3: <p>The Notification icon should be an envelope with a red dot, signaling
+      there is an unread notification</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 21267
+    case_id: 16001
+    text1: <p>Tap on the Notification Icon</p>
+    text2: null
+    text3: <p>The user should be navigated to the Notification Center page showing:</p><ul><li>Messages
+      Tab with read and unread messages and  data for Today and Previous sections</li><li>Alerts
+      Tab with data for Today and Previous sections</li><li>Activity Tab with data
+      for Today and Previous sections</li><li>Notifications Settings icon (gear) at
+      the top right section of the page</li></ul><figure class="image"><img src="/attachments/view/8953"
+      alt="8953" /></figure>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 21268
+    case_id: 16001
+    text1: <p>Tap on any of the elements of the Messages, Alerts and Activity tabs</p>
+    text2: null
+    text3: <p>User should see the demo mode alert modal</p><figure class="image"><img
+      src="/attachments/view/8954" alt="8954" /></figure>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 21269
+    case_id: 16001
+    text1: <p>Tap on Notification Settings icon (cog)</p>
+    text2: null
+    text3: <p>The user should be navigated to the Notification Preferences Page, showing
+      the following sections:</p><ol><li>Remote Services Notifications (AVK, AVK2,
+      LEAF)</li><li>EV Notifications (LEAF)</li><li>Monitoring and Alert Notifications
+      (AVK, AVK2, LEAF)</li><li>General Notifications (AVK, AVK2, LEAF)</li><li>Malfunction
+      Lights (AVK2, LEAF)</li><li>Reminder After Leaving Vehicle (AVK2, LEAF)</li><li><s>Smart
+      Charging Notifications (LEAF)</s> (coming soon)</li></ol>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 21270
+    case_id: 16001
+    text1: <p>Validate the Remote Services Notifications section</p>
+    text2: null
+    text3: <p>The items displayed should be:</p><ul><li>Remote Door Lock</li><li>Remote
+      Door Unlock</li><li>Remote Engine Start/Stop (AVK, AVK2)</li><li>Remote Horn
+      &amp; Lights</li><li>My Vehicle Finder</li></ul>
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 96536
+    case_id: 16001
+    text1: <p>Validate the EV Notifications section</p>
+    text2: null
+    text3: <p>The items displayed should be:</p><ul><li>Charging Status</li><li>Climate
+      Control</li><li>Plug In Reminder</li><li>Intelligent Route Planner</li><li>Vehicle-to-Load</li></ul>
+    text4: null
+    display_order: 6
+  - column_name: custom_steps
+    id: 21271
+    case_id: 16001
+    text1: <p>Validate the Monitoring and Alert Notifications section</p>
+    text2: null
+    text3: <p>The items displayed should be:</p><ul><li>Boundary / Valet Alerts</li><li>Curfew
+      Alerts</li><li>Speed Alerts</li></ul>
+    text4: null
+    display_order: 7
+  - column_name: custom_steps
+    id: 21272
+    case_id: 16001
+    text1: <p>Validate the General Notifications section</p>
+    text2: null
+    text3: <p>The items displayed should be:</p><p>AVK2:</p><ul><li>Stolen Vehicle
+      Locator</li><li>Alarm Notification</li><li>Malfunction Lights</li><li>In-App
+      Messaging</li><li>Maintenance Reminders</li></ul><p>EV2:</p><ul><li>Stolen Vehicle
+      Locator</li><li>In-App Messaging</li><li>Maintenance Reminders</li><li>Alarm
+      Notification</li><li>Malfunction Lights</li><li>Last Mile Navigation</li></ul><p>AVK:</p><ul><li>Stolen
+      Vehicle Locator</li><li>Malfunction Lights</li><li>In-App Messaging</li></ul>
+    text4: null
+    display_order: 8
+  - column_name: custom_steps
+    id: 96537
+    case_id: 16001
+    text1: <p>Validate the Malfunction Lights section</p>
+    text2: null
+    text3: <p>The items displayed should be:</p><ul><li>Power Steering Warming Alert</li><li>Electric
+      Shift Control Alert</li><li>Airbag Alert</li><li>12-Volt Battery Warning Alert</li><li>Tire
+      Pressure Alert</li><li>Brakes Alert</li><li>Power Limitation Alert</li><li>ABS
+      Alert</li></ul>
+    text4: null
+    display_order: 9
+  - column_name: custom_steps
+    id: 21281
+    case_id: 16001
+    text1: <p>Validate the Reminder After Leaving Vehicle section</p>
+    text2: null
+    text3: <p>The items displayed should be:</p><ul><li>Feature explanation text</li><li>Door
+      Unlocked checkbox</li><li>Door Open checkbox</li><li>Trunk Open checkbox</li><li>Moonroof
+      Open checkbox</li><li>Window Open checkbox</li><li>Push / Text / Email dropdown
+      section</li></ul>
+    text4: null
+    display_order: 10
+  - column_name: custom_steps
+    id: 96538
+    case_id: 16001
+    text1: <p><s>Validate the Smart Charging section </s>  (coming soon)</p>
+    text2: null
+    text3: <p><s>The items displayed should be:</s></p><ul><li><s>New Prime Time Hours</s></li><li><s>Monthly
+      insights</s></li></ul>
+    text4: null
+    display_order: 11
+  - column_name: custom_steps
+    id: 21282
+    case_id: 16001
+    text1: <p>All the sections should have a collapse / expand caret, interact with
+      this caret</p>
+    text2: null
+    text3: <p>The entire section should collapse / expand, if it's collapsed, it should
+      display how many Notifications are enabled</p>
+    text4: null
+    display_order: 12
+  - column_name: custom_steps
+    id: 21283
+    case_id: 16001
+    text1: <p>Interact with any of the toggles or checkboxes</p>
+    text2: null
+    text3: <p>The app should allow the user to enable / disable toggles and select
+      / unselect the checkboxes</p>
+    text4: null
+    display_order: 13

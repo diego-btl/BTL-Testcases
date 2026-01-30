@@ -1,0 +1,42 @@
+testmo:
+  case_id: 624
+  folder_id: 62
+  project_id: 2
+  folder_path: home/quick-actions/climate
+  folder_name_ui: Climate
+  created_at: '2023-08-01 23:08:20.588920'
+  updated_at: '2025-09-22 14:33:35.650328'
+  last_sync: '2026-01-30T18:21:09.010817Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/624
+metadata:
+  name: Climate Off - Success
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<p>User is on the Home screen</p><p>User has sent a StopClimate
+    request</p><p>CheckRemoteClimateRequest API:</p><p><code>{</code></p><p><code> 
+    "data": {</code></p><p><code>    "checkRemoteClimateRequest": {</code></p><p><code> 
+        "__typename": "ServiceRequestResult",</code></p><p><code>      "status": "SUCCESS"</code></p><p><code> 
+      }</code></p><p><code>  }</code></p><p><code>}</code></p><p>VehicleClimateStatus
+    API:<br /><code> {</code></p><p><code>  "data": {</code></p><p><code>    "vehicle":
+    {</code></p><p><code>      "__typename": "ElectricVehicle",</code></p><p><code> 
+        "climateStatus": {</code></p><p><code>        "__typename": "ClimateStatus",</code></p><p><code> 
+          "state": "OFF",</code></p><p><code>        "temperature": {</code></p><p><code> 
+            "__typename": "Temperature",</code></p><p><code>          "value": 70,</code></p><p><code> 
+            "unit": "FAHRENHEIT"</code></p><p><code>        }</code></p><p><code> 
+        }</code></p><p><code>    }</code></p><p><code>  }</code></p><p><code>}</code></p>'
+  steps:
+  - column_name: custom_steps
+    id: 793
+    case_id: 624
+    text1: <p>Climate off request has been resolved into a success</p>
+    text2: null
+    text3: <p>"Climate On" and "Climate Off" buttons are changed to the default state</p><p>A
+      success toast "&lt;year and model&gt; climate turned off" is displayed at the
+      bottom of the screen</p><p>"Climate On" card is changed to "Climate" </p><p>"Climate
+      On" card secondary text is changed to "Off - Interior Temp &lt;temperature&gt;"</p>
+    text4: null
+    display_order: 1

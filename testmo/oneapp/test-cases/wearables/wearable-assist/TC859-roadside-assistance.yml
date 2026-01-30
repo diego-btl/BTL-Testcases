@@ -1,0 +1,52 @@
+testmo:
+  case_id: 859
+  folder_id: 79
+  project_id: 2
+  folder_path: wearables/wearable-assist
+  folder_name_ui: Wearable - Assist
+  created_at: '2023-08-01 23:08:23.488123'
+  updated_at: '2025-09-19 21:21:22.009112'
+  last_sync: '2026-01-30T18:21:08.554629Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/859
+metadata:
+  name: Roadside Assistance
+  priority: 12
+  type: functional
+  status: active
+  estimate: 120000000
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is on the Assist screen and has the Roadside Assistance capability</p>
+  steps:
+  - column_name: custom_steps
+    id: 1028
+    case_id: 859
+    text1: <ol><li>Tap Roadside Assistance</li><li>Tap Call</li></ol>
+    text2: null
+    text3: '<ol><li>User should see a modal to call the Roadside Assistance phone
+      number</li><li>User should be able to call:<ul><li>Nissan - NNA: 1-800-225-2476</li><li>Nissan
+      - NCI: 1-800-267-5936</li><li>Infiniti - NNA: 1-800-835-0221</li><li>Infiniti
+      - NCI: 1-800-361-4792</li></ul></li></ol>'
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 1144
+    case_id: 859
+    text1: <ol><li>Tap Roadside Assistance</li><li>Tap Call</li><li>Tap Cancel</li></ol>
+    text2: null
+    text3: <p>Modal should dismiss itself</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 42028
+    case_id: 859
+    text1: <p>For Infiniti</p><ol><li>Tap Roadside Assistance</li><li>Tap <strong>Get
+      Roadside Assistance Online</strong></li></ol>
+    text2: null
+    text3: <p>The user should be redirect to &gt; <a href="https://responseroadservice.com/auth/signin"><u>https://responseroadservice.com/auth/signin</u></a></p>
+    text4: null
+    display_order: 3
+  notes: <p>To be updated:<br />- Get Roadside Assistance Online applies to both brands
+    for NNA only (not only INF)<br />- incorrect URL - refer to <a href="https://www.pivotaltracker.com/story/show/188266553">https://www.pivotaltracker.com/story/show/188266553</a>
+    for the correct URLs per brand</p>

@@ -1,0 +1,32 @@
+testmo:
+  case_id: 32272
+  folder_id: 4154
+  project_id: 6
+  folder_path: home-page/climate
+  folder_name_ui: Climate
+  created_at: '2025-04-01 17:50:44.233537'
+  updated_at: '2025-10-23 20:57:50.442510'
+  last_sync: '2026-01-30T18:20:45.743060Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/32272
+metadata:
+  name: Start Climate - Success
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has sent a start Climate request</p>
+  steps:
+  - column_name: custom_steps
+    id: 52651
+    case_id: 32272
+    text1: <p>Start Climate request has resolved into a success</p>
+    text2: null
+    text3: <p>User should see a toast saying</p><ul><li><strong>Clima</strong> {vehicle
+      model} <code>encendido</code> (5 seconds)<br /> </li></ul><p>User should see
+      button update to Turn Climate off  button and temperature dial buttons be disabled<br
+      /><br />User should see Climate status update to show climate on the state (On
+      label, temperature dial shows gradient)</p>
+    text4: null
+    display_order: 1

@@ -1,0 +1,266 @@
+testmo:
+  case_id: 24313
+  folder_id: 3084
+  project_id: 2
+  folder_path: home/ncf
+  folder_name_ui: NCF
+  created_at: '2024-10-18 16:03:49.914098'
+  updated_at: '2025-08-11 20:04:14.624439'
+  last_sync: '2026-01-30T18:21:06.790372Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/24313
+metadata:
+  name: NCF Account Screen
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>Login with an NCF account &gt; <a href="https://www.notion.so/bethinklabs/d0f8f58385a94c51ab27ce3ee1ef1e51?v=caf06428a7ac41aa96541666be242cd7">https://www.notion.so/bethinklabs/d0f8f58385a94c51ab27ce3ee1ef1e51?v=caf06428a7ac41aa96541666be242cd7</a></p>
+  steps:
+  - column_name: custom_steps
+    id: 37879
+    case_id: 24313
+    text1: <p>If <code>staticText</code> &lt;&gt; <code>"ST3"</code>,<code>"ST4"</code>,
+      <code>"ST5"</code>, <code>"ST9"</code>, <code>"ST10"</code>, <code>"ST14"</code>,
+      <code>"ST16"</code>, <code>"ST17"</code>, <code>"ST18"</code>, <code>"ST19"</code>,
+      <code>"ST20"</code>, <code>"ST22"</code></p><ol><li>Login into the app</li><li>In
+      the Home page screen</li><li>Click over <strong>NCF Account</strong> card</li><li>Open
+      the <strong>NCF Account</strong> screen</li></ol>
+    text2: null
+    text3: <p>The NCF Account screen should be displaying with <strong>Account Summary</strong>
+      and the 3 options:</p><ul><li>Get Payout, Payment History &amp; Contract Details</li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 37880
+    case_id: 24313
+    text1: '<p>If <code>staticText</code>: <code>"ST3"</code></p><ol><li>Login into
+      the app</li><li>In the Home page screen</li><li>Click over <strong>NCF Account</strong>
+      card</li><li>Open the <strong>NCF Account</strong> screen</li></ol>'
+    text2: null
+    text3: <p>Display Congratulatory Message based on Type of Accounts:</p><ul><li><code>paymentHistory</code>
+      is <code>false</code></li></ul><p>The CTA <code>View past statements</code>
+      should be hidden and CTAs for <code>Get Payout Quote</code>, and <code>Contract
+      Details</code> should be displayed under the Account Summary card as done in
+      other Account Rules.</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 37881
+    case_id: 24313
+    text1: '<p>If <code>staticText</code>: <code>"ST4"</code> or <code>staticText</code>:
+      <code>"ST5"</code></p><ol><li>Login into the app</li><li>In the Home page screen</li><li>Click
+      over <strong>NCF Account</strong> card</li><li>Open the <strong>NCF Account</strong>
+      screen</li></ol>'
+    text2: null
+    text3: '<p>Hide the next labels &amp; values:</p><ul><li><code>Upcoming Payment</code>
+      </li><li><code>Account #</code></li><li><code>Recent Payment</code></li><li><code>Overdue
+      amount</code></li><li><code>Pay balance Now Button</code></li><li><code>Payment
+      Progress Bar</code></li><li><code>Maturity Date</code></li></ul><p>Add a CTA
+      in the style of the Congratulatory Message screen<br /><br /><code>"Please contact
+      us for further information. For questions please call Eastern Region (877) 739-9840,
+      Western Region (877)739-9841 or Quebec Region (877)739-9843."</code></p>'
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 37882
+    case_id: 24313
+    text1: '<p>If <code>staticText</code>: <code>"ST9"</code> or <code>staticText</code>:
+      <code>"ST14"</code></p><ol><li>Login into the app</li><li>In the Home page screen</li><li>Click
+      over <strong>NCF Account</strong> card</li><li>Open the <strong>NCF Account</strong>
+      screen</li></ol>'
+    text2: null
+    text3: <p>Hide the next labels &amp; values:</p><ul><li><code>Upcoming Payment</code>
+      </li><li><code>Recent Payment</code> </li></ul><p>Add a CTA in the style of
+      the Congratulatory Message screen<br /><br /><code>"Your car is grounded, please
+      contact us about the remaining payments Call (877-739-9840) Eastern Region Call
+      (877-739-9841) Western Region Call (877-739-9843) Quebec Region"</code></p>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 37883
+    case_id: 24313
+    text1: '<p>If <code>staticText</code>: <code>"ST10"</code></p><ol><li>Login into
+      the app</li><li>In the Home page screen</li><li>Click over <strong>NCF Account</strong>
+      card</li><li>Open the <strong>NCF Account</strong> screen</li></ol>'
+    text2: null
+    text3: <p>Hide the next labels &amp; values:</p><ul><li><code>Upcoming Payment</code>
+      </li><li><code>Recent Payment</code> </li><li><code>Hide Overdue amount</code></li><li><code>Pay
+      balance Now Button</code></li><li><code>Payment Progress Bar</code></li><li><code>Maturity
+      Date</code></li></ul><p>Add a CTA in the style of the Congratulatory Message
+      screen<br /><br /><code>"Please contact us for further information. For questions
+      please call Eastern Region (877) 739-9840, Western Region (877)739-9841 or Quebec
+      Region (877)739-9843."</code></p>
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 37884
+    case_id: 24313
+    text1: '<p>If <code>staticText</code>: <code>"ST16"</code></p><ol><li>Login into
+      the app</li><li>In the Home page screen</li><li>Click over <strong>NCF Account</strong>
+      card</li><li>Open the <strong>NCF Account</strong> screen</li></ol>'
+    text2: null
+    text3: <p>Hide the next labels &amp; values:</p><ul><li><code>Maturity Date</code></li></ul><p>Add
+      a CTA in the style of the Congratulatory Message screen<br /><br /><code>You
+      may receive subsequent bills after this liability statement. These charges may
+      include, but are not limited to parking tickets, toll violations, etc. and occurred
+      during the time you were in possession of the leased vehicle. Thank you for
+      allowing us to be your auto finance company. If you have any questions, or if
+      we can be of further assistance, please call 1-800-268-6499, Mon-Fri, 9:00AM
+      - 8:00PM EST.</code></p>
+    text4: null
+    display_order: 6
+  - column_name: custom_steps
+    id: 37885
+    case_id: 24313
+    text1: '<p>If <code>staticText</code>: <code>"ST17"</code></p><ol><li>Login into
+      the app</li><li>In the Home page screen</li><li>Click over <strong>NCF Account</strong>
+      card</li><li>Open the <strong>NCF Account</strong> screen</li></ol>'
+    text2: null
+    text3: <p>Hide the next labels &amp; values:</p><ul><li><code>Maturity Date</code></li></ul><p>Add
+      a CTA in the style of the Congratulatory Message screen<br /><br /><code>Nissan
+      Canada Finance (NCF) would like to take a moment to thank you for choosing us
+      to finance your vehicle. We appreciate your business and hope you were delighted
+      with the excellent service that our customers have grown to expect from Nissan.
+      The amount reflected on your Liability Statement has been satisfied. You may
+      receive subsequent bills after this liability statement. These charges may include,
+      but are not limited to parking tickets; toll violations, etc. and occurred during
+      the time you were in possession of the leased vehicle. Thank you for allowing
+      us to be your auto finance company. If you have any questions, or if we can
+      be of further assistance, please call 1-800-268-6499, Mon-Fri, 9:00AM - 8:00PM
+      EST.</code></p>
+    text4: null
+    display_order: 7
+  - column_name: custom_steps
+    id: 37886
+    case_id: 24313
+    text1: '<p>If <code>staticText</code>: <code>"ST19"</code></p><ol><li>Login into
+      the app</li><li>In the Home page screen</li><li>Click over <strong>NCF Account</strong>
+      card</li><li>Open the <strong>NCF Account</strong> screen</li></ol>'
+    text2: null
+    text3: <p>Hide the next labels &amp; values:</p><ul><li><code>Maturity Date</code></li></ul><p>Add
+      a CTA in the style of the Congratulatory Message screen<br /><br /><code>Thank
+      you for leasing with us. Your lease termination is in process. Nissan Canada
+      Finance (NCF) would like to take a moment to thank you for choosing us to finance
+      your vehicle. We appreciate your business and hope you were delighted with the
+      excellent service that our customers have grown to expect from Nissan. Once
+      your account has been closed, if there are any charges due, (excess kilometre,
+      wear and tear, etc.) you will receive a detailed, End of Lease Liability Statement
+      within 4-6 weeks. If you have any questions, or if we can be of further assistance,
+      please call 1-800-268-6499 Option 3, Mon-Fri, 9:00AM - 8:00PM EST.</code></p>
+    text4: null
+    display_order: 8
+  - column_name: custom_steps
+    id: 37887
+    case_id: 24313
+    text1: '<p>If <code>staticText</code>: <code>"ST18"</code></p><ol><li>Login into
+      the app</li><li>In the Home page screen</li><li>Click over <strong>NCF Account</strong>
+      card</li><li>Open the <strong>NCF Account</strong> screen</li></ol>'
+    text2: null
+    text3: <p>Hide the next labels &amp; values:</p><ul><li><code>Maturity Date</code></li></ul><p>Add
+      a CTA in the style of the Congratulatory Message screen<br /><br /><code>Your
+      liability balance has been satisfied. Nissan Canada Finance (NCF) would like
+      to take a moment to thank you for choosing us to finance your vehicle. We appreciate
+      your business and hope you were delighted with the excellent service that our
+      customers have grown to expect from Nissan. The amount reflected on your Liability
+      Statement has been satisfied. You may receive subsequent bills after this liability
+      statement. These charges may include, but are not limited to parking tickets;
+      toll violations, etc. and occurred during the time you were in possession of
+      the leased vehicle. Thank you for allowing us to be your auto finance company.
+      If you have any questions, or if we can be of further assistance, please call
+      1-800-268-6499, Mon-Fri, 9:00AM - 8:00PM EST.</code></p>
+    text4: null
+    display_order: 9
+  - column_name: custom_steps
+    id: 37888
+    case_id: 24313
+    text1: '<p>If <code>staticText</code>: <code>"ST22"</code></p><ol><li>Login into
+      the app</li><li>In the Home page screen</li><li>Click over <strong>NCF Account</strong>
+      card</li><li>Open the <strong>NCF Account</strong> screen</li></ol>'
+    text2: null
+    text3: '<p>Hide the next labels &amp; values:</p><ul><li><code>Account #</code></li><li><code>Maturity
+      Date</code></li><li><code>View Past Statements</code></li></ul><p>Add a CTA
+      in the style of the Congratulatory Message screen<br /><br /><code>We apologize,
+      we are currently experiencing technical difficulties, please try again later. </code><br
+      /> </p>'
+    text4: null
+    display_order: 10
+  - column_name: custom_steps
+    id: 37889
+    case_id: 24313
+    text1: '<p>If <code>staticText</code>: <code>"ST20"</code></p><ol><li>Login into
+      the app</li><li>In the Home page screen</li><li>Click over <strong>NCF Account</strong>
+      card</li><li>Open the <strong>NCF Account</strong> screen</li></ol>'
+    text2: null
+    text3: '<p>Hide the next labels &amp; values:</p><ul><li><code>Account #</code></li><li><code>Maturity
+      Date</code></li><li><code>View Past Statements</code></li></ul><p>Add a CTA
+      in the style of the Congratulatory Message screen<br /><br /><code>Thank you
+      for leasing with us. Your lease buyout is in process. Please contact us for
+      further information. For questions please call Eastern Region (877) 739-9840,
+      Western Region (877) 739-9841 or Quebec Region (877) 739-9843.</code></p>'
+    text4: null
+    display_order: 11
+  - column_name: custom_steps
+    id: 37890
+    case_id: 24313
+    text1: <p>If <code>paymentHistory</code> is <code>false</code></p><ol><li>Login
+      into the app</li><li>In the Home page screen</li><li>Click over <strong>NCF
+      Account</strong> card</li><li>Open the <strong>NCF Account</strong> screen</li></ol>
+    text2: null
+    text3: <p>The CTA <code>View Past statements</code> should be hidden</p>
+    text4: null
+    display_order: 12
+  - column_name: custom_steps
+    id: 37891
+    case_id: 24313
+    text1: <p>If <code>paymentHistory</code> is <code>true</code></p><ol><li>Login
+      into the app</li><li>In the Home page screen</li><li>Click over <strong>NCF
+      Account</strong> card</li><li>Open the <strong>NCF Account</strong> screen</li></ol>
+    text2: null
+    text3: <p>The CTA <code>View Past Statements</code> should be visible and the
+      Quick Actions Button <code>Payment History</code> should be hidden</p>
+    text4: null
+    display_order: 13
+  - column_name: custom_steps
+    id: 37892
+    case_id: 24313
+    text1: <p>If <code>getPayOffquote</code> is <code>true</code></p><ol><li>Login
+      into the app</li><li>In the Home page screen</li><li>Click over <strong>NCF
+      Account</strong> card</li><li>Open the <strong>NCF Account</strong> screen</li></ol>
+    text2: null
+    text3: <p>The quick actions button <code>Get Payout Quote</code> should be visible
+      underneath the card</p>
+    text4: null
+    display_order: 14
+  - column_name: custom_steps
+    id: 37893
+    case_id: 24313
+    text1: <p>If <code>getPayOffquote</code> is <code>true</code></p><ol><li>Login
+      into the app</li><li>In the Home page screen</li><li>Click over <strong>NCF
+      Account</strong> card</li><li>Open the <strong>NCF Account</strong> screen</li></ol>
+    text2: null
+    text3: <p>The quick actions button should not be visible</p>
+    text4: null
+    display_order: 15
+  - column_name: custom_steps
+    id: 37894
+    case_id: 24313
+    text1: <p>If <code>contractDetails</code> is <code>true</code></p><ol><li>Login
+      into the app</li><li>In the Home page screen</li><li>Click over <strong>NCF
+      Account</strong> card</li><li>Open the <strong>NCF Account</strong> screen</li></ol>
+    text2: null
+    text3: <p>The quick actions button <code>Contract Details</code> should be visible
+      underneath the card</p>
+    text4: null
+    display_order: 16
+  - column_name: custom_steps
+    id: 37895
+    case_id: 24313
+    text1: <p>If <code>contractDetails</code> is <code>false</code></p><ol><li>Login
+      into the app</li><li>In the Home page screen</li><li>Click over <strong>NCF
+      Account</strong> card</li><li>Open the <strong>NCF Account</strong> screen</li></ol>
+    text2: null
+    text3: <p>The quick actions button should not be visible</p>
+    text4: null
+    display_order: 17

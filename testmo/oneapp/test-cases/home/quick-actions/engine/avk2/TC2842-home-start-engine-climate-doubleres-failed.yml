@@ -1,0 +1,56 @@
+testmo:
+  case_id: 2842
+  folder_id: 4168
+  project_id: 2
+  folder_path: home/quick-actions/engine/avk2
+  folder_name_ui: AVK2
+  created_at: '2023-09-13 10:08:04.068071'
+  updated_at: '2025-04-17 17:19:27.321856'
+  last_sync: '2026-01-30T18:21:07.428065Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/2842
+metadata:
+  name: Home - Start Engine/Climate - DOUBLERES_FAILED
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>AVK2 vehicle<br />Engine is PENDING</p>
+  steps:
+  - column_name: custom_steps
+    id: 53250
+    case_id: 2842
+    text1: <p><code>statusDetails</code> returns with <code>HVAC_SUCCESS</code> and<br
+      /><code>status</code> returns with <code>PENDING</code></p>
+    text2: null
+    text3: '<p>User should see a toast saying:</p><ul><li>EN: "Remote engine and climate
+      control was started for &lt;MODEL YEAR &amp; VEHICLE MODEL&gt;" (5 seconds)</li><li>FR:
+      "Le démarrage du moteur et du contrôle climat à distance sont réussis pour &lt;ANNÉE
+      MODÈLE &amp; MODÈLE DU VÉHICULE&gt;" (5 seconds)</li><li>ES: "El encendido remoto
+      y el control del aire acondicionado se encendieron para &lt;AÑO DEL MODELO Y
+      MODELO DEL VEHÍCULO&gt;" (5 seconds)</li></ul><p>User should see a countdown
+      timer (20 mins), "Engine Running" text and Climate icon in the Hero section
+      instead of Fuel Remaining <br /><br />User should see the Engine button is changed
+      to Stop<br /><br />User should see the Climate card update secondary text to
+      On</p>'
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 3203
+    case_id: 2842
+    text1: <p><code>statusDetails</code> returns with <code>DOUBLERES_FAILED</code>
+      and<br /><code>status</code> returns with <code>FAILED</code></p>
+    text2: null
+    text3: '<p>User should see a toast saying:</p><ul><li>EN: "Remote engine and climate
+      control are ending soon for &lt;MODEL YEAR &amp; VEHICLE MODEL&gt;" (5 seconds)</li><li>FR:
+      "Le démarrage du moteur et du contrôle climat à distance se termineront bientôt
+      pour &lt;ANNÉE MODÈLE &amp; MODÈLE DU VÉHICULE&gt;" (5 seconds)</li><li>ES:
+      "El encendido remoto y el control del aire acondicionado se terminarán pronto
+      para &lt;AÑO DEL MODELO Y MODELO DEL VEHÍCULO&gt;" (5 seconds)</li></ul><p>User
+      should see engine countdown timer is reduced to 10 mins</p><p>User should see
+      the climate icon and "Engine Running" text is displayed instead of Fuel Remaining
+      in the Hero section</p><p>User should see the Engine button as a Stop and Climate
+      card with secondary text On  </p>'
+    text4: null
+    display_order: 2

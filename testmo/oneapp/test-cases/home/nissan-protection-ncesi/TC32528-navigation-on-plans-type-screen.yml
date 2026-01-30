@@ -1,0 +1,61 @@
+testmo:
+  case_id: 32528
+  folder_id: 4079
+  project_id: 2
+  folder_path: home/nissan-protection-ncesi
+  folder_name_ui: Nissan Protection (NCESI)
+  created_at: '2025-04-04 23:30:27.015392'
+  updated_at: '2025-04-04 23:41:41.700469'
+  last_sync: '2026-01-30T18:21:06.135731Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/32528
+metadata:
+  name: Navigation on Plans type screen
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<p>Set FFs as follows</p><ul><li><code>EnableNcesiServiceContracts</code>:
+    true</li><li><code>EnableNcesiCatalogue</code>: true</li><li>Mock <code>GetServiceContract</code>
+    response (use attached mocks ENG/FR in case needed)</li></ul>'
+  steps:
+  - column_name: custom_steps
+    id: 53177
+    case_id: 32528
+    text1: <p>Login to app &gt; Get into <code>Nissan Protection</code> screen &gt;
+      Tap on <code>View all Nissan Protection Products</code> cta &gt; tap on any
+      plan type (ASP, PMP, CPO)</p>
+    text2: null
+    text3: <p>Verify ASP, PMP, or CPO page is displayed according to designs and that
+      each card has <code><strong>See details </strong></code>option</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 53178
+    case_id: 32528
+    text1: <p>Go to header of the screen</p>
+    text2: null
+    text3: <p>Verify there is a dropdown displayed that will display 3 plans from
+      the previous screen:</p><ul><li>Added Security plan</li><li>Prepaid Maintenance
+      Plan</li><li>Certified Pre-Owned</li></ul>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 53179
+    case_id: 32528
+    text1: <p>Tap on any of the plans from dropdown</p>
+    text2: null
+    text3: <p>Verify user is taken to the correct Plan type screen</p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 53180
+    case_id: 32528
+    text1: <p>Tap on <code>See details</code> option from any card </p>
+    text2: null
+    text3: <p>Verify user is taken to Plan detail page where coverage details are
+      displayed (use figma designs for this) and <code>Buy Online</code> cta at the
+      bottom</p>
+    text4: null
+    display_order: 4

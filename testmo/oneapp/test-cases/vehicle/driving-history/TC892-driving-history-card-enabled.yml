@@ -1,0 +1,39 @@
+testmo:
+  case_id: 892
+  folder_id: 92
+  project_id: 2
+  folder_path: vehicle/driving-history
+  folder_name_ui: Driving History
+  created_at: '2023-08-04 12:57:32.894310'
+  updated_at: '2025-11-10 20:48:47.138470'
+  last_sync: '2026-01-30T18:21:08.465678Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/892
+metadata:
+  name: Driving History - Card Enabled
+  priority: 1
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<p>Vehicle is an EV/EV2</p><p>PD/AD</p><p>VehicleCapabilities &gt;
+    DRIVING_JOURNEY_HISTORY (EV2)/DRIVING_ANALYSIS (EV) &gt; "enabled": true</p><p>User
+    is on the <code>Vehicle</code> tab</p>'
+  steps:
+  - column_name: custom_steps
+    id: 1799
+    case_id: 892
+    text1: <p>Scroll down on the vehicle page</p>
+    text2: null
+    text3: <p>User should be able to see the Driving History card in enabled state</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 95321
+    case_id: 892
+    text1: <p>Tap the Driving History card</p>
+    text2: null
+    text3: <p>1. DrivingHistory API is triggered</p><p>2. User is navigated to the
+      Driving History screen</p>
+    text4: null
+    display_order: 2

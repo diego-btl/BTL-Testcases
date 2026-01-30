@@ -1,0 +1,31 @@
+testmo:
+  case_id: 11091
+  folder_id: 411
+  project_id: 2
+  folder_path: home/additional-driver
+  folder_name_ui: Additional Driver
+  created_at: '2023-11-24 21:07:37.231061'
+  updated_at: '2024-10-17 17:57:34.769274'
+  last_sync: '2026-01-30T18:21:07.224164Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/11091
+metadata:
+  name: PD - AD  List Screen - View Accepted - Configuration Details
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has an AVK2 vehicle and is PRIMARY_DRIVER</p><p>User has
+    an accepted invitation</p><p>User is viewing Invitation Details</p>
+  steps:
+  - column_name: custom_steps
+    id: 11630
+    case_id: 11091
+    text1: <p>Tap on Selected Configurations</p>
+    text2: null
+    text3: <p>User should see Configuration Details screen with toggles and capabilities
+      matching the states from the data returned in <code>ShareableCapabilitiesForInvitation</code>
+      and <code>DriverInvites</code> [iOS] (ex. true = enabled, false = disabled)</p>
+    text4: null
+    display_order: 1

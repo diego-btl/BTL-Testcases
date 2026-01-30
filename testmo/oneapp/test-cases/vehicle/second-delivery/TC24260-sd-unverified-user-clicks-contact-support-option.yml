@@ -1,0 +1,34 @@
+testmo:
+  case_id: 24260
+  folder_id: 1453
+  project_id: 2
+  folder_path: vehicle/second-delivery
+  folder_name_ui: Second Delivery
+  created_at: '2024-10-17 17:53:00.302078'
+  updated_at: '2026-01-06 18:51:33.721783'
+  last_sync: '2026-01-30T18:21:06.898847Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/24260
+metadata:
+  name: SD - Unverified user clicks "Contact Support" option
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<p>Vehicle is eligible within the valid period from purchase &amp;
+    have a unverified user(QX80 - 9/QX80 10).</p><p>In the Firebase config &gt; <code>"EnableSecondDelivery":
+    "true"</code></p>'
+  steps:
+  - column_name: custom_steps
+    id: 37829
+    case_id: 24260
+    text1: <ol><li>Navigate to vehicle tab</li><li>Check the event at the top of the
+      screen</li><li>Click over the appointment</li><li>Click Verify Identity</li><li>Click
+      the option <strong>"Contact Support"</strong></li></ol>
+    text2: null
+    text3: <p>The apps displays 2 options:</p><ul><li>Call 1 (844) 471-1010</li><li>Go
+      Back</li></ul>
+    text4: null
+    display_order: 1
+  notes: '<ul><li>Account: natemie@btl.ca/Telematics123!</li></ul>'

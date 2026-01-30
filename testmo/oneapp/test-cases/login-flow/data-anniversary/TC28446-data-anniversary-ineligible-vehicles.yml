@@ -1,0 +1,61 @@
+testmo:
+  case_id: 28446
+  folder_id: 7144
+  project_id: 2
+  folder_path: login-flow/data-anniversary
+  folder_name_ui: Data Anniversary
+  created_at: '2024-11-22 18:24:48.123591'
+  updated_at: '2026-01-21 16:54:31.136683'
+  last_sync: '2026-01-30T18:21:06.670436Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/28446
+metadata:
+  name: Data Anniversary - Ineligible Vehicles
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  steps:
+  - column_name: custom_steps
+    id: 102423
+    case_id: 28446
+    text1: <p>Login to the app with VIN marked as stolen</p>
+    text2: null
+    text3: '<ul>
+
+      <li>Gift box animation does NOT appear</li>
+
+      <li>User is taken to <code>Home</code> screen</li>
+
+      </ul>'
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 102424
+    case_id: 28446
+    text1: <p>Login to the app with financial vehicle VIN</p>
+    text2: null
+    text3: '<ul>
+
+      <li>Gift box animation does NOT appear</li>
+
+      <li>User is taken to <code>Home</code> screen</li>
+
+      </ul>'
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 102425
+    case_id: 28446
+    text1: <p>Login to the app as additional driver with VIN meeting anniversary conditions</p>
+    text2: null
+    text3: '<ul>
+
+      <li>Gift box animation does NOT appear</li>
+
+      <li>User is taken to <code>Home</code> screen</li>
+
+      </ul>'
+    text4: null
+    display_order: 3

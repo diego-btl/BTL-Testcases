@@ -1,0 +1,70 @@
+testmo:
+  case_id: 64829
+  folder_id: 7146
+  project_id: 2
+  folder_path: support/enhanced-in-app-chat
+  folder_name_ui: Enhanced In-App Chat
+  created_at: '2026-01-27 22:20:57.133892'
+  updated_at: '2026-01-28 00:21:56.131632'
+  last_sync: '2026-01-30T18:21:03.606438Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/64829
+metadata:
+  name: Live Chat Screen - Chat Status Open
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  steps:
+  - column_name: custom_steps
+    id: 102475
+    case_id: 64829
+    text1: <p>Navigate to <code>Support</code> screen and tap <code>Chat</code> card</p>
+    text2: null
+    text3: '<ul><li>User is redirected to <code>Live Chat</code> screen</li><li>Screen
+      displays:<ul><li><strong>Back button</strong> in top left</li><li>Title: <code>Live
+      Chat</code></li><li>Brand-specific header text:<ul><li>Nissan: <code>Chat with
+      a Nissan agent</code></li><li>INFINITI: <code>Chat with an INFINITI agent</code></li></ul></li><li>Text:
+      <code>Please select one topic from the following</code></li></ul></li></ul>'
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 102476
+    case_id: 64829
+    text1: <p>Validate department cards display with Open status</p>
+    text2: null
+    text3: '<ul><li>Two department cards are displayed:<ul><li>Brand-specific card
+      names:<ul><li>Nissan: <code>MyNISSAN App Support</code> and <code>My Current
+      Nissan Vehicle</code></li><li>INFINITI: <code>MyINFINITI App Support</code>
+      and <code>My Current INFINITI Vehicle</code></li></ul></li><li>Each card shows:
+      <code>Chat Status: Open</code> (green text)</li></ul></li></ul>'
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 102477
+    case_id: 64829
+    text1: <p>Validate <code>GO TO CHAT</code> button state</p>
+    text2: null
+    text3: <ul><li><code>GO TO CHAT</code> button is displayed</li><li>Button is initially
+      disabled (grey)</li></ul>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 102478
+    case_id: 64829
+    text1: <p>Tap on one department card (e.g., <code>MyNISSAN App Support</code>)</p>
+    text2: null
+    text3: <ul><li><strong>Green checkmark icon</strong> appears on the right side
+      of selected card</li><li><code>GO TO CHAT</code> button becomes enabled (active)</li></ul>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 102479
+    case_id: 64829
+    text1: <p>Validate SMS support section displays</p>
+    text2: null
+    text3: '<ul><li>Text: <code>Need support by SMS/Text?</code> is displayed</li><li>Link:
+      <code>APP SUPPORT BY SMS</code> is displayed</li></ul>'
+    text4: null
+    display_order: 5

@@ -1,0 +1,48 @@
+testmo:
+  case_id: 1592
+  folder_id: 101
+  project_id: 2
+  folder_path: map/route-planner
+  folder_name_ui: Route Planner
+  created_at: '2023-08-28 20:13:24.699013'
+  updated_at: '2025-12-02 19:33:51.834678'
+  last_sync: '2026-01-30T18:21:07.959814Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/1592
+metadata:
+  name: Cancel Route
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>User is in the <strong>Create Route</strong> screen</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 1957
+    case_id: 1592
+    text1: <ol><li>Tap the <strong>Cancel Route</strong> button</li><li>Tap the <strong>No</strong>
+      on the alert modal</li></ol>
+    text2: null
+    text3: <ul><li>User should see an alert modal</li><li>Alert modal should be dismissed</li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 95575
+    case_id: 1592
+    text1: <ol><li>Tap the <strong>Cancel Route</strong> button</li><li>Tap <strong>Yes</strong>
+      on the alert modal</li></ol>
+    text2: null
+    text3: <ul><li>User should see an alert modal</li><li>User should be taken back
+      to the <code>Map</code> screen</li></ul>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 95576
+    case_id: 1592
+    text1: <ol><li>Tap the <strong>Cancel Route</strong> button</li><li>Tap the <strong>No</strong>
+      on the alert modal</li><li>Tap the back button</li></ol>
+    text2: null
+    text3: <ul><li>User should see an alert modal</li></ul>
+    text4: null
+    display_order: 3

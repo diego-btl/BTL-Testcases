@@ -1,0 +1,30 @@
+testmo:
+  case_id: 1435
+  folder_id: 234
+  project_id: 2
+  folder_path: device-notifications
+  folder_name_ui: Device Notifications
+  created_at: '2023-08-28 20:13:22.011837'
+  updated_at: '2024-10-17 17:57:34.769274'
+  last_sync: '2026-01-30T18:21:08.350409Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/1435
+metadata:
+  name: Don't Allow Notifications
+  priority: 3
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: User is on notifications permissions alert
+  steps:
+  - column_name: custom_steps
+    id: 1803
+    case_id: 1435
+    text1: 1. Tap Don't Allow Notifications
+    text2: null
+    text3: App should not register for push notifications until user allows notifications
+      in their device settings
+    text4: null
+    display_order: 1
+  notes: Android 13+

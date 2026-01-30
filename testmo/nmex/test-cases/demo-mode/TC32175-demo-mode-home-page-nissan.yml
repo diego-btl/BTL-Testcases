@@ -1,0 +1,129 @@
+testmo:
+  case_id: 32175
+  folder_id: 4144
+  project_id: 6
+  folder_path: demo-mode
+  folder_name_ui: Demo Mode
+  created_at: '2025-04-01 17:50:43.569674'
+  updated_at: '2025-11-03 19:47:50.618409'
+  last_sync: '2026-01-30T18:20:45.925057Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/32175
+metadata:
+  name: Demo Mode - Home Page - NISSAN
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is already in Demo Mode <code>Home Page</code></p>
+  steps:
+  - column_name: custom_steps
+    id: 94925
+    case_id: 32175
+    text1: <p>Validate hero section is displayed</p>
+    text2: null
+    text3: <ul><li><strong>Support icon</strong> is displayed</li><li>Vehicle nickname
+      <code>X-TRAIL Demo</code> is displayed</li><li><strong>Notification icon</strong>
+      is displayed and disabled</li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 94926
+    case_id: 32175
+    text1: <p>Validate <code>Agregar Placas</code> CTA is displayed</p>
+    text2: null
+    text3: <ul><li><code>Agregar Placas</code> CTA button is displayed</li></ul>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 94927
+    case_id: 32175
+    text1: <p>Verify <code>Servicio y mantenimiento</code> card is displayed</p>
+    text2: null
+    text3: '<ul><li>Card is displayed with <strong>green icon</strong></li><li>Sub
+      text: <code>Restan 18,000 Km</code> is displayed</li></ul>'
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 94928
+    case_id: 32175
+    text1: <p>Verify <code>Garantía</code> card is displayed</p>
+    text2: null
+    text3: '<ul><li>Card is displayed with <strong>green icon</strong></li><li>Sub
+      text: <code>Tu garantía está vigente</code> is displayed</li></ul>'
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 94929
+    case_id: 32175
+    text1: <p>Verify <code>Seguro</code> card is displayed</p>
+    text2: null
+    text3: '<ul><li>Card is displayed with <strong>green icon</strong></li><li>Sub
+      text: <code>Tu seguro está vigente</code> is displayed</li></ul>'
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 94930
+    case_id: 32175
+    text1: <p>Verify <code>Programar Servicio</code> card is displayed</p>
+    text2: null
+    text3: <ul><li>Card is displayed with <strong>NISSAN default color icon</strong></li></ul>
+    text4: null
+    display_order: 6
+  - column_name: custom_steps
+    id: 94931
+    case_id: 32175
+    text1: <p>Verify <code>Editar Tarjetas</code> CTA is displayed</p>
+    text2: null
+    text3: <ul><li><code>Editar Tarjetas</code> CTA link/button is displayed</li></ul>
+    text4: null
+    display_order: 7
+  - column_name: custom_steps
+    id: 94932
+    case_id: 32175
+    text1: <p>Tap <strong>Support icon</strong></p>
+    text2: null
+    text3: <ul><li>User is redirected to <code>Soporte</code> screen</li></ul>
+    text4: null
+    display_order: 8
+  - column_name: custom_steps
+    id: 94933
+    case_id: 32175
+    text1: <p>Tap vehicle nickname <code>X-TRAIL Demo</code> (Garage Dropdown)</p>
+    text2: null
+    text3: <ul><li><code>Seleccionar vehículo</code> modal opens</li></ul>
+    text4: null
+    display_order: 9
+  - column_name: custom_steps
+    id: 94934
+    case_id: 32175
+    text1: <p>Tap <strong>Notification icon</strong></p>
+    text2: null
+    text3: <ul><li>No action occurs (disabled state)</li></ul>
+    text4: null
+    display_order: 10
+  - column_name: custom_steps
+    id: 94935
+    case_id: 32175
+    text1: <p>Tap on the following elements to verify Demo Mode CTA alerts:</p><ul><li><code>Agregar
+      Placas</code> CTA</li><li><code>Servicio y mantenimiento</code> card</li><li><code>Garantía</code>
+      card</li><li><code>Seguro</code> card</li><li><code>Programar Servicio</code>
+      card</li><li><code>Editar Tarjetas</code> CTA</li></ul>
+    text2: null
+    text3: '<ul><li>Each element tap displays modal with:</li><li>Title: <code>Modo
+      de demostración</code></li><li>Message: <code>No disponible en modo de demostración.</code></li><li><strong>OK
+      button</strong> is displayed to dismiss modal</li></ul>'
+    text4: null
+    display_order: 11
+  - column_name: custom_steps
+    id: 94936
+    case_id: 32175
+    text1: <p>Tap <strong>OK</strong> button on demo mode alert</p>
+    text2: null
+    text3: <ul><li>Modal is dismissed</li><li>User returns to Home Page</li></ul>
+    text4: null
+    display_order: 12
+  notes: '<p>Automatio: for step 1, only elements in header will be validated (support
+    icon, notifications icon &amp; vehicle selector) as elements in hero can''t be
+    retrieved because it''s a dynamic image</p>'

@@ -1,0 +1,46 @@
+testmo:
+  case_id: 29823
+  folder_id: 3765
+  project_id: 5
+  folder_path: map
+  folder_name_ui: Map
+  created_at: '2024-12-20 15:21:40.308281'
+  updated_at: null
+  last_sync: '2026-01-30T18:20:38.313591Z'
+  url: https://bethinklabs.testmo.net/repositories/5/cases/29823
+metadata:
+  name: Map - Webview
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is on maps tab</p>
+  steps:
+  - column_name: custom_steps
+    id: 48696
+    case_id: 29823
+    text1: <p>User taps on the Mapa tab</p>
+    text2: null
+    text3: <p>User should see a webview load </p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 48697
+    case_id: 29823
+    text1: <p>Tap on search bar</p>
+    text2: null
+    text3: <p>User should be able to enter a location/address, execute a search and
+      see the results</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 48698
+    case_id: 29823
+    text1: <p>Interact with other webview elements</p>
+    text2: null
+    text3: <p>User should have no issue interacting with any element in the webview
+      or scrolling on the map</p>
+    text4: null
+    display_order: 3

@@ -1,0 +1,30 @@
+testmo:
+  case_id: 32376
+  folder_id: 6761
+  project_id: 6
+  folder_path: support/let-us-help
+  folder_name_ui: Let Us Help
+  created_at: '2025-04-01 17:50:44.986572'
+  updated_at: '2025-10-30 17:41:28.900702'
+  last_sync: '2026-01-30T18:20:45.529020Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/32376
+metadata:
+  name: '911'
+  priority: 12
+  type: functional
+  status: active
+  estimate: 18000000000
+  automation: 'no'
+  tags: []
+test_case:
+  steps:
+  - column_name: custom_steps
+    id: 52747
+    case_id: 32376
+    text1: <ol><li>Login into the app</li><li>User goes to <code>Soporte</code> screen</li><li>Tap
+      the <code>911</code> item</li></ol>
+    text2: null
+    text3: <p>The native phone system will open with the <strong>911</strong> phone
+      number prefilled</p>
+    text4: null
+    display_order: 1

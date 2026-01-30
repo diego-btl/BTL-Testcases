@@ -1,0 +1,60 @@
+testmo:
+  case_id: 62157
+  folder_id: 2444
+  project_id: 2
+  folder_path: home/charge/necn-nissan-energy-charge-network
+  folder_name_ui: NECN - NISSAN ENERGY Charge Network
+  created_at: '2025-12-15 21:25:36.056704'
+  updated_at: '2026-01-15 19:05:45.001650'
+  last_sync: '2026-01-30T18:21:04.668784Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/62157
+metadata:
+  name: NECN - AccountStatus - FAILURE - TO CONFIRM WITH PM
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<p>User has an EV/EV2</p><p>"EnablePlugAndCharge": "true"</p>'
+  steps:
+  - column_name: custom_steps
+    id: 96508
+    case_id: 62157
+    text1: <p>Add a breakpoint to the AccountStatus API </p><p>Fresh install the app</p><p>Abort
+      the AccountStatus API when it's called</p><p>Navigate to the Charge screen</p>
+    text2: null
+    text3: <p>The 'Something Went Wrong' modal with 'Cancel' and 'Retry' buttons is
+      displayed</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 96509
+    case_id: 62157
+    text1: <p>Tap  the 'Cancel' button</p>
+    text2: null
+    text3: <p>The modal is dismissed  - IT'S SUPPOSED TO BE CONFIRMED WITH PM SINCE
+      IOS REDIRECTS TO THE MANAGE EV SCREEN CALLING THE ACCOUNTSTATUS AGAIN</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 96510
+    case_id: 62157
+    text1: <p>Tap the 'Retry' button</p>
+    text2: null
+    text3: <p>ChargeProduct API is called - ????????</p><p>The Something Went Wrong
+      modal is not dismissed</p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 96515
+    case_id: 62157
+    text1: <p>Fresh install the app</p><p>Let the AccountStatus API to be executed
+      for the first time</p><p>Breakpoint and abort the AccountStatus API when navigate
+      to the NECN screen</p>
+    text2: null
+    text3: <p>The previously cached data is displayed</p><p>The 'Something Went Wrong'
+      modal is displayed &gt; only on iOS - ??????????</p>
+    text4: null
+    display_order: 4
+  notes: <p><a href="https://bethinklabs.slack.com/archives/C052PH0HNHJ/p1765994919925809">https://bethinklabs.slack.com/archives/C052PH0HNHJ/p1765994919925809</a></p>

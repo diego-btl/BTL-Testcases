@@ -1,0 +1,48 @@
+testmo:
+  case_id: 2718
+  folder_id: 412
+  project_id: 2
+  folder_path: vehicle/proactive-maintenance
+  folder_name_ui: Proactive Maintenance
+  created_at: '2023-09-07 21:32:22.675035'
+  updated_at: '2024-10-17 17:57:34.769274'
+  last_sync: '2026-01-30T18:21:07.691172Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/2718
+metadata:
+  name: Create reminder - Success
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is on Proactive Maintenance(PSR) screen</p><p>User has fewer
+    than 4 reminders</p>
+  steps:
+  - column_name: custom_steps
+    id: 3083
+    case_id: 2718
+    text1: <p>Tap on Create New</p>
+    text2: null
+    text3: <p>User should see New Reminder screen in default state without anything
+      selected<br /> </p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 9447
+    case_id: 2718
+    text1: <p>Select at least 1 part and set at least 1 type of reminder interval</p>
+    text2: null
+    text3: <p>User is able to check any parts and set a reminder interval</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 9448
+    case_id: 2718
+    text1: <p>Tap on Save</p>
+    text2: null
+    text3: <p>User should see a loading spinner while reminder is saving<br />On success,
+      user is returned to the PSR screen showing the new reminder and a success toast
+      is shown</p>
+    text4: null
+    display_order: 3

@@ -1,0 +1,42 @@
+testmo:
+  case_id: 2676
+  folder_id: 4170
+  project_id: 2
+  folder_path: home/climate/avk2
+  folder_name_ui: AVK2
+  created_at: '2023-09-07 21:10:07.587192'
+  updated_at: '2025-04-30 21:33:16.208496'
+  last_sync: '2026-01-30T18:21:07.807255Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/2676
+metadata:
+  name: Climate Details - Turn Climate On - HVAC_FAILED
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>AVK2 vehicle<br />Climate Details<br />Engine is PENDING</p>
+  steps:
+  - column_name: custom_steps
+    id: 3042
+    case_id: 2676
+    text1: <ol><li>The user has sent an engine start command</li><li>They are on the
+      climate details screen</li><li>The app is polling the <code>checkEngineServiceRequest</code>
+      query</li><li>It should react differently based on the new <code>statusDetails</code>
+      field</li><li>The <code>statusDetails</code> field returns the <code>HVAC_FAILED</code>
+      enum</li><li>The <code>status</code> field returns the <code>FAILED</code> enum</li><li>The
+      app should show a toast with the following copy:</li></ol>
+    text2: null
+    text3: "<ol><li>Engine started, but climate failed to start</li><li>Stop the spinner\
+      \ animation</li><li>The app should stop polling</li><li>The screen should update\
+      \ to show that the climate status is off</li><li>The main CTA should still say\
+      \ \"Turn Climate Off\"</li><li>10 min timer starts running above hero image</li></ol><p><i><strong>The\
+      \ scripts  can be used to simulated the start engine</strong></i></p><h3><strong>DATA</strong></h3><p>MW\
+      \ mutation response</p><pre><code class=\"editor-plain language-plain code-block\"\
+      >mutation CheckEngineServiceRequest($vin: String!, $serviceRequestId: String!)\
+      \ {\n  checkEngineServiceRequest(vin: $vin, serviceRequestId: $serviceRequestId)\
+      \ {\n    activationDateTime\n    statusChangeDateTime\n    serviceRequestId\n\
+      \    status\n    statusDetails\n  }\n}</code></pre>"
+    text4: null
+    display_order: 1

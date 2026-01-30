@@ -1,0 +1,40 @@
+testmo:
+  case_id: 29933
+  folder_id: 73
+  project_id: 2
+  folder_path: push-notifications
+  folder_name_ui: Push Notifications
+  created_at: '2025-01-13 23:17:57.106790'
+  updated_at: '2025-09-19 21:19:47.839762'
+  last_sync: '2026-01-30T18:21:06.514181Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/29933
+metadata:
+  name: Push Notification Registration - Retry on App Relaunch
+  priority: 1
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<ol><li>Feature Flag: <code>EnableNewMutationForPushNotificationRegistration</code><ol><li>Enabled:
+    <code>true</code> --&gt; <code>RegisterDeviceForPushNotifications</code> endpoint</li></ol></li><li>No
+    token is cached.</li></ol>'
+  steps:
+  - column_name: custom_steps
+    id: 48803
+    case_id: 29933
+    text1: <p>Login to app and breakpoint <code>RegisterDeviceForPushNotifications</code>
+      to fail including all retries</p>
+    text2: null
+    text3: <p>Verify <code>RegisterDeviceForPushNotifications</code> shows as failed</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 48804
+    case_id: 29933
+    text1: <p>Close the app and relaunch</p>
+    text2: null
+    text3: <p>Verify <code>RegisterDeviceForPushNotifications</code> is trigger again
+      after a cold start with the retry logic applied.</p>
+    text4: null
+    display_order: 2

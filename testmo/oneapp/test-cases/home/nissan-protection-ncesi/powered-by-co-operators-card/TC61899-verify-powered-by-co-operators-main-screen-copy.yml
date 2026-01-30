@@ -1,0 +1,35 @@
+testmo:
+  case_id: 61899
+  folder_id: 6759
+  project_id: 2
+  folder_path: home/nissan-protection-ncesi/powered-by-co-operators-card
+  folder_name_ui: Powered by Co-operators card
+  created_at: '2025-10-29 16:07:34.830589'
+  updated_at: '2025-10-29 16:18:58.866528'
+  last_sync: '2026-01-30T18:21:05.628897Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/61899
+metadata:
+  name: Verify "powered by Co-operators" main screen copy
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>User is on the Nissan Protection screen</li><li>VehicleStaticData
+    is returning a valid province that is also returned in the feature flag</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 94739
+    case_id: 61899
+    text1: <p>Tap on the <code>Insure my Nissan powered by Co-operators</code> card</p>
+    text2: null
+    text3: <p>User should see two sections with copies + CTAs</p><p>Top section:</p><ul><li><code>Insure
+      my Nissan powered by Co-operators is a new insurance program designed for Nissan
+      drivers. Offered &amp; Underwritten by Co-operators General Insurance Company.</code></li><li>Learn
+      More CTA</li></ul><p>Bottom Section:</p><ul><li><code>Already part of the Insure
+      my Nissan powered by Co-operators program? Log in with your Co-operators account
+      to access your policy information.</code></li><li>Log in CTA</li></ul><figure
+      class="image"><img src="/attachments/view/8650" alt="8650" /></figure>
+    text4: null
+    display_order: 1

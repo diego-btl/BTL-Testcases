@@ -1,0 +1,30 @@
+testmo:
+  case_id: 567
+  folder_id: 55
+  project_id: 2
+  folder_path: home/hero-module
+  folder_name_ui: Hero Module
+  created_at: '2023-08-01 23:08:19.834100'
+  updated_at: '2025-07-15 16:32:41.692651'
+  last_sync: '2026-01-30T18:21:09.166837Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/567
+metadata:
+  name: Vehicle Image
+  priority: 3
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has a vehicle</p>
+  steps:
+  - column_name: custom_steps
+    id: 736
+    case_id: 567
+    text1: <p>1. Launch app to home screen</p>
+    text2: null
+    text3: <p>User should see loading vehicle image while home screen is loading<br
+      /><br />User should see vehicle image if image URL is present<br /><br />User
+      should see a placeholder image if image URL is not present</p>
+    text4: null
+    display_order: 1

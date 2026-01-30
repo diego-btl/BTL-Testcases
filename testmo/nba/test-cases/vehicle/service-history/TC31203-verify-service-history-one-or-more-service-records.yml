@@ -1,0 +1,89 @@
+testmo:
+  case_id: 31203
+  folder_id: 4009
+  project_id: 5
+  folder_path: vehicle/service-history
+  folder_name_ui: Service History
+  created_at: '2025-02-07 21:58:51.105202'
+  updated_at: '2025-02-07 22:22:00.875815'
+  last_sync: '2026-01-30T18:20:38.121734Z'
+  url: https://bethinklabs.testmo.net/repositories/5/cases/31203
+metadata:
+  name: Verify Service History (One or More Service Records)
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>The <strong>GetServiceHistory query</strong> returns <strong>multiple
+    service records</strong> for the VIN.</p>
+  steps:
+  - column_name: custom_steps
+    id: 51194
+    case_id: 31203
+    text1: <p>Open the <strong>Vehicle Screen</strong> and check for the <strong>Último
+      Serviço Executado card.</strong></p>
+    text2: null
+    text3: <ul><li>The <strong>Último Serviço Executado</strong> card is displayed
+      with:<ul><li><strong>Service Description</strong> (latest service only).</li><li><strong>Dealer
+      Name</strong>.</li><li><strong>Service Date</strong> (formatted as <strong>DD/MM/YYYY</strong>).</li><li><strong>Vehicle
+      Mileage</strong> (formatted as <strong>XX.XXX km</strong>).</li></ul></li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 51195
+    case_id: 31203
+    text1: <p><strong>Click on the Último Serviço Executado card.</strong></p>
+    text2: null
+    text3: <ul><li>The app navigates to the <strong>Histórico de Serviços Screen</strong>.</li><li>The
+      screen header displays <strong>"Histórico de Serviços"</strong>.</li><li>The
+      screen displays all service records as collapsed cards. Each card should contain:<ul><li><strong>Service
+      Description</strong> (services field from GetServiceHistory query).</li><li><strong>Service
+      Date</strong> (formatted as <strong>DD/MM/YYYY</strong>).</li><li><strong>Mileage</strong>
+      (formatted as <strong>XX.XXX km</strong>).</li></ul></li></ul>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 51196
+    case_id: 31203
+    text1: <p><strong>Click the Back button at the top left of the screen.</strong></p>
+    text2: null
+    text3: <p>The app navigates back to the <strong>Vehicle Screen.</strong></p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 51197
+    case_id: 31203
+    text1: <p><strong>Click on the "Histórico de Serviços"button on the Vehicle Landing
+      Page.</strong></p>
+    text2: null
+    text3: <ul><li>The app navigates to the <strong>Histórico de Serviços Screen</strong>.</li><li>The
+      screen header displays <strong>"Histórico de Serviços"</strong>.</li><li>The
+      screen displays all service records as collapsed cards. Each card should contain:<ul><li><strong>Service
+      Description</strong> (services field from GetServiceHistory query).</li><li><strong>Service
+      Date</strong> (formatted as <strong>DD/MM/YYYY</strong>).</li><li><strong>Mileage</strong>
+      (formatted as <strong>XX.XXX km</strong>).</li></ul></li></ul>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 51198
+    case_id: 31203
+    text1: <p><strong>Click on a collapsed service history card.</strong></p>
+    text2: null
+    text3: <ul><li>The card expands and displays additional details:<ul><li><strong>Service
+      Description</strong> on top.</li><li><strong>Service Date</strong> on top (formatted
+      as <strong>DD/MM/YYYY</strong>).</li><li><strong>Separation gray line</strong>
+      appears.</li><li><strong>Vehicle Mileage</strong> under "Quilometragem do Veículo".</li><li><strong>Dealer
+      Name</strong> under "Concessionária".</li><li><strong>Dealer Contact Number</strong>
+      under "Contato" (formatted as per phone number rules).</li></ul></li></ul>
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 51199
+    case_id: 31203
+    text1: <p><strong>Click on the expanded service history card.</strong></p>
+    text2: null
+    text3: <p>The card <strong>collapses back</strong>.</p>
+    text4: null
+    display_order: 6

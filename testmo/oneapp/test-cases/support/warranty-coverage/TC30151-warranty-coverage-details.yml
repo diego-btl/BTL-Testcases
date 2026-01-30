@@ -1,0 +1,29 @@
+testmo:
+  case_id: 30151
+  folder_id: 83
+  project_id: 2
+  folder_path: support/warranty-coverage
+  folder_name_ui: Warranty Coverage
+  created_at: '2025-02-05 15:05:55.694966'
+  updated_at: '2025-09-24 19:15:19.653053'
+  last_sync: '2026-01-30T18:21:06.332749Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/30151
+metadata:
+  name: Warranty Coverage Details
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  steps:
+  - column_name: custom_steps
+    id: 49065
+    case_id: 30151
+    text1: <p>1. Force warranty values to not be returned<br />2. Return warranty
+      values</p>
+    text2: null
+    text3: <p>1. User should not see coverage cards<br />2. User should see the coverage
+      cards</p>
+    text4: null
+    display_order: 1

@@ -1,0 +1,41 @@
+testmo:
+  case_id: 61881
+  folder_id: 6755
+  project_id: 2
+  folder_path: home/charge/v1g-vehicle-to-grid
+  folder_name_ui: V1G - Vehicle-to-Grid
+  created_at: '2025-10-24 21:07:10.363130'
+  updated_at: '2025-12-16 18:20:15.189428'
+  last_sync: '2026-01-30T18:21:05.688985Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/61881
+metadata:
+  name: V1G - Deep Link validation
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>Nissan NNA and NCI only</p><p>EV or EV AVK2 only</p>
+  steps:
+  - column_name: custom_steps
+    id: 94744
+    case_id: 61881
+    text1: <p>1. Open the halgatewood.com and insert the following link into the deep
+      link field <br />mynissan://charge/manage_ev<i><strong>?vin=JN1BF0BA8PM401248</strong></i></p><p>2.
+      Tap LOAD button</p><p>3. Tap to launch</p>
+    text2: null
+    text3: <p>1. User is navigated to the Manage EV screen regardless what VN is in
+      focus</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 94745
+    case_id: 61881
+    text1: <p>1. Open the halgatewood.com and insert the following link into the deep
+      link field <br />mynissan://charge/manage_ev<i><strong>?vin=</strong></i></p><p>2.
+      Tap LOAD button</p><p>3. Tap to launch</p>
+    text2: null
+    text3: <p>1. User is navigated to the Home screen (vehicle in focus)</p>
+    text4: null
+    display_order: 2

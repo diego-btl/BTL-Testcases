@@ -1,0 +1,21 @@
+testmo:
+  case_id: 52174
+  folder_id: 4086
+  project_id: 6
+  folder_path: vehicle-page
+  folder_name_ui: Vehicle Page
+  created_at: '2025-06-24 14:43:30.508336'
+  updated_at: '2025-06-24 15:20:07.685095'
+  last_sync: '2026-01-30T18:20:45.210832Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/52174
+metadata:
+  name: Servicio y mantenimiento - Logic
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>The user has a <code>connected</code> or <code>non-connected</code>
+    vehicle </li><li>The user is <code>PD</code> or <code>AD</code></li><li>The <code>Service
+    and Maintenance</code> card is displayed on the home page</li></ul>

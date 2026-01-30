@@ -1,0 +1,116 @@
+testmo:
+  case_id: 1457
+  folder_id: 6802
+  project_id: 2
+  folder_path: demo-mode/support
+  folder_name_ui: Support
+  created_at: '2023-08-28 20:13:22.376102'
+  updated_at: '2025-12-18 17:05:00.061304'
+  last_sync: '2026-01-30T18:21:08.239280Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/1457
+metadata:
+  name: Demo mode - Support Tab
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  steps:
+  - column_name: custom_steps
+    id: 1825
+    case_id: 1457
+    text1: <p>Navigate to the Support tab</p>
+    text2: null
+    text3: <p>The user should see the support sheet</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 9394
+    case_id: 1457
+    text1: <p>Tap the Roadside Assistance Button</p>
+    text2: null
+    text3: <p>User should be navigated to the Roadside Assistance screen</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 82296
+    case_id: 1457
+    text1: <p>Tap on any button/CTA</p>
+    text2: null
+    text3: <p>If user taps the info button, they should be navigated to the Coverage
+      Details screen.</p><p>Everything else should trigger the demo mode modal</p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 82297
+    case_id: 1457
+    text1: <p>Exit and tap the Accident Helper Button</p>
+    text2: null
+    text3: <p>User should see the accident helper screen</p>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 82298
+    case_id: 1457
+    text1: <p>Expand/Collapse all the cards and tap on CTAs</p>
+    text2: null
+    text3: <p>User should see the demo mode modal</p>
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 82299
+    case_id: 1457
+    text1: <p>Exit and tap the Stolen Vehicle Button</p>
+    text2: null
+    text3: <p>User should see the Stolen Vehicle Locator screen</p>
+    text4: null
+    display_order: 6
+  - column_name: custom_steps
+    id: 82300
+    case_id: 1457
+    text1: <p>Tap the Call Stolen Vehicle Locator CTA</p>
+    text2: null
+    text3: <p>User should see the demo mode modal</p>
+    text4: null
+    display_order: 7
+  - column_name: custom_steps
+    id: 82301
+    case_id: 1457
+    text1: <p>Exit and tap the Schedule Service button</p>
+    text2: null
+    text3: <p>User should see the Find a Dealer screen with no results</p>
+    text4: null
+    display_order: 8
+  - column_name: custom_steps
+    id: 82302
+    case_id: 1457
+    text1: <p>Tap on the search bar</p>
+    text2: null
+    text3: <p>User should see the demo mode modal</p>
+    text4: null
+    display_order: 9
+  - column_name: custom_steps
+    id: 82303
+    case_id: 1457
+    text1: <p>Tap on the other cards on the screen</p>
+    text2: null
+    text3: <p>User should be brought to the respective page</p>
+    text4: null
+    display_order: 10
+  - column_name: custom_steps
+    id: 82304
+    case_id: 1457
+    text1: <p>Tap on any buttons/CTAs/page elements</p>
+    text2: null
+    text3: <p>User should see the demo mode modal</p>
+    text4: null
+    display_order: 11
+  - column_name: custom_steps
+    id: 9393
+    case_id: 1457
+    text1: <p>Tap the Personal Assistant item (only for NMEX)</p>
+    text2: null
+    text3: <p>The user should see the Personal Assistant screen</p>
+    text4: null
+    display_order: 12

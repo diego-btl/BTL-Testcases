@@ -1,0 +1,38 @@
+testmo:
+  case_id: 576
+  folder_id: 55
+  project_id: 2
+  folder_path: home/hero-module
+  folder_name_ui: Hero Module
+  created_at: '2023-08-01 23:08:19.954259'
+  updated_at: '2025-09-19 19:00:33.251489'
+  last_sync: '2026-01-30T18:21:09.145530Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/576
+metadata:
+  name: Lock Status
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has REMOTE_VEHICLE_STATUS capabilities</p>
+  steps:
+  - column_name: custom_steps
+    id: 745
+    case_id: 576
+    text1: <ol><li>Connect device to proxy</li><li>Login into the app</li><li>Wait
+      for all initial APIs to finish loading</li><li>Modify <code>VehicleDynamicData</code>
+      so that <code>vehicle.lockStatus.lockStatus</code> is <code>UNLOCKED</code>
+      and modify <code>vehicle.doorStatus.overallLock.lock</code> is <code>LOCKED</code></li><li>Bg/Fg
+      the app</li><li>Observe the lock status in the home hero</li></ol>
+    text2: null
+    text3: <ul><li>User should see the corresponding lock/unlock icon in the Hero
+      Module</li><li>The app should be using vehicle.doorStatus data over vehicle.lockStatus
+      data when available and should fall back to vehicle.lockStatus data when it
+      is not available</li></ul>
+    text4: null
+    display_order: 1
+  notes: <p><strong><u>User login:</u></strong></p><ul><li>p33a7509@gmail.com/Telematics123
+    (DO NOT change preferred dealer or nickname for this account) (or any account
+    for the first time)</li></ul>

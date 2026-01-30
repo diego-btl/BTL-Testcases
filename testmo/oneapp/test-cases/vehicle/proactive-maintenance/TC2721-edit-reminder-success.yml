@@ -1,0 +1,48 @@
+testmo:
+  case_id: 2721
+  folder_id: 412
+  project_id: 2
+  folder_path: vehicle/proactive-maintenance
+  folder_name_ui: Proactive Maintenance
+  created_at: '2023-09-07 21:32:22.699261'
+  updated_at: '2024-10-17 17:57:34.769274'
+  last_sync: '2026-01-30T18:21:07.677743Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/2721
+metadata:
+  name: Edit reminder - Success
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is on PSR screen<br />User has an existing reminder</p>
+  steps:
+  - column_name: custom_steps
+    id: 3086
+    case_id: 2721
+    text1: <p>Tap on Edit on existing reminder</p>
+    text2: null
+    text3: <p>User should see Edit Reminder screen with the corresponding settings
+      for that reminder</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 9458
+    case_id: 2721
+    text1: <p>Modify anything in the reminder (ex. Current Parts, Reminder Interval
+      - mileage, date)</p>
+    text2: null
+    text3: <p>User is able to modify the reminder</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 9459
+    case_id: 2721
+    text1: <p>Tap on Save</p>
+    text2: null
+    text3: <p>User should see a loading spinner while reminder is saving<br />On success,
+      user is returned to the Parts Service Reminders screen showing the edited reminder
+      and a success toast is shown</p>
+    text4: null
+    display_order: 3

@@ -1,0 +1,39 @@
+testmo:
+  case_id: 61959
+  folder_id: 6778
+  project_id: 2
+  folder_path: home/climate/evavk2
+  folder_name_ui: EVAVK2
+  created_at: '2025-11-10 18:38:38.574952'
+  updated_at: '2025-11-14 22:01:32.849392'
+  last_sync: '2026-01-30T18:21:05.427389Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/61959
+metadata:
+  name: Delete Delayed Climate
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>You have a delayed Climate Start card existing on Climate screen
+    for EV2 vehicle</p>
+  steps:
+  - column_name: custom_steps
+    id: 95511
+    case_id: 61959
+    text1: <p>Tap on Remove on the Delayed Climate start Card</p>
+    text2: null
+    text3: <p>you will see a modal Remove Delayed Start? Do you want to remove your
+      delayed start? with Cancel and Remove options</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 95512
+    case_id: 61959
+    text1: <p>Tap on Remove</p>
+    text2: null
+    text3: <p>you see a loading indicator</p><p>User will be taken back to Climate
+      screen and toast Delayed Start removed will show</p>
+    text4: null
+    display_order: 2

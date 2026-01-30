@@ -1,0 +1,104 @@
+testmo:
+  case_id: 62065
+  folder_id: 102
+  project_id: 2
+  folder_path: map/planned-routes
+  folder_name_ui: Planned Routes
+  created_at: '2025-12-01 19:51:14.134683'
+  updated_at: '2025-12-02 19:42:06.200884'
+  last_sync: '2026-01-30T18:21:05.005049Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/62065
+metadata:
+  name: Update Route
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>User has estimated a route</li><li>Be in the <strong>Estimate
+    Route* </strong>screen</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 95782
+    case_id: 62065
+    text1: <ol><li>Tap on <strong>Save</strong> Route</li></ol>
+    text2: null
+    text3: <ul><li>User should see a loading spinner while save route call is made</li><li>User
+      should see a loading spinner and be brought to <strong>Planned Routes</strong>
+      screen with a <code>Route saved</code> toast when successful</li></ul>
+    text4: null
+    display_order: 1
+  notes: "<p>Automation: error in step 2 cannot be forced as it requires mocking</p><p>When\
+    \ the user taps <code>Save Route</code> the app it is calling:</p><p><strong>UpdateRoute</strong></p><pre><code\
+    \ class=\"editor-plain language-plain code-block\">{\n  \"data\": {\n    \"saveRoute\"\
+    : {\n      \"__typename\": \"TelematicsResponse\",\n      \"serviceRequestId\"\
+    : \"43801\"\n    }\n  }\n}</code></pre><p><strong>checkRouteServiceRequest</strong></p><pre><code\
+    \ class=\"editor-plain language-plain code-block\">{\n  \"data\": {\n    \"checkRouteServiceRequest\"\
+    : {\n      \"__typename\": \"ServiceRequestResult\",\n      \"status\": \"SUCCESS\"\
+    \n    }\n  }\n}</code></pre><p><strong>VehiclePlannedRoutes</strong></p><pre><code\
+    \ class=\"editor-plain language-plain code-block\">{\n  \"data\": {\n    \"vehicle\"\
+    : {\n      \"__typename\": \"ElectricVehicle\",\n      \"plannedRoutes\": [\n\
+    \        {\n          \"__typename\": \"PlannedRoutes\",\n          \"id\": \"\
+    43800\",\n          \"estimatedTimeOfDeparture\": \"2025-12-05T19:40:00.000Z\"\
+    ,\n          \"estimatedTimeOfArrival\": \"2025-12-05T20:55:53.000Z\",\n     \
+    \     \"arrivalFlag\": false,\n          \"departureFlag\": false,\n         \
+    \ \"name\": \"Trip 1\",\n          \"distance\": {\n            \"__typename\"\
+    : \"Distance\",\n            \"value\": 57,\n            \"unit\": \"MILE\"\n\
+    \          },\n          \"temperature\": {\n            \"__typename\": \"Temperature\"\
+    ,\n            \"value\": 72,\n            \"unit\": \"FAHRENHEIT\"\n        \
+    \  },\n          \"routes\": [\n            {\n              \"__typename\": \"\
+    Route\",\n              \"name\": \"505 Technology Drive\",\n              \"\
+    phoneNumber\": null,\n              \"location\": {\n                \"__typename\"\
+    : \"Location\",\n                \"latitude\": 33.67299061,\n                \"\
+    longitude\": -117.75779301\n              },\n              \"address\": {\n \
+    \               \"__typename\": \"Address\",\n                \"address1\": \"\
+    505 Technology Drive\",\n                \"address2\": null,\n               \
+    \ \"city\": \"Irvine\",\n                \"state\": \"CA\",\n                \"\
+    country\": \"US\",\n                \"postalCode\": \"92618\"\n              },\n\
+    \              \"recalculatedWaypointType\": null,\n              \"chargingOutput\"\
+    : null\n            },\n            {\n              \"__typename\": \"Route\"\
+    ,\n              \"name\": \"Santa Monica Pier\",\n              \"phoneNumber\"\
+    : null,\n              \"location\": {\n                \"__typename\": \"Location\"\
+    ,\n                \"latitude\": 34.0082821,\n                \"longitude\": -118.4987585\n\
+    \              },\n              \"address\": {\n                \"__typename\"\
+    : \"Address\",\n                \"address1\": \"200 Santa Monica Pier\",\n   \
+    \             \"address2\": null,\n                \"city\": \"Santa Monica\"\
+    ,\n                \"state\": \"CA\",\n                \"country\": \"US\",\n\
+    \                \"postalCode\": \"90401\"\n              },\n              \"\
+    recalculatedWaypointType\": null,\n              \"chargingOutput\": null\n  \
+    \          }\n          ],\n          \"avoidHighway\": null,\n          \"avoidTolls\"\
+    : null,\n          \"avoidFerries\": null,\n          \"shouldRecalculateRoute\"\
+    : false,\n          \"shouldEnableNotification\": true,\n          \"notificationInterval\"\
+    : null\n        },\n        {\n          \"__typename\": \"PlannedRoutes\",\n\
+    \          \"id\": \"43801\",\n          \"estimatedTimeOfDeparture\": \"2025-12-03T20:04:00.000Z\"\
+    ,\n          \"estimatedTimeOfArrival\": \"2025-12-03T21:10:25.000Z\",\n     \
+    \     \"arrivalFlag\": false,\n          \"departureFlag\": false,\n         \
+    \ \"name\": \"Trip 1\",\n          \"distance\": {\n            \"__typename\"\
+    : \"Distance\",\n            \"value\": 53,\n            \"unit\": \"MILE\"\n\
+    \          },\n          \"temperature\": {\n            \"__typename\": \"Temperature\"\
+    ,\n            \"value\": 72,\n            \"unit\": \"FAHRENHEIT\"\n        \
+    \  },\n          \"routes\": [\n            {\n              \"__typename\": \"\
+    Route\",\n              \"name\": \"505 Technology Drive\",\n              \"\
+    phoneNumber\": null,\n              \"location\": {\n                \"__typename\"\
+    : \"Location\",\n                \"latitude\": 33.67299061,\n                \"\
+    longitude\": -117.75779301\n              },\n              \"address\": {\n \
+    \               \"__typename\": \"Address\",\n                \"address1\": \"\
+    505 Technology Drive\",\n                \"address2\": null,\n               \
+    \ \"city\": \"Irvine\",\n                \"state\": \"CA\",\n                \"\
+    country\": \"US\",\n                \"postalCode\": \"92618\"\n              },\n\
+    \              \"recalculatedWaypointType\": null,\n              \"chargingOutput\"\
+    : null\n            },\n            {\n              \"__typename\": \"Route\"\
+    ,\n              \"name\": \"Santa Monica Airport\",\n              \"phoneNumber\"\
+    : null,\n              \"location\": {\n                \"__typename\": \"Location\"\
+    ,\n                \"latitude\": 34.0175575,\n                \"longitude\": -118.4475081\n\
+    \              },\n              \"address\": {\n                \"__typename\"\
+    : \"Address\",\n                \"address1\": \"3233 Donald Douglas Loop South\"\
+    ,\n                \"address2\": null,\n                \"city\": \"Santa Monica\"\
+    ,\n                \"state\": \"CA\",\n                \"country\": \"US\",\n\
+    \                \"postalCode\": \"90405\"\n              },\n              \"\
+    recalculatedWaypointType\": null,\n              \"chargingOutput\": null\n  \
+    \          }\n          ],\n          \"avoidHighway\": null,\n          \"avoidTolls\"\
+    : null,\n          \"avoidFerries\": null,\n          \"shouldRecalculateRoute\"\
+    : false,\n          \"shouldEnableNotification\": true,\n          \"notificationInterval\"\
+    : null\n        }\n      ]\n    }\n  }\n}</code></pre>"

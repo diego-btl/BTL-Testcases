@@ -1,0 +1,36 @@
+testmo:
+  case_id: 62068
+  folder_id: 90
+  project_id: 2
+  folder_path: vehicle/vehicle-profile
+  folder_name_ui: Vehicle Profile
+  created_at: '2025-12-02 00:58:57.391039'
+  updated_at: '2025-12-02 01:08:18.845842'
+  last_sync: '2026-01-30T18:21:04.991047Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/62068
+metadata:
+  name: Preferred Dealer Not Set - Mechanical Repair card is not shown
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>AVK2 or EVO vehicle (AVK2, EVAVK2, EVO, EVEVO)</li><li>User
+    does not need to have active MILs</li><li>User has MECHANICAL_REPAIR capability
+    enabled</li><li><code>GrantMechanicalRepair</code> FF is <strong>enabled</strong></li><li>User
+    has a preferred dealer set</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 95806
+    case_id: 62068
+    text1: <p>Mock <strong>VehiclePreferredDealer</strong> to be empty then go to
+      Vehicle tab &gt; Vehicle Profile &gt; My Preferred dealer card</p>
+    text2: null
+    text3: <p>Verify the <strong>Dealers details</strong> screen is shown in an empty
+      state and the <code>Vehicle Maintenance Data Sharing</code> card is not shown</p>
+    text4: null
+    display_order: 1
+  notes: '<p><strong><u>Configuration:</u></strong><br /><code>"GrantMechanicalRepair": </code></p><p><code>"{</code></p><p><code> 
+       \"enabled\": false, </code><br /><code>     \"checkCapability\": false</code></p><p><code>}",</code></p><p><code>"EnableMechanicalRepair":
+    "false",</code></p>'

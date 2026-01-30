@@ -1,0 +1,42 @@
+testmo:
+  case_id: 2704
+  folder_id: 105
+  project_id: 2
+  folder_path: old-deprecated
+  folder_name_ui: Old / Deprecated
+  created_at: '2023-09-07 21:29:12.013223'
+  updated_at: '2025-09-19 21:13:59.475462'
+  last_sync: '2026-01-30T18:21:07.723387Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/2704
+metadata:
+  name: Primary Driver with Expired Additional Driver Invitation
+  priority: 13
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: 'User has a AVK2 vehicle<br />
+
+    User is already on the Home Page<br />
+
+    User is a PRIMARY_DRIVER with expired Additional Driver Invitation'
+  steps:
+  - column_name: custom_steps
+    id: 3069
+    case_id: 2704
+    text1: '1. The user is able to see the Additional Driver card, and then taps on
+      the card<br />
+
+      2. The user is able to see the pending invitations<br />
+
+      2.1 On the driverInvites call, for obtaining the expired invitation the parameter
+      inviteExpiryDateTime should be before than the current system datetime.'
+    text2: null
+    text3: '1. User is driven to the Additional Driver page, it should display as
+      many cards as pending invitations there are.<br />
+
+      2. Each card should show the First and Last Names of the invitee and the status
+      of the invitation should be "Invite Expired"'
+    text4: null
+    display_order: 1

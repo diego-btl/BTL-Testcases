@@ -1,0 +1,43 @@
+testmo:
+  case_id: 29905
+  folder_id: 3800
+  project_id: 2
+  folder_path: vehicle/collision-management-nna-only
+  folder_name_ui: Collision Management - NNA only
+  created_at: '2025-01-09 22:57:27.368923'
+  updated_at: '2025-01-28 01:56:23.440091'
+  last_sync: '2026-01-30T18:21:06.549654Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/29905
+metadata:
+  name: Edit Towing /Transportation  -   Email and Phone Errors
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>The user is already on the <code>Edit Towing/Transportation</code>
+    screen </li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 48779
+    case_id: 29905
+    text1: <p>Enter  an incorrect email format</p>
+    text2: null
+    text3: '<ul><li>The <code>email</code> text field shows a red background</li><li>The
+      asterisk is displayed below  the <code>Email</code> field</li><li>The user should
+      see an error as:   <code>* Invalid email address</code></li><li> The<code> SAVE</code>
+      button remains inactive </li></ul>'
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 48780
+    case_id: 29905
+    text1: <p>Add an incomplete phone number</p>
+    text2: null
+    text3: '<ul><li>The asterisk is displayed below  the <code>Phone Number</code>
+      field</li><li>The user should see an error as:   <code>* Invalid Phone Number</code></li><li> The<code>
+      SAVE </code>button remains inactive </li></ul>'
+    text4: null
+    display_order: 2
+  notes: <p><img src="/attachments/view/3168" alt="3168" /></p>

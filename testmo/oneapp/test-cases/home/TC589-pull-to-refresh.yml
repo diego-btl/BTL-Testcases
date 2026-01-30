@@ -1,0 +1,60 @@
+testmo:
+  case_id: 589
+  folder_id: 44
+  project_id: 2
+  folder_path: home
+  folder_name_ui: Home
+  created_at: '2023-08-01 23:08:20.148216'
+  updated_at: '2025-08-22 12:35:10.556371'
+  last_sync: '2026-01-30T18:21:09.112295Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/589
+metadata:
+  name: Pull to Refresh
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has at least one vehicle</p>
+  steps:
+  - column_name: custom_steps
+    id: 758
+    case_id: 589
+    text1: <ol><li>If there exists cached data for the currently selected vehicle</li><li>The
+      user is manually refreshing from Home screen</li><li>The proper calls shall
+      be made</li></ol>
+    text2: null
+    text3: <p><strong><u>The following calls shall be made:</u></strong></p><p><i>In
+      Parallel (for the selected vehicle)</i></p><ul><li>RefreshVehicleStatus (polling)</li><li>LocateVehicle
+      (polling)</li><li>Appointments</li><li>Recalls</li></ul><p><i>After - In Parallel
+      for all vehicles in the account</i></p><ul><li>Static (async)</li></ul><p><i>Only
+      for the selected vehicle</i></p><ul><li>Dynamic (async)</li><li>Capability (async)</li></ul><p><i>After
+      Capability</i></p><ul><li>Subscription</li></ul><p><i>New Vehicle is added during
+      Static. For that vehicle:</i></p><ul><li>Capability</li></ul><p><i>After</i></p><ul><li>Subscription
+      (async)</li><li>Dynamic (async)</li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 11838
+    case_id: 589
+    text1: <ol><li>If loading succeeds</li><li>The user should should see updated
+      data</li><li>If loading fails</li><li>The user should should see the previously
+      cached data</li><li>After the static call, a new vehicle is added</li><li>The
+      proper calls are made</li></ol>
+    text2: null
+    text3: <p><strong><u>The next calls are made:</u></strong></p><ul><li>Capabilities
+      per vin <i>then</i></li><li>Dynamic data per vin</li></ul>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 11839
+    case_id: 589
+    text1: <ol><li>If the vehicle is TCU2k</li><li>Then show a loader when performing
+      <code>recalls</code> and <code>appointments</code> call</li></ol>
+    text2: null
+    text3: null
+    text4: null
+    display_order: 3
+  notes: <p><i>Make sure to test on EV, AVK, and TCU2K. </i></p><p><strong><u>Refer
+    to sheet for logic:</u></strong> https://docs.google.com/spreadsheets/d/1Ch6XwP9XdU2km5jsJm_O0SrvDL6hJw4uu8mDPRl26-g/edit#gid=542058053</p>

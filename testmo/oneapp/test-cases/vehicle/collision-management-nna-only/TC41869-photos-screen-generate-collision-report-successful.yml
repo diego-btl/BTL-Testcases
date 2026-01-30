@@ -1,0 +1,71 @@
+testmo:
+  case_id: 41869
+  folder_id: 3800
+  project_id: 2
+  folder_path: vehicle/collision-management-nna-only
+  folder_name_ui: Collision Management - NNA only
+  created_at: '2025-06-09 20:44:36.497295'
+  updated_at: '2025-06-09 20:45:57.101626'
+  last_sync: '2026-01-30T18:21:05.947986Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/41869
+metadata:
+  name: Photos screen - Generate Collision Report - Successful
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<ul><li>Feature flag "<code>EnableCollisionManagement</code>": "true"
+    is enabled</li><li>Feature flag "<code>GrantCollisionManagement</code>": "{\"enabled\":
+    true, \"checkCapability\": false} is enabled</li><li>User is logged in with an
+    account that has a vehicle in ENROLL status</li><li>User is on the Photos screen</li></ul>'
+  steps:
+  - column_name: custom_steps
+    id: 71927
+    case_id: 41869
+    text1: <p>Tap the Generate Collision Report CTA</p>
+    text2: null
+    text3: <p> A confirmation modal appears</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 71928
+    case_id: 41869
+    text1: <p>Tap Cancel in the modal</p>
+    text2: null
+    text3: <p>The modal is dismissed, and no further action is taken</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 71929
+    case_id: 41869
+    text1: <p>Tap Generate Collision Report again</p>
+    text2: null
+    text3: <p>The confirmation modal appears again</p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 71930
+    case_id: 41869
+    text1: <p>Tap Save in the modal</p>
+    text2: null
+    text3: <p>CreateCollisionReportPDF API is triggered Successful </p>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 71931
+    case_id: 41869
+    text1: <p>Observe the toast message   </p>
+    text2: null
+    text3: <p> A toast  "Generating Report" is shown</p>
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 71932
+    case_id: 41869
+    text1: <p>Observe navigation </p>
+    text2: null
+    text3: <p>User is redirected to the Generating Report Screen</p>
+    text4: null
+    display_order: 6

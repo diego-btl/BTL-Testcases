@@ -1,0 +1,36 @@
+testmo:
+  case_id: 2819
+  folder_id: 429
+  project_id: 2
+  folder_path: old-deprecated/ccs2/multi-user-vehicle-status-check
+  folder_name_ui: Multi-user Vehicle status check
+  created_at: '2023-09-08 16:51:36.376098'
+  updated_at: '2026-01-06 17:49:10.949265'
+  last_sync: '2026-01-30T18:21:07.469317Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/2819
+metadata:
+  name: Vehicle status indicator
+  priority: 13
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: 'User is on Vehicle tab<br />
+
+    User has a Vehicle status indicator active<br />
+
+    User is a PRIMARY_DRIVER or SHARED_DRIVER (to be tested for both for AVK2)'
+  steps:
+  - column_name: custom_steps
+    id: 3184
+    case_id: 2819
+    text1: '1. Vehicle data returned<br />
+
+      2. Tap on Vehicle status indicator'
+    text2: null
+    text3: '1. User should see Vehicle status indicator on vehicle image<br />
+
+      1. User should see Vehicle Status screen with Vehicle tab showing Vehicle statuses'
+    text4: null
+    display_order: 1

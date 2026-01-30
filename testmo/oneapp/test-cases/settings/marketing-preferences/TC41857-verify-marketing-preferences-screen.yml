@@ -1,0 +1,81 @@
+testmo:
+  case_id: 41857
+  folder_id: 5339
+  project_id: 2
+  folder_path: settings/marketing-preferences
+  folder_name_ui: Marketing Preferences
+  created_at: '2025-06-09 12:37:05.600425'
+  updated_at: '2025-06-09 14:37:44.875753'
+  last_sync: '2026-01-30T18:21:05.973158Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/41857
+metadata:
+  name: Verify Marketing Preferences screen
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<ul><li><code>"EnableNCIMarketingPreferences": "true"</code> FF
+    should be on</li><li>Connect the device to Proxyman to check the APIs calls</li></ul>'
+  steps:
+  - column_name: custom_steps
+    id: 71838
+    case_id: 41857
+    text1: <p>Set device in English &gt; Login to app &gt; go to Settings &gt; Marketing
+      Preferences</p>
+    text2: null
+    text3: "<p>English Copy:</p><pre><code class=\"editor-plain language-plain code-block\"\
+      >- Marketing Preferences\n\n- Enjoy access to a wide variety of helpful information,\
+      \ including news, offers and maintenance reminders. \n\nManage your preferences\
+      \ below to choose what you'd like to hear about, and how we should get in touch.\n\
+      \nOffers and Promotions\nNews and Events\nProduct Updates</code></pre>"
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 71839
+    case_id: 41857
+    text1: <p>Expand each section and verify the options displayed are in ENG</p>
+    text2: null
+    text3: '<pre><code class="editor-plain language-plain code-block">Direct Mail
+
+      Email
+
+      SMS
+
+      In-App Messages
+
+      In-Vehicle Messages</code></pre>'
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 71840
+    case_id: 41857
+    text1: <p>Set device in FR &gt; Login to app &gt; go to Settings &gt; Marketing
+      Preferences</p>
+    text2: null
+    text3: "<pre><code class=\"editor-plain language-plain code-block\">- Préférences\
+      \ de marketing\n\n- Bénéficiez d’un accès à une grande variété de renseignements\
+      \ utiles, y compris des actualités, des offres et des rappels d’entretien. \n\
+      \nGérez vos préférences ci-dessous pour choisir ce que vous souhaitez entendre\
+      \ et comment nous devons vous contacter.\n\nOffres et promotions\nNouvelles\
+      \ et événements\nMises à jour du produit\n</code></pre>"
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 71841
+    case_id: 41857
+    text1: <p>Expand each section and verify the options displayed are in FR</p>
+    text2: null
+    text3: '<pre><code class="editor-plain language-plain code-block">Publipostage
+      direct
+
+      Courriel
+
+      SMS
+
+      Messages dans l’application
+
+      Messagerie dans le véhicule</code></pre>'
+    text4: null
+    display_order: 4

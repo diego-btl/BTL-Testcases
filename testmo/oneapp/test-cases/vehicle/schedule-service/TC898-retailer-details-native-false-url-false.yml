@@ -1,0 +1,71 @@
+testmo:
+  case_id: 898
+  folder_id: 93
+  project_id: 2
+  folder_path: vehicle/schedule-service
+  folder_name_ui: Schedule Service
+  created_at: '2023-08-04 13:33:59.803875'
+  updated_at: '2024-10-17 17:57:05.010933'
+  last_sync: '2026-01-30T18:21:08.457218Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/898
+metadata:
+  name: Retailer Details - native false, url false
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has a preferred retailer and has not accepted or denied location
+    permissions</p>
+  steps:
+  - column_name: custom_steps
+    id: 1084
+    case_id: 898
+    text1: <p>Tap on Schedule Service card</p>
+    text2: null
+    text3: <p>User should see Retailer Details with retailer information <br /> </p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 1085
+    case_id: 898
+    text1: <p>Tap to Accept/Deny location permissions</p>
+    text2: null
+    text3: <ol><li>If user accepts location permissions, they will see a distance
+      pill displaying how far they are from the retailer </li><li>If user denies location
+      permissions, distance pill will be hidden</li></ol>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 1086
+    case_id: 898
+    text1: <p>Tap on Select a Retailer</p>
+    text2: null
+    text3: <p>User should see Select a Retailer screen</p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 1087
+    case_id: 898
+    text1: <p>Tap on Call to Schedule Service CTA</p>
+    text2: null
+    text3: <p>User should be brought to the dialer with servicePhone populated</p>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 1088
+    case_id: 898
+    text1: <p>Tap on Hours of Operation</p>
+    text2: null
+    text3: <p>User should see bottom sheet with hours</p>
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 1089
+    case_id: 898
+    text1: <p>Tap on Get Directions</p>
+    text2: null
+    text3: <p>User should see maps open with direction to retailer</p>
+    text4: null
+    display_order: 6

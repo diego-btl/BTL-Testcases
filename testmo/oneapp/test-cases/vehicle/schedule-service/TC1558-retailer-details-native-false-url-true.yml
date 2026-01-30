@@ -1,0 +1,40 @@
+testmo:
+  case_id: 1558
+  folder_id: 93
+  project_id: 2
+  folder_path: vehicle/schedule-service
+  folder_name_ui: Schedule Service
+  created_at: '2023-08-28 20:13:24.108170'
+  updated_at: '2024-10-17 17:57:05.010933'
+  last_sync: '2026-01-30T18:21:08.050087Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/1558
+metadata:
+  name: Retailer Details - native false, url true
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: User has a preferred retailer
+  steps:
+  - column_name: custom_steps
+    id: 1923
+    case_id: 1558
+    text1: '1. Tap on Schedule Service card<br />
+
+      2. Tap on Call Retailer<br />
+
+      3. Tap on Schedule Service Online CTA'
+    text2: null
+    text3: '1. User should see Retailer Details with retailer information<br />
+
+      2. User should be brought to the dialer with servicePhone populated<br />
+
+      3. User should see browser open to scheduling URL<br />
+
+      <br />
+
+      Other CTAs function the same as above'
+    text4: null
+    display_order: 1

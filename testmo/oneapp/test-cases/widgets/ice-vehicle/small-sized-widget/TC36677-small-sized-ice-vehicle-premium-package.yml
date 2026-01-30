@@ -1,0 +1,38 @@
+testmo:
+  case_id: 36677
+  folder_id: 4184
+  project_id: 2
+  folder_path: widgets/ice-vehicle/small-sized-widget
+  folder_name_ui: Small Sized widget
+  created_at: '2025-04-29 16:43:56.198596'
+  updated_at: '2026-01-13 11:08:35.426281'
+  last_sync: '2026-01-30T18:21:06.049762Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/36677
+metadata:
+  name: Small sized ICE vehicle - PREMIUM package
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<p>User is logged in</p><p>User has added Small sized widget to
+    device</p><p>User ha following capabilties turned on in <code>VehicleCapabilties</code>
+    api for that </p><p>selected vehicle: </p><p> <code>REMOTE_DOOR_LOCK_UNLOCK</code>
+    , <code>REMOTE_VEHICLE_STATUS</code> and <code>REMOTE_ENGINE</code> <strong>enabled</strong></p><p><strong>THEN:</strong>
+    the user has premium package</p><p><strong>AND: </strong>the user should see fuel
+    remaining and lock status from the <code>GetVehicleStatus</code> <a href="https://bethinklabs.postman.co/workspace/bethinklabs~bb8b0a9c-d4b2-4fa0-8223-207b905b07e8/request/8037509-51b1c430-6500-4457-8215-46ac4e4e8fe0?action=share&amp;source=copy-link&amp;creator=33847489&amp;active-environment=c1380f6e-68c4-4ed4-acbd-22aab1758f5e">call</a></p>'
+  steps:
+  - column_name: custom_steps
+    id: 61457
+    case_id: 36677
+    text1: <p>Select an ICE vehicle in NIS or INF app</p><p>Go to Widget</p><p>OR
+      choose a vehicle on Widget by long pressing, tapping on Modify Widget</p><p>Choose
+      ICE Vehicle</p>
+    text2: null
+    text3: '<p>Since the 3 caps are on, the vehicle has a Premium package</p><p><strong>AND:
+      </strong>the user should see the model name and vehicle image available from
+      StaticData call</p><p><strong>AND: </strong>the user should see fuel remaining
+      and lock status from the <code>DynamicData</code> <a href="https://bethinklabs.postman.co/workspace/bethinklabs~bb8b0a9c-d4b2-4fa0-8223-207b905b07e8/request/8037509-51b1c430-6500-4457-8215-46ac4e4e8fe0?action=share&amp;source=copy-link&amp;creator=33847489&amp;active-environment=c1380f6e-68c4-4ed4-acbd-22aab1758f5e">call</a></p>'
+    text4: null
+    display_order: 1

@@ -1,0 +1,65 @@
+testmo:
+  case_id: 61888
+  folder_id: 6757
+  project_id: 2
+  folder_path: login-flow/onboarding-cards
+  folder_name_ui: Onboarding cards
+  created_at: '2025-10-28 18:22:57.957228'
+  updated_at: '2026-01-08 18:12:53.669274'
+  last_sync: '2026-01-30T18:21:05.677434Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/61888
+metadata:
+  name: No vehicle
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  steps:
+  - column_name: custom_steps
+    id: 94702
+    case_id: 61888
+    text1: <p>Mock the account to have no vehicles (empty staticdata)</p><p>Launch
+      app </p><p>Log in </p><p>Once StaticData and PendingVehicle apis are resolved,
+      modal will show</p><p>Tap on Yes </p>
+    text2: null
+    text3: '<p>The first card you see will say Hello! in title</p><p>Body will read: </p><p>Welcome
+      to the [MyNISSAN / MyINFINITI] app!</p><p>To fully leverage the app we need
+      to add [a Nissan / an INFINITI] vehicle to your garage.</p><p>CTA 1: Add vehicle</p><p>No
+      other cards after this card</p>'
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 94703
+    case_id: 61888
+    text1: <p>Tap on Add a vehicle CTA</p>
+    text2: null
+    text3: <p>User is taken to Add Vehicle screen</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 94704
+    case_id: 61888
+    text1: <p>Tap back inside app</p>
+    text2: null
+    text3: <p>User is taken to home screen</p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 94717
+    case_id: 61888
+    text1: <p>Go to Support Screen</p>
+    text2: null
+    text3: <p>App Key Features card is shown on the screen </p>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 94718
+    case_id: 61888
+    text1: <p>Tap on the App Key Features card on support screen</p>
+    text2: null
+    text3: <p>The Status(Hello) card should be the same as seen when app is launched,
+      with the same flow </p>
+    text4: null
+    display_order: 5

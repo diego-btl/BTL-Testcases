@@ -1,0 +1,79 @@
+testmo:
+  case_id: 29894
+  folder_id: 3772
+  project_id: 5
+  folder_path: vehicle/recall-screen
+  folder_name_ui: Recall Screen
+  created_at: '2025-01-09 20:19:28.516768'
+  updated_at: null
+  last_sync: '2026-01-30T18:20:38.262436Z'
+  url: https://bethinklabs.testmo.net/repositories/5/cases/29894
+metadata:
+  name: Verify Recall/Recall Details Screen Displays Correct Information
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>The vehicle has an active recall campaign.</li><li>The user
+    is already on the <strong>Recall Details Screen</strong>.</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 48761
+    case_id: 29894
+    text1: <p><strong>Navigate to the Recall Details Screen.</strong></p>
+    text2: null
+    text3: <p>The Recall Details Screen should open successfully.</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 48762
+    case_id: 29894
+    text1: <p><strong>Verify all UI elements on the Recall Screen</strong></p>
+    text2: null
+    text3: <ul><li><strong>Informative card</strong> at the top with the text:<br
+      /><i>"Serviços de recall executados recentemente no veículo podem demorar até
+      uma semana para serem atualizados no aplicativo"</i>.</li><li><strong>"Recalls
+      em Aberto"</strong> section, containing all active recall campaigns.</li><li>Each
+      <strong>recall campaign card</strong> should display:<ul><li><strong>Recall
+      warning sign</strong>.</li><li><strong>Service description</strong> (retrieved
+      from <code>primaryDescription</code>).</li><li><strong>Campaign year</strong>
+      (retrieved from <code>effectiveYear</code>).</li></ul></li><li>If multiple recall
+      campaigns exist, they should be sorted in <strong>descending order</strong>,
+      with the <strong>most recent campaign at the top</strong>.</li></ul>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 48763
+    case_id: 29894
+    text1: <p><strong>Click on a recall campaign card to expand details</strong></p>
+    text2: null
+    text3: <p>The expanded section should display the following details:</p><ul><li><strong>Service
+      description</strong> under <strong>"Descrição"</strong>.</li><li><strong>Vehicle
+      model and year</strong> under <strong>"Modelo"</strong> (retrieved from <code>model</code>
+      and <code>year</code> in GetVehicle query).</li><li><strong>Recall year</strong>
+      under <strong>"Ano do Recall"</strong> (retrieved from <code>effectiveYear</code>).</li><li><strong>VIN
+      number</strong> under <strong>"Chassi"</strong>, masked format (e.g., <code>8A************9423</code>).</li><li><strong>SAIBA
+      MAIS SOBRE ESTE SERVIÇO</strong> CTA should be displayed.</li><li><strong>Agendar
+      Serviço de Recall</strong> CTA should be displayed.</li></ul>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 48764
+    case_id: 29894
+    text1: <p><strong>Click on the "SAIBA MAIS SOBRE ESTE SERVIÇO" CTA.</strong></p>
+    text2: null
+    text3: <p>The <strong>RecallURL</strong> from the <strong>ContactUs query</strong>
+      should open in a WebView.</p>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 48765
+    case_id: 29894
+    text1: <p><strong>Click on the "Agendar Serviço de Recall" CTA.</strong></p>
+    text2: null
+    text3: <p>The <strong>serviceBookingRecall</strong> link from <strong>GetRecalls
+      query</strong> should open in a WebView.</p>
+    text4: null
+    display_order: 5

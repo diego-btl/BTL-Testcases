@@ -1,0 +1,41 @@
+testmo:
+  case_id: 29971
+  folder_id: 3864
+  project_id: 5
+  folder_path: home/suggest-vehicle
+  folder_name_ui: Suggest Vehicle
+  created_at: '2025-01-14 21:01:05.314908'
+  updated_at: null
+  last_sync: '2026-01-30T18:20:38.247892Z'
+  url: https://bethinklabs.testmo.net/repositories/5/cases/29971
+metadata:
+  name: Verify Rejecting a Vehicle from the Confirm Vehicle Screen
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>The user has <strong>one or more vehicles</strong> linked
+    to their CPF.</li><li>The <strong>Confirm Vehicle Screen</strong> is displayed.</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 48837
+    case_id: 29971
+    text1: <p><strong>On the Confirm Vehicle Screen, click on 'Remover' for a vehicle.</strong></p>
+    text2: null
+    text3: <ol><li>The selected vehicle should be rejected from the list and should
+      not appear again when reopening the app.</li><li>The vehicle should disappear
+      from the Confirm Vehicle Screen.</li><li>The remaining vehicles should shift
+      <strong>upward</strong>.</li></ol>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 48838
+    case_id: 29971
+    text1: <p><strong>Verify behaviour when only one vehicle is present.</strong></p>
+    text2: null
+    text3: <p>If there is only <strong>one</strong> vehicle, rejecting it should immediately
+      <strong>redirect the user to the Home Screen</strong>.</p>
+    text4: null
+    display_order: 2

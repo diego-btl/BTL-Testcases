@@ -1,0 +1,50 @@
+testmo:
+  case_id: 1464
+  folder_id: 41
+  project_id: 2
+  folder_path: login-flow
+  folder_name_ui: Login Flow
+  created_at: '2023-08-28 20:13:22.507398'
+  updated_at: '2024-10-17 17:56:23.776593'
+  last_sync: '2026-01-30T18:21:08.221317Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/1464
+metadata:
+  name: Create PIN - Failure
+  priority: 3
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: User is on the add PIN screen and has filled in the security question
+    and answer fields
+  steps:
+  - column_name: custom_steps
+    id: 1832
+    case_id: 1464
+    text1: '1. Tap the PIN field and enter a 4 digit number<br />
+
+      2. Tap the confirm PIN field and re-enter the 4 digit number<br />
+
+      3. Tap the eye icon<br />
+
+      4. User has successfully selected a question, entered at least 1 character for
+      the answer, and entered matching PINs<br />
+
+      5. Tap the CREATE PIN/VOICE CODE CTA'
+    text2: null
+    text3: '1. User should be able to enter a 4 digit number<br />
+
+      2. User should be able to re-enter the 4 digit number<br />
+
+      3. User should be able to toggle showing and hiding both PIN fields<br />
+
+      4. User should see the CREATE PIN/VOICE CODE CTA become enabled<br />
+
+      5. User should see a toast that says "PIN failed to update"<br />
+
+      <br />
+
+      NOTE: N/A for NCI'
+    text4: null
+    display_order: 1

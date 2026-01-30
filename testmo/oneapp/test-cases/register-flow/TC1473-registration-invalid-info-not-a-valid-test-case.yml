@@ -1,0 +1,37 @@
+testmo:
+  case_id: 1473
+  folder_id: 43
+  project_id: 2
+  folder_path: register-flow
+  folder_name_ui: Register Flow
+  created_at: '2023-08-28 20:13:22.660881'
+  updated_at: '2025-09-19 22:39:24.643967'
+  last_sync: '2026-01-30T18:21:08.184577Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/1473
+metadata:
+  name: Registration - Invalid info - NOT A VALID TEST CASE
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is on the final registration screen with info that will trigger
+    error from backend (ex. city name with special characters or numbers)</p>
+  steps:
+  - column_name: custom_steps
+    id: 1841
+    case_id: 1473
+    text1: <p>1. Enter valid matching passwords<br />2. Check conditions box<br />3.
+      Tap Create Account</p>
+    text2: null
+    text3: '<p>1. User should see 3 green checkmarks in password criteria<br />2.
+      User should see enabled Create Account button<br />3. User is brought to the
+      relevant screen and shown the error<br /><br />Note: All previously filled out
+      info should be preserved except for the password fields</p>'
+    text4: null
+    display_order: 1
+  notes: '<ul><li>Automation: When user enters numbers into City field, the app allows
+    completing register flow successfully. According to error copy, it shouldn''t
+    allow to enter special chars nor numbers into that field. There''s a ticket already
+    created for tracking as it could be a backend issue: <strong>https://www.pivotaltracker.com/story/show/186582716</strong></li></ul>'

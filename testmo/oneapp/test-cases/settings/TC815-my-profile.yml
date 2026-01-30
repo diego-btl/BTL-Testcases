@@ -1,0 +1,30 @@
+testmo:
+  case_id: 815
+  folder_id: 48
+  project_id: 2
+  folder_path: settings
+  folder_name_ui: Settings
+  created_at: '2023-08-01 23:08:23.150326'
+  updated_at: '2025-10-06 07:14:34.835659'
+  last_sync: '2026-01-30T18:21:08.674531Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/815
+metadata:
+  name: My Profile
+  priority: 12
+  type: functional
+  status: active
+  estimate: 60000000
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is on the Settings screen</p>
+  steps:
+  - column_name: custom_steps
+    id: 984
+    case_id: 815
+    text1: <p>1. Tap the My Profile line item</p>
+    text2: null
+    text3: <p>User should be taken to the My Profile screen and see their Account
+      Information and Contact Information</p>
+    text4: null
+    display_order: 1

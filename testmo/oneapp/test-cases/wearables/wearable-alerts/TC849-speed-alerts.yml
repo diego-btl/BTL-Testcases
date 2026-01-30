@@ -1,0 +1,43 @@
+testmo:
+  case_id: 849
+  folder_id: 77
+  project_id: 2
+  folder_path: wearables/wearable-alerts
+  folder_name_ui: Wearable - Alerts
+  created_at: '2023-08-01 23:08:23.404946'
+  updated_at: '2025-04-30 14:32:59.440723'
+  last_sync: '2026-01-30T18:21:08.587156Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/849
+metadata:
+  name: Speed Alerts
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is on the Alerts page</p>
+  steps:
+  - column_name: custom_steps
+    id: 1018
+    case_id: 849
+    text1: <ol><li>Tap Speed Alerts</li><li>User should see a list of all existing
+      speed alerts</li><li>The user tap in the toggle button</li><li>The request was
+      successful</li></ol>
+    text2: null
+    text3: <ul><li>User should be able to toggle the alert on/off and see a spinner
+      until the call is complete</li><li>When The Alert Success the toggle gets updated
+      properly</li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 1150
+    case_id: 849
+    text1: <ol><li>Tap Speed Alerts</li><li>User should see a list of all existing
+      speed alerts</li><li>The user tap in the toggle button</li><li>The request fails</li></ol>
+    text2: null
+    text3: <ul><li>The toggle reverts to the previous position</li><li>When The Alert
+      Fails the "Your Speed alert failed to turn on, <s>Please try your request again</s>"
+      message  should be displayed</li></ul>
+    text4: null
+    display_order: 2

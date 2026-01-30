@@ -1,0 +1,60 @@
+testmo:
+  case_id: 61971
+  folder_id: 3863
+  project_id: 2
+  folder_path: vehicle/telematics-bsm-subscriptions-packages
+  folder_name_ui: Telematics BSM - Subscriptions Packages
+  created_at: '2025-11-10 23:39:52.144209'
+  updated_at: '2026-01-20 20:25:17.374296'
+  last_sync: '2026-01-30T18:21:05.377559Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/61971
+metadata:
+  name: CANCEL flow E2E tetsing - Error API
+  priority: 1
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<ul><li>EnableTelematicsBSM FF = true</li><li><code>Cancel subscription</code>
+    cta must be visible: For this EndDate of the package should be null or 0</li><li>subscriptionServiceType
+    = "Subscription"</li></ul>'
+  steps:
+  - column_name: custom_steps
+    id: 95353
+    case_id: 61971
+    text1: <p>On the Vehicle page, tap on the <strong>Subscription Packages</strong>
+      card </p>
+    text2: null
+    text3: <p>Verify the <strong>Subscriptions</strong> screen is shown</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 95358
+    case_id: 61971
+    text1: <p>Tap on <code>CANCEL SUBSCRIPTION</code> cta again &gt; <code>YES, CANCEL
+      SUBSCRIPTION</code> cta &gt; Select the checkbox &gt; Breakpoint <code>CancelSubscription</code>
+      API  &gt; Tap on <code>YES, CANCEL SUBSCRIPTION</code> cta</p>
+    text2: null
+    text3: <p>Verify Something went wrong modal is displayed:</p><ul><li><code>Go
+      back</code> and</li><li><code>Try again</code> options</li></ul>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 95368
+    case_id: 61971
+    text1: <p>Tap on <code>Try again</code> option</p>
+    text2: null
+    text3: <p>Verify the API call triggers one more time:</p><ul><li>If it fails,
+      Something went wrong modal is shown again</li><li>If it succeeds, the user continues
+      with the flow</li></ul>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 95369
+    case_id: 61971
+    text1: <p>Tap on <code>Go back</code> option</p>
+    text2: null
+    text3: <p>Verify app takes the user to <code>Wait! We're sorry...</code>screen</p>
+    text4: null
+    display_order: 4

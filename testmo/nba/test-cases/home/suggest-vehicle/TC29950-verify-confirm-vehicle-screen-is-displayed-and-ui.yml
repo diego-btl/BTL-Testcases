@@ -1,0 +1,95 @@
+testmo:
+  case_id: 29950
+  folder_id: 3864
+  project_id: 5
+  folder_path: home/suggest-vehicle
+  folder_name_ui: Suggest Vehicle
+  created_at: '2025-01-14 20:44:14.552731'
+  updated_at: '2025-02-06 16:30:02.781153'
+  last_sync: '2026-01-30T18:20:38.254239Z'
+  url: https://bethinklabs.testmo.net/repositories/5/cases/29950
+metadata:
+  name: Verify Confirm Vehicle Screen is Displayed and UI Elements are Correct
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>The user has at least <strong>one vehicle</strong> linked
+    to their CPF in the Property DB.</li><li>The <strong>SuggestedVehicles API</strong>
+    returns data indicating linked vehicles.</li><li>The app is launched from a <strong>cold
+    start</strong> (i.e., not running in the background) or after a <strong>fresh
+    install</strong>.</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 48829
+    case_id: 29950
+    text1: <p><strong>Perform a cold start or fresh install and open the application.</strong></p>
+    text2: null
+    text3: <p>The <strong>Confirm Vehicle Screen</strong> should be displayed if vehicles
+      are found.</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 48831
+    case_id: 29950
+    text1: <p><strong>Verify that the Confirm Vehicle Screen displays the correct
+      message.</strong></p>
+    text2: null
+    text3: <ul><li>The screen should appear, displaying a message:<ul><li>If <strong>one
+      vehicle</strong> is found:<br /><i>"Localizamos este veículo associado ao seu
+      CPF. Para adicioná-lo à sua garagem clique em 'Adicionar'. Caso não seja mais
+      proprietário do veículo, clique em 'Remover'."</i></li><li>If <strong>two or
+      more vehicles</strong> are found:<br /><i>"Localizamos estes veículos associados
+      ao seu CPF. Para adicioná-los à sua garagem clique em 'Adicionar'. Caso não
+      seja mais proprietário do veículo, clique em 'Remover'."</i></li></ul></li></ul>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 48832
+    case_id: 29950
+    text1: <p><strong>Verify the presence of the "ONDE ENCONTRO MEU CHASSI" link and
+      redirection behaviour.</strong></p>
+    text2: null
+    text3: <p>A link with text <strong>"ONDE ENCONTRO MEU CHASSI "</strong> should
+      be displayed below the informational message box. Clicking it should correctly
+      navigate to the <strong>'Onde localizo o meu chassi?' screen</strong></p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 48834
+    case_id: 29950
+    text1: <p><strong>Verify vehicle cards are displayed correctly.</strong></p>
+    text2: null
+    text3: <ul><li>Each vehicle retrieved from the <strong>SuggestedVehicles API</strong>
+      should be displayed in a scrollable list with the following details:<ul><li><strong>Title:</strong>
+      Version name &amp; model year (e.g., "SENTRA 2.0 EXCLUSIVE CVT 2023").</li><li><strong>Subtitle:</strong>
+      Colour name (e.g., "CINZA COM TETO PRETO").</li><li><strong>VIN Number:</strong>
+      Partially masked (e.g., <code>3N************7600</code>).</li><li><strong>Hero
+      image.</strong></li><li><strong>Static message:</strong> <i>"Imagem ilustrativa"</i>
+      below the hero image.</li><li><strong>Adicionar and Remover buttons</strong>
+      should be positioned below each vehicle entry.</li></ul></li><li>If multiple
+      vehicles exist, the user should be able to scroll through the list smoothly.</li></ul>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 48839
+    case_id: 29950
+    text1: <p><strong>Verify that the Confirm Vehicle Screen does not appear again
+      after processing vehicles.</strong></p>
+    text2: null
+    text3: <p>After all vehicles are either added or rejected, closing and reopening
+      the app should <strong>not</strong> display the Confirm Vehicle Screen again
+      unless new vehicles are identified.</p>
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 48840
+    case_id: 29950
+    text1: <p><strong>Verify Back Button Navigation.</strong></p>
+    text2: null
+    text3: <p>Pressing the <strong>back button or in-app navigation back button</strong>
+      should <strong>return the user to the Home Screen.</strong></p>
+    text4: null
+    display_order: 6

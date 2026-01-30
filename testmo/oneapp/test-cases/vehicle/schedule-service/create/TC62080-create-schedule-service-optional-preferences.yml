@@ -1,0 +1,146 @@
+testmo:
+  case_id: 62080
+  folder_id: 6787
+  project_id: 2
+  folder_path: vehicle/schedule-service/create
+  folder_name_ui: Create
+  created_at: '2025-12-03 00:20:43.420774'
+  updated_at: '2026-01-20 21:18:43.679975'
+  last_sync: '2026-01-30T18:21:04.885611Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/62080
+metadata:
+  name: Create Schedule Service - Optional Preferences
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has selected date and time on the <code>Select Date and Time</code>
+    screen and tapped Add on the Optional Preferences card</p>
+  steps:
+  - column_name: custom_steps
+    id: 96057
+    case_id: 62080
+    text1: <p>Verify user arrives on <code>Optional Preferences</code> screen with
+      correct layout</p>
+    text2: null
+    text3: <ul><li>Screen title is <code>Optional Preferences</code></li><li><strong>Back
+      arrow</strong> is displayed at top left</li><li><code>Service Advisor</code>
+      dropdown is displayed with label <code>Select Advisor (Optional)</code></li><li><code>What
+      transportation will you need?</code> section displays with heading</li><li>Transportation
+      options are dynamically loaded from <code>TransportationOptions</code> query
+      (content varies based on dealer/vehicle)</li><li>All transportation options
+      are in <strong>unselected state</strong> (not highlighted)</li><li><code>SAVE</code>
+      button is displayed at bottom and is <strong>disabled</strong></li><li><code>CALL
+      DEALER/RETAILER</code> link is displayed</li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 96058
+    case_id: 62080
+    text1: <p>Tap <code>Service Advisor</code> dropdown and verify options are loaded</p>
+    text2: null
+    text3: <ul><li>Dropdown opens</li><li>Advisor options are dynamically loaded from
+      <code>ServiceAdvisors</code> query (content varies)</li><li>User can select
+      an advisor from the list</li><li>Selected advisor is displayed in the dropdown
+      field</li><li><code>SAVE</code> button becomes <strong>enabled</strong></li></ul>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 96059
+    case_id: 62080
+    text1: <p>Tap on a transportation option toggle to select it</p>
+    text2: null
+    text3: <ul><li>Transportation option is selected and highlighted in <strong>blue</strong></li><li><code>SAVE</code>
+      button becomes <strong>enabled</strong></li></ul>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 96060
+    case_id: 62080
+    text1: <p>Tap on the same transportation option toggle to deselect it</p>
+    text2: null
+    text3: <ul><li>Transportation option is deselected and no longer highlighted</li><li>Returns
+      to <strong>unselected state</strong></li></ul>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 96061
+    case_id: 62080
+    text1: <p>Tap on <code>Valet Service</code> transportation option toggle (if available
+      in <code>TransportationOptions</code>)</p>
+    text2: null
+    text3: <ul><li>Option is selected and highlighted in <strong>blue</strong></li><li><code>Pick-up
+      Address</code> section appears below with pre-filled user address from <code>VehicleStaticData</code></li><li><code>Drop-off
+      Address</code> section appears below with pre-filled user address from <code>VehicleStaticData</code></li><li><code>I
+      don't need my vehicle picked up</code> <strong>checkbox</strong> appears below
+      Pick-up Address</li><li><code>I don't need my vehicle dropped off</code> <strong>checkbox</strong>
+      appears below Drop-off Address</li></ul>
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 96062
+    case_id: 62080
+    text1: <p>Tap on <code>Valet Service</code> toggle again to deselect it</p>
+    text2: null
+    text3: <ul><li>Option is deselected and no longer highlighted</li><li><code>Pick-up
+      Address</code> section disappears</li><li><code>Drop-off Address</code> section
+      disappears</li><li>Related checkboxes disappear</li></ul>
+    text4: null
+    display_order: 6
+  - column_name: custom_steps
+    id: 96063
+    case_id: 62080
+    text1: <p>Tap on <code>Pick-up Address</code> and <code>Drop-off Address</code>
+      fields and verify auto-search functionality</p>
+    text2: null
+    text3: <ul><li>Address fields become active with <strong>blue border</strong></li><li>Clear
+      pre-filled text if needed</li><li>Type search text</li><li>Auto-suggestions
+      appear as user types</li><li>User can tap to select an address from suggestions</li></ul>
+    text4: null
+    display_order: 7
+  - column_name: custom_steps
+    id: 96064
+    case_id: 62080
+    text1: <p>Check both <code>I don't need my vehicle picked up</code> and <code>I
+      don't need my vehicle dropped off</code> <strong>checkboxes</strong></p>
+    text2: null
+    text3: <ul><li>Both checkboxes are marked with <strong>checkmarks</strong></li><li>Both
+      address fields become <strong>disabled</strong> (grayed out)</li><li><code>SAVE</code>
+      button becomes <strong>disabled</strong> (grayed out)</li></ul>
+    text4: null
+    display_order: 8
+  - column_name: custom_steps
+    id: 96065
+    case_id: 62080
+    text1: <p>Uncheck both checkboxes to re-enable address fields</p>
+    text2: null
+    text3: <ul><li>Both checkboxes are unchecked</li><li>Both address fields become
+      <strong>enabled</strong></li><li><code>SAVE</code> button becomes <strong>enabled</strong>
+      (if advisor or transportation is selected)</li></ul>
+    text4: null
+    display_order: 9
+  - column_name: custom_steps
+    id: 96066
+    case_id: 62080
+    text1: <p>Tap <code>SAVE</code> button with at least Service Advisor or Transportation
+      option selected</p>
+    text2: null
+    text3: <ul><li>Preferences are saved</li><li>User returns to <code>Select Date
+      and Time</code> screen</li><li>Selected preferences are reflected in Optional
+      Preferences card</li></ul>
+    text4: null
+    display_order: 10
+  - column_name: custom_steps
+    id: 96067
+    case_id: 62080
+    text1: <p>Tap <code>Call Dealer</code> link (NISSAN) or <code>Call Retailer</code>
+      link (INFINITI)</p>
+    text2: null
+    text3: <ul><li>Phone number is retrieved from <code>VehiclePreferredDealer </code>query
+      phone field</li><li><strong>Android:</strong> Phone dialer opens with dealer/retailer
+      contact number</li><li><strong>iOS:</strong> Phone call drawer/sheet opens with
+      dealer/retailer contact number and Call/Cancel options</li></ul>
+    text4: null
+    display_order: 11

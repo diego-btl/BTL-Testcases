@@ -1,0 +1,73 @@
+testmo:
+  case_id: 36688
+  folder_id: 46
+  project_id: 2
+  folder_path: map
+  folder_name_ui: Map
+  created_at: '2025-05-08 18:55:56.302440'
+  updated_at: '2025-12-19 15:26:54.020817'
+  last_sync: '2026-01-30T18:21:06.023295Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/36688
+metadata:
+  name: Filters - Providers
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<ul><li>FF <code>"GrantFullPlugAndCharge": true</code></li><li>User
+    is on the Map screen</li><li>AccountStatus is <code>ACTIVE</code></li></ul>'
+  steps:
+  - column_name: custom_steps
+    id: 61480
+    case_id: 36688
+    text1: <ol><li>User navigates the <strong>Filters</strong> splash screen from
+      the <strong>Map</strong> tab</li></ol>
+    text2: null
+    text3: <ul><li><strong>CpoDetails</strong> API is triggered</li><li>Providers
+      displayed in the <strong>Preferred Providers</strong> and <strong>All</strong>
+      sections are displayed in alphabetical order</li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 61481
+    case_id: 36688
+    text1: '<ol><li><strong>CpoDetails</strong> API returns <code>"preferredProvider":
+      "true"</code> for a particular provider</li></ol>'
+    text2: null
+    text3: <ul><li>The exact provider is displayed in the <strong>Preferred Providers</strong>
+      section</li></ul>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 61482
+    case_id: 36688
+    text1: '<ol><li><strong>CpoDetails</strong> API returns <code>"preferredProvider":
+      "false"</code> for a particular provider</li></ol>'
+    text2: null
+    text3: <ul><li>The exact provider is displayed in the <strong>All</strong> section</li></ul>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 61483
+    case_id: 36688
+    text1: '<ol><li><strong>CpoDetails</strong> API returns all providers as <code>"preferredProvider":
+      "false"</code></li></ol>'
+    text2: null
+    text3: <ul><li>All the returned providers are displayed in the <strong>Providers</strong>
+      section.</li><li>Both <strong>Preferred Providers</strong> and <strong>All </strong>titles
+      are hidden. </li></ul>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 61484
+    case_id: 36688
+    text1: '<ol><li><strong>CpoDetails</strong> API returns all providers as <code>"preferredProvider":
+      "true"</code></li></ol>'
+    text2: null
+    text3: <ul><li>All the returned providers are displayed in the <strong>Providers</strong>
+      section.</li><li>Both <strong>Preferred Providers</strong> and <strong>All</strong>
+      titles are hidden. </li></ul>
+    text4: null
+    display_order: 5

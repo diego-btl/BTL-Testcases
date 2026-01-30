@@ -1,0 +1,34 @@
+testmo:
+  case_id: 2679
+  folder_id: 4170
+  project_id: 2
+  folder_path: home/climate/avk2
+  folder_name_ui: AVK2
+  created_at: '2023-09-07 21:10:07.627427'
+  updated_at: '2025-09-22 14:48:47.543756'
+  last_sync: '2026-01-30T18:21:07.796972Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/2679
+metadata:
+  name: Climate Details - Turn Climate Off - Initiated
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>AVK2 vehicle<br />Climate Details screen<br />Engine is ON</p>
+  steps:
+  - column_name: custom_steps
+    id: 3045
+    case_id: 2679
+    text1: <ol><li>Tap on Turn Climate Off</li><li>Tap No</li><li>Tap on Turn Climate
+      Off and tap Yes</li></ol>
+    text2: null
+    text3: <ol><li>User should see a confirmation prompt that turning off climate
+      will also turn off the engine</li><li>User should see prompt dismissed</li><li>User
+      should see Turn Climate Off button disable and status shows loading state<br
+      /><br />User should see a toast message transitioning from (3 seconds each):<br
+      />'Contacting {vehicle model} to stop engine...'<br />'Initiating climate stop
+      on {vehicle model}...'</li></ol>
+    text4: null
+    display_order: 1

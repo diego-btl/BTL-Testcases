@@ -1,0 +1,28 @@
+testmo:
+  case_id: 30106
+  folder_id: 3768
+  project_id: 5
+  folder_path: home/garage
+  folder_name_ui: Garage
+  created_at: '2025-01-31 17:04:40.618568'
+  updated_at: null
+  last_sync: '2026-01-30T18:20:38.147931Z'
+  url: https://bethinklabs.testmo.net/repositories/5/cases/30106
+metadata:
+  name: Vehicle Image Placement
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<p>Designs: https://www.figma.com/design/n2EEhJfWizVdRx7F2E74p0/MyNissan-%5BBrasil%5D---NBA---iOS?node-id=4549-11232&amp;t=BSM3g83yxhXzFcvY-0</p>'
+  steps:
+  - column_name: custom_steps
+    id: 49039
+    case_id: 30106
+    text1: <p>Open the Garage</p>
+    text2: null
+    text3: <p>Vehicle image placement should match designs</p>
+    text4: null
+    display_order: 1

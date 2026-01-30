@@ -1,0 +1,30 @@
+testmo:
+  case_id: 1480
+  folder_id: 55
+  project_id: 2
+  folder_path: home/hero-module
+  folder_name_ui: Hero Module
+  created_at: '2023-08-28 20:13:22.780005'
+  updated_at: '2025-10-11 12:29:56.661970'
+  last_sync: '2026-01-30T18:21:08.170903Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/1480
+metadata:
+  name: Find a Charging Station
+  priority: 1
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has an EV</p>
+  steps:
+  - column_name: custom_steps
+    id: 1848
+    case_id: 1480
+    text1: <p>1. Battery level is 19% or lower and not charging<br />2. Tap on Find
+      a Charging Station CTA</p>
+    text2: null
+    text3: <p>1. User should see a Find a Charging Station CTA<br />2. User should
+      be on the map tab with results for charging stations</p>
+    text4: null
+    display_order: 1

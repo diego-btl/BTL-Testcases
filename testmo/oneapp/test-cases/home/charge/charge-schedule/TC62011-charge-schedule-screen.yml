@@ -1,0 +1,44 @@
+testmo:
+  case_id: 62011
+  folder_id: 6781
+  project_id: 2
+  folder_path: home/charge/charge-schedule
+  folder_name_ui: Charge Schedule
+  created_at: '2025-11-21 18:59:22.290092'
+  updated_at: '2025-11-21 20:53:01.611182'
+  last_sync: '2026-01-30T18:21:05.148209Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/62011
+metadata:
+  name: Charge Schedule - screen
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has an EV/EV2</p><p>User is on the Manage EV screen </p><p>There're
+    0, 1 or 2 charge schedules created</p>
+  steps:
+  - column_name: custom_steps
+    id: 95587
+    case_id: 62011
+    text1: <p>Tap the 'Add' button on the 'Scheduled' card</p>
+    text2: null
+    text3: <p>User is redirected to the Charge Schedule screen</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 95588
+    case_id: 62011
+    text1: <p>Check the UI elements on the Charge Schedule screen</p>
+    text2: null
+    text3: <p>Charge Schedule screen:<br />- <strong>Charge Schedule</strong> header<br
+      />- <strong>back button</strong> (shevron)<br />- <strong>Start Time</strong>
+      dropdown (--)<br />- <strong>End Time</strong> dropdown (--)<br />- <strong>Quick
+      options</strong> section with <strong>Every Day</strong>, <strong>Weekdays,</strong>
+      and <strong>Weekends</strong> buttons (all non-selected by default)<br />- <strong>Days
+      of the Week</strong> section with days buttons from <strong>Su</strong> to <strong>S</strong>a
+      (all non-selected by default)<br />- <strong>CREATE SCHEDULE</strong> CTA (disabled
+      by default)</p>
+    text4: null
+    display_order: 2

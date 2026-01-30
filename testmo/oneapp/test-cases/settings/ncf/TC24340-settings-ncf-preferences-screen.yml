@@ -1,0 +1,84 @@
+testmo:
+  case_id: 24340
+  folder_id: 3085
+  project_id: 2
+  folder_path: settings/ncf
+  folder_name_ui: NCF
+  created_at: '2024-10-18 16:38:31.910323'
+  updated_at: '2024-10-22 19:10:31.129992'
+  last_sync: '2026-01-30T18:21:06.714003Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/24340
+metadata:
+  name: Settings - NCF Preferences Screen
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>Login with an NCF account &gt; <a href="https://www.notion.so/bethinklabs/d0f8f58385a94c51ab27ce3ee1ef1e51?v=caf06428a7ac41aa96541666be242cd7">https://www.notion.so/bethinklabs/d0f8f58385a94c51ab27ce3ee1ef1e51?v=caf06428a7ac41aa96541666be242cd7</a></p>
+  steps:
+  - column_name: custom_steps
+    id: 37920
+    case_id: 24340
+    text1: <ol><li>Login into the app</li><li>Go to <strong>Settings</strong></li><li>Click
+      <strong>Preferences </strong>under <strong>NCF</strong> section</li></ol>
+    text2: null
+    text3: "<p>The screen <strong>NCF Notification </strong>opens with the next text:</p><pre><code\
+      \ class=\"editor-plain language-plain code-block\">Manage your preferences below\
+      \ to choose what you’d like to hear about, and how we should get in touch.\n\
+      \nNCF Reminders(toggle option)\n  Statement Available\n  Payment due in 1 day\n\
+      \  Account Past Due\n  Payment Received\n  Preferences\n  Paperless statement</code></pre>"
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 37921
+    case_id: 24340
+    text1: <ol><li>Login into the app</li><li>Go to <strong>Settings</strong></li><li>Click
+      <strong>Preferences </strong>under <strong>NCF</strong> section</li></ol>
+    text2: null
+    text3: <p>The user can enable or disable the toggle options and a loading states
+      appears till the changes are apply</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 37922
+    case_id: 24340
+    text1: <ol><li>Login into the app</li><li>Go to <strong>Settings</strong></li><li>Click
+      <strong>Preferences </strong>under <strong>NCF</strong> section</li></ol>
+    text2: null
+    text3: <p>The user can enable or disable the toggle options and a loading states
+      appears till the changes are apply, if any error updating the changes the toggle
+      option return to the previous state</p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 37923
+    case_id: 24340
+    text1: <ol><li>Login into the app</li><li>Go to <strong>Settings</strong></li><li>Click
+      <strong>Preferences </strong>under <strong>NCF</strong> section</li></ol>
+    text2: null
+    text3: <p>The user changes the values and can return to the previous screen clicking
+      over <strong>"&lt;"</strong></p>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 37924
+    case_id: 24340
+    text1: <ol><li>Login into the app</li><li>Go to <strong>Settings</strong></li><li>Click
+      <strong>Preferences </strong>under <strong>NCF</strong> section</li></ol>
+    text2: null
+    text3: <p>The user can collapse the <strong>NCF Reminder</strong> clicking the
+      <strong>"^" </strong>symbol</p>
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 37925
+    case_id: 24340
+    text1: <ol><li>Login into the app</li><li>Go to <strong>Settings</strong></li><li>Click
+      <strong>Preferences </strong>under <strong>NCF</strong> section</li></ol>
+    text2: null
+    text3: <p>The user can collapse the <strong>NCF Reminder</strong> clicking the
+      <strong>"⌄" </strong>symbol</p>
+    text4: null
+    display_order: 6

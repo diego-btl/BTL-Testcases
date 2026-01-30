@@ -1,0 +1,62 @@
+testmo:
+  case_id: 62013
+  folder_id: 6781
+  project_id: 2
+  folder_path: home/charge/charge-schedule
+  folder_name_ui: Charge Schedule
+  created_at: '2025-11-21 20:40:37.421381'
+  updated_at: '2025-11-21 20:53:46.342146'
+  last_sync: '2026-01-30T18:21:05.129447Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/62013
+metadata:
+  name: Create Charge Schedule - Initiated
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has an EV/EV2</p><p>User is on the Manage EV screen </p><p>There're
+    0, 1 or 2 charge schedules created</p>
+  steps:
+  - column_name: custom_steps
+    id: 95607
+    case_id: 62013
+    text1: <p>Tap the 'Add' button on the 'Scheduled' card</p>
+    text2: null
+    text3: <p>User is redirected to the Charge Schedule screen</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 95608
+    case_id: 62013
+    text1: <p>Set the Start Time, End Time from the dropdowns</p>
+    text2: null
+    text3: <p>1. Selected time is displayed in the Start Time and End Time fields</p><p>2.
+      The 'CREATE SCHEDULE' CTA is disabled</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 95610
+    case_id: 62013
+    text1: <p>Set the day/days for the charge schedule, selecting any option in the
+      Quick Option or Days of the Week sections </p>
+    text2: null
+    text3: <p>1. The particular button/buttons get selected</p><p>2. The 'CREATE SCHEDULE'
+      CTA gets enabled</p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 95611
+    case_id: 62013
+    text1: <p>Tap the 'CREATE SCHEDULE' CTA</p>
+    text2: null
+    text3: '<p>1. The CreateChargeSchedule API is triggered, sending selected parameters
+      in the request</p><p>2. The CheckChargeServiceRequest starts polling, returning
+      "status": "PENDING"</p><p>3. The loading state with the Charge icon is displayed</p><p>4.
+      The toasts are displayed in the following order:<br />- ''Contacting &lt;year
+      model&gt; to create charge schedule...''<br />- ''Waking &lt;year model&gt;
+      to create charge schedule...''<br />- ''Initiating create charge schedule on
+      &lt;year model&gt;...''</p>'
+    text4: null
+    display_order: 4

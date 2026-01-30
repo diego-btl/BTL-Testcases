@@ -1,0 +1,33 @@
+testmo:
+  case_id: 1606
+  folder_id: 83
+  project_id: 2
+  folder_path: support/warranty-coverage
+  folder_name_ui: Warranty Coverage
+  created_at: '2023-08-28 20:13:24.935420'
+  updated_at: '2025-11-04 22:54:53.476691'
+  last_sync: '2026-01-30T18:21:07.920375Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/1606
+metadata:
+  name: Warranty Coverage - Empty or null (To Be Updated)
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>Manual &amp; Quick Guides -  VehiclesStaticData &gt; quickGuidesUrl
+    (<a href="https://mynissan.quick.guide/#/guide/2022/frontier">sample</a>)</li><li>Warranty
+    Coverage - ContactUs &gt;  warranty (<a href="https://www.nissanusa.com/owners/ownership/warranty.html">sample</a>)</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 37754
+    case_id: 1606
+    text1: <p><strong>VehiclesStaticData &gt; Warranty Coverage  </strong></p><ol><li>set
+      the URL to a <strong>null</strong> or empty string <strong>("")</strong></li><li>go
+      to the <strong>Support</strong> screen</li><li>Verify that the card is <strong>disabled</strong></li><li>Tap
+      on the <strong>Warranty Coverage</strong> card</li></ol>
+    text2: null
+    text3: <p>The expiration modal should be displayed with the call number<br /> </p>
+    text4: null
+    display_order: 1

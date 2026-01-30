@@ -1,0 +1,31 @@
+testmo:
+  case_id: 11114
+  folder_id: 1454
+  project_id: 2
+  folder_path: home/charge/v2l-vehicle-to-load
+  folder_name_ui: V2L - Vehicle-to-Load
+  created_at: '2024-02-02 06:43:12.881765'
+  updated_at: '2026-01-07 21:33:19.298169'
+  last_sync: '2026-01-30T18:21:07.148389Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/11114
+metadata:
+  name: GrantV2L Feature flag - ON
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has an EV AVK2 vehicle</p><p><code>V2L</code> capability
+    is returning true </p>
+  steps:
+  - column_name: custom_steps
+    id: 11759
+    case_id: 11114
+    text1: <ol><li>Mock remote config so that <code>GrantV2L</code> is true</li><li>Go
+      to Charge card  &gt; Manage EV screen</li></ol>
+    text2: null
+    text3: <p>2. User should see an API call for <code>V2lStatus</code> and should
+      see the Vehicle-to-Load card</p>
+    text4: null
+    display_order: 1

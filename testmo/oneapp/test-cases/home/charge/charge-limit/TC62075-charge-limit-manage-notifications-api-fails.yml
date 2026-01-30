@@ -1,0 +1,55 @@
+testmo:
+  case_id: 62075
+  folder_id: 6780
+  project_id: 2
+  folder_path: home/charge/charge-limit
+  folder_name_ui: Charge Limit
+  created_at: '2025-12-02 19:06:56.320204'
+  updated_at: '2025-12-02 22:11:13.847308'
+  last_sync: '2026-01-30T18:21:04.924052Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/62075
+metadata:
+  name: Charge Limit - Manage Notifications - API fails
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has an EV AVK2 vehicle</p><p><code>EnableChargeLimit</code>
+    FF is true</p><p>User is on the Charge Limit screen</p>
+  steps:
+  - column_name: custom_steps
+    id: 95879
+    case_id: 62075
+    text1: <p>1. Add a breakpoint to the ReminderNotificationsAfterLeavingVehicle
+      API</p><p>2. Tap the Manage Notifications button</p>
+    text2: null
+    text3: <p>1. The ReminderNotificationsAfterLeavingVehicle API is called and fails</p><p>2.
+      The NotificationPreferences API is triggered returning the proper response</p><p>3.
+      User should see the Notification Preferences screen load and open</p><p>4. The
+      Reminder After Leaving Vehicle section is hidden</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 95880
+    case_id: 62075
+    text1: <p>1. Add a breakpoint to the NotificationPreferences API</p><p>2. Tap
+      the Manage Notifications button</p>
+    text2: null
+    text3: <p>1. The ReminderNotificationsAfterLeavingVehicle API is triggered returning
+      the proper response</p><p>2. The NotificationPreferences API is called and fails</p><p>3.
+      User should see the Notification Preferences screen load and open</p><p>4. The
+      'Something Went Wrong' modal with the copy 'Sorry, something went wrong, please
+      try again later.' and the 'Ok' button is displayed</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 95881
+    case_id: 62075
+    text1: <p>Tap the 'Ok' button </p>
+    text2: null
+    text3: <p>1. The modal is dismissed</p><p>2. User is navigated back to the Charge
+      Limit screen</p>
+    text4: null
+    display_order: 3

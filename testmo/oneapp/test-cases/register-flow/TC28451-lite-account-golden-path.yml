@@ -1,0 +1,75 @@
+testmo:
+  case_id: 28451
+  folder_id: 43
+  project_id: 2
+  folder_path: register-flow
+  folder_name_ui: Register Flow
+  created_at: '2024-11-22 21:35:36.327848'
+  updated_at: '2025-08-21 13:43:01.272131'
+  last_sync: '2026-01-30T18:21:06.652599Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/28451
+metadata:
+  name: Lite Account - Golden Path
+  priority: 1
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<p>Update <code>isLiteAccount</code> = <code>true</code> on USerInfo
+    call</p><pre><code class="editor-plain language-plain code-block">{
+
+    "data": {
+
+    "user": {
+
+    "__typename": "User",
+
+    "pinConfigured": true,
+
+    "securityQuestionId": "1",
+
+    "isLiteAccount": true
+
+    }
+
+    }
+
+    }</code></pre>'
+  steps:
+  - column_name: custom_steps
+    id: 46154
+    case_id: 28451
+    text1: <p>Perform a Fresh install and log into the app</p>
+    text2: null
+    text3: <p>Login successful and Complete Profile screen is displayed</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 46155
+    case_id: 28451
+    text1: <p>Insert Valid data to complete all mandatory fields &gt; Tap in NEXT
+      cta</p>
+    text2: null
+    text3: <p>Verify NEXT gets enabled</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 46157
+    case_id: 28451
+    text1: <p>Tap on NEXT cta</p>
+    text2: null
+    text3: <p>Verified a loading state icon is displayed, <code>UpdateAccount</code>
+      API is triggered and the user is taken to the Home screen <strong>reload vehicles
+      as if a fresh login occurred</strong> </p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 46158
+    case_id: 28451
+    text1: <p>Go to Settings &gt; My Profile &gt; Contact Information card</p>
+    text2: null
+    text3: <p>Verify all information inserted on <code>Complete Profile</code> screen
+      for address and Phone Number is displayed correctly</p>
+    text4: null
+    display_order: 4

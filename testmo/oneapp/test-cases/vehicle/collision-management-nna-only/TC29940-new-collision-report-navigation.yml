@@ -1,0 +1,29 @@
+testmo:
+  case_id: 29940
+  folder_id: 3800
+  project_id: 2
+  folder_path: vehicle/collision-management-nna-only
+  folder_name_ui: Collision Management - NNA only
+  created_at: '2025-01-14 18:50:08.398593'
+  updated_at: '2025-01-28 13:35:22.555058'
+  last_sync: '2026-01-30T18:21:06.494078Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/29940
+metadata:
+  name: New Collision Report Navigation
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li><p>A user is on the <code>Collision Management</code> Screen </p><p> </p></li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 48821
+    case_id: 29940
+    text1: <p>Tap on the <code>New Collision Report </code>navigation card</p>
+    text2: null
+    text3: <p>The user is redirected to the <code>Collision Report </code> start screen</p>
+    text4: null
+    display_order: 1
+  notes: <figure class="image"><img src="/attachments/view/3161" alt="3161" /></figure>

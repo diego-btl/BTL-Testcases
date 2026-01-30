@@ -1,0 +1,75 @@
+testmo:
+  case_id: 52162
+  folder_id: 66
+  project_id: 2
+  folder_path: home/charge
+  folder_name_ui: Charge
+  created_at: '2025-06-18 21:30:30.618713'
+  updated_at: '2025-12-19 19:14:09.165877'
+  last_sync: '2026-01-30T18:21:05.836156Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/52162
+metadata:
+  name: Charge Screen - NECN - Display Charging Station and Charger ID
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has an EV<br />NECN account status is ACTIVE<br />User is
+    on the Charge screen</p><p>PRIMARY_DRIVER/SHARED_DRIVER</p>
+  steps:
+  - column_name: custom_steps
+    id: 82271
+    case_id: 52162
+    text1: '<p>ChargeSessionStatus API response includes  <code>"status": "ACTIVE"</code>
+      and <code>"message": "The charging session is active"</code></p>'
+    text2: null
+    text3: <p>Charge Station and Charger ID fields in the NECN section on the Battery
+      screen are updated accordingly to the <code>cpoName</code> and <code>physicalReference</code>
+      values</p><p>The 'STOP CHARGING' CTA is displayed</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 82273
+    case_id: 52162
+    text1: <p>Mock <code>cpoName</code> and <code>physicalReference</code> to empty
+      values</p>
+    text2: null
+    text3: <p>Charge Station and Charger ID fields are blank</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 82274
+    case_id: 52162
+    text1: '<p>Mock <code>"stopSessionAllowed": false</code></p>'
+    text2: null
+    text3: <p>'STOP CHARGING' CTA is hidden</p><p>'The station does not support remote
+      stop. Please use the station screen.' copy is displayed as the last field of
+      the NECN section</p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 82272
+    case_id: 52162
+    text1: '<p>Mock ChargeSessionStatus API response to retrieve  <code>"status":
+      "FAILED"</code> and <code>"message": "The charging session is failed"</code></p>'
+    text2: null
+    text3: <p>Find In-Network Chargers CTA is displayed in the NECN section on the
+      Battery screen</p><p>The copy is 'Are you an in-network charging station? Select
+      your charger to pay directly through the MyNissan App'</p>
+    text4: null
+    display_order: 4
+  notes: "<p>ChargeSessionStatus API response</p><pre><code class=\"editor-plain language-plain\
+    \ code-block\">{\n  \"data\": {\n    \"sessionStatus\": {\n      \"__typename\"\
+    : \"EmpSessionStatusResponse\",\n      \"statusCode\": \"1000\",\n      \"statusMessage\"\
+    : \"Success\",\n      \"timestamp\": \"2025-06-18T18:14:13.358Z\",\n      \"data\"\
+    : {\n        \"__typename\": \"EmpSessionStatusData\",\n        \"sessionUid\"\
+    : \"255ef347-0c64-4fa0-8e2c-044e61694641\",\n        \"status\": \"ACTIVE\",\n\
+    \        \"stopSessionAllowed\": true,\n        \"message\": \"The charging session\
+    \ is active\",\n        \"cpoName\": \"ChargePoint\",\n        \"physicalReference\"\
+    : \"IRVINE  CO  OFC DP 505 TECH 02\",\n        \"locationAddress\": \"505 Technology\
+    \ Drive\",\n        \"locationCity\": \"Irvine\",\n        \"locationState\":\
+    \ \"CA\",\n        \"locationCoordinates\": {\n          \"__typename\": \"EmpCoordinatesData\"\
+    ,\n          \"latitude\": \"33.673071\",\n          \"longitude\": \"-117.757035\"\
+    \n        }\n      }\n    }\n  }\n}</code></pre>"

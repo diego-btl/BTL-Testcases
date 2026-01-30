@@ -1,0 +1,48 @@
+testmo:
+  case_id: 11111
+  folder_id: 1452
+  project_id: 2
+  folder_path: map/irp-weather
+  folder_name_ui: IRP Weather
+  created_at: '2024-01-28 09:06:31.050110'
+  updated_at: '2024-10-17 17:57:34.769274'
+  last_sync: '2026-01-30T18:21:07.156673Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/11111
+metadata:
+  name: Estimated Route Screen - Weather Info
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has an EV</p><p>User has filled out the fields on the Create
+    a Route Screen</p>
+  steps:
+  - column_name: custom_steps
+    id: 11735
+    case_id: 11111
+    text1: <ol><li>Tap on Estimate Route</li><li>Scroll up on the Info Drawer</li></ol>
+    text2: null
+    text3: <ol><li>User should see the Estimate Route screen load and open, <a href="https://pro.openweathermap.org">https://pro.openweathermap.org</a>
+      API is triggered</li><li>User should see info drawer expand with the weather
+      info for the corresponding route with the following (starting from the top left):<ul><li>Arrival
+      location</li><li>Weather icon and temperature (based on arrival time)</li><li>High
+      and low temperatures</li><li>Condition</li><li>Precipitation/Snowfall/Cloudiness</li><li>Wind</li><li>Humidity</li><li>Departure
+      time and date</li><li>Arrival time and date</li><li>Charge time</li></ul></li></ol>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 11736
+    case_id: 11111
+    text1: <ol><li>Mock the response for <a href="https://pro.openweathermap.org">https://pro.openweathermap.org</a>
+      so that some fields are null</li><li>Estimate route again</li></ol><p><strong>Note:</strong>
+      To find the weather object for the corresponding arrival time, search for humidity
+      (this is a whole number and not a float), or use <a href="https://timestamp.online/">https://timestamp.online/</a>
+      to convert the timestamp from the <code>dt</code> field</p>
+    text2: null
+    text3: <p>2. User should see Estimate Route screen with the weather info in the
+      info drawer showing double dashes and a unit of measurement for the corresponding
+      fields</p>
+    text4: null
+    display_order: 2

@@ -1,0 +1,32 @@
+testmo:
+  case_id: 2695
+  folder_id: 4168
+  project_id: 2
+  folder_path: home/quick-actions/engine/avk2
+  folder_name_ui: AVK2
+  created_at: '2023-09-07 21:10:07.836118'
+  updated_at: '2025-09-22 14:09:39.819093'
+  last_sync: '2026-01-30T18:21:07.749449Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/2695
+metadata:
+  name: Home - Stop Engine/Climate - Success
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>AVK2 vehicle<br />Engine is ON</p>
+  steps:
+  - column_name: custom_steps
+    id: 3060
+    case_id: 2695
+    text1: <p>Engine STOP request has been resolved into a success</p>
+    text2: null
+    text3: <p>An "Engine STOP" button icone is changed to the default (enabled) state</p><p>A
+      success toast "Climate off, engine stopped for your &lt;year and model&gt;"
+      is displayed at the bottom (5 sec)<br /><br />A countdown timer and climate
+      icon are dismissed in the Hero section, Fuel Remaining is displayed instead<br
+      /><br />User should see the Climate card with secondary text Off</p>
+    text4: null
+    display_order: 1

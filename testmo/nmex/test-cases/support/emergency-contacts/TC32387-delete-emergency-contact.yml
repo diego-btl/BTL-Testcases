@@ -1,0 +1,50 @@
+testmo:
+  case_id: 32387
+  folder_id: 6765
+  project_id: 6
+  folder_path: support/emergency-contacts
+  folder_name_ui: Emergency Contacts
+  created_at: '2025-04-01 17:50:45.046757'
+  updated_at: '2025-10-30 15:27:22.099010'
+  last_sync: '2026-01-30T18:20:45.474921Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/32387
+metadata:
+  name: Delete Emergency Contact
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>The user has a Emergency Contact saved</p>
+  steps:
+  - column_name: custom_steps
+    id: 52756
+    case_id: 32387
+    text1: <ol><li>Login</li><li>Go to <code>Soporte</code> menu option</li><li>Click
+      the card <code>Contactos de Emergencia</code></li><li>Click over a contact</li><li>Tap
+      <code>ELIMINAR CONTACTO</code></li><li>Tap <code>No</code></li></ol>
+    text2: null
+    text3: <ul><li>The user should see the modal dismiss</li><li>No actions is happening</li><li>The
+      user should stay in the <code>Edit Contacto</code> screen</li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 88865
+    case_id: 32387
+    text1: <ol><li>Login</li><li>Go to <code>Soporte</code> menu option</li><li>Click
+      the card <code>Contactos de Emergencia</code></li><li>Click over a contact</li><li>Tap
+      <code>ELIMINAR CONTACTO</code></li><li>Tap <code>Yes</code></li><li>Wait for
+      deletion to succeed</li></ol>
+    text2: null
+    text3: '<ul><li>User should see alert modal</li><li>User should see all fields
+      become disabled and a loading state as the delete call is being made</li><li>A
+      Toast should be displaying<ol><li><code>Éxito al borrar el contacto de emergencia</code>
+      (Text is different on both platforms)</li></ol></li><li>User should be taken
+      back to the emergency contacts screen and see updated data when the deletion
+      succeeds</li><li><code>DeleteEmergencycontacts </code>and <code>Emergencycontacts</code>
+      apis are triggered<br /> </li></ul><p><strong>NOTE: If saving fails, there should
+      no longer be a loading state and user should see fields become enabled with
+      the next toast:</strong></p><p><code>Error al borrar el contacto de emergencia</code></p>'
+    text4: null
+    display_order: 2

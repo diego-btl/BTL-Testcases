@@ -1,0 +1,38 @@
+testmo:
+  case_id: 2841
+  folder_id: 4168
+  project_id: 2
+  folder_path: home/quick-actions/engine/avk2
+  folder_name_ui: AVK2
+  created_at: '2023-09-13 10:08:04.068071'
+  updated_at: '2025-04-17 17:19:12.777685'
+  last_sync: '2026-01-30T18:21:07.433076Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/2841
+metadata:
+  name: Home - Start Engine/Climate - HVAC_FAILED
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>AVK2 vehicle<br />Engine is PENDING</p>
+  steps:
+  - column_name: custom_steps
+    id: 3202
+    case_id: 2841
+    text1: <p><code>statusDetails</code> returns with <code>HVAC_FAILED</code> and
+      <code>status</code> returns <code>FAILED</code> </p>
+    text2: null
+    text3: '<p>User should see a toast saying:</p><ul><li>EN: "Remote engine start
+      was successful and climate control did not start for &lt;year and model&gt;"
+      (5 seconds)</li><li>FR: "Le démarrage du moteur à distance est réussi et le
+      contrôle climat n''est pas réussi pour&lt;ANNÉE MODÈLE &amp; MODÈLE DU VÉHICULE&gt;"
+      (5 seconds)</li><li>ES: "Se ha encendido remotamente el motor, pero el aire
+      acondicionado no, para &lt;AÑO DEL MODELO Y MODELO DEL VEHÍCULO&gt;" (5 seconds)</li></ul><p>User
+      should see a countdown timer (10 mins) and "Engine Running" text are displayed
+      in the Hero section instead of Fuel Remaining</p><p>User should see the Engine
+      button icon is changed to Stop</p><p>User should see the Climate card text Off</p><p>User
+      should not see the climate icon in the Hero section</p>'
+    text4: null
+    display_order: 1

@@ -1,0 +1,60 @@
+testmo:
+  case_id: 31302
+  folder_id: 46
+  project_id: 2
+  folder_path: map
+  folder_name_ui: Map
+  created_at: '2025-03-14 19:35:12.231976'
+  updated_at: '2025-04-03 19:56:24.548065'
+  last_sync: '2026-01-30T18:21:06.269280Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/31302
+metadata:
+  name: Charge Station Card - P&C capable
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>FF EnablePlugAndChargeFoundational</p><p>FF GrantFullPlugAndCharge</p><p>LocationDetails
+    API response contains <code>PlugandChargeCapable</code> in its <code>evseCapability</code></p>
+  steps:
+  - column_name: custom_steps
+    id: 53102
+    case_id: 31302
+    text1: <p>User taps Charge Stations ePOI in the Map screen</p>
+    text2: null
+    text3: <p>ChargePoint cards are displayed at the bottom of the screen</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 53103
+    case_id: 31302
+    text1: <p>If <code>LocationDetails</code> API response contains <code>PlugandChargeCapable</code>
+      in its <code>evseCapability</code></p>
+    text2: null
+    text3: <p>"Plug &amp; Charge" label is displayed on the particular ChargePoint
+      card</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 53104
+    case_id: 31302
+    text1: <p>User taps ChargePoint card with "Plug &amp; Charge" label on it</p>
+    text2: null
+    text3: <p>User is redirected to the Charge Station Details screen.<br />"Plug
+      &amp; Charge" label is displayed on the ChargePoint card in the Charge Station
+      Details screen</p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 53105
+    case_id: 31302
+    text1: <p>User taps SELECT CHARGER CTA in the Charge Station Details screen</p>
+    text2: null
+    text3: <p>User is redirected to the Select Charger screen.<br />"Plug &amp; Charge"
+      label is displayed for the particular connector corresponding to the API response</p>
+    text4: null
+    display_order: 4
+  notes: '<p>Note: "Plug &amp; Charge" is not displayed if the ChargePoint is Out
+    of Network<br />(LocationDetails API response &gt; "locationInNetwork": false)</p>'

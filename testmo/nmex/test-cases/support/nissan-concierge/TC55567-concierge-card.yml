@@ -1,0 +1,86 @@
+testmo:
+  case_id: 55567
+  folder_id: 6764
+  project_id: 6
+  folder_path: support/nissan-concierge
+  folder_name_ui: Nissan Concierge
+  created_at: '2025-08-06 15:26:52.852408'
+  updated_at: '2025-10-30 17:30:23.091023'
+  last_sync: '2026-01-30T18:20:45.157528Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/55567
+metadata:
+  name: Concierge Card
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>User is logged into the app with a valid QA account</li><li>Concierge
+    eligibility is determined through the <code>VehicleSubscriptions</code> GraphQL
+    query</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 85477
+    case_id: 55567
+    text1: <ol><li>Login into the app</li><li>Select an <strong>AVK or AVK2 vehicle</strong>
+      where the <code>VehicleSubscriptions</code> GraphQL response shows the <code>marketingName</code>
+      as either <strong>"Premium"</strong> or <strong>"Convenience"</strong>, </li><li>Navigate
+      to the <code>Soporte</code> screen.</li></ol>
+    text2: null
+    text3: <ol><li>The <code>Nissan Concierge</code> card is displayed and enabled
+      on the Soporte screen.</li><li>The Concierge card title displays <code>Nissan
+      Concierge</code></li></ol>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 85478
+    case_id: 55567
+    text1: <ol><li>Login into the app</li><li>Go to <code>Soporte</code> option</li><li>Tap
+      the <code>Nissan Concierge</code><strong> card</strong></li></ol>
+    text2: null
+    text3: <ul><li>The <strong>Nissan Concierge</strong> detail screen is displayed.</li><li>The
+      screen header displays <strong>"Nissan Concierge"</strong>.</li><li>The vehicle
+      information section shows the correct year, model, and VIN.</li><li>The <strong>Llamar
+      a Nissan Concierge</strong> button is visible at the bottom of the screen.</li></ul>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 85479
+    case_id: 55567
+    text1: <ol><li>Login into the app</li><li>Go to <code>Soporte</code> option</li><li>Tap
+      the <code>Nissan Concierge</code><strong> card</strong></li><li>On the <strong>Nissan
+      Concierge</strong> detail screen, tap the <strong>Llamar a Nissan Concierge</strong>
+      button.</li></ol>
+    text2: null
+    text3: <ul><li>The device opens the native phone call dialog.</li><li>The phone
+      number displayed in the call dialog includes the <strong>area code</strong>,
+      e.g., <strong>+52 8000830565</strong> (formatted per device locale).</li></ul>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 85480
+    case_id: 55567
+    text1: <ol><li>Login into the app</li><li>Select a vehicle <strong>or mock the
+      </strong><code><strong>VehicleSubscriptions</strong></code><strong> response</strong>
+      so that one of the following conditions applies:</li></ol><ul><li><code>marketingName</code>
+      is <strong>not</strong> "Premium" or "Convenience"</li><li><code>marketingName</code>
+      is <strong>null</strong> or missing</li><li><code>subscriptions</code> array
+      is <strong>empty</strong></li></ul>
+    text2: null
+    text3: <ul><li>The <code>Nissan Concierge</code> card is <strong>not displayed</strong>
+      on the Soporte screen.</li></ul>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 85481
+    case_id: 55567
+    text1: <ol><li>Login into the app</li><li>Switch between a vehicle with <code>marketingName</code>
+      = <strong>"Premium"</strong> or <strong>"Convenience"</strong> and a vehicle
+      with a different <code>marketingName</code> on the same account, then view the
+      <strong>Soporte</strong> screen.</li></ol>
+    text2: null
+    text3: <ul><li>The Concierge card updates based on the selected vehicle — displayed
+      for eligible vehicles and hidden for ineligible ones</li></ul>
+    text4: null
+    display_order: 5

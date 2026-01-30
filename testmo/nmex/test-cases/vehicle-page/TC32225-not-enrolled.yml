@@ -1,0 +1,127 @@
+testmo:
+  case_id: 32225
+  folder_id: 4086
+  project_id: 6
+  folder_path: vehicle-page
+  folder_name_ui: Vehicle Page
+  created_at: '2025-04-01 17:50:43.929475'
+  updated_at: '2025-08-25 16:54:18.002028'
+  last_sync: '2026-01-30T18:20:45.831381Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/32225
+metadata:
+  name: Not Enrolled
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: "<p>User's vehicle is not enrolled in SXM (status: \"NOT_ENROLLED\"\
+    ) all capabilities should return false</p><p><strong><u>MOCK</u></strong></p><pre><code\
+    \ class=\"editor-plain language-plain code-block\">{\n  \"data\": {\n    \"vehicle\"\
+    : {\n      \"__typename\": \"AVK2Vehicle\",\n      \"capabilities\": {\n     \
+    \   \"__typename\": \"VehicleCapability\",\n        \"telematicsProgram\": \"\
+    AVK2\",\n        \"status\": \"NOT_ENROLLED\",\n        \"serviceCapability\"\
+    : [\n          {\n            \"__typename\": \"ServiceCapability\",\n       \
+    \     \"type\": \"MECHANICAL_REPAIR\",\n            \"enabled\": false\n     \
+    \     },\n          {\n            \"__typename\": \"ServiceCapability\",\n  \
+    \          \"type\": \"REMOTE_ENGINE\",\n            \"enabled\": false\n    \
+    \      },\n          {\n            \"__typename\": \"ServiceCapability\",\n \
+    \           \"type\": \"ROADSIDE_ASSISTANCE\",\n            \"enabled\": false\n\
+    \          },\n          {\n            \"__typename\": \"ServiceCapability\"\
+    ,\n            \"type\": \"REMINDER_TO_LOCK\",\n            \"enabled\": false\n\
+    \          },\n          {\n            \"__typename\": \"ServiceCapability\"\
+    ,\n            \"type\": \"REMOTE_DOOR_LOCK_UNLOCK\",\n            \"enabled\"\
+    : false\n          },\n          {\n            \"__typename\": \"ServiceCapability\"\
+    ,\n            \"type\": \"ADDITIONAL_DRIVER\",\n            \"enabled\": false\n\
+    \          },\n          {\n            \"__typename\": \"ServiceCapability\"\
+    ,\n            \"type\": \"REMOTE_VEHICLE_STATUS\",\n            \"enabled\":\
+    \ false\n          },\n          {\n            \"__typename\": \"ServiceCapability\"\
+    ,\n            \"type\": \"SPEED_ALERT\",\n            \"enabled\": false\n  \
+    \        },\n          {\n            \"__typename\": \"ServiceCapability\",\n\
+    \            \"type\": \"DESTINATION_SEND_TO_CAR\",\n            \"enabled\":\
+    \ false\n          },\n          {\n            \"__typename\": \"ServiceCapability\"\
+    ,\n            \"type\": \"ALARM_NOTIFICATION\",\n            \"enabled\": false\n\
+    \          },\n          {\n            \"__typename\": \"ServiceCapability\"\
+    ,\n            \"type\": \"REMOTE_HORN_LIGHTS\",\n            \"enabled\": false\n\
+    \          },\n          {\n            \"__typename\": \"ServiceCapability\"\
+    ,\n            \"type\": \"MAINTENANCE_ALERT\",\n            \"enabled\": false\n\
+    \          },\n          {\n            \"__typename\": \"ServiceCapability\"\
+    ,\n            \"type\": \"BOUNDARY_ALERT\",\n            \"enabled\": false\n\
+    \          },\n          {\n            \"__typename\": \"ServiceCapability\"\
+    ,\n            \"type\": \"PARKED_CAR_FINDER\",\n            \"enabled\": false\n\
+    \          },\n          {\n            \"__typename\": \"ServiceCapability\"\
+    ,\n            \"type\": \"AUTOMATIC_COLLISION_NOTIFICATION\",\n            \"\
+    enabled\": false\n          },\n          {\n            \"__typename\": \"ServiceCapability\"\
+    ,\n            \"type\": \"IN_VEHICLE_MESSAGING\",\n            \"enabled\": false\n\
+    \          },\n          {\n            \"__typename\": \"ServiceCapability\"\
+    ,\n            \"type\": \"PROACTIVE_MAINTENANCE\",\n            \"enabled\":\
+    \ false\n          },\n          {\n            \"__typename\": \"ServiceCapability\"\
+    ,\n            \"type\": \"CURFEW_ALERT\",\n            \"enabled\": false\n \
+    \         },\n          {\n            \"__typename\": \"ServiceCapability\",\n\
+    \            \"type\": \"OVER_THE_AIR_UPDATE\",\n            \"enabled\": false\n\
+    \          },\n          {\n            \"__typename\": \"ServiceCapability\"\
+    ,\n            \"type\": \"EMERGENCY_CALL\",\n            \"enabled\": false\n\
+    \          },\n          {\n            \"__typename\": \"ServiceCapability\"\
+    ,\n            \"type\": \"VEHICLE_HEALTH_REPORT\",\n            \"enabled\":\
+    \ false\n          },\n          {\n            \"__typename\": \"ServiceCapability\"\
+    ,\n            \"type\": \"DOOR_TO_DOOR_NAVIGATION\",\n            \"enabled\"\
+    : false\n          },\n          {\n            \"__typename\": \"ServiceCapability\"\
+    ,\n            \"type\": \"STOLEN_VEHICLE_LOCATOR\",\n            \"enabled\"\
+    : false\n          },\n          {\n            \"__typename\": \"ServiceCapability\"\
+    ,\n            \"type\": \"HVAC_ACCESSORIES\",\n            \"enabled\": false\n\
+    \          },\n          {\n            \"__typename\": \"ServiceCapability\"\
+    ,\n            \"type\": \"VALET_ALERT\",\n            \"enabled\": false\n  \
+    \        },\n          {\n            \"__typename\": \"ServiceCapability\",\n\
+    \            \"type\": \"REMOTE_DATA_WIPE\",\n            \"enabled\": false\n\
+    \          },\n          {\n            \"__typename\": \"ServiceCapability\"\
+    ,\n            \"type\": \"REMOTE_DOOR_LOCK\",\n            \"enabled\": false\n\
+    \          },\n          {\n            \"__typename\": \"ServiceCapability\"\
+    ,\n            \"type\": \"REMOTE_DOOR_UNLOCK\",\n            \"enabled\": false\n\
+    \          }\n        ],\n        \"accessoriesDetails\": {\n          \"__typename\"\
+    : \"AccessoriesDetailsCapability\",\n          \"seatHeater\": null,\n       \
+    \   \"steeringHeat\": null,\n          \"sunRoof\": null,\n          \"windowStatus\"\
+    : null,\n          \"wayPoint\": {\n            \"__typename\": \"WayPointAccessoryCapability\"\
+    ,\n            \"enabled\": false,\n            \"maxNumber\": null\n        \
+    \  }\n        }\n      }\n    }\n  }\n}</code></pre>"
+  steps:
+  - column_name: custom_steps
+    id: 52607
+    case_id: 32225
+    text1: <ol><li>Launch the app to the home screen</li></ol>
+    text2: null
+    text3: <ul><li>User should see feature cards in a disabled state (except <code>Placas</code>,
+      <code>Servicio &amp; Mantenimiento</code>, <code>Garantia</code> and <code>Seguro</code>)</li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 91007
+    case_id: 32225
+    text1: <ol><li>Launch the app to the home screen</li><li>Tap on the Map tab</li></ol>
+    text2: null
+    text3: <ul><li>The user should see a map screen without any vehicle card</li><li>It
+      should be showing the next message:<ul><li><code>Función no compatible con esta
+      cuenta</code></li></ul></li></ul>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 91008
+    case_id: 32225
+    text1: <ol><li>Launch the app to the home screen</li><li>Tap on the Vehicle tab</li></ol>
+    text2: null
+    text3: <ul><li>The <code>Guantera</code> should be enable</li><li>The buttons
+      for should be enable:<ul><li><code>Programar Servicio</code></li><li><code>Encontrar
+      un distribuidor</code></li></ul></li><li>The card for <code>Mi distribuidor</code>
+      should be enable</li><li>The card for <code>Servicio &amp; Mantenimiento</code>
+      should be enable</li></ul>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 91009
+    case_id: 32225
+    text1: <ol><li>Launch the app to the home screen</li><li>Tap on the Support tab</li></ol>
+    text2: null
+    text3: <ul><li>All the options should be displaying except:<ul><li><code>Vehículo
+      Robado</code> disable</li></ul></li></ul>
+    text4: null
+    display_order: 4

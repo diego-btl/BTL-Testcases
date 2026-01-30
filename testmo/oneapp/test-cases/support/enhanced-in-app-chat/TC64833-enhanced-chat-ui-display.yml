@@ -1,0 +1,90 @@
+testmo:
+  case_id: 64833
+  folder_id: 7146
+  project_id: 2
+  folder_path: support/enhanced-in-app-chat
+  folder_name_ui: Enhanced In-App Chat
+  created_at: '2026-01-28 00:11:53.018310'
+  updated_at: '2026-01-28 00:33:06.508512'
+  last_sync: '2026-01-30T18:21:03.582099Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/64833
+metadata:
+  name: Enhanced Chat UI - Display
+  priority: 3
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  steps:
+  - column_name: custom_steps
+    id: 102502
+    case_id: 64833
+    text1: <p>Select any department card and tap <code>GO TO CHAT</code> button</p>
+    text2: null
+    text3: '<ul><li>Enhanced Chat UI loads with:<ul><li>Title: <code>Chat</code></li><li><strong>Back
+      arrow button</strong> in top left</li><li><strong>Three-dot menu icon</strong>
+      in top right</li><li>Timestamp: <code>Today • [Time]</code></li><li>Initial
+      message: <code>Thanks for your message. An agent will be with you shortly. Just
+      so you know, we record and track conversations to help improve your experience</code></li><li>Message
+      input field: <code>Type a message</code></li><li><strong>Plus (+) button</strong>
+      for attachments</li><li><strong>Send arrow button</strong></li></ul></li></ul>'
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 102503
+    case_id: 64833
+    text1: <p>Tap <strong>three-dot menu icon</strong> in top right</p>
+    text2: null
+    text3: '<ul><li><code>Conversation Options</code> screen is displayed with:<ul><li><strong>Back
+      arrow</strong> in top left</li><li>Title: <code>Conversation Options</code></li><li><strong>Search
+      bar</strong></li><li>Button: <code>Request Chat Transcript</code></li><li>Button:
+      <code>End Chat</code></li></ul></li></ul>'
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 102504
+    case_id: 64833
+    text1: <p>Tap <code>Request Chat Transcript</code> button</p>
+    text2: null
+    text3: <ul><li>Chat transcript is available for download</li></ul>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 102505
+    case_id: 64833
+    text1: <p>Return to Conversation Options and tap <code>End Chat</code> button</p>
+    text2: null
+    text3: '<ul><li>Confirmation modal is displayed with:<ul><li>Title: <code>End
+      Chat?</code></li><li>Message: <code>Are you sure you want to end the chat session?
+      You will be disconnected from the agent.</code></li><li>Button: <code>End Chat</code></li><li>Button:
+      <code>Cancel</code></li></ul></li></ul>'
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 102506
+    case_id: 64833
+    text1: <p>Tap <code>Cancel</code> button</p>
+    text2: null
+    text3: <ul><li>Modal is dismissed</li><li>User returns to <code>Conversation Options</code>
+      screen</li></ul>
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 102507
+    case_id: 64833
+    text1: <p>Tap <code>End Chat</code> button again, then tap <code>End Chat</code>
+      in confirmation modal</p>
+    text2: null
+    text3: <ul><li>Chat session ends</li><li>User returns to <code>Chat</code> screen
+      with closing message displayed</li></ul>
+    text4: null
+    display_order: 6
+  - column_name: custom_steps
+    id: 102508
+    case_id: 64833
+    text1: <p>Tap <strong>back arrow button</strong> from Chat screen</p>
+    text2: null
+    text3: <ul><li>User is redirected to <code>Live Chat</code> screen</li></ul>
+    text4: null
+    display_order: 7

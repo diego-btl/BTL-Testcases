@@ -1,0 +1,30 @@
+testmo:
+  case_id: 1591
+  folder_id: 101
+  project_id: 2
+  folder_path: map/route-planner
+  folder_name_ui: Route Planner
+  created_at: '2023-08-28 20:13:24.681281'
+  updated_at: '2025-12-02 19:31:20.816391'
+  last_sync: '2026-01-30T18:21:07.963422Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/1591
+metadata:
+  name: Estimate Battery level info
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>User is on <strong>Create a Route</strong> screen</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 1956
+    case_id: 1591
+    text1: <ol><li>Tap the info button next to the battery level</li><li>Dismiss the
+      info sheet</li></ol>
+    text2: null
+    text3: <ul><li>User should see an info sheet</li><li>User should be able to dismiss
+      the info sheet</li></ul>
+    text4: null
+    display_order: 1

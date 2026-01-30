@@ -1,0 +1,32 @@
+testmo:
+  case_id: 2791
+  folder_id: 425
+  project_id: 2
+  folder_path: old-deprecated/ccs2/multi-user-vehicle-health-report
+  folder_name_ui: Multi-user Vehicle Health Report
+  created_at: '2023-09-08 16:41:59.374964'
+  updated_at: '2026-01-06 17:48:13.084747'
+  last_sync: '2026-01-30T18:21:07.532753Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/2791
+metadata:
+  name: Vehicle Health Report - Items
+  priority: 13
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is on the Vehicle Profile sheet, has the VHR capability and
+    has VHR items<br />User is a PRIMARY_DRIVER or SHARED_DRIVER (to be tested for
+    both for AVK2)</p>
+  steps:
+  - column_name: custom_steps
+    id: 3156
+    case_id: 2791
+    text1: <p>1. Tap Vehicle Health Report<br />2. Tap Vehicle Health Report item</p>
+    text2: null
+    text3: <p>1. User should see the VHR items as individual CTAs with the date of
+      the report in the CTA<br />2. User is able to open the selected VHR and view
+      the report</p>
+    text4: null
+    display_order: 1

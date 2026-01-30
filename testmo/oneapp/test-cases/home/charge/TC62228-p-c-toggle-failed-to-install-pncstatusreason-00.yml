@@ -1,0 +1,67 @@
+testmo:
+  case_id: 62228
+  folder_id: 66
+  project_id: 2
+  folder_path: home/charge
+  folder_name_ui: Charge
+  created_at: '2025-12-19 19:56:37.121040'
+  updated_at: '2025-12-19 21:05:27.562953'
+  last_sync: '2026-01-30T18:21:03.888902Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/62228
+metadata:
+  name: P&C Toggle - Failed to Install pncStatusReason 00 errors
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has an EV</p><p>User is on Charge screen</p><p><code>GrantFullPlugAndCharge</code>
+    FF is enabled</p><p>NECN AccountStatus is `Active</p><p>User is a Primary Driver</p>
+  steps:
+  - column_name: custom_steps
+    id: 97044
+    case_id: 62228
+    text1: <p>Mock <code>pncStatus</code> to be <code>FAILED</code> and <code>pncStatusReason</code>
+      to be <code>00</code> </p>
+    text2: null
+    text3: <p>App should display the Failed to Install card with the <code>Install</code>
+      CTA and <code>Failed to Install</code> as the Status</p><figure class="image"><img
+      src="/attachments/view/9016" alt="9016" /></figure>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 97045
+    case_id: 62228
+    text1: <p>Tap on Install</p>
+    text2: null
+    text3: <p>App should show a loading state while <code>retryCertInstall</code>
+      is triggered and loading</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 97059
+    case_id: 62228
+    text1: <p>Time out the api or mock <code>retryCertInstall.statusCode</code> to
+      be one of the following:</p><ul><li>2024</li><li>2028</li><li>2029</li><li>2030</li><li>4011</li><li>5000</li><li>null
+      / empty</li></ul>
+    text2: null
+    text3: <p>Something Went Wrong modal should be displayed to allow Retry or Cancel</p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 97060
+    case_id: 62228
+    text1: <p>Tap Retry</p>
+    text2: null
+    text3: <p><code>retryCertInstall</code> should retrigger</p>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 97061
+    case_id: 62228
+    text1: <p>Tap on Cancel</p>
+    text2: null
+    text3: <p>Modal should be dismissed</p>
+    text4: null
+    display_order: 5

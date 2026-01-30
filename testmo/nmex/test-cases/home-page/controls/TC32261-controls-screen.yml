@@ -1,0 +1,31 @@
+testmo:
+  case_id: 32261
+  folder_id: 4153
+  project_id: 6
+  folder_path: home-page/controls
+  folder_name_ui: Controls
+  created_at: '2025-04-01 17:50:44.155823'
+  updated_at: '2025-10-22 14:26:39.962639'
+  last_sync: '2026-01-30T18:20:45.758850Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/32261
+metadata:
+  name: Controls screen
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is on home screen</p>
+  steps:
+  - column_name: custom_steps
+    id: 52640
+    case_id: 32261
+    text1: <ol><li>Login into the app</li><li>Tap on <code>Controls</code> card</li></ol>
+    text2: null
+    text3: '<ul><li>User should see the Controls screen<ul><li>User should see quick
+      action buttons in Favourite and More Controls sections</li></ul></li><li>Default
+      favorites<ul><li><strong>AVK</strong>: <code>Lock, Unlock, Engine, Lights, Horn</code></li><li><strong>AVK2</strong>:
+      <code>Lock, Unlock, Engine, Lights, Horn</code></li></ul></li></ul>'
+    text4: null
+    display_order: 1

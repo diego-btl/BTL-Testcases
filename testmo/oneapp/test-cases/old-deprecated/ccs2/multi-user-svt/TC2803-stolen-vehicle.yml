@@ -1,0 +1,35 @@
+testmo:
+  case_id: 2803
+  folder_id: 428
+  project_id: 2
+  folder_path: old-deprecated/ccs2/multi-user-svt
+  folder_name_ui: Multi-user SVT
+  created_at: '2023-09-08 16:50:23.108246'
+  updated_at: '2026-01-06 17:49:03.107557'
+  last_sync: '2026-01-30T18:21:07.510915Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/2803
+metadata:
+  name: Stolen Vehicle
+  priority: 13
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<p>User''s vehicle is in the stolen state (status: "STOLEN")<br
+    />User is a PRIMARY_DRIVER or SHARED_DRIVER (to be tested for both for AVK2)</p>'
+  steps:
+  - column_name: custom_steps
+    id: 3168
+    case_id: 2803
+    text1: <p>1. Launch app to home screen<br />2. Tap on Call Customer Care<br />3.
+      Tap on Vehicle tab<br />4. Tap on Map tab</p>
+    text2: null
+    text3: <p>1. User should see all feature cards disabled except for the NMAC card.
+      User should see the stolen badge displayed on the home hero<br />2. User should
+      see call button 1-844-711-8100 (NNA) <br />1-844-711-8200 (NCI)<br />3. User
+      should see items in the stolen state with the stolen badge. <br />User should
+      only be able to tap the Vehicle Profile button<br />4. User should not see the
+      vehicle's location and the vehicle pin is hidden, info drawer shows stolen badge</p>
+    text4: null
+    display_order: 1

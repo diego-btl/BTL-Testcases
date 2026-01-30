@@ -1,0 +1,32 @@
+testmo:
+  case_id: 644
+  folder_id: 66
+  project_id: 2
+  folder_path: home/charge
+  folder_name_ui: Charge
+  created_at: '2023-08-01 23:08:20.845393'
+  updated_at: '2025-09-22 14:41:15.982411'
+  last_sync: '2026-01-30T18:21:08.958338Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/644
+metadata:
+  name: Start Charge - Success
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has sent a start charge request</p>
+  steps:
+  - column_name: custom_steps
+    id: 813
+    case_id: 644
+    text1: <p>Start charge request has resolved into a success</p>
+    text2: null
+    text3: <p>User should see a toast saying<br />'{vehicle model} charging.' (5 seconds)<br
+      /><br />User should see Start Charge button remain disabled<br /><br />User
+      should see Charge Status update to show charging state (bar shows charging and
+      shows time until full)</p>
+    text4: null
+    display_order: 1
+  notes: <p>Case needs and update - https://www.pivotaltracker.com/story/show/187985904</p>

@@ -1,0 +1,43 @@
+testmo:
+  case_id: 2734
+  folder_id: 6785
+  project_id: 2
+  folder_path: vehicle/vehicle-status
+  folder_name_ui: Vehicle Status
+  created_at: '2023-09-08 15:37:21.778023'
+  updated_at: '2024-10-17 17:57:34.769274'
+  last_sync: '2026-01-30T18:21:07.632136Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/2734
+metadata:
+  name: Door Statuses
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>AVK2 vehicle<br />User has REMOTE_VEHICLE_STATUS capability enabled</p>
+  steps:
+  - column_name: custom_steps
+    id: 3099
+    case_id: 2734
+    text1: '<ol><li>Vehicle.doorStatus response includes (where applicable)<br />-doorFrontLeft<br
+      />-doorFrontRight<br />-doorRearLeft<br />-doorRearRight<br />-engineHood<br
+      />-hatch<br />-sunroof<br />-trunk<br />-overallLock</li><li>For each door,
+      possible statuses include<br />-ajar:[CLOSED | OPEN]<br />-window:[CLOSED |
+      OPEN] (this is also dependent on accessories details for windowstatus)<br />-lock:
+      [LOCKED | UNLOCKED]</li><li>For engineHood, hatch, sunroof, possible statuses
+      include<br />-ajar: [CLOSED | OPEN]</li><li>For trunk and overallLock, possible
+      statuses include<br />-lock: [LOCKED | UNLOCKED]</li><li>Tap on Vehicle Status
+      card on home screen or Vehicle Status warning on vehicle image</li><li>Tap on
+      Vehicle Status card on vehicle screen or Vehicle Status warning on vehicle image</li></ol>'
+    text2: null
+    text3: <p>2. User should see corresponding vehicle status shown on home/vehicle
+      screens if statuses are OPEN/UNLOCKED<br />3. User should see corresponding
+      vehicle status shown on home/vehicle screens if statuses are OPEN<br />4.  User
+      should see trunk vehicle status shown on home/vehicle screens if statuses are
+      UNLOCKED<br />5/6. User should see Vehicle Status screen with all corresponding
+      OPEN/UNLOCKED statuses listed</p>
+    text4: null
+    display_order: 1
+  notes: <p>[GS] Let's add corresponding Mocks for check and credentials. </p>

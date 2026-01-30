@@ -1,0 +1,30 @@
+testmo:
+  case_id: 32514
+  folder_id: 81
+  project_id: 2
+  folder_path: support/let-us-help
+  folder_name_ui: Let Us Help
+  created_at: '2025-04-04 19:57:54.294707'
+  updated_at: '2025-04-04 20:08:09.124236'
+  last_sync: '2026-01-30T18:21:06.186416Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/32514
+metadata:
+  name: Verify Nissan Protection Plan button is not displayed
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<p>Set FFs as follows</p><ul><li><code>EnableNcesiServiceContracts</code>:
+    false</li></ul>'
+  steps:
+  - column_name: custom_steps
+    id: 53123
+    case_id: 32514
+    text1: <p>Login to app &gt; Go to <code>Support</code> screen </p>
+    text2: null
+    text3: <p>Verify <code>Nissan Protection</code> button is not displayed on <code>Let
+      us Help</code> section. Instead, the Roadside Assistance button is shown.</p>
+    text4: null
+    display_order: 1

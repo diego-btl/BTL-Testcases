@@ -1,0 +1,56 @@
+testmo:
+  case_id: 41885
+  folder_id: 3800
+  project_id: 2
+  folder_path: vehicle/collision-management-nna-only
+  folder_name_ui: Collision Management - NNA only
+  created_at: '2025-06-09 23:49:52.496449'
+  updated_at: '2025-06-10 00:08:31.723754'
+  last_sync: '2026-01-30T18:21:05.881318Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/41885
+metadata:
+  name: Accident Report History  list
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>The user is on the Accident Helper History screen.</p>
+  steps:
+  - column_name: custom_steps
+    id: 71986
+    case_id: 41885
+    text1: <p>Open the Accident Helper History screen.</p>
+    text2: null
+    text3: <p>The reports list is visible with all previous collision reports</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 71987
+    case_id: 41885
+    text1: <p>Observe the list of collision reports </p>
+    text2: null
+    text3: '<p>Each report card displays: the Incident <code>Date</code> (from collisionDate)<br
+      />and <code>Created Date </code>(from reportDate).<br /> </p>'
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 71991
+    case_id: 41885
+    text1: <p>Tap on any one of the report cards in the list.</p>
+    text2: null
+    text3: <ul><li>The app triggers the <code>CreateCollisionReportPDF</code> API</li><li>The
+      screen contains two CTAs:<br />- Share Report<br />- Download Report</li><li>The
+      Collision Report is displayed as an embedded PDF file within the screen.</li></ul>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 71992
+    case_id: 41885
+    text1: <p>Tap on the <code>Back</code> button</p>
+    text2: null
+    text3: <p>The user is redirected to the previous screen (Accident Report History
+       list)</p>
+    text4: null
+    display_order: 4

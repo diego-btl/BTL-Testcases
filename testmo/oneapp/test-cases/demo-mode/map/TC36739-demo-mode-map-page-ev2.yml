@@ -1,0 +1,174 @@
+testmo:
+  case_id: 36739
+  folder_id: 6801
+  project_id: 2
+  folder_path: demo-mode/map
+  folder_name_ui: Map
+  created_at: '2025-05-23 19:08:47.401143'
+  updated_at: '2025-12-18 17:04:37.252259'
+  last_sync: '2026-01-30T18:21:05.978593Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/36739
+metadata:
+  name: Demo Mode - Map Page - EV2
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  steps:
+  - column_name: custom_steps
+    id: 61592
+    case_id: 36739
+    text1: <p>Tap <code>Map</code> in the bottom nav</p>
+    text2: null
+    text3: '<p>User should see the map screen with: user location, vehicle pins in
+      fixed locations,  scrolling POI categories, and Info Drawer</p>'
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 61593
+    case_id: 36739
+    text1: <p>Tap on the <code>search bar</code>, <code>POI </code>categories, or
+      <code>buttons</code> on the map</p>
+    text2: null
+    text3: <p>User should see the demo mode alert modal </p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 61594
+    case_id: 36739
+    text1: <p>Tap on the <code>user</code>/<code>vehicle</code> location buttons</p>
+    text2: null
+    text3: <ol><li>For user location, the map screen should be changed,</li><li>For
+      vehicle location, vehicle pin in fixed locations should be shown.</li></ol>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 61595
+    case_id: 36739
+    text1: <p>Draw the info drawer up</p>
+    text2: null
+    text3: <p>User should be able to scroll the contents</p>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 61596
+    case_id: 36739
+    text1: <ol><li>Navigate to the <code>Vehicle Location</code> section</li><li>Tap
+      on the <code>Directions</code> button</li></ol>
+    text2: null
+    text3: <p>User should see the demo mode alert modal </p>
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 61597
+    case_id: 36739
+    text1: <ol><li>Navigate to the <code>Favorites </code>section</li><li>Tap on the
+      <code>See More</code></li></ol>
+    text2: null
+    text3: <p>User should see the demo mode alert modal </p>
+    text4: null
+    display_order: 6
+  - column_name: custom_steps
+    id: 61598
+    case_id: 36739
+    text1: <ol><li>Navigate to the <code>Recently Sent to Vehicle</code> section</li><li>Tap
+      on the <code>See More</code></li></ol>
+    text2: null
+    text3: <p>User should see the demo mode alert modal </p>
+    text4: null
+    display_order: 7
+  - column_name: custom_steps
+    id: 61599
+    case_id: 36739
+    text1: <p>Navigate to the <code>Route Planner</code> section</p>
+    text2: null
+    text3: <p>User should see the <code>Route Planner</code>, <code>Planned Routes</code>,
+      <code>Route History</code>, and <code>Connect Calendar</code> cards</p>
+    text4: null
+    display_order: 8
+  - column_name: custom_steps
+    id: 61600
+    case_id: 36739
+    text1: <p>Tap on the <code>Route History / Connect to Calendar</code> card</p>
+    text2: null
+    text3: <p>User should see the demo mode alert modal </p>
+    text4: null
+    display_order: 9
+  - column_name: custom_steps
+    id: 96539
+    case_id: 36739
+    text1: <p>Tap on <code>Route Planner</code> card</p>
+    text2: null
+    text3: <p>User is led to Create a route screen, tapping on any field/element from
+      the Destination card should trigger a modal</p>
+    text4: null
+    display_order: 10
+  - column_name: custom_steps
+    id: 96540
+    case_id: 36739
+    text1: <p>Go to <code>Depart at/Arrive by</code> card</p>
+    text2: null
+    text3: <p>User should be able to interact with any of the dropdowns</p>
+    text4: null
+    display_order: 11
+  - column_name: custom_steps
+    id: 96541
+    case_id: 36739
+    text1: <p>Go to <code>Notification</code> card</p>
+    text2: null
+    text3: <p>User should be able to interact with the dropdown</p>
+    text4: null
+    display_order: 12
+  - column_name: custom_steps
+    id: 96542
+    case_id: 36739
+    text1: <p>Go to <code>Plug In Options</code> card</p>
+    text2: null
+    text3: <p>User should be able to interact with the dropdown, and the information
+      icon should take the user to the respective screen</p>
+    text4: null
+    display_order: 13
+  - column_name: custom_steps
+    id: 96543
+    case_id: 36739
+    text1: <p>Go to <code>Avoid for All Drives</code> card</p>
+    text2: null
+    text3: <p>User can interact with the toggles</p>
+    text4: null
+    display_order: 14
+  - column_name: custom_steps
+    id: 96544
+    case_id: 36739
+    text1: <p>Go to <code>Climate</code> card</p>
+    text2: null
+    text3: <p>User can interact with the dropdown</p>
+    text4: null
+    display_order: 15
+  - column_name: custom_steps
+    id: 61601
+    case_id: 36739
+    text1: <ol><li>View the  Planned Routes card</li><li>Tap on the Planned Routes
+      card</li><li>Click <code>Delete Route</code></li><li>Click <code>Delete Route
+      / SEND NOW</code></li><li>Click  <code>View Route</code></li><li>Drag to expand
+      the info drawer</li><li>Click <code>Add a stop </code>/<code>Edit Route</code></li><li>Tap
+      on the Back button</li></ol>
+    text2: null
+    text3: <ol><li>User should see a a <code>Planned Routes</code> card indicating
+      the number of upcoming planned routes that week</li><li>User should be redirected
+      to the <code>Planned Routes</code> screen and see a card of a planned route
+      with the following elements:<br />- Weather info<br />- Route name<br />- Departure
+      date/time<br />- Arrival date/time<br />- Total distance<br />- Delete Route
+      button<br />- View Route button<br />-Send Now Button</li><li>Only the <code>View
+      Route</code> button is active</li><li>Clicking <code>Delete Route</code>/<code>SEND
+      NOW</code>  shows a Demo Mode modal</li><li>User should be driven to the <code>Estimated
+      Route</code> screen</li><li>User should see the info drawer maximize, showing
+      additional information:<br />- departure date/time<br />- arrival date/time<br
+      />- charge time<br />- POIs, EV waypoints, destination and their corresponding
+      address, time, charge time (for EV waypoints), and battery level<br />- Save
+      route button</li><li>Clicking <code>Add a stop </code>/<code>Edit Route</code>
+       shows a Demo Mode modal</li><li>User should be driven to the <code>Planned
+      Routes</code> screen </li></ol>
+    text4: null
+    display_order: 16

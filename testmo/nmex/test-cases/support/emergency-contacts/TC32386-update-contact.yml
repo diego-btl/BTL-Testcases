@@ -1,0 +1,44 @@
+testmo:
+  case_id: 32386
+  folder_id: 6765
+  project_id: 6
+  folder_path: support/emergency-contacts
+  folder_name_ui: Emergency Contacts
+  created_at: '2025-04-01 17:50:45.039996'
+  updated_at: '2025-10-30 15:27:22.099010'
+  last_sync: '2026-01-30T18:20:45.479228Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/32386
+metadata:
+  name: Update Contact
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is on the <code>Contactos de Emergencia</code> sheet and
+    has saved contacts</p>
+  steps:
+  - column_name: custom_steps
+    id: 52755
+    case_id: 32386
+    text1: '<p>1. Tap one of the contacts<br />2. Update contact information and make
+      sure criteria is met for each field<br />3. Tap <code>GUARDAR</code><br />4.
+      Wait for saving to succeed</p><ul><li><strong><u>Nombre</u></strong>: At least
+      2 characters entered (letters &amp; numbers only, no special characters)</li><li><strong><u>Apellido</u></strong>:
+      At least 2 characters entered (letters &amp; numbers only, no special characters)</li><li><strong><u>Teléfono
+      Principa</u></strong>l: Exactly 10 digits entered</li><li><strong><u>Teléfono
+      Secundario (Opcional)</u></strong>: Exactly 10 digits entered</li><li><strong><u>Relación</u></strong>:
+      An item selected</li></ul>'
+    text2: null
+    text3: '<ol><li>User should be taken to the <code>Editar Contacto</code> sheet</li><li>User
+      should see <code>GUARDAR</code> button should be enabled when they make a change</li><li>User
+      should see all fields become disabled and a loading state as the saving call
+      is being made<ol><li><code>Contacto de emergencia actualizado con éxito</code></li></ol></li><li>User
+      should be brought back to the emergency contacts screen and see updated data
+      when saving succeeds</li><li> <code>`UpdateEmergencycntacts</code>` and <code>Emergencycontacts</code>
+      apis are triggered</li></ol><p><strong>NOTE: If saving fails, there should no
+      longer be a loading state and user should see fields become enabled with the
+      next toast:</strong></p><p><code>Error al guardar el contacto de emergencia</code></p>'
+    text4: null
+    display_order: 1

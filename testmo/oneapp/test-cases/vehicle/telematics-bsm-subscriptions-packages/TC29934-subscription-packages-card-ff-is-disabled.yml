@@ -1,0 +1,56 @@
+testmo:
+  case_id: 29934
+  folder_id: 3863
+  project_id: 2
+  folder_path: vehicle/telematics-bsm-subscriptions-packages
+  folder_name_ui: Telematics BSM - Subscriptions Packages
+  created_at: '2025-01-13 23:23:02.454699'
+  updated_at: '2025-12-09 17:20:54.768958'
+  last_sync: '2026-01-30T18:21:06.509889Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/29934
+metadata:
+  name: Subscription Packages Card - FF is disabled
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<ul><li>FF "EnableTelematicsBSM": "false"</li></ul>'
+  steps:
+  - column_name: custom_steps
+    id: 48809
+    case_id: 29934
+    text1: <p>Choose an active vehicle and navigate to the Vehicle screen</p>
+    text2: null
+    text3: <p>The user should not see the <code>Subscription Packages</code>Card at
+      the bottom of the screen</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 48810
+    case_id: 29934
+    text1: <p>Navigate to the Vehicle &gt; Vehicle Profile &gt; Vehicle Preferences</p>
+    text2: null
+    text3: <p>Verify that Package Info card is displayed</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 48811
+    case_id: 29934
+    text1: <p>Tap the Package Info card</p>
+    text2: null
+    text3: <p>User is redirected to the Package Info screen which includes information
+      about existing Subscription, expiration date, when Subscription began, and Package
+      Detailes card</p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 48862
+    case_id: 29934
+    text1: <p>Tap Package Details card</p>
+    text2: null
+    text3: <p>User is redirected to the Package Details screen with information regarding
+      existing Subscription</p>
+    text4: null
+    display_order: 4

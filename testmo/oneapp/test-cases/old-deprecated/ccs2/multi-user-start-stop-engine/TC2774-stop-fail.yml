@@ -1,0 +1,30 @@
+testmo:
+  case_id: 2774
+  folder_id: 421
+  project_id: 2
+  folder_path: old-deprecated/ccs2/multi-user-start-stop-engine
+  folder_name_ui: Multi-user start/stop engine
+  created_at: '2023-09-08 16:32:36.654822'
+  updated_at: '2026-01-06 17:48:40.990440'
+  last_sync: '2026-01-30T18:21:07.576893Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/2774
+metadata:
+  name: Stop - Fail
+  priority: 13
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has sent a stop request<br />User is a PRIMARY_DRIVER or
+    SHARED_DRIVER (to be tested for both for AVK2)</p>
+  steps:
+  - column_name: custom_steps
+    id: 3139
+    case_id: 2774
+    text1: <p>Stop request has resolved into a failure</p>
+    text2: null
+    text3: <p>User should see a toast saying '&lt;model&gt; failed to stop.'<br /><br
+      />Engine running text should continue to count down</p>
+    text4: null
+    display_order: 1

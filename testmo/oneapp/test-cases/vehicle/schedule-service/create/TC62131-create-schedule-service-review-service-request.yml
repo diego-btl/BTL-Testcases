@@ -1,0 +1,82 @@
+testmo:
+  case_id: 62131
+  folder_id: 6787
+  project_id: 2
+  folder_path: vehicle/schedule-service/create
+  folder_name_ui: Create
+  created_at: '2025-12-09 17:17:30.738163'
+  updated_at: '2026-01-20 21:18:43.679975'
+  last_sync: '2026-01-30T18:21:04.829246Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/62131
+metadata:
+  name: Create Schedule Service - Review Service Request - Details - Edit
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>User has completed all screens and arrived at Review Service
+    Request screen</li><li>User is ready to modify booking information</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 102390
+    case_id: 62131
+    text1: <p>Tap <code>Edit</code> button on <code>Dealer</code> or <code>Selected
+      Service</code> card on Review Service Request screen</p>
+    text2: null
+    text3: '<ul><li>Modal appears with title: <code>Restart Schedule Service?</code></li><li>Modal
+      message: <code>Are you sure you want to change this? You will have to start
+      over with a new service appointment.</code></li><li><code>No, cancel</code>
+      button is displayed</li><li><code>Yes, retry</code> button is displayed</li></ul>'
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 102391
+    case_id: 62131
+    text1: <p>Tap <code>No, cancel</code> button on Restart Schedule Service modal</p>
+    text2: null
+    text3: <ul><li>Modal is dismissed</li><li>User remains on <code>Review Service
+      Request</code> screen</li><li>All information unchanged</li></ul>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 102392
+    case_id: 62131
+    text1: <p>Tap <code>Edit</code> on <code>Dealer</code> or <code>Selected Service</code>
+      card again, then tap <code>Yes, retry</code> button</p>
+    text2: null
+    text3: <ul><li>User is redirected to <code>Select Services</code> screen</li><li>No
+      previously selected services are pre-selected</li><li>Service booking flow restarts
+      as new booking with fresh selections</li></ul>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 102393
+    case_id: 62131
+    text1: <p>Tap <code>Edit</code> button on <code>Appointment Details</code> or
+      <code>Transportation</code> card on Review Service Request screen</p>
+    text2: null
+    text3: '<ul><li>User is redirected to <code>Select Date and Time</code> screen</li><li>Previously
+      selected date and time are pre-selected/highlighted</li><li><code>Optional Preferences</code>
+      card is displayed with:</li><li>Transportation: pre-selected value (or <code>--</code>
+      if not selected)</li><li>Advisor: pre-selected name (or <code>--</code> if not
+      selected)</li></ul>'
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 102394
+    case_id: 62131
+    text1: <p>Tap <code>Edit</code> button on <code>Contact Information</code> card
+      on Review Service Request screen, modify email and phone fields, then tap <code>SAVE</code></p>
+    text2: null
+    text3: <ul><li>User is redirected to <code>Contact Information</code> screen</li><li>Email
+      address field is pre-filled with current value</li><li>Phone number field is
+      pre-filled with current value</li><li>Fields are editable</li><li>User is able
+      to modify email (local validation for email format)</li><li>User is able to
+      modify phone number (local validation for 10 digits)</li><li>User is redirected
+      to <code>Review Service Request</code> screen with updated contact information</li><li><strong>Note:</strong>
+      Modifying this contact information does not change the account's contact information,
+      this is only for this particular service request</li></ul>
+    text4: null
+    display_order: 5

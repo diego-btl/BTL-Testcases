@@ -1,0 +1,45 @@
+testmo:
+  case_id: 24223
+  folder_id: 3081
+  project_id: 2
+  folder_path: ncar-icar
+  folder_name_ui: Ncar/Icar
+  created_at: '2024-08-28 18:59:39.252059'
+  updated_at: '2024-10-17 17:57:51.445740'
+  last_sync: '2026-01-30T18:21:06.946701Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/24223
+metadata:
+  name: Existing user login - add vehicle
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: User has an existing icar account
+  steps:
+  - column_name: custom_steps
+    id: 37777
+    case_id: 24223
+    text1: '1. Login to the existing user account<br />
+
+      2. Scroll through the T&amp;C<br />
+
+      3. Accept Terms and Conditions and tap on Save<br />
+
+      4. Mock any error for icar add vehicle'
+    text2: null
+    text3: '1. User should see the add vehicle screen with a loading spinner<br />
+
+      User should see the Connected Terms and Conditions screen<br />
+
+      2. User is able to scroll through the T&amp;C<br />
+
+      3. User should see a loading spinner while the vehicle is being added<br />
+
+      4. User should be returned to the add vehicle screen with corresponding error
+      text shown<br />
+
+      User should no longer be in the icar add vehicle flow'
+    text4: null
+    display_order: 1

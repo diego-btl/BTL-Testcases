@@ -1,0 +1,28 @@
+testmo:
+  case_id: 745
+  folder_id: 46
+  project_id: 2
+  folder_path: map
+  folder_name_ui: Map
+  created_at: '2023-08-01 23:08:22.137126'
+  updated_at: '2025-09-19 18:31:33.111102'
+  last_sync: '2026-01-30T18:21:08.823179Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/745
+metadata:
+  name: User Location
+  priority: 1
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has location permissions enabled</p>
+  steps:
+  - column_name: custom_steps
+    id: 914
+    case_id: 745
+    text1: <p>1. Tap User Location button</p>
+    text2: null
+    text3: <p>User should see the map center on their current location</p>
+    text4: null
+    display_order: 1

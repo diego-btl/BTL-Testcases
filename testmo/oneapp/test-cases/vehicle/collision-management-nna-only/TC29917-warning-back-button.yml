@@ -1,0 +1,57 @@
+testmo:
+  case_id: 29917
+  folder_id: 3800
+  project_id: 2
+  folder_path: vehicle/collision-management-nna-only
+  folder_name_ui: Collision Management - NNA only
+  created_at: '2025-01-10 20:04:22.446759'
+  updated_at: '2025-02-19 21:15:36.444325'
+  last_sync: '2026-01-30T18:21:06.535026Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/29917
+metadata:
+  name: Warning - Back Button
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>- The user is on the <code>Collision Report</code>  start screen</p>
+  steps:
+  - column_name: custom_steps
+    id: 48812
+    case_id: 29917
+    text1: <p>Tap on the <code>Back </code>button</p>
+    text2: null
+    text3: <p>A warning modal appears with the message "<i>Are you sure? If you go
+      back, you will have to start your report over again</i>" and options <code>Cancel
+      </code>and <code>Yes, Leave</code></p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 48813
+    case_id: 29917
+    text1: <p>Tap the <code>Cancel</code> option</p>
+    text2: null
+    text3: <p>The user stays on the current screen, and the warning modal is closed</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 48814
+    case_id: 29917
+    text1: <p>Tap on the <code>Back</code> button</p>
+    text2: null
+    text3: <p>A warning modal appears with the message "<i>All information will be
+      lost if you navigate away</i>",  and options <code>Cancel </code>and <code>Yes,Leave </code></p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 48815
+    case_id: 29917
+    text1: <p>Tap the <code>Yes</code>, <code>Leave </code>option</p>
+    text2: null
+    text3: <p>The user is redirected to the previous screen (e.g., <code>Collision
+      Management</code> start screen) </p>
+    text4: null
+    display_order: 4
+  notes: <figure class="image"><img src="/attachments/view/3151" alt="3151" /></figure>

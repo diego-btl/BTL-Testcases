@@ -1,0 +1,47 @@
+testmo:
+  case_id: 64831
+  folder_id: 7146
+  project_id: 2
+  folder_path: support/enhanced-in-app-chat
+  folder_name_ui: Enhanced In-App Chat
+  created_at: '2026-01-27 23:42:05.982129'
+  updated_at: '2026-01-27 23:58:40.660430'
+  last_sync: '2026-01-30T18:21:03.596114Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/64831
+metadata:
+  name: GO TO CHAT - App Support Department
+  priority: 1
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  steps:
+  - column_name: custom_steps
+    id: 102494
+    case_id: 64831
+    text1: <p>Tap on App Support card (e.g., <code>MyINFINITI App Support</code> or
+      <code>MyNISSAN App Support</code>), then tap <code>GO TO CHAT</code> button</p>
+    text2: null
+    text3: <ul><li>Enhanced Chat UI loads</li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 102495
+    case_id: 64831
+    text1: <p>Validate payload sent to Salesforce endpoint <code>nissanna.my.salesforce-scrt.com/iamessage/v1/conversation</code></p>
+    text2: null
+    text3: '<ul><li>Payload includes:<ul><li><code>conversationId</code>: UUID format</li><li><code>routingAttributes</code>
+      (all values from <code>VehicleStaticData</code>):<ul><li><code>Services</code>:
+      Brand-specific App Support department:<ul><li>INFINITI: <code>InfinitiConnectionMobile</code></li><li>Nissan:
+      <code>NissanConnect</code></li></ul></li><li><code>Zipcode</code>, <code>Street</code>,
+      <code>City</code>, <code>State</code>: User address</li><li><code>PhoneNumber</code>,
+      <code>myfirstName</code>, <code>mylastName</code>, <code>myEmail</code>: User
+      contact info</li><li><code>OwnerVehicleInformation</code>: Comma-separated list
+      of vehicles with format: <code>Brand Model Year VIN</code></li><li><code>OSVersion</code>:
+      Device OS version</li><li><code>DeviceManufacturer</code>: Device manufacturer
+      name</li><li><code>AppVersion</code>: App version</li><li><code>AppName</code>:
+      Brand-specific app name (<code>MyINFINITI</code> or <code>MyNISSAN</code>)</li></ul></li><li><code>language</code>:
+      <code>en-US</code></li></ul></li></ul>'
+    text4: null
+    display_order: 2

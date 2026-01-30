@@ -1,0 +1,33 @@
+testmo:
+  case_id: 2689
+  folder_id: 4170
+  project_id: 2
+  folder_path: home/climate/avk2
+  folder_name_ui: AVK2
+  created_at: '2023-09-07 21:10:07.760395'
+  updated_at: '2024-10-17 17:57:34.769274'
+  last_sync: '2026-01-30T18:21:07.766314Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/2689
+metadata:
+  name: Climate Details - Make Default - Modify defaults
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>AVK2 vehicle<br />Climate Details</p>
+  steps:
+  - column_name: custom_steps
+    id: 3055
+    case_id: 2689
+    text1: <ol><li>Modify some of the HVAC parameters</li><li>Tap on Make Defaults</li><li>Modify
+      some of the HVAC parameters</li></ol>
+    text2: null
+    text3: <ol><li>User should see Make Defaults button enable</li><li>App should
+      cache these values as the default values and user should see button disable</li><li>App
+      should cache these values as the current values and user should see button enable
+      (if default cache and current cache are the same, button is disabled, if they
+      differ, button is enabled)</li></ol>
+    text4: null
+    display_order: 1

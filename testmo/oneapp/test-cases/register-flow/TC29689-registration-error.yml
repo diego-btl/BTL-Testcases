@@ -1,0 +1,59 @@
+testmo:
+  case_id: 29689
+  folder_id: 43
+  project_id: 2
+  folder_path: register-flow
+  folder_name_ui: Register Flow
+  created_at: '2024-12-18 20:05:08.682227'
+  updated_at: null
+  last_sync: '2026-01-30T18:21:06.582328Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/29689
+metadata:
+  name: Registration - Error*
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>User is on the final registration screen</li><li>Setup a
+    breakpoint to <code>RegisterAccount</code> to get  a 400/500 error response</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 48353
+    case_id: 29689
+    text1: <p>Enter valid matching passwords that follows the next rules</p>
+    text2: null
+    text3: <p>User should see 4 green checkmarks in password criteria</p><ul><li>Upper
+      case letters (A-Z)</li><li>Lower case letters(a -z)</li><li>Numbers(0-9)</li><li>Special
+      characters( !,@,#,$,%,^,&amp;,*) </li></ul><p>Only for NCI there is an additional
+      rule that user cannot use 3 or more consecutive parts of of the username. Please
+      check for reference https://www.pivotaltracker.com/story/show/187902235</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 48354
+    case_id: 29689
+    text1: <p>Check conditions box</p>
+    text2: null
+    text3: <p>User should see enabled Create Account button</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 48355
+    case_id: 29689
+    text1: <p>Tap on Create Account button</p>
+    text2: null
+    text3: '<p>User should see Registration Error alert modal as follows: <br /><br
+      />Header: Registration Error</p><p>Text:  Sorry, an error occurred registering
+      your account, please try again.</p><p>CTA:  Ok</p>'
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 48356
+    case_id: 29689
+    text1: <p>Tap on Ok button</p>
+    text2: null
+    text3: <p>Error modal is dismissed</p>
+    text4: null
+    display_order: 4

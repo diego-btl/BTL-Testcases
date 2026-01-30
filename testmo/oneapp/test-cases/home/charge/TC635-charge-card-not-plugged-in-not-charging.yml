@@ -1,0 +1,41 @@
+testmo:
+  case_id: 635
+  folder_id: 66
+  project_id: 2
+  folder_path: home/charge
+  folder_name_ui: Charge
+  created_at: '2023-08-01 23:08:20.730436'
+  updated_at: '2025-12-18 21:59:37.110935'
+  last_sync: '2026-01-30T18:21:08.983214Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/635
+metadata:
+  name: Charge Card - Not Plugged In + Not Charging
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has an EV vehicle selected</p><p>Vehicle is not plugged in
+    and not charging</p>
+  steps:
+  - column_name: custom_steps
+    id: 804
+    case_id: 635
+    text1: <p>1. Go to home screen</p>
+    text2: null
+    text3: <p>1. User should see the Charge card with secondary text showing <code>Not
+      Plugged In - Not Charging</code></p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 96710
+    case_id: 635
+    text1: <p>Tap on the Charge Card</p>
+    text2: null
+    text3: <p>User should land on the Charge screen and see the Charge Status card</p><p>Charge
+      Status card should have secondary text showing <code>Not Plugged In - Not Charging</code></p><p>Progress
+      bar should not have the charging icon </p>
+    text4: null
+    display_order: 2
+  notes: '<ul><li>Automation: step 2 not automated as it requires mocking capabilities</li></ul>'

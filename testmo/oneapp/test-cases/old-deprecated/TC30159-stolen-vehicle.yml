@@ -1,0 +1,53 @@
+testmo:
+  case_id: 30159
+  folder_id: 105
+  project_id: 2
+  folder_path: old-deprecated
+  folder_name_ui: Old / Deprecated
+  created_at: '2025-02-05 15:06:27.429679'
+  updated_at: '2025-09-19 21:13:59.475462'
+  last_sync: '2026-01-30T18:21:06.316184Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/30159
+metadata:
+  name: Stolen Vehicle
+  priority: 1
+  type: functional
+  status: active
+  estimate: 180000000
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>There is a vehicle in the account</p>
+  steps:
+  - column_name: custom_steps
+    id: 49073
+    case_id: 30159
+    text1: <p>Mock <code>capabilities.status</code> value as <code>ENROLLED</code>
+      or <code>STOLEN</code></p>
+    text2: null
+    text3: <p>The user should see an enabled Stolen Vehicle button</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 49074
+    case_id: 30159
+    text1: <p>Mock <code>capabilities.status</code> value as <code>FAILED</code>,
+      <code>EXPIRED</code>, or <code>NOT_ENROLLED</code>, tap the disabled button</p>
+    text2: null
+    text3: <p>The user should see a disabled Stolen Vehicle button and upon tapping,
+      the user should see an alert modal with the option to call an agent (1-855-426-6628)</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 49075
+    case_id: 30159
+    text1: <p>Mock <code>capabilities.status</code> value as <code>UNKNOWN</code></p>
+    text2: null
+    text3: <p>The user should not the Stolen Vehicle button</p>
+    text4: null
+    display_order: 3
+  notes: '<p><s>- needs update - </s><a href="https://www.pivotaltracker.com/story/show/184785552"><s>https://www.pivotaltracker.com/story/show/184785552</s></a></p><ul><li>updated,
+    pending review. will remove update-required tag after this is verified</li><li>Automation:
+    step 2 &amp; 3 aren''t automated as they require mocking capabilities</li><li>iOS
+    automation: can''t automate tapping on Call CTA as simulator doesn''t have a phone/dialer
+    app to validate number</li></ul>'

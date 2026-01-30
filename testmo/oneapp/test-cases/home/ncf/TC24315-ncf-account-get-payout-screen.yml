@@ -1,0 +1,50 @@
+testmo:
+  case_id: 24315
+  folder_id: 3084
+  project_id: 2
+  folder_path: home/ncf
+  folder_name_ui: NCF
+  created_at: '2024-10-18 16:14:17.196027'
+  updated_at: '2024-11-30 00:16:30.915169'
+  last_sync: '2026-01-30T18:21:06.781938Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/24315
+metadata:
+  name: NCF Account - Get Payout Screen
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>Login with an NCF account &gt; <a href="https://www.notion.so/bethinklabs/d0f8f58385a94c51ab27ce3ee1ef1e51?v=caf06428a7ac41aa96541666be242cd7">https://www.notion.so/bethinklabs/d0f8f58385a94c51ab27ce3ee1ef1e51?v=caf06428a7ac41aa96541666be242cd7</a></p>
+  steps:
+  - column_name: custom_steps
+    id: 37898
+    case_id: 24315
+    text1: <ol><li>Login into the app</li><li>In the Home page screen</li><li>Click
+      over <strong>NCF Account</strong> card</li><li>Open the <strong>NCF Account</strong>
+      screen</li><li>Click the option <strong>Get Payout</strong></li></ol>
+    text2: null
+    text3: '<p>The user sees the <strong>Payout Quote </strong>screen with the instructions:</p><p><code>Instructions</code><br
+      /><code>Please include your Nissan account number on the payout cheque, money
+      order or bank draft made payable to NCF. Sending certified funds can assist
+      in having the process expedited.</code><br /><br /><code>If you currently have
+      an automatic payment scheduled for your monthly payments, please make sure to
+      cancel it to prevent any further deductions from your bank account.</code><br
+      /><br /><code>Please mail to:        Nissan Canada Finance</code><br /><code>5290 Orbitor Drive</code><br /><code>Mississauga,
+      ON</code><br /><code>L4W 4Z5</code><br /><code>DOWNLOAD PAYOUT QUOTE</code></p>'
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 37899
+    case_id: 24315
+    text1: <ol><li>Login into the app</li><li>In the Home page screen</li><li>Click
+      over <strong>NCF Account</strong> card</li><li>Open the <strong>NCF Account</strong>
+      screen</li><li>Click the option <strong>Get Payout</strong></li></ol>
+    text2: null
+    text3: '<p>If the user gets and error show a CTA with the 2 buttons <code>"Cancel"</code>
+      &amp; <code>"Retry"</code> and the message:</p><p><code>"Something went wrong</code><br
+      /><code>We are unable to process your request. Please contact (800) 268-6499
+      for help. (Error Code: I05)"</code></p>'
+    text4: null
+    display_order: 2

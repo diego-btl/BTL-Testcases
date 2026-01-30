@@ -1,0 +1,33 @@
+testmo:
+  case_id: 11127
+  folder_id: 1454
+  project_id: 2
+  folder_path: home/charge/v2l-vehicle-to-load
+  folder_name_ui: V2L - Vehicle-to-Load
+  created_at: '2024-02-05 19:27:35.204489'
+  updated_at: '2025-12-09 17:41:16.463551'
+  last_sync: '2026-01-30T18:21:07.103494Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/11127
+metadata:
+  name: V2L Screen - Set Minimum SoC - Failure
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has an EV AVK2 vehicle</p><p><code>V2L</code> capability
+    is returning true </p><p>User is on the Vehicle-to_Load Screen</p><p>Set CheckV2LServiceRequest
+    to return the <code>PENDING</code> status</p>
+  steps:
+  - column_name: custom_steps
+    id: 11790
+    case_id: 11127
+    text1: <p>Mock <code>CheckV2LServiceRequest</code>  so that status returns <code>FAILED</code>
+      or is <code>PENDING</code> for 210 seconds</p>
+    text2: null
+    text3: <p>User should see a failure toast <code>Failed to set minimum Vehicle-to-Load
+      limit.</code> (5 seconds)</p><p>User should see the Set Minimum SoC CTA change
+      back to the regular state (enabled)</p>
+    text4: null
+    display_order: 1

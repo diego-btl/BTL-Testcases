@@ -1,0 +1,117 @@
+testmo:
+  case_id: 16003
+  folder_id: 6811
+  project_id: 2
+  folder_path: demo-mode/home/additional-driver
+  folder_name_ui: Additional Driver
+  created_at: '2024-05-01 20:00:11.216782'
+  updated_at: '2026-01-13 21:26:40.579521'
+  last_sync: '2026-01-30T18:21:07.033219Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/16003
+metadata:
+  name: Demo Mode - Additional Driver
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>Vehicle selected is the <code>Rogue AVK2</code> (Rogue Platinum
+    Demo) or LEAF vehicle</li><li>User is already on the Home Page</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 21290
+    case_id: 16003
+    text1: <p>Tap on the Additional Driver card</p>
+    text2: null
+    text3: <p>User should be redirected to the Additional Driver Page with:</p><ul><li>Bob
+      Smith (Invite Accepted)</li><li>James Smith (Invite Sent on <code>$date</code>)</li><li>Janeth
+      Smith (Invite Accepted)</li><li><code>ADD A DRIVER</code> CTA</li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 21291
+    case_id: 16003
+    text1: <p>Tap on any of the Accepted Invitations (Bob Smith or Janet Smith)</p>
+    text2: null
+    text3: <p>User should be navigated to the Invitation Details, the title of the
+      page should change to the Invitee name (Bob Smith or Janeth Smith)</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 21292
+    case_id: 16003
+    text1: <p>Validate the page details</p>
+    text2: null
+    text3: '<ul><li>Your invite for <code>$user</code> was accepted on <code>$date</code></li><li>Selected
+      Vehicle: <code>Rogue Platinum</code></li><li>Additional Driver <code>$user_data</code></li><li>Selected
+      Configurations Section</li><li>DELETE DRIVER CTA Button</li></ul>'
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 21301
+    case_id: 16003
+    text1: <p>Tap on <code>Selected Configurations</code> section or caret</p>
+    text2: null
+    text3: '<p>User should be navigated to the Configuration Details page, the following
+      sections should be displayed:</p><ul><li>Allow all configurations?</li><li>Remote
+      Vehicle Status</li><li>Navigation Support</li><li>Remote Vehicle Control</li><li>Vehicle
+      Historical Data</li><li>Remote Status Notification</li><li>Additional Driver
+      Notifications</li><li>Additional Driver History</li><li><strong>Footer</strong>:
+      "* Please upgrade your subscription to enable these options"</li><li><code>SAVE
+      CHANGES</code> CTA</li></ul>'
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 21305
+    case_id: 16003
+    text1: <p>Validate the toggles and SHOW LESS buttons on all sections</p>
+    text2: null
+    text3: <ul><li>All the aforementioned sections should have a toggle</li><li>All
+      the aforementioned sections, except for <code>Additional Driver Notifications</code>
+      and `Additional Driver History` should have a <code>SHOW LESS</code> button</li></ul>
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 21306
+    case_id: 16003
+    text1: <p>Trigger the <code>Allow all configurations?</code> toggle</p>
+    text2: null
+    text3: <p>It should enable / disable all the different sections</p>
+    text4: null
+    display_order: 6
+  - column_name: custom_steps
+    id: 21307
+    case_id: 16003
+    text1: <p>Trigger any of the remaining sections toggles</p>
+    text2: null
+    text3: <ul><li>The specific section toggle should be enabled or disabled</li><li>If
+      the <code>Allow all configurations?</code> was enabled, it should be disabled
+      if any of the other configurations sections toggles are disabled</li></ul>
+    text4: null
+    display_order: 7
+  - column_name: custom_steps
+    id: 21308
+    case_id: 16003
+    text1: <p>Tap on the <code>SHOW LESS</code> button for any section</p>
+    text2: null
+    text3: <ul><li>The entire section should collapse</li><li>The <code>SHOW LESS</code>
+      button text is updated to <code>SHOW MORE</code></li></ul>
+    text4: null
+    display_order: 8
+  - column_name: custom_steps
+    id: 21309
+    case_id: 16003
+    text1: <p>Tap on the <code>SHOW MORE</code> button for the collapsed section</p>
+    text2: null
+    text3: <p>The section should be expanded again</p>
+    text4: null
+    display_order: 9
+  - column_name: custom_steps
+    id: 21310
+    case_id: 16003
+    text1: <p>Scroll down and tap on the <code>SAVE CHANGES</code> CTA Button</p>
+    text2: null
+    text3: <p>The Demo Mode modal should be displayed</p>
+    text4: null
+    display_order: 10

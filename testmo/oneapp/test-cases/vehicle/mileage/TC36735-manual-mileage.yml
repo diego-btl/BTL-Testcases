@@ -1,0 +1,62 @@
+testmo:
+  case_id: 36735
+  folder_id: 97
+  project_id: 2
+  folder_path: vehicle/mileage
+  folder_name_ui: Mileage
+  created_at: '2025-05-23 17:30:13.112792'
+  updated_at: '2025-12-22 18:37:04.452858'
+  last_sync: '2026-01-30T18:21:05.992610Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/36735
+metadata:
+  name: Manual Mileage
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<p>Under Capabilities api, telematics program should be either of
+    these: <code>NON_CONNECTED</code> / <code>UNKNOWN, CONNECTED</code>, <code>AVK</code>,
+    or <code>AVK2 </code></p><p>Status should be: <code>status</code> : <code>EXPIRED</code> / <code>UNKNOWN</code> / <code>NOT_ENROLLED</code> / <code>FAILED</code> </p><p>Swap
+    steps 1, 2 and 3 for the different combination scenarios above. </p><p>The mileage
+    that''s added manually in any of the entry points - Mileage card, maintenance
+    schedule, schedule a service - should propagate to the other areas too. </p>'
+  steps:
+  - column_name: custom_steps
+    id: 61585
+    case_id: 36735
+    text1: <p>Install fresh app </p><p>Log in </p><p>Go to Vehicle tab</p>
+    text2: null
+    text3: <p>Mileage card and Maintenance card should be enabled and clickable</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 61586
+    case_id: 36735
+    text1: <p>Tap on Mileage card</p><p>Enter mileage </p><p>Save</p><p>Go back</p>
+    text2: null
+    text3: <p>The mileage amount is updated on the card under Vehicle tab</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 61587
+    case_id: 36735
+    text1: <p> Tap on Maintenance Schedule</p><p>If required choose driving conditions </p>
+    text2: null
+    text3: <p>Estimated Next Service should get populated reflecting the manual mileage
+      amount added </p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 61588
+    case_id: 36735
+    text1: <p>Tap on Schedule a service</p><p>Choose Regular maintenance or Recall</p><p>Go
+      through the flow</p><p>Schedule service </p>
+    text2: null
+    text3: '<p>The manual mileage added should show up while scheduling service  with
+      the option to update it</p><p>NOTE:  for avk, avk2, connected vehicles - the
+      option to update mileage won''t show. but, the mileage should show as was added
+      manually</p>'
+    text4: null
+    display_order: 4

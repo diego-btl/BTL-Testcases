@@ -1,0 +1,68 @@
+testmo:
+  case_id: 55592
+  folder_id: 4145
+  project_id: 6
+  folder_path: home-page/add-vehicle
+  folder_name_ui: Add vehicle
+  created_at: '2025-08-07 16:46:13.981603'
+  updated_at: '2025-08-21 19:29:01.879232'
+  last_sync: '2026-01-30T18:20:45.009062Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/55592
+metadata:
+  name: Validate My Vin - Connected/Non-Connected
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has entered a valid VIN for a <strong>AVK/AVK2/Non-Connected</strong>
+    vehicle that has previously been added</p><p>Tapping the button <code>&lt;</code>
+    at any point of the flow goes back to the previous screen</p>
+  steps:
+  - column_name: custom_steps
+    id: 85776
+    case_id: 55592
+    text1: <ol><li>Login into the app</li><li>Go to the vehicle selector</li><li>Select
+      <code>AGREGAR VEHICULO</code></li><li>Enter an valid VIN</li><li>Tap Validate
+      VIN</li></ol>
+    text2: null
+    text3: <ul><li>The user should go to the next screen &gt; Agregar Placas</li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 85781
+    case_id: 55592
+    text1: <ol><li>Login into the app</li><li>Go to the vehicle selector</li><li>Select
+      <code>AGREGAR VEHICULO</code></li><li>Enter an valid VIN</li><li>Tap Validate
+      VIN</li><li>Enter a new Placa</li></ol>
+    text2: null
+    text3: <ul><li>The user should see:<ul><li><code>AGREGAR</code></li><li><code>AHORA
+      NO</code></li></ul></li></ul>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 85789
+    case_id: 55592
+    text1: <ol><li>Login into the app</li><li>Go to the vehicle selector</li><li>Select
+      <code>AGREGAR VEHICULO</code></li><li>Enter an valid VIN</li><li>Tap Validate
+      VIN</li><li>Enter a new Placa</li><li>Click <code>AHORA NO</code></li></ol>
+    text2: null
+    text3: <ul><li>The user should be redirect to the HomePage</li><li>No Placa should
+      be showing as it wasn't added</li></ul>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 85790
+    case_id: 55592
+    text1: <ol><li>Login into the app</li><li>Go to the vehicle selector</li><li>Select
+      <code>AGREGAR VEHICULO</code></li><li>Enter an valid VIN</li><li>Tap Validate
+      VIN</li><li>Enter a new Placa</li><li>Click <code>AGREGAR</code></li></ol>
+    text2: null
+    text3: <ul><li>The calls to <code>VehicleModelYear</code> &amp; <code>UpdateVehicle</code>,
+      should be called</li><li>The call to <code>VehiclesStaticData</code> should
+      be called with the new VIN added, and the correct Placa</li><li>The user is
+      redirect to the HomePage</li><li>The new Placas card should appear with the
+      correct value typed</li></ul>
+    text4: null
+    display_order: 4

@@ -1,0 +1,82 @@
+testmo:
+  case_id: 32180
+  folder_id: 4144
+  project_id: 6
+  folder_path: demo-mode
+  folder_name_ui: Demo Mode
+  created_at: '2025-04-01 17:50:43.611443'
+  updated_at: '2025-04-02 20:04:39.025893'
+  last_sync: '2026-01-30T18:20:45.908218Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/32180
+metadata:
+  name: Demo Mode - Notification Center
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is in the Home Screen with any vehicle selected</p>
+  steps:
+  - column_name: custom_steps
+    id: 52562
+    case_id: 32180
+    text1: '<p>Validate the Notification Icon at the top right of the Hero Section</p>
+
+      <p>Tap on the Notification Icon</p>
+
+      <p>Tap on any of the elements of the Messages, Alerts and Activity tabs</p>
+
+      <p>Tap on Notification Settings icon (cog)</p>
+
+      <p>Validate the Remote Services Notifications section</p>
+
+      <p>Validate the Monitoring and Alert Notifications section</p>
+
+      <p>Validate the General Notifications section</p>
+
+      <p>Validate the Reminder After Leaving Vehicle section</p>
+
+      <p>All the sections should have a collapse / expand caret, interact with this
+      caret</p>
+
+      <p>Interact with any of the toggles or checkboxes</p>'
+    text2: null
+    text3: '<p>The Notification icon should be an envelope with a red dot, signaling
+      there is an unread notification</p>
+
+      <p>The user should be navigated to the Notification Center page showing:</p><ul><li>Messages
+      Tab with read and unread messages</li><li>Alerts Tab with data for Today and
+      Previous sections</li><li>Activity Tab with data for Today and Previous sections</li><li>Notifications
+      Settings icon (gear) at the top right section of the page</li></ul>
+
+      <p>User should see the demo mode alert modal</p>
+
+      <p>The user should be navigated to the Notification Preferences Page showing
+      the following sections:</p><ol><li>Remote Services Notifications</li><li>Monitoring
+      and Alert Notifications</li><li>General Notifications</li><li>Reminder After
+      Leaving Vehicle</li></ol>
+
+      <p>The items displayed should be:</p><ul><li>Remote Door Lock</li><li>Remote
+      Door Unlock</li><li>Remote Engine Start/Stop</li><li>Remote Horn &amp; Lights</li><li>My
+      Vehicle Finder</li></ul>
+
+      <p>The items displayed should be:</p><ul><li>Boundary / Valet Alerts</li><li>Curfew
+      Alerts</li><li>Speed Alerts</li></ul>
+
+      <p>The items displayed should be:</p><ul><li>Stolen Vehicle Locator</li><li>Alarm
+      Notification</li><li>Malfunction Lights</li><li>Vehicle Health Report</li><li>In-App
+      Messaging</li><li>Maintenance Reminders</li></ul>
+
+      <p>The items displayed should be:</p><ul><li>Feature explanation text</li><li>Door
+      Unlocked checkbox</li><li>Door Open checkbox</li><li>Trunk Open checkbox</li><li>Moonroof
+      Open checkbox</li><li>Window Open checkbox</li><li>Push / Text / Email dropdown
+      section</li></ul>
+
+      <p>The entire section should collapse / expand, if it''s collapsed, it should
+      display how many Notifications are enabled</p>
+
+      <p>The app should allow the user to enable / disable toggles and select / unselect
+      the checkboxes</p>'
+    text4: null
+    display_order: 1

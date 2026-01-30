@@ -1,0 +1,27 @@
+testmo:
+  case_id: 582
+  folder_id: 49
+  project_id: 2
+  folder_path: home/notifications
+  folder_name_ui: Notifications
+  created_at: '2023-08-01 23:08:20.027717'
+  updated_at: '2025-10-06 08:08:43.350820'
+  last_sync: '2026-01-30T18:21:09.133002Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/582
+metadata:
+  name: Icon
+  priority: 1
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  steps:
+  - column_name: custom_steps
+    id: 751
+    case_id: 582
+    text1: null
+    text2: null
+    text3: <p>User should see a notifications icon in the top right corner</p>
+    text4: null
+    display_order: 1

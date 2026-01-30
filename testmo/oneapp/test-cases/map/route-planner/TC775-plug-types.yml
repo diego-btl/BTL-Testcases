@@ -1,0 +1,95 @@
+testmo:
+  case_id: 775
+  folder_id: 101
+  project_id: 2
+  folder_path: map/route-planner
+  folder_name_ui: Route Planner
+  created_at: '2023-08-01 23:08:22.525186'
+  updated_at: '2025-12-02 19:31:07.556680'
+  last_sync: '2026-01-30T18:21:08.756281Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/775
+metadata:
+  name: Plug Types
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>User is on <strong>Create a Route</strong> screen</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 944
+    case_id: 775
+    text1: <ol><li>Scroll to the <strong>Options</strong> section</li><li>Try to disable
+      one of the plug types</li><li>Disable the other plug type</li></ol>
+    text2: null
+    text3: <ul><li>User should see both plug types enabled by default</li><li>User
+      should be able to do so</li><li>User should see <strong>Estimate Route</strong>
+      button become disabled when both plug types are disabled</li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 61501
+    case_id: 775
+    text1: <ol><li>User navigates to the <strong>Plug In Option</strong>s sections
+      (EV)</li></ol>
+    text2: null
+    text3: <p>User should see 2 Plug Types toggles:</p><ul><li>CCS (DC Fast) - ENG</li><li>J1772
+      (AC Levels 1 and 2)  - ENG</li></ul><hr /><ul><li>CCS (CC Rapide) - FR</li><li>J1772
+      (Niveaux CA 1 et 2) - FR</li></ul>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 61502
+    case_id: 775
+    text1: <ol><li>User navigates to the <strong>Plug In Options</strong> sections
+      (EV2)</li></ol>
+    text2: null
+    text3: <p>User should see 3 Plug Types toggles:</p><ul><li>CCS (DC Fast - Adapter
+      Required) - ENG<br />J1772 (AC Levels 1 and 2) - ENG<br />NACS (DC Fast) - ENG</li></ul><hr
+      /><ul><li>CCS (CC Rapide - Adaptateur requis) - FR<br />J1772 (Niveaux CA 1
+      et 2) - FR<br />NACS (CC Rapide) - FR</li></ul>
+    text4: null
+    display_order: 3
+  notes: "<p>When the user click the <code>Estimate Route</code> button the API is\
+    \ calling <strong>VehicleEVWaypoints</strong> with the Plug Types in the Request:</p><pre><code\
+    \ class=\"editor-plain language-plain code-block\">{\n  \"extensions\": {\n  \
+    \  \"clientLibrary\": {\n      \"name\": \"apollo-ios\",\n      \"version\": \"\
+    1.23.0\"\n    }\n  },\n  \"operationName\": \"VehicleEVWaypoints\",\n  \"query\"\
+    : \"query VehicleEVWaypoints($vin: String!, $departAt: DateTime, $arriveBy: DateTime,\
+    \ $socAtStop: Int, $socAtDestination: Int, $minPower: Float, $routes: [RouteInputType]!,\
+    \ $distanceUnit: DistanceUnit, $plugConnectorTypes: [PlugConnectorType]!, $estimatedBatteryLevelAtDeparture:\
+    \ String) { vehicle(vin: $vin) { __typename ... on BaseElectricVehicle { evWaypoints(\
+    \ routes: $routes departAt: $departAt arriveBy: $arriveBy socAtStop: $socAtStop\
+    \ socAtDestination: $socAtDestination plugConnectorTypes: $plugConnectorTypes\
+    \ minPower: $minPower estimatedBatteryLevelAtDeparture: $estimatedBatteryLevelAtDeparture\
+    \ ) { __typename ... on EVWaypoint { __typename departureTime arrivalTime totalChargingTimeInSeconds\
+    \ totalTravelTimeInSeconds totalDistance(unit: $distanceUnit) { __typename unit\
+    \ value } routes { __typename name arrivalTime chargingTimeInSeconds level type\
+    \ status address { __typename address1 address2 city state postalCode country\
+    \ } location { __typename latitude longitude } chargingOutput } } ... on MinimumRequirementNotMetError\
+    \ { __typename message } ... on LimitReachedError { __typename message } ... on\
+    \ UnableToCompleteRouteError { __typename message reason details { __typename\
+    \ ... on MissingBatteryDetailsErrorDetails { batteryCapacity startingBatteryLevel\
+    \ } ... on NoChargingStationWithinRangeErrorDetails { center radius chargingConnectors\
+    \ minPower } ... on UnableToCompleteSubStepErrorDetails { start end distance speed\
+    \ slope startingBattery batteryCapacity batteryConsumption socAfterChargingNearStart\
+    \ minimumBattery chargingStationMaxPower } } } } } } }\",\n  \"variables\": {\n\
+    \    \"departAt\": \"2025-12-06T18:37:00.000Z\",\n    \"distanceUnit\": \"MILE\"\
+    ,\n    \"estimatedBatteryLevelAtDeparture\": \"41\",\n<mark class=\"marker-green\"\
+    >    \"plugConnectorTypes\": [</mark>\n<mark class=\"marker-green\">      \"CCS\"\
+    ,</mark>\n<mark class=\"marker-green\">      \"J1772\"</mark>\n<mark class=\"\
+    marker-green\">    ],</mark>\n    \"routes\": [\n      {\n        \"address\"\
+    : {\n          \"address1\": \"505 Technology Drive\",\n          \"city\": \"\
+    Irvine\",\n          \"country\": \"US\",\n          \"postalCode\": \"92618\"\
+    ,\n          \"state\": \"CA\"\n        },\n        \"coordinate\": {\n      \
+    \    \"latitude\": 33.67300101,\n          \"longitude\": -117.75779660000001\n\
+    \        },\n        \"name\": \"505 Technology Drive\"\n      },\n      {\n \
+    \       \"address\": {\n          \"address1\": \"3233 Donald Douglas Loop South\"\
+    ,\n          \"city\": \"Santa Monica\",\n          \"country\": \"US\",\n   \
+    \       \"postalCode\": \"90405\",\n          \"state\": \"CA\"\n        },\n\
+    \        \"coordinate\": {\n          \"latitude\": 34.017557500000002,\n    \
+    \      \"longitude\": -118.44750809999999\n        },\n        \"name\": \"Santa\
+    \ Monica Airport\",\n        \"phoneNumber\": \"3104588591\"\n      }\n    ],\n\
+    \    \"vin\": \"JN1BF0BA8PM401248\"\n  }\n}</code></pre>"

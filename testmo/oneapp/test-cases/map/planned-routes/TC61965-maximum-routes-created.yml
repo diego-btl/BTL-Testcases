@@ -1,0 +1,60 @@
+testmo:
+  case_id: 61965
+  folder_id: 102
+  project_id: 2
+  folder_path: map/planned-routes
+  folder_name_ui: Planned Routes
+  created_at: '2025-11-10 20:14:43.197433'
+  updated_at: '2025-11-13 19:39:37.547200'
+  last_sync: '2026-01-30T18:21:05.400208Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/61965
+metadata:
+  name: Maximum routes created
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>User is viewing the <code>Planned Routes</code> section</li><li>The
+    user selects an <code>EV</code> or <code>EVAVK2</code> vehicles</li><li>The user
+    should have 10 <code>Planned Route</code> created (With the nnaqa and Ariya)</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 95325
+    case_id: 61965
+    text1: <ol><li>The user Route Planner section</li><li>Click over <code>Planned
+      Routes</code></li></ol>
+    text2: null
+    text3: <ul><li>The user is seeing a max of 10 Routes in the List</li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 95329
+    case_id: 61965
+    text1: <ol><li>The user Route Planner section</li><li>Click over <code>Planned
+      Routes</code></li><li>Fill all the information</li><li>Click over <code>Estimate
+      Route</code></li><li>Click over <code>Save Route</code></li></ol>
+    text2: null
+    text3: <ul><li>The user will see the toast<ul><li><code>Failed to saved route</code></li></ul></li></ul>
+    text4: null
+    display_order: 2
+  notes: "<pre><code class=\"editor-json language-json code-block\">RESPONSE SHOWING:\n\
+    \n{\n  \"data\": {\n    \"saveRoute\": null\n  },\n  \"errors\": [\n    {\n  \
+    \    \"message\": \"400: Bad Request\",\n      \"locations\": [\n        {\n \
+    \         \"line\": 1,\n          \"column\": 135\n        }\n      ],\n     \
+    \ \"path\": [\n        \"saveRoute\"\n      ],\n      \"extensions\": {\n    \
+    \    \"response\": {\n          \"url\": \"https://rts.cv000-telematics.net/telematicsservices/v1/vehicles/JN1BF0BA8PM401248/route\"\
+    ,\n          \"status\": 400,\n          \"statusText\": \"Bad Request\",\n  \
+    \        \"body\": {\n            \"status\": 400,\n            \"code\": \"TP4001\"\
+    ,\n            \"message\": \"The input payload/url/header from user is malformed\"\
+    ,\n            \"language\": \"en-US\",\n            \"faultInfo\": [\n      \
+    \        \"Error: Unable to process the request. Route Plans Maxed\"\n       \
+    \     ]\n          }\n        },\n        \"code\": \"INTERNAL_SERVER_ERROR\"\
+    ,\n        \"stacktrace\": [\n          \"GraphQLError: 400: Bad Request\",\n\
+    \          \"    at JanusPOIDataSource.errorFromResponse (/usr/local/apps/telematics/dist/node_modules/@apollo/datasource-rest/dist/RESTDataSource.js:95:16)\"\
+    ,\n          \"    at JanusPOIDataSource.errorFromResponse (file:///usr/local/apps/telematics/dist/repositories/datasources/BaseDataSource.js:50:22)\"\
+    ,\n          \"    at JanusPOIDataSource.throwIfResponseIsError (/usr/local/apps/telematics/dist/node_modules/@apollo/datasource-rest/dist/RESTDataSource.js:87:26)\"\
+    ,\n          \"    at /usr/local/apps/telematics/dist/node_modules/@apollo/datasource-rest/dist/RESTDataSource.js:199:32\"\
+    ,\n          \"    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\"\
+    \n        ],\n        \"service\": \"telematics\"\n      }\n    }\n  ]\n}</code></pre>"

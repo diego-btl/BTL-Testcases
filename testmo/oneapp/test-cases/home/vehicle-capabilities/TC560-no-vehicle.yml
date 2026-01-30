@@ -1,0 +1,32 @@
+testmo:
+  case_id: 560
+  folder_id: 54
+  project_id: 2
+  folder_path: home/vehicle-capabilities
+  folder_name_ui: Vehicle Capabilities
+  created_at: '2023-08-01 23:08:19.741643'
+  updated_at: '2024-10-17 17:56:23.776593'
+  last_sync: '2026-01-30T18:21:09.185025Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/560
+metadata:
+  name: No Vehicle
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is signed in to an account with no vehicles</p>
+  steps:
+  - column_name: custom_steps
+    id: 729
+    case_id: 560
+    text1: <p>1. Launch app to home screen<br />2. Tap on Vehicle tab<br />3. Tap
+      on Map tab</p>
+    text2: null
+    text3: <p>1. User should see the no vehicle homescreen (only support button and
+      add vehicle are enabled)<br />2. User should see the no vehicle vehicle screen
+      (everything is disabled)<br />3. User should see the no vehicle map screen (everything
+      is disabled)</p>
+    text4: null
+    display_order: 1

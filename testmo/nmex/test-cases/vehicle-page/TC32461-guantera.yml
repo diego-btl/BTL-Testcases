@@ -1,0 +1,40 @@
+testmo:
+  case_id: 32461
+  folder_id: 4086
+  project_id: 6
+  folder_path: vehicle-page
+  folder_name_ui: Vehicle Page
+  created_at: '2025-04-01 19:06:14.234890'
+  updated_at: '2025-06-10 17:36:27.068973'
+  last_sync: '2026-01-30T18:20:45.359973Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/32461
+metadata:
+  name: Guantera
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  steps:
+  - column_name: custom_steps
+    id: 52878
+    case_id: 32461
+    text1: <p>Tap <code>Guantera</code> Profile button</p>
+    text2: null
+    text3: <p>User should see a complete vehicle profile sheet with the following
+      information: </p><ul><li>VIN, Número de motor, Placas, Engomado(Colour) and
+      Apodo del vehículo </li></ul><p>Another section with <code>Preferencias del
+      vehículo</code></p><ul><li>Manuales de usuario and Información del paquete option</li></ul><p>A
+      button at the bottom with the option to delete the vehicle</p><ul><li><code>ELIMINAR
+      VEHÍCULO</code></li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 52879
+    case_id: 32461
+    text1: <p>Tap back arrow to return to vehicle screen</p>
+    text2: null
+    text3: <p>User should be able to close the vehicle profile sheet </p>
+    text4: null
+    display_order: 2

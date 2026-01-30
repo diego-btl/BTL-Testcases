@@ -1,0 +1,46 @@
+testmo:
+  case_id: 29808
+  folder_id: 3769
+  project_id: 5
+  folder_path: home/add-vehicle
+  folder_name_ui: Add Vehicle
+  created_at: '2024-12-20 15:21:40.308281'
+  updated_at: '2025-02-14 16:17:52.854954'
+  last_sync: '2026-01-30T18:20:38.370786Z'
+  url: https://bethinklabs.testmo.net/repositories/5/cases/29808
+metadata:
+  name: Add Vehicle - Success
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is on the Add Vehicle page</p>
+  steps:
+  - column_name: custom_steps
+    id: 51226
+    case_id: 29808
+    text1: <p>Tap on Camera Field</p>
+    text2: null
+    text3: <p>Camera should enable (accept permissions if requested)</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 51227
+    case_id: 29808
+    text1: <p>Scan a VIN</p>
+    text2: null
+    text3: <p>VIN should be populated</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 51228
+    case_id: 29808
+    text1: <p>Tap on <code>Validar Chassi</code></p>
+    text2: null
+    text3: <p>VIN should succeed and user should see the success toast <code>Veiculo
+      adicionado com sucesso</code> and they should be navigated back to the home
+      screen</p>
+    text4: null
+    display_order: 3

@@ -1,0 +1,40 @@
+testmo:
+  case_id: 32375
+  folder_id: 6761
+  project_id: 6
+  folder_path: support/let-us-help
+  folder_name_ui: Let Us Help
+  created_at: '2025-04-01 17:50:44.980774'
+  updated_at: '2025-10-30 17:40:35.927348'
+  last_sync: '2026-01-30T18:20:45.531269Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/32375
+metadata:
+  name: Vehículo Robado screen
+  priority: 12
+  type: functional
+  status: active
+  estimate: 3600000000
+  automation: 'no'
+  tags: []
+test_case:
+  steps:
+  - column_name: custom_steps
+    id: 52746
+    case_id: 32375
+    text1: <ol><li>Go to <code>Soporte</code></li><li>Tap the <code>Vehículo Robado</code>
+      item</li><li>See 2 sections</li></ol>
+    text2: null
+    text3: '<p>The user should be taken to the <code>Localizador de vehículo robado</code>
+      screen<br /> </p><p><strong>Información del Vehículo</strong></p><ul><li><code>Vehicle
+      name</code> &gt; IE: 2024 QX80</li><li><code>VIN</code> &gt; IE: XXXXXXXXXXXXXXXXX
+      (17 characters)</li><li><code>Ir a guantera</code> &gt; Redirects to <code>Guantera</code>
+      screen</li></ul><p><strong>Icon + text + button</strong></p><ul><li>Icon (should
+      match ss attached)</li><li>Text:<ul><li><code>En caso de robo, llama a nuestro
+      equipo con los detalles del reporte policial para iniciar el servicio. Utilizamos
+      tu sistema de navegación para ayudar a las autoridades en sus esfuerzos de recuperación.</code></li></ul></li><li>Button
+      &gt; <code>Localizar vehículo robado</code></li><li>Clicking on button, opens
+      a prompt with following phone no. specific to brand AND a Cancel option</li></ul><figure
+      class="table"><table><tbody><tr><td> </td><td>NMEX</td></tr><tr><td>Nissan</td><td>+52
+      (800) 953 1700</td></tr><tr><td>Infiniti</td><td>+52 (800) 953-2010</td></tr></tbody></table></figure>'
+    text4: null
+    display_order: 1

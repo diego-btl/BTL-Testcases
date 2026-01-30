@@ -1,0 +1,33 @@
+testmo:
+  case_id: 1560
+  folder_id: 93
+  project_id: 2
+  folder_path: vehicle/schedule-service
+  folder_name_ui: Schedule Service
+  created_at: '2023-08-28 20:13:24.140891'
+  updated_at: '2024-10-17 17:57:05.010933'
+  last_sync: '2026-01-30T18:21:08.045538Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/1560
+metadata:
+  name: Retailer Card
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: User is on the Select a Retailer screen
+  steps:
+  - column_name: custom_steps
+    id: 1925
+    case_id: 1560
+    text1: '1. Tap on a different retailer card<br />
+
+      2. Tap back'
+    text2: null
+    text3: '1. User should be taken to see that retailer''s details info<br />
+
+      2. User should be taken back to the screen they were on before viewing any retailer
+      details'
+    text4: null
+    display_order: 1

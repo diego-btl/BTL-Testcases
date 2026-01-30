@@ -1,0 +1,37 @@
+testmo:
+  case_id: 62251
+  folder_id: 6823
+  project_id: 2
+  folder_path: settings/edit-profile-delete-account-page-using-sso-nna
+  folder_name_ui: Edit Profile/Delete Account page using SSO - NNA NIS and INF only
+  created_at: '2026-01-06 17:59:44.276453'
+  updated_at: '2026-01-20 20:16:32.268706'
+  last_sync: '2026-01-30T18:21:03.655479Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/62251
+metadata:
+  name: Delete Account Screen - READ DESCRIPTION
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<ul><li><strong>Regions: </strong>NNA</li><li><strong>Brands: </strong>NIS
+    and INF</li></ul>'
+  steps:
+  - column_name: custom_steps
+    id: 97205
+    case_id: 62251
+    text1: <ol><li>Log in to account (Browser Login)</li><li>Go to Settings</li><li>Go
+      to My Profile</li><li>Tap on Delete Account CTA</li><li>Tap on Yes in the modal</li></ol>
+    text2: null
+    text3: '<ul><li>Then: App should open a system browser context view (i.e. cannot
+      be a webview, must be same method as browser login) going to the link specified
+      by <code>ContactUs</code> (DeleteAccount)</li><li>It shouldn''t ask you to log
+      in again.</li><li>NOTE: KNOWN ISSUE: our token expiry to keep this session open
+      is 60 days but WSO2 is 20 mins! Client however, has accepted this mismatch so
+      its possible you will see the sign in page when u tap on Delete account, if
+      you logged in to account a while ago.</li><li>Try doing a fresh login and immediately
+      go to My Profile and follow steps above. </li></ul>'
+    text4: null
+    display_order: 1

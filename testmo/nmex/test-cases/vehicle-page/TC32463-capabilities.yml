@@ -1,0 +1,50 @@
+testmo:
+  case_id: 32463
+  folder_id: 4086
+  project_id: 6
+  folder_path: vehicle-page
+  folder_name_ui: Vehicle Page
+  created_at: '2025-04-01 19:06:14.234890'
+  updated_at: '2025-04-02 20:06:36.348262'
+  last_sync: '2026-01-30T18:20:45.351940Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/32463
+metadata:
+  name: Capabilities
+  priority: 3
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>Setup a primary and shared driver into the account</p><p>User
+    is logged-in on the Vehicle Profile sheet under Vehicles tab</p>
+  steps:
+  - column_name: custom_steps
+    id: 52884
+    case_id: 32463
+    text1: <p>Remove these items from the VehicleCapabilities call: <br />a) REMOTE_DATA_WIPE</p>
+    text2: null
+    text3: <p>Primary and Shared driver should not see below items  on the Vehicle
+      Profile sheet<br />a) Remote Data Wipe </p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 52885
+    case_id: 32463
+    text1: <p>Repeat steps 1, but disable the statuses instead of removing them from
+      the capabilities list</p>
+    text2: null
+    text3: <p>Primary driver should see below items greyed out. <br />a) Remote Data
+      Wipe </p><p>Shared Driver should have the items hidden</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 52886
+    case_id: 32463
+    text1: <p>Navigate into Vehicle Profile Sheet  in Demo Mode and tap into below
+      items<br />a) Remote Data Wipe<br /> </p>
+    text2: null
+    text3: '<p>User should see an alert modal </p><p>Title: Modo Demostración<br />Body:
+      No disponible en modo demostración.  </p><p>Button:  OK</p>'
+    text4: null
+    display_order: 3

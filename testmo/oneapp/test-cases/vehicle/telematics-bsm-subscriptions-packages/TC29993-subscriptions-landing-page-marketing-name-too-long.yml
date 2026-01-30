@@ -1,0 +1,31 @@
+testmo:
+  case_id: 29993
+  folder_id: 3863
+  project_id: 2
+  folder_path: vehicle/telematics-bsm-subscriptions-packages
+  folder_name_ui: Telematics BSM - Subscriptions Packages
+  created_at: '2025-01-17 03:05:37.389495'
+  updated_at: '2025-12-09 17:21:49.345223'
+  last_sync: '2026-01-30T18:21:06.464965Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/29993
+metadata:
+  name: Subscriptions Landing Page - Marketing Name too Long
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<ul><li>FF "EnableTelematicsBSM": "true"</li></ul>'
+  steps:
+  - column_name: custom_steps
+    id: 48853
+    case_id: 29993
+    text1: '<p>Go to proxyman and mock <code>VehicleSubscriptions</code> to retrieving
+      an empty marketing name</p><pre><code class="editor-plain language-plain code-block">"marketingName":
+      "NissanConnect Services Premium NissanConnect Services Premium NissanConnect
+      Services Premium"</code></pre>'
+    text2: null
+    text3: <p>Verify name gets wrapped correctly when retrieving a very long name</p>
+    text4: null
+    display_order: 1

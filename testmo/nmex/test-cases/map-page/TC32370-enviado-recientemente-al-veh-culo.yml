@@ -1,0 +1,31 @@
+testmo:
+  case_id: 32370
+  folder_id: 4087
+  project_id: 6
+  folder_path: map-page
+  folder_name_ui: Map Page
+  created_at: '2025-04-01 17:50:44.947269'
+  updated_at: '2025-10-30 20:00:04.929385'
+  last_sync: '2026-01-30T18:20:45.548304Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/32370
+metadata:
+  name: Enviado recientemente al vehículo
+  priority: 1
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  steps:
+  - column_name: custom_steps
+    id: 52741
+    case_id: 32370
+    text1: <ol><li>Login into the app</li><li>Go to the <code>Mapa</code> screen </li><li>Scroll
+      the <code>Mapa</code> info drawer</li><li>Tap on one of the <code>Enviado recientemente
+      al vehículo</code></li></ol>
+    text2: null
+    text3: <ul><li>User should see up to 2 recently sent items</li><li>User should
+      see search performed for the corresponding item, map centers on result and shows
+      POI card</li></ul>
+    text4: null
+    display_order: 1

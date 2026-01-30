@@ -1,0 +1,257 @@
+testmo:
+  case_id: 55573
+  folder_id: 6250
+  project_id: 6
+  folder_path: vehicle-page/programar-servicio
+  folder_name_ui: Programar Servicio
+  created_at: '2025-08-07 14:06:55.742939'
+  updated_at: '2025-08-21 15:05:29.016502'
+  last_sync: '2026-01-30T18:20:45.122660Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/55573
+metadata:
+  name: Book a service appointment - Drop Off - NIS
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has set a Preferred Dealer</p>
+  steps:
+  - column_name: custom_steps
+    id: 85574
+    case_id: 55573
+    text1: <ol><li>Navigate to the service booking flow from any navigation entry
+      point</li><li>The call to <code>ServiceCategories</code> should be done with
+      all the options</li></ol>
+    text2: null
+    text3: <ul><li>The user will see the options:<ul><li><code>Servicio de mantenimiento</code></li><li><code>Servicio
+      Express</code></li><li><code>Servicio de reparación</code></li><li><code>Otro
+      tipo de servicio</code></li></ul></li><li><code>SIGUIENTE</code> button is disable </li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 85575
+    case_id: 55573
+    text1: <ol><li>The see all the  options:<ol><li><code>Servicio de mantenimiento</code></li><li><code>Servicio
+      Express</code></li><li><code>Servicio de reparación</code></li><li><code>Otro
+      tipo de servicio</code></li></ol></li><li>Select the &gt; <code>Servicio de
+      mantenimiento</code></li></ol>
+    text2: null
+    text3: <ul><li>The <code>SIGUIENTE</code> button is enable</li></ul>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 85576
+    case_id: 55573
+    text1: <ol><li>The see all the  options:<ol><li><code>Servicio de mantenimiento</code></li><li><code>Servicio
+      Express</code></li><li><code>Servicio de reparación</code></li><li><code>Otro
+      tipo de servicio</code></li></ol></li><li>Select the &gt; <code>Servicio de
+      mantenimiento</code></li><li>Click the <code>SIGUIENTE</code> button</li></ol>
+    text2: null
+    text3: '<ul><li>The field &gt; <code>"serviceCategoryId": 1</code></li><li>The
+      next options for <code>Servicio de mantenimiento</code> will show:<ul><li><code>6
+      meses y/o 10,000 Km</code><strong> </strong>("opCodeID": 10)</li><li><code>12
+      meses y/o 20,000 Km</code> ("opCodeID": 11)</li><li><code>18 meses y/o 30,000
+      Km</code> ("opCodeID": 12)</li><li><code>24 meses y/o 40,000 Km</code> ("opCodeID":
+      13)</li><li><code>30 meses y/o 50,000 Km</code> ("opCodeID": 14)</li><li><code>36
+      meses y/o 60,000 Km</code> ("opCodeID": 15)</li><li><code>Más de 60,000 Km</code>
+      ("opCodeID": 16)</li></ul></li></ul>'
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 85577
+    case_id: 55573
+    text1: <ol><li>The see all the  options:<ol><li><code>Servicio de mantenimiento</code></li><li><code>Servicio
+      Express</code></li><li><code>Servicio de reparación</code></li><li><code>Otro
+      tipo de servicio</code></li></ol></li><li>Select the &gt; <code>Servicio Express</code></li></ol>
+    text2: null
+    text3: <ul><li>The <code>SIGUIENTE</code> button is enable</li></ul>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 85578
+    case_id: 55573
+    text1: <ol><li>The see all the  options:<ol><li><code>Servicio de mantenimiento</code></li><li><code>Servicio
+      Express</code></li><li><code>Servicio de reparación</code></li><li><code>Otro
+      tipo de servicio</code></li></ol></li><li>Select the &gt; <code>Servicio Express</code></li><li>Click
+      the <code>SIGUIENTE</code> button</li></ol>
+    text2: null
+    text3: '<ul><li>The field &gt; <code>"serviceCategoryId": 2</code></li><li>The
+      next options for <code>Servicio Express</code> will show:<ul><li><code>6 meses
+      y/o 10,000 Km</code> ("opCodeID": 20)</li><li><code>18 meses y/o 30,000 Km</code>
+      ("opCodeID": 22)</li><li><code>30 meses y/o 50,000 Km</code> ("opCodeID": 23)</li></ul></li></ul>'
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 85579
+    case_id: 55573
+    text1: <ol><li>The see all the  options:<ol><li><code>Servicio de mantenimiento</code></li><li><code>Servicio
+      Express</code></li><li><code>Servicio de reparación</code></li><li><code>Otro
+      tipo de servicio</code></li></ol></li><li>Select the &gt; <code>Servicio de
+      reparación</code></li></ol>
+    text2: null
+    text3: <ul><li>The <code>SIGUIENTE</code> button is enable</li></ul>
+    text4: null
+    display_order: 6
+  - column_name: custom_steps
+    id: 85580
+    case_id: 55573
+    text1: <ol><li>The see all the  options:<ol><li><code>Servicio de mantenimiento</code></li><li><code>Servicio
+      Express</code></li><li><code>Servicio de reparación</code></li><li><code>Otro
+      tipo de servicio</code></li></ol></li><li>Select the &gt; <code>Servicio de
+      reparación</code></li><li>Click the <code>SIGUIENTE</code> button</li></ol>
+    text2: null
+    text3: '<ul><li>The field &gt; <code>"serviceCategoryId": 3</code></li><li>The
+      next options for <code>Servicio de reparación</code> will show:<ul><li><code>Hojalatería
+      y pintura</code> ("opCodeID": 30)</li><li><code>Instalación de accesorios</code>
+      ("opCodeID": 31)</li><li><code>Reparación mecánica y/o eléctrica</code> ("opCodeID":
+      32)</li></ul></li></ul>'
+    text4: null
+    display_order: 7
+  - column_name: custom_steps
+    id: 85581
+    case_id: 55573
+    text1: <ol><li>The see all the  options:<ol><li><code>Servicio de mantenimiento</code></li><li><code>Servicio
+      Express</code></li><li><code>Servicio de reparación</code></li><li><code>Otro
+      tipo de servicio</code></li></ol></li><li>Select the &gt; <code>Otro tipo de
+      servicio</code></li></ol>
+    text2: null
+    text3: <ul><li>The <code>SIGUIENTE</code> button is enable</li></ul>
+    text4: null
+    display_order: 8
+  - column_name: custom_steps
+    id: 85582
+    case_id: 55573
+    text1: <ol><li>The see all the  options:<ol><li><code>Servicio de mantenimiento</code></li><li><code>Servicio
+      Express</code></li><li><code>Servicio de reparación</code></li><li><code>Otro
+      tipo de servicio</code></li></ol></li><li>Select the &gt; <code>Otro tipo de
+      servicio</code></li><li>Click the <code>SIGUIENTE</code> button</li></ol>
+    text2: null
+    text3: '<ul><li>The field &gt; <code>"serviceCategoryId": 4</code></li><li>The
+      next options for <code>Otro tipo de servicio</code> will show:<ul><li><code>Llantas</code>
+      ("opCodeID": 40)</li><li><code>Baterías</code> ("opCodeID": 41)</li><li><code>Balatas/Frenos</code>
+      ("opCodeID": 42)</li><li><code>Limpieza del motor</code>("opCodeID": 43)</li><li><code>Pulido
+      y encerado</code>("opCodeID": 44)</li><li><code>Recambio de aire acondicionado</code>("opCodeID":
+      45)</li><li><code>Llamado a revisión</code>("opCodeID": 46)</li></ul></li></ul>'
+    text4: null
+    display_order: 9
+  - column_name: custom_steps
+    id: 85583
+    case_id: 55573
+    text1: <ol><li>Select a valid date and time slot on the <code>Elige la fecha y
+      hora</code> page</li><li>Tap on the <code>SIGUIENTE</code> button</li></ol>
+    text2: null
+    text3: <ul><li>The <code>Comentarios adicionales</code> screen will show</li><li>This
+      is not a mandatory field it can be empty</li><li><code>SIGUIENTE</code> button
+      is enable </li></ul>
+    text4: null
+    display_order: 10
+  - column_name: custom_steps
+    id: 85584
+    case_id: 55573
+    text1: <ol><li>Tap on the <code>SIGUIENTE</code> button</li></ol>
+    text2: null
+    text3: <ul><li>User is taken to the Preview screen:<ul><li><code>Servicio</code></li><li><code>Distribuidor</code></li><li><code>Fecha
+      y Hora</code></li><li><code>¿Como quieres realizar tu servicio?</code></li><li><code>Comentarios
+      adicionales</code></li></ul></li></ul>
+    text4: null
+    display_order: 11
+  - column_name: custom_steps
+    id: 85585
+    case_id: 55573
+    text1: <ol><li>Tap <code>AGENDAR CITA</code> on the Preview screen</li></ol>
+    text2: null
+    text3: <ul><li>Service booking request is sent to middleware</li><li>A loading
+      state is shown while waiting for response</li><li>A confirmation screen will
+      show:<ul><li><code>¡Cita agendada!</code></li><li><code>Recibirás un correo
+      electrónico confirmando la cita con todos los detalles</code></li><li><code>AGREGAR
+      A MI CALENDARIO</code> &gt; link to add it to you native calendar</li></ul></li></ul>
+    text4: null
+    display_order: 12
+  - column_name: custom_steps
+    id: 85586
+    case_id: 55573
+    text1: <ol><li>Booking is successful after tapping <code>AGENDAR CITA</code></li></ol>
+    text2: null
+    text3: <ul><li>User is redirected to Vehículo tab</li><li>Upcoming service card
+      appears at the top</li><li>Card shows dealer, date, and time</li></ul>
+    text4: null
+    display_order: 13
+  - column_name: custom_steps
+    id: 85587
+    case_id: 55573
+    text1: <ol><li>Middleware responds with an error after tapping <code>AGENDAR CITA</code></li></ol>
+    text2: null
+    text3: <ul><li>User stays on the Preview screen</li><li>Toast error message appears
+      with the mapped copy</li></ul>
+    text4: null
+    display_order: 14
+  - column_name: custom_steps
+    id: 85588
+    case_id: 55573
+    text1: <ol><li>Tap <code>CANCELAR</code> or <code>X</code> on any screen before
+      successful booking</li></ol>
+    text2: null
+    text3: <ul><li>Native modal appears asking to confirm cancellation</li><li>If
+      confirmed, user returns to Vehículo tab</li><li>If cancelled, modal dismisses
+      and user stays in flow</li></ul>
+    text4: null
+    display_order: 15
+  - column_name: custom_steps
+    id: 85589
+    case_id: 55573
+    text1: <ol><li>Tap  <code>&lt;</code> button on any booking screen</li></ol>
+    text2: null
+    text3: <ul><li>User goes back to previous screen</li><li>Previously entered/selected
+      data remains filled</li></ul>
+    text4: null
+    display_order: 16
+  - column_name: custom_steps
+    id: 85590
+    case_id: 55573
+    text1: <ol><li>Tap "Editar" on any section of Preview page</li></ol>
+    text2: null
+    text3: <ul><li>User is taken to correct page based on section:<ul><li><code>Distribuidor</code>
+      → Shows warning dialog</li><li><code>Fecha y Hora </code>→ Back to date/time
+      picker</li><li><code>Comentarios adicionales</code> → Comentarios page</li></ul></li></ul>
+    text4: null
+    display_order: 17
+  - column_name: custom_steps
+    id: 85591
+    case_id: 55573
+    text1: <ol><li>Tap "Editar" on Distribuidor section</li><li>Confirm dialog by
+      tapping <code>Sí, reintentar</code></li></ol>
+    text2: null
+    text3: '<ul><li>Dialog shows:<ul><li>Title: <code>¿Reiniciar programación de servicio?</code></li><li>Body:
+      <code>¿Estás seguro de que deseas cambiar esto? Tendrás que empezar de nuevo
+      con una nueva cita de servicio.</code></li><li>CTAs: <code>Sí, reintentar</code>
+      and <code>No, cancelar</code></li></ul></li><li>On confirmation, user is navigated
+      to Mapa tab</li><li>On cancel, dialog is dismissed and user stays on Preview
+      page</li></ul>'
+    text4: null
+    display_order: 18
+  - column_name: custom_steps
+    id: 85592
+    case_id: 55573
+    text1: <ol><li>Complete the service booking flow until the <code>Preview</code>
+      page.</li><li>Select a time slot that becomes unavailable before booking.</li><li>Tap
+      <code>AGENDAR CITA</code>.</li></ol>
+    text2: null
+    text3: <ul><li>The user remains on the <code>Preview</code> screen.</li><li>A
+      <strong>toast error</strong> appears with the following message:<ul><li><code>La
+      hora de cita elegida ya no está disponible.</code></li></ul></li></ul>
+    text4: null
+    display_order: 19
+  - column_name: custom_steps
+    id: 85593
+    case_id: 55573
+    text1: <ol><li>Complete the service booking flow until the <code>Preview</code>
+      page.</li><li>Cause a generic failure (e.g., network issue, backend failure).</li><li>Tap
+      <code>AGENDAR CITA</code>.</li></ol>
+    text2: null
+    text3: <ul><li>The user remains on the <code>Preview</code> screen.</li><li>A
+      <strong>toast error</strong> appears with the following message:<ul><li><code>Se
+      ha producido un error. Inténtelo de nuevo más tarde.</code></li></ul></li></ul>
+    text4: null
+    display_order: 20

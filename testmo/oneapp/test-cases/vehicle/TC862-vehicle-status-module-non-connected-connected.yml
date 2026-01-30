@@ -1,0 +1,29 @@
+testmo:
+  case_id: 862
+  folder_id: 45
+  project_id: 2
+  folder_path: vehicle
+  folder_name_ui: Vehicle
+  created_at: '2023-08-04 10:35:06.211447'
+  updated_at: '2025-10-28 06:17:43.332849'
+  last_sync: '2026-01-30T18:21:08.547250Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/862
+metadata:
+  name: Vehicle Status Module - Non-Connected/Connected
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>Vehicle Status Module - Non-Connected/Connected</p>
+  steps:
+  - column_name: custom_steps
+    id: 1031
+    case_id: 862
+    text1: <p>Tap on Vehicle tab</p>
+    text2: null
+    text3: <p>User should see Vehicle Status module with model name, vehicle image,
+      and vehicle profile button</p>
+    text4: null
+    display_order: 1

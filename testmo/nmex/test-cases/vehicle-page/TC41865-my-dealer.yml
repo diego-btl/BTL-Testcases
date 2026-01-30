@@ -1,0 +1,54 @@
+testmo:
+  case_id: 41865
+  folder_id: 4086
+  project_id: 6
+  folder_path: vehicle-page
+  folder_name_ui: Vehicle Page
+  created_at: '2025-06-09 15:35:02.206368'
+  updated_at: null
+  last_sync: '2026-01-30T18:20:45.221932Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/41865
+metadata:
+  name: My Dealer
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>Have a Preferred Dealer</p>
+  steps:
+  - column_name: custom_steps
+    id: 71887
+    case_id: 41865
+    text1: <ol><li>Login in the app</li><li>Go to <code>Vehículo</code> screen</li><li>See
+      <code>Mi Distribuidor</code> card</li></ol>
+    text2: null
+    text3: <ul><li>The card should be displaying with your Preferred Dealer</li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 71888
+    case_id: 41865
+    text1: <ol><li>Login in the app</li><li>Go to <code>Vehículo</code> screen</li><li>Click
+      <code>Mi Distribuidor</code> card</li></ol>
+    text2: null
+    text3: <ul><li>The app should open <code>Detalles del distribuidor</code></li></ul>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 71889
+    case_id: 41865
+    text1: <ol><li>Login in the app</li><li>Go to <code>Vehículo</code> screen</li><li>Click
+      <code>Mi Distribuidor</code> card</li></ol>
+    text2: null
+    text3: <ul><li>The screen should be displaying the data correctly:<ul><li>Dealer
+      Name</li><li><code>Mi Distribuidor</code> with the check asset</li><li>The distance
+      in KM to that Dealer</li><li>Address of the Dealer</li><li>Directions, website
+      link(if have it) &amp; phone number</li><li>Map with the location(Google Maps)</li><li>Displaying
+      2 buttons:<ul><li><code>Programar servicio</code></li><li><code>Buscar distribuidor</code></li></ul></li><li><code>Horas
+      de operación</code> section<ul><li>Here will display all the POI that the dealer
+      as:<ul><li><code>Dealer hours</code></li><li><code>Ventas</code></li><li><code>Showroom</code></li><li><code>Prueba
+      de manejo</code></li></ul></li></ul></li></ul></li></ul>
+    text4: null
+    display_order: 3

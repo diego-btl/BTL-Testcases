@@ -1,0 +1,155 @@
+testmo:
+  case_id: 36691
+  folder_id: 92
+  project_id: 2
+  folder_path: vehicle/driving-history
+  folder_name_ui: Driving History
+  created_at: '2025-05-08 20:53:52.445108'
+  updated_at: '2025-11-12 20:57:53.027022'
+  last_sync: '2026-01-30T18:21:06.005760Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/36691
+metadata:
+  name: Driver/VIN Selector - EV2
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has an EV2 vehicle</p><p>User is on the Driving History screen</p><p>DrivingHistory
+    API returns duplicate entries ("tripSummaries") for the same day, month, or year </p>
+  steps:
+  - column_name: custom_steps
+    id: 61491
+    case_id: 36691
+    text1: <p>Choose the <strong>day</strong> that has duplicate entries in DrivingHistory
+      API response</p>
+    text2: null
+    text3: <p>Driver/VIN selector is present under the Day/Month/Year selector</p><p>Driver
+      option is selected by default</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 61492
+    case_id: 36691
+    text1: <p>Select "Driver" from the Driver/VIN selector</p>
+    text2: null
+    text3: <p>The displayed information includes records with a valid `{userID}` from
+      DrivingHistory API response:<br /><strong>- Avg Energy Economy</strong><br /><strong>-
+      Avg Energy Consumed</strong><br /><strong>- Avg energy Saved</strong><br /><strong>-
+      Avg CO2 Saved</strong><br /><strong>- Total No. of Trips</strong><br /><strong>-
+      Total Distance</strong><br /><strong>- Total Travel Time</strong><br /><strong>-
+      Avg Speed</strong></p><p>"CO2 gas savings calculates the emissions you save
+      by driving a Nissan electric vehicle." text is displayed at the bottom of the
+      card<br /> </p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 61493
+    case_id: 36691
+    text1: <p>Select "VIN" from the Driver/VIN selector</p>
+    text2: null
+    text3: <p>Displayed information includes records where the `userID` is `null`</p><p>The
+      card displays all the fields with particular values:<br /><strong>- Avg Energy
+      Economy</strong><br /><strong>- Avg Energy Consumed</strong><br /><strong>-
+      Avg energy Saved</strong><br /><strong>- Avg CO2 Saved</strong><br /><strong>-
+      Total No. of Trips</strong><br /><strong>- Total Distance</strong><br /><strong>-
+      Total Travel Time</strong><br /><strong>- Avg Speed</strong></p><p>"CO2 gas
+      savings calculates the emissions you save by driving a Nissan electric vehicle."
+      text is displayed at the bottom of the card</p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 61494
+    case_id: 36691
+    text1: <p>Navigate to the Month tab</p><p>Choose the <strong>month</strong> that
+      has duplicate entries in DrivingHistory API response</p>
+    text2: null
+    text3: <p>Driver/VIN selector is present under the Day/Month/Year selector</p>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 61495
+    case_id: 36691
+    text1: <p>Select "Driver" from the Driver/VIN selector</p>
+    text2: null
+    text3: <p>The displayed information includes records with a valid `{userID}` from
+      DrivingHistory API response:<br /><strong>- Avg Energy Economy</strong><br /><strong>-
+      Avg Energy Consumed</strong><br /><strong>- Avg energy Saved</strong><br /><strong>-
+      Avg CO2 Saved</strong><br /><strong>- Total No. of Trips</strong><br /><strong>-
+      Total Distance</strong><br /><strong>- Total Travel Time</strong><br /><strong>-
+      Avg Speed</strong></p><p>"CO2 gas savings calculates the emissions you save
+      by driving a Nissan electric vehicle." text is displayed at the bottom of the
+      card</p>
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 61496
+    case_id: 36691
+    text1: <p>Select "VIN" from the Driver/VIN selector</p>
+    text2: null
+    text3: <p>Displayed information includes records where the `userID` is `null`</p><p>The
+      card displays all the fields with particular values:<br /><strong>- Avg Energy
+      Economy</strong><br /><strong>- Avg Energy Consumed</strong><br /><strong>-
+      Avg energy Saved</strong><br /><strong>- Avg CO2 Saved</strong><br /><strong>-
+      Total No. of Trips</strong><br /><strong>- Total Distance</strong><br /><strong>-
+      Total Travel Time</strong><br /><strong>- Avg Speed</strong></p><p>"CO2 gas
+      savings calculates the emissions you save by driving a Nissan electric vehicle."
+      text is displayed at the bottom of the card</p>
+    text4: null
+    display_order: 6
+  - column_name: custom_steps
+    id: 61497
+    case_id: 36691
+    text1: <p>Choose the <strong>year</strong> that has duplicate entries in DrivingHistory
+      API response</p>
+    text2: null
+    text3: <p>Driver/VIN selector is present under the Day/Month/Year selector</p>
+    text4: null
+    display_order: 7
+  - column_name: custom_steps
+    id: 61498
+    case_id: 36691
+    text1: <p>Select "Driver" from the Driver/VIN selector</p>
+    text2: null
+    text3: <p>The displayed information includes records with a valid `{userID}` from
+      DrivingHistory API response:<br /><strong>- Avg Energy Economy</strong><br /><strong>-
+      Avg Energy Consumed</strong><br /><strong>- Avg energy Saved</strong><br /><strong>-
+      Avg CO2 Saved</strong><br /><strong>- Total No. of Trips</strong><br /><strong>-
+      Total Distance</strong><br /><strong>- Total Travel Time</strong><br /><strong>-
+      Avg Speed</strong></p><p>"CO2 gas savings calculates the emissions you save
+      by driving a Nissan electric vehicle." text is displayed at the bottom of the
+      card</p>
+    text4: null
+    display_order: 8
+  - column_name: custom_steps
+    id: 61499
+    case_id: 36691
+    text1: <p>Select "VIN" from the Driver/VIN selector</p>
+    text2: null
+    text3: <p>Displayed information includes records where the `userID` is `null`</p><p>The
+      card displays all the fields with particular values:<br /><strong>- Avg Energy
+      Economy</strong><br /><strong>- Avg Energy Consumed</strong><br /><strong>-
+      Avg energy Saved</strong><br /><strong>- Avg CO2 Saved</strong><br /><strong>-
+      Total No. of Trips</strong><br /><strong>- Total Distance</strong><br /><strong>-
+      Total Travel Time</strong><br /><strong>- Avg Speed</strong></p><p>"CO2 gas
+      savings calculates the emissions you save by driving a Nissan electric vehicle."
+      text is displayed at the bottom of the card</p>
+    text4: null
+    display_order: 9
+  - column_name: custom_steps
+    id: 61500
+    case_id: 36691
+    text1: <p>Navigate to the day/month/year that <strong>DOES NOT</strong> have duplicate
+      entries in DrivingHistory API response</p>
+    text2: null
+    text3: <p>Driver/VIN selector is hidden</p><p>The card displays all the fields
+      with particular values:<br /><strong>- Avg Energy Economy</strong><br /><strong>-
+      Avg Energy Consumed</strong><br /><strong>- Avg energy Saved</strong><br /><strong>-
+      Avg CO2 Saved</strong><br /><strong>- Total No. of Trips</strong><br /><strong>-
+      Total Distance</strong><br /><strong>- Total Travel Time</strong><br /><strong>-
+      Avg Speed</strong></p><p>"CO2 gas savings calculates the emissions you save
+      by driving a Nissan electric vehicle." text is displayed at the bottom of the
+      card</p>
+    text4: null
+    display_order: 10

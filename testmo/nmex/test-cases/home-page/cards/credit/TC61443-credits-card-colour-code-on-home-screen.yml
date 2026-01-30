@@ -1,0 +1,290 @@
+testmo:
+  case_id: 61443
+  folder_id: 6253
+  project_id: 6
+  folder_path: home-page/cards/credit
+  folder_name_ui: Credit
+  created_at: '2025-09-12 19:00:18.496988'
+  updated_at: null
+  last_sync: '2026-01-30T18:20:44.979933Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/61443
+metadata:
+  name: Credits Card Colour Code on Home Screen
+  priority: 1
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<ul>
+
+    <li>User is logged in to the NMEX app</li>
+
+    <li>Home screen is accessible for the selected VIN</li>
+
+    <li>Vehicle brand is Nissan or Infiniti</li>
+
+    <li>Credit card data available from backend payload (creditStatus, nextPaymentDate,
+    overdueAmount, extendedRent, etc.)</li>
+
+    <li>Test VINs prepared to simulate each creditStatus: upToDate, completed, extendedRent,
+    upcoming, overdue, closed, writeOff, and an unknown value for neutral</li>
+
+    </ul>'
+  steps:
+  - column_name: custom_steps
+    id: 93338
+    case_id: 61443
+    text1: '<ol>
+
+      <li>Open the app</li>
+
+      <li>Select VIN with creditStatus=upToDate</li>
+
+      <li>Navigate to Home screen</li>
+
+      </ol>'
+    text2: null
+    text3: '<ul>
+
+      <li>Credit icon is green</li>
+
+      <li>No error banners or placeholders</li>
+
+      <li>Icon visible and aligned per design</li>
+
+      </ul>'
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 93339
+    case_id: 61443
+    text1: '<ol>
+
+      <li>Select VIN with creditStatus=completed</li>
+
+      <li>Navigate to Home screen</li>
+
+      </ol>'
+    text2: null
+    text3: '<ul>
+
+      <li>Credit icon is green</li>
+
+      </ul>'
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 93340
+    case_id: 61443
+    text1: '<ol>
+
+      <li>Select VIN with creditStatus=extendedRent</li>
+
+      <li>Navigate to Home screen</li>
+
+      </ol>'
+    text2: null
+    text3: '<ul>
+
+      <li>Credit icon is green</li>
+
+      </ul>'
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 93341
+    case_id: 61443
+    text1: '<ol>
+
+      <li>Select VIN with creditStatus=upcoming</li>
+
+      <li>Navigate to Home screen</li>
+
+      </ol>'
+    text2: null
+    text3: '<ul>
+
+      <li>Credit icon is yellow</li>
+
+      </ul>'
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 93342
+    case_id: 61443
+    text1: '<ol>
+
+      <li>Select VIN with creditStatus=overdue</li>
+
+      <li>Navigate to Home screen</li>
+
+      </ol>'
+    text2: null
+    text3: '<ul>
+
+      <li>Credit icon is red</li>
+
+      </ul>'
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 93343
+    case_id: 61443
+    text1: '<ol>
+
+      <li>Select VIN with unsupported/unknown creditStatus</li>
+
+      <li>Navigate to Home screen</li>
+
+      </ol>'
+    text2: null
+    text3: '<ul>
+
+      <li>Credit icon is neutral colour</li>
+
+      <li>No crash or placeholder string</li>
+
+      </ul>'
+    text4: null
+    display_order: 6
+  - column_name: custom_steps
+    id: 93344
+    case_id: 61443
+    text1: '<ol>
+
+      <li>Select VIN with creditStatus=closed</li>
+
+      <li>Navigate to Home screen</li>
+
+      </ol>'
+    text2: null
+    text3: '<ul>
+
+      <li>Credits card is hidden</li>
+
+      <li>No empty tile or layout gap</li>
+
+      </ul>'
+    text4: null
+    display_order: 7
+  - column_name: custom_steps
+    id: 93345
+    case_id: 61443
+    text1: '<ol>
+
+      <li>Select VIN with creditStatus=writeOff</li>
+
+      <li>Navigate to Home screen</li>
+
+      </ol>'
+    text2: null
+    text3: '<ul>
+
+      <li>Credits card is hidden</li>
+
+      </ul>'
+    text4: null
+    display_order: 8
+  - column_name: custom_steps
+    id: 93346
+    case_id: 61443
+    text1: '<ol>
+
+      <li>Check icon size and alignment</li>
+
+      <li>Verify contrast in light and dark mode</li>
+
+      <li>Validate Spanish labels</li>
+
+      <li>Check small-screen layout</li>
+
+      </ol>'
+    text2: null
+    text3: '<ul>
+
+      <li>Meets design size and alignment</li>
+
+      <li>Sufficient contrast in light/dark</li>
+
+      <li>Localized labels render correctly</li>
+
+      <li>No clipping/truncation</li>
+
+      </ul>'
+    text4: null
+    display_order: 9
+  - column_name: custom_steps
+    id: 93347
+    case_id: 61443
+    text1: '<ol>
+
+      <li>Inspect payload fields</li>
+
+      <li>Verify mapping to UI</li>
+
+      </ol>'
+    text2: null
+    text3: '<ul>
+
+      <li>creditStatus drives correct icon colour</li>
+
+      <li>Missing/null values handled gracefully</li>
+
+      <li>No runtime errors</li>
+
+      </ul>'
+    text4: null
+    display_order: 10
+  - column_name: custom_steps
+    id: 93348
+    case_id: 61443
+    text1: '<ol>
+
+      <li>Repeat scenarios for Nissan</li>
+
+      <li>Repeat scenarios for Infiniti</li>
+
+      </ol>'
+    text2: null
+    text3: '<ul>
+
+      <li>Behaviour consistent across brands</li>
+
+      </ul>'
+    text4: null
+    display_order: 11
+  - column_name: custom_steps
+    id: 93349
+    case_id: 61443
+    text1: '<ol>
+
+      <li>Repeat scenarios on Android</li>
+
+      <li>Repeat scenarios on iOS</li>
+
+      </ol>'
+    text2: null
+    text3: '<ul>
+
+      <li>Behaviour consistent across platforms</li>
+
+      </ul>'
+    text4: null
+    display_order: 12
+  notes: "<p>Figma links:</p>\n<ul>\n<li>iOS: <a href=\"https://www.figma.com/design/4xrVTCjhEPGgZYrdn36npt/MiNissan--NMEX----iOS?node-id=3000-15162&amp;t=TQeCXFw1CdUcdy9W-4\"\
+    >https://www.figma.com/design/4xrVTCjhEPGgZYrdn36npt/MiNissan--NMEX----iOS?node-id=3000-15162&amp;t=TQeCXFw1CdUcdy9W-4</a></li>\n\
+    <li>Android: <a href=\"https://www.figma.com/design/wQ13lHxhPiY5ZET9znk22m/MiNissan--NMEX----Android?node-id=3538-17895&amp;t=8lebNNLy8Cfl7Phu-4\"\
+    >https://www.figma.com/design/wQ13lHxhPiY5ZET9znk22m/MiNissan--NMEX----Android?node-id=3538-17895&amp;t=8lebNNLy8Cfl7Phu-4</a><br\
+    \ />\nTest accounts/credentials: <a href=\"https://docs.google.com/spreadsheets/d/1st2Upbl59-wI1tqTR3uoJS8OEEn0R9FPfk3ENTl-_D0/edit?usp=sharing\"\
+    >https://docs.google.com/spreadsheets/d/1st2Upbl59-wI1tqTR3uoJS8OEEn0R9FPfk3ENTl-_D0/edit?usp=sharing</a><br\
+    \ />\nApplies to Nissan and Infiniti brands<br />\nPayload example:</li>\n</ul>\n\
+    <pre><code class=\"language-json\">{\n  \"credit\": {\n    \"currentQuota\": 5,\n\
+    \    \"creditType\": \"credit\",\n    \"creditStatus\": \"closed\",\n    \"statusText\"\
+    : \"No disponible\",\n    \"nextPaymentAmount\": 8159,\n    \"nextPaymentDate\"\
+    : \"2025-02-22\",\n    \"contractNumber\": \"1302152000047\",\n    \"term\": 36,\n\
+    \    \"overdueQuotas\": \"0\",\n    \"id\": \"15416\",\n    \"balance\": 187721.36,\n\
+    \    \"accountDomiciliation\": \"012672029588845605\",\n    \"lastUpdate\": \"\
+    2025-02-07\",\n    \"overdueAmount\": 0,\n    \"startDate\": \"2024-08-30\",\n\
+    \    \"endDate\": \"2027-09-01\",\n    \"totalOverdueAmount\": 8159.01,\n    \"\
+    extendedRent\": 0\n  }\n}\n</code></pre>"

@@ -1,0 +1,28 @@
+testmo:
+  case_id: 32400
+  folder_id: 4161
+  project_id: 6
+  folder_path: wearables
+  folder_name_ui: Wearables
+  created_at: '2025-04-01 17:50:45.529418'
+  updated_at: '2025-04-02 20:05:48.067355'
+  last_sync: '2026-01-30T18:20:45.442231Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/32400
+metadata:
+  name: Login
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has not logged in</p>
+  steps:
+  - column_name: custom_steps
+    id: 52769
+    case_id: 32400
+    text1: <p>1. Launch phone app and login<br />2. Launch watch app</p>
+    text2: null
+    text3: <p>User should be able to login and see the watch app's landing screen</p>
+    text4: null
+    display_order: 1

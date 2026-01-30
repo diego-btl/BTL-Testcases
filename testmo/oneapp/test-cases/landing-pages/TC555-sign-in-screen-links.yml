@@ -1,0 +1,134 @@
+testmo:
+  case_id: 555
+  folder_id: 40
+  project_id: 2
+  folder_path: landing-pages
+  folder_name_ui: Landing Pages
+  created_at: '2023-08-01 23:08:19.679617'
+  updated_at: '2025-10-06 01:00:20.691152'
+  last_sync: '2026-01-30T18:21:09.192305Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/555
+metadata:
+  name: Sign in screen links
+  priority: 12
+  type: functional
+  status: active
+  estimate: 153000000
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>App is fresh installed or cache cleared</li><li>User is already
+    on the <code>Login</code> page</li><li>User has never logged into the app</li></ul><p> </p><p><strong>Note</strong>
+    - <code>Do Not Sell My Personal Information</code> Link removed from NCI</p>
+  steps:
+  - column_name: custom_steps
+    id: 724
+    case_id: 555
+    text1: <p>Tap on the <code>Forgot Password?</code> link</p>
+    text2: null
+    text3: <p>The app should open an external browser page, and navigate the user
+      to the proper location</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 1141
+    case_id: 555
+    text1: <p>Return to the app and tap on <code>Privacy &amp; Terms</code> </p>
+    text2: null
+    text3: <p>A half screen menu should appear from the bottom of the page with 4
+      items:</p><ul><li>Privacy Policy</li><li>Terms of Service</li><li>Do Not Sell
+      My Personal Information</li><li>Cancel</li></ul><p><strong>Note</strong> - Do
+      Not Sell My Personal Information Link removed from NCI</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 37785
+    case_id: 555
+    text1: <p>Tap on <code>Privacy Policy</code></p>
+    text2: null
+    text3: '<p>An external webview is  displayed on a browser directing to  Privacy
+      Policy website.<br />Note:  IOS users are able to return using back arrow on
+      top left corner, whereas Android users need to tap on device back button to
+      return to the app)</p>'
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 1190
+    case_id: 555
+    text1: <p>Tap on the top right back button</p>
+    text2: null
+    text3: <p>User should be driven back to the Login page</p>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 1191
+    case_id: 555
+    text1: <p>Tap on  <code>Privacy &amp; Terms</code> and select <code>Terms of Service</code></p>
+    text2: null
+    text3: <p>A webview should be displayed with a title that says "Terms of Service"</p>
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 37786
+    case_id: 555
+    text1: <ul><li>Tap on the top right back button to return to the Login page</li><li>Tap
+      on  <code>Privacy &amp; Terms</code> and select <code>Do Not Sell My Personal
+      Information</code></li></ul>
+    text2: null
+    text3: '<p>An external webview is  displayed on a browser directing to  Data Privacy
+      website.<br />Note:  IOS users are able to return using back arrow on top left
+      corner, whereas Android users need to tap on device back button to return to
+      the app)</p>'
+    text4: null
+    display_order: 6
+  - column_name: custom_steps
+    id: 1193
+    case_id: 555
+    text1: <ul><li>Tap on the top right back button to return to the Login page</li><li>Tap
+      on  <code>Privacy &amp; Terms</code> and select <code>Cancel</code></li></ul>
+    text2: null
+    text3: <p>The half screen modal should be dismissed</p>
+    text4: null
+    display_order: 7
+  - column_name: custom_steps
+    id: 1142
+    case_id: 555
+    text1: <p>Return to the app and tap on the <code>Back</code> button, located at
+      the top left of the app</p>
+    text2: null
+    text3: <p>The user should be driven to the Landing screen</p>
+    text4: null
+    display_order: 8
+  - column_name: custom_steps
+    id: 37787
+    case_id: 555
+    text1: <p>Login to the app and navigate into Settings</p>
+    text2: null
+    text3: <p>Legal section is  displayed with below cards</p><ul><li>Terms of Service</li><li>Privacy
+      Policy</li><li>Do Not Sell My Personal Information</li></ul>
+    text4: null
+    display_order: 9
+  - column_name: custom_steps
+    id: 1189
+    case_id: 555
+    text1: <p>Tap on <code>Privacy Policy</code></p>
+    text2: null
+    text3: <p>A webview should be displayed with a title that says "Privacy Policy"</p>
+    text4: null
+    display_order: 10
+  - column_name: custom_steps
+    id: 37788
+    case_id: 555
+    text1: <p>Tap on <code>Do Not Sell My Personal Information</code></p>
+    text2: null
+    text3: <p>A webview should be displayed with a title that says "Data Privacy"</p>
+    text4: null
+    display_order: 11
+  - column_name: custom_steps
+    id: 37789
+    case_id: 555
+    text1: <p>Tap on  <code>Privacy &amp; Terms</code> and select <code>Terms of Service</code></p>
+    text2: null
+    text3: <p>A webview should be displayed with a title that says "Terms of Service"</p>
+    text4: null
+    display_order: 12

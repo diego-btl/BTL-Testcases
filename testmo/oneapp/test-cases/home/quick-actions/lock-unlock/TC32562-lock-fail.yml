@@ -1,0 +1,30 @@
+testmo:
+  case_id: 32562
+  folder_id: 59
+  project_id: 2
+  folder_path: home/quick-actions/lock-unlock
+  folder_name_ui: Lock/Unlock
+  created_at: '2025-04-22 20:21:33.944078'
+  updated_at: '2025-04-24 15:19:25.582886'
+  last_sync: '2026-01-30T18:21:06.086873Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/32562
+metadata:
+  name: Lock - Fail
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is in the Home screen</p><p>User has sent a lock request</p>
+  steps:
+  - column_name: custom_steps
+    id: 53251
+    case_id: 32562
+    text1: <p>Lock request has been resolved into a failure</p>
+    text2: null
+    text3: <p>User should see a toast '&lt;year and model&gt; failed to lock.' at
+      the bottom of the screen.</p><p>Lock and Unlock buttons are displayed in the
+      default state. </p>
+    text4: null
+    display_order: 1

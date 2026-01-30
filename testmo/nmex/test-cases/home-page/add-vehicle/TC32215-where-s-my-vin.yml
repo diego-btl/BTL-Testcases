@@ -1,0 +1,50 @@
+testmo:
+  case_id: 32215
+  folder_id: 4145
+  project_id: 6
+  folder_path: home-page/add-vehicle
+  folder_name_ui: Add vehicle
+  created_at: '2025-04-01 17:50:43.858059'
+  updated_at: '2025-08-07 16:41:29.317201'
+  last_sync: '2026-01-30T18:20:45.859776Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/32215
+metadata:
+  name: Where's My VIN?
+  priority: 3
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>User is in the <code>Add Vehicle</code> Page</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 52597
+    case_id: 32215
+    text1: <ol><li>Tap on Add Vehicle</li><li>Tap on <code>¿DÓNDE ESTÁ MI VIN?</code></li></ol>
+    text2: null
+    text3: <ul><li>A new screen should open with the next sections:<ul><li>Logo</li><li><code>Hay
+      algunos lugares donde puedes buscar tu VIN</code></li><li><code>En el tablero
+      de tu INFINITI/NISSAN</code></li><li><code>Placa de certificación</code></li><li><code>Factura</code></li><li><code>Tarjeta
+      de Circulación</code></li></ul></li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 85774
+    case_id: 32215
+    text1: <ol><li>Tap on Add Vehicle</li><li>Tap on <code>¿DÓNDE ESTÁ MI VIN?</code></li><li>Click
+      on any dropdown</li></ol>
+    text2: null
+    text3: <ul><li>The animation should open the section with the proper image and
+      the text</li><li>You can have 2 sections open at the same time</li></ul>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 85775
+    case_id: 32215
+    text1: <ol><li>Tap on Add Vehicle</li><li>Tap on <code>¿DÓNDE ESTÁ MI VIN?</code></li><li>Click
+      on the <code>&lt;</code></li></ol>
+    text2: null
+    text3: <ul><li>The user is redirect to the previous screen</li></ul>
+    text4: null
+    display_order: 3

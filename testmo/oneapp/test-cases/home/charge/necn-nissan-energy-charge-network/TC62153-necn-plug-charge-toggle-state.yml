@@ -1,0 +1,40 @@
+testmo:
+  case_id: 62153
+  folder_id: 2444
+  project_id: 2
+  folder_path: home/charge/necn-nissan-energy-charge-network
+  folder_name_ui: NECN - NISSAN ENERGY Charge Network
+  created_at: '2025-12-15 17:59:40.244307'
+  updated_at: '2026-01-15 19:05:14.307824'
+  last_sync: '2026-01-30T18:21:04.692969Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/62153
+metadata:
+  name: NECN - Plug & Charge - Toggle State
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<p>User has an EV/EV2</p><p>"EnablePlugAndCharge": "true"</p><p>VehicleStaticData
+    &gt; "driverType": "PRIMARY_DRIVER"</p><p>AccountStatus &gt; "status": "ACTIVE"</p>'
+  steps:
+  - column_name: custom_steps
+    id: 96474
+    case_id: 62153
+    text1: '<p>Mock AccountStatus API to return "pncStatus": "READY" and "toggleStatus":
+      "ENABLED"/"DISABLED"</p><p>Navigate to the NISSAN ENERGY Charge Network screen</p>'
+    text2: null
+    text3: <p>The toggle is in ON/OFF state on the Plug &amp; Charge card </p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 96475
+    case_id: 62153
+    text1: '<p>Mock AccountStatus API to return "pncStatus": "READY" and "toggleStatus":
+      "PENDING"/"NA"/null</p><p>Navigate to the NISSAN ENERGY Charge Network screen</p>'
+    text2: null
+    text3: <p>The 'ERROR' status is displayed on the Plug &amp; Charge card in place
+      of the Toggle</p>
+    text4: null
+    display_order: 2

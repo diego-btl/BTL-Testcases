@@ -1,0 +1,52 @@
+testmo:
+  case_id: 627
+  folder_id: 63
+  project_id: 2
+  folder_path: home/quick-actions/charge
+  folder_name_ui: Charge
+  created_at: '2023-08-01 23:08:20.626346'
+  updated_at: '2025-08-21 19:07:22.384745'
+  last_sync: '2026-01-30T18:21:09.000830Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/627
+metadata:
+  name: Charge On - Success
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has sent a StartCharge request</p>
+  steps:
+  - column_name: custom_steps
+    id: 796
+    case_id: 627
+    text1: '<p>StartCharge request has been resolved into a success:</p><ul><li>CheckChargeServiceRequest
+      API &gt; "status": "SUCCESS"</li><li>VehicleBatteryStatus API response &gt;
+      "isPluggedIn": true, "isCharging": true)</li></ul>'
+    text2: null
+    text3: <p>User should see the following toast saying:</p><ul><li>&lt;year and
+      model&gt; charging.' (5 seconds)</li></ul><p>User should see the Hero image
+      is updated to charging state including the battery percentage<br /><br />User
+      should see the "Charge" card is changed to "Charging" with secondary text showing
+      the battery percentage and time until full</p><p>Charge On button is in disabled
+      state</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 61449
+    case_id: 627
+    text1: <p>User taps Charge On button</p>
+    text2: null
+    text3: <p>Modal "Already Charging. Your vehicle is already charging" with Ok button
+      is displayed</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 61450
+    case_id: 627
+    text1: <p>User taps Ok button on the modal</p>
+    text2: null
+    text3: <p>Modal is dismissed</p>
+    text4: null
+    display_order: 3

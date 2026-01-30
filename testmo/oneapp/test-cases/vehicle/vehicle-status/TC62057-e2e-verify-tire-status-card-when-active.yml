@@ -1,0 +1,54 @@
+testmo:
+  case_id: 62057
+  folder_id: 6785
+  project_id: 2
+  folder_path: vehicle/vehicle-status
+  folder_name_ui: Vehicle Status
+  created_at: '2025-11-28 22:15:24.781811'
+  updated_at: '2026-01-15 15:29:00.921420'
+  last_sync: '2026-01-30T18:21:05.015694Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/62057
+metadata:
+  name: E2E - Verify Tire status card when active
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  steps:
+  - column_name: custom_steps
+    id: 95774
+    case_id: 62057
+    text1: <p>Mock <i><strong>VehicleDynamicData </strong></i>only<i><strong> </strong></i>with
+      <code>TIRE_PRESSURE=false</code> and ensure all tires have <code>pressureStatus
+      =! 0</code> &gt; Call <code>VehicleDynamicData</code> api &gt; Go to <strong>Vehicle</strong>
+      screen</p>
+    text2: null
+    text3: <p><strong>Verify: </strong></p><ul><li><strong>Vehicle Status card</strong>
+      appears <strong>below Quick Actions</strong>.</li><li>The subtitle shows <strong>"Tire
+      Pressure, +3 more"</strong>.</li><li>Orange exclamation icon appears over the
+      <strong>vehicle hero image</strong>.</li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 95775
+    case_id: 62057
+    text1: <p>Tab on <strong>Vehicle Status</strong> card</p>
+    text2: null
+    text3: <p>Verify:</p><ul><li> Tire Status card is displayed in the <strong>Vehicle
+      tab </strong>and follows the order:<ul><li>Front driver</li><li>Front passenger</li><li>Rear
+      driver</li><li>Rear passenger</li></ul></li></ul>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 95776
+    case_id: 62057
+    text1: <p>Mock <i><strong>VehicleDynamicData </strong></i>only<i><strong> </strong></i>with
+      <code>TIRE_PRESSURE=false</code> and ensure all tires have <code>pressureStatus
+      == 0</code> &gt; Call <code>VehicleDynamicData</code> api</p>
+    text2: null
+    text3: <p><strong>Verify: </strong></p><ul><li><strong>Vehicle Status card</strong>
+      is not shown.</li></ul>
+    text4: null
+    display_order: 3

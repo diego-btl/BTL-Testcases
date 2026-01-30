@@ -1,0 +1,43 @@
+testmo:
+  case_id: 29900
+  folder_id: 3800
+  project_id: 2
+  folder_path: vehicle/collision-management-nna-only
+  folder_name_ui: Collision Management - NNA only
+  created_at: '2025-01-09 21:19:55.011018'
+  updated_at: '2025-07-14 20:16:17.191050'
+  last_sync: '2026-01-30T18:21:06.561463Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/29900
+metadata:
+  name: Collision Management Screen
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>The User is entitled to see the <code>Collision Management</code>
+    card</li><li>The User  is on the Vehicle Screen</li><li>The <code>Collision Management
+    </code>card is displayed </li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 48767
+    case_id: 29900
+    text1: <p>Tap on the <code>Collision Management</code> card</p>
+    text2: null
+    text3: '<ul><li>The use should be redirected to the <code>Collision Management</code>
+      Screen</li><li><p>The user should see the following cards: </p><p>- Title: <i>New
+      Collision Report</i><br /> - Subtitle: <i>Create collision report</i></p><p>-
+      Title: <i>View All Reports</i><br /><i> - </i>Subtitle<i>: See past collision
+      reports</i></p><p>- Title: <i>Accident Helper</i></p><p><i>- Title: Collision
+      Towing </i><br />- Description: We can provide collision towing service to the
+      nearest Nissan Certified Collision Repair Center</p><p><i>-<s> </s></i><s>Title</s><i><s>:
+      Free Tow Coverage</s></i><br /><i> <s> - </s></i><s>Tooltip icon</s><br /><s> 
+      - Description: </s><i><s>We can provide complimentary towing service to the
+      nearest </s></i><code><i><s>$Brand</s></i></code><i><s> Certified Collision
+      Repair Center.</s></i><br /><i> - </i>CTA<i>: Call Roadside Assistance</i></p></li></ul>'
+    text4: null
+    display_order: 1
+  notes: <ul><li>Please pay attention to the app brand, it could be <code>Nissan</code>
+    or <code>Infiniti</code></li></ul><p> </p><p><img src="/attachments/view/6375"
+    alt="6375" /></p>

@@ -1,0 +1,154 @@
+testmo:
+  case_id: 58198
+  folder_id: 4145
+  project_id: 6
+  folder_path: home-page/add-vehicle
+  folder_name_ui: Add vehicle
+  created_at: '2025-08-21 16:58:42.846150'
+  updated_at: '2025-10-21 21:00:44.665309'
+  last_sync: '2026-01-30T18:20:44.993139Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/58198
+metadata:
+  name: Validate My Vin - Errors
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has entered a valid VIN for a <strong>Connected/Non-Connected</strong>
+    vehicle that has previously been added</p><p>Tapping the button <code>&lt;</code>
+    at any point of the flow goes back to the previous screen</p>
+  steps:
+  - column_name: custom_steps
+    id: 88943
+    case_id: 58198
+    text1: <ol><li>Login into the app</li><li>Go to the vehicle selector</li><li>Select
+      <code>AGREGAR VEHICULO</code></li><li>Enter an invalid VIN</li><li>Tap Validate
+      VIN</li></ol>
+    text2: null
+    text3: <ul><li>The VIN text field should present a red background</li><li>There
+      should be a error message below the field with text:<ul><li><code>VIN Inválido</code></li></ul></li><li>A
+      CTA button with <code>LLAMAR A SERVICIOS DEL PROPIETARIO</code> button should
+      appear above the <code>VALIDAR VIN</code> CTA</li><li>The API - <code>AddVehicle</code>,
+      should return either:<ul><li><code>InvalidVINError</code></li><li><code>VINNotFoundError</code></li></ul></li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 88942
+    case_id: 58198
+    text1: <ol><li>Login into the app</li><li>Go to the vehicle selector</li><li>Select
+      <code>AGREGAR VEHICULO</code></li><li>Enter an invalid VIN</li><li>Tap Validate
+      VIN</li><li>Tap on <code>LLAMAR A SERVICIOS DEL PROPIETARIO</code></li></ol>
+    text2: null
+    text3: '<p><strong>Android: </strong>The app should drive the user to the Native
+      Phone app and prepoluate the phone number</p><p><strong>iOS: </strong>The app
+      should present the native call action with the phone prepopulated</p><figure
+      class="table"><table><tbody><tr><td>INF</td><td><code>+52 800 546 3464</code></td></tr><tr><td>NIS</td><td><code>+52
+      800 964 7726</code></td></tr></tbody></table></figure>'
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 88944
+    case_id: 58198
+    text1: <ol><li>Login into the app</li><li>Go to the vehicle selector</li><li>Select
+      <code>AGREGAR VEHICULO</code></li><li>Enter an valid VIN (<strong>that was already
+      registered in the same account</strong>)</li><li>Tap Validate VIN</li></ol>
+    text2: null
+    text3: <ul><li>The VIN text field should present a red background</li><li>There
+      should be a error message below the field with text:<ul><li><code>VIN Registrado
+      en el mismo usuario</code></li></ul></li><li>A CTA button with <code>LLAMAR
+      A SERVICIOS DEL PROPIETARIO</code> button should appear above the <code>VALIDAR
+      VIN</code> CTA</li><li>The API - <code>AddVehicle</code>, should return:<ul><li><code>VINAlreadyExistInYourGarageError</code>
+      - <strong>The provided VIN is already in your garage</strong></li></ul></li></ul>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 88931
+    case_id: 58198
+    text1: <ol><li>Login into the app</li><li>Go to the vehicle selector</li><li>Select
+      <code>AGREGAR VEHICULO</code></li><li>Enter an valid VIN (<strong>that was already
+      registered in another account</strong>)</li><li>Tap Validate VIN</li></ol>
+    text2: null
+    text3: <ul><li>Title &gt; <code>Agregar Vehículo</code></li><li>Asset of the vehicle</li><li>Icon
+      <code>i</code></li><li>The user is redirect to a screen that shows:<ul><li><code>Revisa
+      e ingresa nuevamente tu número de serie</code></li><li><code>Si el problema
+      persiste y quieres asociar este número de serie (VIN) a tu usuario, será necesario
+      confirmar la propiedad del vehículo</code></li></ul></li><li>Button that will
+      show:<ul><li><code>ASOCIAR VIN A MI USUARIO</code></li></ul></li><li>The API
+      - <code>AddVehicle</code>, should return:<ul><li><code>VINAlreadyExistsInAnotherGarageError</code>
+      - <strong>The provided VIN is already in another garage</strong></li></ul></li></ul>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 88932
+    case_id: 58198
+    text1: <ol><li>Login into the app</li><li>Go to the vehicle selector</li><li>Select
+      <code>AGREGAR VEHICULO</code></li><li>Enter an valid VIN (that was already registered)</li><li>Tap
+      Validate VIN</li><li>Tap on <code>ASOCIAR VIN A MI USUARIO</code></li></ol>
+    text2: null
+    text3: <ul><li>No preselected option</li><li>A new screen will show:<ul><li><code>Tú
+      vehículo esta registrado en:</code><ul><li><code>Ciudad de México</code></li><li><code>Otro
+      esta del país</code></li></ul></li></ul></li></ul>
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 88933
+    case_id: 58198
+    text1: <ol><li>Login into the app</li><li>Go to the vehicle selector</li><li>Select
+      <code>AGREGAR VEHICULO</code></li><li>Enter an valid VIN (that was already registered)</li><li>Tap
+      Validate VIN</li><li>Tap on <code>ASOCIAR VIN A MI USUARIO</code></li><li>Select
+      <code>Ciudad de México</code></li></ol>
+    text2: null
+    text3: <ul><li>A new screen will display the steps for the process to send it
+      to <code>Ciudad de México</code></li><li>Buttons will show:<ul><li><code>ENVIAR
+      CORREO</code></li><li><code>CANCELAR</code></li></ul></li></ul>
+    text4: null
+    display_order: 6
+  - column_name: custom_steps
+    id: 88934
+    case_id: 58198
+    text1: <ol><li>Login into the app</li><li>Go to the vehicle selector</li><li>Select
+      <code>AGREGAR VEHICULO</code></li><li>Enter an valid VIN (that was already registered)</li><li>Tap
+      Validate VIN</li><li>Tap on <code>ASOCIAR VIN A MI USUARIO</code></li><li>Select
+      <code>Otro esta del país</code></li></ol>
+    text2: null
+    text3: <ul><li>A new screen will display the steps for the process to send it
+      to <code>Otro estado del país</code></li><li>Buttons will show:<ul><li><code>ENVIAR
+      CORREO</code></li><li><code>CANCELAR</code></li></ul></li></ul>
+    text4: null
+    display_order: 7
+  - column_name: custom_steps
+    id: 88935
+    case_id: 58198
+    text1: <ol><li>Login into the app</li><li>Go to the vehicle selector</li><li>Select
+      <code>AGREGAR VEHICULO</code></li><li>Enter an valid VIN (that was already registered)</li><li>Tap
+      Validate VIN</li><li>Tap on <code>ASOCIAR VIN A MI USUARIO</code></li><li>Select
+      any of the options</li><li>Click <code>ENVIAR CORREO</code></li></ol>
+    text2: null
+    text3: <ul><li>The native email system will open</li></ul>
+    text4: null
+    display_order: 8
+  - column_name: custom_steps
+    id: 88936
+    case_id: 58198
+    text1: <ol><li>Login into the app</li><li>Go to the vehicle selector</li><li>Select
+      <code>AGREGAR VEHICULO</code></li><li>Enter an valid VIN (that was already registered)</li><li>Tap
+      Validate VIN</li><li>Tap on <code>ASOCIAR VIN A MI USUARIO</code></li><li>Select
+      any of the options</li><li>Click <code>CANCELAR</code></li></ol>
+    text2: null
+    text3: <ul><li>The app will send you back to the begging of the flow</li></ul>
+    text4: null
+    display_order: 9
+  - column_name: custom_steps
+    id: 88937
+    case_id: 58198
+    text1: <ol><li>Login into the app</li><li>Go to the vehicle selector</li><li>Select
+      <code>AGREGAR VEHICULO</code></li><li>Enter an valid VIN (that was already registered)</li><li>Tap
+      Validate VIN</li><li>Tap on <code>ASOCIAR VIN A MI USUARIO</code></li><li>Select
+      any of the options</li><li>Click <code>Comunícate con nosotros</code></li></ol>
+    text2: null
+    text3: <ul><li>A modal will appear:<ul><li>Cancelar &gt; Dismiss the modal</li><li>Llamar
+      &gt; <code>+52 800 546 3464</code></li></ul></li></ul>
+    text4: null
+    display_order: 10

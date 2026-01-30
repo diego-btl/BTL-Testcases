@@ -1,0 +1,32 @@
+testmo:
+  case_id: 1498
+  folder_id: 57
+  project_id: 2
+  folder_path: home/add-vehicle/ownership-verification
+  folder_name_ui: Ownership Verification
+  created_at: '2023-08-28 20:13:23.076902'
+  updated_at: '2024-10-17 17:56:23.776593'
+  last_sync: '2026-01-30T18:21:08.131264Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/1498
+metadata:
+  name: Select a File
+  priority: 1
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is on the Upload Ownership Document screen and has selected
+    a file type</p>
+  steps:
+  - column_name: custom_steps
+    id: 1863
+    case_id: 1498
+    text1: <p>1. Tap Select a File<br />2. Choose a file<br />3. Tap Select a Different
+      File and choose a file<br />4. Tap UPLOAD</p>
+    text2: null
+    text3: <p>1. User should see file picker open<br />2. User should see an option
+      to select a different file and UPLOAD should become enabled<br />3. User should
+      be able to pick a different file<br />4. File should be uploaded</p>
+    text4: null
+    display_order: 1

@@ -1,0 +1,28 @@
+testmo:
+  case_id: 30055
+  folder_id: 98
+  project_id: 2
+  folder_path: map/info-drawer
+  folder_name_ui: Info Drawer
+  created_at: '2025-01-24 18:41:34.799566'
+  updated_at: '2025-10-08 03:17:51.951154'
+  last_sync: '2026-01-30T18:21:06.378871Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/30055
+metadata:
+  name: Default
+  priority: 1
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  steps:
+  - column_name: custom_steps
+    id: 48948
+    case_id: 30055
+    text1: <p>1. Navigate to the Maps screen</p>
+    text2: null
+    text3: <p>User should see the info drawer in its default state (25% of the total
+      screen height)</p>
+    text4: null
+    display_order: 1

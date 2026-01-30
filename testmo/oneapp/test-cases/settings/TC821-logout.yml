@@ -1,0 +1,30 @@
+testmo:
+  case_id: 821
+  folder_id: 48
+  project_id: 2
+  folder_path: settings
+  folder_name_ui: Settings
+  created_at: '2023-08-01 23:08:23.197633'
+  updated_at: '2025-10-06 07:13:55.798203'
+  last_sync: '2026-01-30T18:21:08.658511Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/821
+metadata:
+  name: Logout
+  priority: 1
+  type: functional
+  status: active
+  estimate: 60000000
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is on the Settings screen</p>
+  steps:
+  - column_name: custom_steps
+    id: 990
+    case_id: 821
+    text1: <p>1. Tap Sign Out<br />2. Tap Cancel<br />3. Tap Continue</p>
+    text2: null
+    text3: <p>1. User should see confirmation prompt<br />2. User should see prompt
+      dismissed<br />3. User should be logged out and returned to Landing screen</p>
+    text4: null
+    display_order: 1

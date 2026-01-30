@@ -1,0 +1,33 @@
+testmo:
+  case_id: 1461
+  folder_id: 6801
+  project_id: 2
+  folder_path: demo-mode/map
+  folder_name_ui: Map
+  created_at: '2023-08-28 20:13:22.457024'
+  updated_at: '2025-12-18 17:04:30.373678'
+  last_sync: '2026-01-30T18:21:08.229831Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/1461
+metadata:
+  name: Map - Switch Vehicles
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is on the Map screen</p>
+  steps:
+  - column_name: custom_steps
+    id: 1829
+    case_id: 1461
+    text1: <p>1. Tap on Vehicle selector and select an AVK2 vehicle e.g. QX80 or Rogue
+      Platinum DEMO<br />2. Tap the refresh button<br />3. Tap the directions button
+      in the vehicle card</p>
+    text2: null
+    text3: <p>1. User should be able to switch between the two vehicles and see the
+      vehicle cards update accordingly<br />2. User should see the refresh animation
+      for 5 seconds and a toast 'Vehicle location successfully refreshed.'<br />3.
+      User should see the demo mode alert modal</p>
+    text4: null
+    display_order: 1

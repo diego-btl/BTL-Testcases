@@ -1,0 +1,40 @@
+testmo:
+  case_id: 2698
+  folder_id: 105
+  project_id: 2
+  folder_path: old-deprecated
+  folder_name_ui: Old / Deprecated
+  created_at: '2023-09-07 21:29:11.969421'
+  updated_at: '2025-09-19 21:13:59.475462'
+  last_sync: '2026-01-30T18:21:07.741017Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/2698
+metadata:
+  name: Primary Driver should see the Additional Driver Card
+  priority: 13
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: 'User has a AVK2 vehicle<br />
+
+    User is a PRIMARY_DRIVER<br />
+
+    User has no pending invitations'
+  steps:
+  - column_name: custom_steps
+    id: 3063
+    case_id: 2698
+    text1: '1. Mock the UserVehicles response with:<br />
+
+      1.1. data.vehicles.driverType: "PRIMARY_DRIVER"<br />
+
+      1.2. data.pendingDriverInvitations: null<br />
+
+      <br />
+
+      2. Login to the app'
+    text2: null
+    text3: 1. The Home Page should display the Additional Driver Card
+    text4: null
+    display_order: 1

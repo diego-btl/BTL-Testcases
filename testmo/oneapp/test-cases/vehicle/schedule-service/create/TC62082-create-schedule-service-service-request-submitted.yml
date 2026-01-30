@@ -1,0 +1,86 @@
+testmo:
+  case_id: 62082
+  folder_id: 6787
+  project_id: 2
+  folder_path: vehicle/schedule-service/create
+  folder_name_ui: Create
+  created_at: '2025-12-03 02:22:12.633844'
+  updated_at: '2026-01-20 21:18:43.679975'
+  last_sync: '2026-01-30T18:21:04.870415Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/62082
+metadata:
+  name: Create Schedule Service - Service Request Submitted
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has completed Review Service Request and tapped SCHEDULE
+    SERVICE button; CreateServiceAppointment mutation was triggered successfully</p>
+  steps:
+  - column_name: custom_steps
+    id: 102357
+    case_id: 62082
+    text1: <p>Verify user arrives on <code>Service Request Submitted</code> screen</p>
+    text2: null
+    text3: '<ul><li>Screen title is <code>Service Request Submitted</code></li><li><strong>Green
+      checkmark icon</strong> is displayed</li><li>Confirmation message displays:
+      <code>Your Service Request has been submitted! We may contact you if we need
+      more information prior to your service.</code></li><li><code>ADD TO CALENDAR</code>
+      link is displayed</li><li><strong>Close (X) button</strong> is displayed at
+      top right</li></ul>'
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 102358
+    case_id: 62082
+    text1: <p>Tap <code>ADD TO CALENDAR</code> link with calendar app installed</p>
+    text2: null
+    text3: <ul><li>Calendar app opens</li><li>Service appointment is added with all
+      booking details (date, time, dealer/retailer, services)</li><li>Appointment
+      details match the scheduled booking</li></ul>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 102359
+    case_id: 62082
+    text1: <p>Tap <code>ADD TO CALENDAR</code> link with no calendar app installed</p>
+    text2: null
+    text3: '<ul><li>Modal prompt appears with title <code>Restore "Calendar"?</code></li><li><strong>iOS:</strong>
+      Message displays: <code>To continue, download "Calendar" from the App Store.</code>
+      and <code>Show in App Store</code> button is displayed</li><li><strong>Android:</strong>
+      Message displays: <code>To continue, download "Calendar" from the Play Store.</code>
+      and <code>Show in Play Store</code> button is displayed</li><li><code>Cancel</code>
+      button is displayed</li></ul>'
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 102360
+    case_id: 62082
+    text1: <p>Tap <code>Show in App Store</code> (iOS) or <code>Show in Play Store</code>
+      (Android) button</p>
+    text2: null
+    text3: <ul><li><strong>iOS:</strong> User is redirected to App Store with Calendar
+      app search results displayed</li><li><strong>Android:</strong> User is redirected
+      to Play Store with Calendar app search results displayed</li></ul>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 102361
+    case_id: 62082
+    text1: <p>Tap <code>Cancel</code> button on calendar prompt</p>
+    text2: null
+    text3: <ul><li>Modal is dismissed</li><li>User returns to <code>Service Request
+      Submitted</code> screen</li></ul>
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 102362
+    case_id: 62082
+    text1: <p>Tap <strong>Close (X) button</strong> at top right</p>
+    text2: null
+    text3: <ul><li>User is redirected to <code>Vehicle</code> screen</li><li><code>Upcoming
+      Appointment</code> card is displayed for the scheduled appointment</li></ul>
+    text4: null
+    display_order: 6

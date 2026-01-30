@@ -1,0 +1,31 @@
+testmo:
+  case_id: 558
+  folder_id: 44
+  project_id: 2
+  folder_path: home
+  folder_name_ui: Home
+  created_at: '2023-08-01 23:08:19.717138'
+  updated_at: '2024-10-17 17:56:23.776593'
+  last_sync: '2026-01-30T18:21:09.189705Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/558
+metadata:
+  name: Foreground
+  priority: 1
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>App is backgrounded</p>
+  steps:
+  - column_name: custom_steps
+    id: 727
+    case_id: 558
+    text1: <p>1. Foreground app</p>
+    text2: null
+    text3: <p>Make sure to test on AVK and TCU2K. Refer to sheet for logic https://docs.google.com/spreadsheets/d/1Ch6XwP9XdU2km5jsJm_O0SrvDL6hJw4uu8mDPRl26-g/edit#gid=542058053</p>
+    text4: null
+    display_order: 1
+  notes: <p>[VW] please list all the API calls that are triggered for AVK and TCU2K</p><ul><li>test
+    case needs to be updated with logic from - <a href="https://www.pivotaltracker.com/story/show/185432453">https://www.pivotaltracker.com/story/show/185432453</a></li></ul><p>[GS]
+    test case needs to be updated with logic from - <a href="https://www.pivotaltracker.com/n/projects/2556132/stories/185432489">#185432489</a></p>

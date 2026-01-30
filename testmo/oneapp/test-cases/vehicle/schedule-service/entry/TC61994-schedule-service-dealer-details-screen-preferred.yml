@@ -1,0 +1,73 @@
+testmo:
+  case_id: 61994
+  folder_id: 6779
+  project_id: 2
+  folder_path: vehicle/schedule-service/entry
+  folder_name_ui: Entry
+  created_at: '2025-11-14 20:56:37.859919'
+  updated_at: '2026-01-20 21:18:32.113611'
+  last_sync: '2026-01-30T18:21:05.294095Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/61994
+metadata:
+  name: Schedule Service - Dealer Details Screen - Preferred Dealer Not Set
+  priority: 1
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  steps:
+  - column_name: custom_steps
+    id: 97192
+    case_id: 61994
+    text1: <p>Navigate to one of the following Schedule Service entry points:</p><ul><li><strong>Home</strong>
+      screen Hero section <code>Schedule Service</code> CTA</li><li><strong>Vehicle</strong>
+      screen <code>Schedule Service</code> quick action button</li><li><strong>Vehicle</strong>
+      screen Maintenance card <code>Schedule Now</code> CTA</li><li><strong>Vehicle</strong>
+      screen MIL Status Card/<strong>Red Alert icon</strong></li><li><strong>Maintenance
+      Schedule</strong> screen <code>Schedule Service</code> CTA</li><li><strong>Recall/Service
+      Campaign</strong> screen <code>Schedule Service</code> CTA</li><li><strong>MIL
+      Detail</strong> screen <code>Schedule Service</code> CTA</li><li><strong>Support</strong>
+      screen <code>Schedule Service</code> quick action button</li></ul>
+    text2: null
+    text3: <ul><li>Entry point is accessible</li><li><code>Schedule Service</code>
+      CTA is displayed</li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 97193
+    case_id: 61994
+    text1: <p>Tap <code>Schedule Service</code> CTA</p>
+    text2: null
+    text3: <ul><li>User is redirected to <code>Find a Dealer</code> or <code>Find
+      a Retailer</code> screen</li></ul>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 97194
+    case_id: 61994
+    text1: <p>Search by ZIP or Postal Code (e.g., 37067)</p>
+    text2: null
+    text3: <ul><li>Search results display dealers/retailers</li></ul>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 97195
+    case_id: 61994
+    text1: <p>Tap on a dealer/retailer from the search results that has <code>nativeServiceBooking=
+      true</code></p>
+    text2: null
+    text3: <ul><li>User is redirected to <code>Dealer Details</code> screen</li><li><code>Schedule
+      Service</code> CTA is displayed (not "Schedule Online" or "Call to Schedule")</li></ul>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 97196
+    case_id: 61994
+    text1: <p>Tap the <code>Schedule Service</code> CTA</p>
+    text2: null
+    text3: <ul><li><code>ServiceOperations</code> query is triggered</li><li>User
+      is redirected to <code>Select Services</code> screen with selected dealer shown
+      and <code>Next</code> button disabled until at least one service is selected</li></ul>
+    text4: null
+    display_order: 5

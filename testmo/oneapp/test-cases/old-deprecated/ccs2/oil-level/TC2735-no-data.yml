@@ -1,0 +1,36 @@
+testmo:
+  case_id: 2735
+  folder_id: 415
+  project_id: 2
+  folder_path: old-deprecated/ccs2/oil-level
+  folder_name_ui: Oil Level
+  created_at: '2023-09-08 15:38:49.937954'
+  updated_at: '2026-01-06 17:49:35.796885'
+  last_sync: '2026-01-30T18:21:07.629120Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/2735
+metadata:
+  name: No Data
+  priority: 13
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: "<p>The user has an AVK2 vehicle</p><p>Mock the <code>VehicleDynamicData</code>\
+    \ call response</p><p><code>   \"oilLevel\": null</code></p><p>or</p><p>Android:</p><pre><code\
+    \ class=\"editor-plain language-plain code-block\">   \"oilLevel\": {\n      \
+    \          \"level\": null,\n                \"status\": null,\n             \
+    \   \"lastUpdatedAt\": null\n            },</code></pre><p> </p><p>iOS:</p><pre><code\
+    \ class=\"editor-plain language-plain code-block\">\"oilLevel\": {\n\"__typename\"\
+    : \"OilLevel\",\n\"lastUpdatedAt\": null,\n\"level\": null,\n\"status\": null\n\
+    }</code></pre>"
+  steps:
+  - column_name: custom_steps
+    id: 3100
+    case_id: 2735
+    text1: '<p>1. oilLevel data returns:<br />- oilLevel.level: null<br />- oilLevel.status:
+      null <br />OR<br />- oilLevel: null</p>'
+    text2: null
+    text3: <p>1. User should not see Oil Level card on Vehicle tab</p>
+    text4: null
+    display_order: 1

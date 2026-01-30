@@ -1,0 +1,38 @@
+testmo:
+  case_id: 2683
+  folder_id: 4170
+  project_id: 2
+  folder_path: home/climate/avk2
+  folder_name_ui: AVK2
+  created_at: '2023-09-07 21:10:07.680749'
+  updated_at: '2025-09-22 14:49:34.488662'
+  last_sync: '2026-01-30T18:21:07.784566Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/2683
+metadata:
+  name: Climate Details - Adjust Climate - Initiated
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>Climate Details<br />Climate is ON</p><p>Having a:</p><ul><li>AVK2
+    vehicle</li><li>EV or EV2 vehicle</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 3049
+    case_id: 2683
+    text1: <ol><li>Modify any of the climate parameters (temperature, seat heating,
+      steering wheel, defrost/deicer)</li><li>Tap on the Apply Changes button</li></ol>
+    text2: null
+    text3: <ol><li>User should see text that climate has been changed and Apply Changes
+      button appears</li><li><p>User should see Apply Changes button change to a disabled
+      state<br /><br />User should see a toast message that transitions from (3 seconds
+      each) for the first time:</p><ol><li><code>Contacting</code> <strong>{vehicle
+      model}</strong> <code>to adjust climate</code>...</li><li><code>Initiating climate
+      adjustment</code>...</li><li><code>Climate adjusted</code></li></ol><p>User
+      should see a toast message that transitions from (3 seconds each) the rest of
+      the times:</p><ol><li><code>Contacting</code> <strong>{vehicle model}</strong>
+      <code>to adjust climate</code>...</li><li><code>Climate adjusted</code></li></ol></li></ol>
+    text4: null
+    display_order: 1

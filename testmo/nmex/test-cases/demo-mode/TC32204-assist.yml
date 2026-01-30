@@ -1,0 +1,41 @@
+testmo:
+  case_id: 32204
+  folder_id: 4144
+  project_id: 6
+  folder_path: demo-mode
+  folder_name_ui: Demo Mode
+  created_at: '2025-04-01 17:50:43.777211'
+  updated_at: null
+  last_sync: '2026-01-30T18:20:45.878796Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/32204
+metadata:
+  name: Assist
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  steps:
+  - column_name: custom_steps
+    id: 52586
+    case_id: 32204
+    text1: '<p>Tap the Assist card<br /> </p>
+
+      <p>Tap the Personal Assistant item</p>
+
+      <p>Tap the Call button</p>
+
+      <p>Repeat the above steps for the rest of the Assist items (Stolen Vehicle,
+      Accident Helper, Roadside/Tow Coverage, bottom call buttons)</p>'
+    text2: null
+    text3: '<p>The user should see the main assist sheet</p>
+
+      <p>The user should see the Personal Assistant screen</p>
+
+      <p>The user should see the demo mode alert modal</p>
+
+      <p>User should be directed to the appropriate screens and tapping any of the
+      call buttons should trigger the demo alert modal</p>'
+    text4: null
+    display_order: 1

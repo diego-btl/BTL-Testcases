@@ -1,0 +1,152 @@
+testmo:
+  case_id: 62158
+  folder_id: 99
+  project_id: 2
+  folder_path: map/favorites
+  folder_name_ui: Favorites
+  created_at: '2025-12-16 17:27:21.354651'
+  updated_at: '2025-12-16 17:33:44.589428'
+  last_sync: '2026-01-30T18:21:04.653376Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/62158
+metadata:
+  name: Save Favourites POI
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>User is viewing POI search results</li><li>The user is in
+    the Map screen</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 96519
+    case_id: 62158
+    text1: <ol><li>Tap in the POI cards</li><li>In the results tap to the <code>heart</code>
+      icon</li><li>Add the name of the POI saved</li><li>Tap <code>Save Favorite</code></li></ol>
+    text2: null
+    text3: <ul><li>User should see Save Favorite become enabled</li><li>A new pop-up
+      should show with the textfield to input the name</li><li>User should see a success
+      toast, and the heart icon should show the saved state</li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 96521
+    case_id: 62158
+    text1: <ol><li>Tap in the POI cards</li><li>In the results tap to the <code>heart</code>
+      icon</li><li>Add the name of the POI saved</li><li>Tap <code>CANCEL</code></li></ol>
+    text2: null
+    text3: <ul><li>The pop-up should be dismissed</li></ul>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 96522
+    case_id: 62158
+    text1: <ol><li>Tap in the POI cards</li><li>In the results tap to the <code>heart</code>
+      icon</li><li>Add the name of the POI saved</li><li>Tap <code>Save Favorite</code>
+      (<mark class="marker-pink">Mock a failure</mark>)</li></ol>
+    text2: null
+    text3: <ul><li>User should see a failure toast, and the heart icon should show
+      the non-saved state</li></ul>
+    text4: null
+    display_order: 3
+  notes: "<p>The app calls to <code>VehiclePOIDestinations</code>:</p><pre><code class=\"\
+    editor-plain language-plain code-block\">{\n  \"data\": {\n    \"vehicle\": {\n\
+    \      \"__typename\": \"ElectricVehicle\",\n      \"pointOfInterestDestination\"\
+    : {\n        \"__typename\": \"PointOfInterestResponse\",\n        \"folders\"\
+    : [\n          {\n            \"__typename\": \"Folder\",\n            \"folderName\"\
+    : \"Favorites\",\n            \"destinations\": [\n              {\n         \
+    \       \"__typename\": \"POIGeoAddress\",\n                \"id\": \"55467879\"\
+    ,\n                \"name\": \"ChargePoint\",\n                \"phoneNumber\"\
+    : \"8664802936\",\n                \"address\": {\n                  \"__typename\"\
+    : \"Address\",\n                  \"address1\": \"510 Technology Dr\",\n     \
+    \             \"address2\": \"510 Technology Dr\",\n                  \"city\"\
+    : \"Irvine\",\n                  \"state\": \"CA\",\n                  \"postalCode\"\
+    : \"92618\",\n                  \"country\": \"US\"\n                },\n    \
+    \            \"coordinate\": {\n                  \"__typename\": \"Location\"\
+    ,\n                  \"latitude\": 33.67329194444444,\n                  \"longitude\"\
+    : -117.75987888888889\n                }\n              },\n              {\n\
+    \                \"__typename\": \"POIGeoAddress\",\n                \"id\": \"\
+    29911397\",\n                \"name\": \"ChargePoint Test\",\n               \
+    \ \"phoneNumber\": \"8664802936\",\n                \"address\": {\n         \
+    \         \"__typename\": \"Address\",\n                  \"address1\": \" 950\
+    \ Spectrum Center Dr\",\n                  \"address2\": null,\n             \
+    \     \"city\": \"Irvine\",\n                  \"state\": \"CA\",\n          \
+    \        \"postalCode\": \"92618\",\n                  \"country\": \"US\"\n \
+    \               },\n                \"coordinate\": {\n                  \"__typename\"\
+    : \"Location\",\n                  \"latitude\": 33.647795,\n                \
+    \  \"longitude\": -117.73961777777778\n                }\n              },\n \
+    \             {\n                \"__typename\": \"POIGeoAddress\",\n        \
+    \        \"id\": \"29227475\",\n                \"name\": \"ChargePointQA\",\n\
+    \                \"phoneNumber\": \"8664802936\",\n                \"address\"\
+    : {\n                  \"__typename\": \"Address\",\n                  \"address1\"\
+    : \"505 Technology Dr\",\n                  \"address2\": \"505 Technology Dr\"\
+    ,\n                  \"city\": \"Irvine\",\n                  \"state\": \"CA\"\
+    ,\n                  \"postalCode\": \"92618\",\n                  \"country\"\
+    : \"US\"\n                },\n                \"coordinate\": {\n            \
+    \      \"__typename\": \"Location\",\n                  \"latitude\": 33.672557777777776,\n\
+    \                  \"longitude\": -117.75799694444444\n                }\n   \
+    \           },\n              {\n                \"__typename\": \"POIGeoAddress\"\
+    ,\n                \"id\": \"29193020\",\n                \"name\": \"mw test\"\
+    ,\n                \"phoneNumber\": \"1234567890\",\n                \"address\"\
+    : {\n                  \"__typename\": \"Address\",\n                  \"address1\"\
+    : \"815 N Bristol St\",\n                  \"address2\": \"test2\",\n        \
+    \          \"city\": \"Santa Ana\",\n                  \"state\": \"CA\",\n  \
+    \                \"postalCode\": \"92703\",\n                  \"country\": \"\
+    US\"\n                },\n                \"coordinate\": {\n                \
+    \  \"__typename\": \"Location\",\n                  \"latitude\": 33.730065555555555,\n\
+    \                  \"longitude\": -117.86059888888889\n                }\n   \
+    \           }\n            ]\n          },\n          {\n            \"__typename\"\
+    : \"Folder\",\n            \"folderName\": \"Recents\",\n            \"destinations\"\
+    : [\n              {\n                \"__typename\": \"POIGeoAddress\",\n   \
+    \             \"id\": \"29912240\",\n                \"name\": \"Grater Grilled\
+    \ Cheese\",\n                \"phoneNumber\": \"9493876455\",\n              \
+    \  \"address\": {\n                  \"__typename\": \"Address\",\n          \
+    \        \"address1\": \"6628 Irvine Center Drive\",\n                  \"address2\"\
+    : null,\n                  \"city\": \"Irvine\",\n                  \"state\"\
+    : \"CA\",\n                  \"postalCode\": \"92618\",\n                  \"\
+    country\": \"US\"\n                },\n                \"coordinate\": {\n   \
+    \               \"__typename\": \"Location\",\n                  \"latitude\"\
+    : 33.6686725,\n                  \"longitude\": -117.76490944444444\n        \
+    \        }\n              },\n              {\n                \"__typename\"\
+    : \"POIGeoAddress\",\n                \"id\": \"29912237\",\n                \"\
+    name\": \"BioScrip Infusion Services\",\n                \"phoneNumber\": \"8552120900\"\
+    ,\n                \"address\": {\n                  \"__typename\": \"Address\"\
+    ,\n                  \"address1\": \"199 Technology Dr\",\n                  \"\
+    address2\": null,\n                  \"city\": \"Irvine\",\n                 \
+    \ \"state\": \"CA\",\n                  \"postalCode\": \"92618\",\n         \
+    \         \"country\": \"US\"\n                },\n                \"coordinate\"\
+    : {\n                  \"__typename\": \"Location\",\n                  \"latitude\"\
+    : 33.66487305555555,\n                  \"longitude\": -117.74872444444445\n \
+    \               }\n              },\n              {\n                \"__typename\"\
+    : \"POIGeoAddress\",\n                \"id\": \"29912123\",\n                \"\
+    name\": \"Quail Hill Shopping Center\",\n                \"phoneNumber\": \"9497203100\"\
+    ,\n                \"address\": {\n                  \"__typename\": \"Address\"\
+    ,\n                  \"address1\": \"6601 - 6875 Quail Hill Pkwy\",\n        \
+    \          \"address2\": null,\n                  \"city\": \"Irvine\",\n    \
+    \              \"state\": \"CA\",\n                  \"postalCode\": \"92603\"\
+    ,\n                  \"country\": \"US\"\n                },\n               \
+    \ \"coordinate\": {\n                  \"__typename\": \"Location\",\n       \
+    \           \"latitude\": 33.654719166666666,\n                  \"longitude\"\
+    : -117.77911583333334\n                }\n              },\n              {\n\
+    \                \"__typename\": \"POIGeoAddress\",\n                \"id\": \"\
+    29911400\",\n                \"name\": \"mw test\",\n                \"phoneNumber\"\
+    : \"1234567890\",\n                \"address\": {\n                  \"__typename\"\
+    : \"Address\",\n                  \"address1\": \"815 N Bristol St test2\",\n\
+    \                  \"address2\": null,\n                  \"city\": \"Santa Ana\"\
+    ,\n                  \"state\": \"CA\",\n                  \"postalCode\": \"\
+    92703\",\n                  \"country\": \"US\"\n                },\n        \
+    \        \"coordinate\": {\n                  \"__typename\": \"Location\",\n\
+    \                  \"latitude\": 33.730065555555555,\n                  \"longitude\"\
+    : -117.86059888888889\n                }\n              },\n              {\n\
+    \                \"__typename\": \"POIGeoAddress\",\n                \"id\": \"\
+    29909699\",\n                \"name\": \"Tesla, Inc.\",\n                \"phoneNumber\"\
+    : null,\n                \"address\": {\n                  \"__typename\": \"\
+    Address\",\n                  \"address1\": \"950 , Spectrum Center Drive\",\n\
+    \                  \"address2\": null,\n                  \"city\": \"Irvine\"\
+    ,\n                  \"state\": \"CA\",\n                  \"postalCode\": \"\
+    92618\",\n                  \"country\": \"US\"\n                },\n        \
+    \        \"coordinate\": {\n                  \"__typename\": \"Location\",\n\
+    \                  \"latitude\": 33.64796277777778,\n                  \"longitude\"\
+    : -117.73950277777777\n                }\n              }\n            ]\n   \
+    \       }\n        ]\n      }\n    }\n  }\n}</code></pre>"

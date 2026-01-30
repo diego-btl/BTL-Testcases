@@ -1,0 +1,77 @@
+testmo:
+  case_id: 29804
+  folder_id: 3769
+  project_id: 5
+  folder_path: home/add-vehicle
+  folder_name_ui: Add Vehicle
+  created_at: '2024-12-20 15:21:40.308281'
+  updated_at: '2025-04-02 18:03:08.280157'
+  last_sync: '2026-01-30T18:20:38.385531Z'
+  url: https://bethinklabs.testmo.net/repositories/5/cases/29804
+metadata:
+  name: Add Vehicle - UI
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  steps:
+  - column_name: custom_steps
+    id: 48633
+    case_id: 29804
+    text1: <p>Tap on <code>Adicionar Veiculo</code></p>
+    text2: null
+    text3: <p>Page header is <code>ADICIONAR VEICULO</code></p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 48634
+    case_id: 29804
+    text1: null
+    text2: null
+    text3: <p>Card with copy <code>Use sua camera para escanear o número de chassi
+      ou digite abaixo</code></p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 48635
+    case_id: 29804
+    text1: null
+    text2: null
+    text3: <p>VIN Scanner with title <code>Escanear chassi</code></p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 48636
+    case_id: 29804
+    text1: null
+    text2: null
+    text3: <p>VIN Scanner with flash light button</p>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 48637
+    case_id: 29804
+    text1: null
+    text2: null
+    text3: <p>VIN entry field with a character counter</p>
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 48638
+    case_id: 29804
+    text1: null
+    text2: null
+    text3: <p><code>Validar Chassi</code> CTA</p>
+    text4: null
+    display_order: 6
+  - column_name: custom_steps
+    id: 48639
+    case_id: 29804
+    text1: <p>Tap on the &lt; button</p>
+    text2: null
+    text3: <p>User is brought back to Home screen</p><p>In android, user is taken
+      back to Garage</p>
+    text4: null
+    display_order: 7

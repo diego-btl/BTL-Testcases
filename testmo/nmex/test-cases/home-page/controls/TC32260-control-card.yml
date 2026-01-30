@@ -1,0 +1,30 @@
+testmo:
+  case_id: 32260
+  folder_id: 4153
+  project_id: 6
+  folder_path: home-page/controls
+  folder_name_ui: Controls
+  created_at: '2025-04-01 17:50:44.147994'
+  updated_at: null
+  last_sync: '2026-01-30T18:20:45.761563Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/32260
+metadata:
+  name: Control Card
+  priority: 1
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has a vehicle with REMOTE_VEHICLE_STATUS capability</p>
+  steps:
+  - column_name: custom_steps
+    id: 52639
+    case_id: 32260
+    text1: <p>1. Go to home screen</p>
+    text2: null
+    text3: <p>1. User should see Control card secondary text for timestamp and lock
+      status when data was last pulled</p>
+    text4: null
+    display_order: 1
+  notes: <p>this is shown not on the Home screen but in the Vehicle screen.</p>

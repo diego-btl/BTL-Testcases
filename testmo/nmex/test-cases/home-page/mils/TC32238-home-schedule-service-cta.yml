@@ -1,0 +1,31 @@
+testmo:
+  case_id: 32238
+  folder_id: 4148
+  project_id: 6
+  folder_path: home-page/mils
+  folder_name_ui: MILs
+  created_at: '2025-04-01 17:50:44.010485'
+  updated_at: '2025-08-25 16:45:01.527426'
+  last_sync: '2026-01-30T18:20:45.809728Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/32238
+metadata:
+  name: Home - Schedule Service CTA
+  priority: 1
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  steps:
+  - column_name: custom_steps
+    id: 52618
+    case_id: 32238
+    text1: <ol><li>Tap on Schedule Service</li></ol>
+    text2: null
+    text3: <ul><li>User should see Dealer Details (if user has a preferred dealer
+      and native scheduling is false)</li><li>User should see Select Services (if
+      user has a preferred dealer and native scheduling is true)</li><li>User should
+      see Find a Dealer (if user does not have a preferred dealer)</li><li>If FuelAutonomy
+      is lower than 30km gas CTA will have priority</li></ul>
+    text4: null
+    display_order: 1

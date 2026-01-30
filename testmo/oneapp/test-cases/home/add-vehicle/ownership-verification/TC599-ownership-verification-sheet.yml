@@ -1,0 +1,30 @@
+testmo:
+  case_id: 599
+  folder_id: 57
+  project_id: 2
+  folder_path: home/add-vehicle/ownership-verification
+  folder_name_ui: Ownership Verification
+  created_at: '2023-08-01 23:08:20.276820'
+  updated_at: '2024-10-17 17:56:23.776593'
+  last_sync: '2026-01-30T18:21:09.081602Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/599
+metadata:
+  name: Ownership Verification Sheet
+  priority: 1
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has successfully submitted ownership verification documents</p>
+  steps:
+  - column_name: custom_steps
+    id: 768
+    case_id: 599
+    text1: <p>1. Tap the Ownership Verification card<br />2. Tap Call Customer Support</p>
+    text2: null
+    text3: <p>1. User should see the Ownership Verification bottom sheet<br />2. User
+      should be able to call 1-855-426-6628 (Nissan NNA)<br />1-800-387-0122 (NCI)</p>
+    text4: null
+    display_order: 1
+  notes: <ul><li>Nissan NNA number has been updated</li></ul>

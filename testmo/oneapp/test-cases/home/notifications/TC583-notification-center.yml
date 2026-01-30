@@ -1,0 +1,41 @@
+testmo:
+  case_id: 583
+  folder_id: 49
+  project_id: 2
+  folder_path: home/notifications
+  folder_name_ui: Notifications
+  created_at: '2023-08-01 23:08:20.037658'
+  updated_at: '2025-10-06 08:08:53.961470'
+  last_sync: '2026-01-30T18:21:09.129637Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/583
+metadata:
+  name: Notification Center
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  steps:
+  - column_name: custom_steps
+    id: 752
+    case_id: 583
+    text1: <ol><li>Tap on notifications icon</li><li>Tap between Activity History
+      and Alerts tabs</li></ol>
+    text2: null
+    text3: <ul><li>User should see the notification center</li><li>User should be
+      able to navigate between Activity History and Alerts</li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 11837
+    case_id: 583
+    text1: <ol><li>Import the config file</li><li>Modify <code>EnableInAppMessages</code>
+      to <code>FALSE</code></li><li>Tap on notifications icon</li><li>Tap between
+      Activity History and Alerts tabs</li><li>Not seeing the notification messages
+      in the App</li></ol>
+    text2: null
+    text3: <ul><li>User should not see the notification toast/messages changes in
+      the app if the <code>EnableInAppMessages</code> is set to <code>FALSE</code></li></ul>
+    text4: null
+    display_order: 2

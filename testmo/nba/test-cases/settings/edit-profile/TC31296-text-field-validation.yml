@@ -1,0 +1,98 @@
+testmo:
+  case_id: 31296
+  folder_id: 4011
+  project_id: 5
+  folder_path: settings/edit-profile
+  folder_name_ui: Edit Profile
+  created_at: '2025-03-11 16:46:51.167620'
+  updated_at: '2025-03-11 16:53:18.817428'
+  last_sync: '2026-01-30T18:20:38.105294Z'
+  url: https://bethinklabs.testmo.net/repositories/5/cases/31296
+metadata:
+  name: Text Field Validation
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  steps:
+  - column_name: custom_steps
+    id: 51426
+    case_id: 31296
+    text1: <p>Validate fields using rules in description</p>
+    text2: null
+    text3: <p><code>Salvar</code> should be disabled by default</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 51427
+    case_id: 31296
+    text1: <p>Validate State Codes</p>
+    text2: null
+    text3: <p>AC AL AP AM BA CE DF ES GO MA MT MS MG PA PB PR PE PI RJ RN RO RS RR
+      SC SP SE TO</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 51428
+    case_id: 31296
+    text1: <p>Fill all mandatory fields</p>
+    text2: null
+    text3: <p><code>Salvar</code> should enter active state</p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 51429
+    case_id: 31296
+    text1: <p>Remove a prefilled mandatory field</p>
+    text2: null
+    text3: <p><code>Salvar</code> should stay in/enter disabled state</p><p>User should
+      see a footnote saying <code>*Campos obrigatórios</code></p>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 51430
+    case_id: 31296
+    text1: <p>Enter an invalid character in <code>Nome</code></p>
+    text2: null
+    text3: <p><code>Salvar</code> should stay in/enter disabled state</p><p>User should
+      see a footnote saying <code>*Nome inválido</code></p>
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 51431
+    case_id: 31296
+    text1: <p>Enter an invalid character in <code>Sobrenome</code></p>
+    text2: null
+    text3: <p><code>Salvar</code> should stay in/enter disabled state</p><p>User should
+      see a footnote saying <code>*Sobrenome inválido</code></p>
+    text4: null
+    display_order: 6
+  - column_name: custom_steps
+    id: 51432
+    case_id: 31296
+    text1: <p>Enter an invalid <code>Telefone</code></p>
+    text2: null
+    text3: <p><code>Salvar</code> should stay in/enter disabled state</p><p>User should
+      see a footnote saying <code>*Telefone inválido</code></p>
+    text4: null
+    display_order: 7
+  - column_name: custom_steps
+    id: 51433
+    case_id: 31296
+    text1: <p>Enter an invalid <code>Email</code></p>
+    text2: null
+    text3: <p><code>Salvar</code> should stay in/enter disabled state</p><p>User should
+      see a footnote saying <code>*Email inválido</code></p>
+    text4: null
+    display_order: 8
+  - column_name: custom_steps
+    id: 51434
+    case_id: 31296
+    text1: <p>Enter an invalid <code>CEP</code></p>
+    text2: null
+    text3: <p><code>Salvar</code> should stay in/enter disabled state</p><p>User should
+      see a footnote saying <code>*CEP inválido</code></p>
+    text4: null
+    display_order: 9

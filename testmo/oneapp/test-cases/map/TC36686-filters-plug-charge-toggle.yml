@@ -1,0 +1,62 @@
+testmo:
+  case_id: 36686
+  folder_id: 46
+  project_id: 2
+  folder_path: map
+  folder_name_ui: Map
+  created_at: '2025-05-06 17:52:08.272863'
+  updated_at: '2025-12-19 20:27:43.413445'
+  last_sync: '2026-01-30T18:21:06.029131Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/36686
+metadata:
+  name: Filters - Plug & Charge toggle
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<ul><li>FF <code>"GrantFullPlugAndCharge": true</code></li><li>User
+    is on the Map screen</li><li>AccountStatus is <code>ACTIVE</code></li></ul>'
+  steps:
+  - column_name: custom_steps
+    id: 61468
+    case_id: 36686
+    text1: <ol><li>Tap on <strong>Filters</strong> button </li></ol>
+    text2: null
+    text3: <ul><li>User should see the <strong>Filters</strong> screen opens as a
+      splash page</li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 61469
+    case_id: 36686
+    text1: '<ol><li>Scroll to the <strong>Charge Station Preferences</strong> section <br
+      /><code>(AccountStatus API returns  "pncStatus": "FAILED" or "pncStatus": "INSTALLING"
+      OR "pncStatus": "READY" OR "pncStatus": "RENEWING" OR "pncStatus": "PENDING")</code></li></ol>'
+    text2: null
+    text3: <ul><li>The <strong>Plug &amp; Charge</strong> toggle is present in the
+      <strong>Charge Station Preferences</strong> section in <strong>DISABLED</strong>
+      state by default</li></ul>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 61470
+    case_id: 36686
+    text1: <ol><li>Enable the <strong>Plug &amp; Charge</strong> toggle and tap <strong>APPLY</strong>
+      button </li></ol>
+    text2: null
+    text3: <ul><li>Filters splash screen should be closed, user is navigated to the
+      <strong>Map</strong> screen</li></ul>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 61471
+    case_id: 36686
+    text1: <ol><li>On the <strong>Map</strong> screen tap <strong>Charge Stations
+      ePOI</strong></li></ol>
+    text2: null
+    text3: '<ul><li><strong>LocationDetails</strong> API is triggered with request
+      including the following parameter:<ul><li><code>"pncStationsOnly": true</code></li></ul></li></ul>'
+    text4: null
+    display_order: 4

@@ -1,0 +1,45 @@
+testmo:
+  case_id: 62152
+  folder_id: 2444
+  project_id: 2
+  folder_path: home/charge/necn-nissan-energy-charge-network
+  folder_name_ui: NECN - NISSAN ENERGY Charge Network
+  created_at: '2025-12-15 17:52:22.369249'
+  updated_at: '2026-01-15 19:04:02.956114'
+  last_sync: '2026-01-30T18:21:04.696581Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/62152
+metadata:
+  name: NECN - Plug & Charge Card - AD
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<p>User has an EV/EV2</p><p>"EnablePlugAndCharge": "true"</p><p>VehicleStaticData
+    &gt; "driverType": "SHARED_DRIVER"</p><p>AccountStatus &gt; "status": "ACTIVE"</p>'
+  steps:
+  - column_name: custom_steps
+    id: 96470
+    case_id: 62152
+    text1: '<p>Mock AccountStatus API to return "pncStatus": "READY" and "toggleStatus":
+      "ENABLED"/"DISABLED"</p><p>Navigate to the NISSAN ENERGY Charge Network screen</p>'
+    text2: null
+    text3: <p>Plug &amp; Charge card is shown:</p><ul><li>The toggle is in ON/OFF
+      state</li><li>The copy is 'Plug and Charge provides a seamless method of charging
+      (when at compatible stations). After plugging in the vehicle, charging will
+      start automatically. <br /><strong>Troubleshooting</strong> <br />- If charging
+      doesn't start within two minutes, unplug the charger<br />- Toggle "off" Plug
+      &amp; Charge in-app<br />- Begin the session through your MyNISSAN app (or follow
+      the instructions on the charger)'</li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 96471
+    case_id: 62152
+    text1: <p>Mock AccountStatus API to return "pncStatus" =! "READY" ("INSTALLING"/"PENDING"/"RENEWING"/"FAILED"/"NA"/""/null)</p><p>Navigate
+      to the NISSAN ENERGY Charge Network screen</p>
+    text2: null
+    text3: <p>Plug &amp; Charge card is hidden</p>
+    text4: null
+    display_order: 2

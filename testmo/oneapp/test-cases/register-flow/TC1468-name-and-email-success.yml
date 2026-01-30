@@ -1,0 +1,36 @@
+testmo:
+  case_id: 1468
+  folder_id: 43
+  project_id: 2
+  folder_path: register-flow
+  folder_name_ui: Register Flow
+  created_at: '2023-08-28 20:13:22.575016'
+  updated_at: '2025-08-21 13:41:51.188464'
+  last_sync: '2026-01-30T18:21:08.206299Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/1468
+metadata:
+  name: Name and Email - Success*
+  priority: 3
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is on the first registration screen</p>
+  steps:
+  - column_name: custom_steps
+    id: 1836
+    case_id: 1468
+    text1: <p>Enter valid first name, last name, and matching emails</p>
+    text2: null
+    text3: <p>User should see enabled Next CTA button<br /> </p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 37736
+    case_id: 1468
+    text1: <p>Tap on Next CTA button</p>
+    text2: null
+    text3: <p>User should be brought to the second registration screen</p>
+    text4: null
+    display_order: 2

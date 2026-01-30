@@ -1,0 +1,45 @@
+testmo:
+  case_id: 777
+  folder_id: 101
+  project_id: 2
+  folder_path: map/route-planner
+  folder_name_ui: Route Planner
+  created_at: '2023-08-01 23:08:22.551346'
+  updated_at: '2025-12-03 16:03:25.200529'
+  last_sync: '2026-01-30T18:21:08.749120Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/777
+metadata:
+  name: Climate Preferences
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>User is on <strong>Create a Route</strong> screen</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 946
+    case_id: 777
+    text1: <ol><li>Check the box to save a preferred climate setting and create a
+      new route</li></ol>
+    text2: null
+    text3: <ul><li>User should be able to check the box and their climate setting
+      should be saved to the local cache</li><li>The next fields should be displaying:<ul><li><strong>Schedule
+      Temp. at Departure</strong> (Drop down to select the new temperature - NCI will
+      handle decimal values like 20, 20.5, 21, 21.5, etc) - 72 F (default)</li><li><strong>Climate
+      Pre-Conditioning</strong> - Toggle ON</li><li><strong>Save as preferred climate
+      settings</strong> - Unchecked</li></ul></li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 95850
+    case_id: 777
+    text1: <ol><li>Disable the <code>Climate Pre-Conditioning</code> toggles</li></ol>
+    text2: null
+    text3: <ul><li>The drop down for <code>Schedule Temp. at Departure</code> it is
+      not enable anymore</li><li>User can't select a new temperature</li><li>The field
+      it is greyed out</li><li>User is not able to check the Save as preferred climate
+      settings box</li></ul>
+    text4: null
+    display_order: 2

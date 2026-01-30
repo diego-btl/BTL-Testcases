@@ -1,0 +1,49 @@
+testmo:
+  case_id: 41883
+  folder_id: 3800
+  project_id: 2
+  folder_path: vehicle/collision-management-nna-only
+  folder_name_ui: Collision Management - NNA only
+  created_at: '2025-06-09 22:35:06.156407'
+  updated_at: '2025-06-09 22:37:55.967005'
+  last_sync: '2026-01-30T18:21:05.889223Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/41883
+metadata:
+  name: Photos Screen - Delete Photo - Error
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>User is on the Photo screen </li><li>A photo is already selected
+    or captured and is being previewed.</li><li>mocking DeletePhotoForCollisionReport
+    API call false</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 71980
+    case_id: 41883
+    text1: <p>On the Photos screen, tap the previously selected photo</p>
+    text2: null
+    text3: <p>The user is navigated to the <code>Photo Details</code> screen</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 71981
+    case_id: 41883
+    text1: <p>Simulate a failure in the <code>DeletePhotoForCollisionReport </code>
+       API call false</p>
+    text2: null
+    text3: null
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 71982
+    case_id: 41883
+    text1: <p>Tap the <code>Delete Photo </code>CTA.</p>
+    text2: null
+    text3: <p> The app triggers the <code>DeletePhotoForCollisionReport</code> API.<br
+      />User sees the corresponding error modal " <code>Unable to delete image</code>"<br
+      /> </p>
+    text4: null
+    display_order: 3

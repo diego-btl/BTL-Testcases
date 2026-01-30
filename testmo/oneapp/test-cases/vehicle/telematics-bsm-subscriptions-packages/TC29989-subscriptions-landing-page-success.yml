@@ -1,0 +1,47 @@
+testmo:
+  case_id: 29989
+  folder_id: 3863
+  project_id: 2
+  folder_path: vehicle/telematics-bsm-subscriptions-packages
+  folder_name_ui: Telematics BSM - Subscriptions Packages
+  created_at: '2025-01-16 23:56:40.100195'
+  updated_at: '2025-12-09 17:21:19.582112'
+  last_sync: '2026-01-30T18:21:06.475793Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/29989
+metadata:
+  name: Subscriptions Landing Page - SUCCESS
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<ul><li>FF "EnableTelematicsBSM": "true"</li></ul>'
+  steps:
+  - column_name: custom_steps
+    id: 48843
+    case_id: 29989
+    text1: <p>Login to app &gt; Go to vehicles screen &gt; Tap on Subscription Packages
+      card</p>
+    text2: null
+    text3: '<p>App triggers <code>VehicleSubscriptions</code> call and the user should
+      be redirected to the <code>Subscriptions</code> landing screen with the following
+      format:</p><ul><li><strong>Title:</strong> Subscriptions (Hard Coded)</li><li><strong>Section
+      Title:</strong> Your packages: (Hard Coded)</li><li><strong>Card Title:</strong>
+      Select (product - marketing name)</li><li><strong>Card Body:</strong> IF MY26+
+      :"Trial expires:"</li></ul><p>App may also trigger "VehicleWifiConsumption"
+      api</p>'
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 48844
+    case_id: 29989
+    text1: <p>Go to proxyman and look for the <code>VehicleSubscriptions</code> </p>
+    text2: null
+    text3: <p>Verify information displayed on the FE is correct according values retrieved
+      from the API:</p><ul><li><strong>Card Title &lt;&gt; marketingName (just the
+      last word without 'NissanConnect Services')</strong></li><li><strong>Card Body
+      &lt;&gt; subscriptionEndDate</strong></li></ul><p><strong>And wifi consumption
+      details as per "VehicleWifiConsumption" api response</strong></p>
+    text4: null
+    display_order: 2

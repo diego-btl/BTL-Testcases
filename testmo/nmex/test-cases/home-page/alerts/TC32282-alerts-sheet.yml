@@ -1,0 +1,27 @@
+testmo:
+  case_id: 32282
+  folder_id: 4157
+  project_id: 6
+  folder_path: home-page/alerts
+  folder_name_ui: Alerts
+  created_at: '2025-04-01 17:50:44.295985'
+  updated_at: null
+  last_sync: '2026-01-30T18:20:45.721330Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/32282
+metadata:
+  name: Alerts Sheet
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  steps:
+  - column_name: custom_steps
+    id: 52661
+    case_id: 32282
+    text1: <p>Tap Alerts Card</p>
+    text2: null
+    text3: <p>User should see the main alerts sheet</p>
+    text4: null
+    display_order: 1

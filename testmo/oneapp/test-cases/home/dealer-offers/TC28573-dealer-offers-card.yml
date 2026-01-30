@@ -1,0 +1,67 @@
+testmo:
+  case_id: 28573
+  folder_id: 3600
+  project_id: 2
+  folder_path: home/dealer-offers
+  folder_name_ui: Dealer Offers
+  created_at: '2024-11-30 00:17:05.179646'
+  updated_at: '2025-12-19 15:16:09.383584'
+  last_sync: '2026-01-30T18:21:06.635675Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/28573
+metadata:
+  name: Dealer Offers Card
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>The user has a valid vehicle selected</li><li>No Pending
+    or Stolen vehicle</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 96832
+    case_id: 28573
+    text1: '<ol><li>The user reaches the Home screen (<code>"EnableDealerOffers":
+      "false"</code>)</li></ol>'
+    text2: null
+    text3: <ul><li>Not card for <strong>Offers and Promotions</strong> should be display</li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 46189
+    case_id: 28573
+    text1: '<ol><li>The user reaches the <strong>Home</strong> Screen (<code>"EnableDealerOffers":
+      "true"</code>)</li></ol>'
+    text2: null
+    text3: <ul><li>The user should see a card at the bottom that reads <strong>Offers
+      and Promotions</strong> as shown in the design</li></ul>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 46190
+    case_id: 28573
+    text1: <ol><li>The user taps on the card</li></ol>
+    text2: null
+    text3: <ul><li>The user should be taken to the <strong>Dealer Offers</strong>
+      screen </li></ul>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 96783
+    case_id: 28573
+    text1: <ol><li>The user select one of the offers from the list</li></ol>
+    text2: null
+    text3: <ul><li>The user is redirect to <strong>Offer Details</strong> screen</li></ul>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 96784
+    case_id: 28573
+    text1: <ol><li>The user clicks the <code>&lt;</code> arrow</li><li>The user clicks
+      the <code>&lt;</code> arrow again</li></ol>
+    text2: null
+    text3: <ul><li>The user goes back to the previous screen &gt; <strong>Dealer Offers</strong></li><li>The
+      user goes to the <strong>Home</strong> page</li></ul>
+    text4: null
+    display_order: 5

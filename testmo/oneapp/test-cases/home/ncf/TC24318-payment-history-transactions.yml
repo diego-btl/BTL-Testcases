@@ -1,0 +1,36 @@
+testmo:
+  case_id: 24318
+  folder_id: 3084
+  project_id: 2
+  folder_path: home/ncf
+  folder_name_ui: NCF
+  created_at: '2024-10-18 16:15:36.259375'
+  updated_at: '2024-11-30 00:16:30.915169'
+  last_sync: '2026-01-30T18:21:06.763169Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/24318
+metadata:
+  name: Payment History - Transactions
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>Login with an NCF account &gt; <a href="https://www.notion.so/bethinklabs/d0f8f58385a94c51ab27ce3ee1ef1e51?v=caf06428a7ac41aa96541666be242cd7">https://www.notion.so/bethinklabs/d0f8f58385a94c51ab27ce3ee1ef1e51?v=caf06428a7ac41aa96541666be242cd7</a></p>
+  steps:
+  - column_name: custom_steps
+    id: 37912
+    case_id: 24318
+    text1: <ol><li>Login into the app</li><li>In the Home page screen</li><li>Click
+      over <strong>NCF Account</strong> card</li><li>Open the <strong>NCF Account</strong>
+      screen</li><li>Click the option <strong>Payment History</strong></li></ol>
+    text2: null
+    text3: <p>The data it is displaying correctly with the 2 tabs:</p><ul><li><strong>Transactions
+      (Default)</strong></li><li><strong>Statements</strong></li></ul><p>The <strong>Transactions</strong>
+      results should display the next fields:</p><ul><li><code>Transaction Type</code><ul><li><i>Extension
+      Processing</i></li><li><i>Regular Payment</i></li><li><i>Reversal Payment</i></li><li><i>Interest
+      Principal Payment</i></li><li><i>Reversal Interest Principal Payment</i></li><li><i>Payoff
+      Payment</i></li><li><i>Reversal Net Payoff</i></li></ul></li><li><code>Effective
+      Date</code> &gt; MM/DD/YYYY</li><li><code>Total Payment Amount</code> &gt; $XXXX.XX</li></ul>
+    text4: null
+    display_order: 1

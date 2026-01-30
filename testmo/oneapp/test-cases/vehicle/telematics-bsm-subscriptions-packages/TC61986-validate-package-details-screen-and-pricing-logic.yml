@@ -1,0 +1,95 @@
+testmo:
+  case_id: 61986
+  folder_id: 3863
+  project_id: 2
+  folder_path: vehicle/telematics-bsm-subscriptions-packages
+  folder_name_ui: Telematics BSM - Subscriptions Packages
+  created_at: '2025-11-12 13:50:10.206830'
+  updated_at: '2025-12-09 17:23:05.883729'
+  last_sync: '2026-01-30T18:21:05.326749Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/61986
+metadata:
+  name: Validate Package Details screen and Pricing Logic
+  priority: 1
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>A VIN &gt;= MY26 is linked to the user.</li><li><code>EnableTelematicsBSM
+    = True</code>.</li><li><code>ProductCatalog</code> returns multiple packages with
+    variations in <code>retailPrice</code> and <code>discountedPrice</code>.</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 95447
+    case_id: 61986
+    text1: <p>Navigate to <strong>Vehicle &gt; </strong>Mock <strong>ProductCatalog
+      </strong>APi to have <code>retailPrice = 0</code> or <code>null</code> &gt;
+      Tap on <strong>Subscription Packages</strong>.</p>
+    text2: null
+    text3: <p>Verify that packages under <strong>Available for Purchase </strong>are
+      not displayed</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 95450
+    case_id: 61986
+    text1: <p>Navigate to <strong>Vehicle &gt; </strong>Mock <strong>ProductCatalog
+      </strong>APi to have <code>discountedPrice = 0</code> or <code>null</code> and
+      <code>retailPrice = 10.87</code>&gt; Tap on <strong>Subscription Packages</strong>.</p><p><i>*Could
+      be any valid retailPrice</i></p>
+    text2: null
+    text3: <p>Verify that packages under <strong>Available for Purchase </strong>are
+      displayed</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 95451
+    case_id: 61986
+    text1: <p>Navigate to <strong>Vehicle &gt; </strong>Mock <strong>ProductCatalog
+      </strong>APi to have <code>discountedPrice = 0</code> and <code>retailPrice
+      = 10.87</code>&gt; Tap on <strong>Subscription Packages &gt; </strong>Tap on
+      <code>Learn more</code></p>
+    text2: null
+    text3: <p>On the <strong>Product Details Page</strong>, verify:</p><ul><li>The
+      promotions section is hidden.</li><li>“Buy Now” CTA is visible and uses retailPrice
+      (non-zero).</li><li>No $0 values are shown.</li></ul>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 95452
+    case_id: 61986
+    text1: <p>Navigate to <strong>Vehicle &gt; </strong>Mock <strong>ProductCatalog
+      </strong>APi to have <code>discountedPrice &gt; 0</code> and <code>retailPrice
+      = 10.87</code>&gt; Tap on <strong>Subscription Packages &gt; </strong>Tap on
+      <code>Learn more</code></p><p><i>*Could be any valid for retailPrice/discountedPrice</i></p>
+    text2: null
+    text3: <p>Verify:</p><ul><li>The promotions section is visible.</li><li>Both retail
+      and discounted prices are shown correctly.</li><li>“Buy Now” CTA reflects <code>discountedPrice</code>.</li></ul>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 95458
+    case_id: 61986
+    text1: <p>Tap <strong>“Learn More”</strong> on a package where <code>sellingModelPricingTermUnit
+      = "Months"</code></p>
+    text2: null
+    text3: <p>On the <strong>Product Details Page</strong>, verify:</p><ul><li>Price
+      label shows <strong>“per month”</strong>.</li><li>If <code>discountedPrice &gt;
+      0</code>, both discounted and retail prices are displayed (promo section visible).</li><li>If
+      <code>discountedPrice = 0</code>, promo section is hidden and retailPrice used
+      for “Buy Now.”</li></ul>
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 95459
+    case_id: 61986
+    text1: <p>Tap <strong>“Learn More”</strong> on a package where <code>sellingModelPricingTermUnit
+      = "Annual"</code></p>
+    text2: null
+    text3: <p>Verify:</p><ul><li>Price label shows <strong>“per year.”</strong></li><li>If
+      <code>discountedPrice &gt; 0</code>, both retail and discounted prices are visible
+      (promo section shown).</li><li>If <code>discountedPrice = 0</code>, promo section
+      hidden, retailPrice used for “Buy Now.”</li></ul>
+    text4: null
+    display_order: 6

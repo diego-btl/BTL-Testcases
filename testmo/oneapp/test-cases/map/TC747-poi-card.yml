@@ -1,0 +1,29 @@
+testmo:
+  case_id: 747
+  folder_id: 46
+  project_id: 2
+  folder_path: map
+  folder_name_ui: Map
+  created_at: '2023-08-01 23:08:22.163097'
+  updated_at: '2025-12-16 17:26:25.929940'
+  last_sync: '2026-01-30T18:21:08.819038Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/747
+metadata:
+  name: POI Card
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has performed a category search</p>
+  steps:
+  - column_name: custom_steps
+    id: 916
+    case_id: 747
+    text1: <ol><li>Swipe between the POI cards</li></ol>
+    text2: null
+    text3: <ul><li>User should see POI cards for the corresponding POI pins</li><li>User
+      should see next POI card and map update to the corresponding pin</li></ul>
+    text4: null
+    display_order: 1

@@ -1,0 +1,56 @@
+testmo:
+  case_id: 29687
+  folder_id: 43
+  project_id: 2
+  folder_path: register-flow
+  folder_name_ui: Register Flow
+  created_at: '2024-12-18 19:58:05.751372'
+  updated_at: '2025-10-06 07:16:04.367465'
+  last_sync: '2026-01-30T18:21:06.586889Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/29687
+metadata:
+  name: Registration - User exists*
+  priority: 1
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>User has already preregistered accounts.  </li><li>User is
+    on the first screen of registration page</li><li>User fills out First Name and
+    Last Name fields</li></ul><p>Use  mocks attached in  ticket below  to get appropriate
+    response from <code>ValidateNissanID</code></p><p> <a href="https://www.pivotaltracker.com/story/show/185493300"><u>https://www.pivotaltracker.com/story/show/185493300</u></a></p>
+  steps:
+  - column_name: custom_steps
+    id: 48348
+    case_id: 29687
+    text1: <p>User Inputs an Email and Confirm Email of an account that already exists
+      and taps on <code>Next</code>  button.  Verify typename response from <code>ValidateNissanID</code>
+       is <code>NissanIdExists</code></p>
+    text2: null
+    text3: <p>Red asterisk "*" is displayed at the beginning of warning message<br
+      />Warning  message is displayed as "*  User already exists for this email address.
+      Please SIGN_IN instead"</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 48349
+    case_id: 29687
+    text1: <p>User Inputs an Email and Confirm Email of an account that already exists
+      and tap on<code>Next</code>  button.  Verify  typename response from  <code>ValidateNissanID</code>
+       is <code>NissanIDRequiresOwnerPortalPwReset</code> or <code>NissanIDRequiresOwnerPortalProfileCompletion</code>
+      or</p><p><code>NissanIdRequiresNMACPWReset</code></p>
+    text2: null
+    text3: '<p>Modal is displayed as below:<br />Header:  Action Required<br />Text:
+       We are improving our data security. Please reset your NISSAN ID password</p><p>CTA:
+        Cancel <br />CTA:   Confirm</p>'
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 48350
+    case_id: 29687
+    text1: <p>User taps on Confirm button</p>
+    text2: null
+    text3: <p>User is redirected to  <code>link</code> on the response</p>
+    text4: null
+    display_order: 3

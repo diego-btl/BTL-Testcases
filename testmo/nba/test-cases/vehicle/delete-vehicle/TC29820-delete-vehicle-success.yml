@@ -1,0 +1,57 @@
+testmo:
+  case_id: 29820
+  folder_id: 3770
+  project_id: 5
+  folder_path: vehicle/delete-vehicle
+  folder_name_ui: Delete Vehicle
+  created_at: '2024-12-20 15:21:40.308281'
+  updated_at: null
+  last_sync: '2026-01-30T18:20:38.321887Z'
+  url: https://bethinklabs.testmo.net/repositories/5/cases/29820
+metadata:
+  name: Delete Vehicle - Success
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is on vehicle profile</p>
+  steps:
+  - column_name: custom_steps
+    id: 48689
+    case_id: 29820
+    text1: <p>Tap on <code>Remover Veiculo</code></p>
+    text2: null
+    text3: <p>Delete Vehicle api should be triggered and user should see a loading
+      state while api loads</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 48690
+    case_id: 29820
+    text1: null
+    text2: null
+    text3: <p>User should be brought back to the home screen. </p><ol><li>If they
+      had another vehicle, then the first vehicle returned in the static query should
+      be displayed</li><li>If they did not have another vehicle, then they should
+      see the no vehicle state</li></ol>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 48691
+    case_id: 29820
+    text1: null
+    text2: null
+    text3: <p>User should see a success toast `Veículo removido com sucesso` with
+      a green check mark </p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 48692
+    case_id: 29820
+    text1: null
+    text2: null
+    text3: <p>User should no longer see the deleted vehicle in their garage</p>
+    text4: null
+    display_order: 4

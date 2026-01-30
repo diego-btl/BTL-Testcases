@@ -1,0 +1,61 @@
+testmo:
+  case_id: 32529
+  folder_id: 4079
+  project_id: 2
+  folder_path: home/nissan-protection-ncesi
+  folder_name_ui: Nissan Protection (NCESI)
+  created_at: '2025-04-04 23:39:31.474030'
+  updated_at: '2025-04-04 23:53:28.856967'
+  last_sync: '2026-01-30T18:21:06.130818Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/32529
+metadata:
+  name: Verify Online button
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<p>Set FFs as follows</p><ul><li><code>EnableNcesiServiceContracts</code>:
+    true</li><li><code>EnableNcesiCatalogue</code>: true</li><li>Mock <code>GetServiceContract</code>
+    response (use attached mocks ENG/FR in case needed)</li></ul>'
+  steps:
+  - column_name: custom_steps
+    id: 53181
+    case_id: 32529
+    text1: <p>Get into <code>Nissan Protection</code> screen &gt; Tap on <code>View
+      all Nissan Protection Products</code> &gt; tap on any plan type (ASP, PMP, CPO)
+      &gt; Tap on <code>Online</code> button </p>
+    text2: null
+    text3: <p>Verify a modal is displayed.</p><ul><li>Are you sure?</li><li>You are
+      being redirected to Nissan's Buy Protection Plans portal.</li><li>Cancel and
+      Continue buttons</li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 53188
+    case_id: 32529
+    text1: <p>Tap con <code>Cancel</code> button</p>
+    text2: null
+    text3: <p>Verify app dismisses the modal</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 53189
+    case_id: 32529
+    text1: <p>Tap on <code>Continue</code> button</p>
+    text2: null
+    text3: '<p>User is taken to a browser, The URL should be the one retrieved on
+      <code>ContactUs</code> response:</p><pre><code class="editor-plain language-plain
+      code-block">"buyProtection": "https://www.mynissanprotection.ca/home"</code></pre>'
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 53190
+    case_id: 32529
+    text1: '<p>Mocke <code>ContactUs</code> response to have </p><pre><code class="editor-plain
+      language-plain code-block">"buyProtection": null"</code></pre>'
+    text2: null
+    text3: '<p>Verify user fallsback tho dame URL: <a href="https://www.mynissanprotection.ca/home"><code>https://www.mynissanprotection.ca/home</code></a> </p>'
+    text4: null
+    display_order: 4

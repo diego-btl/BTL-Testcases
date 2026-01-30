@@ -1,0 +1,74 @@
+testmo:
+  case_id: 61924
+  folder_id: 6755
+  project_id: 2
+  folder_path: home/charge/v1g-vehicle-to-grid
+  folder_name_ui: V1G - Vehicle-to-Grid
+  created_at: '2025-11-03 20:22:11.288817'
+  updated_at: '2025-12-16 18:20:15.189428'
+  last_sync: '2026-01-30T18:21:05.565628Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/61924
+metadata:
+  name: V1G - ENROLLING
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<p>Nissan NNA and NCI only</p><p>EV or EV AVK2 only</p><p>PD only</p><p>"v1GMonitoredChargingAccountStatus":
+    "ENROLLING"</p>'
+  steps:
+  - column_name: custom_steps
+    id: 94957
+    case_id: 61924
+    text1: <p>1. User is on the Optimize tab</p><p>2. Tap the 'Activate Now' button</p>
+    text2: null
+    text3: <p>1. None of the APIs are called</p><p>2. The modal 'Your account is in
+      the process of enrolling.' with 'Ok' and 'Contact Support' buttons is displayed</p><figure
+      class="image"><img src="/attachments/view/8704" alt="8704" /></figure>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 94958
+    case_id: 61924
+    text1: <p>Tap 'Ok' button</p>
+    text2: null
+    text3: <p>The modal is dismissed</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 94959
+    case_id: 61924
+    text1: <p>Tap 'Contact Support' button</p>
+    text2: null
+    text3: <p>The native app page is opened with prepopulation of the phone number
+      (ContactUs API <code>customerCare</code>)</p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 94960
+    case_id: 61924
+    text1: <p>1. User is on the Insights tab</p><p>2. Tap the 'Activate Now' button</p>
+    text2: null
+    text3: <p>1. None of the APIs are called</p><p>2. The modal 'Your account is in
+      the process of enrolling.' with 'Ok' and 'Contact Support' buttons is displayed</p>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 94961
+    case_id: 61924
+    text1: <p>Tap 'Ok' button</p>
+    text2: null
+    text3: <p>The modal is dismissed</p>
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 94962
+    case_id: 61924
+    text1: <p>Tap 'Contact Support' button</p>
+    text2: null
+    text3: <p>The native app page is opened with prepopulation of the phone number
+      (ContactUs API <code>customerCare</code>)</p>
+    text4: null
+    display_order: 6

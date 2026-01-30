@@ -1,0 +1,51 @@
+testmo:
+  case_id: 2856
+  folder_id: 415
+  project_id: 2
+  folder_path: old-deprecated/ccs2/oil-level
+  folder_name_ui: Oil Level
+  created_at: '2023-09-13 15:53:46.689809'
+  updated_at: '2026-01-06 17:49:35.796885'
+  last_sync: '2026-01-30T18:21:07.377879Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/2856
+metadata:
+  name: Oil Level - feature flagged
+  priority: 13
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: "<pre><code class=\"editor-plain language-plain code-block\">{\n\
+    \    \"entries\": {\n        \"EnableAdjustClimate\": \"false\",\n        \"EnableCurfewAlertAdjustment\"\
+    : \"false\",\n        \"EnableInAppMessages\": \"false\",\n        \"EnableLocationAutoUpdate\"\
+    : \"false\",\n        \"EnableMechanicalRepair\": \"false\",\n        \"EnablePayAndCharge\"\
+    : \"false\",\n        \"EnableSecondDelivery\": \"false\",\n        \"EnableV2L\"\
+    : \"true\",\n        \"ExperimentalLockUnlock\": \"false\",\n        \"GrantMechanicalRepair\"\
+    : \"{\\\"enabled\\\": false, \\\"checkCapability\\\": true}\",\n        \"GrantProactiveMaintenance\"\
+    : \"{\\\"enabled\\\": false, \\\"checkCapability\\\": true}\",\n        \"SearchPoiMinCountPerStop\"\
+    : \"15\",\n        \"ShowAddStop\": \"true\",\n        \"ShowOilLevelCard\": \"\
+    true\",\n        \"ShowProactiveMaintenance\": \"false\",\n        \"ShowWindowOpenReminder\"\
+    : \"false\",\n        \"UpdateVersion\": \"{\\\"storeUrl\\\":\\\"https://play.google.com/store/apps/details?id=com.nissan.mynissan\\\
+    \",\\\"updateVersion\\\":\\\"4.4.10\\\"}\",\n        \"UseAlternativeDeleteVehicleCopy\"\
+    : \"false\",\n        \"UseNewRemoteDataWipeImplementation\": \"false\"\n    },\n\
+    \    \"appName\": \"com.nissan.mynissan\",\n    \"state\": \"UPDATE\",\n    \"\
+    templateVersion\": \"239\"\n}</code></pre>"
+  steps:
+  - column_name: custom_steps
+    id: 11733
+    case_id: 2856
+    text1: '<p>Set <code>"ShowOilLevelCard": "true",</code></p>'
+    text2: null
+    text3: null
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 11734
+    case_id: 2856
+    text1: <p>Kill the app and reopen it</p>
+    text2: null
+    text3: <p>The <a href="https://firebaseremoteconfig.googleapis.com/*"><code>https://firebaseremoteconfig.googleapis.com/*</code></a>
+      the call is edited with mocked data</p>
+    text4: null
+    display_order: 2

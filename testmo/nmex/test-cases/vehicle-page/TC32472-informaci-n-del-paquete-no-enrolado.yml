@@ -1,0 +1,40 @@
+testmo:
+  case_id: 32472
+  folder_id: 4086
+  project_id: 6
+  folder_path: vehicle-page
+  folder_name_ui: Vehicle Page
+  created_at: '2025-04-01 19:06:14.234890'
+  updated_at: '2025-08-20 19:12:39.703773'
+  last_sync: '2026-01-30T18:20:45.328539Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/32472
+metadata:
+  name: Información del Paquete - No enrolado
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<p>User''s vehicle is not currently enrolled (<code>"status": "NOT_ENROLLED",)</code></p><p>Also,
+    mock VehicleSubscriptions to ensure Subcription end date is a past date to simulate
+    vehicle no longer enrolled. </p>'
+  steps:
+  - column_name: custom_steps
+    id: 52899
+    case_id: 32472
+    text1: <p>Tap Package Info<br /> </p>
+    text2: null
+    text3: <p>The user should see the no subscription package screen<br /> </p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 52900
+    case_id: 32472
+    text1: <p>Tap Call</p>
+    text2: null
+    text3: '<p>The user should be able to call the following number: "<a href="tel:+528009647726"><u>+52
+      800 9 647726</u></a>",. </p><p>Verify its the same number that shows in contactus
+      api under customer service</p>'
+    text4: null
+    display_order: 2

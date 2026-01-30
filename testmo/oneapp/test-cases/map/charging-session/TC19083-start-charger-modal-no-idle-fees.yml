@@ -1,0 +1,39 @@
+testmo:
+  case_id: 19083
+  folder_id: 2442
+  project_id: 2
+  folder_path: map/charging-session
+  folder_name_ui: Charging Session
+  created_at: '2024-06-06 17:08:13.985113'
+  updated_at: '2025-02-28 21:21:55.089646'
+  last_sync: '2026-01-30T18:21:07.010489Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/19083
+metadata:
+  name: Start Charger modal - no idle fees
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p><code>EnablePlugAndCharge</code> is enabled in remote configs</p><p><code>AccountStatus</code>
+    is <code>ACTIVE</code></p>
+  steps:
+  - column_name: custom_steps
+    id: 27477
+    case_id: 19083
+    text1: <p>Go to Maps</p><p>Go to Filters</p><p> Select only Charge Point from
+      list of Providers OR Ensure at least this is selected</p><p>Tap on Apply</p>
+    text2: null
+    text3: null
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 27478
+    case_id: 19083
+    text1: <p>Pick Charge Point from the POIs listed</p>
+    text2: null
+    text3: '<p>You should not see any fees associated with the charger</p><p>The PricingDetails
+      api should have </p><p>  "parkingTariff": null,</p><p>        "flatFee": null,</p>'
+    text4: null
+    display_order: 2

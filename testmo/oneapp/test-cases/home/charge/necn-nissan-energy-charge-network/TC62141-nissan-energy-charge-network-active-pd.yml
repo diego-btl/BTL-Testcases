@@ -1,0 +1,72 @@
+testmo:
+  case_id: 62141
+  folder_id: 2444
+  project_id: 2
+  folder_path: home/charge/necn-nissan-energy-charge-network
+  folder_name_ui: NECN - NISSAN ENERGY Charge Network
+  created_at: '2025-12-11 20:44:08.117054'
+  updated_at: '2026-01-15 19:34:35.570123'
+  last_sync: '2026-01-30T18:21:04.761702Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/62141
+metadata:
+  name: NISSAN ENERGY Charge Network - Active - PD
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<p>User has an EV/EV2</p><p>"EnablePlugAndCharge": "true"</p><p>VehicleStaticData
+    &gt; "driverType": "PRIMARY_DRIVER"</p><p>Payment Method &gt; card is added to
+    the account</p>'
+  steps:
+  - column_name: custom_steps
+    id: 96345
+    case_id: 62141
+    text1: '<p>User is on the Manage EV screen </p><p>AccountStatus API &gt; "status":
+      "ACTIVE"</p>'
+    text2: null
+    text3: <p>NISSAN ENERGY Charge Network card is displayed</p><p>Subtitle of the
+      NISSAN ENERGY Charge Network card is 'Active'</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 96346
+    case_id: 62141
+    text1: <p>Tap  the NISSAN ENERGY Charge Network card</p>
+    text2: null
+    text3: <p>AccountStatus and NissanPay APIs are called</p><p>User is navigated
+      to the NISSAN ENERGY Charge Network screen</p><p>Account Status card:</p><ul><li>Status
+      is 'Active'</li><li>Copy is 'NISSAN ENERGY Charge Network'</li><li>'Deactivate
+      Account' button is displayed</li></ul><p>Payment Method card:</p><ul><li>Copy
+      is 'Your default payment method will be used for charging transactions.'</li><li>Added
+      card info</li><li>'Change Payment Method' CTA</li></ul><p>There's the text 'Need
+      more information?' and the 'CALL OUR HELP LINE' button</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 96347
+    case_id: 62141
+    text1: <p>Tap the 'CALL OUR HELP LINE' button</p>
+    text2: null
+    text3: <p>The phone number from the ContactUs.plugAndChargeSupport is populated</p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 96348
+    case_id: 62141
+    text1: <p>Tap the 'Change Payment Method' CTA</p>
+    text2: null
+    text3: <p>UpsertNissanPayAccount API is triggered (if it hasn't been called before)</p><p>The
+      loading state is displayed</p><p>User is navigated to the Nissan Store Wallet
+      screen</p>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 96434
+    case_id: 62141
+    text1: <p>Tap the back button on the Nissan Store Wallet screen</p>
+    text2: null
+    text3: <p>User is navigated back to the NISSAN ENERGY Charge Network screen</p>
+    text4: null
+    display_order: 5

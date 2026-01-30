@@ -1,0 +1,49 @@
+testmo:
+  case_id: 55398
+  folder_id: 2442
+  project_id: 2
+  folder_path: map/charging-session
+  folder_name_ui: Charging Session
+  created_at: '2025-07-29 20:46:43.958332'
+  updated_at: '2025-07-29 20:51:36.595844'
+  last_sync: '2026-01-30T18:21:05.817042Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/55398
+metadata:
+  name: NACS - Tesla Disclaimer is NOT displayed
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>AccountStatus API:<br />- status is ACTIVE<br />-  nacsStatus
+    is NOT_APPLICABLE, missing or null</p>
+  steps:
+  - column_name: custom_steps
+    id: 85363
+    case_id: 55398
+    text1: <p>Navigate to the Map and tap Charge Stations ePOI</p>
+    text2: null
+    text3: <p>LocationDetails API is triggered</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 85364
+    case_id: 55398
+    text1: <p>Navigate to the charge station which contains "Supercharger" in its
+      name, proceed to the Select Charge screen and tap START CHARGING CTA</p>
+    text2: null
+    text3: <p>The parkingChargeable API is triggered, Tesla disclaimer is NOT displayed
+      in the FE </p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 85365
+    case_id: 55398
+    text1: <p>Navigate to the charge station which DOES NOT contain "Supercharger"
+      in its name, proceed to the Select Charge screen and tap START CHARGING CTA</p>
+    text2: null
+    text3: <p>The parkingChargeable API is triggered, Tesla disclaimer IS NOT displayed
+      in the FE</p>
+    text4: null
+    display_order: 3

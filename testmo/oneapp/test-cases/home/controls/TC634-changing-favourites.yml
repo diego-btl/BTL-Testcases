@@ -1,0 +1,35 @@
+testmo:
+  case_id: 634
+  folder_id: 65
+  project_id: 2
+  folder_path: home/controls
+  folder_name_ui: Controls
+  created_at: '2023-08-01 23:08:20.717270'
+  updated_at: '2025-09-22 14:37:17.267322'
+  last_sync: '2026-01-30T18:21:08.986415Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/634
+metadata:
+  name: Changing favourites
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is on controls screen</p>
+  steps:
+  - column_name: custom_steps
+    id: 803
+    case_id: 634
+    text1: <p>1. Tap on Edit Controls<br />2. Drag a quick action from More to Favorites<br
+      />3. Drag a quick action from Favorites to More<br />4. Drag and reorder quick
+      action from Favorites<br />5. Tap on Done<br />6. Tap on Back</p>
+    text2: null
+    text3: <p>1. User should see Favorites and More Controls section in edit mode
+      with + icon shown<br />2. User is able to drag quick action from More to Favorites<br
+      />3. User is able to drag quick action from Favorites to More<br />4. User is
+      able to reorder the quick action buttons in Favorites<br />4. User should see
+      quick action buttons saved<br />5. User should see their corresponding favorites
+      in the quick action bar</p>
+    text4: null
+    display_order: 1

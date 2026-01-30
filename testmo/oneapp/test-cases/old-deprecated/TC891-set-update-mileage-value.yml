@@ -1,0 +1,74 @@
+testmo:
+  case_id: 891
+  folder_id: 105
+  project_id: 2
+  folder_path: old-deprecated
+  folder_name_ui: Old / Deprecated
+  created_at: '2023-08-04 12:57:01.058204'
+  updated_at: '2025-09-19 21:13:59.475462'
+  last_sync: '2026-01-30T18:21:08.468521Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/891
+metadata:
+  name: Set/update Mileage Value
+  priority: 13
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has a non-connected/UNKNOWN vehicle</p><p>if a vehicle returns
+    telematicsProgram as NON_CONNECTED / UNKNOWN</p><p>status  as EXPIRED / UNKNOWN
+    / NOT_ENROLLED / FAILED</p>
+  steps:
+  - column_name: custom_steps
+    id: 1066
+    case_id: 891
+    text1: <p>Tap on Vehicle tab</p>
+    text2: null
+    text3: <p>User should see Mileage card in empty state</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 1067
+    case_id: 891
+    text1: <p>Tap on Mileage card</p>
+    text2: null
+    text3: <p>User should see Estimated Mileage screen with a field for manually entering
+      Mileage</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 1068
+    case_id: 891
+    text1: <p>Enter a value into the mileage field</p>
+    text2: null
+    text3: <p>User is able to enter a value into mileage field</p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 1069
+    case_id: 891
+    text1: <p>Tap Save</p>
+    text2: null
+    text3: <p>User is able to save their mileage and shows last updated date</p>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 61506
+    case_id: 891
+    text1: <p>Update value in mileage field</p><p>Tap on save</p>
+    text2: null
+    text3: <p>User is able to save the updated value</p><p>The updated value shows
+      along with last updated date</p>
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 1070
+    case_id: 891
+    text1: <p>Tap Back button</p>
+    text2: null
+    text3: <p>User should see the corresponding mileage on the Mileage card</p><p>And
+      also on the Schedule Service flow - the entered mileage should show on Additonal
+      Information screen &gt; Estimated Vehicle Milegage</p>
+    text4: null
+    display_order: 6

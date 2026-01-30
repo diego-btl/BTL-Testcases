@@ -1,0 +1,42 @@
+testmo:
+  case_id: 1586
+  folder_id: 100
+  project_id: 2
+  folder_path: map/recently-sent-to-vehicle
+  folder_name_ui: Recently Sent to Vehicle
+  created_at: '2023-08-28 20:13:24.593303'
+  updated_at: '2024-10-17 17:57:05.010933'
+  last_sync: '2026-01-30T18:21:07.980954Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/1586
+metadata:
+  name: Capabilities
+  priority: 3
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is on Map tab</p>
+  steps:
+  - column_name: custom_steps
+    id: 1951
+    case_id: 1586
+    text1: <p>1. Remove DESTINATION_SEND_TO_CAR from capability list<br />2. Expand
+      Info Drawer<br />3. Search for a POI<br />4. Disable the capability and repeat
+      steps 2-3</p>
+    text2: null
+    text3: <p>2. User should not see Favorites section but Recently Sent to Vehicle
+      should still be accessible (due to IRP)<br />3. User should not see favorites
+      button on POI card (hidden)<br />4. User should see disabled Favorites section
+      in the Info Drawer, tapping on see more will open Account Expired modal with
+      option to call an agent - 1-855-426-6628 (NNA/NCI)<br /><br />User should see
+      favorites button on POI card but tapping on it will also open the Account Expired
+      modal<br /><br />User should see Recently Sent to Vehicle section is still accessible
+      (due to IRP)</p>
+    text4: null
+    display_order: 1
+  notes: <p>[VW] need to ask Alan for the NCI number for expired account</p><p>[GS]
+    IRP is missing for AVK so Favorites and Recently Sent To Vehicle cards are hidden
+    both or disabled.  - [VW] this is a bug, Favorites and Recently Sent should be
+    tied to DESTINATION_SEND_TO_CAR for AVK</p><ul><li>For a SHARED driver, if the
+    capability is missing or disabled, the item should be hidden</li></ul>

@@ -1,0 +1,108 @@
+testmo:
+  case_id: 52132
+  folder_id: 6771
+  project_id: 6
+  folder_path: map-page/search-bar
+  folder_name_ui: Search Bar
+  created_at: '2025-06-17 18:10:50.900709'
+  updated_at: '2025-10-30 20:05:57.254272'
+  last_sync: '2026-01-30T18:20:45.212544Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/52132
+metadata:
+  name: Dealer Search Auto Complete
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is logged into MiNissan or MiInfiniti</p><p>User is on the
+    Mapa screen </p>
+  steps:
+  - column_name: custom_steps
+    id: 82264
+    case_id: 52132
+    text1: <ol><li>Login into the app</li><li>Go to the <code>Mapa</code> screen</li><li>Tap
+      into the <strong>search box</strong> in the <code>Mapa</code> tab</li></ol>
+    text2: null
+    text3: <ul><li>Search box is focused</li><li><strong>No section headers or results</strong>
+      are displayed</li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 82265
+    case_id: 52132
+    text1: <ol><li>Login into the app</li><li>Go to the <code>Mapa</code> screen</li><li>Tap
+      into the <strong>search box</strong> in the <code>Mapa</code> tab</li><li>Type
+      a partial string (e.g., <code>"Walmart"</code>)</li></ol>
+    text2: null
+    text3: <ul><li>Two sections are shown:<ul><li><strong>Distribuidores</strong>
+      – shows up to 5 filtered dealer results</li><li><strong>Otros resultados</strong>
+      – shows up to 5 Google Places autocomplete results</li></ul></li><li>Section
+      headers labeled <strong>"Distribuidores"</strong> and <strong>"Otros resultados"</strong>
+      are <strong>visibly displayed above each list</strong></li></ul>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 82266
+    case_id: 52132
+    text1: <ol><li>Login into the app</li><li>Go to the <code>Mapa</code> screen</li><li>Tap
+      into the <strong>search box</strong> in the <code>Mapa</code> tab</li><li>Type
+      a partial string (e.g., <code>"Walmart"</code>)</li><li>Tap on a dealer result
+      under the <strong>Distribuidores</strong> section</li></ol>
+    text2: null
+    text3: <ul><li>User is navigated to the <strong>Dealer Details</strong> page</li><li><p>Dealer
+      data is retrieved using <code>dealer(dealerID)</code></p><p> </p></li></ul>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 82267
+    case_id: 52132
+    text1: <ol><li>Login into the app</li><li>Go to the <code>Mapa</code> screen</li><li>Tap
+      into the <strong>search box</strong> in the <code>Mapa</code> tab</li><li>Type
+      a partial string (e.g., <code>"Walmart"</code>)</li><li>Tap a location suggestion
+      under the <strong>Otros resultados</strong> section</li></ol>
+    text2: null
+    text3: <ul><li>User stays on the Map tab</li><li>Map centers on the selected location</li><li>Standard
+      POI behavior continues (no redirection to dealer details)</li></ul>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 82268
+    case_id: 52132
+    text1: <ol><li>Login into the app</li><li>Go to the <code>Mapa</code> screen</li><li>Tap
+      into the <strong>search box</strong> in the <code>Mapa</code> tab</li><li>Enter
+      a term that <strong>matches no dealers</strong>, but is likely to be found in
+      Google Maps (e.g., <code>"Starbucks"</code>)</li></ol>
+    text2: null
+    text3: <ul><li><strong>Distribuidores</strong> section is not shown</li><li><strong>Otros
+      resultados</strong> section appears with up to 5 results</li><li>Only the <strong>"Otros
+      resultados"</strong> header is displayed</li></ul>
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 82269
+    case_id: 52132
+    text1: <ol><li>Login into the app</li><li>Go to the <code>Mapa</code> screen</li><li>Tap
+      into the <strong>search box</strong> in the <code>Mapa</code> tab</li><li>Type
+      a valid search term and press the <strong>Enter/Return</strong> key</li></ol>
+    text2: null
+    text3: <ul><li>User is navigated to the <strong>Map view</strong></li><li>Search
+      results appear in the <strong>default horizontal scrollable carousel (Map view)</strong></li><li>A
+      <strong>List View toggle</strong> is available on the screen</li><li><strong>User
+      remains in Map view unless they manually switch to List View</strong></li></ul>
+    text4: null
+    display_order: 6
+  - column_name: custom_steps
+    id: 82270
+    case_id: 52132
+    text1: <ol><li>Login into the app</li><li>Go to the <code>Mapa</code> screen</li><li>Tap
+      into the <strong>search box</strong> in the <code>Mapa</code> tab</li><li>After
+      pressing Enter and landing on the <strong>Map view</strong> with horizontal
+      search results:<ol><li>Tap the <strong>“List View”</strong> toggle button</li></ol></li></ol>
+    text2: null
+    text3: <ul><li>The screen switches from <strong>Map View</strong> to <strong>List
+      View</strong></li><li>Search results are displayed vertically in a scrollable
+      list format</li></ul>
+    text4: null
+    display_order: 7

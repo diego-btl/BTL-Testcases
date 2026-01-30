@@ -1,0 +1,45 @@
+testmo:
+  case_id: 11099
+  folder_id: 411
+  project_id: 2
+  folder_path: home/additional-driver
+  folder_name_ui: Additional Driver
+  created_at: '2023-11-29 09:29:00.000922'
+  updated_at: '2024-10-17 17:57:34.769274'
+  last_sync: '2026-01-30T18:21:07.186918Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/11099
+metadata:
+  name: SD - Code Verification Screen - Verify and Proceed - 5 attempts
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is logged into an account with a pending AD invite</p><p>User
+    is on the Code Verification screen</p><p>In order to receive the OTP code, you
+    will need to have mocked user own number in <code>VehiclesStaticData</code> and
+    <code>UserMobileNumber</code> or setting a breakpoint on <code>GenerateOTPForSharedDriver</code>
+    and modifying the request with your own number</p>
+  steps:
+  - column_name: custom_steps
+    id: 11700
+    case_id: 11099
+    text1: <p>Enter an incorrect code and tap on Verify and Proceed until the attempts
+      have been exhausted (should be 5 attempts)</p>
+    text2: null
+    text3: <p>User should see an error message for too many attempts and to request
+      a new code, empty field is disabled, Send New Code link, and Verify and Proceed
+      button is disabled</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 11701
+    case_id: 11099
+    text1: <p>Tap on Send New Code</p>
+    text2: null
+    text3: <p>User should see a loading spinner, then Code Verification screen will
+      be reset to the default state with Send New Code link disabled, and a new code
+      toast</p>
+    text4: null
+    display_order: 2

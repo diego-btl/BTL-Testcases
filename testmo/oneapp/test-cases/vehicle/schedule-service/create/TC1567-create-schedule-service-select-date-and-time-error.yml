@@ -1,0 +1,46 @@
+testmo:
+  case_id: 1567
+  folder_id: 6787
+  project_id: 2
+  folder_path: vehicle/schedule-service/create
+  folder_name_ui: Create
+  created_at: '2023-08-28 20:13:24.263376'
+  updated_at: '2026-01-20 21:18:43.679975'
+  last_sync: '2026-01-30T18:21:08.020931Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/1567
+metadata:
+  name: Create Schedule Service - Select Date and Time - Error
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: User has selected at least one service and entered mileage if required
+  steps:
+  - column_name: custom_steps
+    id: 102384
+    case_id: 1567
+    text1: <p>Tap <code>NEXT</code> on <code>Additional Information</code> screen
+      and trigger an error</p>
+    text2: null
+    text3: <ul><li>User should see <code>Select Date and Time</code> screen</li><li>Error
+      modal should appear with options to cancel and retry</li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 102385
+    case_id: 1567
+    text1: <p>Tap on <code>Retry</code></p>
+    text2: null
+    text3: <ul><li>User should see loading spinner as API is triggered again</li></ul>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 102386
+    case_id: 1567
+    text1: <p>Tap on <code>Cancel</code></p>
+    text2: null
+    text3: <ul><li>User should see error modal dismissed</li></ul>
+    text4: null
+    display_order: 3

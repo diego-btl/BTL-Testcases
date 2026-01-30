@@ -1,0 +1,56 @@
+testmo:
+  case_id: 901
+  folder_id: 7143
+  project_id: 2
+  folder_path: old-deprecated/schedule-service
+  folder_name_ui: Schedule Service
+  created_at: '2023-08-04 13:38:38.172620'
+  updated_at: '2025-10-24 16:23:11.757758'
+  last_sync: '2026-01-30T18:21:08.446891Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/901
+metadata:
+  name: Select Services - native true
+  priority: 1
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has a preferred retailer</p>
+  steps:
+  - column_name: custom_steps
+    id: 1093
+    case_id: 901
+    text1: <p>Tap on Schedule Service card</p>
+    text2: null
+    text3: <p>User should see Select Services with preferred retailer selected and
+      list of vehicle services</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 1094
+    case_id: 901
+    text1: <p>Tap on Call Retailer</p>
+    text2: null
+    text3: <p>User should be able to call retailer</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 1095
+    case_id: 901
+    text1: <p>Tap on any of the services</p>
+    text2: null
+    text3: <p>User should see service(s) selected</p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 1096
+    case_id: 901
+    text1: <p>Tap on Next</p>
+    text2: null
+    text3: <p>User should proceed to Additional Information screen</p>
+    text4: null
+    display_order: 4
+  notes: <p>NNAL Use John Roberts Nissan (37355) for service booking. Book a couple
+    months in advanced as these are real bookings to real dealerships<br /><br />for
+    NCI use <br />Alta Nissan Richmond Hill (L4S 1W5)</p>

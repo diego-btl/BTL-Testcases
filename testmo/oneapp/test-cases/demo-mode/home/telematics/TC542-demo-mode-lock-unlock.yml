@@ -1,0 +1,66 @@
+testmo:
+  case_id: 542
+  folder_id: 6816
+  project_id: 2
+  folder_path: demo-mode/home/telematics
+  folder_name_ui: Telematics
+  created_at: '2023-08-01 23:08:19.522131'
+  updated_at: '2025-12-17 02:14:20.490191'
+  last_sync: '2026-01-30T18:21:09.234562Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/542
+metadata:
+  name: Demo Mode - Lock/Unlock
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is already in Demo Mode <code>Home Page</code></p>
+  steps:
+  - column_name: custom_steps
+    id: 711
+    case_id: 542
+    text1: <p>Tap the <code>Lock</code> or <code>Unlock</code> button</p>
+    text2: null
+    text3: '<p>The user should see a Modal with:</p><ul><li>Title: Are you sure?</li><li>Text:
+      This action will remotely <code>Lock / Unlock</code> your vehicle.</li><li><code>No</code>
+      / <code>Yes</code> buttons</li></ul>'
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 1789
+    case_id: 542
+    text1: <p>Tap on <code>No</code></p>
+    text2: null
+    text3: <p>The modal is dismissed</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 1790
+    case_id: 542
+    text1: <p>Tap the <code>Lock</code> or <code>Unlock</code> button again and tap
+      <code>Yes</code> on the modal</p>
+    text2: null
+    text3: <p>The <code>Lock</code> / <code>Unlock</code> process is triggered and
+      the following toasts are displayed every second:</p><ul><li>Contacting <code>year,
+      model</code> to <code>lock / unlock</code>...</li><li>Waking <code>year, model</code>
+      to <code>lock / unlock</code>...</li><li>Initiating <code>Lock/Unlock</code>
+      on <code>year, model</code>...</li><li><code>year, model</code> <code>locked
+      / unlocked</code></li></ul>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 96642
+    case_id: 542
+    text1: <p>go to hero status / Control card / Vehicle screen</p>
+    text2: null
+    text3: <p>Observe correct status is shown</p><figure class="image image_resized"
+      style="width:26.96%;"><img src="/attachments/view/8959" alt="8959" /></figure><figure
+      class="image image_resized" style="width:26.28%;"><img src="/attachments/view/8961"
+      alt="8961" /></figure>
+    text4: null
+    display_order: 4
+  notes: '<p>Automation: this has been muted as the Github''s runners low performance
+    don''t catch the toasts. <strong>Update: Andrew''s runner has better performance
+    so this will be unmuted from now on.</strong></p>'

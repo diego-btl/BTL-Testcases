@@ -1,0 +1,63 @@
+testmo:
+  case_id: 24323
+  folder_id: 3084
+  project_id: 2
+  folder_path: home/ncf
+  folder_name_ui: NCF
+  created_at: '2024-10-18 16:18:44.507452'
+  updated_at: '2024-11-30 00:16:30.915169'
+  last_sync: '2026-01-30T18:21:06.746009Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/24323
+metadata:
+  name: Payment History - Statements - Details - Lease
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>Login with an NCF account &gt; <a href="https://www.notion.so/bethinklabs/d0f8f58385a94c51ab27ce3ee1ef1e51?v=caf06428a7ac41aa96541666be242cd7">https://www.notion.so/bethinklabs/d0f8f58385a94c51ab27ce3ee1ef1e51?v=caf06428a7ac41aa96541666be242cd7</a></p><p><i><strong>Have
+    a Lease Vehicle</strong></i></p>
+  steps:
+  - column_name: custom_steps
+    id: 37917
+    case_id: 24323
+    text1: <ol><li>Login into the app</li><li>In the Home page screen</li><li>Click
+      over <strong>NCF Account</strong> card</li><li>Open the <strong>NCF Account</strong>
+      screen</li><li>Click the option <strong>Payment History</strong></li><li>Click
+      the tab <strong>Statements</strong></li><li>Click over the results to check
+      details</li></ol>
+    text2: null
+    text3: '<p>The user should be seeing <strong>Payment History</strong> title with
+      the details of that <strong>Statement</strong>. With 3 sections:</p><ul><li><code>Billing
+      Summary</code></li><li><code>Account Information</code></li><li><code>Contact
+      Us</code></li></ul><p>For the <strong>Billing Summary </strong>section display
+      based on the data:</p><ul><li><code>Statement Date</code></li><li><code>Current
+      Balance Amount</code></li><li><code>Prior Balance Amount</code></li><li><code>Prior
+      Billings/Base Rent/Miscellaneous</code><ul><li><code>Amount</code> &gt; <i>$XXXX.XX</i></li><li><code>Tax</code>
+      &gt; <i>$XXX.XX</i></li><li><code>Total</code> &gt; <i>$XXXX.XX</i></li></ul></li><li><code>Total
+      Amount Due</code> &gt; <i>$XXXX.XX</i></li><li><code>Due Date</code> &gt; <i>MM/DD/YYY</i></li></ul><p>For
+      <strong>Account Information</strong> section display the next fields:</p><ul><li><code>Account
+      Number</code> &gt; <i>Show the account number</i></li><li><code>Start Date</code>
+      &gt; <i>MM/DD/YYY</i></li><li><code>Monthly rent</code>  &gt; <i>$XXXX.XX</i></li><li><code>Current
+      Tax Rate</code>  &gt; <i>XX.XX%</i></li><li><code>Vehicle Model</code> &gt;
+      <i>Year Brand Model</i></li><li><code>Vehicle Identification Number</code> &gt;
+      <i>17 digits(alphanumeric)</i></li><li><code>Maturity Date</code> &gt; <i>MM/DD/YYY</i></li></ul><p>For
+      the <strong>Contact Us</strong> section:</p><pre><code class="editor-plain language-plain
+      code-block">Contact Us
+
+      Customer Service
+
+      Ph: 1-800-268-6499
+
+      FAX: 1-800-265-0835
+
+      Ncfcustomer.service@nissancanada.com Hours: Mon - Fri 9:00 AM to 8:00 PM EST
+
+      Mailing Address
+
+      Mailing Address: 5290 Orbitor Drive Mississauga, ON L4W 4Z5, Canada 
+
+      Click here for more contract details</code></pre>'
+    text4: null
+    display_order: 1

@@ -1,0 +1,64 @@
+testmo:
+  case_id: 9027
+  folder_id: 411
+  project_id: 2
+  folder_path: home/additional-driver
+  folder_name_ui: Additional Driver
+  created_at: '2023-11-21 08:35:41.862234'
+  updated_at: '2024-10-17 17:57:34.769274'
+  last_sync: '2026-01-30T18:21:07.265673Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/9027
+metadata:
+  name: PD - AD Invite Summary Screen - Send Invite - Failure
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has an AVK2 vehicle and is PRIMARY_DRIVER</p><p>User is on
+    the Invite Summary screen</p>
+  steps:
+  - column_name: custom_steps
+    id: 11593
+    case_id: 9027
+    text1: "<p>Mock an error for <code>InviteDriver</code> [iOS] with the following:</p><pre><code\
+      \ class=\"editor-json language-json code-block\">HTTP/1.1 500 Internal Server\
+      \ Error\nContent-Type: application/json\nConnection: keep-alive\nDate: Tue,\
+      \ 12 Apr 2022 21:13:27 GMT\nx-amzn-RequestId: 09ac326c-1732-4547-8e2b-1faeea8c8d91\n\
+      x-amzn-ErrorType: InternalServerErrorException\nx-amz-apigw-id: QfG6rHG8IAMFsRg=\n\
+      X-Amzn-Trace-Id: Root=1-6255eb77-105c5ed61e98e8a165b5327b\nX-Cache: Error from\
+      \ cloudfront\nVia: 1.1 e67372c9495347d4b38267a785100068.cloudfront.net (CloudFront)\n\
+      X-Amz-Cf-Pop: YTO50-C1\nX-Amz-Cf-Id: O2KyBq1ze9JBQkEMlhlljmI6uTmvYeNx4aTXjtNOXnPaXoNocJMjBw==\n\
+      \n{\n  \"message\": \"Internal server error\"\n}</code></pre>"
+    text2: null
+    text3: null
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 11594
+    case_id: 9027
+    text1: <ol><li>Tap on the Send Invite button</li><li>Tap one of the two options</li></ol>
+    text2: null
+    text3: <ol><li>User should see options to send via email or sms</li><li>User should
+      see a loading spinner, then an <code>Invite failed to send</code> modal, and
+      a failure toast</li></ol>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 11595
+    case_id: 9027
+    text1: <p>Tap on No</p>
+    text2: null
+    text3: <p>User should see the error modal dismiss and remain on the AD Invite
+      Summary screen</p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 11596
+    case_id: 9027
+    text1: <p>Tap on Yes</p>
+    text2: null
+    text3: <p>User should see the same API call triggered again</p>
+    text4: null
+    display_order: 4

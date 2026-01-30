@@ -1,0 +1,32 @@
+testmo:
+  case_id: 24230
+  folder_id: 39
+  project_id: 2
+  folder_path: installation
+  folder_name_ui: Installation
+  created_at: '2024-10-05 14:39:23.741026'
+  updated_at: '2025-04-29 15:41:34.943967'
+  last_sync: '2026-01-30T18:21:06.923390Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/24230
+metadata:
+  name: Feature Flags
+  priority: 12
+  type: functional
+  status: active
+  estimate: 28000000
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>App is installed</li><li>Add a breakpoint or map local to
+    the <code>Firebase Remote Config</code> call and modify true or false any feature
+    under a feature flag, e.g.</li></ul><ol><li><code>EnableWebviewLogin</code></li></ol>
+  steps:
+  - column_name: custom_steps
+    id: 37798
+    case_id: 24230
+    text1: <p>Open the app</p>
+    text2: null
+    text3: <p>Validate the Feature Flag actually enables or disables the feature</p>
+    text4: null
+    display_order: 1
+  notes: <ul><li>Check occurs on launch and foreground</li></ul>

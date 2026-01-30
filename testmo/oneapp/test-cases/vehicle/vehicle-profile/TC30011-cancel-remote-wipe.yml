@@ -1,0 +1,65 @@
+testmo:
+  case_id: 30011
+  folder_id: 90
+  project_id: 2
+  folder_path: vehicle/vehicle-profile
+  folder_name_ui: Vehicle Profile
+  created_at: '2025-01-21 17:11:01.149637'
+  updated_at: '2025-10-10 14:52:16.973880'
+  last_sync: '2026-01-30T18:21:06.408240Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/30011
+metadata:
+  name: Cancel Remote Wipe
+  priority: 3
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is logged-in and navigate to Vehicle tab</p>
+  steps:
+  - column_name: custom_steps
+    id: 48888
+    case_id: 30011
+    text1: <p>Tap on Vehicle Profile button</p>
+    text2: null
+    text3: <p>Vehicle  Profile sheet is displayed</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 48889
+    case_id: 30011
+    text1: <p>Tap on Remote Data Wipe card</p>
+    text2: null
+    text3: <p>Remote Data Wipe screen is displayed</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 48890
+    case_id: 30011
+    text1: <p>Tap on Delete Data button<br /> </p>
+    text2: null
+    text3: '<p>User should see a verification modal alert as :<br /> Title:  Delete
+      Vehicle Data?</p><p>Body: Are you sure you want to delete. your vehicle data?
+      This action is permanent and once initiated, it cannot be stopped or undone. </p><p>Button:
+      No</p><p>Button: Yes ( background highlighted in blue)</p>'
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 48891
+    case_id: 30011
+    text1: <p>Tap on No button</p>
+    text2: null
+    text3: <p>User should see modal alert dismiss itself and Remote Data Wipe screen
+      is displayed</p>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 48892
+    case_id: 30011
+    text1: <p>Verify step1 and 2 in Demo Mode</p>
+    text2: null
+    text3: '<p>User should see a modal alert as:</p><p><br />Title: Demo Mode</p><p>Body:
+      Not available in demo mode.</p><p>Button: OK</p>'
+    text4: null
+    display_order: 5

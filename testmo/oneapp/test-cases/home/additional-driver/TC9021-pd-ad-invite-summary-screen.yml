@@ -1,0 +1,68 @@
+testmo:
+  case_id: 9021
+  folder_id: 411
+  project_id: 2
+  folder_path: home/additional-driver
+  folder_name_ui: Additional Driver
+  created_at: '2023-11-21 08:32:52.571851'
+  updated_at: '2025-08-21 19:21:14.411948'
+  last_sync: '2026-01-30T18:21:07.277940Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/9021
+metadata:
+  name: PD - AD Invite Summary Screen
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has an AVK2 vehicle and is PRIMARY_DRIVER</p><p>User is on
+    the Invite Summary screen</p>
+  steps:
+  - column_name: custom_steps
+    id: 11580
+    case_id: 9021
+    text1: null
+    text2: null
+    text3: <p>User should see the Selected Vehicle section with vehicle nickname</p><p>User
+      should see Additional Driver section including Name, Email, and Phone Number</p><p>User
+      should see the Selected Configurations matching what was previously selected
+      on the Configuration Details screen</p><p>User should see Send Invite CTA</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 11581
+    case_id: 9021
+    text1: <p>Tap on Additional Driver</p>
+    text2: null
+    text3: <p>User should be brought back to the AD Invite screen with all previously
+      filled in info</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 11582
+    case_id: 9021
+    text1: <p>Modify any of the fields and proceed to the summary screen</p>
+    text2: null
+    text3: <p>User should see the summary screen updated with the changes that were
+      made</p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 11583
+    case_id: 9021
+    text1: <p>Tap on Selected Configurations</p>
+    text2: null
+    text3: <p>User should be brought back to the Configuration Details screen with
+      the previously selected configurations</p>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 11584
+    case_id: 9021
+    text1: <p>Modify any of the configurations and proceed to the summary screen</p>
+    text2: null
+    text3: <p>User should see the summary screen updated with the changes that were
+      made</p>
+    text4: null
+    display_order: 5

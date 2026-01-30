@@ -1,0 +1,29 @@
+testmo:
+  case_id: 889
+  folder_id: 97
+  project_id: 2
+  folder_path: vehicle/mileage
+  folder_name_ui: Mileage
+  created_at: '2023-08-04 12:53:56.850768'
+  updated_at: '2025-10-24 05:27:02.583286'
+  last_sync: '2026-01-30T18:21:08.476794Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/889
+metadata:
+  name: Mileage card
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>User has an <code>EV/AVK</code> vehicle</li><li>User is already
+    on the <code>Vehicle Page</code></li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 1797
+    case_id: 889
+    text1: <p>While on the <code>Vehicle Page</code> scroll down to the bottom</p>
+    text2: null
+    text3: <p>The <code>Mileage</code> card should be displayed the Odometer value</p>
+    text4: null
+    display_order: 1

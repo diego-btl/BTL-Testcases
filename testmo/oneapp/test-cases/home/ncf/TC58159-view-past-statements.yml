@@ -1,0 +1,40 @@
+testmo:
+  case_id: 58159
+  folder_id: 3084
+  project_id: 2
+  folder_path: home/ncf
+  folder_name_ui: NCF
+  created_at: '2025-08-11 20:49:02.472101'
+  updated_at: '2025-08-11 20:55:56.683103'
+  last_sync: '2026-01-30T18:21:05.810897Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/58159
+metadata:
+  name: View Past Statements
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>StaticText = either of these nos. </p><p>ST3, ST14, ST16, ST17,
+    ST18, and ST19.</p><p>PaymentHistory = True </p><p>in the <code>FinancialVehicles</code>
+    api response</p>
+  steps:
+  - column_name: custom_steps
+    id: 88863
+    case_id: 58159
+    text1: <p>Once logged into an NCI account with a financial vehicle (use mock server) </p>
+    text2: null
+    text3: <p>FinancialVehicles api is triggered</p><p>The NFC card is enabled on
+      Home</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 88864
+    case_id: 58159
+    text1: <p>Tap on Card</p>
+    text2: null
+    text3: <p>Along with the copy for the relevant StaticText no. as per other TCs,
+      the View Past Statements CTA show also show and be tappable</p>
+    text4: null
+    display_order: 2

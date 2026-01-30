@@ -1,0 +1,52 @@
+testmo:
+  case_id: 36690
+  folder_id: 2444
+  project_id: 2
+  folder_path: home/charge/necn-nissan-energy-charge-network
+  folder_name_ui: NECN - NISSAN ENERGY Charge Network
+  created_at: '2025-05-08 19:59:36.119843'
+  updated_at: '2026-01-15 19:03:01.194868'
+  last_sync: '2026-01-30T18:21:06.018709Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/36690
+metadata:
+  name: NISSAN ENERGY Charge Network - Active - AD
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<p>User has an EV/EV2</p><p>"EnablePlugAndCharge": "true"</p><p>VehicleStaticData
+    &gt; "driverType": "SHARED_DRIVER"</p>'
+  steps:
+  - column_name: custom_steps
+    id: 61486
+    case_id: 36690
+    text1: '<p>User is on the Manage EV screen </p><p>AccountStatus API &gt; "status":
+      "ACTIVE"</p>'
+    text2: null
+    text3: <p>NISSAN ENERGY Charge Network card is displayed</p><p>Subtitle of the
+      NISSAN ENERGY Charge Network card is 'Active'</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 96340
+    case_id: 36690
+    text1: <p>Tap  the NISSAN ENERGY Charge Network card</p>
+    text2: null
+    text3: <p>AccountStatus API is called</p><p>NissanPay API is not called</p><p>User
+      is navigated to the NISSAN ENERGY Charge Network screen</p><p>Status of the
+      Account Status card is 'Active'</p><p>The copy of the Account Status card is
+      'NISSAN ENERGY Charge Network' </p><p>The 'Deactivate Account' button is hidden</p><p>There's
+      the text 'Need more information?' and the 'CALL OUR HELP LINE' button</p><p>The
+      Payment Method card is hidden</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 96341
+    case_id: 36690
+    text1: <p>Tap the 'CALL OUR HELP LINE' button</p>
+    text2: null
+    text3: <p>The phone number from the ContactUs.plugAndChargeSupport is populated</p>
+    text4: null
+    display_order: 3

@@ -1,0 +1,155 @@
+testmo:
+  case_id: 58188
+  folder_id: 3800
+  project_id: 2
+  folder_path: vehicle/collision-management-nna-only
+  folder_name_ui: Collision Management - NNA only
+  created_at: '2025-08-15 15:34:49.714298'
+  updated_at: '2025-08-15 17:50:29.725077'
+  last_sync: '2026-01-30T18:21:05.793853Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/58188
+metadata:
+  name: Collision Management - Golden Path ( Completed Collision Report form and photo
+    upload)
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<ul><li>The Collision Management feature flag is enabled:</li></ul><p> <code>"GrantCollisionManagement":
+    "{\"enabled\": true, \"checkCapability\": false}"</code></p><ul><li>The user is
+    on the vehicle page and can see the Collision Management card.</li></ul><p><img
+    class="image_resized" style="width:36.95%;" src="/attachments/view/7501" alt="7501"
+    /></p>'
+  steps:
+  - column_name: custom_steps
+    id: 88869
+    case_id: 58188
+    text1: <p>Tap on the <strong>Collision Management </strong>card</p>
+    text2: null
+    text3: <ul><li>The user should be navigated to the Collision Management screen</li><li><p>The
+      Collision Management screen opens, showing options: </p><p>- New Collision Report<br
+      />- View All Reports<br />- Accident Helper<br />- Collision Towing section
+      with a Call Roadside Assistance button.</p></li></ul><p><img class="image_resized"
+      style="width:67.08%;" src="/attachments/view/7502" alt="7502" /></p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 88870
+    case_id: 58188
+    text1: <p>Tap on the <code>New Collision Report</code> card</p>
+    text2: null
+    text3: <ul><li>The user is redirected to the <code>Collision Report</code> start
+      screen</li><li>The Collision Report screen opens with sections: <br />- Your
+      Information, <br />- Towing/Transportation,<br />-  Insurance Provider, <br
+      />- Collision Center<br />- Add Photos button.<br /><br />**Fields may have
+      existing or empty values.</li></ul><p><img class="image_resized" style="width:67.39%;"
+      src="/attachments/view/7500" alt="7500" /></p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 88871
+    case_id: 58188
+    text1: <p>In each section, tap <code>Edit</code> and enter test data</p>
+    text2: null
+    text3: <p>The entered information is displayed in the corresponding section (name,
+      address, phone number, company, etc.).</p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 88872
+    case_id: 58188
+    text1: <p>Tap <code><strong>Add Photos</strong></code><strong> </strong>button</p>
+    text2: null
+    text3: '<p>A warning appears: “You will not be able to edit your information once
+      you start adding photos” with Cancel and Continue options.</p><p><img class="image_resized"
+      style="width:71.83%;" src="/attachments/view/7499" alt="7499" /></p>'
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 88873
+    case_id: 58188
+    text1: <p>Tap <code>Continue</code></p>
+    text2: null
+    text3: <p>The Photos screen opens, showing a car image and photo slots (Front
+      Left, Front, Front Right, etc.).</p><p><img class="image_resized" style="width:64.35%;"
+      src="https://bethinklabs.testmo.net/attachments/view/7498" alt="7498" /></p>
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 88874
+    case_id: 58188
+    text1: <p>Tap a <code><strong>photo</strong></code> slot, select <code>Add from
+      Photo Gallery</code>, and add at least 3 photos</p>
+    text2: null
+    text3: <p>Selected photos are displayed in the slots with previews. The Generate
+      Collision Report button becomes active.</p><p><img class="image_resized" style="width:80.41%;"
+      src="/attachments/view/7497" alt="7497" /></p>
+    text4: null
+    display_order: 6
+  - column_name: custom_steps
+    id: 88875
+    case_id: 58188
+    text1: <p>Tap <code>Generate Collision Report</code></p>
+    text2: null
+    text3: '<p>A warning appears: <code>“You will not be able to edit your photos
+      once you save. Saving will generate your completed Collision Report”</code>
+      with <strong>Cancel </strong>and <strong>Save</strong> options.</p><p><img class="image_resized"
+      style="width:65.08%;" src="/attachments/view/7503" alt="7503" /></p>'
+    text4: null
+    display_order: 7
+  - column_name: custom_steps
+    id: 88876
+    case_id: 58188
+    text1: <p>Tap <code>Save</code></p>
+    text2: null
+    text3: <p>The completed Collision Report screen opens, showing a <code>PDF preview</code>
+      with <code>Share Report</code> and <code>Download Report</code> buttons.</p><p><img
+      class="image_resized" style="width:67.63%;" src="/attachments/view/7495" alt="7495"
+      /></p>
+    text4: null
+    display_order: 8
+  - column_name: custom_steps
+    id: 88877
+    case_id: 58188
+    text1: <p>Tap <code>Share Report</code> and send to an external email</p>
+    text2: null
+    text3: <p>The email app opens with the PDF report attached, subject line Collision
+      report from , and a yellow External recipient warning for outside addresses.</p><p><img
+      class="image_resized" style="width:59.04%;" src="/attachments/view/7494" alt="7494"
+      /></p>
+    text4: null
+    display_order: 9
+  - column_name: custom_steps
+    id: 88878
+    case_id: 58188
+    text1: <p>Tap <code>Download Report</code></p>
+    text2: null
+    text3: <p>The system “Open with” menu appears, showing available apps to open
+      or save the PDF. </p><p><img class="image_resized" style="width:55.73%;" src="/attachments/view/7491"
+      alt="7491" /></p>
+    text4: null
+    display_order: 10
+  - column_name: custom_steps
+    id: 88879
+    case_id: 58188
+    text1: <p>Go back from the report screen</p>
+    text2: null
+    text3: '<p>A confirmation appears: <code>“Are you sure? If you go back, you will
+      have to start your report over again,</code>” with <code><strong>Cancel</strong></code>
+      and <code><strong>Yes</strong></code>, Leave options.</p><p><img class="image_resized"
+      style="width:74.35%;" src="/attachments/view/7493" alt="7493" /></p>'
+    text4: null
+    display_order: 11
+  - column_name: custom_steps
+    id: 88880
+    case_id: 58188
+    text1: <p>On the <code>Collision Management </code>screen, tap View All Reports</p>
+    text2: null
+    text3: <p>The <code>Accident Report History</code> screen opens, showing a list
+      of reports. </p><p>The latest report is displayed with the correct date and
+      time in the Report Date field.</p><p><img class="image_resized" style="width:66.11%;"
+      src="/attachments/view/7492" alt="7492" /></p>
+    text4: null
+    display_order: 12

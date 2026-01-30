@@ -1,0 +1,90 @@
+testmo:
+  case_id: 778
+  folder_id: 101
+  project_id: 2
+  folder_path: map/route-planner
+  folder_name_ui: Route Planner
+  created_at: '2023-08-01 23:08:22.564405'
+  updated_at: '2025-12-02 18:32:43.861115'
+  last_sync: '2026-01-30T18:21:08.740955Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/778
+metadata:
+  name: Estimate Route
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>User is in the <strong>Create Route</strong> screen</li><li>The
+    user selects an <code>EV</code> or <code>EVAVK2</code> vehicles</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 947
+    case_id: 778
+    text1: <ol><li>Enter a destination field, date, and time</li><li>Tap <code>Estimate
+      Route</code> button</li><li>Force an error</li></ol>
+    text2: null
+    text3: <ul><li>User should see <code>Estimate Route</code> button become enabled</li><li>User
+      should see a loading state as the app makes a call to get EV waypoints</li><li>User
+      should see an error alert modal and be able to cancel or try again<ul><li><strong>Error</strong>
+      - <code>Something went wrong with the route planner. Please try again </code>-
+      <strong>Cancel</strong> | <strong>Try Again</strong></li></ul></li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 95317
+    case_id: 778
+    text1: <ol><li>Enter a destination field, date, and time</li><li>Tap <code>Estimate
+      Route</code> button</li><li>Force an error</li><li>Tap Try Again on error alert
+      modal and wait for call to succeed</li></ol>
+    text2: null
+    text3: <ul><li>User should see a map view of their origin, stops, and EV waypoints
+      on a route</li></ul>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 95319
+    case_id: 778
+    text1: <ol><li>Enter a destination field, date, and time</li><li>Add different
+      stops</li><li>Tap <code>Estimate Route</code> button</li><li>Check the Charging
+      Icons</li></ol>
+    text2: null
+    text3: <ul><li>The Charging Icons should be showing in the left side of the Charging
+      Stop</li><li>The color should be light blue like the other buttons</li><li>The
+      battery percentage should be showing in the right side with the battery icon</li><li>The
+      Charging Station name should be displaying</li><li>The arriving hour should
+      show in the stop</li><li>The charging time should be displaying in min/h</li></ul>
+    text4: null
+    display_order: 3
+  notes: "<p>When the user taps <code>Estimate Route</code> the app will be calling:</p><ul><li><code>VehicleEVWaypoints</code></li></ul><pre><code\
+    \ class=\"editor-plain language-plain code-block\">{\n  \"data\": {\n    \"vehicle\"\
+    : {\n      \"__typename\": \"ElectricVehicle\",\n      \"evWaypoints\": {\n  \
+    \      \"__typename\": \"EVWaypoint\",\n        \"departureTime\": \"2025-12-03T20:04:00.000Z\"\
+    ,\n        \"arrivalTime\": \"2025-12-03T21:10:25.000Z\",\n        \"totalChargingTimeInSeconds\"\
+    : null,\n        \"totalTravelTimeInSeconds\": 3985,\n        \"totalDistance\"\
+    : {\n          \"__typename\": \"Distance\",\n          \"unit\": \"MILE\",\n\
+    \          \"value\": 53\n        },\n        \"routes\": [\n          {\n   \
+    \         \"__typename\": \"RouteDetails\",\n            \"name\": \"505 Technology\
+    \ Drive\",\n            \"arrivalTime\": \"2025-12-03T20:04:00.000Z\",\n     \
+    \       \"chargingTimeInSeconds\": null,\n            \"level\": 80,\n       \
+    \     \"type\": \"ORIGIN\",\n            \"status\": null,\n            \"address\"\
+    : {\n              \"__typename\": \"Address\",\n              \"address1\": \"\
+    505 Technology Drive\",\n              \"address2\": null,\n              \"city\"\
+    : \"Irvine\",\n              \"state\": \"CA\",\n              \"postalCode\"\
+    : \"92618\",\n              \"country\": \"US\"\n            },\n            \"\
+    location\": {\n              \"__typename\": \"Location\",\n              \"latitude\"\
+    : 33.67299061,\n              \"longitude\": -117.75779301\n            },\n \
+    \           \"chargingOutput\": null\n          },\n          {\n            \"\
+    __typename\": \"RouteDetails\",\n            \"name\": \"Santa Monica Airport\"\
+    ,\n            \"arrivalTime\": \"2025-12-03T21:10:25.000Z\",\n            \"\
+    chargingTimeInSeconds\": null,\n            \"level\": 62,\n            \"type\"\
+    : \"DESTINATION\",\n            \"status\": null,\n            \"address\": {\n\
+    \              \"__typename\": \"Address\",\n              \"address1\": \"3233\
+    \ Donald Douglas Loop South\",\n              \"address2\": null,\n          \
+    \    \"city\": \"Santa Monica\",\n              \"state\": \"CA\",\n         \
+    \     \"postalCode\": \"90405\",\n              \"country\": \"US\"\n        \
+    \    },\n            \"location\": {\n              \"__typename\": \"Location\"\
+    ,\n              \"latitude\": 34.0175575,\n              \"longitude\": -118.4475081\n\
+    \            },\n            \"chargingOutput\": null\n          }\n        ]\n\
+    \      }\n    }\n  }\n}</code></pre>"

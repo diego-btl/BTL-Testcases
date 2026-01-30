@@ -1,0 +1,52 @@
+testmo:
+  case_id: 61935
+  folder_id: 6755
+  project_id: 2
+  folder_path: home/charge/v1g-vehicle-to-grid
+  folder_name_ui: V1G - Vehicle-to-Grid
+  created_at: '2025-11-05 19:11:50.070899'
+  updated_at: '2025-12-16 18:20:15.189428'
+  last_sync: '2026-01-30T18:21:05.518822Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/61935
+metadata:
+  name: V1G - Garage Load - EV/EV2 - PD - ENROLLED
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<p>Nissan NNA and NCI only</p><p>"GrantV1G": "{\"enabled\": true,
+    \"checkCapability\": true}" </p><p>VehicleStaticData &gt; "__typename": "ElectricAVK2Vehicle"
+    or "__typename": "ElectricVehicle"</p><p>VehicleStaticData &gt; "driverType":
+    "PRIMARY_DRIVER"</p><p>VehicleCapabilities &gt; "status": "ENROLLED" </p><p>eVehicleEligibility
+    &gt; "v1GEligible": true</p>'
+  steps:
+  - column_name: custom_steps
+    id: 95220
+    case_id: 61935
+    text1: <p>User is on the Home screen</p>
+    text2: null
+    text3: <p>V1GMonitoredChargingAccountStatus API is called for the eligible VIN,
+      returning "v1GMonitoredChargingAccountStatus" =! "CLOSED"</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 95221
+    case_id: 61935
+    text1: <p>1. Bg/fg or cold start the app</p><p>2. Navigate to the Charge screen
+      while APIs are still loading</p>
+    text2: null
+    text3: <p>1. The value is cached locally &gt; Status, Optimize, Insights tabs
+      are displayed</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 95223
+    case_id: 61935
+    text1: '<p>1. Mock VehicleStaticData to return EV and EV2 in the garage </p><p>2.
+      Mock eVehicleEligibility &gt; "v1GEligible": true for the second EV </p>'
+    text2: null
+    text3: <p>V1GMonitoredChargingAccountStatus API is called for every eligible VIN</p>
+    text4: null
+    display_order: 3

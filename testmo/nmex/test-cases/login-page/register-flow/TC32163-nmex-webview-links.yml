@@ -1,0 +1,43 @@
+testmo:
+  case_id: 32163
+  folder_id: 4142
+  project_id: 6
+  folder_path: login-page/register-flow
+  folder_name_ui: Register Flow
+  created_at: '2025-04-01 17:50:43.470192'
+  updated_at: '2025-04-07 15:03:31.353919'
+  last_sync: '2026-01-30T18:20:45.972889Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/32163
+metadata:
+  name: NMEX - Webview links*
+  priority: 1
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is on the final registration screen</p>
+  steps:
+  - column_name: custom_steps
+    id: 52545
+    case_id: 32163
+    text1: <ol><li>Tap on Terms of Service link</li><li>Tap on return arrow / close
+      icon  from Terms of Service screen</li><li>Tap on Privacy Policy link</li><li>Tap
+      on return arrow / close icon  from Privacy Policy screen</li><li>Tap on Data
+      Privacy Policy link</li><li>Tap on return arrow / close icon  from Data Privacy
+      Policy screen</li></ol>
+    text2: null
+    text3: '<ol><li>User should be able to open Terms of Service web-view   <br />Header
+      is displayed as <code>Términos de Servicio</code></li></ol><p>Note:  For Android
+      it includes a back <code>&lt;</code> button and  an  <code>X</code> icon for
+      IOS<br /><br /> </p><p>2.User is able to see the final Registration screen</p><p>3.User
+      should be able to open Privacy Policy web-view   <br />Header is displayed as
+      <code>Términos de Servicio</code> </p><p>Note:  For Android it includes a back
+      <code>&lt;</code> button and  an  <code>X</code> icon for IOS</p><p>4.User is
+      able to see the final Registration screen</p><p>5.User should be able to open
+      Privacy Policy web-view   <br />Header is displayed as <code>Política de Privacidad</code></p><p><br
+      />NOTE: Data Privacy should be removed for NCI<br />Note:  For Android it includes
+      a back <code>&lt;</code> button and  an  <code>X</code> icon for IOS</p><p>6.User
+      is able to see the final Registration screen</p>'
+    text4: null
+    display_order: 1

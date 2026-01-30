@@ -1,0 +1,43 @@
+testmo:
+  case_id: 30076
+  folder_id: 3766
+  project_id: 5
+  folder_path: settings
+  folder_name_ui: Settings
+  created_at: '2025-01-27 08:13:14.324343'
+  updated_at: '2025-01-27 08:20:00.439193'
+  last_sync: '2026-01-30T18:20:38.198073Z'
+  url: https://bethinklabs.testmo.net/repositories/5/cases/30076
+metadata:
+  name: Theme - Tema
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  steps:
+  - column_name: custom_steps
+    id: 48990
+    case_id: 30076
+    text1: <p>User taps on <code>Dia</code></p>
+    text2: null
+    text3: <p>App should use Light mode theme</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 48991
+    case_id: 30076
+    text1: <p>User taps on <code>Noite</code></p>
+    text2: null
+    text3: <p>App should use Dark mode theme</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 48992
+    case_id: 30076
+    text1: <p>User taps <code>Padrao</code></p>
+    text2: null
+    text3: <p>App should match theme to the user's device theme</p>
+    text4: null
+    display_order: 3

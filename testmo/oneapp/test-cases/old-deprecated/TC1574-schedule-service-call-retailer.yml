@@ -1,0 +1,29 @@
+testmo:
+  case_id: 1574
+  folder_id: 105
+  project_id: 2
+  folder_path: old-deprecated
+  folder_name_ui: Old / Deprecated
+  created_at: '2023-08-28 20:13:24.386582'
+  updated_at: '2025-12-09 18:05:22.840167'
+  last_sync: '2026-01-30T18:21:08.001912Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/1574
+metadata:
+  name: Schedule Service - Call Retailer
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is in Schedule Service flow</p>
+  steps:
+  - column_name: custom_steps
+    id: 1939
+    case_id: 1574
+    text1: <p>1. Tap on Call Retailer</p>
+    text2: null
+    text3: '<p>1. User is able to call the Retailer<br /><br />Note: If number is
+      not available, the CTA will be disabled</p>'
+    text4: null
+    display_order: 1

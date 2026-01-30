@@ -1,0 +1,65 @@
+testmo:
+  case_id: 2719
+  folder_id: 412
+  project_id: 2
+  folder_path: vehicle/proactive-maintenance
+  folder_name_ui: Proactive Maintenance
+  created_at: '2023-09-07 21:32:22.683029'
+  updated_at: '2024-10-17 17:57:34.769274'
+  last_sync: '2026-01-30T18:21:07.685985Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/2719
+metadata:
+  name: Create reminder - Failure
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is on PSR screen</p><p>User has fewer than 4 reminders</p>
+  steps:
+  - column_name: custom_steps
+    id: 3084
+    case_id: 2719
+    text1: <p>Tap on Create New</p>
+    text2: null
+    text3: <p>User should see New Reminder screen in default state without anything
+      selected</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 9449
+    case_id: 2719
+    text1: <p>Check at least 1 part and set at least 1 type of reminder interval</p>
+    text2: null
+    text3: <p>User is able to check any parts and set a reminder interval</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 9451
+    case_id: 2719
+    text1: <p>Mock an error for the API call and tap on Save</p>
+    text2: null
+    text3: <p>User should see a loading spinner while reminder is saving<br />On error,
+      user should see a failure modal with the option to retry or not </p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 9452
+    case_id: 2719
+    text1: <p>Tap on Yes on modal</p>
+    text2: null
+    text3: <p>User should see a loading spinner while reminder is saving. </p><p>On
+      success user should see the main PSR screen with the new reminder. On failure,
+      user should see the error modal again</p>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 9453
+    case_id: 2719
+    text1: <p>Tap on No on modal</p>
+    text2: null
+    text3: <p>User should see failure modal dismiss and remain on the New Reminder
+      screen</p>
+    text4: null
+    display_order: 5

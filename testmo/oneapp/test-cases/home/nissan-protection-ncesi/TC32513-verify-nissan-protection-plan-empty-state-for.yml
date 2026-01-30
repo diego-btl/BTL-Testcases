@@ -1,0 +1,59 @@
+testmo:
+  case_id: 32513
+  folder_id: 4079
+  project_id: 2
+  folder_path: home/nissan-protection-ncesi
+  folder_name_ui: Nissan Protection (NCESI)
+  created_at: '2025-04-04 19:56:10.841835'
+  updated_at: '2026-01-22 17:32:40.163697'
+  last_sync: '2026-01-30T18:21:06.188633Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/32513
+metadata:
+  name: Verify Nissan Protection Plan empty state for STOLEN or PENDING vehicles
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<p>Set FFs as follows</p><ul><li><code>EnableNcesiServiceContracts</code>:
+    true</li><li><code>EnableNcesiCatalogue</code>: true</li><li>Mock GetServiceContract
+    response (use attached mocks ENG/FR)</li></ul>'
+  steps:
+  - column_name: custom_steps
+    id: 53128
+    case_id: 32513
+    text1: <p>Use mock provided &gt; Login to app &gt; Go to Nissan Protection app </p>
+    text2: null
+    text3: <p>Verify there are plans showing</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 53129
+    case_id: 32513
+    text1: <p>Mock capabilities to show vehicle has STOLEN or PENDING &gt; call capabilities
+      again</p>
+    text2: null
+    text3: <p>Verify Nissan Protection card is displayed</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 53116
+    case_id: 32513
+    text1: <p>Tap on <code>Nissan Protection</code> </p>
+    text2: null
+    text3: <p>Verify Nissan Contract screen displays as empty state.</p><ul><li>Display
+      Vehicle Information section</li><li>Display Service Contracts section with <code>View
+      All Nissan Protection Products</code> cta but not contracts</li><li>Display
+      Basic Coverage section with mileage information</li><li>No call is triggered
+      for GetServiceContract API</li></ul>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 53130
+    case_id: 32513
+    text1: <p>Tap on <code>View All Nissan Protection Products</code> cta</p>
+    text2: null
+    text3: <p>Verify user can navigate to Plans and see the video without any problem</p>
+    text4: null
+    display_order: 4

@@ -1,0 +1,28 @@
+testmo:
+  case_id: 751
+  folder_id: 46
+  project_id: 2
+  folder_path: map
+  folder_name_ui: Map
+  created_at: '2023-08-01 23:08:22.215450'
+  updated_at: '2025-09-22 14:58:03.257668'
+  last_sync: '2026-01-30T18:21:08.806445Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/751
+metadata:
+  name: Map View
+  priority: 1
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has performed a search and in list view</p>
+  steps:
+  - column_name: custom_steps
+    id: 920
+    case_id: 751
+    text1: <p>1. Tap on View map</p>
+    text2: null
+    text3: <p>1. User is able to view search results in map view</p>
+    text4: null
+    display_order: 1

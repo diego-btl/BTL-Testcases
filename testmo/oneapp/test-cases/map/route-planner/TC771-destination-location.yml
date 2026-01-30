@@ -1,0 +1,33 @@
+testmo:
+  case_id: 771
+  folder_id: 101
+  project_id: 2
+  folder_path: map/route-planner
+  folder_name_ui: Route Planner
+  created_at: '2023-08-01 23:08:22.472561'
+  updated_at: '2025-12-02 19:32:51.944221'
+  last_sync: '2026-01-30T18:21:08.779462Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/771
+metadata:
+  name: Destination location
+  priority: 1
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>User is on <strong>Create a Route</strong> screen</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 940
+    case_id: 771
+    text1: <ol><li>Tap on a destination field</li><li>Start typing</li><li>Select
+      an autocomplete result</li><li>Tap on <code>Edit</code> option to see the <code>X</code></li></ol>
+    text2: null
+    text3: <ul><li>User should see the auto-complete screen animate in from bottom
+      to top</li><li>User should see Google autocomplete results returned with places
+      names and full addresses</li><li>User should see the autocomplete result filled
+      into field and return to the Create Screen</li><li>The user should enter the
+      <code>Edit</code> mode</li></ul>
+    text4: null
+    display_order: 1

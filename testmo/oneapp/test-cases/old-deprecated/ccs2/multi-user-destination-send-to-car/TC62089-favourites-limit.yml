@@ -1,0 +1,36 @@
+testmo:
+  case_id: 62089
+  folder_id: 6789
+  project_id: 2
+  folder_path: old-deprecated/ccs2/multi-user-destination-send-to-car
+  folder_name_ui: Multi-user Destination send-to-car
+  created_at: '2025-12-04 22:29:16.901079'
+  updated_at: '2026-01-06 17:47:59.908509'
+  last_sync: '2026-01-30T18:21:04.858673Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/62089
+metadata:
+  name: Favourites Limit
+  priority: 13
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: 'User is viewing POI search results and has reached favorites limit
+    (5)<br />
+
+    User is a PRIMARY_DRIVER or SHARED_DRIVER (to be tested for both for AVK2)'
+  steps:
+  - column_name: custom_steps
+    id: 96145
+    case_id: 62089
+    text1: '1. Tap the heart button on the POI card<br />
+
+      2. Tap Ok'
+    text2: null
+    text3: '1. User should see an error modal indicating that favorites limit has
+      been reached<br />
+
+      2. User should see error modal dismiss'
+    text4: null
+    display_order: 1

@@ -1,0 +1,43 @@
+testmo:
+  case_id: 29949
+  folder_id: 3800
+  project_id: 2
+  folder_path: vehicle/collision-management-nna-only
+  folder_name_ui: Collision Management - NNA only
+  created_at: '2025-01-14 20:44:07.993470'
+  updated_at: '2025-01-28 13:45:13.577271'
+  last_sync: '2026-01-30T18:21:06.479780Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/29949
+metadata:
+  name: Edit Your Information fields - Email and Phone Errors
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>The user is already on the <code>Edit Your Information </code>screen</li><li>The
+    user should see the information pre-filled (First Name, Last Name, Phone Number,
+    and Email)</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 49018
+    case_id: 29949
+    text1: <p>Add an incomplete phone number</p>
+    text2: null
+    text3: '<ul><li>The asterisk is displayed below  the Phone Number field</li><li>The
+      user should see an error as:   * <code>Invalid phone number</code></li><li>The<code>SAVE</code>
+      button remains inactive </li></ul>'
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 49019
+    case_id: 29949
+    text1: <p>Enter  an incorrect email format</p>
+    text2: null
+    text3: '<ul><li>The email text field shows a red background</li><li>The asterisk
+      is displayed below  the Email field</li><li>The user should see an error as:
+        * <code>Invalid email address</code></li><li>The <code>SAVE</code> button
+      remains inactive <br /> </li></ul>'
+    text4: null
+    display_order: 2

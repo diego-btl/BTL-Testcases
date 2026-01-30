@@ -1,0 +1,31 @@
+testmo:
+  case_id: 61996
+  folder_id: 6780
+  project_id: 2
+  folder_path: home/charge/charge-limit
+  folder_name_ui: Charge Limit
+  created_at: '2025-11-14 21:46:55.698341'
+  updated_at: '2025-12-02 22:12:08.762493'
+  last_sync: '2026-01-30T18:21:05.285842Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/61996
+metadata:
+  name: Charge Limit - Set Charge Limit Setting - Success
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has an EV AVK2 vehicle</p><p><code>EnableChargeLimit</code>
+    FF is true</p><p>User is on the Charge Limit screen</p><p>Set the <code>CheckChargeConfigServiceRequest</code>
+     to return the <code>PENDING</code> status</p>
+  steps:
+  - column_name: custom_steps
+    id: 95501
+    case_id: 61996
+    text1: <p>Mock <code>CheckChargeConfigServiceRequest</code>  to return <code>SUCCESS</code></p>
+    text2: null
+    text3: <p>User should see a success toast <code>Charging limit set</code> (5 seconds)</p><p>User
+      should see the Set Charging Limit CTA get to the disabled state</p>
+    text4: null
+    display_order: 1

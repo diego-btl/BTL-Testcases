@@ -1,0 +1,29 @@
+testmo:
+  case_id: 29647
+  folder_id: 95
+  project_id: 2
+  folder_path: vehicle/service-history
+  folder_name_ui: Service History
+  created_at: '2024-12-12 19:38:04.726106'
+  updated_at: null
+  last_sync: '2026-01-30T18:21:06.608848Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/29647
+metadata:
+  name: Service History - Empty
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is on the vehicle screen and has no service history data
+    returned from the backend</p>
+  steps:
+  - column_name: custom_steps
+    id: 48256
+    case_id: 29647
+    text1: <p>1. Tap the service history button</p>
+    text2: null
+    text3: <p>User should see the service history empty state</p>
+    text4: null
+    display_order: 1

@@ -1,0 +1,51 @@
+testmo:
+  case_id: 592
+  folder_id: 56
+  project_id: 2
+  folder_path: home/add-vehicle
+  folder_name_ui: Add vehicle
+  created_at: '2023-08-01 23:08:20.185782'
+  updated_at: '2025-04-30 23:31:11.088838'
+  last_sync: '2026-01-30T18:21:09.102839Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/592
+metadata:
+  name: Scan VIN / Barcode
+  priority: 1
+  type: functional
+  status: active
+  estimate: 120000000
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>User is already on the <code>Add Vehicle</code> screen</li><li>User
+    has allowed Camera permissions to the app</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 761
+    case_id: 592
+    text1: <ol><li>Tap on the <code>Scan Barcode</code> tab</li><li>You can try to
+      scan this Barcode</li></ol><figure class="image"><img src="/attachments/view/4772"
+      alt="4772" /></figure>
+    text2: null
+    text3: <ol><li>The tab should be selected and highlighted</li><li>The VIN should
+      be <code>1NXBR12E31Z463785</code><br /> </li></ol>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 1793
+    case_id: 592
+    text1: <p>Tap on the <code>Scan VIN</code> tab</p>
+    text2: null
+    text3: <p>The tab should be selected and highlighted</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 1794
+    case_id: 592
+    text1: <p>Tap on the <code>Camera Interaction</code> field (<i>TAP HERE TO USE
+      YOUR CAMERA</i>) and scan the following VIN: </p><pre><code class="editor-plain
+      language-plain code-block">JH4KA4650KC031815</code></pre>
+    text2: null
+    text3: <p>The text should be populated in the VIN field</p>
+    text4: null
+    display_order: 3

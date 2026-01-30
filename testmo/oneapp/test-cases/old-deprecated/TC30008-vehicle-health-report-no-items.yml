@@ -1,0 +1,31 @@
+testmo:
+  case_id: 30008
+  folder_id: 105
+  project_id: 2
+  folder_path: old-deprecated
+  folder_name_ui: Old / Deprecated
+  created_at: '2025-01-21 17:11:01.149637'
+  updated_at: '2025-11-11 20:47:16.533278'
+  last_sync: '2026-01-30T18:21:06.417520Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/30008
+metadata:
+  name: Vehicle Health Report - No Items
+  priority: 3
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is on the Vehicle Profile sheet, has the VHR capability and
+    has no VHR items</p>
+  steps:
+  - column_name: custom_steps
+    id: 48885
+    case_id: 30008
+    text1: <p>1. Tap Vehicle Health Report item</p>
+    text2: null
+    text3: <p>User should not see any reports, instead label <code>"Vehicle Health
+      Report is unavailable at this time. Your next report will be sent within the
+      next 30 days."</code></p>
+    text4: null
+    display_order: 1

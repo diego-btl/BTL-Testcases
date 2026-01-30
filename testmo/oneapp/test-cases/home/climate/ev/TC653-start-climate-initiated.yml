@@ -1,0 +1,32 @@
+testmo:
+  case_id: 653
+  folder_id: 4169
+  project_id: 2
+  folder_path: home/climate/ev
+  folder_name_ui: EV
+  created_at: '2023-08-01 23:08:20.962428'
+  updated_at: '2025-09-22 14:46:30.967087'
+  last_sync: '2026-01-30T18:21:08.931382Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/653
+metadata:
+  name: Start Climate - Initiated
+  priority: 1
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is on Climate screen</p>
+  steps:
+  - column_name: custom_steps
+    id: 822
+    case_id: 653
+    text1: <p>1. Tap to Turn Climate On</p>
+    text2: null
+    text3: <p>1. User should see Turn Climate On button disable and status shows loading
+      state<br /><br />User should see a toast message that transitions from (3 seconds
+      each):<br />Contacting {vehicle year, model} to turn {on/off} climate...<br
+      />Waking {vehicle year, model} to turn {on/off} climate...<br />Initiating climate
+      {on/off} for {vehicle year, model}...</p>
+    text4: null
+    display_order: 1

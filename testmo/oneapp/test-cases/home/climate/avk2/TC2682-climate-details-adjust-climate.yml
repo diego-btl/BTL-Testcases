@@ -1,0 +1,48 @@
+testmo:
+  case_id: 2682
+  folder_id: 4170
+  project_id: 2
+  folder_path: home/climate/avk2
+  folder_name_ui: AVK2
+  created_at: '2023-09-07 21:10:07.667591'
+  updated_at: '2025-09-22 14:49:21.633156'
+  last_sync: '2026-01-30T18:21:07.787676Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/2682
+metadata:
+  name: Climate Details - Adjust Climate
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: "<p>Vehicle is <code>AVK2</code><br />Firebase flag is enabled:</p><pre><code\
+    \ class=\"editor-plain language-plain code-block\">{\n  \"entries\": {\n    \"\
+    EnableAdjustClimate\": \"true\"\n  },\n  \"appName\": $app_name // Update To Proper\
+    \ App Name,\n  \"state\": \"UPDATE\",\n  \"templateVersion\": \"118\"\n}</code></pre><p>User\
+    \ is already on the Climate Details Page<br />Climate is ON</p>"
+  steps:
+  - column_name: custom_steps
+    id: 3048
+    case_id: 2682
+    text1: '<ul><li>Validate the firebase flag and set it to <code>"EnableAdjustClimate":
+      "false"</code></li><li>Try to modify any of the climate parameters (temperature,
+      seat heating, steering wheel, defrost/deicer)</li></ul>'
+    text2: null
+    text3: <ul><li>Dials are locked</li><li>Selectors are not clickable</li><li>There
+      is no UPDATE BUTTON in the UI</li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 11721
+    case_id: 2682
+    text1: '<ul><li>Close the app, modify the firebase flag and set it to <code>"EnableAdjustClimate":
+      "true"</code></li><li>Turn Climate ON again and navigate to Climate Details
+      Page</li><li>Try to modify any of the climate parameters (temperature, seat
+      heating, steering wheel, defrost/deicer)</li></ul>'
+    text2: null
+    text3: '<ul><li>User should see text: "You made changes to your climate settings
+      while climate is turned on. Would you like to apply these changes now?"</li><li>User
+      should see an "Apply Changes" button appear</li></ul>'
+    text4: null
+    display_order: 2

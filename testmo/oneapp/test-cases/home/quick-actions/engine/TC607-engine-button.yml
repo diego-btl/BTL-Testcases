@@ -1,0 +1,28 @@
+testmo:
+  case_id: 607
+  folder_id: 60
+  project_id: 2
+  folder_path: home/quick-actions/engine
+  folder_name_ui: Engine
+  created_at: '2023-08-01 23:08:20.372026'
+  updated_at: '2025-09-19 18:39:38.632206'
+  last_sync: '2026-01-30T18:21:09.063225Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/607
+metadata:
+  name: Engine Button
+  priority: 1
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has an ICE vehicle</p>
+  steps:
+  - column_name: custom_steps
+    id: 776
+    case_id: 607
+    text1: <p>User is in the Home screen</p>
+    text2: null
+    text3: <p>User should see an "Engine" button in the telematics row</p>
+    text4: null
+    display_order: 1

@@ -1,0 +1,43 @@
+testmo:
+  case_id: 32181
+  folder_id: 4144
+  project_id: 6
+  folder_path: demo-mode
+  folder_name_ui: Demo Mode
+  created_at: '2025-04-01 17:50:43.618574'
+  updated_at: '2025-04-02 20:04:39.025893'
+  last_sync: '2026-01-30T18:20:45.905072Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/32181
+metadata:
+  name: Demo Mode - Map Page
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is on the homescreen</p>
+  steps:
+  - column_name: custom_steps
+    id: 52563
+    case_id: 32181
+    text1: '<p>Tap Map in the bottom nav</p>
+
+      <p>Tap on the search bar, POI categories, or buttons on the map</p>
+
+      <p>Tap on the user/vehicle location buttons</p>
+
+      <p>Change the vehicle from the selector</p>'
+    text2: null
+    text3: '<p>User should see the map screen with: user location, vehicle pins in
+      fixed locations, scrolling POI categories</p>
+
+      <p>User should see the demo mode alert modal </p>
+
+      <ul><li>For user location, the map screen should be changed,</li><li>For vehicle
+      location, vehicle pin in fixed locations should be shown.</li></ul>
+
+      <p>The dummy data should be changed.</p>'
+    text4: null
+    display_order: 1
+  notes: <p>Need to add <code>Enable V2L</code> Config  cases from Firebase</p>

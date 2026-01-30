@@ -1,0 +1,65 @@
+testmo:
+  case_id: 914
+  folder_id: 41
+  project_id: 2
+  folder_path: login-flow
+  folder_name_ui: Login Flow
+  created_at: '2023-08-15 00:17:35.471522'
+  updated_at: '2025-02-06 20:28:35.438804'
+  last_sync: '2026-01-30T18:21:08.396102Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/914
+metadata:
+  name: Biometrics - Subsequent Logins (Android)
+  priority: 2
+  type: functional
+  status: active
+  estimate: 300000000
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>User has already logged into the app</li><li>User have previously
+    enabled Biometric login with the app</li><li>User has Biometrics enabled on their
+    device</li><li>App must be closed</li><li>Onboarding cards are not covered, must
+    be skipped</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 1201
+    case_id: 914
+    text1: <p>Open the app by tapping on the app icon</p>
+    text2: null
+    text3: <p>The <code>Biometric Login</code> modal is displayed</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 1202
+    case_id: 914
+    text1: <p>Interact with the Fingerprint sensor with the incorrect finger</p>
+    text2: null
+    text3: <p>After two incorrect tries a <code>Biometric Error</code> modal is displayed</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 1203
+    case_id: 914
+    text1: <p>Tap on the <code>Ok</code> button</p>
+    text2: null
+    text3: <p>The Login page is displayed again</p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 1204
+    case_id: 914
+    text1: <p>Tap on the blue <code>Fingerprint</code> icon at the far right position
+      within the <code>Password</code> text field</p>
+    text2: null
+    text3: <p>The <code>Biometric Login</code> modal is displayed</p>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 1208
+    case_id: 914
+    text1: <p>Interact with the Fingerprint sensor with the correct finger</p>
+    text2: null
+    text3: <p>The user is driven to the Home page</p>
+    text4: null
+    display_order: 5

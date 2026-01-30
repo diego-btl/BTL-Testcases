@@ -1,0 +1,44 @@
+testmo:
+  case_id: 848
+  folder_id: 77
+  project_id: 2
+  folder_path: wearables/wearable-alerts
+  folder_name_ui: Wearable - Alerts
+  created_at: '2023-08-01 23:08:23.396700'
+  updated_at: '2024-10-17 17:57:05.010933'
+  last_sync: '2026-01-30T18:21:08.590333Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/848
+metadata:
+  name: Empty State of Alerts
+  priority: 1
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is on the Alerts page and does not have any alerts</p>
+  steps:
+  - column_name: custom_steps
+    id: 1017
+    case_id: 848
+    text1: <p>Tap the speed alerts item</p>
+    text2: null
+    text3: <p>User should see a message indicating no alerts found</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 1151
+    case_id: 848
+    text1: <p>Tap the curfew alerts item<br /> </p>
+    text2: null
+    text3: <p>User should see a message indicating no alerts found </p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 1152
+    case_id: 848
+    text1: <p>Tap the drive zone alerts item<br /> </p>
+    text2: null
+    text3: <p>User should see a message indicating no alerts found</p>
+    text4: null
+    display_order: 3

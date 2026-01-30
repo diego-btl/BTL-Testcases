@@ -1,0 +1,30 @@
+testmo:
+  case_id: 61910
+  folder_id: 6770
+  project_id: 6
+  folder_path: settings/legal
+  folder_name_ui: Legal
+  created_at: '2025-10-30 16:26:15.353898'
+  updated_at: '2025-10-30 17:05:14.513664'
+  last_sync: '2026-01-30T18:20:44.896254Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/61910
+metadata:
+  name: Terms of Service
+  priority: 12
+  type: functional
+  status: active
+  estimate: 60000000
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is on the <strong>Más</strong> screen</p>
+  steps:
+  - column_name: custom_steps
+    id: 94790
+    case_id: 61910
+    text1: <ol><li>Tap <code>Términos de servicio</code></li><li>Tap on a link</li></ol>
+    text2: null
+    text3: <ul><li>User should see the terms of use link open in a <strong>webview</strong></li><li>User
+      should see link open in <strong>webview</strong></li></ul>
+    text4: null
+    display_order: 1

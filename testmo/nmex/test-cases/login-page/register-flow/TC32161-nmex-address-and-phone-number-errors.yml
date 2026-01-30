@@ -1,0 +1,57 @@
+testmo:
+  case_id: 32161
+  folder_id: 4142
+  project_id: 6
+  folder_path: login-page/register-flow
+  folder_name_ui: Register Flow
+  created_at: '2025-04-01 17:50:43.451047'
+  updated_at: '2025-04-04 21:14:14.916346'
+  last_sync: '2026-01-30T18:20:45.980391Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/32161
+metadata:
+  name: NMEX - Address and Phone Number - Errors*
+  priority: 3
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is on the second registration screen</p>
+  steps:
+  - column_name: custom_steps
+    id: 52543
+    case_id: 32161
+    text1: <p>Verify placeholders for Address , City, State, ZIP Code, Phone Number
+      and Carrier fields</p><p>Enter number and letters for Calle field</p><p>Enter
+      number and letters for No Exterior field</p><p>Enter number and letters for
+      No Interior field</p><p>Enter number and letters for Colonia field</p><p>Enter
+      number and letters for Municipio field</p><p>Enter letters for Ciudad field</p><p>Select
+      Estado form the Picker</p><p>Enter less than 5 digits for ZIP code<br /> </p><p>Enter
+      less than 10 digits for phone number</p>
+    text2: null
+    text3: '<p>User should see below placeholders</p><ul><li>Calle:<ul><li>Av. Insurgentes
+      Sur</li></ul></li><li>No Exterior <ul><li>2475</li></ul></li><li>No Interior<ul><li>Blank
+      place holder</li></ul></li><li>Colonia<ul><li>Barrio de Loreto</li></ul></li><li>Municipio<ul><li>Álvaro
+      Obregón</li></ul></li><li>Ciudad <ul><li>Ciudad de Mexico</li></ul></li><li>Estado
+      <ul><li>picker empty</li></ul></li><li>Codigo Postal:<ul><li>01090</li></ul></li><li>Phone
+      Number<ul><li>00-0000-0000</li></ul></li><li>Verify user is unable to insert
+      more than 100 characters </li><li>Field should be a mixed of number and letters</li><li>Verify
+      field is mandatory</li><li>Verify user is unable to insert more than 10 characters
+      </li><li>Field should be a mixed of number and letters</li><li>Verify field
+      is mandatory</li><li>Verify user is unable to insert more than 10 characters
+      </li><li>Field should be a mixed of number and letters</li><li>Verify field
+      is optional</li><li>Verify user is unable to insert more than 100 characters
+      </li><li>Field should be a mixed of number and letters</li><li>Verify field
+      is mandatory</li><li>Verify user is unable to insert more than 50 characters
+      </li><li>Field should be a mixed of number and letters</li><li>Verify field
+      is mandatory</li><li>Verify user is unable to insert more than 100 characters
+      </li><li>Field should allow letters only</li><li>Verify field is mandatory</li><li>Verify
+      list of stated are displayed as 3 letters (Request should send only 2 as other
+      regions when creating the account)</li><li>User should see an error <code>*
+      Invalid ZIP code</code> </li><li>Keyboard should be numeric</li></ul><p>User
+      should see an error <code>* Invalid phone number</code></p><ul><li>Format: XX-XXXX-XXXX</li><li>keyboard:
+      number type</li></ul>'
+    text4: null
+    display_order: 1
+  notes: <p><code>Important</code> Please notice that for Android the errors are displayed
+    below the fields, while for IOS they are stacked at the bottom of the screen. </p>

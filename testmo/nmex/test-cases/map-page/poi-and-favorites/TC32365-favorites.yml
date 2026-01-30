@@ -1,0 +1,170 @@
+testmo:
+  case_id: 32365
+  folder_id: 6772
+  project_id: 6
+  folder_path: map-page/poi-and-favorites
+  folder_name_ui: POI and Favorites
+  created_at: '2025-04-01 17:50:44.910714'
+  updated_at: '2025-10-31 14:54:43.339167'
+  last_sync: '2026-01-30T18:20:45.560828Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/32365
+metadata:
+  name: Favorites
+  priority: 1
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User's selected vehicle has the <code>DESTINATION_SEND_TO_CAR</code>
+    capability enabled</p>
+  steps:
+  - column_name: custom_steps
+    id: 52736
+    case_id: 32365
+    text1: <ol><li>Login into the app</li><li>Go to <code>Mapa</code> option</li><li>Scroll
+      the map info drawer</li><li>Swipe on the swimlane</li><li>Check the <code>Favoritos</code>
+      section</li></ol>
+    text2: null
+    text3: <ul><li>User should see a <code>Favoritos</code> section (maximum of 5)</li><li>User
+      should be able to scroll horizontally</li><li>User should see search performed
+      for the corresponding favourite, map centers on result and shows POI card</li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 94811
+    case_id: 32365
+    text1: <ol><li>Login into the app</li><li>Go to <code>Mapa</code> option</li><li>Scroll
+      the map info drawer</li><li>Swipe on the swimlane</li><li>Check the <code>Favoritos</code>
+      section</li><li>Click <code>Ver más</code> button</li></ol>
+    text2: null
+    text3: <ul><li>The List View should show all the Favourite results with:<ul><li>Title
+      &gt; <code>Favoritos</code><ul><li>Name</li><li>Address</li><li>Send to the
+      car icon / Call icon</li><li>Favourite logo</li><li>Distance to the location
+      in <code>KM</code></li></ul></li></ul></li><li>If there are no <code>Favoritos</code>,
+      the See More button will be disabled or user should see a scrolling view of
+      POI cards if there are <code>Favoritos</code>.</li></ul>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 94812
+    case_id: 32365
+    text1: <ol><li>Login into the app</li><li>Go to <code>Mapa</code> option</li><li>Scroll
+      the map info drawer</li><li>Swipe on the swimlane</li><li>Check the <code>Favoritos</code>
+      section</li><li>Click <code>Ver más</code> button</li><li>Tap on <code>Call</code>
+      button</li></ol>
+    text2: null
+    text3: <ul><li>User should see call button function properly</li></ul>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 94813
+    case_id: 32365
+    text1: <ol><li>Login into the app</li><li>Go to <code>Mapa</code> option</li><li>Scroll
+      the map info drawer</li><li>Swipe on the swimlane</li><li>Check the <code>Favoritos</code>
+      section</li><li>Click <code>Ver más</code> button</li><li>Tap on <code>Directions</code>
+      button</li></ol>
+    text2: null
+    text3: <ul><li>User should see directions button function properly</li></ul>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 94814
+    case_id: 32365
+    text1: <ol><li>Login into the app</li><li>Go to <code>Mapa</code> option</li><li>Scroll
+      the map info drawer</li><li>Swipe on the swimlane</li><li>Check the <code>Favoritos</code>
+      section</li><li>Click <code>Ver más</code> button</li><li>Tap the heart icon</li></ol>
+    text2: null
+    text3: <ul><li>User should see loading state while favourite is being removed</li><li>On
+      success, user should see card removed and success toast<ul><li><code>Favorito
+      eliminado</code></li></ul></li></ul>
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 94815
+    case_id: 32365
+    text1: <ol><li>Login into the app</li><li>Go to <code>Mapa</code> option</li><li>Scroll
+      the map info drawer</li><li>Swipe on the swimlane</li><li>Check the <code>Favoritos</code>
+      section</li><li>Click <code>Ver más</code> button</li><li>Tap one of the <code>Favoritos</code>
+      POI cards</li></ol>
+    text2: null
+    text3: <ul><li>User should see map pan to the corresponding favourite POI</li></ul>
+    text4: null
+    display_order: 6
+  notes: "<pre><code class=\"editor-json language-json code-block\">{\n  \"data\"\
+    : {\n    \"vehicle\": {\n      \"__typename\": \"AVK2Vehicle\",\n      \"pointOfInterestDestination\"\
+    : {\n        \"__typename\": \"PointOfInterestResponse\",\n        \"folders\"\
+    : [\n          {\n            \"__typename\": \"Folder\",\n            \"folderName\"\
+    : \"Recents\",\n            \"destinations\": [\n              {\n           \
+    \     \"__typename\": \"POIGeoAddress\",\n                \"id\": \"1821639\"\
+    ,\n                \"name\": \"mw test - send poi test 1\",\n                \"\
+    phoneNumber\": \"1234567890\",\n                \"address\": {\n             \
+    \     \"__typename\": \"Address\",\n                  \"address1\": \"815 N Bristol\
+    \ St\",\n                  \"address2\": \"test2\",\n                  \"city\"\
+    : \"Santa Ana\",\n                  \"state\": \"CA\",\n                  \"postalCode\"\
+    : \"92703\",\n                  \"country\": \"US\"\n                },\n    \
+    \            \"coordinate\": {\n                  \"__typename\": \"Location\"\
+    ,\n                  \"latitude\": 33.730065555555555,\n                  \"longitude\"\
+    : -117.86059888888889\n                }\n              },\n              {\n\
+    \                \"__typename\": \"POIGeoAddress\",\n                \"id\": \"\
+    1801026\",\n                \"name\": \"ChargePoint\",\n                \"phoneNumber\"\
+    : null,\n                \"address\": {\n                  \"__typename\": \"\
+    Address\",\n                  \"address1\": \"842 Oxford Road\",\n           \
+    \       \"address2\": \"842 Oxford Road\",\n                  \"city\": \"Troy\"\
+    ,\n                  \"state\": null,\n                  \"postalCode\": \"48098\"\
+    ,\n                  \"country\": \"US\"\n                },\n               \
+    \ \"coordinate\": {\n                  \"__typename\": \"Location\",\n       \
+    \           \"latitude\": 42.59646388888889,\n                  \"longitude\"\
+    : -83.16616083333334\n                }\n              }\n            ]\n    \
+    \      },\n          {\n            \"__typename\": \"Folder\",\n            \"\
+    folderName\": \"Favorites\",\n            \"destinations\": [\n              {\n\
+    \                \"__typename\": \"POIGeoAddress\",\n                \"id\": \"\
+    1803378\",\n                \"name\": \"Electrify America\",\n               \
+    \ \"phoneNumber\": \"8336322778\",\n                \"address\": {\n         \
+    \         \"__typename\": \"Address\",\n                  \"address1\": \" 50903\
+    \ Steed Dr\",\n                  \"address2\": null,\n                  \"city\"\
+    : \"Canton\",\n                  \"state\": \"MI\",\n                  \"postalCode\"\
+    : \"48187-2594\",\n                  \"country\": \"US\"\n                },\n\
+    \                \"coordinate\": {\n                  \"__typename\": \"Location\"\
+    ,\n                  \"latitude\": 42.30827,\n                  \"longitude\"\
+    : -83.54097\n                }\n              },\n              {\n          \
+    \      \"__typename\": \"POIGeoAddress\",\n                \"id\": \"1768266\"\
+    ,\n                \"name\": \"mw test\",\n                \"phoneNumber\": \"\
+    1234567890\",\n                \"address\": {\n                  \"__typename\"\
+    : \"Address\",\n                  \"address1\": \"815 N Bristol St\",\n      \
+    \            \"address2\": \"test2\",\n                  \"city\": \"Santa Ana\"\
+    ,\n                  \"state\": \"CA\",\n                  \"postalCode\": \"\
+    92703\",\n                  \"country\": \"US\"\n                },\n        \
+    \        \"coordinate\": {\n                  \"__typename\": \"Location\",\n\
+    \                  \"latitude\": 33.730065555555555,\n                  \"longitude\"\
+    : -117.86059888888889\n                }\n              },\n              {\n\
+    \                \"__typename\": \"POIGeoAddress\",\n                \"id\": \"\
+    1725735\",\n                \"name\": \"BEAMSVILLE TOWNE CENTRE\",\n         \
+    \       \"phoneNumber\": null,\n                \"address\": {\n             \
+    \     \"__typename\": \"Address\",\n                  \"address1\": \" King St\"\
+    ,\n                  \"address2\": null,\n                  \"city\": \"Lincoln\"\
+    ,\n                  \"state\": \"ON\",\n                  \"postalCode\": \"\
+    L0R 1B0\",\n                  \"country\": \"CA\"\n                },\n      \
+    \          \"coordinate\": {\n                  \"__typename\": \"Location\",\n\
+    \                  \"latitude\": 43.165419444444446,\n                  \"longitude\"\
+    : -79.47417777777778\n                }\n              },\n              {\n \
+    \               \"__typename\": \"POIGeoAddress\",\n                \"id\": \"\
+    1725736\",\n                \"name\": \"TEST2\",\n                \"phoneNumber\"\
+    : null,\n                \"address\": {\n                  \"__typename\": \"\
+    Address\",\n                  \"address1\": \" King St\",\n                  \"\
+    address2\": null,\n                  \"city\": \"Lincoln\",\n                \
+    \  \"state\": \"ON\",\n                  \"postalCode\": \"L0R 1B0\",\n      \
+    \            \"country\": \"CA\"\n                },\n                \"coordinate\"\
+    : {\n                  \"__typename\": \"Location\",\n                  \"latitude\"\
+    : 43.165419444444446,\n                  \"longitude\": -79.47417777777778\n \
+    \               }\n              },\n              {\n                \"__typename\"\
+    : \"POIGeoAddress\",\n                \"id\": \"1725737\",\n                \"\
+    name\": \"TES1\",\n                \"phoneNumber\": null,\n                \"\
+    address\": {\n                  \"__typename\": \"Address\",\n               \
+    \   \"address1\": \" King St\",\n                  \"address2\": null,\n     \
+    \             \"city\": \"Lincoln\",\n                  \"state\": \"ON\",\n \
+    \                 \"postalCode\": \"L0R 1B0\",\n                  \"country\"\
+    : \"CA\"\n                },\n                \"coordinate\": {\n            \
+    \      \"__typename\": \"Location\",\n                  \"latitude\": 43.165419444444446,\n\
+    \                  \"longitude\": -79.47417777777778\n                }\n    \
+    \          }\n            ]\n          }\n        ]\n      }\n    }\n  }\n}</code></pre>"

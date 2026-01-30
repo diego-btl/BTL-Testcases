@@ -1,0 +1,57 @@
+testmo:
+  case_id: 61936
+  folder_id: 6755
+  project_id: 2
+  folder_path: home/charge/v1g-vehicle-to-grid
+  folder_name_ui: V1G - Vehicle-to-Grid
+  created_at: '2025-11-05 22:06:51.121029'
+  updated_at: '2025-12-16 18:20:15.189428'
+  last_sync: '2026-01-30T18:21:05.514103Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/61936
+metadata:
+  name: V1G - Garage Load - EV/EV2 - AD - ENROLLED
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<p>Nissan NNA and NCI only</p><p>"GrantV1G": "{\"enabled\": true,
+    \"checkCapability\": true}" </p><p>VehicleStaticData &gt; "__typename": "ElectricAVK2Vehicle"
+    or "__typename": "ElectricVehicle"</p><p>VehicleStaticData &gt; "driverType":
+    "SHARED_DRIVER"</p><p>VehicleCapabilities &gt; "status": "ENROLLED"</p>'
+  steps:
+  - column_name: custom_steps
+    id: 95227
+    case_id: 61936
+    text1: <p>User is on the Home screen</p>
+    text2: null
+    text3: <p>eVehicleEligibility API is not called</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 95228
+    case_id: 61936
+    text1: <p>Navigate to the Charge screen </p>
+    text2: null
+    text3: <p>The  feature is hidden</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 95237
+    case_id: 61936
+    text1: '<p>1. Stop mocking VehicleStaticData to receive "driverType": "PRIMARY_DRIVER"</p><p>2.
+      Bg/fg the app 2 times or pull-to-refresh</p>'
+    text2: null
+    text3: '<p>1. eVehicleEligibility API is called returning "v1GEligible": true</p><p>2.
+      V1GMonitoredChargingAccountStatus is called</p>'
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 95238
+    case_id: 61936
+    text1: <p>Navigate to the Charge screen</p>
+    text2: null
+    text3: <p>The feature is shown</p>
+    text4: null
+    display_order: 4

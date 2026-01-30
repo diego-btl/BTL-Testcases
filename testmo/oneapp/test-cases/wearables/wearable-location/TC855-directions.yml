@@ -1,0 +1,31 @@
+testmo:
+  case_id: 855
+  folder_id: 78
+  project_id: 2
+  folder_path: wearables/wearable-location
+  folder_name_ui: Wearable - Location
+  created_at: '2023-08-01 23:08:23.453150'
+  updated_at: '2025-10-15 16:39:40.797311'
+  last_sync: '2026-01-30T18:21:08.569998Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/855
+metadata:
+  name: Directions
+  priority: 1
+  type: functional
+  status: active
+  estimate: 60000000
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User's vehicle has a location and is on the Map screen</p><p>You
+    see the card Vehicle Location</p>
+  steps:
+  - column_name: custom_steps
+    id: 1024
+    case_id: 855
+    text1: <p>1. Tap anywhere on the map image</p>
+    text2: null
+    text3: <p>User should be able to get walking directions to their vehicle's location
+      in the native maps app</p>
+    text4: null
+    display_order: 1

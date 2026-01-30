@@ -1,0 +1,95 @@
+testmo:
+  case_id: 31594
+  folder_id: 3872
+  project_id: 5
+  folder_path: landing-page/registration
+  folder_name_ui: Registration
+  created_at: '2025-04-01 15:45:50.061907'
+  updated_at: '2025-04-02 15:26:47.185486'
+  last_sync: '2026-01-30T18:20:38.087798Z'
+  url: https://bethinklabs.testmo.net/repositories/5/cases/31594
+metadata:
+  name: Registration - Happy Path
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is in the registration flow</p>
+  steps:
+  - column_name: custom_steps
+    id: 51992
+    case_id: 31594
+    text1: <p>Enter valid data in each field</p>
+    text2: null
+    text3: <p><code>Proxima</code> CTA should enable</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 51993
+    case_id: 31594
+    text1: <p>Tap <code>Proxima</code></p>
+    text2: null
+    text3: <p>User should be brought to the create password screen</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 51994
+    case_id: 31594
+    text1: <p>Enter a valid password</p>
+    text2: null
+    text3: <p>User should see the icons for the validation section change based on
+      what has been entered</p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 51995
+    case_id: 31594
+    text1: <p>Re-enter the password</p>
+    text2: null
+    text3: null
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 51996
+    case_id: 31594
+    text1: <p>Tap on the eye icon</p>
+    text2: null
+    text3: <p>Password should be hidden/shown based on the current status</p>
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 51997
+    case_id: 31594
+    text1: <p>Enable the <code>Eu li e aceito os Termos de servicos e a Poltica de
+      Privacidade</code> toggle</p>
+    text2: null
+    text3: <p>The <code>CRIAR CONTA</code> cta should become enabled</p>
+    text4: null
+    display_order: 6
+  - column_name: custom_steps
+    id: 51998
+    case_id: 31594
+    text1: <p>Tap <code>CRIAR CONTA</code> </p>
+    text2: null
+    text3: <p>Account should be registered and user should see the confirmation screen</p>
+    text4: null
+    display_order: 7
+  - column_name: custom_steps
+    id: 52009
+    case_id: 31594
+    text1: <p>Tap <code>Ok, entendi!</code></p>
+    text2: null
+    text3: <p>User should land on the Splash page</p>
+    text4: null
+    display_order: 8
+  - column_name: custom_steps
+    id: 52010
+    case_id: 31594
+    text1: <p>Verify the account using the email entered during registration, then
+      try to sign in</p>
+    text2: null
+    text3: <p>Account should be validated and user should be signed in</p>
+    text4: null
+    display_order: 9

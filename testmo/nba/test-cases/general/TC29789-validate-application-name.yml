@@ -1,0 +1,37 @@
+testmo:
+  case_id: 29789
+  folder_id: 3761
+  project_id: 5
+  folder_path: general
+  folder_name_ui: General
+  created_at: '2024-12-20 15:21:40.308281'
+  updated_at: null
+  last_sync: '2026-01-30T18:20:38.438616Z'
+  url: https://bethinklabs.testmo.net/repositories/5/cases/29789
+metadata:
+  name: Validate Application Name
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  steps:
+  - column_name: custom_steps
+    id: 48600
+    case_id: 29789
+    text1: <p>Install the NBA app </p>
+    text2: null
+    text3: null
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 48601
+    case_id: 29789
+    text1: <p>After installation, navigate to the home screen or the apps menu on
+      the device</p>
+    text2: null
+    text3: <ul><li>The application name displayed under the app icon should be "MeuNissan."</li><li>The
+      app icon should match the branding elements associated with "MeuNissan."</li></ul>
+    text4: null
+    display_order: 2

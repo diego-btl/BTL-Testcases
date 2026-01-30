@@ -1,0 +1,61 @@
+testmo:
+  case_id: 604
+  folder_id: 59
+  project_id: 2
+  folder_path: home/quick-actions/lock-unlock
+  folder_name_ui: Lock/Unlock
+  created_at: '2023-08-01 23:08:20.337303'
+  updated_at: '2025-09-19 18:44:02.958071'
+  last_sync: '2026-01-30T18:21:09.068143Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/604
+metadata:
+  name: Unlock - Initiated
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is in the Home screen<br />Lock/Unlock buttons are in the
+    Telematics row</p>
+  steps:
+  - column_name: custom_steps
+    id: 773
+    case_id: 604
+    text1: <p>User taps an "Unlock" button</p>
+    text2: null
+    text3: '<p>User should see a confirmation modal:</p><ul><li>TCU2K/AVK/AVK2: "Are
+      you sure? This action will remotely unlock your vehicle."<br />and two buttons
+      "No" and "Yes"<br /> </li></ul>'
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 53005
+    case_id: 604
+    text1: <p>Tap "No" button on the confirmation modal</p>
+    text2: null
+    text3: <p>Modal is dismissed </p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 53018
+    case_id: 604
+    text1: <p>User taps an "Unlock" button again</p>
+    text2: null
+    text3: '<p>User should see a confirmation modal:</p><ul><li>TCU2K/AVK/AVK2: "Are
+      you sure? This action will remotely unlock your vehicle."<br />and two buttons
+      "No" and "Yes"</li></ul>'
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 53006
+    case_id: 604
+    text1: <p>Tap "Yes" button on the confirmation modal</p>
+    text2: null
+    text3: <p>User should see the "Unlock" button is changed to a spinner and "Lock"
+      button is shown in a disabled state.<br /><br />User should see the following
+      toast messages:</p><ul><li>Contacting &lt;year and model&gt; to unlock...</li><li>Waking
+      &lt;year and model&gt; to unlock...</li><li>Initiating unlock on &lt;year and
+      model&gt;...</li></ul>
+    text4: null
+    display_order: 4

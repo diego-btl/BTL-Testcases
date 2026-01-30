@@ -1,0 +1,116 @@
+testmo:
+  case_id: 62240
+  folder_id: 6820
+  project_id: 2
+  folder_path: vehicle/second-delivery/second-delivery-booking-virtual
+  folder_name_ui: Second Delivery - Booking (Virtual)
+  created_at: '2025-12-19 23:10:55.703651'
+  updated_at: '2025-12-19 23:53:04.890354'
+  last_sync: '2026-01-30T18:21:03.723152Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/62240
+metadata:
+  name: Second Delivery - Upcoming Appointment Screen - Display
+  priority: 1
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  steps:
+  - column_name: custom_steps
+    id: 97142
+    case_id: 62240
+    text1: "<p>Mock the <code>SecondDeliveryAppointment</code> query to return:</p><pre><code\
+      \ class=\"editor-plain language-plain code-block\">{\n  \"data\": {\n    \"\
+      vehicle\": {\n      \"__typename\": \"Vehicle\",\n      \"secondDelivery\":\
+      \ {\n        \"__typename\": \"SecondDelivery\",\n        \"appointment\": {\n\
+      \          \"__typename\": \"SecondDeliveryExistingBookedAppointment\",\n  \
+      \        \"id\": 20498452,\n          \"activityId\": 20498452,\n          \"\
+      beginsAt\": \"2026-01-02T19:30:00.000Z\",\n          \"address\": {\n      \
+      \      \"__typename\": \"Address\",\n            \"address1\": \"1413 test address\"\
+      ,\n            \"address2\": null,\n            \"city\": \"los angeles \",\n\
+      \            \"state\": \"CA\",\n            \"postalCode\": \"90012\",\n  \
+      \          \"country\": \"US\"\n          },\n          \"contact\": {\n   \
+      \         \"__typename\": \"SecondDeliveryContactInformation\",\n          \
+      \  \"firstName\": \"Nna\",\n            \"lastName\": \"Qa\",\n            \"\
+      phoneNumber\": \"5487545464\",\n            \"email\": \"nnaqa@bethinklabs.com\"\
+      \n          },\n          \"redeliveryNotes\": null,\n          \"featureNotes\"\
+      : null,\n          \"hub\": {\n            \"__typename\": \"SecondDeliveryHub\"\
+      ,\n            \"id\": 1000000,\n            \"timezone\": \"US/Pacific\",\n\
+      \            \"dealer\": {\n              \"__typename\": \"SecondDeliveryDealer\"\
+      ,\n              \"code\": \"999991\",\n              \"address\": {\n     \
+      \           \"__typename\": \"SecondDeliveryDealerAddress\",\n             \
+      \   \"coordinates\": null,\n                \"address1\": \"325 W Gardena Blvd\"\
+      ,\n                \"address2\": null,\n                \"state\": \"CA\",\n\
+      \                \"city\": \"Gardena\",\n                \"country\": \"US\"\
+      ,\n                \"id\": 132498250,\n                \"postalCode\": \"90248\"\
+      \n              }\n            }\n          },\n          \"mode\": \"VIRTUAL\"\
+      \n        }\n      }\n    }\n  }\n}</code></pre><p>Navigate to <code>Upcoming\
+      \ Appointment</code> screen</p>"
+    text2: null
+    text3: <ul><li>Mock data is set for <code>SecondDeliveryAppointment</code> query</li><li>User
+      is on <code>Upcoming Appointment</code> screen</li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 97143
+    case_id: 62240
+    text1: <p>Verify screen header and vehicle information is displayed</p>
+    text2: null
+    text3: '<ul><li>Screen title: <code>Upcoming Appointment</code> is displayed at
+      top</li><li><strong>Back button (&lt;)</strong> is visible in top-left corner</li><li><code>MyINFINITI
+      Expert</code> header text is displayed</li><li><code>1-hr Virtual Appointment</code>
+      subtitle is displayed</li><li>Vehicle image is displayed (matching in-focus
+      VIN model, e.g., red Q60)</li></ul>'
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 97144
+    case_id: 62240
+    text1: <p>Verify <code>Date and Time</code> card is displayed</p>
+    text2: null
+    text3: '<ul><li><strong>Date and Time card</strong> is displayed with rounded
+      border</li><li><strong>Calendar icon</strong> is displayed on left side of card
+      header</li><li>Card title: <code>Date and Time</code> is displayed</li><li>Date
+      is displayed in format: <code>[Day of Week], [Month] [Date], [Year]</code> (e.g.,
+      "Monday, December 22, 2025")</li><li>Time is displayed in format: <code>[Hour]:[Minute]
+      [AM/PM]</code> (e.g., "10:30 AM")</li></ul>'
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 97145
+    case_id: 62240
+    text1: <p>Verify <code>Contact Information</code> card is displayed</p>
+    text2: null
+    text3: '<ul><li><strong>Contact Information card</strong> is displayed with rounded
+      border</li><li><strong>Phone icon</strong> is displayed on left side of card
+      header</li><li>Card title: <code>Contact Information</code> is displayed</li><li>Contact
+      details are displayed:<ul><li>First Name: <code>Nna</code></li><li>Last Name:
+      <code>Qa</code></li><li>Phone Number: <code>(548) 754-5464</code> (formatted
+      with parentheses and spaces)</li><li>Email: <code>nnaqa@bethinklabs.com</code></li><li>Appt.
+      Notes: [Displays notes if entered, or field is omitted if null]</li></ul></li></ul>'
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 97146
+    case_id: 62240
+    text1: <p>Verify action buttons and navigation are displayed</p>
+    text2: null
+    text3: <ul><li><code>ADD TO CALENDAR</code> link/button is displayed (between
+      Contact card and Edit button)</li><li><code>Edit Appointment</code> button is
+      displayed with dark background (primary style)</li><li><code>Cancel Appointment</code>
+      button is displayed below Edit button (secondary/outline style)</li><li><strong>Bottom
+      navigation bar</strong> is visible with all tabs (Home, Vehicle, Map, Support,
+      Settings)</li><li>All elements are accessible and tappable</li></ul>
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 97147
+    case_id: 62240
+    text1: <p>Tap <strong>Back button (&lt;)</strong></p>
+    text2: null
+    text3: <ul><li>User is navigated back to <code>Vehicle</code> screen</li><li>Upcoming
+      Virtual Appointment card remains displayed</li><li>No changes to appointment
+      data</li></ul>
+    text4: null
+    display_order: 6

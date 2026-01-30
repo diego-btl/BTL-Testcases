@@ -1,0 +1,39 @@
+testmo:
+  case_id: 62163
+  folder_id: 42
+  project_id: 2
+  folder_path: demo-mode
+  folder_name_ui: Demo Mode
+  created_at: '2025-12-16 18:36:39.652382'
+  updated_at: '2025-12-16 18:42:59.391363'
+  last_sync: '2026-01-30T18:21:04.618656Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/62163
+metadata:
+  name: Demo Mode - Splash Page
+  priority: 2
+  type: functional
+  status: active
+  estimate: 120000000
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>Fresh installation or app cache cleared</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 96531
+    case_id: 62163
+    text1: <p>Open the app</p>
+    text2: null
+    text3: <p>User should be taken to the Splash screen with the following elements:</p><ul><li><code>SIGN
+      IN</code> button</li><li><code>REGISTER</code> button</li><li><strong>DEMO MODE</strong>
+      option</li><li><strong>PRIVACY &amp; TERMS</strong> option</li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 96534
+    case_id: 62163
+    text1: <p>Tap on <strong>DEMO MODE</strong> option</p>
+    text2: null
+    text3: <p>The user is taken to the Home screen from demo mode.</p>
+    text4: null
+    display_order: 2

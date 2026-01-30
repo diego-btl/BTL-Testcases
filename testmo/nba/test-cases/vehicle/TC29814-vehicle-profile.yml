@@ -1,0 +1,56 @@
+testmo:
+  case_id: 29814
+  folder_id: 3763
+  project_id: 5
+  folder_path: vehicle
+  folder_name_ui: Vehicle
+  created_at: '2024-12-20 15:21:40.308281'
+  updated_at: '2025-04-09 13:29:44.393742'
+  last_sync: '2026-01-30T18:20:38.342841Z'
+  url: https://bethinklabs.testmo.net/repositories/5/cases/29814
+metadata:
+  name: Vehicle Profile
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is on the Vehicle tab</p>
+  steps:
+  - column_name: custom_steps
+    id: 48672
+    case_id: 29814
+    text1: <p>Tap on the <code>Detalhes do Veiculo</code> CTA</p>
+    text2: null
+    text3: <p>User should be brought to the vehicle profile screen</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 48673
+    case_id: 29814
+    text1: null
+    text2: null
+    text3: <p>Page header should be <code>Detalhes do Veiculo</code></p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 48674
+    case_id: 29814
+    text1: null
+    text2: null
+    text3: <p>User should see the following cards:</p><p>- Version (Modelo e Versao)<br
+      />- Manufacturing / Model year (Ano producao/ Ano Modelo)<br />- Color name
+      (Cor)<br />- VIN (Chassi)<br />- License Plate (Placa)<br />- Nickname (Apelido)
+      (this card also has a chevron)</p><p>- Above data should match what's in the
+      <code>VehicleStaticData</code> api response</p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 48675
+    case_id: 29814
+    text1: null
+    text2: null
+    text3: <p>User should see the <code>REMOVER VEICULO</code> CTA</p>
+    text4: null
+    display_order: 4

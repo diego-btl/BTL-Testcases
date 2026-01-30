@@ -1,0 +1,40 @@
+testmo:
+  case_id: 32499
+  folder_id: 81
+  project_id: 2
+  folder_path: support/let-us-help
+  folder_name_ui: Let Us Help
+  created_at: '2025-04-02 23:15:39.259557'
+  updated_at: '2025-04-02 23:22:17.155604'
+  last_sync: '2026-01-30T18:21:06.244976Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/32499
+metadata:
+  name: Accident Helper - Hide Roadside Assistance Website & Insurance Website buttons
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>Disable the following FFs</p><ul><li><code>EnableNcesiInsuranceLink</code>
+    = false</li><li><code>EnableNcesiRSALink</code> = false</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 53027
+    case_id: 32499
+    text1: <p>Login to app &gt; Go to <code>support</code> screen &gt; Tap on <code>Accident
+      Helper</code> cta &gt; Tap on <code>At the Scene</code> dropdown</p>
+    text2: null
+    text3: <p>Verify <code>Roadside Assistance Website</code> cta is <i><strong>not</strong></i>
+      displayed</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 53031
+    case_id: 32499
+    text1: <p>Go back to app &gt; Tap on <code>Insurance</code> dropdown</p>
+    text2: null
+    text3: <p>Verify <code>Insurancewebsite</code> button is <i><strong>not</strong></i>
+      displayed</p>
+    text4: null
+    display_order: 2

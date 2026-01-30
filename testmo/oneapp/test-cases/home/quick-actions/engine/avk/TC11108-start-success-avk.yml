@@ -1,0 +1,36 @@
+testmo:
+  case_id: 11108
+  folder_id: 4167
+  project_id: 2
+  folder_path: home/quick-actions/engine/avk
+  folder_name_ui: AVK
+  created_at: '2024-01-04 07:53:53.469242'
+  updated_at: '2025-09-22 14:03:37.691023'
+  last_sync: '2026-01-30T18:21:07.169610Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/11108
+metadata:
+  name: Start - Success - AVK
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<p>User has an AVK vehicle</p><p>User is on the Home screen</p><p>User
+    has sent an Engine Start request</p><p>CheckEngineServiceRequest API response:<br
+    /><code>{</code></p><p><code>  "data": {</code></p><p><code>    "checkEngineServiceRequest":
+    {</code></p><p><code>      "__typename": "ServiceRequestResult",</code></p><p><code> 
+        "status": "SUCCESS",</code></p><p><code>      "statusDetails": null</code></p><p><code> 
+      }</code></p><p><code>  }</code></p><p><code>}</code></p>'
+  steps:
+  - column_name: custom_steps
+    id: 11728
+    case_id: 11108
+    text1: <p>Engine Start request has been resolved into a success</p>
+    text2: null
+    text3: <p>An "Engine" button icon changed to "STOP"</p><p>A success toast "&lt;year
+      and model&gt; Engine Started" is displayed at the bottom<br /><br />A countdown
+      timer (10 min) and "Engine Running" text are displayed in the Hero section instead
+      of Fuel Remaining</p>
+    text4: null
+    display_order: 1

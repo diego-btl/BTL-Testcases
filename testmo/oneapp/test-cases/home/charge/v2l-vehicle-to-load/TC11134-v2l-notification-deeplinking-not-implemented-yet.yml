@@ -1,0 +1,40 @@
+testmo:
+  case_id: 11134
+  folder_id: 1454
+  project_id: 2
+  folder_path: home/charge/v2l-vehicle-to-load
+  folder_name_ui: V2L - Vehicle-to-Load
+  created_at: '2024-02-06 17:20:37.291517'
+  updated_at: '2026-01-22 19:35:11.567288'
+  last_sync: '2026-01-30T18:21:07.078908Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/11134
+metadata:
+  name: V2L - Notification Deeplinking - not implemented yet
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has an EV AVK2 vehicle</p><p><code>V2L</code> capability
+    is returning true </p><p>User has enabled push notifications for Vehicle-to-Load</p>
+  steps:
+  - column_name: custom_steps
+    id: 11833
+    case_id: 11134
+    text1: <p>Trigger a push notification for Vehicle-to_Load</p>
+    text2: null
+    text3: <p>User should see a Vehicle-to_Load push notification on their device</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 11834
+    case_id: 11134
+    text1: <p>Tap on the Vehicle-to_Load push notification</p>
+    text2: null
+    text3: <p>User should see the app launch and be navigated to the Vehicle-to_Load
+      screen with a loading spinner as the data loads &gt;<strong> </strong><i><strong>this
+      behavior is not implemented yet; tapping on push notification will redirect
+      to the Home screen</strong></i></p>
+    text4: null
+    display_order: 2

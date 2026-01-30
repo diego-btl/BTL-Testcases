@@ -1,0 +1,37 @@
+testmo:
+  case_id: 30085
+  folder_id: 3872
+  project_id: 5
+  folder_path: landing-page/registration
+  folder_name_ui: Registration
+  created_at: '2025-01-27 08:39:25.177441'
+  updated_at: '2025-04-02 15:25:48.468817'
+  last_sync: '2026-01-30T18:20:38.171050Z'
+  url: https://bethinklabs.testmo.net/repositories/5/cases/30085
+metadata:
+  name: Registration Screen - UI
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  steps:
+  - column_name: custom_steps
+    id: 49005
+    case_id: 30085
+    text1: <p>User should see the registration page</p>
+    text2: null
+    text3: <figure class="image"><img src="/attachments/view/3931" alt="3931" /></figure><figure
+      class="image"><img src="/attachments/view/3930" alt="3930" /></figure>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 51999
+    case_id: 30085
+    text1: <p>Fill in all fields and go to the next screen</p>
+    text2: null
+    text3: <figure class="image"><img src="/attachments/view/3934" alt="3934" /></figure><figure
+      class="image"><img src="/attachments/view/3935" alt="3935" /></figure>
+    text4: null
+    display_order: 2

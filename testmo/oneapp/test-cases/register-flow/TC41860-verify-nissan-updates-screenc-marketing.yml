@@ -1,0 +1,88 @@
+testmo:
+  case_id: 41860
+  folder_id: 43
+  project_id: 2
+  folder_path: register-flow
+  folder_name_ui: Register Flow
+  created_at: '2025-06-09 14:38:17.064744'
+  updated_at: '2025-06-10 13:50:25.698276'
+  last_sync: '2026-01-30T18:21:05.960881Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/41860
+metadata:
+  name: Verify Nissan Updates screenc(marketing Preferences)
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<ul><li><code>"EnableNCIMarketingPreferences": "true"</code> FF
+    should be on</li><li>Connect the device to Proxyman to check the APIs calls</li></ul>'
+  steps:
+  - column_name: custom_steps
+    id: 71867
+    case_id: 41860
+    text1: <p>Set device in English &gt; Tap on Register CTA from the splash screen
+      and continue the flow until reaching the password screen &gt; Tap on Create
+      account</p>
+    text2: null
+    text3: '<p>Verify Nissan Updates screen is displayed with the following information:</p><ul><li>Nissan
+      Updates (Title)</li><li>X icon (dismisses the modal)</li><li>FINALIZE REGISTRATION
+      cta</li><li><pre><code class="editor-plain language-plain code-block">- I would
+      like to receive updates about (Optional):
+
+
+
+      Offers and Promotions
+
+      - Monthly updates on sales events, accessories, promotions.
+
+
+      News and Events
+
+      - Don''t miss out on the latest updates, including auto shows, vehicle reveals,
+      and more.
+
+
+      Product Updates
+
+      - Stay in the know of our new product launches and updates.</code></pre></li></ul>'
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 71854
+    case_id: 41860
+    text1: <p>Set device in French &gt; Tap on Register CTA from the splash screen
+      and continue the flow until reaching the password screen &gt; Tap on Create
+      account</p>
+    text2: null
+    text3: '<ul><li>Mises à jour Nissan (Title)</li><li>X icon</li><li>FINALISER L''INSCRIPTION
+      cta</li><li><pre><code class="editor-plain language-plain code-block">- J’aimerais
+      recevoir des mises à jour sur (facultatif):
+
+
+      Offres et promotions
+
+      - Mises à jour mensuelles sur les événements de vente, promotions et accessoires.
+
+
+      Nouvelles et événements
+
+      - Ne manquez pas les dernières mises à jour, y compris les salons de l’auto,
+      les révélations de véhicules et plus encore.
+
+
+      Mises à jour du produit
+
+      - Restez au courant des lancements et des mises à jour de nos nouveaux produits.</code></pre></li></ul>'
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 71852
+    case_id: 41860
+    text1: <p>Interact with the checkboxes</p>
+    text2: null
+    text3: <p>Verify the user can select and deselect the checkboxes by tapping on
+      them</p>
+    text4: null
+    display_order: 3

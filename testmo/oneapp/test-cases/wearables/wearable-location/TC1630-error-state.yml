@@ -1,0 +1,28 @@
+testmo:
+  case_id: 1630
+  folder_id: 78
+  project_id: 2
+  folder_path: wearables/wearable-location
+  folder_name_ui: Wearable - Location
+  created_at: '2023-08-28 20:13:25.336232'
+  updated_at: '2024-10-17 17:57:05.010933'
+  last_sync: '2026-01-30T18:21:07.860591Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/1630
+metadata:
+  name: Error State
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: User's vehicle location was not obtained and is on the Location screen
+  steps:
+  - column_name: custom_steps
+    id: 1995
+    case_id: 1630
+    text1: 1. Navigate to the 4th screen
+    text2: null
+    text3: User should see an error state indicating location could not be fetched
+    text4: null
+    display_order: 1

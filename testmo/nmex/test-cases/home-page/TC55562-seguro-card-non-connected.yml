@@ -1,0 +1,73 @@
+testmo:
+  case_id: 55562
+  folder_id: 4085
+  project_id: 6
+  folder_path: home-page
+  folder_name_ui: Home Page
+  created_at: '2025-08-05 17:08:24.632880'
+  updated_at: '2025-08-06 19:43:23.971099'
+  last_sync: '2026-01-30T18:20:45.171193Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/55562
+metadata:
+  name: Seguro card - NON-CONNECTED
+  priority: 3
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>Have an account with the next vehicles:</p><ul><li>Non-Connected</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 85463
+    case_id: 55562
+    text1: <ol><li>Login into the app</li><li>Check the card for <code>Seguro</code></li></ol>
+    text2: null
+    text3: <ul><li>The <code>Seguro</code> card should be under the <code>Garantía</code>
+      card</li><li>The <code>Seguro</code> card shouldn't be editable (you can't reorganized)</li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 85464
+    case_id: 55562
+    text1: "<ol><li>Login into the app</li><li>Check the card for <code>Seguro</code></li><li>Check\
+      \ the API call &gt; <code>GetVehicleInsurance</code></li></ol><pre><code class=\"\
+      editor-json language-json code-block\">{\n  \"data\": {\n    \"vehicle\": {\n\
+      \      \"__typename\": \"AVK2Vehicle\",\n      \"insurance\": null\n    }\n\
+      \  }\n}</code></pre>"
+    text2: null
+    text3: <ul><li>The icon/asset should be displaying <strong>BROWN </strong>and
+      the subtitle:<ul><li><code>Agregar tu seguro</code></li></ul></li></ul>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 85465
+    case_id: 55562
+    text1: <ol><li>Login into the app</li><li>Check the card for <code>Seguro</code><ol><li>The
+      <code>status</code> should be <code>active</code></li></ol></li></ol>
+    text2: null
+    text3: <ul><li>The icon/asset should be displaying <strong>GREEN </strong>and
+      the subtitle:<ul><li><code>Tu seguro está vigente</code></li></ul></li></ul>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 85466
+    case_id: 55562
+    text1: <ol><li>Login into the app</li><li>Check the card for <code>Seguro</code><ol><li>The
+      <code>status</code> should be <code>active</code></li><li>The <code>expirationDate</code>
+      should be close to the current date </li></ol></li></ol>
+    text2: null
+    text3: <ul><li>The icon/asset should be displaying <strong>ORANGE </strong>and
+      the subtitle:<ul><li><code>Tu seguro está vigente</code></li></ul></li></ul>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 85467
+    case_id: 55562
+    text1: <ol><li>Login into the app</li><li>Check the card for <code>Seguro</code><ol><li>The
+      <code>status</code> should be <code>expired</code></li></ol></li></ol>
+    text2: null
+    text3: <ul><li>The icon/asset should be displaying <strong>RED </strong>and the
+      subtitle:<ul><li><code>Tu seguro está vencido</code></li></ul></li></ul>
+    text4: null
+    display_order: 5

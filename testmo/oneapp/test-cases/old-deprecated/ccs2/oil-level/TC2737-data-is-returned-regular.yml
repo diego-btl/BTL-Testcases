@@ -1,0 +1,37 @@
+testmo:
+  case_id: 2737
+  folder_id: 415
+  project_id: 2
+  folder_path: old-deprecated/ccs2/oil-level
+  folder_name_ui: Oil Level
+  created_at: '2023-09-08 15:38:49.967364'
+  updated_at: '2026-01-06 17:49:35.796885'
+  last_sync: '2026-01-30T18:21:07.623171Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/2737
+metadata:
+  name: Data is returned - Regular
+  priority: 13
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: "<p>The user has an AVK2 vehicle</p><p>Mock the <code>VehicleDynamicData</code>\
+    \ call response</p><p>Android:</p><pre><code class=\"editor-plain language-plain\
+    \ code-block\">   \"oilLevel\": {\n                \"level\": 5,\n           \
+    \     \"status\": \"REGULAR\",\n                \"lastUpdatedAt\": \"2024-01-27T17:23:06.000Z\"\
+    \n            },</code></pre><p> </p><p>iOS:</p><pre><code class=\"editor-plain\
+    \ language-plain code-block\">\"oilLevel\": {\n\"__typename\": \"OilLevel\",\n\
+    \"lastUpdatedAt\": \"2024-01-27T17:23:06.000Z\",\n\"level\": 8,\n\"status\": \"\
+    REGULAR\"\n}</code></pre>"
+  steps:
+  - column_name: custom_steps
+    id: 3102
+    case_id: 2737
+    text1: '<p>1. oilLevel data returns:<br />- oilLevel.level: 0 - 8<br />- oilLevel.status:
+      "REGULAR"</p>'
+    text2: null
+    text3: <p>1. User should see oil level bar filled to the corresponding level<br
+      />User should see oil level in green with status Normal</p>
+    text4: null
+    display_order: 1

@@ -1,0 +1,53 @@
+testmo:
+  case_id: 30174
+  folder_id: 3763
+  project_id: 5
+  folder_path: vehicle
+  folder_name_ui: Vehicle
+  created_at: '2025-02-06 15:02:51.364262'
+  updated_at: '2025-02-14 19:00:42.499611'
+  last_sync: '2026-01-30T18:20:38.143286Z'
+  url: https://bethinklabs.testmo.net/repositories/5/cases/30174
+metadata:
+  name: No Vehicle State
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is on the Vehicle Screen with no vehicle in their garage</p>
+  steps:
+  - column_name: custom_steps
+    id: 49110
+    case_id: 30174
+    text1: null
+    text2: null
+    text3: <p>Vehicle Profile button should be greyed out and inactive</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 49112
+    case_id: 30174
+    text1: null
+    text2: null
+    text3: <p> Schedule Service and Find a Dealer should be enabled and active.</p><p>Service
+      History should be disabled for no vehicle</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 49113
+    case_id: 30174
+    text1: <p>Tap on schedule service button</p>
+    text2: null
+    text3: <p>User should be brought to the Schedule Service page (link from ContactUs)</p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 49114
+    case_id: 30174
+    text1: <p>Tap on find a dealer</p>
+    text2: null
+    text3: <p>User should be brought to Mapas tab</p>
+    text4: null
+    display_order: 4

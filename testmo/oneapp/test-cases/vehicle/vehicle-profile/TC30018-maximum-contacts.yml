@@ -1,0 +1,29 @@
+testmo:
+  case_id: 30018
+  folder_id: 90
+  project_id: 2
+  folder_path: vehicle/vehicle-profile
+  folder_name_ui: Vehicle Profile
+  created_at: '2025-01-21 17:11:01.149637'
+  updated_at: null
+  last_sync: '2026-01-30T18:21:06.392652Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/30018
+metadata:
+  name: Maximum Contacts
+  priority: 3
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: User is on the Emergency Contacts sheet and has 4 emergency contacts
+    already created
+  steps:
+  - column_name: custom_steps
+    id: 48900
+    case_id: 30018
+    text1: null
+    text2: null
+    text3: User should see a disabled + ADD A CONTACT CTA
+    text4: null
+    display_order: 1

@@ -1,0 +1,75 @@
+testmo:
+  case_id: 31304
+  folder_id: 101
+  project_id: 2
+  folder_path: map/route-planner
+  folder_name_ui: Route Planner
+  created_at: '2025-03-14 19:51:31.617000'
+  updated_at: '2025-11-21 22:15:46.598335'
+  last_sync: '2026-01-30T18:21:06.258667Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/31304
+metadata:
+  name: Error Messages on EVWaypoint failure
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>User has an <strong>EV2</strong></li><li>User is on the <strong>Creata
+    a Route</strong> screen</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 61488
+    case_id: 31304
+    text1: <ul><li>User fills all the necessary fields on the <code>Create a Route</code>
+      screen and taps <strong>ESTIMATE ROUTE CTA</strong></li></ul>
+    text2: null
+    text3: <ul><li><strong>VehicleEVWaypoints</strong> API is triggered</li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 61489
+    case_id: 31304
+    text1: "<ul><li>If <code>VehicleEVWaypoints</code> API returns: </li></ul><pre><code\
+      \ class=\"editor-plain language-plain code-block\">{\n  \"data\": {\n    \"\
+      vehicle\": {\n      \"__typename\": \"ElectricAVK2Vehicle\",\n      \"evWaypoints\"\
+      : {\n        \"__typename\": \"UnableToCompleteRouteError\",\n        \"message\"\
+      : \"Unable to complete route.\",\n        \"reason\": \"No charging station\
+      \ within reach\",\n        \"details\": {\n          \"__typename\": \"NoChargingStationWithinRangeErrorDetails\"\
+      ,\n          \"center\": \"[40.9816374, -75.1372741]\",\n          \"radius\"\
+      : \"100 km\",\n          \"chargingConnectors\": \"[\\\"CCS\\\",\\\"J1772\\\"\
+      ,\\\"NACS\\\"]\",\n          \"minPower\": \"N/A\"\n        }\n      }\n   \
+      \ }\n  }\n}</code></pre>"
+    text2: null
+    text3: <p>The following modal with <code>Ok</code> button is displayed:</p><ul><li>EN<ul><li><code>No
+      charge stations found. Change the search parameters (such as charge station
+      plug-type) and search again.</code></li></ul></li><li>FR<ul><li><code>Aucune
+      borne de recharge trouvée. Modifiez les paramètres de recherche (comme le type
+      de prise de la station de recharge) et recherchez à nouveau.</code></li></ul></li></ul>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 61490
+    case_id: 31304
+    text1: "<ul><li>If <strong>VehicleEVWaypoints</strong> API returns: </li></ul><pre><code\
+      \ class=\"editor-plain language-plain code-block\">{\n  \"data\": {\n    \"\
+      vehicle\": {\n      \"__typename\": \"ElectricAVK2Vehicle\",\n      \"evWaypoints\"\
+      : {\n        \"__typename\": \"UnableToCompleteRouteError\",\n        \"message\"\
+      : \"Unable to complete route.\",\n        \"reason\": \"No charging station\
+      \ within reach\",\n        \"details\": {\n          \"__typename\":\"UnableToCompleteSubStepErrorDetails\"\
+      ,\n          \"startingBattery\":\"85%\",\n          \"socAfterChargingNearStart\"\
+      :\"92%\",\n          \"batteryCapacity\":\"77 kWh\",\n          \"speed\":\"\
+      110 km/h\",\n          \"distance\":\"120 km\",\n          \"slope\":\"2%\"\
+      ,\n          \"batteryConsumption\":\"18 kWh/100km\",\n          \"minimumBattery\"\
+      :\"12%\",\n          \"chargingStationMaxPower\":\"150 kW\",\n          \"start\"\
+      :\"Berlin\",\n          \"end\":\"Hamburg\"   \n        }\n      }\n    }\n\
+      \  }\n}</code></pre>"
+    text2: null
+    text3: <p>The following modal with <code>Ok</code> button is displayed:</p><ul><li>EN<ul><li><code>Unable
+      to calculate route because charging time is in excess of 90 minutes. Change
+      your plug type and recalculate.</code></li></ul></li><li>FR<ul><li><code>Impossible
+      de calculer l'itinéraire parce que le temps de recharge dépasse 90 minutes.
+      Changez le type de prise et recalculer.</code></li></ul></li></ul>
+    text4: null
+    display_order: 3

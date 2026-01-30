@@ -1,0 +1,48 @@
+testmo:
+  case_id: 625
+  folder_id: 63
+  project_id: 2
+  folder_path: home/quick-actions/charge
+  folder_name_ui: Charge
+  created_at: '2023-08-01 23:08:20.601932'
+  updated_at: '2025-08-21 19:07:22.384745'
+  last_sync: '2026-01-30T18:21:09.007297Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/625
+metadata:
+  name: Charge On Button
+  priority: 1
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<p>User has an EV </p><p>User is on the Home screen </p><p>Charge
+    On button is in the Telematics row is in an inactive state (<code>VehicleDynamicData</code>
+    API &gt; <code>"isPluggedIn": false</code>)</p>'
+  steps:
+  - column_name: custom_steps
+    id: 53252
+    case_id: 625
+    text1: <p>User taps the Charge On button</p>
+    text2: null
+    text3: <p>The modal "Not Plugged In Please plug your vehicle in order to start
+      charging." with Ok button is displayed</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 53253
+    case_id: 625
+    text1: <p>User taps Ok button on the modal</p>
+    text2: null
+    text3: <p>Modal is dismissed</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 794
+    case_id: 625
+    text1: '<p>Mock <code>VehicleDynamicData</code> API &gt; <code>"isPluggedIn":
+      true</code></p>'
+    text2: null
+    text3: <p>The Charge On button is changed to an active state</p>
+    text4: null
+    display_order: 3

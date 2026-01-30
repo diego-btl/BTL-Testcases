@@ -1,0 +1,41 @@
+testmo:
+  case_id: 52185
+  folder_id: 2442
+  project_id: 2
+  folder_path: map/charging-session
+  folder_name_ui: Charging Session
+  created_at: '2025-07-01 19:43:30.966972'
+  updated_at: '2025-07-29 20:46:07.463616'
+  last_sync: '2026-01-30T18:21:05.825226Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/52185
+metadata:
+  name: CCS, CCS (Adapter Required), J1772 - CCS Disclaimer
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>AccountStatus API:<br />- status is ACTIVE<br />-  nacsStatus
+    is NOT_APPLICABLE, empty or null</p>
+  steps:
+  - column_name: custom_steps
+    id: 82307
+    case_id: 52185
+    text1: <p>Navigate to the Map and tap Charge Stations ePOI</p>
+    text2: null
+    text3: <p>LocationDetails API is triggered and contains evses.connector.connectorType
+      = "CCS" (EV) or<br />evses.connector.connectorType = "CCS (Adapter Required)"
+      (EV2) or evses.connector.connectorType = "J1772" (EV, EV2)</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 82308
+    case_id: 52185
+    text1: <p>Navigate to the charge station with CCS, CCS (Adapter Required) or J1772
+      plug types, proceed to the Select Charge screen, and tap START CHARGING CTA</p>
+    text2: null
+    text3: <p>The parkingChargeable API is triggered, CCS disclaimer is displayed
+      in the FE (SS)</p>
+    text4: null
+    display_order: 2

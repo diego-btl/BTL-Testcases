@@ -1,0 +1,42 @@
+testmo:
+  case_id: 61877
+  folder_id: 6755
+  project_id: 2
+  folder_path: home/charge/v1g-vehicle-to-grid
+  folder_name_ui: V1G - Vehicle-to-Grid
+  created_at: '2025-10-24 19:10:29.648633'
+  updated_at: '2025-12-16 18:20:15.189428'
+  last_sync: '2026-01-30T18:21:05.709593Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/61877
+metadata:
+  name: eVehicleEligibility - TRUE
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>Nissan NNA and NCI only</p><p>User has an EV or EV AVK2 vehicle</p><p>PD
+    only</p>
+  steps:
+  - column_name: custom_steps
+    id: 94681
+    case_id: 61877
+    text1: '<p>1.  Mock eVehicleEligibility to return "v1GEligible": true</p><p>2.
+      Coldstart/Foreground the app </p>'
+    text2: null
+    text3: <p>1. V1GMonitoredChargingAccountStatus is called, returning "v1GMonitoredChargingAccountStatus"
+      =! "CLOSED" ("CANCELLED"/"NOT_ENROLLED"/"FAILED"/"ENROLLING"/"INACTIVE"/"ACTIVE")</p><p>2.
+      Status, Optimize, and Insights tabs are displayed</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 94682
+    case_id: 61877
+    text1: '<p>1.  Mock V1GMonitoredChargingAccountStatus API to return "v1GMonitoredChargingAccountStatus":
+      "CLOSED"</p><p>2. Coldstart/Foreground the app </p>'
+    text2: null
+    text3: <p>1. Status, Optimize, and Insights tabs are not displayed, the feature
+      is hidden</p>
+    text4: null
+    display_order: 2

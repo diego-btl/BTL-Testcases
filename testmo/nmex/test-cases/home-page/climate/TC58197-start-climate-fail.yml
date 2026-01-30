@@ -1,0 +1,31 @@
+testmo:
+  case_id: 58197
+  folder_id: 4154
+  project_id: 6
+  folder_path: home-page/climate
+  folder_name_ui: Climate
+  created_at: '2025-08-20 17:05:58.586906'
+  updated_at: '2025-08-20 17:07:30.475091'
+  last_sync: '2026-01-30T18:20:45.006559Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/58197
+metadata:
+  name: Start Climate - Fail
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has sent a stop charge request</p>
+  steps:
+  - column_name: custom_steps
+    id: 88925
+    case_id: 58197
+    text1: <ol><li>Start climate request has resolved into a failure</li></ol>
+    text2: null
+    text3: <p>User should see a toast saying:</p><ul><li>No (NOT) se pudo <code>encender</code>
+      (ON) el <strong>clima</strong> en {vehicle model} </li></ul><p>User should see
+      Climate status update accordingly (status remains <strong>OFF</strong>, <strong>Start</strong>
+      Climate button is enabled)</p>
+    text4: null
+    display_order: 1

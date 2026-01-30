@@ -1,0 +1,30 @@
+testmo:
+  case_id: 540
+  folder_id: 6799
+  project_id: 2
+  folder_path: demo-mode/home
+  folder_name_ui: Home
+  created_at: '2023-08-01 23:08:19.497698'
+  updated_at: '2026-01-07 15:53:19.104332'
+  last_sync: '2026-01-30T18:21:09.248923Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/540
+metadata:
+  name: Demo Mode - Landing Page
+  priority: 2
+  type: functional
+  status: active
+  estimate: 120000000
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>Fresh installation or app cache cleared</li><li>User is already
+    on the <code>Landing</code> Page</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 709
+    case_id: 540
+    text1: <p>Tap on Demo Mode button</p>
+    text2: null
+    text3: <p>User should be taken to the demo mode home screen</p>
+    text4: null
+    display_order: 1

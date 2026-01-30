@@ -1,0 +1,62 @@
+testmo:
+  case_id: 2690
+  folder_id: 4168
+  project_id: 2
+  folder_path: home/quick-actions/engine/avk2
+  folder_name_ui: AVK2
+  created_at: '2023-09-07 21:10:07.773697'
+  updated_at: '2025-09-22 14:08:53.732789'
+  last_sync: '2026-01-30T18:21:07.761127Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/2690
+metadata:
+  name: Home - Start Engine/Climate - Initiated
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>AVK2 vehicle<br />Engine is OFF</p>
+  steps:
+  - column_name: custom_steps
+    id: 53241
+    case_id: 2690
+    text1: <p>User taps an "Engine" button</p>
+    text2: null
+    text3: '<p>User should see a confirmation modal: </p><ul><li>AVK2: "Are you sure?
+      This action will remotely start your vehicle and start your default climate
+      settings. Would you like to proceed?" with two buttons "No" and "Yes"</li></ul>'
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 53242
+    case_id: 2690
+    text1: <p>User taps "No" on confirmation modal</p>
+    text2: null
+    text3: <p>A modal is dismissed</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 53243
+    case_id: 2690
+    text1: <p>User taps an "Engine" button again</p>
+    text2: null
+    text3: '<p>User should see a confirmation modal: </p><ul><li>AVK2: "Are you sure?
+      This action will remotely start your vehicle and start your default climate
+      settings. Would you like to proceed?" with two buttons "No" and "Yes"</li></ul>'
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 53244
+    case_id: 2690
+    text1: <p>User taps "Yes" on confirmation modal</p>
+    text2: null
+    text3: <p><code>EngineStart</code> API and <code>CheckEngineServiceRequest</code>
+      API are triggered</p><p>User should see an "Engine" button is changed to a spinner
+      and is disabled</p><p>User should see toast messages that transition from: </p><ul><li>Contacting
+      &lt;year and model&gt; to start engine...</li><li>Waking &lt;year and model&gt;
+      to start engine...</li><li>Initiating engine start on &lt;year and model&gt;...</li></ul><p>User
+      should see a loading state on Climate card - parameters sent in the request
+      should match the selected parameters from <code>climateDefaults</code> API</p>
+    text4: null
+    display_order: 4

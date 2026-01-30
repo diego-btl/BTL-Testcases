@@ -1,0 +1,54 @@
+testmo:
+  case_id: 61362
+  folder_id: 82
+  project_id: 2
+  folder_path: support/manual-quick-guides
+  folder_name_ui: Manual & Quick Guides
+  created_at: '2025-09-10 15:50:58.823269'
+  updated_at: '2025-09-22 18:05:26.828793'
+  last_sync: '2026-01-30T18:21:05.733756Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/61362
+metadata:
+  name: Quebec bill 29 - NCI NIS and INF only
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is logged into either NIS or INF NCI app</p><p>User is on
+    Manual and Quick Guides screen in Support Tab</p>
+  steps:
+  - column_name: custom_steps
+    id: 93116
+    case_id: 61362
+    text1: <p>On Manual and Quick Guides screen</p>
+    text2: null
+    text3: <ul><li>the user should see the Quebec Bill 29 blurb in a bubble with an
+      <code>x</code> on top right to dismiss the bubble on the screen</li><li>The
+      Text should be:(Brand n Device language specific): </li></ul><h3>Localization</h3><h3>Nissan</h3><p><strong>English
+      text:</strong></p><p>Nissan Canada Inc. fully guarantees the availability of
+      replacement parts, repair services, and diagnostic data (including software
+      updates) for a reasonable period after purchase.</p><p><strong>French text:</strong></p><p>Nissan
+      Canada Inc. garantit entièrement la disponibilité des pièces de rechange, des
+      services de réparation et des données de diagnostic (y compris les mises à jour
+      logicielles) pendant une période raisonnable après l’achat.</p><p> </p><h3>Infiniti</h3><p><strong>English
+      text:</strong></p><p>INFINITI Canada fully guarantees the availability of replacement
+      parts, repair services, and diagnostic data (including software updates) for
+      a reasonable period after purchase.</p><p><strong>French text:</strong></p><p>INFINITI
+      Canada garantit entièrement la disponibilité des pièces de rechange, des services
+      de réparation et des données de diagnostic (y compris les mises à jour logicielles)
+      pendant une période raisonnable après l’achat.</p><p>See attached figma design
+      ss. </p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 93117
+    case_id: 61362
+    text1: <p>Dismiss the bubble</p><p>Navigate to another screen</p><p>Come back
+      to Support&gt;Manual and Quick Guides</p>
+    text2: null
+    text3: <p>The bubble should show everytime the user enters this screen, even if
+      it was dismissed earlier</p><p>Test this with bg/fg and exiting app. </p>
+    text4: null
+    display_order: 2

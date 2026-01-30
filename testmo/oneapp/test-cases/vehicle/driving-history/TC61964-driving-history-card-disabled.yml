@@ -1,0 +1,65 @@
+testmo:
+  case_id: 61964
+  folder_id: 92
+  project_id: 2
+  folder_path: vehicle/driving-history
+  folder_name_ui: Driving History
+  created_at: '2025-11-10 20:13:06.616616'
+  updated_at: '2025-11-10 20:43:23.994859'
+  last_sync: '2026-01-30T18:21:05.406888Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/61964
+metadata:
+  name: Driving History - Card Disabled
+  priority: 1
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<p>Vehicle is an EV/EV2</p><p>PD</p><p>VehicleCapabilities &gt;
+    DRIVING_JOURNEY_HISTORY (EV2)/DRIVING_ANALYSIS (EV) &gt; "enabled": false OR</p><p>VehicleCapabilities
+    &gt; DRIVING_JOURNEY_HISTORY (EV2)/DRIVING_ANALYSIS (EV) &gt; "enabled": null/"" </p><p>User
+    is on the <code>Vehicle</code> tab</p>'
+  steps:
+  - column_name: custom_steps
+    id: 95322
+    case_id: 61964
+    text1: <p>Scroll down on the vehicle page</p>
+    text2: null
+    text3: <p>User should be able to see the Driving History card in the disabled
+      state</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 95323
+    case_id: 61964
+    text1: <p>Tap the Driving History card</p>
+    text2: null
+    text3: <p>The 'Account Expired' modal with 'Cancel' and 'Call' buttons is displayed</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 95326
+    case_id: 61964
+    text1: <p>Tap the 'Cancel' button</p>
+    text2: null
+    text3: <p>The modal is dismissed</p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 95327
+    case_id: 61964
+    text1: <p>Tap the Driving History card</p>
+    text2: null
+    text3: <p>The 'Account Expired' modal with 'Cancel' and 'Call' buttons is displayed</p>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 95328
+    case_id: 61964
+    text1: <p>Tap the 'Call' button</p>
+    text2: null
+    text3: <p>The proper phone number is displayed returned by ContactUs.ownershipVerification
+      (NNA - 1-855-426-6628) </p>
+    text4: null
+    display_order: 5

@@ -1,0 +1,35 @@
+testmo:
+  case_id: 24220
+  folder_id: 3081
+  project_id: 2
+  folder_path: ncar-icar
+  folder_name_ui: Ncar/Icar
+  created_at: '2024-08-28 18:59:39.208655'
+  updated_at: '2024-10-17 17:57:51.445740'
+  last_sync: '2026-01-30T18:21:06.954633Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/24220
+metadata:
+  name: Add vehicle - failure
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: An error has triggered during the icar add vehicle flow
+  steps:
+  - column_name: custom_steps
+    id: 37774
+    case_id: 24220
+    text1: '1. Tap Validate VIN<br />
+
+      2. Proceed through the regular add vehicle flow'
+    text2: null
+    text3: '1. User should see the Connected Terms and Conditions screen<br />
+
+      2. User should be able to proceed through the regular add vehicle flow which
+      may include ownership verification<br />
+
+      User should see the vehicle on the home screen if it is successfully added'
+    text4: null
+    display_order: 1

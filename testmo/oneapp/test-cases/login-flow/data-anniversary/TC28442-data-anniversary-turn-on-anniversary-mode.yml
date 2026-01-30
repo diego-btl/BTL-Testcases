@@ -1,0 +1,113 @@
+testmo:
+  case_id: 28442
+  folder_id: 7144
+  project_id: 2
+  folder_path: login-flow/data-anniversary
+  folder_name_ui: Data Anniversary
+  created_at: '2024-11-22 18:17:33.576547'
+  updated_at: '2026-01-21 17:07:19.593490'
+  last_sync: '2026-01-30T18:21:06.681772Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/28442
+metadata:
+  name: Data Anniversary - Turn On Anniversary Mode
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ol><li><code>EnableOwnerAnniversary</code> FF = <code>true</code></li><li><code>isAnniversary</code>
+    = <code>true</code></li><li><code>anniversaryYear</code> = <code>1</code>, <code>2</code>,
+    <code>3</code>, <code>4</code>, or <code>5</code></li><li>VIN is NOT lost/stolen,
+    finance vehicle, or pending</li><li>User has NOT seen anniversary message for
+    this VIN at current anniversary year</li><li>User is logged in</li><li>User is
+    on welcome message screen</li></ol>
+  steps:
+  - column_name: custom_steps
+    id: 102452
+    case_id: 28442
+    text1: <p>Tap <code>TURN ON ANNIVERSARY MODE</code> button</p>
+    text2: null
+    text3: '<ul>
+
+      <li>User is redirected to <code>Home</code> screen</li>
+
+      <li>Animation plays based on time of day:
+
+      <ul>
+
+      <li>Day time (6:01 AM - 11:59 PM): Confetti animation plays once</li>
+
+      <li>Night time (12:00 AM - 6:00 AM): Fireworks animation loops 3 times</li>
+
+      </ul>
+
+      </li>
+
+      </ul>'
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 102453
+    case_id: 28442
+    text1: <p>Navigate to <code>Settings</code> screen</p>
+    text2: null
+    text3: '<ul>
+
+      <li><code>Anniversary theme</code> toggle is displayed under Theme section</li>
+
+      <li>Toggle is in <strong>ON</strong> position (green)</li>
+
+      <li>Expiry date text <code>Expiring [date]</code> is displayed in red below
+      toggle label</li>
+
+      </ul>'
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 102454
+    case_id: 28442
+    text1: <p>Navigate to any other screen (e.g., <code>Vehicle</code> screen), then
+      return to <code>Home</code> screen</p>
+    text2: null
+    text3: '<ul>
+
+      <li>Anniversary animation plays again based on time of day:
+
+      <ul>
+
+      <li>Day time (6:01 AM - 11:59 PM): Confetti animation plays once</li>
+
+      <li>Night time (12:00 AM - 6:00 AM): Fireworks animation loops 3 times</li>
+
+      </ul>
+
+      </li>
+
+      </ul>'
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 102455
+    case_id: 28442
+    text1: <p>From <code>Home</code> screen, background the app, then foreground</p>
+    text2: null
+    text3: '<ul>
+
+      <li>User returns to <code>Home</code> screen</li>
+
+      <li>Anniversary animation plays again based on time of day:
+
+      <ul>
+
+      <li>Day time (6:01 AM - 11:59 PM): Confetti animation plays once</li>
+
+      <li>Night time (12:00 AM - 6:00 AM): Fireworks animation loops 3 times</li>
+
+      </ul>
+
+      </li>
+
+      </ul>'
+    text4: null
+    display_order: 4

@@ -1,0 +1,88 @@
+testmo:
+  case_id: 539
+  folder_id: 40
+  project_id: 2
+  folder_path: landing-pages
+  folder_name_ui: Landing Pages
+  created_at: '2023-08-01 23:08:19.484771'
+  updated_at: '2025-10-06 00:59:55.994875'
+  last_sync: '2026-01-30T18:21:09.251426Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/539
+metadata:
+  name: Landing screen
+  priority: 1
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>App is either a fresh installation or the cache is cleared</li><li>User
+    is signed out</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 708
+    case_id: 539
+    text1: <p>Launch app by tapping on the app icon</p>
+    text2: null
+    text3: <ul><li>The splash screen is displayed</li><li>The <code>Allow access to
+      device's location</code> modal appears (depending on the OS version</li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 1140
+    case_id: 539
+    text1: <p>The user dismisses the <code>Device's location</code> modal</p>
+    text2: null
+    text3: <p>The landing screen is displayed with:</p><ul><li>a background video
+      is playing, Nissan logo in centre of app, Sign in Blue button, Register button
+      visible. Also visible CTA for DEMO MODE and PRIVACY &amp; TERMS</li></ul>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 48738
+    case_id: 539
+    text1: <p>Tap on Privacy and Terms</p>
+    text2: null
+    text3: <p>Action sheet shows with <code>Privacy Policy</code>, <code>Terms of
+      Service</code>,  `Do Not Sell My Personal Information` (for NNA NIS, INF only)
+      and <code>Cancel</code> CTAs. </p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 48739
+    case_id: 539
+    text1: <p>Tap on Cancel or anywhere outside action sheet</p>
+    text2: null
+    text3: <p>the action sheet should get dismissed</p>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 48740
+    case_id: 539
+    text1: <p>Tap on <code>Privacy Policy</code></p>
+    text2: null
+    text3: <p>User is taken to external browser, the url of which should match the
+      privacy url on the <code>Contact us</code> api response</p>
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 48741
+    case_id: 539
+    text1: <p>Tap on <code>Do not Sell My Personal Information</code> (for NNA NIS
+      and INF only)</p>
+    text2: null
+    text3: <p>User is taken to external browser, the url of which should match the
+      data - privacy url on the <code>Contact us</code> api response</p>
+    text4: null
+    display_order: 6
+  - column_name: custom_steps
+    id: 48742
+    case_id: 539
+    text1: <p>Tap on <code>Terms of Service</code> </p>
+    text2: null
+    text3: <p>The <code>TermsAndConditions</code> API is triggered</p><p>User is taken
+      to Terms and Conditions screen</p>
+    text4: null
+    display_order: 7
+  notes: <ul><li>Test case needs updating - location prompt occurs after successful
+    login, appears once onboarding is shown (iOS)</li></ul>

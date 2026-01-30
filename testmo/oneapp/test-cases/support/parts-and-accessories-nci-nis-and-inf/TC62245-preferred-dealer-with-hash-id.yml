@@ -1,0 +1,29 @@
+testmo:
+  case_id: 62245
+  folder_id: 6822
+  project_id: 2
+  folder_path: support/parts-and-accessories-nci-nis-and-inf
+  folder_name_ui: Parts and Accessories - NCI NIS and INF
+  created_at: '2026-01-06 16:00:53.751990'
+  updated_at: '2026-01-06 16:20:54.137215'
+  last_sync: '2026-01-30T18:21:03.678520Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/62245
+metadata:
+  name: Preferred Dealer with hash id
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  steps:
+  - column_name: custom_steps
+    id: 97197
+    case_id: 62245
+    text1: '<ol><li>user logs in with nci126@nissancanada.com/2023Ariya</li></ol><p>2.
+      the preferred dealer is set to Woodbine Nissan with hash id: <code>"61c7996fb904d9a27f6628a80ed38b61"</code></p><p>3.
+      USer goes to Support Tab&gt;Parts and Accessories Card</p>'
+    text2: null
+    text3: <p>the webpage should show Woodbine Nissan as location </p>
+    text4: null
+    display_order: 1

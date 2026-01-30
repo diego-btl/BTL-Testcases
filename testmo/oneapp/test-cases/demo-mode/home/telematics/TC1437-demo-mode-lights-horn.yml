@@ -1,0 +1,44 @@
+testmo:
+  case_id: 1437
+  folder_id: 6816
+  project_id: 2
+  folder_path: demo-mode/home/telematics
+  folder_name_ui: Telematics
+  created_at: '2023-08-28 20:13:22.046356'
+  updated_at: '2025-12-18 17:00:17.338112'
+  last_sync: '2026-01-30T18:21:08.344406Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/1437
+metadata:
+  name: Demo Mode - Lights/Horn
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  steps:
+  - column_name: custom_steps
+    id: 1805
+    case_id: 1437
+    text1: <p>Tap the Lights  CTA</p>
+    text2: null
+    text3: <p>The Lights activate process triggered and the following toasts are displayed
+      every second:</p><ul><li>Contacting <code>year, model</code> to activate lights...</li><li>Waking
+      <code>year, model</code> to activate lights...</li><li>Initiating lights on
+      <code>year, model</code>...</li><li>Lights activated on <code>year, model</code>...</li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 11744
+    case_id: 1437
+    text1: <p>Tap the Horn  CTA</p>
+    text2: null
+    text3: <p>The Horn activate process triggered and the following toasts are displayed:</p><ul><li>Contacting
+      <code>year, model</code> to activate horn...</li><li>Waking <code>year, model</code>
+      to activate horn...</li><li>Initiating horn on <code>year, model</code>...</li><li>Horn
+      activated on <code>year, model</code>...</li></ul>
+    text4: null
+    display_order: 2
+  notes: '<p>Automation: this has been muted as the Github''s runners low performance
+    don''t catch the toasts. <strong>Update: Andrew''s runner has better performance
+    so this will be unmuted from now on.</strong></p>'

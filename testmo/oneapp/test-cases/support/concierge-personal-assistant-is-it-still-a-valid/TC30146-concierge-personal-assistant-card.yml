@@ -1,0 +1,40 @@
+testmo:
+  case_id: 30146
+  folder_id: 84
+  project_id: 2
+  folder_path: support/concierge-personal-assistant-is-it-still-a-valid
+  folder_name_ui: Concierge/Personal Assistant[Is it still a valid scenarios??]
+  created_at: '2025-02-05 15:05:39.592103'
+  updated_at: null
+  last_sync: '2026-01-30T18:21:06.341198Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/30146
+metadata:
+  name: Concierge/Personal Assistant card
+  priority: 2
+  type: functional
+  status: active
+  estimate: 60000000
+  automation: 'no'
+  tags: []
+test_case:
+  steps:
+  - column_name: custom_steps
+    id: 49056
+    case_id: 30146
+    text1: <p>Tap Support icon</p>
+    text2: null
+    text3: <p>The user should see the <code>Concierge</code> card for Nissan,  <code>Personal
+      Assistant</code> card for Infiniti.<br /> </p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 49057
+    case_id: 30146
+    text1: <p>Remove the capability (do not clear the cache) and then background/foreground
+      app</p>
+    text2: null
+    text3: <p>The <code>Concierge</code> card for Nissan,  <code>Personal Assistant</code>
+      card for Infiniti, should be hidden<br /> </p>
+    text4: null
+    display_order: 2
+  notes: '<ul><li>Automation: step 2 not automated as it required mocking capabilities</li></ul>'

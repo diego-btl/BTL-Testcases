@@ -1,0 +1,32 @@
+testmo:
+  case_id: 759
+  folder_id: 46
+  project_id: 2
+  folder_path: map
+  folder_name_ui: Map
+  created_at: '2023-08-01 23:08:22.321841'
+  updated_at: '2024-10-17 17:56:23.776593'
+  last_sync: '2026-01-30T18:21:08.790943Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/759
+metadata:
+  name: No Range Data
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<p>EV:  BatteryStatus is not returning remainingMileage data</p><p><code>VehicleBatteryStatus</code>
+    call &gt; <code>batteryStatus</code> &gt; <code>remainingMileage</code></p><p>ICE:
+    VehicleDataDynamicAuto  is not returning  fuelAutonomy data</p><p><code>VehicleDataDynamicAuto</code>call
+     &gt;  <code>fuelAutonomy</code></p>'
+  steps:
+  - column_name: custom_steps
+    id: 928
+    case_id: 759
+    text1: <p>Navigate to the Map screen</p>
+    text2: null
+    text3: <p>The user should not see the battery icon with the remaining mileage
+      or Remaining mileage (for ICE vehicles)</p>
+    text4: null
+    display_order: 1

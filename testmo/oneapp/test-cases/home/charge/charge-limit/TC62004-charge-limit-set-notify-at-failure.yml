@@ -1,0 +1,51 @@
+testmo:
+  case_id: 62004
+  folder_id: 6780
+  project_id: 2
+  folder_path: home/charge/charge-limit
+  folder_name_ui: Charge Limit
+  created_at: '2025-11-16 22:53:05.509453'
+  updated_at: '2025-12-02 22:11:48.193628'
+  last_sync: '2026-01-30T18:21:05.176871Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/62004
+metadata:
+  name: Charge Limit - Set Notify at - Failure
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has an EV AVK2 vehicle</p><p><code>EnableChargeLimit</code>
+    FF is true</p><p>User is on the Charge Limit screen</p>
+  steps:
+  - column_name: custom_steps
+    id: 95538
+    case_id: 62004
+    text1: <p>Tap the <strong>Notify at</strong> picker, select a different value,
+      and tap outside the field</p>
+    text2: null
+    text3: <p>User should see the field updated with the corresponding selected value,
+      and the <strong>Set Notification</strong> CTA should get enabled</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 95539
+    case_id: 62004
+    text1: <p>1. Add a breakpoint to the <code>SetNotificationLimit</code>  API</p><p>2.
+      Tap the <strong>Set Notification</strong> CTA</p>
+    text2: null
+    text3: <p><code>SetNotificationLimit</code>  API is triggered </p><p>The loading
+      state is displayed</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 95540
+    case_id: 62004
+    text1: <p>Abort the <code>SetNotificationLimit</code>  API</p>
+    text2: null
+    text3: <p>1. The <strong>Failed to set notification limit</strong> toast is displayed
+      (5 seconds)</p><p>2. The <strong>Set Charge Limit</strong> CTA is in the enabled
+      state</p>
+    text4: null
+    display_order: 3

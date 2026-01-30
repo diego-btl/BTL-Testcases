@@ -1,0 +1,52 @@
+testmo:
+  case_id: 32159
+  folder_id: 4142
+  project_id: 6
+  folder_path: login-page/register-flow
+  folder_name_ui: Register Flow
+  created_at: '2025-04-01 17:50:43.433880'
+  updated_at: '2025-04-04 21:13:10.184750'
+  last_sync: '2026-01-30T18:20:45.988632Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/32159
+metadata:
+  name: NMEX - Name and Email - Errors*
+  priority: 3
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is on the first registration screen</p>
+  steps:
+  - column_name: custom_steps
+    id: 52541
+    case_id: 32159
+    text1: <p>Enter any special characters or numbers for first/last name<br /> </p><p>Tap
+      on another textfield like Email</p><p>Enter an incorrect email format</p><p>Enter
+      a different email  and tap on firstname textfield</p>
+    text2: null
+    text3: '<ul><li>Firstname, Lastname &amp; Second Lastname textfields are displayed
+      with red contour </li><li>Asterisk is displayed after Firstname, Lastname &amp;
+      Second Lastname. </li><li>User should see an error as:  </li></ul><p>       
+                     <code>* Nombre inválido, por favor ingresa solo letras</code></p><p> 
+                            <code>* Apellido paterno inválido, por favor ingresa solo
+      letras</code><br />                        <code>* Apellido materno, por favor
+      ingresa solo letras</code></p><p><br /><br /> </p><ul><li>Firstname, Lastname
+      &amp; Second Lastname textfields are displayed with red contour </li><li>Asterisk
+      is displayed after Firstname, Lastname &amp; Second Lastname. </li><li>User
+      should see an error as:  </li></ul><p>                       <code>* Nombre
+      inválido, por favor ingresa solo letras</code></p><p>                        <code>*
+      Apellido paterno inválido, por favor ingresa solo letras</code><br />       
+                      <code>* Apellido materno, por favor ingresa solo letras</code></p><ul><li>Email
+      textfield backgrounds is displayed with a red contour </li><li>Asterisk is displayed
+      after Email</li><li>User should see an error as:  </li></ul><p>             
+                <code>* Dirección de correo electrónico inválida</code></p><ul><li>Email
+      and Confirm Email textfields are highlighted in red and backgrounds is displayed
+      with a red contour </li><li>Asterisk is displayed after Email and Confirm Email</li><li>User
+      should see an error as:  </li></ul><p>                        <code>* Dirección
+      de correo electrónico inválida</code><br />                        <code>* Las
+      direcciónes de correo electrónico no coinciden</code></p>'
+    text4: null
+    display_order: 1
+  notes: <p><code>Important</code> Please notice that for Android the errors are displayed
+    below the fields, while for IOS they are stacked at the bottom of the screen. </p>

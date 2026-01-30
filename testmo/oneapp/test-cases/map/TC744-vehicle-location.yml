@@ -1,0 +1,30 @@
+testmo:
+  case_id: 744
+  folder_id: 46
+  project_id: 2
+  folder_path: map
+  folder_name_ui: Map
+  created_at: '2023-08-01 23:08:22.124090'
+  updated_at: '2025-08-22 12:43:04.701213'
+  last_sync: '2026-01-30T18:21:08.825097Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/744
+metadata:
+  name: Vehicle Location
+  priority: 1
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>Vehicle location is being returned</p>
+  steps:
+  - column_name: custom_steps
+    id: 913
+    case_id: 744
+    text1: <p>1. Tap Vehicle Location button</p>
+    text2: null
+    text3: <p>User should see the map center on the vehicle<br /><br />Notes: </p><ul><li>This
+      should not fetch vehicle's last updated location</li><li>The location in the
+      UI will be showing different on Android and iOS but it is the same</li></ul>
+    text4: null
+    display_order: 1

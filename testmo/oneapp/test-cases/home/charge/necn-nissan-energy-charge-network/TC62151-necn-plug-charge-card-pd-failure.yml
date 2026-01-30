@@ -1,0 +1,146 @@
+testmo:
+  case_id: 62151
+  folder_id: 2444
+  project_id: 2
+  folder_path: home/charge/necn-nissan-energy-charge-network
+  folder_name_ui: NECN - NISSAN ENERGY Charge Network
+  created_at: '2025-12-15 16:50:34.934889'
+  updated_at: '2026-01-15 19:05:03.731882'
+  last_sync: '2026-01-30T18:21:04.701314Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/62151
+metadata:
+  name: NECN - Plug & Charge Card - PD - FAILURE
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<p>User has an EV/EV2</p><p>"EnablePlugAndCharge": "true"</p><p>VehicleStaticData
+    &gt; "driverType": "PRIMARY_DRIVER"</p><p>AccountStatus &gt; "status": "ACTIVE"</p>'
+  steps:
+  - column_name: custom_steps
+    id: 96456
+    case_id: 62151
+    text1: '<p>Mock AccountStatus API to return "pncStatus": "FAILED" and "pncStatusReason":
+      "01"</p><p>Navigate to the NISSAN ENERGY Charge Network screen</p>'
+    text2: null
+    text3: <p>Plug &amp; Charge card is displayed:</p><ul><li>The status is 'Failed
+      to Install'</li><li>The copy is 'Plug &amp; Charge certificates failed to install.
+      Please contact customer support for more details.'</li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 96457
+    case_id: 62151
+    text1: '<p>Mock AccountStatus API to return "pncStatus": "FAILED" and "pncStatusReason":
+      "00"</p><p>Navigate to the NISSAN ENERGY Charge Network screen</p>'
+    text2: null
+    text3: <p>Plug &amp; Charge card is displayed:</p><ul><li>The status is 'Failed
+      to Install'</li><li>The copy is 'Plug &amp; Charge certificates failed to install.
+      You can click "Install" to try again.'</li><li>'Install' CTA</li></ul>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 96458
+    case_id: 62151
+    text1: <p>Tap 'Install' CTA</p>
+    text2: null
+    text3: <p>RetryCertInstall query is called to trigger the reinstallation</p><p>The
+      loading state is displayed</p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 96459
+    case_id: 62151
+    text1: '<p>If RetryCertInstall returns "statusCode": "1000"</p>'
+    text2: null
+    text3: <p>The loading state is displayed</p><p>AccountStatus API is triggered</p>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 96460
+    case_id: 62151
+    text1: '<p>If AccountStatus API returns "pncStatus": "PENDING"/"INSTALLING"/"RENEWING"</p>'
+    text2: null
+    text3: <p>The toast 'Installing Certificate' is displayed</p><p>Plug &amp; Charge
+      card shows:</p><ul><li>The status is 'Installing...'/'Renewing...'</li><li>The
+      copy is 'Please note that it may take up to 24 hours to install your Plug &amp;
+      Charge Certificate. Make sure that your vehicle has a clear view of the sky
+      to maximize network connection.'</li></ul>
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 96461
+    case_id: 62151
+    text1: '<p>If AccountStatus API returns "pncStatus": "FAILED" </p>'
+    text2: null
+    text3: <p>The toast 'Failed to Install' is displayed</p>
+    text4: null
+    display_order: 6
+  - column_name: custom_steps
+    id: 96462
+    case_id: 62151
+    text1: '<p>If AccountStatus API returns "pncStatus": "READY" and "toggleStatus":
+      "ENABLED"/"DISABLED"</p>'
+    text2: null
+    text3: <p>The toast 'Certificate Installed' is displayed</p><p>The Plug &amp;
+      Charge card is updated respectively:</p><ul><li>The toggle is in ON/OFF state</li><li>The
+      copy is 'Plug and Charge provides a seamless method of charging (when at compatible
+      stations). After plugging in the vehicle, charging will start automatically. <br
+      /><strong>Troubleshooting</strong> <br />- If charging doesn't start within
+      two minutes, unplug the charger<br />- Toggle "off" Plug &amp; Charge in-app<br
+      />- Begin the session through your MyNISSAN app (or follow the instructions
+      on the charger)'</li></ul>
+    text4: null
+    display_order: 7
+  - column_name: custom_steps
+    id: 96463
+    case_id: 62151
+    text1: '<p>Return to the second step and mock AccountStatus API to return "pncStatus":
+      "FAILED" and "pncStatusReason": "00"</p><p>Navigate to the NISSAN ENERGY Charge
+      Network screen</p>'
+    text2: null
+    text3: <p>Plug &amp; Charge card is displayed:</p><ul><li>The status is 'Failed
+      to Install'</li><li>The copy is 'Plug &amp; Charge certificates failed to install.
+      You can click "Install" to try again.'</li><li>'Install' CTA</li></ul>
+    text4: null
+    display_order: 8
+  - column_name: custom_steps
+    id: 96464
+    case_id: 62151
+    text1: <p>Tap 'Install' CTA</p>
+    text2: null
+    text3: <p>RetryCertInstall query is called to trigger the reinstallation</p><p>The
+      loading state is displayed</p>
+    text4: null
+    display_order: 9
+  - column_name: custom_steps
+    id: 96465
+    case_id: 62151
+    text1: "<p>If RetryCertInstall returns \"statusCode\": \"2024\"/\"2028\"/\"2029\"\
+      /\"2030\"/\"4011\"/\"5000\"/null/\"\" or time out</p><pre><code class=\"editor-plain\
+      \ language-plain code-block\">{\n  \"data\": {\n    \"retryCertInstall\": {\n\
+      \      \"__typename\": \"EmpRetryCertInstallResponse\",\n      \"statusCode\"\
+      : \"2024\"\n    }\n  }\n}</code></pre>"
+    text2: null
+    text3: <p>The 'Something Went Wrong' modal with options 'Cancel' and 'Retry' is
+      displayed</p>
+    text4: null
+    display_order: 10
+  - column_name: custom_steps
+    id: 96466
+    case_id: 62151
+    text1: <p>Tap 'Cancel'</p>
+    text2: null
+    text3: <p>The modal is dismissed</p>
+    text4: null
+    display_order: 11
+  - column_name: custom_steps
+    id: 96467
+    case_id: 62151
+    text1: <p>Tap 'Retry'</p>
+    text2: null
+    text3: <p>RetryCertInstall is called</p>
+    text4: null
+    display_order: 12

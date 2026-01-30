@@ -1,0 +1,38 @@
+testmo:
+  case_id: 682
+  folder_id: 70
+  project_id: 2
+  folder_path: home/alerts
+  folder_name_ui: Alerts
+  created_at: '2023-08-01 23:08:21.331128'
+  updated_at: '2025-10-24 16:42:59.773459'
+  last_sync: '2026-01-30T18:21:08.865966Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/682
+metadata:
+  name: Delete Speed Alert
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is on a speed alert edit sheet</p>
+  steps:
+  - column_name: custom_steps
+    id: 851
+    case_id: 682
+    text1: <p>Tap Delete Alert</p>
+    text2: null
+    text3: <p>1. User should see a confirmation modal appear<br />2. User should be
+      taken to the main alerts sheet and their alert should be removed</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 1135
+    case_id: 682
+    text1: <p>Fail to delete the alert </p>
+    text2: null
+    text3: <p>The user will see an error alert and remain on the edit alert sheet</p>
+    text4: null
+    display_order: 2
+  notes: '<p>Automation: step 2 can''t be automated as it required mocking</p>'

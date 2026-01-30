@@ -1,0 +1,31 @@
+testmo:
+  case_id: 885
+  folder_id: 6796
+  project_id: 2
+  folder_path: old-deprecated/maintenance-schedule
+  folder_name_ui: Maintenance Schedule
+  created_at: '2023-08-04 12:47:42.991707'
+  updated_at: '2026-01-06 17:49:24.019642'
+  last_sync: '2026-01-30T18:21:08.487121Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/885
+metadata:
+  name: Milestone Service Details
+  priority: 13
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>Odometer data has been returned in the past 3 months </li><li>User
+    has selected a driving type</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 1062
+    case_id: 885
+    text1: <p>Tap on a milestone item</p>
+    text2: null
+    text3: <ol><li>User should see Service Details sheet open</li><li>User should
+      see their milestone details</li><li>User should see recommended services for
+      the milestone</li></ol>
+    text4: null
+    display_order: 1

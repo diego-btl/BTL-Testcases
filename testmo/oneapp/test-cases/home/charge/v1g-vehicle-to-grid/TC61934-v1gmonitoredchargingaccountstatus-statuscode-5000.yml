@@ -1,0 +1,32 @@
+testmo:
+  case_id: 61934
+  folder_id: 6755
+  project_id: 2
+  folder_path: home/charge/v1g-vehicle-to-grid
+  folder_name_ui: V1G - Vehicle-to-Grid
+  created_at: '2025-11-05 18:58:00.132231'
+  updated_at: '2025-12-16 18:20:15.189428'
+  last_sync: '2026-01-30T18:21:05.523065Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/61934
+metadata:
+  name: 'V1GMonitoredChargingAccountStatus - statusCode: 5000'
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<p>Nissan NNA and NCI only</p><p>User has an EV or EV AVK2 vehicle</p><p>PD
+    only</p><p>eVehicleEligibility &gt; "v1GEligible": true</p>'
+  steps:
+  - column_name: custom_steps
+    id: 95219
+    case_id: 61934
+    text1: '<p>1.  Mock V1GMonitoredChargingAccountStatus to return "statusCode":
+      "5000"</p><p>2. Bg/fg or cold start the app</p><p>3. Wait until API is loading</p><p>4.
+      Navigate to the Charge screen</p>'
+    text2: null
+    text3: <p>1. Status, Optimize, and Insights tabs are NOT displayed, the feature
+      is hidden</p>
+    text4: null
+    display_order: 1

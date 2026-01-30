@@ -1,0 +1,89 @@
+testmo:
+  case_id: 62007
+  folder_id: 50
+  project_id: 2
+  folder_path: home/mils
+  folder_name_ui: MILs
+  created_at: '2025-11-17 21:42:22.735749'
+  updated_at: '2026-01-06 18:14:58.553779'
+  last_sync: '2026-01-30T18:21:05.162890Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/62007
+metadata:
+  name: E2E - Verify Tire Pressure MIL card when active
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  steps:
+  - column_name: custom_steps
+    id: 95558
+    case_id: 62007
+    text1: <p>Mock <i><strong>VehicleDynamicData </strong></i>only<i><strong> </strong></i>with
+      <code>TIRE_PRESSURE=true</code> and ensure all tires have <code>pressureStatus
+      == 0</code> &gt; Call <code>VehicleDynamicData</code> api</p>
+    text2: null
+    text3: <p><strong>Verify: </strong></p><ul><li><strong>MIL Status card</strong>
+      appears <strong>below Quick Actions</strong>.</li><li>The subtitle shows <strong>"Check
+      Tires"</strong>.</li><li>Red exclamation icon appears over the <strong>vehicle
+      hero image</strong>.</li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 95559
+    case_id: 62007
+    text1: <p>Tab on MIL card</p>
+    text2: null
+    text3: <p>Verify:</p><ul><li> Tire Pressure MIL is displayed in the <strong>MIL
+      tab</strong>.</li><li>No <strong>individual tire pressure cards</strong> are
+      shown under it.</li></ul>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 95561
+    case_id: 62007
+    text1: <p>Ensure Tire Pressure MIL is active and one or more tires have <code>pressureStatus
+      != 0</code> &gt; Call <code>VehicleDynamicData</code> api</p>
+    text2: null
+    text3: <p>Verify:</p><ul><li>Each tire with <code>pressureStatus != 0</code> is
+      displayed under the <strong>Tire Pressure MIL card</strong>.</li><li>Tires with
+      <code>pressureStatus == 0</code> are <strong>not shown</strong>.</li></ul>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 95560
+    case_id: 62007
+    text1: <p>Activate Tire Pressure and Active Recall MILs</p>
+    text2: null
+    text3: '<p>Verify:</p><ul><li><strong>Subtitle order follows: </strong><code><strong>Active
+      Recall, +1 more</strong></code><strong>.</strong></li><li><strong>Tire Pressure
+      MIL card</strong> appears <strong>directly below</strong> Active Recall on MIL
+      tab.</li></ul>'
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 95562
+    case_id: 62007
+    text1: <p>Activate multiple MILs and VehicleRecalls</p>
+    text2: null
+    text3: <p>Verify Subtitle order follows:<strong> </strong><code><strong>Active
+      Recall, +X more</strong></code></p>
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 95563
+    case_id: 62007
+    text1: <p>Activate multiple MILs w/o VehicleRecalls</p>
+    text2: null
+    text3: '<p>Verify Subtitle order follows: <code><strong>Check Tires, +X more</strong></code></p>'
+    text4: null
+    display_order: 6
+  - column_name: custom_steps
+    id: 95572
+    case_id: 62007
+    text1: <p>Repeat the same steps from above for the Vehicle Screen entry point</p>
+    text2: null
+    text3: <p>Verify the Vehicle screen entry point also works as expected</p>
+    text4: null
+    display_order: 7

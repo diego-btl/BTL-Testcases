@@ -1,0 +1,44 @@
+testmo:
+  case_id: 24219
+  folder_id: 3081
+  project_id: 2
+  folder_path: ncar-icar
+  folder_name_ui: Ncar/Icar
+  created_at: '2024-08-28 18:59:39.194999'
+  updated_at: '2024-10-17 17:57:51.445740'
+  last_sync: '2026-01-30T18:21:06.957065Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/24219
+metadata:
+  name: Add vehicle - success
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: User has registered their account through the icar flow
+  steps:
+  - column_name: custom_steps
+    id: 37773
+    case_id: 24219
+    text1: '1. Login to the new account<br />
+
+      2. Scroll through the T&amp;C<br />
+
+      3. Accept Terms and Conditions and tap on Save'
+    text2: null
+    text3: '1. User should see the add vehicle screen with a loading spinner<br />
+
+      User should see the Connected Terms and Conditions screen<br />
+
+      2. User is able to scroll through the T&amp;C<br />
+
+      3. User should see a loading spinner while the vehicle is being added<br />
+
+      Upon success, user should see their vehicle appear on the home screen<br />
+
+      <br />
+
+      Note: ownership verification is always bypassed in the icar add vehicle flow'
+    text4: null
+    display_order: 1

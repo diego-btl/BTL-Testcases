@@ -1,0 +1,79 @@
+testmo:
+  case_id: 32507
+  folder_id: 4164
+  project_id: 2
+  folder_path: support/let-us-help/nissan-protection-ncesi
+  folder_name_ui: Nissan Protection (NCESI)
+  created_at: '2025-04-03 00:38:03.148681'
+  updated_at: null
+  last_sync: '2026-01-30T18:21:06.204813Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/32507
+metadata:
+  name: Verify Prepaid Maintenance Plan video
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<p>Set FFs as follows</p><ul><li><code>EnableNcesiServiceContracts</code>:
+    true</li><li><code>EnableNcesiCatalogue</code>: false</li></ul>'
+  steps:
+  - column_name: custom_steps
+    id: 53078
+    case_id: 32507
+    text1: <p>Login to app &gt; Go to <code>Home</code> screen &gt; Tap on <code>Nissan
+      Protection</code> </p>
+    text2: null
+    text3: <p>Verify user is led to the <code>Nissan Protection</code> screen</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 53079
+    case_id: 32507
+    text1: <p>Tap on <code>View all Nissan Protection Products</code> cta &gt; Tap
+      on <code>Prepaid Maintenance Plan</code> card &gt; Tap on <code>See details</code>
+      option from any card</p>
+    text2: null
+    text3: '<p>Verify on the plan details screen a video is displayed. The video displayed
+      should come from <code>ContactUS</code> response:</p><p><strong>ENG:</strong></p><pre><code
+      class="editor-plain language-plain code-block">"nissanPrepaidMaintenancePlanVideo":
+      "https://www.youtube.com/watch?v=Zla7q3nCH4g&amp;list=PLA8ZGzsP1Qb98jOMEASBM_pKnJAvz3RIT&amp;index=5"</code></pre><p><strong>FR</strong>:</p><pre><code
+      class="editor-plain language-plain code-block">"nissanPrepaidMaintenancePlanVideo":
+      "https://www.youtube.com/watch?v=9qAhVFjaWFY&amp;list=PLA8ZGzsP1Qb99L7ZkeJdgMriJVxWVPUZa&amp;index=5"</code></pre>'
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 53080
+    case_id: 32507
+    text1: <p>Tap to play the video</p>
+    text2: null
+    text3: <p>Verify the video plays on the same screen, user can pause it, see it
+      on full size in landscape or portrait mode.</p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 53081
+    case_id: 32507
+    text1: <p>If the user is seeing the video on full-size &gt; Tap on X icon</p>
+    text2: null
+    text3: <p>The window will minimize again and take the user to the same plan details
+      screen</p>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 53082
+    case_id: 32507
+    text1: <p>User goes back to the previous screen while video is playing</p>
+    text2: null
+    text3: <p>Verify upon return the video is in an unplayed state</p>
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 53083
+    case_id: 32507
+    text1: <p>User goes background the app while video is playing</p>
+    text2: null
+    text3: <p>Verify when doing a foreground, the video displays paused</p>
+    text4: null
+    display_order: 6

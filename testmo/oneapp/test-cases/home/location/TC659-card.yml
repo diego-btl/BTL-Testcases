@@ -1,0 +1,29 @@
+testmo:
+  case_id: 659
+  folder_id: 69
+  project_id: 2
+  folder_path: home/location
+  folder_name_ui: Location
+  created_at: '2023-08-01 23:08:21.039888'
+  updated_at: '2025-10-14 01:46:37.734586'
+  last_sync: '2026-01-30T18:21:08.917332Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/659
+metadata:
+  name: Card
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has a vehicle with PARKED_CAR_FINDER capability</p>
+  steps:
+  - column_name: custom_steps
+    id: 828
+    case_id: 659
+    text1: <p>1. Go to home screen</p>
+    text2: null
+    text3: <p>User should see <strong>My Car Finder</strong> card with secondary text
+      for timestamp and last known address when data was last pulled</p>
+    text4: null
+    display_order: 1

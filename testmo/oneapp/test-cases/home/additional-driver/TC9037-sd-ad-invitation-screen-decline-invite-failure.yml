@@ -1,0 +1,59 @@
+testmo:
+  case_id: 9037
+  folder_id: 411
+  project_id: 2
+  folder_path: home/additional-driver
+  folder_name_ui: Additional Driver
+  created_at: '2023-11-21 21:37:24.924796'
+  updated_at: '2024-10-17 17:57:34.769274'
+  last_sync: '2026-01-30T18:21:07.240897Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/9037
+metadata:
+  name: SD - AD Invitation Screen - Decline invite - Failure/Error
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is logged into an account with a pending AD invite</p><p>User
+    is on the Invitation screen</p>
+  steps:
+  - column_name: custom_steps
+    id: 11654
+    case_id: 9037
+    text1: "<p>Mock an error for <code>DriverInviteAction</code> [iOS] with the following:</p><pre><code\
+      \ class=\"editor-json language-json code-block\">{\n  \"data\": {\n    \"driverInviteAction\"\
+      : {\n      \"__typename\": \"GeneralErrors\",\n      \"errorMessage\": \"UNEXPECTED\
+      \ ERROR : Owner profile data not found.\"\n    }\n  }\n}</code></pre><p>Different\
+      \ error types: </p><ul><li><code>GeneralErrors</code></li><li><code>DatabaseError</code></li><li><code>BrandError</code></li><li><code>TokenError</code></li><li><code>InvalidInviteIdError</code></li></ul><p>Note:\
+      \ can also use an HTTP error</p>"
+    text2: null
+    text3: null
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 11655
+    case_id: 9037
+    text1: <p>Tap on Decline</p>
+    text2: null
+    text3: <p>User should see a loading spinner, then a <code>Decline invitation failed</code>
+      modal with options - Cancel/Retry</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 11656
+    case_id: 9037
+    text1: <p>Tap on Cancel</p>
+    text2: null
+    text3: <p>User should see error modal dismiss and remain on the Invitation screen</p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 11657
+    case_id: 9037
+    text1: <p>Tap on Retry</p>
+    text2: null
+    text3: <p>User should see the same API call triggered again</p>
+    text4: null
+    display_order: 4

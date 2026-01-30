@@ -1,0 +1,40 @@
+testmo:
+  case_id: 61991
+  folder_id: 6780
+  project_id: 2
+  folder_path: home/charge/charge-limit
+  folder_name_ui: Charge Limit
+  created_at: '2025-11-14 20:19:50.647283'
+  updated_at: '2025-12-02 22:12:31.256515'
+  last_sync: '2026-01-30T18:21:05.309705Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/61991
+metadata:
+  name: Charge Limit - Screen
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has an EV AVK2 vehicle</p><p><code>EnableChargeLimit</code>
+    FF is true</p><p>User is on the Manage EV screen and Charge Limit card is enabled</p>
+  steps:
+  - column_name: custom_steps
+    id: 95477
+    case_id: 61991
+    text1: <p>Tap the Charge Limit card</p>
+    text2: null
+    text3: <p>User should see the Charge Limit screen with the following components:</p><ul><li>Charge
+      Limit card:<br />- <strong>Choose the maximum charge limit for your battery.</strong>
+      text <br />- <strong>Charge Limit Settings</strong> dropdown with the correlated
+      value set<br />- <strong>Set Charge Limit </strong>CTA in disabled state<br
+      />- <strong>Charging time and capacity may vary based on power source, ambient
+      temperature, battery temperature, condition, age, and use of the vehicle accessories
+      while charging. </strong>description text<br /> </li><li>Charge Notification
+      card:<br />- <strong>Set notifications whenever your battery reaches a specified
+      charge percentage. To make additional adjustments to your alerts, go to "Notification
+      Preferences".</strong> text<br />- <strong>Notify at</strong> dropdown with
+      the correlated value set<br />- <strong>Set Notification</strong> CTA in disabled
+      state<br />- <strong>MANAGE NOTIFICATIONS</strong> button</li></ul>
+    text4: null
+    display_order: 1

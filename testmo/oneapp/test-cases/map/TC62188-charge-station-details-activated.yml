@@ -1,0 +1,139 @@
+testmo:
+  case_id: 62188
+  folder_id: 46
+  project_id: 2
+  folder_path: map
+  folder_name_ui: Map
+  created_at: '2025-12-18 18:25:12.003265'
+  updated_at: null
+  last_sync: '2026-01-30T18:21:04.468114Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/62188
+metadata:
+  name: Charge station details -  Activated
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: "<ul><li>The user selects an <code>EV</code> or <code>EVAVK2</code>\
+    \ vehicles</li><li><code>EnablePlugAndCharge</code> ff should be enabled.</li><li><strong>AccountStatus</strong>\
+    \ query's response should be <code>ACTIVE</code></li></ul><pre><code class=\"\
+    editor-json language-json code-block\">{\n  \"data\": {\n    \"accountStatus\"\
+    : {\n      \"__typename\": \"EmpAccountStatusResponse\",\n      \"statusCode\"\
+    : \"1000\",\n      \"statusMessage\": \"Success\",\n      \"timestamp\": \"2024-06-06T13:09:01.710Z\"\
+    ,\n      \"data\": {\n        \"__typename\": \"EmpAccountStatusData\",\n    \
+    \    \"status\": \"ACTIVE\",\n        \"statusReason\": \"NA\",\n        \"connectors\"\
+    : [\n          {\n            \"__typename\": \"EmpConnectorData\",\n        \
+    \    \"id\": \"2f1d676e-7b40-4558-b91f-7554148d91f4\",\n            \"connectorName\"\
+    : \"CCS1\"\n          },\n          {\n            \"__typename\": \"EmpConnectorData\"\
+    ,\n            \"id\": \"4552f0f8-1974-4da0-b94a-6b84e47ee4f8\",\n           \
+    \ \"connectorName\": \"J1772\"\n          }\n        ]\n      }\n    }\n  }\n\
+    }</code></pre>"
+  steps:
+  - column_name: custom_steps
+    id: 96788
+    case_id: 62188
+    text1: <ol><li>Tap <strong>Chargers Available</strong> link on the POI card</li></ol>
+    text2: null
+    text3: <ul><li>User is navigated to the <strong>Charge Station Details</strong>
+      screen. All the information matches the <strong>ChargePoint</strong> card from
+      the <strong>Charge Stations</strong> screen</li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 96789
+    case_id: 62188
+    text1: <ol><li>Tap <code>SELECT CHARGER</code> CTA  on the <strong>Charge Station
+      Details</strong> screen</li></ol>
+    text2: null
+    text3: <ul><li>User is navigated to the <strong>Select Charger</strong> screen,
+      which contains information about all the chargers</li></ul>
+    text4: null
+    display_order: 2
+  notes: "<p>The app will be calling &gt; <strong>PricingDetails</strong></p><pre><code\
+    \ class=\"editor-plain language-plain code-block\">{\n  \"data\": {\n    \"pricingDetails\"\
+    : {\n      \"__typename\": \"EmpPricingDetailsResponse\",\n      \"data\": {\n\
+    \        \"__typename\": \"EmpPricingDetailsData\",\n        \"parkingTariff\"\
+    : null,\n        \"flatFee\": null,\n        \"congestionFee\": null,\n      \
+    \  \"evses\": [\n          {\n            \"__typename\": \"EmpEvseData\",\n \
+    \           \"connectors\": [\n              {\n                \"__typename\"\
+    : \"EmpConnectorsData\",\n                \"connectorId\": \"CPI_2493d059a482a8fec74e7e032e6c06b4\"\
+    ,\n                \"tariff\": \"$0.42/kWh\"\n              },\n             \
+    \ {\n                \"__typename\": \"EmpConnectorsData\",\n                \"\
+    connectorId\": \"CPI_2493d059a482a8fec74e7e032e6c06b4\",\n                \"tariff\"\
+    : \"$0.00-$3.00/hr\"\n              }\n            ]\n          },\n         \
+    \ {\n            \"__typename\": \"EmpEvseData\",\n            \"connectors\"\
+    : [\n              {\n                \"__typename\": \"EmpConnectorsData\",\n\
+    \                \"connectorId\": \"CPI_64f4b4c4da188bbb7d894fe72aa36275\",\n\
+    \                \"tariff\": \"$0.42/kWh\"\n              },\n              {\n\
+    \                \"__typename\": \"EmpConnectorsData\",\n                \"connectorId\"\
+    : \"CPI_64f4b4c4da188bbb7d894fe72aa36275\",\n                \"tariff\": \"$0.00-$3.00/hr\"\
+    \n              }\n            ]\n          },\n          {\n            \"__typename\"\
+    : \"EmpEvseData\",\n            \"connectors\": [\n              {\n         \
+    \       \"__typename\": \"EmpConnectorsData\",\n                \"connectorId\"\
+    : \"CPI_dc845f3ba0b4214c56a23c837708aec7\",\n                \"tariff\": \"$0.42/kWh\"\
+    \n              },\n              {\n                \"__typename\": \"EmpConnectorsData\"\
+    ,\n                \"connectorId\": \"CPI_dc845f3ba0b4214c56a23c837708aec7\",\n\
+    \                \"tariff\": \"$0.00-$3.00/hr\"\n              }\n           \
+    \ ]\n          },\n          {\n            \"__typename\": \"EmpEvseData\",\n\
+    \            \"connectors\": [\n              {\n                \"__typename\"\
+    : \"EmpConnectorsData\",\n                \"connectorId\": \"CPI_8c54954d5ed21d4265e3852cca71c82d\"\
+    ,\n                \"tariff\": \"$0.42/kWh\"\n              },\n             \
+    \ {\n                \"__typename\": \"EmpConnectorsData\",\n                \"\
+    connectorId\": \"CPI_8c54954d5ed21d4265e3852cca71c82d\",\n                \"tariff\"\
+    : \"$0.00-$3.00/hr\"\n              }\n            ]\n          },\n         \
+    \ {\n            \"__typename\": \"EmpEvseData\",\n            \"connectors\"\
+    : [\n              {\n                \"__typename\": \"EmpConnectorsData\",\n\
+    \                \"connectorId\": \"CPI_94bc29c6ae13856a2b54553af7652eba\",\n\
+    \                \"tariff\": \"$0.42/kWh\"\n              },\n              {\n\
+    \                \"__typename\": \"EmpConnectorsData\",\n                \"connectorId\"\
+    : \"CPI_94bc29c6ae13856a2b54553af7652eba\",\n                \"tariff\": \"$0.00-$3.00/hr\"\
+    \n              }\n            ]\n          },\n          {\n            \"__typename\"\
+    : \"EmpEvseData\",\n            \"connectors\": [\n              {\n         \
+    \       \"__typename\": \"EmpConnectorsData\",\n                \"connectorId\"\
+    : \"CPI_642aaf8f14cafc71a4b0aab75deac5ef\",\n                \"tariff\": \"$0.42/kWh\"\
+    \n              },\n              {\n                \"__typename\": \"EmpConnectorsData\"\
+    ,\n                \"connectorId\": \"CPI_642aaf8f14cafc71a4b0aab75deac5ef\",\n\
+    \                \"tariff\": \"$0.00-$3.00/hr\"\n              }\n           \
+    \ ]\n          },\n          {\n            \"__typename\": \"EmpEvseData\",\n\
+    \            \"connectors\": [\n              {\n                \"__typename\"\
+    : \"EmpConnectorsData\",\n                \"connectorId\": \"CPI_4332d663482122742b9fa717ccf3e890\"\
+    ,\n                \"tariff\": \"$0.42/kWh\"\n              },\n             \
+    \ {\n                \"__typename\": \"EmpConnectorsData\",\n                \"\
+    connectorId\": \"CPI_4332d663482122742b9fa717ccf3e890\",\n                \"tariff\"\
+    : \"$0.00-$3.00/hr\"\n              }\n            ]\n          },\n         \
+    \ {\n            \"__typename\": \"EmpEvseData\",\n            \"connectors\"\
+    : [\n              {\n                \"__typename\": \"EmpConnectorsData\",\n\
+    \                \"connectorId\": \"CPI_1a3220fce5488c2c8214235309146ebd\",\n\
+    \                \"tariff\": \"$0.42/kWh\"\n              },\n              {\n\
+    \                \"__typename\": \"EmpConnectorsData\",\n                \"connectorId\"\
+    : \"CPI_1a3220fce5488c2c8214235309146ebd\",\n                \"tariff\": \"$0.00-$3.00/hr\"\
+    \n              }\n            ]\n          },\n          {\n            \"__typename\"\
+    : \"EmpEvseData\",\n            \"connectors\": [\n              {\n         \
+    \       \"__typename\": \"EmpConnectorsData\",\n                \"connectorId\"\
+    : \"CPI_c7f8303d6371d1f07158ee52e4fb25be\",\n                \"tariff\": \"$0.42/kWh\"\
+    \n              },\n              {\n                \"__typename\": \"EmpConnectorsData\"\
+    ,\n                \"connectorId\": \"CPI_c7f8303d6371d1f07158ee52e4fb25be\",\n\
+    \                \"tariff\": \"$0.00-$3.00/hr\"\n              }\n           \
+    \ ]\n          },\n          {\n            \"__typename\": \"EmpEvseData\",\n\
+    \            \"connectors\": [\n              {\n                \"__typename\"\
+    : \"EmpConnectorsData\",\n                \"connectorId\": \"CPI_93150381476a7830893ef03780355697\"\
+    ,\n                \"tariff\": \"$0.42/kWh\"\n              },\n             \
+    \ {\n                \"__typename\": \"EmpConnectorsData\",\n                \"\
+    connectorId\": \"CPI_93150381476a7830893ef03780355697\",\n                \"tariff\"\
+    : \"$0.00-$3.00/hr\"\n              }\n            ]\n          },\n         \
+    \ {\n            \"__typename\": \"EmpEvseData\",\n            \"connectors\"\
+    : [\n              {\n                \"__typename\": \"EmpConnectorsData\",\n\
+    \                \"connectorId\": \"CPI_43b836b9f5163b82b4fb24b61d0f00a4\",\n\
+    \                \"tariff\": \"$0.42/kWh\"\n              },\n              {\n\
+    \                \"__typename\": \"EmpConnectorsData\",\n                \"connectorId\"\
+    : \"CPI_43b836b9f5163b82b4fb24b61d0f00a4\",\n                \"tariff\": \"$0.00-$3.00/hr\"\
+    \n              }\n            ]\n          },\n          {\n            \"__typename\"\
+    : \"EmpEvseData\",\n            \"connectors\": [\n              {\n         \
+    \       \"__typename\": \"EmpConnectorsData\",\n                \"connectorId\"\
+    : \"CPI_c432c84ff005bc653c200e01ab091994\",\n                \"tariff\": \"$0.42/kWh\"\
+    \n              },\n              {\n                \"__typename\": \"EmpConnectorsData\"\
+    ,\n                \"connectorId\": \"CPI_c432c84ff005bc653c200e01ab091994\",\n\
+    \                \"tariff\": \"$0.00-$3.00/hr\"\n              }\n           \
+    \ ]\n          }\n        ]\n      }\n    }\n  }\n}</code></pre>"

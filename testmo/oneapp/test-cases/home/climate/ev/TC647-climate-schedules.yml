@@ -1,0 +1,31 @@
+testmo:
+  case_id: 647
+  folder_id: 4169
+  project_id: 2
+  folder_path: home/climate/ev
+  folder_name_ui: EV
+  created_at: '2023-08-01 23:08:20.884695'
+  updated_at: '2025-11-04 21:11:12.920298'
+  last_sync: '2026-01-30T18:21:08.950184Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/647
+metadata:
+  name: Climate Schedules
+  priority: 1
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is on Climate screen</p>
+  steps:
+  - column_name: custom_steps
+    id: 816
+    case_id: 647
+    text1: <p>1. No existing charge schedules<br />2. At least one charge schedule<br
+      />3. 3 climate schedules for <code>EV</code> / 5 climate schedules for <code>EV2</code></p>
+    text2: null
+    text3: <p>1. User should see empty state for schedules<br />2. User should see
+      climate schedule with days of the week, departure time, and toggle state<br
+      />3. User should see all climate schedules and add button disabled</p>
+    text4: null
+    display_order: 1

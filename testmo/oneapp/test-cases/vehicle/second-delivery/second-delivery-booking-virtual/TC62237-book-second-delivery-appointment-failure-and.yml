@@ -1,0 +1,61 @@
+testmo:
+  case_id: 62237
+  folder_id: 6820
+  project_id: 2
+  folder_path: vehicle/second-delivery/second-delivery-booking-virtual
+  folder_name_ui: Second Delivery - Booking (Virtual)
+  created_at: '2025-12-19 21:44:34.066757'
+  updated_at: '2025-12-19 23:49:22.004473'
+  last_sync: '2026-01-30T18:21:03.768625Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/62237
+metadata:
+  name: Book Second Delivery Appointment - Failure and Retry (Virtual)
+  priority: 1
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  steps:
+  - column_name: custom_steps
+    id: 97120
+    case_id: 62237
+    text1: "<p>Mock <code>CreateSecondDeliveryAppointment</code> mutation to return\
+      \ error:</p><pre><code class=\"editor-plain language-plain code-block\">{\n\
+      \  \"data\": {\n    \"createSecondDeliveryAppointment\": {\n      \"__typename\"\
+      : \"CreateSecondDeliveryAppointmentSuccessResponse\",\n      \"success\": false\n\
+      \    }\n  }\n}</code></pre><p>On <code>Review</code> screen, tap <code>BOOK\
+      \ VIRTUAL APPOINTMENT</code> button</p>"
+    text2: null
+    text3: '<ul><li><code>CreateSecondDeliveryAppointment</code> mutation is triggered</li><li>API
+      returns error response</li><li><strong>Error modal</strong> is displayed with:<ul><li>Modal
+      title: <code>Failed to Book Appointment</code></li><li>Error message: <code>Sorry,
+      something went wrong when booking your appointment. You can retry or call 1-844-471-1010
+      to book over the phone.</code></li><li><code>Cancel</code> button (left side,
+      secondary style)</li><li><code>Retry</code> button (right side, primary style
+      - blue)</li></ul></li><li>User remains on <code>Review</code> screen (background
+      dimmed with modal overlay)</li></ul>'
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 97121
+    case_id: 62237
+    text1: <p>Tap <code>Retry</code> button</p>
+    text2: null
+    text3: '<ul><li>Error modal is dismissed</li><li><code>CreateSecondDeliveryAppointment</code>
+      mutation is triggered again with same booking data</li><li>If retry succeeds:
+      User is redirected to <code>Appointment Scheduled</code> confirmation screen</li><li>If
+      retry fails: Error modal is displayed again with same messaging and options</li></ul>'
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 97122
+    case_id: 62237
+    text1: <p>Tap <code>Cancel</code> button (when error modal is displayed)</p>
+    text2: null
+    text3: <ul><li>Error modal is dismissed</li><li>User remains on <code>Review</code>
+      screen</li><li>All booking data is preserved (date, time, contact information)</li><li>User
+      can modify booking details or attempt to book again</li><li><code>BOOK VIRTUAL
+      APPOINTMENT</code> button remains enabled and visible</li></ul>
+    text4: null
+    display_order: 3

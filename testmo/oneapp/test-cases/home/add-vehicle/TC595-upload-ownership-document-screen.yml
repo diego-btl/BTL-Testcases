@@ -1,0 +1,31 @@
+testmo:
+  case_id: 595
+  folder_id: 56
+  project_id: 2
+  folder_path: home/add-vehicle
+  folder_name_ui: Add vehicle
+  created_at: '2023-08-01 23:08:20.226234'
+  updated_at: '2025-09-19 18:56:14.204244'
+  last_sync: '2026-01-30T18:21:09.091768Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/595
+metadata:
+  name: Upload Ownership Document screen
+  priority: 1
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has successfully validated their VIN</p>
+  steps:
+  - column_name: custom_steps
+    id: 764
+    case_id: 595
+    text1: <p>1. Tap OK on Vin Validated modal</p>
+    text2: null
+    text3: <p>User should see the Upload Ownership Document screen with the following:<br
+      />- Description of file types<br />- File Field<br />- Take a Picture<br />-
+      Select an Image<br />- Select a File<br />- SMS notification opt-in<br />- Upload
+      button</p>
+    text4: null
+    display_order: 1

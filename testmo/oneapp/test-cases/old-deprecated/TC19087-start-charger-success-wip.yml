@@ -1,0 +1,68 @@
+testmo:
+  case_id: 19087
+  folder_id: 105
+  project_id: 2
+  folder_path: old-deprecated
+  folder_name_ui: Old / Deprecated
+  created_at: '2024-06-06 17:35:19.754120'
+  updated_at: '2026-01-14 22:44:19.180981'
+  last_sync: '2026-01-30T18:21:06.990554Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/19087
+metadata:
+  name: Start Charger - Success - WIP
+  priority: 13
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p><code>EnablePlugAndCharge</code> is enabled in remote configs</p><p><code>AccountStatus</code>
+    is <code>ACTIVE</code></p>
+  steps:
+  - column_name: custom_steps
+    id: 27486
+    case_id: 19087
+    text1: <p>Enter a Charger ID in the Charger ID field</p>
+    text2: null
+    text3: <p>Start Charge CTA should be enabled</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 27487
+    case_id: 19087
+    text1: <p>Tap on Start Charger</p>
+    text2: null
+    text3: <p>Modal should appear prompting user for confirmation</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 27488
+    case_id: 19087
+    text1: <p>Tap Start on the modal</p>
+    text2: null
+    text3: <ol><li>App should send a <code>startChargeSession</code> command with
+      the current VIN and entered charger ID. </li><li>App should poll <code>CheckChargeSessionStatus</code>
+      for status</li></ol>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 27489
+    case_id: 19087
+    text1: <p>While polling user should see the following</p>
+    text2: null
+    text3: <ol><li>full screen loading state</li><li>Toasts showing the following
+      order:<ol><li>Contacting [car model] to begin charge ...</li><li>Initiating
+      [car model] to begin charge ...</li><li>Charge Session Started </li></ol></li></ol>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 27490
+    case_id: 19087
+    text1: <p>User should see the following update:</p>
+    text2: null
+    text3: <ol><li>IF <code>stopSessionAllowed</code> was true in <code>startChargeSession</code>,
+      then user should see a Stop Charger CTA. Otherwise it should be hidden</li><li><p>Charge
+      status should update to show charging state (similar to battery card) <br />i.e </p><figure
+      class="image"><img src="/attachments/view/1018" alt="1018" /></figure></li></ol>
+    text4: null
+    display_order: 5

@@ -1,0 +1,49 @@
+testmo:
+  case_id: 2844
+  folder_id: 90
+  project_id: 2
+  folder_path: vehicle/vehicle-profile
+  folder_name_ui: Vehicle Profile
+  created_at: '2023-09-13 15:38:02.916703'
+  updated_at: '2025-12-19 16:30:34.601326'
+  last_sync: '2026-01-30T18:21:07.417700Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/2844
+metadata:
+  name: Preferred Dealer Set - Mechanical Repair card status
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>AVK2 or EVO vehicle (AVK2, EVAVK2, EVO, EVEVO)</li><li>User
+    does not need to have active MILs</li><li>User has MECHANICAL_REPAIR capability
+    enabled</li><li><code>GrantMechanicalRepair</code> FF is <strong>enabled</strong></li><li>User
+    has a preferred dealer set</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 95804
+    case_id: 2844
+    text1: <p>Have a preferred dealer set then Tap on Vehicle tab &gt; Vehicle Profile
+      &gt; My Dealer card</p>
+    text2: null
+    text3: '<p>Verify <code>Vehicle Maintenance Data Sharing</code> card is shown
+      at the bottom of the screen:</p><ul><li>If <strong>VehiclePreferences</strong>
+      retrieves <code>"enabled": false</code>, then the subtitle is <i><strong>Not
+      Sharing</strong></i></li><li>If <strong>VehiclePreferences</strong> retrieves
+      <code>"enabled": true</code>, then the subtitle is<i><strong> Sharing </strong></i>and
+      subtoggles will display accordingly with retrieved on text, phone, email parameters.</li></ul>'
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 95805
+    case_id: 2844
+    text1: <p>Update any toggle</p>
+    text2: null
+    text3: <p>App triggers <strong>UpdateVehiclePreferences</strong> API with correct
+      values on the request for each parameter.</p>
+    text4: null
+    display_order: 2
+  notes: '<p><strong><u>Configuration:</u></strong><br /><code>"GrantMechanicalRepair": </code></p><p><code>"{</code></p><p><code> 
+       \"enabled\": false, </code><br /><code>     \"checkCapability\": false</code></p><p><code>}",</code></p><p><code>"EnableMechanicalRepair":
+    "false"</code></p>'

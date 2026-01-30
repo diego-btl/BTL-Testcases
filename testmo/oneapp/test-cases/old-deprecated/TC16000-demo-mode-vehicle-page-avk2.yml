@@ -1,0 +1,159 @@
+testmo:
+  case_id: 16000
+  folder_id: 105
+  project_id: 2
+  folder_path: old-deprecated
+  folder_name_ui: Old / Deprecated
+  created_at: '2024-04-30 20:03:19.157084'
+  updated_at: '2025-10-06 06:51:05.413549'
+  last_sync: '2026-01-30T18:21:07.066270Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/16000
+metadata:
+  name: Demo Mode - Vehicle Page - AVK2
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>Vehicle selected is the <code>Rogue AVK2</code> (Rogue Platinum
+    Demo)</p>
+  steps:
+  - column_name: custom_steps
+    id: 21249
+    case_id: 16000
+    text1: <p>Tap Vehicle in the bottom nav </p>
+    text2: null
+    text3: <p>User should see dummy data for the Rogue Platinum Demo on the Status
+      Section:</p><ul><li>MIL Icon</li><li>Vehicle Status Icon</li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 21250
+    case_id: 16000
+    text1: <p>Tap on the Vehicle Profile button</p>
+    text2: null
+    text3: <p>User should be navigated to Vehicle Profile screen and see dummy data
+      for the Vehicle</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 21251
+    case_id: 16000
+    text1: <p>Tap any of the cards in the Vehicle Profile screen, except for <code>Remote
+      Data Wipe</code></p>
+    text2: null
+    text3: <p>User should see the demo mode alert modal</p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 21256
+    case_id: 16000
+    text1: <p>Tap on <code>Remote Data Wipe</code></p>
+    text2: null
+    text3: <p>The user should be navigated to the <code>Remote Data Wipe</code> page</p>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 21257
+    case_id: 16000
+    text1: <p>While on the Page above, click on the <code>Delete Data</code> CTA</p>
+    text2: null
+    text3: <p>User should see the demo mode alert modal</p>
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 21252
+    case_id: 16000
+    text1: <p>Return to the Vehicle Page and tap on the Schedule Service/Find a Dealer
+      buttons</p>
+    text2: null
+    text3: <p>User should be navigated to a Find a Dealer screen with no search results
+      screen</p>
+    text4: null
+    display_order: 6
+  - column_name: custom_steps
+    id: 21253
+    case_id: 16000
+    text1: <p>Tap on the Service History button</p>
+    text2: null
+    text3: <p>User should see the demo mode alert modal</p>
+    text4: null
+    display_order: 7
+  - column_name: custom_steps
+    id: 21260
+    case_id: 16000
+    text1: <p>Tap on the MIL Status card (12-Volt Battery Warning) or the Vehicle
+      Status card (Window Open)</p>
+    text2: null
+    text3: <p>The user should be navigated to the Vehicle Status Page showing the
+      tab depending on the user selection</p>
+    text4: null
+    display_order: 8
+  - column_name: custom_steps
+    id: 21261
+    case_id: 16000
+    text1: <p>On the Vehicle Status Page, tap on the MIL tab and click the <code>12-Volt
+      Battery Warning</code> card</p>
+    text2: null
+    text3: <p>The user should see the <code>12-Volt Battery Warning</code> MIL Page,
+      tapping on the <code>Schedule Service</code> CTA should trigger the demo mode
+      alert modal</p>
+    text4: null
+    display_order: 9
+  - column_name: custom_steps
+    id: 21262
+    case_id: 16000
+    text1: <p>Return to the Vehicle Status Page, tap on the Vehicle tab</p>
+    text2: null
+    text3: <p>User should se a card for <code>Vehicle Status card (Window Open)</code>
+      without any caret, or being clickable</p>
+    text4: null
+    display_order: 10
+  - column_name: custom_steps
+    id: 21255
+    case_id: 16000
+    text1: <p>Return to the Vehicle Page and Tap on the <code>View Maintenance Schedule</code>
+      card</p>
+    text2: null
+    text3: <p>The user should be driven to the Maintenance Schedule page with dummy
+      data for the Rogue AVK2, the sections that should be displayed are:</p><ul><li>Driving
+      Conditions</li><li>Mileage Until Next Service</li><li>Estimated Next Service</li><li>Maintenance
+      Reminders</li><li>Vehicle Mileage</li></ul>
+    text4: null
+    display_order: 11
+  - column_name: custom_steps
+    id: 21263
+    case_id: 16000
+    text1: <p>Tap on any of the elements of the page except for the <code>See All</code>
+      button on the Parts Replacement Reminder Section</p>
+    text2: null
+    text3: <p>User should see the demo mode alert modal</p>
+    text4: null
+    display_order: 12
+  - column_name: custom_steps
+    id: 21264
+    case_id: 16000
+    text1: <p>Tap on  the <code>See All</code> button on the Maintenance Reminders
+      Section </p>
+    text2: null
+    text3: <p>The user should be navigated to the Maintenance Reminders page with
+      data for future and overdue parts reminders</p>
+    text4: null
+    display_order: 13
+  - column_name: custom_steps
+    id: 21265
+    case_id: 16000
+    text1: <p>Tap on any of the elements of the page (except (i)</p>
+    text2: null
+    text3: <p>User should see the demo mode alert modal</p>
+    text4: null
+    display_order: 14
+  - column_name: custom_steps
+    id: 21254
+    case_id: 16000
+    text1: <p>Return to the Vehicle Page and tap on the Est. Mileage card</p>
+    text2: null
+    text3: <p>User should see the demo mode alert modal</p>
+    text4: null
+    display_order: 15

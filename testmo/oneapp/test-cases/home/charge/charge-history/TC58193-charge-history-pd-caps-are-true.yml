@@ -1,0 +1,58 @@
+testmo:
+  case_id: 58193
+  folder_id: 2443
+  project_id: 2
+  folder_path: home/charge/charge-history
+  folder_name_ui: Charge History
+  created_at: '2025-08-19 17:57:00.522967'
+  updated_at: '2025-12-02 22:23:24.041385'
+  last_sync: '2026-01-30T18:21:05.763773Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/58193
+metadata:
+  name: Charge History - PD - Caps are true
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is a PD and has an EV/EV2</p><p>None of the FF is checked</p><p>User
+    is on the Manage EV screen &gt; Charge History card is in the enabled state (it
+    should always be enabled for PD)</p><p>EV &gt; VehicleCapabilities &gt; "DRIVING_ANALYSIS"
+    is true</p><p>EV2 &gt; VehicleCapabilities &gt; "CHARGE_HISTORY" is true</p>
+  steps:
+  - column_name: custom_steps
+    id: 88907
+    case_id: 58193
+    text1: <p>Tap Charge History card</p>
+    text2: null
+    text3: <p>NissanPayOrderHistory API is triggered</p><p>User is navigated to the
+      In-network tab</p><p>All Sessions tab is in the enabled state</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 95460
+    case_id: 58193
+    text1: <p>Tap the "Refresh" button in the top right corner of the screen</p>
+    text2: null
+    text3: <p>NissanPayOrderHistory API is triggered</p><p>The loading state is displayed</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 88908
+    case_id: 58193
+    text1: <p>Tap the enabled "All Sessions" tab</p>
+    text2: null
+    text3: <p>The VehicleChargeHistory API is triggered </p><p>User is navigated to
+      the All Sessions tab</p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 95461
+    case_id: 58193
+    text1: <p>Tap the "Refresh" button in the top right corner of the screen</p>
+    text2: null
+    text3: <p>The VehicleChargeHistory API is triggered </p><p>The loading state is
+      displayed</p>
+    text4: null
+    display_order: 4

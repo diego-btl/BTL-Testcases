@@ -1,0 +1,93 @@
+testmo:
+  case_id: 61919
+  folder_id: 6755
+  project_id: 2
+  folder_path: home/charge/v1g-vehicle-to-grid
+  folder_name_ui: V1G - Vehicle-to-Grid
+  created_at: '2025-11-03 18:23:49.547413'
+  updated_at: '2025-12-16 18:20:15.189428'
+  last_sync: '2026-01-30T18:21:05.588873Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/61919
+metadata:
+  name: V1G - Unenrollment - FAILURE
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<p>Nissan NNA and NCI only</p><p>EV or EV AVK2 only</p><p>PD only</p><p>"v1GMonitoredChargingAccountStatus":
+    "ACTIVE"</p>'
+  steps:
+  - column_name: custom_steps
+    id: 94858
+    case_id: 61919
+    text1: <p>User is on the Manage EV screen</p>
+    text2: null
+    text3: <p>1. Smart Charging card is places under the NECN card with the secondary
+      text 'Enrolled'</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 94859
+    case_id: 61919
+    text1: <p>Tap the Smart Charging card</p>
+    text2: null
+    text3: <p>1. User is navigated to the Smart Charging screen</p><p>2. Nissan Smart
+      Charging status is 'Enrolled'</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 94860
+    case_id: 61919
+    text1: <p>Tap the 'Deactivate from Smart Charging' button</p>
+    text2: null
+    text3: <p>1. The 'Deactivate from Smart Charging' modal with 'Cancel' and 'Deactivate'
+      buttons is displayed</p><figure class="image"><img src="/attachments/view/8655"
+      alt="8655" /></figure>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 94861
+    case_id: 61919
+    text1: <p>Tap the 'Cancel' button</p>
+    text2: null
+    text3: <p>Modal is dismissed</p>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 94862
+    case_id: 61919
+    text1: <p>Tap the 'Deactivate from Smart Charging' button</p>
+    text2: null
+    text3: <p>1. The 'Deactivate from Smart Charging' modal with 'Cancel' and 'Deactivate'
+      buttons is displayed</p>
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 94863
+    case_id: 61919
+    text1: <p>Tap the 'Deactivate' button</p>
+    text2: null
+    text3: <p>1. V1GCancelMonitoredChargingPlan API is triggered</p><p>2. The loading
+      state is displayed</p>
+    text4: null
+    display_order: 6
+  - column_name: custom_steps
+    id: 94864
+    case_id: 61919
+    text1: '<p>V1GCancelMonitoredChargingPlan API returns "statusCode": "5000"</p>'
+    text2: null
+    text3: <p>1. The V1GMonitoredChargingAccountStatus API is not triggered</p><p>2.
+      The SWW modal with 'Ok' button is displayed</p>
+    text4: null
+    display_order: 7
+  - column_name: custom_steps
+    id: 94865
+    case_id: 61919
+    text1: <p>Tap 'Ok' button</p>
+    text2: null
+    text3: <p>1. The modal is dismissed</p><p>2. User remains on the same screen,
+      Nissan Smart Charging status is 'Enrolled'</p>
+    text4: null
+    display_order: 8

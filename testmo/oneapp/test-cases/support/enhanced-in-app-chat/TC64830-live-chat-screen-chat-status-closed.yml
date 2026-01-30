@@ -1,0 +1,74 @@
+testmo:
+  case_id: 64830
+  folder_id: 7146
+  project_id: 2
+  folder_path: support/enhanced-in-app-chat
+  folder_name_ui: Enhanced In-App Chat
+  created_at: '2026-01-27 23:22:56.998412'
+  updated_at: '2026-01-28 00:21:30.585442'
+  last_sync: '2026-01-30T18:21:03.600059Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/64830
+metadata:
+  name: Live Chat Screen - Chat Status Closed
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  steps:
+  - column_name: custom_steps
+    id: 102480
+    case_id: 64830
+    text1: <p>Navigate to <code>Support</code> screen and tap <code>Chat</code> card</p>
+    text2: null
+    text3: <ul><li>User is redirected to <code>Live Chat</code> screen</li><li>Screen
+      displays back button, title, brand-specific header text, and instruction text</li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 102481
+    case_id: 64830
+    text1: <p>Validate department cards display with Closed status and info icon</p>
+    text2: null
+    text3: '<ul><li>Two department cards displayed with <code>Chat Status: Closed</code></li><li>Cards
+      are in disabled state</li><li><strong>Info icon (i)</strong> displayed on right
+      side of each card</li></ul>'
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 102482
+    case_id: 64830
+    text1: <p>Tap <strong>info icon</strong> on first department card</p>
+    text2: null
+    text3: <ul><li>Modal displays with department title, close button, and <code>afterHourMessage</code>
+      from response</li></ul>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 102483
+    case_id: 64830
+    text1: <p>Close modal and tap <strong>info icon</strong> on second department
+      card</p>
+    text2: null
+    text3: <ul><li>Modal displays with department title, close button, and <code>afterHourMessage</code>
+      for that department</li></ul>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 102484
+    case_id: 64830
+    text1: <p>Validate <code>GO TO CHAT</code> button and cards remain disabled</p>
+    text2: null
+    text3: <ul><li><code>GO TO CHAT</code> button remains disabled</li><li>Cards remain
+      disabled and cannot be selected</li></ul>
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 102485
+    case_id: 64830
+    text1: <p>Validate SMS support section displays</p>
+    text2: null
+    text3: <ul><li>Text and link displayed</li></ul>
+    text4: null
+    display_order: 6

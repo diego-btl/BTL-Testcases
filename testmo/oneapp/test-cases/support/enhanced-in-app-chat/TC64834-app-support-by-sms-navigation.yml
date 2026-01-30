@@ -1,0 +1,28 @@
+testmo:
+  case_id: 64834
+  folder_id: 7146
+  project_id: 2
+  folder_path: support/enhanced-in-app-chat
+  folder_name_ui: Enhanced In-App Chat
+  created_at: '2026-01-28 00:16:12.622380'
+  updated_at: '2026-01-28 00:22:20.793735'
+  last_sync: '2026-01-30T18:21:03.579160Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/64834
+metadata:
+  name: APP SUPPORT BY SMS - Navigation
+  priority: 3
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  steps:
+  - column_name: custom_steps
+    id: 102501
+    case_id: 64834
+    text1: <p>Tap <code>APP SUPPORT BY SMS</code> link at the bottom of the screen</p>
+    text2: null
+    text3: '<ul><li>Device SMS/messaging app opens</li><li>SMS recipient is pre-populated
+      with phone number: <code>(615) 675-9331</code></li></ul>'
+    text4: null
+    display_order: 1

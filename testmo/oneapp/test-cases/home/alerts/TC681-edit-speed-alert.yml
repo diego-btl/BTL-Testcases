@@ -1,0 +1,37 @@
+testmo:
+  case_id: 681
+  folder_id: 70
+  project_id: 2
+  folder_path: home/alerts
+  folder_name_ui: Alerts
+  created_at: '2023-08-01 23:08:21.318055'
+  updated_at: '2025-10-24 16:42:47.168876'
+  last_sync: '2026-01-30T18:21:08.868767Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/681
+metadata:
+  name: Edit Speed Alert
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is on a speed alert edit sheet</p>
+  steps:
+  - column_name: custom_steps
+    id: 850
+    case_id: 681
+    text1: <p>1. Edit speed alert (speed, display in vehicle)<br />2. Tap Save Alert</p>
+    text2: null
+    text3: <p>1. User should see Save CTA become enabled once changes have been made<br
+      />2. User should be taken to the main alerts sheet and see their alert updated</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 1134
+    case_id: 681
+    text1: <p>Fail to save the alert </p>
+    text2: null
+    text3: <p>The user will see an error alert and remain on the edit alert sheet</p>
+    text4: null
+    display_order: 2

@@ -1,0 +1,40 @@
+testmo:
+  case_id: 591
+  folder_id: 56
+  project_id: 2
+  folder_path: home/add-vehicle
+  folder_name_ui: Add vehicle
+  created_at: '2023-08-01 23:08:20.174326'
+  updated_at: '2025-10-09 05:40:33.019707'
+  last_sync: '2026-01-30T18:21:09.106666Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/591
+metadata:
+  name: Camera Permissions
+  priority: 1
+  type: functional
+  status: active
+  estimate: 120000000
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>User is already on the <code>Add Vehicle</code> screen</li><li>User
+    has not provided Camera permissions to the app</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 760
+    case_id: 591
+    text1: <p>Tap on the <code>Camera Interaction</code> field (<i>TAP HERE TO USE
+      YOUR CAMERA</i>)</p>
+    text2: null
+    text3: <p>User should see camera permissions modal pop up</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 1792
+    case_id: 591
+    text1: '<p>Tap on:</p><ul><li>iOS: "OK"</li><li>Android: "While Using The App"</li></ul><p>buttons</p>'
+    text2: null
+    text3: <p>The <code>Camera Interaction</code> field should display the camera
+      feed</p>
+    text4: null
+    display_order: 2

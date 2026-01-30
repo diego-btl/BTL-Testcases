@@ -1,0 +1,36 @@
+testmo:
+  case_id: 62236
+  folder_id: 6820
+  project_id: 2
+  folder_path: vehicle/second-delivery/second-delivery-booking-virtual
+  folder_name_ui: Second Delivery - Booking (Virtual)
+  created_at: '2025-12-19 21:40:02.871229'
+  updated_at: '2025-12-19 23:48:49.768961'
+  last_sync: '2026-01-30T18:21:03.785966Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/62236
+metadata:
+  name: Book Second Delivery Appointment - Success (Virtual)
+  priority: 1
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  steps:
+  - column_name: custom_steps
+    id: 97116
+    case_id: 62236
+    text1: <p>On <code>Review</code> screen, tap <code>BOOK VIRTUAL APPOINTMENT</code>
+      button</p>
+    text2: null
+    text3: '<ul><li><code>CreateSecondDeliveryAppointment</code> mutation is triggered
+      with all booking details as payload (date, time, contact info, VIN, special
+      instructions)</li><li>User is redirected to <code>Appointment Scheduled</code>
+      screen</li><li>Screen title is <code>Appointment Scheduled</code></li><li><strong>Green
+      checkmark icon</strong> is displayed (circle with white checkmark)</li><li>Success
+      message is displayed: <code>An email confirmation with an appointment personalization
+      link has been sent.</code></li><li><code>ADD TO CALENDAR</code> button is displayed</li><li><strong>Close
+      (X) button</strong> is displayed at top right</li><li><strong>Bottom navigation</strong>
+      is visible and accessible</li></ul>'
+    text4: null
+    display_order: 1

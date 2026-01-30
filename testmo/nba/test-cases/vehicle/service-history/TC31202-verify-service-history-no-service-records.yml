@@ -1,0 +1,57 @@
+testmo:
+  case_id: 31202
+  folder_id: 4009
+  project_id: 5
+  folder_path: vehicle/service-history
+  folder_name_ui: Service History
+  created_at: '2025-02-07 21:52:02.820994'
+  updated_at: '2025-02-07 22:21:27.712628'
+  last_sync: '2026-01-30T18:20:38.131086Z'
+  url: https://bethinklabs.testmo.net/repositories/5/cases/31202
+metadata:
+  name: Verify Service History (No Service Records)
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>The <strong>GetServiceHistory query</strong> returns <strong>no
+    service records</strong> for the VIN.</p>
+  steps:
+  - column_name: custom_steps
+    id: 51191
+    case_id: 31202
+    text1: <p>Navigate to the <strong>Vehicle Screen</strong> and check for the <strong>Último
+      Serviço Executado</strong> card.</p>
+    text2: null
+    text3: <ul><li>The <strong>Último Serviço Executado</strong> card <strong>should
+      not be displayed</strong>.</li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 51192
+    case_id: 31202
+    text1: <p><strong>Verify the Histórico de Serviços </strong>button<strong>.</strong></p>
+    text2: null
+    text3: <ul><li>The button is still visible and clickable.</li></ul>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 51193
+    case_id: 31202
+    text1: <p><strong>Click on the Histórico de Serviços button.</strong></p>
+    text2: null
+    text3: <ul><li>The app navigates to <strong>Historico de Servicos</strong> screen.</li><li>The
+      screen title should be <strong>Histórico de Serviços</strong></li><li>The screen
+      displays the empty state message <strong>“Nenhum Serviço Encontrado”</strong>.</li></ul>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 51200
+    case_id: 31202
+    text1: <p><strong>Click the Back button at the top left of the screen.</strong></p>
+    text2: null
+    text3: <p>The app navigates back to the <strong>Vehicle Screen</strong>.</p>
+    text4: null
+    display_order: 4

@@ -1,0 +1,39 @@
+testmo:
+  case_id: 30059
+  folder_id: 98
+  project_id: 2
+  folder_path: map/info-drawer
+  folder_name_ui: Info Drawer
+  created_at: '2025-01-24 18:41:34.799566'
+  updated_at: null
+  last_sync: '2026-01-30T18:21:06.369730Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/30059
+metadata:
+  name: Vehicle Location - No Location - Permissions Denied
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: 'User''s selected vehicle is not returning a location<br />
+
+    User has location permissions denied'
+  steps:
+  - column_name: custom_steps
+    id: 48952
+    case_id: 30059
+    text1: 1. Navigate to the Map screen
+    text2: null
+    text3: '1. User should see Map centered Franklin, TN<br />
+
+      <br />
+
+      User should see User location and Vehicle location button disabled<br />
+
+      <br />
+
+      User should see Vehicle could not be located message and empty state for timestamp
+      in Vehicle Location'
+    text4: null
+    display_order: 1

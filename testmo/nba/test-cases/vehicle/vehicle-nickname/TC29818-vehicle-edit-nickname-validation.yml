@@ -1,0 +1,30 @@
+testmo:
+  case_id: 29818
+  folder_id: 3771
+  project_id: 5
+  folder_path: vehicle/vehicle-nickname
+  folder_name_ui: Vehicle Nickname
+  created_at: '2024-12-20 15:21:40.308281'
+  updated_at: '2025-04-08 15:17:27.617118'
+  last_sync: '2026-01-30T18:20:38.329861Z'
+  url: https://bethinklabs.testmo.net/repositories/5/cases/29818
+metadata:
+  name: Vehicle - Edit Nickname validation
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User should be on the edit nickname screen</p>
+  steps:
+  - column_name: custom_steps
+    id: 48685
+    case_id: 29818
+    text1: <p>Violate on of the validation rules</p>
+    text2: null
+    text3: <ol><li><code>SALVAR</code> should stay disabled</li><li>Textfield should
+      show red error state</li><li>User should see the copy <code>Remova os caracteres
+      especiais</code></li></ol>
+    text4: null
+    display_order: 1

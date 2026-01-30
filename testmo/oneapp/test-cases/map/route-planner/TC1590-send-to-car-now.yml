@@ -1,0 +1,65 @@
+testmo:
+  case_id: 1590
+  folder_id: 101
+  project_id: 2
+  folder_path: map/route-planner
+  folder_name_ui: Route Planner
+  created_at: '2023-08-28 20:13:24.663829'
+  updated_at: '2025-12-12 15:46:19.374331'
+  last_sync: '2026-01-30T18:21:07.965542Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/1590
+metadata:
+  name: Send to car now
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>The user selects an <code>EV</code> or <code>EVAVK2</code>
+    vehicles</li><li>User is on <strong>Estimate Route*</strong> screen</li><li><p>Send
+    to Car now enabled</p><p> </p></li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 1955
+    case_id: 1590
+    text1: <ol><li>Tap <strong>Send to car now</strong></li><li>Tap <strong>Cancel</strong>
+      on the modal</li></ol>
+    text2: null
+    text3: <ul><li>User should see an alert modal</li><li>Alert modal should be dismissed</li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 95301
+    case_id: 1590
+    text1: <ol><li>Tap <strong>Send to car now</strong></li><li>Tap <strong>Yes</strong>
+      on the modal</li></ol>
+    text2: null
+    text3: <ul><li>User should see a loading state as send now call is made<ul><li><code>Route
+      sent to the vehicle</code></li></ul></li><li>User stays in the <code>Map</code>
+      screen</li></ul>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 95302
+    case_id: 1590
+    text1: <ol><li>Tap <strong>Send to car now</strong></li><li>Force an error</li></ol>
+    text2: null
+    text3: <ul><li>User should see a failure toast<ul><li><code>Failed to send route
+      to vehicle</code></li></ul></li><li>User stays in the <code>Estimated Route*</code>
+      screen</li></ul>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 95303
+    case_id: 1590
+    text1: <ol><li>Tap <strong>Send to car now</strong></li><li>Tap <strong>Yes</strong>
+      on the modal, and allow call to succeed</li><li>Check recently sent to vehicle</li></ol>
+    text2: null
+    text3: <ul><li>User should be taken back to the Maps screen with a success toast
+      'Route sent to vehicle'</li><li>User should see see sent route shown in recently
+      sent to vehicle</li></ul>
+    text4: null
+    display_order: 4
+  notes: '<p>Automation: error in step 4 can''t be automated as it required mocking<br
+    /><br />This is the API that is trigger when sending the route to the vehicle:</p><ul><li><strong>SendJourney</strong></li><li><strong>VehiclePlannedRoutes</strong></li><li><strong>VehicleJourneys</strong></li><li><strong>VehiclePOIDestinations</strong></li></ul>'

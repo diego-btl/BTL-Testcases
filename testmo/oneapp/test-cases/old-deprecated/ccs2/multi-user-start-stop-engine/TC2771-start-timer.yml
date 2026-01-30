@@ -1,0 +1,31 @@
+testmo:
+  case_id: 2771
+  folder_id: 421
+  project_id: 2
+  folder_path: old-deprecated/ccs2/multi-user-start-stop-engine
+  folder_name_ui: Multi-user start/stop engine
+  created_at: '2023-09-08 16:32:36.630022'
+  updated_at: '2026-01-06 17:48:40.990440'
+  last_sync: '2026-01-30T18:21:07.583990Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/2771
+metadata:
+  name: Start Timer
+  priority: 13
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has started their vehicle successfully<br />User is a PRIMARY_DRIVER
+    or SHARED_DRIVER (to be tested for both for AVK2)</p>
+  steps:
+  - column_name: custom_steps
+    id: 3136
+    case_id: 2771
+    text1: <p>1. Wait for 10 minutes to pass</p>
+    text2: null
+    text3: <p>1. User should see their vehicle engine stop after 10 minutes, the start
+      button should change to the default state, the engine running text should no
+      longer be shown, and "&lt;model&gt; Engine turned off after 10min" toast appear</p>
+    text4: null
+    display_order: 1

@@ -1,0 +1,64 @@
+testmo:
+  case_id: 2857
+  folder_id: 49
+  project_id: 2
+  folder_path: home/notifications
+  folder_name_ui: Notifications
+  created_at: '2023-09-14 08:01:37.420778'
+  updated_at: '2024-10-17 17:57:34.769274'
+  last_sync: '2026-01-30T18:21:07.372745Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/2857
+metadata:
+  name: Capabilities - Accessories Details - Moonroof
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>AVK2 vehicle</p>
+  steps:
+  - column_name: custom_steps
+    id: 3216
+    case_id: 2857
+    text1: <ol><li>Mock capabilities so that <code>sunRoof</code> is null</li><li>Go
+      to Notification Preferences and view Reminder After Leave section</li></ol>
+    text2: null
+    text3: <p>2. User should not see option for <code>Moonroof Open</code></p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 3217
+    case_id: 2857
+    text1: '<ol><li>Mock capabilities so that <code>sunRoof</code> is disabled</li></ol><ul><li><code>"sunRoof":
+      {</code><br /><code>"__typename": "SunRoofAccessoryCapability",</code><br /><code>"enabled":
+      false,</code><br /><code>"type": "ELECTRIC"</code><br /><code>}</code></li></ul><ol><li>Go
+      to Notification Preferences and view Reminder After Leave section</li></ol>'
+    text2: null
+    text3: <p>2. User should not see option for <code>Moonroof Open</code></p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 3219
+    case_id: 2857
+    text1: '<ol><li>Mock capabilities so that <code>sunRoof</code> is enabled but
+      not electric</li></ol><ul><li><code>"sunRoof": {</code><br /><code>"__typename":
+      "SunRoofAccessoryCapability",</code><br /><code>"enabled": true,</code><br /><code>"type":
+      "NORMAL"</code><br /><code>}</code></li></ul><ol><li>Go to Notification Preferences
+      and view Reminder After Leave section</li></ol>'
+    text2: null
+    text3: <p>2. User should not see option for <code>Moonroof Open</code></p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 3218
+    case_id: 2857
+    text1: '<ol><li>Mock capabilities so that <code>sunRoof</code> is enabled and
+      electric</li></ol><ul><li><code>"sunRoof": {</code><br /><code>"__typename":
+      "SunRoofAccessoryCapability",</code><br /><code>"enabled": true,</code><br /><code>"type":
+      "ELECTRIC"</code><br /><code>}</code></li></ul><ol><li>Go to Notification Preferences
+      and view Reminder After Leave section</li></ol>'
+    text2: null
+    text3: <p>2. User should see option for <code>Moonroof Open</code></p>
+    text4: null
+    display_order: 4

@@ -1,0 +1,30 @@
+testmo:
+  case_id: 1519
+  folder_id: 70
+  project_id: 2
+  folder_path: home/alerts
+  folder_name_ui: Alerts
+  created_at: '2023-08-28 20:13:23.440366'
+  updated_at: '2025-10-11 19:29:22.263058'
+  last_sync: '2026-01-30T18:21:08.080458Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/1519
+metadata:
+  name: Alert Information
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is on the main alerts sheet</p>
+  steps:
+  - column_name: custom_steps
+    id: 1884
+    case_id: 1519
+    text1: <p>1. Tap the "i" icon for an alert group<br />2. Tap the x icon or swipe
+      down on the sheet<br />3. Repeat steps 1-2 for the rest of the alerts</p>
+    text2: null
+    text3: <p>1. User should see a bottom sheet explanation of the alert<br />2. User
+      should see info sheet be dismissed</p>
+    text4: null
+    display_order: 1

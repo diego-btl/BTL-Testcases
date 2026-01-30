@@ -1,0 +1,105 @@
+testmo:
+  case_id: 62147
+  folder_id: 2444
+  project_id: 2
+  folder_path: home/charge/necn-nissan-energy-charge-network
+  folder_name_ui: NECN - NISSAN ENERGY Charge Network
+  created_at: '2025-12-12 20:18:53.842145'
+  updated_at: '2026-01-15 19:44:33.989746'
+  last_sync: '2026-01-30T18:21:04.729624Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/62147
+metadata:
+  name: NISSAN ENERGY Charge Network - Not Activated - Payment Method added - PD
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<p>User has an EV/EV2</p><p>"EnablePlugAndCharge": "true"</p><p>VehicleStaticData
+    &gt; "driverType": "PRIMARY_DRIVER"</p><p>Payment Method &gt; card is added to
+    the account</p>'
+  steps:
+  - column_name: custom_steps
+    id: 96435
+    case_id: 62147
+    text1: '<p>User is on the Manage EV screen </p><p>AccountStatus API &gt; "status":
+      "INACTIVE"/"NOT_ENROLLED"/"FAILED"/"CANCELLED"/"CLOSED"</p>'
+    text2: null
+    text3: <p>NISSAN ENERGY Charge Network card is displayed</p><p>Subtitle of the
+      NISSAN ENERGY Charge Network card is 'Not Activated'</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 96436
+    case_id: 62147
+    text1: <p>Tap  the NISSAN ENERGY Charge Network card</p>
+    text2: null
+    text3: <p>AccountStatus, NissanPay and ChargeProduct APIs are called</p><p>User
+      is navigated to the NISSAN ENERGY Charge Network screen</p><p>Status of the
+      Account Status card is 'Not Activated'</p><p>Account Status card:</p><ul><li>Status
+      is 'Not Activated'</li><li>Copy is 'NISSAN ENERGY Charge Network'</li><li>'Activate
+      the NISSAN ENERGY Charge Network today for access to Nisssan's in-network charging
+      partners. Find charge stations and manage your charging sessions with in-network
+      partners directly through the MyNISSAN App.'</li><li>The 'ACTIVATE' button is
+      displayed</li></ul><p>Payment Method card:</p><ul><li>Copy is 'Your default
+      payment method will be used for charging transactions.'</li><li>Added card info</li><li>'Change
+      Payment Method' CTA</li></ul><p>There's the text 'Need more information?' and
+      the 'CALL OUR HELP LINE' button</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 96437
+    case_id: 62147
+    text1: <p>Tap the 'CALL OUR HELP LINE' button</p>
+    text2: null
+    text3: <p>The phone number from the ContactUs.plugAndChargeSupport is populated</p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 96438
+    case_id: 62147
+    text1: <p>Tap the 'Change Payment Method' CTA</p>
+    text2: null
+    text3: <p>UpsertNissanPayAccount API is triggered (if it hasn't been called before)</p><p>The
+      loading state is displayed</p><p>User is navigated to the Nissan Store Wallet
+      screen</p>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 96439
+    case_id: 62147
+    text1: <p>Tap the back button on the Nissan Store Wallet screen</p>
+    text2: null
+    text3: <p>User is navigated back to the NISSAN ENERGY Charge Network screen</p>
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 96598
+    case_id: 62147
+    text1: <p>Fresh install the app</p><p>Navigate to the Charge screen</p><p>Add
+      a breakpoint to the UpsertNissanPayAccount API</p><p>Tap the 'Change Payment
+      Method' CTA</p><p>Abort the UpsertNissanPayAccount API</p>
+    text2: null
+    text3: <p>The 'Something Went Wrong' modal with 'Cancel' and 'Retry' buttons is
+      displayed</p>
+    text4: null
+    display_order: 6
+  - column_name: custom_steps
+    id: 96599
+    case_id: 62147
+    text1: <p>Tap 'Cancel'</p>
+    text2: null
+    text3: <p>The modal is dismissed</p>
+    text4: null
+    display_order: 7
+  - column_name: custom_steps
+    id: 96600
+    case_id: 62147
+    text1: <p>Tap 'Retry' button</p>
+    text2: null
+    text3: <p>The UpsertNissanPayAccount API is triggered again</p>
+    text4: null
+    display_order: 8
+  notes: <p>* NOTE</p><p>NCI - NISSAN ENERGY Charge Network screen - 'Charge Network'
+    is removed from the copy text - it's just NISSAN ENERGY</p>

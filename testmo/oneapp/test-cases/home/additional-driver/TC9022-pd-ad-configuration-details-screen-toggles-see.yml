@@ -1,0 +1,62 @@
+testmo:
+  case_id: 9022
+  folder_id: 411
+  project_id: 2
+  folder_path: home/additional-driver
+  folder_name_ui: Additional Driver
+  created_at: '2023-11-21 08:33:42.172043'
+  updated_at: '2024-10-17 17:57:34.769274'
+  last_sync: '2026-01-30T18:21:07.273523Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/9022
+metadata:
+  name: PD - AD Configuration Details Screen - Toggles/See Less/See More
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has an AVK2 vehicle and is PRIMARY_DRIVER</p><p>User is on
+    the Configuration Details screen</p>
+  steps:
+  - column_name: custom_steps
+    id: 9525
+    case_id: 9022
+    text1: null
+    text2: null
+    text3: <p>User should see all toggles enabled by default and all sections expanded</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 9526
+    case_id: 9022
+    text1: <p>Tap on See Less</p>
+    text2: null
+    text3: <p>User should see corresponding section collapse</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 9527
+    case_id: 9022
+    text1: <p>Tap on See More</p>
+    text2: null
+    text3: <p>User should see corresponding section expand</p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 9528
+    case_id: 9022
+    text1: <p>Tap to toggle off multiple sections</p>
+    text2: null
+    text3: <p>User should see toggles in off state and should also see Allow all toggle
+      in off state</p>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 9529
+    case_id: 9022
+    text1: <p>Tap to toggle on Allow all</p>
+    text2: null
+    text3: <p>User should see all toggles in on state</p>
+    text4: null
+    display_order: 5

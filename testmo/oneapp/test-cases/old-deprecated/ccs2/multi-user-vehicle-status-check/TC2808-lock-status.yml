@@ -1,0 +1,30 @@
+testmo:
+  case_id: 2808
+  folder_id: 429
+  project_id: 2
+  folder_path: old-deprecated/ccs2/multi-user-vehicle-status-check
+  folder_name_ui: Multi-user Vehicle status check
+  created_at: '2023-09-08 16:51:36.232308'
+  updated_at: '2026-01-06 17:49:10.949265'
+  last_sync: '2026-01-30T18:21:07.499128Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/2808
+metadata:
+  name: Lock Status
+  priority: 13
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: 'User has REMOTE_VEHICLE_STATUS capabilities<br />
+
+    User is a PRIMARY_DRIVER or SHARED_DRIVER (to be tested for both for AVK2)'
+  steps:
+  - column_name: custom_steps
+    id: 3173
+    case_id: 2808
+    text1: 1. Lock status is returned
+    text2: null
+    text3: 1. User should see the corresponding lock/unlock icon in the vehicle selector
+    text4: null
+    display_order: 1

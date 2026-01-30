@@ -1,0 +1,38 @@
+testmo:
+  case_id: 1489
+  folder_id: 56
+  project_id: 2
+  folder_path: home/add-vehicle
+  folder_name_ui: Add vehicle
+  created_at: '2023-08-28 20:13:22.919953'
+  updated_at: '2025-10-09 05:38:19.790627'
+  last_sync: '2026-01-30T18:21:08.151712Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/1489
+metadata:
+  name: Where's My VIN?
+  priority: 3
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>User is in the <code>Add Vehicle</code> Page</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 1854
+    case_id: 1489
+    text1: <p>Tap WHERE'S MY VIN?</p>
+    text2: null
+    text3: <p>User should see the Where's My VIN sheet</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 1999
+    case_id: 1489
+    text1: <p>Expand and collapse each item</p>
+    text2: null
+    text3: <p>User should see each item expand to display text with an accompanying
+      image and collapse<br /> </p>
+    text4: null
+    display_order: 2
+  notes: <p><br />Only one section should be able to be expanded at a time</p>

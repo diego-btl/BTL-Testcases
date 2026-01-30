@@ -1,0 +1,31 @@
+testmo:
+  case_id: 61767
+  folder_id: 6735
+  project_id: 6
+  folder_path: home-page/cards/credit/tradicional-closed
+  folder_name_ui: Tradicional - Closed
+  created_at: '2025-10-14 15:45:49.958831'
+  updated_at: '2025-10-14 22:30:52.522334'
+  last_sync: '2026-01-30T18:20:44.932227Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/61767
+metadata:
+  name: Validate Email Link Opens Mail Client
+  priority: 1
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>Closed Credit screen is visible</li><li>Email link is rendered</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 94440
+    case_id: 61767
+    text1: <ol><li>Tap the email link</li><li>Wait for the email client to open</li></ol>
+    text2: null
+    text3: <ul><li>Email compose UI opens</li><li>Recipient field is prefilled with
+      the API’s email address or fallback address if API is null</li></ul>
+    text4: null
+    display_order: 1
+  notes: '<p>Fallback Email INF: <a href="mailto:atencion.cliente@nrfm.com.mx">atencion.cliente@nrfm.com.mx</a></p><p>Fallback
+    Email NIS: <a href="mailto:membershipexperience@nissan.com.mx">membershipexperience@nissan.com.mx</a></p>'

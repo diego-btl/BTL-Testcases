@@ -1,0 +1,51 @@
+testmo:
+  case_id: 2818
+  folder_id: 429
+  project_id: 2
+  folder_path: old-deprecated/ccs2/multi-user-vehicle-status-check
+  folder_name_ui: Multi-user Vehicle status check
+  created_at: '2023-09-08 16:51:36.362873'
+  updated_at: '2026-01-06 17:49:10.949265'
+  last_sync: '2026-01-30T18:21:07.471744Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/2818
+metadata:
+  name: MIL description - Recall
+  priority: 13
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: 'User has a MIL status indicator active<br />
+
+    User is a PRIMARY_DRIVER or SHARED_DRIVER (to be tested for both for AVK2)'
+  steps:
+  - column_name: custom_steps
+    id: 3183
+    case_id: 2818
+    text1: '1. Recall data returned (RECALL or SERVICE type)<br />
+
+      2. Tap on MIL status card<br />
+
+      3. Tap on Active Recall<br />
+
+      4. Tap on Recall/Service Campaign<br />
+
+      5. Tap on Book a Service'
+    text2: null
+    text3: '1. User should see MIL status card with secondary text containing MIL
+      name - if there are multiple MIL, will also show ''+# more''<br />
+
+      2. User should see Vehicle Status screen with MIL tab<br />
+
+      3. User should see Open Campaigns screen with Recall and Service Campaigns<br
+      />
+
+      4. User is able view Recall Campaign Information for both campaign types<br
+      />
+
+      User should see data corresponding to the response<br />
+
+      5. User should enter into Book a Service flow as above'
+    text4: null
+    display_order: 1

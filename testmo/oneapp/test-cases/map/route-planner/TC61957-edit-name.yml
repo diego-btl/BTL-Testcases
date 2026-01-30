@@ -1,0 +1,42 @@
+testmo:
+  case_id: 61957
+  folder_id: 101
+  project_id: 2
+  folder_path: map/route-planner
+  folder_name_ui: Route Planner
+  created_at: '2025-11-10 17:57:58.588863'
+  updated_at: '2025-12-02 19:33:09.176461'
+  last_sync: '2026-01-30T18:21:05.432958Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/61957
+metadata:
+  name: Edit Name
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>User is in the <strong>Create Route</strong> screen</li><li>The
+    user selects an <code>EV</code> or <code>EVAVK2</code> vehicles</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 95306
+    case_id: 61957
+    text1: <ol><li>Edit <strong>Name</strong> field</li></ol>
+    text2: null
+    text3: <ul><li>User should see the name pre-filled with <code>Trip 1</code></li><li>User
+      should be able to edit the name field</li><li>The user shouldn't be able to
+      type special character</li><li>The user shouldn't be able to type more than
+      36 characters</li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 95307
+    case_id: 61957
+    text1: <ol><li>Edit <strong>Name</strong> field</li><li>Click over <code>DONE</code>
+      to save the changes</li></ol>
+    text2: null
+    text3: <ul><li>The changes should apply to the fields</li><li>The user shouldn't
+      be able to edit it anymore if the <code>DONE</code> button is clicked</li></ul>
+    text4: null
+    display_order: 2

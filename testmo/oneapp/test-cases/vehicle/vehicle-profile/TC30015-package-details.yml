@@ -1,0 +1,31 @@
+testmo:
+  case_id: 30015
+  folder_id: 90
+  project_id: 2
+  folder_path: vehicle/vehicle-profile
+  folder_name_ui: Vehicle Profile
+  created_at: '2025-01-21 17:11:01.149637'
+  updated_at: '2025-10-10 14:52:52.095890'
+  last_sync: '2026-01-30T18:21:06.399102Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/30015
+metadata:
+  name: Package Details
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is on the Package Info screen and has a vehicle with at least
+    one package</p>
+  steps:
+  - column_name: custom_steps
+    id: 48897
+    case_id: 30015
+    text1: <p>1. Tap Package Details<br />2. Tap a dropdown arrow</p>
+    text2: null
+    text3: <p>1. User should see the Package Details screen with the subscription
+      packages listed<br />2. User should be able to expand the package details. Multiple
+      dropdowns can be open at the same time</p>
+    text4: null
+    display_order: 1

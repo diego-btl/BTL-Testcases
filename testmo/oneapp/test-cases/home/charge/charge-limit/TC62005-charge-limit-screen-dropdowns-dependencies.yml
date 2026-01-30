@@ -1,0 +1,58 @@
+testmo:
+  case_id: 62005
+  folder_id: 6780
+  project_id: 2
+  folder_path: home/charge/charge-limit
+  folder_name_ui: Charge Limit
+  created_at: '2025-11-16 22:53:46.545731'
+  updated_at: '2025-12-02 22:11:28.750895'
+  last_sync: '2026-01-30T18:21:05.172175Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/62005
+metadata:
+  name: Charge Limit screen - Dropdowns Dependencies
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has an EV AVK2 vehicle</p><p><code>EnableChargeLimit</code>
+    FF is true</p><p>User is on the Charge Limit screen</p>
+  steps:
+  - column_name: custom_steps
+    id: 95541
+    case_id: 62005
+    text1: <p>1. Set the <strong>Charge Notification Settings</strong> to any value
+      by selecting it from the dropdown</p><p>2. Tap outside the dropdown</p>
+    text2: null
+    text3: <p>The selected value is set and displayed in the field</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 95542
+    case_id: 62005
+    text1: <p>Tap the <strong>Notify at</strong> dropdown </p>
+    text2: null
+    text3: <p>The maximum value available in the <strong>Notify at</strong> picker
+      should be limited to my current charge limit setting</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 95543
+    case_id: 62005
+    text1: <p>1. Set the <strong>Notify at</strong> to 95 by selecting it from the
+      dropdown</p><p>2. Tap outside the dropdown</p>
+    text2: null
+    text3: <p>The selected value is set and displayed in the field</p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 95544
+    case_id: 62005
+    text1: <p>1. Tap the <strong>Charge Limit Setting</strong> dropdown </p><p>2.
+      Select 90 value from the dropdown</p>
+    text2: null
+    text3: <p>The charge notification value is automatically updated to match the
+      charge limit value</p>
+    text4: null
+    display_order: 4

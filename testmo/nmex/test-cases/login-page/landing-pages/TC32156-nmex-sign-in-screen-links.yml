@@ -1,0 +1,52 @@
+testmo:
+  case_id: 32156
+  folder_id: 4141
+  project_id: 6
+  folder_path: login-page/landing-pages
+  folder_name_ui: Landing Pages
+  created_at: '2025-04-01 17:50:43.410382'
+  updated_at: '2025-04-07 15:22:19.773473'
+  last_sync: '2026-01-30T18:20:46.027740Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/32156
+metadata:
+  name: NMEX - Sign in screen links
+  priority: 12
+  type: functional
+  status: active
+  estimate: 9180000000
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>App is fresh installed or cache cleared</li><li>User is already
+    on the <code>Login</code> page</li><li>User has never logged into the app</li></ul><p> </p><p><strong>Note</strong>
+    - <code>Do Not Sell My Personal Information</code> Link removed from NMEX</p>
+  steps:
+  - column_name: custom_steps
+    id: 52538
+    case_id: 32156
+    text1: <p>Tap on the <code>Olvide mi Contraseña</code> link</p><p>Return to the
+      app and tap on <code>Privacidad y Términos</code> </p><p>Tap on <code>Política
+      de Privacidad</code></p><p>Tap on the top right back button</p><p>Tap on  <code>Privacidad
+      y Términos</code> and select <code>Términos de Servicio</code></p><ul><li>Tap
+      on the top right back button to return to the Login page</li><li>Tap on  <code>Privacidad
+      y Términos</code> and select <code>Cancel</code></li></ul><p>Return to the app
+      and tap on the <code>Back</code> button, located at the top left of the app</p><p>Login
+      to the app and navigate into Settings</p><p>Tap on <code>Política de Privacidad</code></p><p>Tap
+      on <code>Términos de Servicio</code> </p>
+    text2: null
+    text3: '<p>The app should open an external browser page, and navigate the user
+      to the proper location</p><p>A half screen menu should appear from the bottom
+      of the page with 4 items:</p><ul><li>Política de Privacidad</li><li>Términos
+      de Servicio</li><li>Cancelar</li></ul><p><strong>Note</strong> - Do Not Sell
+      My Personal Information Link removed from NCI</p><p>An external webview is  displayed
+      on a browser directing to  Privacy Policy website.<br />Note:  IOS users are
+      able to return using back arrow on top left corner, whereas Android users need
+      to tap on device back button to return to the app)</p><p>User should be driven
+      back to the Login screen</p><p>A webview should be displayed with a title that
+      says "Términos de Servicio" </p><p>The half screen modal should be dismissed</p><p>The
+      user should be driven to the Landing screen</p><p>Legal section is  displayed
+      with below cards</p><ul><li>Términos de Servicio</li><li>Política de Privacidad</li></ul><p>A
+      webview should be displayed with a title that says "Política de Privacidad"</p><p>A
+      webview should be displayed with a title that says "Terms of Service"</p>'
+    text4: null
+    display_order: 1

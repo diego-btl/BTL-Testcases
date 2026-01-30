@@ -1,0 +1,42 @@
+testmo:
+  case_id: 29930
+  folder_id: 73
+  project_id: 2
+  folder_path: push-notifications
+  folder_name_ui: Push Notifications
+  created_at: '2025-01-13 19:20:46.506612'
+  updated_at: '2025-09-19 21:19:32.039976'
+  last_sync: '2026-01-30T18:21:06.523962Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/29930
+metadata:
+  name: Push Notification Registration - First Login Success
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<ol><li>Feature Flag: <code>EnableNewMutationForPushNotificationRegistration</code><ol><li>Enabled:
+    <code>true</code> --&gt; <code>RegisterDeviceForPushNotifications</code> endpoint</li></ol></li><li>No
+    token is cached (e.g., clean installation).</li></ol><p><br /> </p>'
+  steps:
+  - column_name: custom_steps
+    id: 48796
+    case_id: 29930
+    text1: <p>Login to app</p>
+    text2: null
+    text3: "<p>Verify <code>RegisterDeviceForPushNotifications</code> call is made.</p><pre><code\
+      \ class=\"editor-plain language-plain code-block\">Example response:\n{\n  \"\
+      data\": {\n    \"registerDeviceForPushNotifications\": {\n      \"__typename\"\
+      : \"GeneralMessage\",\n      \"message\": \"Device Registered successfully\"\
+      \n    }\n  }\n}</code></pre>"
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 48842
+    case_id: 29930
+    text1: <p>Close the app and reopen</p>
+    text2: null
+    text3: <p>There shouldn't be any additional call to <code>RegisterDeviceForPushNotifications</code></p>
+    text4: null
+    display_order: 2

@@ -1,0 +1,28 @@
+testmo:
+  case_id: 30081
+  folder_id: 3873
+  project_id: 5
+  folder_path: landing-page
+  folder_name_ui: Landing Page
+  created_at: '2025-01-27 08:27:02.342370'
+  updated_at: null
+  last_sync: '2026-01-30T18:20:38.184980Z'
+  url: https://bethinklabs.testmo.net/repositories/5/cases/30081
+metadata:
+  name: Background Video
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  steps:
+  - column_name: custom_steps
+    id: 49000
+    case_id: 30081
+    text1: null
+    text2: null
+    text3: <p>User should <strong>NOT</strong> see a background video playing. It
+      should just be a plain black background</p>
+    text4: null
+    display_order: 1

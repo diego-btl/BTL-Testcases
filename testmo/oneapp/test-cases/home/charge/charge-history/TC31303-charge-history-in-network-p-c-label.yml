@@ -1,0 +1,47 @@
+testmo:
+  case_id: 31303
+  folder_id: 2443
+  project_id: 2
+  folder_path: home/charge/charge-history
+  folder_name_ui: Charge History
+  created_at: '2025-03-14 19:45:08.496382'
+  updated_at: '2025-12-02 22:23:46.349677'
+  last_sync: '2026-01-30T18:21:06.265453Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/31303
+metadata:
+  name: Charge History - In-network - "P&C" label
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<p>NissanPayOrderHistory API: "sessionType": "PLUG_AND_CHARGE"</p><p>User
+    is on the Manage EV screen</p>'
+  steps:
+  - column_name: custom_steps
+    id: 95462
+    case_id: 31303
+    text1: <p>Tap the 'Charge History' card</p>
+    text2: null
+    text3: <p>The NissanPayOrderHistory API is triggered</p><p>The loading state is
+      displayed</p><p>User is navigated to the Charge History screen</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 51971
+    case_id: 31303
+    text1: <p>Scroll to the card that correlates with the items.sessionType "PLUG_AND_CHARGE"</p>
+    text2: null
+    text3: <p>P&amp;C label is displayed in the top right corner of the card</p><p>*same
+      in French - "P&amp;C"</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 51972
+    case_id: 31303
+    text1: <p>Scroll to the card that correlates with the items.sessionType =! "PLUG_AND_CHARGE"</p>
+    text2: null
+    text3: <p>P&amp;C label is NOT displayed in the top right corner of the card</p>
+    text4: null
+    display_order: 3

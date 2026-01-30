@@ -1,0 +1,50 @@
+testmo:
+  case_id: 61984
+  folder_id: 105
+  project_id: 2
+  folder_path: old-deprecated
+  folder_name_ui: Old / Deprecated
+  created_at: '2025-11-11 21:18:48.953156'
+  updated_at: '2025-12-16 19:35:18.988596'
+  last_sync: '2026-01-30T18:21:05.338849Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/61984
+metadata:
+  name: Verify the Health report card is not displayed under Notification Preferences
+    screen
+  priority: 3
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  steps:
+  - column_name: custom_steps
+    id: 95434
+    case_id: 61984
+    text1: <p>Launch Demo mode &gt; Select LEAF Demo &gt; Tap on <strong>Envelop </strong>icon<strong>
+      </strong>&gt; <strong>Gear</strong> icon &gt; Scroll down to <code>General Notifications</code>
+      card</p>
+    text2: null
+    text3: <p>Verify <code>Vehicle Health Report</code> card is not shown</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 95435
+    case_id: 61984
+    text1: <p>Launch Demo mode &gt; Select Rogue Platinum Demo &gt; Tap on <strong>Envelop
+      </strong>icon<strong> </strong>&gt; <strong>Gear</strong> icon &gt; Scroll down
+      to <code>General Notifications</code> card</p>
+    text2: null
+    text3: <p>Verify <code>Vehicle Health Report</code> card is not shown</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 95436
+    case_id: 61984
+    text1: <p>Launch Demo mode &gt; Select Rogue SV Demo&gt; Tap on <strong>Envelop
+      </strong>icon<strong> </strong>&gt; <strong>Gear</strong> icon &gt; Scroll down
+      to <code>General Notifications</code> card</p>
+    text2: null
+    text3: <p>Verify <code>Vehicle Health Report</code> card is not shown</p>
+    text4: null
+    display_order: 3

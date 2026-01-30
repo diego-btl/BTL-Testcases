@@ -1,0 +1,56 @@
+testmo:
+  case_id: 1588
+  folder_id: 101
+  project_id: 2
+  folder_path: map/route-planner
+  folder_name_ui: Route Planner
+  created_at: '2023-08-28 20:13:24.629001'
+  updated_at: '2025-12-02 21:57:59.311457'
+  last_sync: '2026-01-30T18:21:07.973254Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/1588
+metadata:
+  name: Origin location
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>User is on <strong>Create a Route</strong> screen</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 1953
+    case_id: 1588
+    text1: <ol><li>Vehicle location is being returned</li><li>Tap on origin field
+      and tap Use Vehicle Location</li></ol>
+    text2: null
+    text3: <ul><li>User should see the origin field say <code>Your Vehicle's Location</code></li><li>User
+      should see search screen with Use Vehicle Location option, origin field shows
+      <code>Your Vehicle's Location</code></li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 95577
+    case_id: 1588
+    text1: <ol><li>Vehicle location is not being returned but user location is available</li><li>Tap
+      on origin field and tap Use Current Location</li></ol>
+    text2: null
+    text3: <ul><li>User should see the origin field say <code>Your Current Location</code></li><li>User
+      should see search screen with Use Current Location option, origin field shows
+      <code>Your Current Location</code></li></ul>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 95578
+    case_id: 1588
+    text1: <ol><li>Vehicle location and user location are not available</li></ol>
+    text2: null
+    text3: <ul><li>The origin field should be blank</li></ul>
+    text4: null
+    display_order: 3
+  notes: "<p>To get the origin location the app it is getting from this API call <strong>VehicleLocation</strong></p><pre><code\
+    \ class=\"editor-plain language-plain code-block\">{\n  \"data\": {\n    \"vehicle\"\
+    : {\n      \"__typename\": \"ElectricVehicle\",\n      \"location\": {\n     \
+    \   \"__typename\": \"VehicleLocation\",\n        \"latitude\": 33.67302101,\n\
+    \        \"longitude\": -117.75786259,\n        \"lastUpdatedAt\": \"2025-12-02T09:03:15.000Z\"\
+    \n      }\n    }\n  }\n}</code></pre>"

@@ -1,0 +1,68 @@
+testmo:
+  case_id: 64827
+  folder_id: 7144
+  project_id: 2
+  folder_path: login-flow/data-anniversary
+  folder_name_ui: Data Anniversary
+  created_at: '2026-01-21 17:02:46.374741'
+  updated_at: null
+  last_sync: '2026-01-30T18:21:03.617917Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/64827
+metadata:
+  name: WIP - Data Anniversary - Interruption Order
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  steps:
+  - column_name: custom_steps
+    id: 102446
+    case_id: 64827
+    text1: <p>Login to the app with VIN meeting all eligibility conditions</p>
+    text2: null
+    text3: '<ul>
+
+      <li>Interruptions appear in the following order (each must be dismissed before
+      advancing):
+
+      <ol>
+
+      <li>What''s New modal</li>
+
+      <li>Lite Account (Complete Profile) - if applicable (NNA only)</li>
+
+      <li>2nd Delivery - NNA only</li>
+
+      <li>PIN code message</li>
+
+      <li>IVI Login</li>
+
+      <li>App Key Features</li>
+
+      <li><strong>Anniversary gift box</strong> (appears LAST)</li>
+
+      </ol>
+
+      </li>
+
+      </ul>'
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 102447
+    case_id: 64827
+    text1: <p>Dismiss each interruption one by one</p>
+    text2: null
+    text3: '<ul>
+
+      <li>Each view persists until dismissed</li>
+
+      <li>Next view appears only after previous is dismissed</li>
+
+      <li>Anniversary gift box appears LAST after all others are dismissed</li>
+
+      </ul>'
+    text4: null
+    display_order: 2

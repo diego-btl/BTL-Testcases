@@ -1,0 +1,41 @@
+testmo:
+  case_id: 2688
+  folder_id: 4170
+  project_id: 2
+  folder_path: home/climate/avk2
+  folder_name_ui: AVK2
+  created_at: '2023-09-07 21:10:07.747105'
+  updated_at: '2024-10-17 17:57:34.769274'
+  last_sync: '2026-01-30T18:21:07.769131Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/2688
+metadata:
+  name: Climate Details - Make Default - Failure
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: "<p>AVK2 vehicle<br />Climate Details<br />Engine OFF</p><p> </p><p><br\
+    \ />The following response fails climate defaults.</p><pre><code class=\"editor-plain\
+    \ language-plain code-block\">{\n    \"data\": {\n        \"engineStart\": {\n\
+    \            \"__typename\": \"TelematicsResponse\",\n            \"serviceRequestId\"\
+    : \"9c08fa6d-7145-4b11-b2f8-4f64f6142e93\",\n            \"additionalData\": {\n\
+    \                \"__typename\": \"SetClimateDefaultsResponse\",\n           \
+    \     \"success\": false\n            }\n        }\n    }\n}\n </code></pre>"
+  steps:
+  - column_name: custom_steps
+    id: 3054
+    case_id: 2688
+    text1: <ol><li>Modify the HVAC parameters</li><li>Tap on Make Default</li><li>Tap
+      on Turn Climate On</li><li>Start engine request has resolved into a failure
+      or 210 seconds have elapsed since sending the initial command</li></ol>
+    text2: null
+    text3: <ol><li>User should see HVAC parameters change accordingly</li><li>User
+      should see default button disable. Parameters are saved as defaults in cache</li><li>User
+      should see Engine/Climate command initiated - request should have <code>setAsDefault</code>
+      set to true)</li><li>User should see an engine/climate failure toast and another
+      toast saying<br />'Failed to set climate defaults' (5 seconds)<br /><br />Make
+      Default should be enabled again (to be clarified, this is unclear)</li></ol>
+    text4: null
+    display_order: 1

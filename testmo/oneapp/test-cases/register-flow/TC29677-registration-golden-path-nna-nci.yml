@@ -1,0 +1,193 @@
+testmo:
+  case_id: 29677
+  folder_id: 43
+  project_id: 2
+  folder_path: register-flow
+  folder_name_ui: Register Flow
+  created_at: '2024-12-18 19:20:27.453914'
+  updated_at: '2025-10-07 18:37:26.509928'
+  last_sync: '2026-01-30T18:21:06.591496Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/29677
+metadata:
+  name: Registration - Golden Path NNA/NCI*
+  priority: 12
+  type: functional
+  status: active
+  estimate: 600000000
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>The user is already in the <code>First Page</code> of the
+    Registration Flow</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 48283
+    case_id: 29677
+    text1: <p>Enter a valid <code>First Name</code> and <code>Last Name</code> using
+      only alphabetical characters</p>
+    text2: null
+    text3: <p>The fields display the input data without issues</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 48284
+    case_id: 29677
+    text1: <p>Enter any email on the <code>Email</code> field </p>
+    text2: null
+    text3: <p>The <code>Email</code> field will show a red background and display
+      a <code>* Invalid Email Address</code> error message until the input matches
+      a valid email - for Android</p><p>For ios, if you don't fill the email field
+      or enter invalid email address, when you move away from the text box, you will
+      see the error message. </p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 48285
+    case_id: 29677
+    text1: <p>Enter the same email used in the previous step on the <code>Confirm
+      Email</code> field</p>
+    text2: null
+    text3: <ul><li>The <code>Confirm Email</code> field will show a red background
+      and display a <code>* Email addresses do not match</code> error message until
+      the input matches a the value input in the previous step - for android</li><li>For
+      ios, For ios, if you don't fill the confirm email field or enter invalid email
+      address, when you move away from the text box, you will see the error message.</li><li>The
+      <code>NEXT</code> button at the bottom, remains inactive until all the previous
+      validations are completed</li></ul>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 48286
+    case_id: 29677
+    text1: <p>Tap on the <code>NEXT</code> button</p>
+    text2: null
+    text3: <p>The user is navigated to the Second Page of the Registration flow</p>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 48287
+    case_id: 29677
+    text1: <ul><li>Enter any address on the <code>Address</code> field</li><li>Enter
+      any city on the <code>City</code> field</li><li>Select any state from the <code>State</code>
+      selector</li></ul>
+    text2: null
+    text3: <p>The fields display the input data without issues</p>
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 48288
+    case_id: 29677
+    text1: <p>Enter any valid Zip Code on the <code>ZIP Code</code> field</p>
+    text2: null
+    text3: <ul><li>The device keyboard should only display numbers</li><li>The <code>ZIP
+      Code</code> field will show a red background and display a <code>* Invalid ZIP
+      code</code> error message until the input has 5 digits  - for android</li><li>for
+      ios, if you don't enter 5 digits, when you move away from the text box, you
+      will see the error message. </li></ul>
+    text4: null
+    display_order: 6
+  - column_name: custom_steps
+    id: 48289
+    case_id: 29677
+    text1: <p>Enter any valid phone number on the <code>Phone Number</code> field</p>
+    text2: null
+    text3: <ul><li>The device keyboard should only display numbers</li><li>The <code>Phone
+      Number</code> field will show a red background and display a <code>* Invalid
+      phone number</code> error message until the input has 10 digits - for android</li><li>For
+      ios, if you don't  enter 10 digits,when you move away from the text box, you
+      will see the error message. </li></ul>
+    text4: null
+    display_order: 7
+  - column_name: custom_steps
+    id: 48290
+    case_id: 29677
+    text1: <p>Select any carrier from the <code>Carrier</code> selector</p>
+    text2: null
+    text3: <ul><li>The selected carrier should be displayed on the <code>Carrier</code>
+      field</li><li>The <code>NEXT</code> button at the bottom, remains inactive until
+      all the previous validations are completed</li></ul>
+    text4: null
+    display_order: 8
+  - column_name: custom_steps
+    id: 48291
+    case_id: 29677
+    text1: <p>Tap on the <code>NEXT</code> button</p>
+    text2: null
+    text3: <p>The user is navigated to the Third Page of the Registration flow</p>
+    text4: null
+    display_order: 9
+  - column_name: custom_steps
+    id: 48292
+    case_id: 29677
+    text1: <p>Enter any valid password on the <code>Password</code> field, follow
+      up the password rules displayed on the screen</p>
+    text2: null
+    text3: <p>The <code>Password</code> field will show a red background until the
+      password rules are met - for android</p><p>for ios -  if you don't fill the
+      password field  or if you don't follow the password rules,  when you move away
+      from the text box, (you can't move forward and create button is not activated)</p>
+    text4: null
+    display_order: 10
+  - column_name: custom_steps
+    id: 48293
+    case_id: 29677
+    text1: <p>Enter the same password used on the previous step on the <code>Confirm
+      Password</code> field</p>
+    text2: null
+    text3: <p>The <code>Confirm Password</code> field will show a red background and
+      display a <code>* Passwords do not match</code> error message until the input
+      matches a the value input in the previous step -for android</p><p>for ios -
+      if you don't fill the confirm password field (create account button is not activated).
+      if you enter the wrong password, when you move away from the text box, you will
+      see the error message. </p>
+    text4: null
+    display_order: 11
+  - column_name: custom_steps
+    id: 48294
+    case_id: 29677
+    text1: <p>Tap on both of the password fields show / hide icons</p>
+    text2: null
+    text3: <p>The switch should show / hide the text on the fields</p>
+    text4: null
+    display_order: 12
+  - column_name: custom_steps
+    id: 48295
+    case_id: 29677
+    text1: <p>Mark the <code>I have read and accept the Terms of Service, the Privacy
+      Policy, and the Data Privacy Policy</code> checkmark</p>
+    text2: null
+    text3: <ul><li>The checkmark is selected or deselected depending of the user interaction</li><li>The
+      <code>CREATE ACCOUNT</code> button at the bottom, remains inactive until all
+      the previous validations are completed</li></ul>
+    text4: null
+    display_order: 13
+  - column_name: custom_steps
+    id: 48296
+    case_id: 29677
+    text1: <p>Click on all the links in the  <code>I have read and accept the Terms
+      of Service, the Privacy Policy, and the Data Privacy Policy (Removed from NCI)</code>
+      section</p>
+    text2: null
+    text3: <p>The three links are displayed in a native webview inside the app</p>
+    text4: null
+    display_order: 14
+  - column_name: custom_steps
+    id: 48297
+    case_id: 29677
+    text1: <p>Click on the <code>CREATE ACCOUNT</code> button</p>
+    text2: null
+    text3: <ul><li>The user is driven to the Login page</li><li>The email used in
+      the Registration flow should be prefilled in the Login Email field</li></ul>
+    text4: null
+    display_order: 15
+  - column_name: custom_steps
+    id: 48298
+    case_id: 29677
+    text1: <p>Switch the device to dark mode and repeat previous steps again</p>
+    text2: null
+    text3: <p>Behaviour is consistent</p>
+    text4: null
+    display_order: 16
+  notes: '<ul><li>The <code>Data Privacy Policy</code> Link and Webview are removed
+    from NCI apps</li><li>Automation: Links in Step 14 cannot be clicked individually
+    as they''re contained within one single UI copy element. The rest is automated.</li></ul>'

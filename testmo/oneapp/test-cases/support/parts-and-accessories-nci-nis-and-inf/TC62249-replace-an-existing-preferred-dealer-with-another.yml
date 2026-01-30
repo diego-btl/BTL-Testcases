@@ -1,0 +1,37 @@
+testmo:
+  case_id: 62249
+  folder_id: 6822
+  project_id: 2
+  folder_path: support/parts-and-accessories-nci-nis-and-inf
+  folder_name_ui: Parts and Accessories - NCI NIS and INF
+  created_at: '2026-01-06 16:02:22.581386'
+  updated_at: '2026-01-19 12:18:49.190621'
+  last_sync: '2026-01-30T18:21:03.664422Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/62249
+metadata:
+  name: Replace an existing preferred dealer with another one (with or without hash
+    id)
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  steps:
+  - column_name: custom_steps
+    id: 97201
+    case_id: 62249
+    text1: <ol><li>Log into an account with a preferred dealer. for e.g. nci126@nissancanada.com/2023Ariya</li><li>Go
+      to Support&gt;Parts and Accessories</li><li>Verify the location showing on the
+      webpage is the one that shows under Find a dealer as the preferred dealer</li><li>Now
+      on Find a dealer screen,</li><li>Put any other postal code, and select a different
+      dealer</li><li>Once this dealer is set, and you see the <code>VehiclePreferredDealer</code>
+      refetched</li><li>Go to Vehicle&gt;Parts and Accessories OR Support&gt;Parts
+      and Accessories</li></ol>
+    text2: null
+    text3: '<p>EITHER </p><p>The new dealer location will show (this means that dealer
+      has a hashid)</p><p>OR </p><p>The nearest Canadian dealer location will show
+      (this means that the dealer didn''t have a hash id)</p><p>NOTE: currently, the
+      old dealer''s location still shows - this is known Nissan issue</p>'
+    text4: null
+    display_order: 1

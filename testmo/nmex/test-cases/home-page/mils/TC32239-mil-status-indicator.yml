@@ -1,0 +1,29 @@
+testmo:
+  case_id: 32239
+  folder_id: 4148
+  project_id: 6
+  folder_path: home-page/mils
+  folder_name_ui: MILs
+  created_at: '2025-04-01 17:50:44.017004'
+  updated_at: null
+  last_sync: '2026-01-30T18:20:45.807635Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/32239
+metadata:
+  name: MIL status indicator
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has a MIL status indictor active</p>
+  steps:
+  - column_name: custom_steps
+    id: 52619
+    case_id: 32239
+    text1: <p>1. MIL data returned<br />2. Tap on MIL status indicator</p>
+    text2: null
+    text3: <p>1. User should see MIL indicator on vehicle image<br />2. User should
+      see Vehicle Status screen with MIL tab showing MIL statuses</p>
+    text4: null
+    display_order: 1

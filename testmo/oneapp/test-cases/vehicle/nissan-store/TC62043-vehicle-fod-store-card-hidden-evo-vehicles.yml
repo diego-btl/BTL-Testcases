@@ -1,0 +1,38 @@
+testmo:
+  case_id: 62043
+  folder_id: 6784
+  project_id: 2
+  folder_path: vehicle/nissan-store
+  folder_name_ui: Nissan Store
+  created_at: '2025-11-28 20:25:21.215881'
+  updated_at: '2025-11-28 20:29:17.346333'
+  last_sync: '2026-01-30T18:21:05.026755Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/62043
+metadata:
+  name: 'Vehicle: FOD Store Card Hidden - EVO Vehicles'
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>User logged in with EVO Vehicles</li><li><code>vehicle.capabilities.status
+    =! ENROLLED</code></li><li>BSM FF = true </li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 95749
+    case_id: 62043
+    text1: <p>Log into the app and go to <strong>Vehicle</strong> screen &gt; Scroll
+      to the bottom of the screen</p>
+    text2: null
+    text3: <p>Verify Nissan/Infiniti store card is not shown</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 95751
+    case_id: 62043
+    text1: <p>Go to the <strong>Vehicle</strong> <strong>Profile</strong> screen</p>
+    text2: null
+    text3: <p>Verify that the package information card is not shown </p>
+    text4: null
+    display_order: 2

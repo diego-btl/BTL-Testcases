@@ -1,0 +1,94 @@
+testmo:
+  case_id: 772
+  folder_id: 101
+  project_id: 2
+  folder_path: map/route-planner
+  folder_name_ui: Route Planner
+  created_at: '2023-08-01 23:08:22.485752'
+  updated_at: '2025-12-12 16:56:23.102013'
+  last_sync: '2026-01-30T18:21:08.771247Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/772
+metadata:
+  name: Add stops - Estimate Route*
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>User is in the <strong>Estimate Route*</strong> screen</li><li>The
+    user selects an <code>EV</code> or <code>EVAVK2</code> vehicles</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 941
+    case_id: 772
+    text1: <ol><li>Tap the <code>+ADD A STOP</code> button</li></ol>
+    text2: null
+    text3: <ul><li>User should be redirected to the screen <code>Add a Stop</code></li><li><strong>VehicleJourneys</strong>
+      and <strong>VehiclePOIDestinations</strong> APIs are triggered</li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 95580
+    case_id: 772
+    text1: <ol><li>Tap the <code>+ADD A STOP</code> button</li><li>The user select
+      one stop from the POI</li><li>Select one result and click <code>+ADD A STOP</code>
+      button</li></ol>
+    text2: null
+    text3: <ul><li>User should see a <i>destination</i> field added under the last
+      one</li><li>The list of results show in the UI</li><li>The user is able to add
+      the stop selected</li><li><strong>VehicleEVWaypoints</strong> API is triggered</li></ul>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 95667
+    case_id: 772
+    text1: '<ol><li>Tap the <code>+ADD A STOP</code> button</li><li>Tap the search
+      bar</li><li>Enter a new stop (IE: Santa Monica)</li><li>Select one result and
+      click <code>+ADD A STOP</code> button</li></ol>'
+    text2: null
+    text3: <ul><li>User should see a <i>destination</i> field added under the last
+      one</li><li>The list of results show in the UI</li><li>The user is able to add
+      the stop selected</li><li><strong>LocationDetails</strong> and <strong>VehicleEVWaypoints</strong>
+      APIs are triggered</li></ul>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 95784
+    case_id: 772
+    text1: '<ol><li>Tap the <code>+ADD A STOP</code> button</li><li>Tap the search
+      bar</li><li>Enter a new stop (IE: Santa Monica)</li><li>Select one result and
+      click <code>+ADD A STOP</code> button (Error) - Add a <strong>Breakpoint the
+      VehicleEVWaypoints API</strong></li></ol>'
+    text2: null
+    text3: <ul><li>No stop is added to the Route</li><li>The UI still showing the
+      stop</li><li>The card still showing the <code>+ ADD A STOP</code> button as
+      it wasn't added to the Route</li><li>A toast shows like a warning in the FE<ul><li><code>Something
+      Went wrong - Something went wrong with the route planner. Please try again</code></li></ul></li></ul>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 96242
+    case_id: 772
+    text1: <ol><li>Tap the <code>+ADD A STOP</code> button</li><li>Tap in any <strong>POI</strong></li><li>Add
+      a <strong>Breakpoint the VehicleEVWaypoints API</strong></li></ol>
+    text2: null
+    text3: <ul><li>No stop is added to the Route</li><li>The UI still showing the
+      stop</li><li>The card still showing the <code>+ ADD A STOP</code> button as
+      it wasn't added to the Route</li><li>A toast shows like a warning in the FE<ul><li><code>Something
+      Went wrong - Something went wrong with the route planner. Please try again</code></li></ul></li></ul>
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 95668
+    case_id: 772
+    text1: <ol><li>Tap the <code>+ADD A STOP</code> button</li><li>The user enter
+      the maximum number of stops <strong>(EV -4/EV2 - 6)</strong></li></ol>
+    text2: null
+    text3: <ul><li>User should see <code>+ADD A STOP</code> button become enable when
+      there are <strong>(EV -4/EV2 - 6)</strong> stops (<i><u>excluding</u></i> <strong>Vehicle
+      Location</strong> and <strong>Destination</strong> fields)</li><li>The user
+      should see the button disable for <code>+ADD A STOP</code> for any new search
+      that is made or any POI chips selected in the <strong>Add a Stop</strong> screen</li></ul>
+    text4: null
+    display_order: 6

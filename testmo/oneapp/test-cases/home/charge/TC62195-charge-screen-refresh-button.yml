@@ -1,0 +1,37 @@
+testmo:
+  case_id: 62195
+  folder_id: 66
+  project_id: 2
+  folder_path: home/charge
+  folder_name_ui: Charge
+  created_at: '2025-12-19 16:58:54.699630'
+  updated_at: '2025-12-19 19:14:01.640255'
+  last_sync: '2026-01-30T18:21:04.349450Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/62195
+metadata:
+  name: Charge Screen - Refresh Button
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has an EV</p><p>User is on the home screen</p>
+  steps:
+  - column_name: custom_steps
+    id: 96846
+    case_id: 62195
+    text1: <p>Tap on the Charge card</p>
+    text2: null
+    text3: <p>User should be navigated to the charge screen</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 96847
+    case_id: 62195
+    text1: <p>Tap on Refresh</p>
+    text2: null
+    text3: <p>User should see a loading state while the following calls are triggered
+      in the background</p><ul><li>RefreshBatteryStatus</li><li>VehicleBatteryStatus</li><li>AccountStatus</li></ul>
+    text4: null
+    display_order: 2

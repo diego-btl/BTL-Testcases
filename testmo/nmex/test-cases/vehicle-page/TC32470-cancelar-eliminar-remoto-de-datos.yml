@@ -1,0 +1,66 @@
+testmo:
+  case_id: 32470
+  folder_id: 4086
+  project_id: 6
+  folder_path: vehicle-page
+  folder_name_ui: Vehicle Page
+  created_at: '2025-04-01 19:06:14.234890'
+  updated_at: '2025-04-02 20:06:36.348262'
+  last_sync: '2026-01-30T18:20:45.333570Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/32470
+metadata:
+  name: Cancelar Eliminar Remoto de Datos
+  priority: 3
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is logged-in and navigate to Vehicle tab</p>
+  steps:
+  - column_name: custom_steps
+    id: 52893
+    case_id: 32470
+    text1: <p>Tap on <code>Vehículo</code> option</p>
+    text2: null
+    text3: <p>Vehicle  Profile sheet is displayed</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 52894
+    case_id: 32470
+    text1: <p>Tap on <code>Borrado Remoto de Datos</code> card</p>
+    text2: null
+    text3: <p><code>Borrado Remoto de Datos</code> screen is displayed</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 52895
+    case_id: 32470
+    text1: <p>Tap on <code>Eliminar Datos</code> button<br /> </p>
+    text2: null
+    text3: '<p>User should see a verification modal alert as :<br /> Title:  Eliminar
+      datos del vehículo?</p><p>Body: ¿Estás seguro de que quieres eliminar los datos
+      de tu vehículo? Esta acción es permanente y una vez iniciada, no se puede detener
+      ni deshacer.</p><p>Button: No</p><p>Button: Yes ( background highlighted in
+      blue)</p>'
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 52896
+    case_id: 32470
+    text1: <p>Tap on No button</p>
+    text2: null
+    text3: <p>User should see modal alert dismiss itself and <code>Eliminar Datos</code>
+      screen is displayed</p>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 52897
+    case_id: 32470
+    text1: <p>Verify step1 and 2 in Demo Mode</p>
+    text2: null
+    text3: '<p>User should see a modal alert as:</p><p><br />Title: Modo Demostración</p><p>Body:
+      No disponible en modo demostración.</p><p>Button: OK</p>'
+    text4: null
+    display_order: 5

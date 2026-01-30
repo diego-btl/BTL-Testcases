@@ -1,0 +1,33 @@
+testmo:
+  case_id: 1452
+  folder_id: 6809
+  project_id: 2
+  folder_path: demo-mode/home/alerts
+  folder_name_ui: Alerts
+  created_at: '2023-08-28 20:13:22.295303'
+  updated_at: '2025-12-18 17:02:22.016831'
+  last_sync: '2026-01-30T18:21:08.256383Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/1452
+metadata:
+  name: Speed Alert
+  priority: 3
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  steps:
+  - column_name: custom_steps
+    id: 1820
+    case_id: 1452
+    text1: <p>1. Tap on a speed alert<br />2. Interact with the speed slider<br />3.
+      Tap on 'Display Alert in Vehicle' checkbox<br />4. Tap the save changes or delete
+      alert button</p>
+    text2: null
+    text3: <p>1. User should see the edit speed alert sheet<br />2. User should be
+      able to edit the speed<br />3. User should be able to  check/uncheck 'Display
+      Alert in Vehicle' checkbox<br />4. User should see the demo mode alert modal</p>
+    text4: null
+    display_order: 1
+  notes: '<p>Automation: for step 2, using <strong>-</strong> / <strong>+</strong>
+    buttons to edit distance rather than slider (it can''t be retrieved by appium)</p>'

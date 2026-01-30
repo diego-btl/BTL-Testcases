@@ -1,0 +1,48 @@
+testmo:
+  case_id: 30079
+  folder_id: 3766
+  project_id: 5
+  folder_path: settings
+  folder_name_ui: Settings
+  created_at: '2025-01-27 08:19:47.027362'
+  updated_at: '2025-02-18 17:10:40.096418'
+  last_sync: '2026-01-30T18:20:38.189243Z'
+  url: https://bethinklabs.testmo.net/repositories/5/cases/30079
+metadata:
+  name: Sign out
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  steps:
+  - column_name: custom_steps
+    id: 48996
+    case_id: 30079
+    text1: <p>User taps on <code>Sair Do Aplicativo</code></p>
+    text2: null
+    text3: <p>User should see a modal : </p><p>iOS <br /> </p><figure class="image
+      image_resized" style="width:49.51%;"><img src="/attachments/view/3177" alt="3177"
+      /></figure><p>Android - </p><figure class="image image_resized" style="width:56.29%;"><img
+      src="/attachments/view/3498" alt="3498" /></figure>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 48997
+    case_id: 30079
+    text1: <p>User taps <code>Sim</code></p>
+    text2: null
+    text3: <p>They are signed out of the app. Verify in proxyman that their token
+      is revoked. They should land on the <code>Landing Page</code> and not the <code>Login
+      page</code></p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 48998
+    case_id: 30079
+    text1: <p>User taps <code>Nao</code></p>
+    text2: null
+    text3: <p>The modal closes and user stays signed in</p>
+    text4: null
+    display_order: 3

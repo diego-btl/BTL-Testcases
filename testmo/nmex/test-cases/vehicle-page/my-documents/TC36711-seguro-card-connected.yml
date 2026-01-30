@@ -1,0 +1,65 @@
+testmo:
+  case_id: 36711
+  folder_id: 4698
+  project_id: 6
+  folder_path: vehicle-page/my-documents
+  folder_name_ui: My Documents
+  created_at: '2025-05-21 17:26:09.285506'
+  updated_at: '2025-08-18 18:07:19.039354'
+  last_sync: '2026-01-30T18:20:45.257281Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/36711
+metadata:
+  name: Seguro card - CONNECTED
+  priority: 3
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>Have an account with the next vehicles:</p><ul><li>Connected</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 61531
+    case_id: 36711
+    text1: <ol><li>Login into the app</li><li>Go to <code>Vehicle</code> screen</li><li>Go
+      to <code>Guantera</code></li><li>Check the card for <code>Seguro</code> under
+      <code>Mis documentos</code></li></ol>
+    text2: null
+    text3: <ul><li>The <code>Seguro</code> card should be showing</li><li>The <code>Seguro</code>
+      card should be showing subtitle</li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 61532
+    case_id: 36711
+    text1: "<ol><li>Login into the app</li><li>Go to <code>Vehicle</code> screen</li><li>Go\
+      \ to <code>Guantera</code></li><li>Check the card for <code>Seguro</code> under\
+      \ <code>Mis documentos</code></li><li>Check the API call &gt; <code>GetVehicleInsurance</code></li></ol><pre><code\
+      \ class=\"editor-json language-json code-block\">{\n  \"data\": {\n    \"vehicle\"\
+      : {\n      \"__typename\": \"AVK2Vehicle\",\n      \"insurance\": null\n   \
+      \ }\n  }\n}</code></pre>"
+    text2: null
+    text3: <ul><li>The text should be displaying <strong>Seguro </strong>and the subtitle:<ul><li><code>Agregar
+      tu seguro</code></li></ul></li></ul>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 61534
+    case_id: 36711
+    text1: <ol><li>Login into the app</li><li>Go to <code>Vehicle</code> screen</li><li>Go
+      to <code>Guantera</code></li><li>Check the card for <code>Seguro</code> under
+      <code>Mis documentos</code><ol><li>The <code>status</code> should be <code>active</code></li></ol></li></ol>
+    text2: null
+    text3: <ul><li>The text should be displaying <strong>Seguro </strong>and the subtitle:<ul><li><code>Vigente
+      hasta DD/MM/YYYY</code></li></ul></li></ul>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 61535
+    case_id: 36711
+    text1: <ol><li>Login into the app</li><li>Check the card for <code>Seguro</code><ol><li>The
+      <code>status</code> should be <code>expired</code></li></ol></li></ol>
+    text2: null
+    text3: <ul><li>The text should be displaying <strong>Seguro </strong>and the subtitle:<ul><li><code>Vencido</code></li></ul></li></ul>
+    text4: null
+    display_order: 4

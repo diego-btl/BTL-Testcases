@@ -1,0 +1,49 @@
+testmo:
+  case_id: 30064
+  folder_id: 99
+  project_id: 2
+  folder_path: map/favorites
+  folder_name_ui: Favorites
+  created_at: '2025-01-24 18:58:23.995499'
+  updated_at: '2025-09-22 15:00:20.859038'
+  last_sync: '2026-01-30T18:21:06.363592Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/30064
+metadata:
+  name: Favourites Limit
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>The user is viewing POI search results and has reached the favorites
+    limit (5)</p>
+  steps:
+  - column_name: custom_steps
+    id: 48957
+    case_id: 30064
+    text1: <p>1. Go to the Maps page<br />2. Search for a POI</p>
+    text2: null
+    text3: <p>POI search results are displayed at the bottom.</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 48958
+    case_id: 30064
+    text1: <p>Tap the heart button on the POI card (x5)</p>
+    text2: null
+    text3: <p>The user should see an error modal indicating that the favorites limit
+      has been reached</p><p><code><strong>Header:</strong> Favorites Limit Reached</code><br
+      /><code><strong>Body:</strong> Looks like you've already added 5 Favorites,
+      please delete one to add another.</code><br /><code><strong>CTA:</strong> Ok</code><br
+      /> </p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 48959
+    case_id: 30064
+    text1: <p>Tap Ok</p>
+    text2: null
+    text3: <p>The user should see the error modal dismiss</p>
+    text4: null
+    display_order: 3

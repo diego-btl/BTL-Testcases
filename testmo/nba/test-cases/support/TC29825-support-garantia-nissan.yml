@@ -1,0 +1,65 @@
+testmo:
+  case_id: 29825
+  folder_id: 3764
+  project_id: 5
+  folder_path: support
+  folder_name_ui: Support
+  created_at: '2024-12-20 15:21:40.308281'
+  updated_at: '2025-02-14 20:38:07.418086'
+  last_sync: '2026-01-30T18:20:38.303985Z'
+  url: https://bethinklabs.testmo.net/repositories/5/cases/29825
+metadata:
+  name: Support - Garantia Nissan
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>The Support page is open</p>
+  steps:
+  - column_name: custom_steps
+    id: 48703
+    case_id: 29825
+    text1: <p><strong>Click on the "Garantia Nissan" card on the Support page.</strong></p>
+    text2: null
+    text3: '<ul><li>The app navigates to the <strong>Warranty Info Screen</strong>,
+      displaying:<ul><li>The header: <strong>"Cobertura de Garantia"</strong>.</li><li>Two
+      cards with warranty details:<ul><li><strong>Card 1:</strong> Versa, Kicks, Sentra,
+      LEAF, and Frontier*</li><li><strong>Card 2:</strong> Frontier (2024+ models).</li></ul></li></ul></li></ul><p><a
+      href="https://www.figma.com/design/n2EEhJfWizVdRx7F2E74p0/MyNissan-%5BBrasil%5D---NBA---iOS?node-id=0-1&amp;t=OaT9Adx6UyC2OpTv-1">Design</a></p>'
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 48936
+    case_id: 29825
+    text1: <p><strong>Verify the layout of the Warranty Info Screen.</strong></p>
+    text2: null
+    text3: '<ul><li>Back button on top left. </li><li>Header: <strong>"Cobertura de
+      Garantia"</strong> is centered at the top.</li><li>Two cards are displayed with
+      the following details:<ul><li><strong>Card 1:</strong><ul><li>Title: "Versa,
+      Kicks, Sentra, LEAF e Frontier*".</li><li>Duration: "3 anos".</li><li>Description:
+      <i>"Garantia Exclusiva Nissan *até ano-modelo 2023"</i>.</li></ul></li><li><strong>Card
+      2:</strong><ul><li>Title: "Frontier a partir de ano-modelo 2024".</li><li>Duration:
+      "6 anos".</li><li>Description: <i>"Garantia Exclusiva Nissan"</i>.</li></ul></li><li><strong>"Saiba
+      Mais Sobre a Garantia Exclusiva Nissan"</strong> link is displayed below the
+      cards.</li></ul></li></ul>'
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 48704
+    case_id: 29825
+    text1: <p>Tap on <code>SAIBA MAIS SOBRE A GARANTIA EXCLUSIVA NISSAN</code></p>
+    text2: null
+    text3: <p>Opens the <strong>warranty</strong> web view using the link from the
+      <code>ContactUs </code><strong>query</strong>.</p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 48937
+    case_id: 29825
+    text1: <p>Tab on the back button </p>
+    text2: null
+    text3: <p>User is navigated back to <code>Cobertura de Garantia </code>screen. </p>
+    text4: null
+    display_order: 4

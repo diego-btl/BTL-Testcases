@@ -1,0 +1,42 @@
+testmo:
+  case_id: 785
+  folder_id: 102
+  project_id: 2
+  folder_path: map/planned-routes
+  folder_name_ui: Planned Routes
+  created_at: '2023-08-01 23:08:22.942467'
+  updated_at: '2025-12-12 18:13:42.963779'
+  last_sync: '2026-01-30T18:21:08.708414Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/785
+metadata:
+  name: Send Now
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>User has planned routes</li><li>The user is in the <strong>Planned
+    Route </strong>screen</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 954
+    case_id: 785
+    text1: <ol><li>Tap <strong>Send Now</strong></li><li>Force an error</li></ol>
+    text2: null
+    text3: <ul><li>User should see a loading state as send now call is made</li><li>User
+      should see a failure toast</li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 95886
+    case_id: 785
+    text1: <ol><li>Tap <strong>Send Now</strong></li><li>Allow call to succeed</li><li>Check
+      recently sent to vehicle</li></ol>
+    text2: null
+    text3: <ul><li>User should be taken back to the Maps screen with a route sent
+      toast</li><li>User should see sent route shown in recently sent to vehicle</li><li>User
+      should not see route on the Planned Routes screen</li></ul>
+    text4: null
+    display_order: 2
+  notes: '<p>Automation: can''t automate step 2 as it requires mocking</p>'

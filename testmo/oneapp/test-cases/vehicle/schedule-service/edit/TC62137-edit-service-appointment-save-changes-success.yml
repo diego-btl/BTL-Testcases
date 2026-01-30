@@ -1,0 +1,46 @@
+testmo:
+  case_id: 62137
+  folder_id: 6795
+  project_id: 2
+  folder_path: vehicle/schedule-service/edit
+  folder_name_ui: Edit
+  created_at: '2025-12-11 19:29:47.325301'
+  updated_at: '2026-01-20 21:19:15.717988'
+  last_sync: '2026-01-30T18:21:04.781933Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/62137
+metadata:
+  name: Edit Service Appointment - Save Changes - Success
+  priority: 1
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<ul><li>User has one or more booked service appointments</li><li>Appointment
+    has <code>isEditable: true</code></li><li>User has made changes in edit flow and
+    returned to <code>Upcoming Appointment</code> screen</li></ul>'
+  steps:
+  - column_name: custom_steps
+    id: 96329
+    case_id: 62137
+    text1: <p>Enter edit flow from any entry point (<code>Selected Services</code>,
+      <code>Appointment Details</code>, <code>Transportation</code>, or <code>Contact
+      Information</code>), make changes, tap <code>NEXT</code> button from any editing
+      screen to reach <code>Upcoming Appointment</code> screen</p>
+    text2: null
+    text3: <ul><li>User is navigated back to <code>Upcoming Appointment</code> screen</li><li>Updated
+      values are displayed on respective cards</li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 96330
+    case_id: 62137
+    text1: <p>Tap <code>SAVE CHANGES</code> button on <code>Upcoming Appointment</code>
+      screen</p>
+    text2: null
+    text3: '<ul><li><code>updateServiceAppointment</code> mutation is triggered with
+      all updated appointment data as payload</li><li>Success toast appears with message:
+      <code>Changes to Service Request sent</code></li><li>User is redirected to Vehicle
+      Screen</li></ul>'
+    text4: null
+    display_order: 2

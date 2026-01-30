@@ -1,0 +1,41 @@
+testmo:
+  case_id: 1640
+  folder_id: 101
+  project_id: 2
+  folder_path: map/route-planner
+  folder_name_ui: Route Planner
+  created_at: '2023-09-01 20:34:49.325870'
+  updated_at: '2025-12-02 19:32:04.981959'
+  last_sync: '2026-01-30T18:21:07.840151Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/1640
+metadata:
+  name: Add stops - maximum
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>The user selects an <code>EV</code> or <code>EVAVK2</code>
+    vehicles</li><li>The user is in the <strong>Create Route</strong> screen</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 51306
+    case_id: 1640
+    text1: <ol><li>Tab on the <code>+ADD A STOP</code> button</li><li>The user adds
+      a max of 4 stops</li></ol>
+    text2: null
+    text3: <ul><li>The UI shows the <code>+ADD STOP</code> button disable</li><li>The
+      maximum numbers of stops are reached</li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 95320
+    case_id: 1640
+    text1: <ol><li>Tab on the <code>+ADD A STOP</code> button</li><li>The user adds
+      a max of 6 stops</li></ol>
+    text2: null
+    text3: <ul><li>The UI shows the <code>+ADD STOP</code> button disable</li><li>The
+      maximum numbers of stops are reached</li></ul>
+    text4: null
+    display_order: 2

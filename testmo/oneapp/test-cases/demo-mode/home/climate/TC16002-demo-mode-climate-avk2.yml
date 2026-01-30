@@ -1,0 +1,79 @@
+testmo:
+  case_id: 16002
+  folder_id: 6807
+  project_id: 2
+  folder_path: demo-mode/home/climate
+  folder_name_ui: Climate
+  created_at: '2024-05-01 15:49:47.086980'
+  updated_at: '2025-12-18 15:57:25.330564'
+  last_sync: '2026-01-30T18:21:07.047009Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/16002
+metadata:
+  name: Demo Mode - Climate - AVK2
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>User has the <code>Rogue Platinum DEMO</code> selected</li><li>User
+    is at the Home Screen</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 21284
+    case_id: 16002
+    text1: <p>Tap the Climate card<br /> </p>
+    text2: null
+    text3: <p>User should see the Climate details page<br /> </p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 21285
+    case_id: 16002
+    text1: <p>Validate the Climate dial and Current temp parameters</p>
+    text2: null
+    text3: <ul><li>The Current Temp parameter should be <i><strong>&lt;Dynamics value
+      in Fahrenheit&gt;</strong></i></li><li>The Target Temp dial should be set to
+      75 <i><strong>(Fahrenheit)</strong></i></li></ul>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 21286
+    case_id: 16002
+    text1: <p>Increase / decrease the target temperature by interacting with the dial
+      or using the + or - buttons</p>
+    text2: null
+    text3: <p>The user should be able to set the desired temperature</p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 21287
+    case_id: 16002
+    text1: <p>Validate the climate accessories (seats) and interact with them</p>
+    text2: null
+    text3: <p>The screen should display Off / Heat settings for:</p><ul><li>Driver
+      Seat</li><li>Front Passenger Seat</li><li>Rear Left Seat</li><li>Rear Right
+      Seat</li></ul><p>User should be able to toggle the displayed settings</p>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 21288
+    case_id: 16002
+    text1: <p>Validate the climate accessories (steering wheel, deicer) and interact
+      with them</p>
+    text2: null
+    text3: <p>The screen should display Off / On settings for:</p><ul><li>Steering
+      Wheel Heater</li><li>Defrost &amp; Deicer</li></ul><p>User should be able to
+      toggle the displayed settings</p>
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 21289
+    case_id: 16002
+    text1: <p>Validate the MAKE DEFAULT and Turn Engine / Climate On CTAs and interact
+      with them</p>
+    text2: null
+    text3: <p>The buttons should be displayed at the bottom of the screen, tapping
+      on those should trigger the Demo Mode modal</p>
+    text4: null
+    display_order: 6

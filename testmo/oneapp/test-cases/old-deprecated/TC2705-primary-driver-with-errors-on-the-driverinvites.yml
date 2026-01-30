@@ -1,0 +1,31 @@
+testmo:
+  case_id: 2705
+  folder_id: 105
+  project_id: 2
+  folder_path: old-deprecated
+  folder_name_ui: Old / Deprecated
+  created_at: '2023-09-07 21:29:12.019946'
+  updated_at: '2025-09-19 21:13:59.475462'
+  last_sync: '2026-01-30T18:21:07.720942Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/2705
+metadata:
+  name: Primary Driver with errors on the driverInvites call
+  priority: 13
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has a AVK2 vehicle<br />User is already on the Home Page<br
+    />User is a PRIMARY_DRIVER with expired Additional Driver Invitation</p>
+  steps:
+  - column_name: custom_steps
+    id: 3070
+    case_id: 2705
+    text1: <p>1. The user is able to see the Additional Driver card, and then taps
+      on the card<br />2. The driverInvites call failed or has errors</p>
+    text2: null
+    text3: <p>1. User is driven to the Additional Driver page, it should display a
+      message "No Additional Drivers" and a button "ADD A DRIVER" enabled.</p>
+    text4: null
+    display_order: 1

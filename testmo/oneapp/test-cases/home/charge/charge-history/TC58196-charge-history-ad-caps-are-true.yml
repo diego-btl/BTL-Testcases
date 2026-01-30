@@ -1,0 +1,43 @@
+testmo:
+  case_id: 58196
+  folder_id: 2443
+  project_id: 2
+  folder_path: home/charge/charge-history
+  folder_name_ui: Charge History
+  created_at: '2025-08-19 18:07:47.750015'
+  updated_at: '2025-12-02 22:23:06.074462'
+  last_sync: '2026-01-30T18:21:05.755481Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/58196
+metadata:
+  name: Charge History - AD - Caps are true
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is a AD and has an EV/EV2</p><p>None of the FF is checked</p><p>User
+    is on the Manage EV screen &gt; Charge History card is in the enabled state</p><p>EV
+    &gt; VehicleCapabilities &gt; "DRIVING_ANALYSIS" is true</p><p>EV2 &gt; VehicleCapabilities
+    &gt; "CHARGE_HISTORY" is true</p>
+  steps:
+  - column_name: custom_steps
+    id: 88922
+    case_id: 58196
+    text1: <p>Tap Charge History card</p>
+    text2: null
+    text3: <p>NissanPayOrderHistory API is NOT triggered</p><p>VehicleChargeHistory
+      API is triggered</p><p>User is navigated to the Charge History screen displaying
+      the data according to the VehicleChargeHistory API response</p><p>The In-network
+      and All Sessions tabs are hidden</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 88923
+    case_id: 58196
+    text1: <p>Tap the "Refresh" button in the top right corner of the screen</p>
+    text2: null
+    text3: <p>The VehicleChargeHistory API is triggered </p><p>The loading state is
+      displayed</p><p>The UI correlates with the VehicleChargeHistory API response</p>
+    text4: null
+    display_order: 2

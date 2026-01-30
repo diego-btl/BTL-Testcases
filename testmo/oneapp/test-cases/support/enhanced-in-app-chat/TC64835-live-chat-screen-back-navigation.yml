@@ -1,0 +1,28 @@
+testmo:
+  case_id: 64835
+  folder_id: 7146
+  project_id: 2
+  folder_path: support/enhanced-in-app-chat
+  folder_name_ui: Enhanced In-App Chat
+  created_at: '2026-01-28 00:33:46.363068'
+  updated_at: '2026-01-30 19:25:38.904195'
+  last_sync: '2026-01-30T18:21:03.576312Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/64835
+metadata:
+  name: Live Chat Screen - Back Navigation
+  priority: 3
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  steps:
+  - column_name: custom_steps
+    id: 102509
+    case_id: 64835
+    text1: <p>Tap <strong>back button</strong> in top left corner</p>
+    text2: null
+    text3: <ul><li>User is redirected to <code>Support</code> screen</li></ul>
+    text4: null
+    display_order: 1
+  notes: BULK_UPDATE_TEST

@@ -1,0 +1,57 @@
+testmo:
+  case_id: 61896
+  folder_id: 6759
+  project_id: 2
+  folder_path: home/nissan-protection-ncesi/powered-by-co-operators-card
+  folder_name_ui: Powered by Co-operators card
+  created_at: '2025-10-29 15:27:34.110370'
+  updated_at: '2025-10-29 15:56:22.053164'
+  last_sync: '2026-01-30T18:21:05.639535Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/61896
+metadata:
+  name: Verify "powered by Co-operators" card is hidden
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>Inbetween each step, exit the Nissan Protection screen back
+    to the home page, coldstart the app to retrigger the firebase and VehicleStaticData
+    apis and then re-enters the Nissan Protection Screen</li><li>User is signed in
+    and on the home page</li><li>User is using an NCI build</li><li>User's address
+    is not in Canada OR the feature flag does not return the province the user resides
+    in</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 94726
+    case_id: 61896
+    text1: <p>Modify <code>VehicleStaticData</code> so the users province is not any
+      of the following <br /><br /><code>Alberta, British Columbia, Manitoba, New
+      Brunswick, Newfoundland and Labrador, Nova Scotia, Ontario, Prince Edward Island,
+      Quebec, Saskatchewan, Yukon, Northwest Territories, Nunavut</code></p><p> </p><p>i.e
+      Can mock it as <code>California, Tennessee, Peru, Spain</code>. Also try including
+      spelling errors such as <code>Ontarioo, Qwebec, etc.</code></p>
+    text2: null
+    text3: <p>The card should be hidden</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 94727
+    case_id: 61896
+    text1: <p>Modify <code>VehicleStaticData</code> so that the province is valid
+      again</p>
+    text2: null
+    text3: <p>The card should be visible</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 94728
+    case_id: 61896
+    text1: <p>Modify the feature flag so that the province returned in <code>VehicleStaticData</code>
+      isnt shown </p><p>(i.e if the user province is Ontario, then remove <code>\"ON\"</code>
+      from the feature flag)</p>
+    text2: null
+    text3: <p>The card should be hidden</p>
+    text4: null
+    display_order: 3

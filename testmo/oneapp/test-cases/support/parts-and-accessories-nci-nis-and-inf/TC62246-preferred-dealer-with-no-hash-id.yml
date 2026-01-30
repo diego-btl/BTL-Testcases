@@ -1,0 +1,30 @@
+testmo:
+  case_id: 62246
+  folder_id: 6822
+  project_id: 2
+  folder_path: support/parts-and-accessories-nci-nis-and-inf
+  folder_name_ui: Parts and Accessories - NCI NIS and INF
+  created_at: '2026-01-06 16:01:05.254718'
+  updated_at: '2026-01-06 16:23:09.264013'
+  last_sync: '2026-01-30T18:21:03.675811Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/62246
+metadata:
+  name: Preferred Dealer with no hash id
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  steps:
+  - column_name: custom_steps
+    id: 97198
+    case_id: 62246
+    text1: <ol><li>user logs in with nci126@nissancanada.com/2023Ariya</li></ol><p>2.
+      the preferred dealer is set to Woodbine Nissan But mock <code>VehiclePreferredDealer</code>
+       to have hash id = null</p><p>3. User goes to Support Tab&gt;Parts and Accessories
+      Card OR Vehicle tab&gt;Parts and Accessories icon</p>
+    text2: null
+    text3: <p>The webpage should show nearest Canadian dealer as per brand for location </p>
+    text4: null
+    display_order: 1

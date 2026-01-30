@@ -1,0 +1,32 @@
+testmo:
+  case_id: 654
+  folder_id: 4169
+  project_id: 2
+  folder_path: home/climate/ev
+  folder_name_ui: EV
+  created_at: '2023-08-01 23:08:20.975500'
+  updated_at: '2025-09-22 14:46:47.269848'
+  last_sync: '2026-01-30T18:21:08.928887Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/654
+metadata:
+  name: Start Climate - Success
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has sent a start Climate request</p>
+  steps:
+  - column_name: custom_steps
+    id: 823
+    case_id: 654
+    text1: <p>Start Climate request has resolved into a success</p>
+    text2: null
+    text3: <p>User should see a toast saying<br />'{vehicle model} climate turned
+      {on/off}.' (5 seconds)<br /><br />User should see button update to Turn Climate
+      off  button and temperature dial buttons be disabled<br /><br />User should
+      see Climate status update to show climate on the state (On label, temperature
+      dial shows gradient)</p>
+    text4: null
+    display_order: 1

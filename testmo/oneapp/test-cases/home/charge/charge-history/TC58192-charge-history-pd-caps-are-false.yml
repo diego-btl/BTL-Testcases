@@ -1,0 +1,57 @@
+testmo:
+  case_id: 58192
+  folder_id: 2443
+  project_id: 2
+  folder_path: home/charge/charge-history
+  folder_name_ui: Charge History
+  created_at: '2025-08-19 17:44:11.139885'
+  updated_at: '2025-12-02 22:23:30.957027'
+  last_sync: '2026-01-30T18:21:05.768564Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/58192
+metadata:
+  name: Charge History - PD - Caps are false
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is a PD and has an EV/EV2</p><p>None of the FF is checked</p><p>User
+    is on the Manage EV screen &gt; Charge History card is in the enabled state (it
+    should always be enabled for PD)</p><p>EV &gt; VehicleCapabilities &gt; "DRIVING_ANALYSIS"
+    is false</p><p>EV2 &gt; VehicleCapabilities &gt; "CHARGE_HISTORY" is false</p>
+  steps:
+  - column_name: custom_steps
+    id: 88903
+    case_id: 58192
+    text1: <p>Tap Charge History card</p>
+    text2: null
+    text3: <p>NissanPayOrderHistory API is triggered</p><p>User is navigated to the
+      In-network tab</p><p>All Sessions tab is in a disabled state</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 88904
+    case_id: 58192
+    text1: <p>Tap the disabled "All Sessions" tab</p>
+    text2: null
+    text3: <p>The VehicleChargeHistory API is not triggered</p><p>The "Account Expired"
+      modal with Cancel/Call options is displayed</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 88905
+    case_id: 58192
+    text1: <p>Tap "Cancel" button</p>
+    text2: null
+    text3: <p>The modal is dismissed</p><p>User remains on the same In-network tab</p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 88906
+    case_id: 58192
+    text1: <p>Tap "Call" button </p>
+    text2: null
+    text3: <p>The "customerCare" phone number (ContactUs API) should be populated</p>
+    text4: null
+    display_order: 4

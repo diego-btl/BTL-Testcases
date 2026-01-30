@@ -1,0 +1,32 @@
+testmo:
+  case_id: 2685
+  folder_id: 4170
+  project_id: 2
+  folder_path: home/climate/avk2
+  folder_name_ui: AVK2
+  created_at: '2023-09-07 21:10:07.707287'
+  updated_at: '2024-10-17 17:57:34.769274'
+  last_sync: '2026-01-30T18:21:07.779715Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/2685
+metadata:
+  name: Climate Details - Adjust Climate - Failure
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>AVK2 vehicle<br />Climate Details<br />Climate is ON</p>
+  steps:
+  - column_name: custom_steps
+    id: 3051
+    case_id: 2685
+    text1: <ol><li>Adjust climate request has resolved into a failure or 210 seconds
+      have elapsed since sending the initial command</li></ol>
+    text2: null
+    text3: <ol><li>User should see a toast saying<br />'{vehicle model} failed to
+      adjust climate.' (5 seconds)<ol><li>User should see Apply Changes button change
+      back to the regular state</li><li>User should see any modified values revert
+      to their previous state</li></ol></li></ol>
+    text4: null
+    display_order: 1

@@ -1,0 +1,30 @@
+testmo:
+  case_id: 32234
+  folder_id: 4147
+  project_id: 6
+  folder_path: home-page/hero-module
+  folder_name_ui: Hero Module
+  created_at: '2025-04-01 17:50:43.981490'
+  updated_at: '2025-08-19 19:52:13.928187'
+  last_sync: '2026-01-30T18:20:45.817747Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/32234
+metadata:
+  name: Find a Gas Station
+  priority: 1
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has an AVK/AVK2 vehicle</p>
+  steps:
+  - column_name: custom_steps
+    id: 52614
+    case_id: 32234
+    text1: <p>1. FuelAutonomy is <code>30 km</code> or lower<br />2. Tap on Find a
+      Gas Station CTA</p>
+    text2: null
+    text3: <p>1. User should see a <code>Encontrar una Gasolinera</code> CTA<br />2.
+      User should be on the map tab with results for gas stations</p>
+    text4: null
+    display_order: 1

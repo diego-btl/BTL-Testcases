@@ -1,0 +1,52 @@
+testmo:
+  case_id: 2858
+  folder_id: 434
+  project_id: 2
+  folder_path: vehicle/remote-data-wipe-tcu
+  folder_name_ui: Remote Data Wipe (TCU)
+  created_at: '2023-09-14 14:54:52.354308'
+  updated_at: '2024-10-17 17:57:34.769274'
+  last_sync: '2026-01-30T18:21:07.368599Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/2858
+metadata:
+  name: Capabilities - REMOTE_DATA_WIPE
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  steps:
+  - column_name: custom_steps
+    id: 3225
+    case_id: 2858
+    text1: <ol><li>Mock capabilities so that <code>REMOTE_DATA_WIPE</code> is missing</li><li>Go
+      to Vehicle Profile screen</li></ol>
+    text2: null
+    text3: <p>2. User should not see the Remote Data Wipe card</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 3226
+    case_id: 2858
+    text1: <ol><li>Mock capabilities so that <code>REMOTE_DATA_WIPE</code> is set
+      to false</li><li>Go to Vehicle Profile screen</li><li>Tap on Remote Data Wipe
+      card</li><li>Tap on Cancel</li><li>Tap on Remote Data Wipe card and tap call
+      Customer Care - 1-855-426-6628 (Nissan NNA)</li></ol>
+    text2: null
+    text3: <p>2. User should see the Remote Data Wipe card disabled<br />3. User should
+      see an Account Expired modal<br />4. User should see modal dismiss<br />5. User
+      should see option to dial number</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 3227
+    case_id: 2858
+    text1: <ol><li>Mock capabilities so that <code>REMOTE_DATA_WIPE</code> is set
+      to true</li><li>Go to Vehicle Profile screen</li></ol>
+    text2: null
+    text3: <p>2. User should see the Remote Data Wipe card enabled</p>
+    text4: null
+    display_order: 3
+  notes: <ul><li>For a SHARED driver, if the capability is missing or disabled, the
+    item should be hidden</li></ul>

@@ -1,0 +1,85 @@
+testmo:
+  case_id: 32447
+  folder_id: 4085
+  project_id: 6
+  folder_path: home-page
+  folder_name_ui: Home Page
+  created_at: '2025-04-01 19:05:00.709485'
+  updated_at: '2025-08-22 16:36:38.874825'
+  last_sync: '2026-01-30T18:20:45.412092Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/32447
+metadata:
+  name: Servicio y mantenimiento card - Non-Connected
+  priority: 3
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>Have an account with the next vehicles:</p><ul><li>Non-connected </li></ul><p>Months
+    wording:</p><ul><li>For 0 months will be <code>meses</code></li><li>For 1 month
+    will be <code>mes</code></li><li>For the rest <code>meses</code></li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 52816
+    case_id: 32447
+    text1: <ol><li>Login into the app</li><li>Check the card for <code>Servicio y
+      Mantenimiento</code></li></ol>
+    text2: null
+    text3: <ul><li>The <code>Servicio y Mantenimiento</code> card should be under
+      the <code>Placas</code> card</li><li>The <code>Servicio y Mantenimiento</code>
+      card shouldn't be editable (you can't reorganized)</li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 52817
+    case_id: 32447
+    text1: <ol><li>Login into the app</li><li>Check the card for <code>Servicio y
+      mantenimiento</code></li></ol>
+    text2: null
+    text3: <ul><li>The icon/asset should be displaying:<ul><li><strong>GREEN</strong></li><li><strong>ORANGE</strong></li><li><strong>RED</strong></li></ul></li></ul>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 52818
+    case_id: 32447
+    text1: <ol><li>Login into the app</li><li>Check the card for <code>Servicio y
+      mantenimiento</code></li></ol>
+    text2: null
+    text3: <ul><li>The possible subtitles should be displaying are:<ul><li><u>Mileages</u><ul><li><code>Restan</code>
+      <strong>XXX,XXX</strong> <code>KM</code></li></ul></li><li><u>Months:</u><ul><li><code>Restan</code>
+      <strong>XX</strong> <code>mes/meses</code></li><li><code>Último servicio hace</code>
+      <strong>XX</strong> <code>mes/meses</code></li></ul></li></ul></li></ul>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 52819
+    case_id: 32447
+    text1: <ol><li>Login into the app</li><li>Check the card for <code>Servicio y
+      mantenimiento</code></li></ol>
+    text2: null
+    text3: <ul><li>If the value of the mileage it is grater than 3 digits the <code>,</code>
+      will be added to the value like -&gt; <i>XX,XXX, </i>if it is lower than 4 digits
+      no <code>,</code> will be display</li></ul>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 52820
+    case_id: 32447
+    text1: <ol><li>Login into the app</li><li>Check the card for <code>Servicio y
+      mantenimiento</code></li></ol>
+    text2: null
+    text3: <ul><li>The card should be displaying the correct asset (Check images attached)</li></ul>
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 52821
+    case_id: 32447
+    text1: <ol><li>Login into the app</li><li>Check the card for <code>Servicio y
+      mantenimiento</code></li><li>No data it is displaying</li></ol>
+    text2: null
+    text3: <ul><li>The card should be displaying the correct asset &amp; title, for
+      the subtitle if <strong>ERROR</strong>, <strong>EMPTY</strong> or <strong>NO
+      DATA</strong>, it will display like <code>-</code> (Check image)</li></ul>
+    text4: null
+    display_order: 6

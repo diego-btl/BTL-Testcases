@@ -1,0 +1,45 @@
+testmo:
+  case_id: 29995
+  folder_id: 3863
+  project_id: 2
+  folder_path: vehicle/telematics-bsm-subscriptions-packages
+  folder_name_ui: Telematics BSM - Subscriptions Packages
+  created_at: '2025-01-17 21:29:51.092142'
+  updated_at: '2025-12-09 17:21:11.711176'
+  last_sync: '2026-01-30T18:21:06.458561Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/29995
+metadata:
+  name: Subscription Packages - Pending Vehicle
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>FF "EnableTelematicsBSM":"true"</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 48856
+    case_id: 29995
+    text1: '<p>Go to Proxyman and mock one of the vehicle''s "caseStatus": "PENDING"
+      in the `PendingVehicles` API response</p>'
+    text2: null
+    text3: <p>Pending vehicle is displayed when tapping Vehicle Selector</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 48857
+    case_id: 29995
+    text1: <p>Select Pending vehicle tapping Vehicle Selector</p>
+    text2: null
+    text3: <p>Pending Vehicle is displayed</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 48858
+    case_id: 29995
+    text1: <p>Navigate to the Vehicle screen</p>
+    text2: null
+    text3: <p>Verify Subscription Packages card is not displayed</p>
+    text4: null
+    display_order: 3

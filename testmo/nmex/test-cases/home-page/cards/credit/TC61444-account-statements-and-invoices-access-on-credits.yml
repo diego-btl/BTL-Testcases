@@ -1,0 +1,194 @@
+testmo:
+  case_id: 61444
+  folder_id: 6253
+  project_id: 6
+  folder_path: home-page/cards/credit
+  folder_name_ui: Credit
+  created_at: '2025-09-12 21:18:42.502298'
+  updated_at: null
+  last_sync: '2026-01-30T18:20:44.971493Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/61444
+metadata:
+  name: Account Statements and Invoices Access on Credits Screen
+  priority: 1
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<ul>
+
+    <li>User is logged in to the NMEX app</li>
+
+    <li>Credits screen is accessible for the selected VIN</li>
+
+    <li>Vehicle brand is Nissan or Infiniti</li>
+
+    <li>VIN with credit service exists with varying numbers of invoice records (1,
+    2, 3, or more)</li>
+
+    <li>ContractNumber available from credit service to call GetInvoices API</li>
+
+    </ul>'
+  steps:
+  - column_name: custom_steps
+    id: 93350
+    case_id: 61444
+    text1: '<ol>
+
+      <li>Open the app</li>
+
+      <li>Select VIN with 3 or more invoice records</li>
+
+      <li>Go to Credits screen</li>
+
+      <li>Tap Estados de cuenta / Facturas card</li>
+
+      </ol>'
+    text2: null
+    text3: '<ul>
+
+      <li>App navigates to Account Statements / Invoices screen</li>
+
+      <li>First three month/year entries are displayed under Últimas facturas</li>
+
+      <li>Older records available in dropdown (year → month)</li>
+
+      <li>ModelName, modelYear, and contractNumber displayed at top</li>
+
+      <li>DESCARGAR PDF button is disabled</li>
+
+      </ul>'
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 93351
+    case_id: 61444
+    text1: '<ol>
+
+      <li>Open the app</li>
+
+      <li>Select VIN with 1 or 2 invoice records</li>
+
+      <li>Go to Credits screen</li>
+
+      <li>Tap Estados de cuenta / Facturas card</li>
+
+      </ol>'
+    text2: null
+    text3: '<ul>
+
+      <li>App navigates to Account Statements / Invoices screen</li>
+
+      <li>Available months/years displayed under Factura section</li>
+
+      <li>Dropdown is disabled</li>
+
+      <li>DESCARGAR PDF button is disabled</li>
+
+      </ul>'
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 93352
+    case_id: 61444
+    text1: '<ol>
+
+      <li>Open the app</li>
+
+      <li>Select VIN with invoice records</li>
+
+      <li>Go to Credits screen</li>
+
+      <li>Tap Estados de cuenta / Facturas card</li>
+
+      <li>Select a month from dropdown</li>
+
+      </ol>'
+    text2: null
+    text3: '<ul>
+
+      <li>DESCARGAR PDF button becomes enabled</li>
+
+      <li>Button remains disabled until valid month is selected</li>
+
+      </ul>'
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 93353
+    case_id: 61444
+    text1: '<ol>
+
+      <li>Check alignment of card and labels</li>
+
+      <li>Verify dropdown behavior</li>
+
+      <li>Validate button enable/disable logic visually</li>
+
+      </ol>'
+    text2: null
+    text3: '<ul>
+
+      <li>Layout matches Figma design</li>
+
+      <li>Dropdown interaction works as expected</li>
+
+      <li>CTA states clearly reflect selection state</li>
+
+      </ul>'
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 93354
+    case_id: 61444
+    text1: '<ol>
+
+      <li>Trigger GetInvoices query with contractNumber</li>
+
+      <li>Inspect data returned (date, uuid)</li>
+
+      <li>Confirm UI matches API response</li>
+
+      </ol>'
+    text2: null
+    text3: '<ul>
+
+      <li>Dates are displayed as month/year correctly</li>
+
+      <li>UUID values not displayed but used internally for download flow</li>
+
+      <li>No missing/null data causes crashes</li>
+
+      </ul>'
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 93355
+    case_id: 61444
+    text1: '<ol>
+
+      <li>Repeat scenarios for Nissan and Infiniti</li>
+
+      <li>Repeat scenarios on Android and iOS</li>
+
+      </ol>'
+    text2: null
+    text3: '<ul>
+
+      <li>Behavior consistent across brands</li>
+
+      <li>Behavior consistent across platforms</li>
+
+      </ul>'
+    text4: null
+    display_order: 6
+  notes: "<p>Figma links:</p>\n<ul>\n<li>iOS: Design FileMiNissan [NMEX] - iOS</li>\n\
+    <li>Android: <br />\nTest accounts/credentials: <br />\nApplies to Nissan and\
+    \ Infiniti brands<br />\nGraphQL schema for GetInvoices:</li>\n</ul>\n<pre><code\
+    \ class=\"language-json\">query GetInvoices ($contractNumber: String!){\n  invoices(contractNumber:\
+    \ $contractNumber) {\n    date\n    uuid\n  }\n}\n</code></pre>\n<p>Sample payload\
+    \ response:</p>\n<pre><code class=\"language-json\">{\n  \"data\": {\n    \"invoices\"\
+    : [\n      {\n        \"date\": \"2025-04-15\",\n        \"uuid\": \"A377A5DC-5449-4432-8618-BBF4AB51A07A\"\
+    \n      },\n      {\n        \"date\": \"2025-02-25\",\n        \"uuid\": \"8F8CB6A0-E4DB-4EF7-AC81-AA7F22F39C48\"\
+    \n      }\n    ]\n  }\n}\n</code></pre>"

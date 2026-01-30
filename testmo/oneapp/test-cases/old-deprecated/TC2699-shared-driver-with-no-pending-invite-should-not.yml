@@ -1,0 +1,41 @@
+testmo:
+  case_id: 2699
+  folder_id: 105
+  project_id: 2
+  folder_path: old-deprecated
+  folder_name_ui: Old / Deprecated
+  created_at: '2023-09-07 21:29:11.978612'
+  updated_at: '2025-09-19 21:13:59.475462'
+  last_sync: '2026-01-30T18:21:07.738458Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/2699
+metadata:
+  name: Shared Driver with no Pending Invite should not see the Additional Driver
+    Card
+  priority: 13
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: 'User has a AVK2 vehicle<br />
+
+    User is a SHARED_DRIVER<br />
+
+    User has no pending invitations'
+  steps:
+  - column_name: custom_steps
+    id: 3064
+    case_id: 2699
+    text1: '1. Mock the UserVehicles response with:<br />
+
+      1.1. data.vehicles.driverType: "SHARED_DRIVER"<br />
+
+      1.2. data.pendingDriverInvitations: null<br />
+
+      <br />
+
+      2. Login to the app'
+    text2: null
+    text3: 1. The Home Page should not display the Additional Driver Card
+    text4: null
+    display_order: 1

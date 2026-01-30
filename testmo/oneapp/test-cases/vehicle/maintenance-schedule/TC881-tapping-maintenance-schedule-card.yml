@@ -1,0 +1,27 @@
+testmo:
+  case_id: 881
+  folder_id: 91
+  project_id: 2
+  folder_path: vehicle/maintenance-schedule
+  folder_name_ui: Maintenance Schedule
+  created_at: '2023-08-04 12:29:30.445409'
+  updated_at: '2025-10-11 10:16:18.953721'
+  last_sync: '2026-01-30T18:21:08.494909Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/881
+metadata:
+  name: Tapping Maintenance Schedule Card
+  priority: 1
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  steps:
+  - column_name: custom_steps
+    id: 1060
+    case_id: 881
+    text1: <p>Tap the maintenance schedule card</p>
+    text2: null
+    text3: <p>User should see the maintenance schedule sheet open</p>
+    text4: null
+    display_order: 1

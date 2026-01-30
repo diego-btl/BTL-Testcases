@@ -1,0 +1,38 @@
+testmo:
+  case_id: 19090
+  folder_id: 105
+  project_id: 2
+  folder_path: old-deprecated
+  folder_name_ui: Old / Deprecated
+  created_at: '2024-06-06 19:55:53.916193'
+  updated_at: '2026-01-14 22:40:34.118900'
+  last_sync: '2026-01-30T18:21:06.987511Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/19090
+metadata:
+  name: Start Charger Invalid ID
+  priority: 13
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p><code>EnablePlugAndCharge</code> is enabled in remote configs</p><p><code>AccountStatus</code>
+    is <code>ACTIVE</code></p>
+  steps:
+  - column_name: custom_steps
+    id: 27493
+    case_id: 19090
+    text1: <p>Enter an invalid Charger ID in the Charger ID field</p>
+    text2: null
+    text3: <p>Start Charge CTA should be enabled</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 27494
+    case_id: 19090
+    text1: <p>Tap on Start Charger</p>
+    text2: null
+    text3: <p><code>ParkingChargable</code> should be called and user should see an
+      <code>Invalid Charger ID</code> toast</p>
+    text4: null
+    display_order: 2

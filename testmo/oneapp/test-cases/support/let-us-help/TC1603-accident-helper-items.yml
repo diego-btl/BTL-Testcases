@@ -1,0 +1,33 @@
+testmo:
+  case_id: 1603
+  folder_id: 81
+  project_id: 2
+  folder_path: support/let-us-help
+  folder_name_ui: Let Us Help
+  created_at: '2023-08-28 20:13:24.883636'
+  updated_at: '2025-03-31 22:43:30.741761'
+  last_sync: '2026-01-30T18:21:07.925720Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/1603
+metadata:
+  name: Accident Helper Items
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is on the accident helper screen</p>
+  steps:
+  - column_name: custom_steps
+    id: 1968
+    case_id: 1603
+    text1: <p>1. Expand Certified Collision Repair Network<br />2. Tap on Schedule
+      Service</p>
+    text2: null
+    text3: <p>1. User should see item expand<br /><br />2. User should see Dealer
+      Details (if user has a preferred dealer and native scheduling is false)<br /><br
+      />User should see Select Services (if user has a preferred dealer and native
+      scheduling is true)<br /><br />User should see Find a Dealer (if user does not
+      have a preferred dealer)</p>
+    text4: null
+    display_order: 1

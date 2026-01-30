@@ -1,0 +1,29 @@
+testmo:
+  case_id: 1433
+  folder_id: 234
+  project_id: 2
+  folder_path: device-notifications
+  folder_name_ui: Device Notifications
+  created_at: '2023-08-28 20:13:21.972294'
+  updated_at: '2024-10-17 17:57:34.769274'
+  last_sync: '2026-01-30T18:21:08.354659Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/1433
+metadata:
+  name: Notification permissions
+  priority: 3
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: User has never allowed/disallowed notification permissions
+  steps:
+  - column_name: custom_steps
+    id: 1801
+    case_id: 1433
+    text1: 1. Launch app
+    text2: null
+    text3: User should see alert to Allow or Don't Allow notifications
+    text4: null
+    display_order: 1
+  notes: Android 13+

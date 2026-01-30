@@ -1,0 +1,32 @@
+testmo:
+  case_id: 32323
+  folder_id: 4086
+  project_id: 6
+  folder_path: vehicle-page
+  folder_name_ui: Vehicle Page
+  created_at: '2025-04-01 17:50:44.579847'
+  updated_at: '2025-08-22 15:29:20.741778'
+  last_sync: '2026-01-30T18:20:45.653937Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/32323
+metadata:
+  name: Refresh
+  priority: 3
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  steps:
+  - column_name: custom_steps
+    id: 52694
+    case_id: 32323
+    text1: <p>Tap refresh button Make sure to test on <strong>AVK</strong>/<strong>AVK2</strong>.
+      Refer to sheet for logic </p><p>https://docs.google.com/spreadsheets/d/1Ch6XwP9XdU2km5jsJm_O0SrvDL6hJw4uu8mDPRl26-g/edit#gid=542058053</p>
+    text2: null
+    text3: <ol><li>User should see loading spinner while refresh is in progress,</li><li>User
+      should see updated data and timestamp (tire pressure) after refresh is successful
+      </li><li>If refresh is not successful, cached data will be shown</li></ol>
+    text4: null
+    display_order: 1
+  notes: '<p>Tested Info:</p><ul><li>Device: Xiaomi 10T Pro (12)</li><li>Account:
+    <a href="mailto:infinitiuser72@yopmail.com">infinitiuser72@yopmail.com</a>/N1iss4n123$</li></ul>'

@@ -1,0 +1,112 @@
+testmo:
+  case_id: 9032
+  folder_id: 411
+  project_id: 2
+  folder_path: home/additional-driver
+  folder_name_ui: Additional Driver
+  created_at: '2023-11-21 08:42:40.253849'
+  updated_at: '2024-10-17 17:57:34.769274'
+  last_sync: '2026-01-30T18:21:07.255949Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/9032
+metadata:
+  name: PD - AD Invite Summary Screen - Send Invite - Error
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has an AVK2 vehicle and is PRIMARY_DRIVER</p><p>User is on
+    the Invite Summary screen</p>
+  steps:
+  - column_name: custom_steps
+    id: 11597
+    case_id: 9032
+    text1: "<p>Mock an error for <code>InviteDriver</code> [iOS] with the following:</p><pre><code\
+      \ class=\"editor-json language-json code-block\">{\n  \"data\": {\n    \"inviteDriver\"\
+      : {\n      \"__typename\": \"GeneralErrors\",\n      \"errorMessage\": \"UNEXPECTED\
+      \ ERROR : Owner profile data not found.\"\n    }\n  }\n}</code></pre><p>Different\
+      \ error types: </p><ul><li><code>GeneralErrors</code></li><li><code>DatabaseError</code></li><li><code>BrandError</code></li><li><code>TokenError</code></li><li><code>VinValidationError</code></li><li><code>EntitlementsValidationError</code></li></ul>"
+    text2: null
+    text3: null
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 11598
+    case_id: 9032
+    text1: <ol><li>Tap on the Send Invite button</li><li>Tap one of the two options</li></ol>
+    text2: null
+    text3: <ol><li>User should see options to send via email or sms</li><li>User should
+      see a loading spinner, then an <code>Invite failed to send</code> modal, and
+      a failure toast</li></ol>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 11599
+    case_id: 9032
+    text1: <p>Tap on No</p>
+    text2: null
+    text3: <p>User should see the error modal dismiss and remain on the AD Invite
+      Summary screen</p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 11600
+    case_id: 9032
+    text1: "<p>Mock an error for <code>InviteDriver</code> [iOS] with the following:</p><pre><code\
+      \ class=\"editor-json language-json code-block\">{\n  \"data\": {\n    \"inviteDriver\"\
+      : {\n      \"__typename\": \"FirstNameValidationError\",\n      \"errorMessage\"\
+      : \"UNEXPECTED ERROR : Owner profile data not found.\"\n    }\n  }\n}</code></pre><p>Other\
+      \ error types: </p><ul><li><code>LastNameValidationError</code></li><li><code>EmailValidationError</code></li><li><code>PhoneValidationError</code></li></ul>"
+    text2: null
+    text3: null
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 11601
+    case_id: 9032
+    text1: <p>Tap on the Send Invite button</p>
+    text2: null
+    text3: <p>User should be brought back to the AD Invite screen with the corresponding
+      field highlighted with error text</p>
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 11602
+    case_id: 9032
+    text1: "<p>Mock an error for <code>InviteDriver</code> [iOS] with the following:</p><pre><code\
+      \ class=\"editor-json language-json code-block\">{\n  \"data\": {\n    \"inviteDriver\"\
+      : {\n      \"__typename\": \"ExistingInviteError\",\n      \"errorMessage\"\
+      : \"UNEXPECTED ERROR : Owner profile data not found.\"\n    }\n  }\n}</code></pre>"
+    text2: null
+    text3: null
+    text4: null
+    display_order: 6
+  - column_name: custom_steps
+    id: 11603
+    case_id: 9032
+    text1: <p>Tap on the Send Invite button</p>
+    text2: null
+    text3: <p>User should see a loading spinner, then an <code>Invite already exists</code>
+      modal with options - Cancel and Go To Invite</p>
+    text4: null
+    display_order: 7
+  - column_name: custom_steps
+    id: 11604
+    case_id: 9032
+    text1: <p>Tap on Cancel</p>
+    text2: null
+    text3: <p>User should see the error modal dismiss and remain on the AD Invite
+      Summary screen</p>
+    text4: null
+    display_order: 8
+  - column_name: custom_steps
+    id: 11605
+    case_id: 9032
+    text1: <p>Tap on Go To Invite</p>
+    text2: null
+    text3: <p>If there is a match with the entered email address,, user should be
+      redirected to the specific Invitation Details screen</p><p>If there is no match
+      with the entered email address, user should be redirected to the AD List screen</p>
+    text4: null
+    display_order: 9

@@ -1,0 +1,29 @@
+testmo:
+  case_id: 32405
+  folder_id: 4161
+  project_id: 6
+  folder_path: wearables
+  folder_name_ui: Wearables
+  created_at: '2025-04-01 17:50:45.570806'
+  updated_at: '2025-04-02 20:05:48.067355'
+  last_sync: '2026-01-30T18:20:45.430990Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/32405
+metadata:
+  name: Lock Status
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has at least one vehicle</p>
+  steps:
+  - column_name: custom_steps
+    id: 52774
+    case_id: 32405
+    text1: <p>1. Swipe to telematics screen</p>
+    text2: null
+    text3: <p>User should see their vehicle's lock status in the middle. If user's
+      vehicle is not showing a lock status, they should not see anything in the middle</p>
+    text4: null
+    display_order: 1

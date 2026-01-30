@@ -1,0 +1,115 @@
+testmo:
+  case_id: 62071
+  folder_id: 2443
+  project_id: 2
+  folder_path: home/charge/charge-history
+  folder_name_ui: Charge History
+  created_at: '2025-12-02 17:59:05.255647'
+  updated_at: '2025-12-02 22:23:53.665830'
+  last_sync: '2026-01-30T18:21:04.946996Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/62071
+metadata:
+  name: Charge History - All Sessions - Navigation
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is a PD and has an EV/EV2</p><p>EV &gt; VehicleCapabilities
+    &gt; "DRIVING_ANALYSIS" is true</p><p>EV2 &gt; VehicleCapabilities &gt; "CHARGE_HISTORY"
+    is true</p><p>User is on the Charge History - In-network tab</p>
+  steps:
+  - column_name: custom_steps
+    id: 95843
+    case_id: 62071
+    text1: <p>Tap the 'All Sessions' tab</p>
+    text2: null
+    text3: '<p>1. VehicleChargeHistory API is triggered ("aggregator": "DAILY" in
+      the request)</p><p>2. The loading state is displayed</p><p>3. User is navigated
+      to the ''All Sessions'' tab &gt; the Day, Month, Year tabs are displayed</p><p>4.
+      The Day tab is selected by default</p>'
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 95851
+    case_id: 62071
+    text1: <p>Observe the screen for the selected Day tab</p>
+    text2: null
+    text3: <p>1. The data displayed under the Day section correlates with the <strong>ChargeSummary</strong>
+      object for the particular day</p><p>2. The sections below correlate with the
+      <strong>ChargeSession</strong> objects for the particular day and the number
+      of the  Charging Sessions</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 95852
+    case_id: 62071
+    text1: <p>Tap the caret (&lt; &gt;) on the left or right side of the date </p>
+    text2: null
+    text3: <p>1. The data displayed under the Day section is updated according to
+      the <strong>ChargeSummary</strong> object for the particular day  </p><p>2.
+      The sections below are updated according to the <strong>ChargeSession</strong>
+      objects for the particular day and the number of the  Charging Sessions</p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 95853
+    case_id: 62071
+    text1: <p>Tap the Month tab</p>
+    text2: null
+    text3: '<p>1. VehicleChargeHistory API is triggered ("aggregator": "MONTHLY" in
+      the request)</p><p>2. The loading state is displayed</p><p>3. The Month tab
+      is selected</p>'
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 95854
+    case_id: 62071
+    text1: <p>Observe the screen for the selected Month tab</p>
+    text2: null
+    text3: <p>1. The data displayed under the Month section is displayed according
+      to the <strong>ChargeSummary</strong> object for the particular month</p><p>2.
+      The Charging Sessions sections are hidden</p>
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 95855
+    case_id: 62071
+    text1: <p>Tap the caret (&lt; &gt;) on the left or right side of the month </p>
+    text2: null
+    text3: <p>The data displayed under the Month section is updated according to the
+      <strong>ChargeSummary</strong> object for the particular month </p>
+    text4: null
+    display_order: 6
+  - column_name: custom_steps
+    id: 95856
+    case_id: 62071
+    text1: <p>Tap the Year tab</p>
+    text2: null
+    text3: '<p>1. VehicleChargeHistory API is triggered ("aggregator": "YEARLY" in
+      the request)</p><p>2. The loading state is displayed</p><p>3. The Year tab is
+      selected</p>'
+    text4: null
+    display_order: 7
+  - column_name: custom_steps
+    id: 95857
+    case_id: 62071
+    text1: <p>Observe the screen for the selected Year tab</p>
+    text2: null
+    text3: <p>1. The data displayed under the Year section is displayed according
+      to the <strong>ChargeSummary</strong> object for the particular month</p><p>2.
+      The Charging Sessions sections are hidden</p>
+    text4: null
+    display_order: 8
+  - column_name: custom_steps
+    id: 95858
+    case_id: 62071
+    text1: <p>Tap the enabled caret (&lt; &gt;) on the left or right side of the year
+      (If API returns the data for another year)</p>
+    text2: null
+    text3: <p>The data displayed under the Year section is updated according to the
+      <strong>ChargeSummary</strong> object for the particular year</p><p>*Note &gt;
+      if API returns data only for 1 year &gt; the carets will be disabled </p>
+    text4: null
+    display_order: 9

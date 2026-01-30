@@ -1,0 +1,31 @@
+testmo:
+  case_id: 32500
+  folder_id: 4079
+  project_id: 2
+  folder_path: home/nissan-protection-ncesi
+  folder_name_ui: Nissan Protection (NCESI)
+  created_at: '2025-04-02 23:37:29.062953'
+  updated_at: '2025-04-03 00:22:50.527973'
+  last_sync: '2026-01-30T18:21:06.242675Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/32500
+metadata:
+  name: Do not display YouTube videos
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<p>Set FFs as follows</p><ul><li><code>EnableNcesiServiceContracts</code>:
+    true</li><li><code>EnableNcesiCatalogue</code>: false</li></ul>'
+  steps:
+  - column_name: custom_steps
+    id: 53042
+    case_id: 32500
+    text1: <p>Login to NIS app &gt; Go to <code>Home</code> screen &gt; Tap on <code>Nissan
+      Protection</code> </p>
+    text2: null
+    text3: <p>Verify user is led to the <code>Nissan Protection</code> screen and
+      <code>View all Nissan Protection Products</code> cta is not displayed</p>
+    text4: null
+    display_order: 1

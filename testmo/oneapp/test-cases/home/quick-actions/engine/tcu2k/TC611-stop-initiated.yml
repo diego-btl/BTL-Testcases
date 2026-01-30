@@ -1,0 +1,59 @@
+testmo:
+  case_id: 611
+  folder_id: 4166
+  project_id: 2
+  folder_path: home/quick-actions/engine/tcu2k
+  folder_name_ui: TCU2K
+  created_at: '2023-08-01 23:08:20.423290'
+  updated_at: '2025-09-22 14:02:27.123741'
+  last_sync: '2026-01-30T18:21:09.052956Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/611
+metadata:
+  name: Stop - Initiated
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is in the Home screen</p><p>Engine has been turned on successfully</p>
+  steps:
+  - column_name: custom_steps
+    id: 780
+    case_id: 611
+    text1: <p>User taps an Engine STOP button</p>
+    text2: null
+    text3: '<p>User should see a confirmation modal: </p><ul><li>TCU2K: "Are you sure?
+      This action will remotely stop your vehicle." with two buttons "No" and "Yes"</li></ul>'
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 53014
+    case_id: 611
+    text1: <p>User taps "No" button on confirmation modal</p>
+    text2: null
+    text3: <p>A modal is dismissed</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 53015
+    case_id: 611
+    text1: <p>User taps an Engine STOP button again</p>
+    text2: null
+    text3: '<p>User should see a confirmation modal: </p><ul><li>TCU2K: "Are you sure?
+      This action will remotely stop your vehicle." with two buttons "No" and "Yes"</li></ul>'
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 53016
+    case_id: 611
+    text1: <p>User taps "Yes" button on confirmation modal</p>
+    text2: null
+    text3: <p><code>EngineStop</code> API and <code>CheckEngineServiceRequest</code>
+      API are triggered.</p><p>User should see an "Engine STOP" button is changed
+      to a spinner.</p><p>User should see toast messages that transition from: </p><ul><li>Contacting
+      &lt;year and model&gt; to stop engine...</li><li>Initiating engine stop on &lt;year
+      and model&gt;...</li></ul><p>User should see the countdown timer during the
+      Engine STOP is polling </p>
+    text4: null
+    display_order: 4

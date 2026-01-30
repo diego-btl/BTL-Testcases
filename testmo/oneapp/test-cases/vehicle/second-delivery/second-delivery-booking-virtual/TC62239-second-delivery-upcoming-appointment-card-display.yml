@@ -1,0 +1,82 @@
+testmo:
+  case_id: 62239
+  folder_id: 6820
+  project_id: 2
+  folder_path: vehicle/second-delivery/second-delivery-booking-virtual
+  folder_name_ui: Second Delivery - Booking (Virtual)
+  created_at: '2025-12-19 22:08:03.528826'
+  updated_at: '2025-12-19 23:50:14.052430'
+  last_sync: '2026-01-30T18:21:03.736917Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/62239
+metadata:
+  name: Second Delivery - Upcoming Appointment Card - Display
+  priority: 1
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  steps:
+  - column_name: custom_steps
+    id: 97139
+    case_id: 62239
+    text1: "<p>Mock the <code>SecondDeliveryAppointment</code> query to return:</p><pre><code\
+      \ class=\"editor-plain language-plain code-block\">{\n  \"data\": {\n    \"\
+      vehicle\": {\n      \"__typename\": \"Vehicle\",\n      \"secondDelivery\":\
+      \ {\n        \"__typename\": \"SecondDelivery\",\n        \"appointment\": {\n\
+      \          \"__typename\": \"SecondDeliveryExistingBookedAppointment\",\n  \
+      \        \"id\": 20498452,\n          \"activityId\": 20498452,\n          \"\
+      beginsAt\": \"2026-01-02T19:30:00.000Z\",\n          \"address\": {\n      \
+      \      \"__typename\": \"Address\",\n            \"address1\": \"1413 test address\"\
+      ,\n            \"address2\": null,\n            \"city\": \"los angeles \",\n\
+      \            \"state\": \"CA\",\n            \"postalCode\": \"90012\",\n  \
+      \          \"country\": \"US\"\n          },\n          \"contact\": {\n   \
+      \         \"__typename\": \"SecondDeliveryContactInformation\",\n          \
+      \  \"firstName\": \"Nna\",\n            \"lastName\": \"Qa\",\n            \"\
+      phoneNumber\": \"5487545464\",\n            \"email\": \"nnaqa@bethinklabs.com\"\
+      \n          },\n          \"redeliveryNotes\": null,\n          \"featureNotes\"\
+      : null,\n          \"hub\": {\n            \"__typename\": \"SecondDeliveryHub\"\
+      ,\n            \"id\": 1000000,\n            \"timezone\": \"US/Pacific\",\n\
+      \            \"dealer\": {\n              \"__typename\": \"SecondDeliveryDealer\"\
+      ,\n              \"code\": \"999991\",\n              \"address\": {\n     \
+      \           \"__typename\": \"SecondDeliveryDealerAddress\",\n             \
+      \   \"coordinates\": null,\n                \"address1\": \"325 W Gardena Blvd\"\
+      ,\n                \"address2\": null,\n                \"state\": \"CA\",\n\
+      \                \"city\": \"Gardena\",\n                \"country\": \"US\"\
+      ,\n                \"id\": 132498250,\n                \"postalCode\": \"90248\"\
+      \n              }\n            }\n          },\n          \"mode\": \"VIRTUAL\"\
+      \n        }\n      }\n    }\n  }\n}</code></pre><p>Navigate to <code>Vehicle</code>\
+      \ screen</p>"
+    text2: null
+    text3: <ul><li>Mock data is set for <code>SecondDeliveryAppointment</code> query</li><li>User
+      is on <code>Vehicle</code> screen</li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 97140
+    case_id: 62239
+    text1: <p>Verify Upcoming Virtual Appointment card is displayed</p>
+    text2: null
+    text3: '<ul><li><strong>Upcoming Virtual Appointment card</strong> is displayed
+      on Vehicle screen</li><li>If Schedule Service appointments exist (e.g., "Upcoming
+      Appointment" with dealer name), Second Delivery card displays <strong>above</strong>
+      Schedule Service cards (takes priority)</li><li>Card title: <code>Upcoming Virtual
+      Appointment</code></li><li>Card displays:<ul><li><strong>Calendar icon</strong>
+      on left</li><li>Appointment title: <code>MyINFINITI Expert</code></li><li>Appointment
+      details in format: <code>[Day], [Month] [Date], [Year] @ [Time]</code> (e.g.,
+      "Fri, Jan 2, 2026 @ 11:30 AM")</li></ul></li><li>Card is tappable/clickable</li><li>Second
+      Delivery booking card is <strong>NOT displayed</strong> (user already has appointment
+      booked)</li></ul>'
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 97141
+    case_id: 62239
+    text1: <p>Tap on <code>Upcoming Virtual Appointment</code> card</p>
+    text2: null
+    text3: '<ul><li>User is navigated to <code>Upcoming Appointment</code> details
+      screen</li><li>Screen title: <code>Upcoming Appointment</code> is displayed
+      at top</li><li><strong>Back button (&lt;)</strong> is visible in top-left corner</li><li>All
+      appointment details are displayed (validated in separate test case)</li></ul>'
+    text4: null
+    display_order: 3

@@ -1,0 +1,270 @@
+testmo:
+  case_id: 61921
+  folder_id: 4144
+  project_id: 6
+  folder_path: demo-mode
+  folder_name_ui: Demo Mode
+  created_at: '2025-11-03 19:16:26.920273'
+  updated_at: '2025-11-05 17:01:19.435313'
+  last_sync: '2026-01-30T18:20:44.850154Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/61921
+metadata:
+  name: Demo Mode - Home Page - INFINITI
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  steps:
+  - column_name: custom_steps
+    id: 95158
+    case_id: 61921
+    text1: <p>Validate hero section is displayed</p>
+    text2: null
+    text3: <ul><li><strong>Support icon</strong> is displayed</li><li>Vehicle badge
+      <code>QX80</code> is displayed</li><li><strong>Notification icon</strong> is
+      displayed and ENABLED with badge</li><li><code>Combustible restante</code> text
+      is displayed</li><li>Mileage is displayed</li><li><strong>Lock status</strong>
+      <code>Bloqueado</code> (Locked) is displayed</li><li>Red triangle <strong>Recall
+      alert icon</strong> is displayed</li><li>Orange circle <strong>Vehicle status
+      warning icon</strong> is displayed</li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 95159
+    case_id: 61921
+    text1: <p>Validate <code>Programar Servicio</code> CTA is displayed</p>
+    text2: null
+    text3: <ul><li><code>Programar Servicio</code> CTA button is displayed</li></ul>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 95160
+    case_id: 61921
+    text1: <p>Validate telematics commands are displayed</p>
+    text2: null
+    text3: <ul><li><code>Bloquear</code> (Lock) button is displayed</li><li><code>Desbloquear</code>
+      (Unlock) button is displayed</li><li><code>Motor</code> (Engine Start) button
+      is displayed</li><li><code>Claxon</code> (Horn) button is displayed</li><li><code>Luces</code>
+      (Lights) button is displayed</li></ul>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 95161
+    case_id: 61921
+    text1: <p>Verify <code>Campanas de calidad</code> card is displayed with Recall
+      status</p>
+    text2: null
+    text3: '<ul><li>Card is displayed with red icon</li><li>Title: <code>Campanas
+      de calidad</code> is displayed</li><li>Sub text: <code>Advertencia de bateria
+      de 12 voltios</code> is displayed</li><li><strong>Recall status</strong> is
+      indicated</li></ul>'
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 95162
+    case_id: 61921
+    text1: <p>Verify <code>Estado del vehículo</code> card is displayed with Vehicle
+      status</p>
+    text2: null
+    text3: '<ul><li>Card is displayed with orange icon</li><li>Title: <code>Estado
+      del vehículo</code> is displayed</li><li>Sub text: <code>Ventana abierta</code>
+      is displayed</li><li><strong>Vehicle status</strong> is indicated</li></ul>'
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 95163
+    case_id: 61921
+    text1: <p>Verify <code>Placas</code> card is displayed</p>
+    text2: null
+    text3: '<ul><li>Card is displayed</li><li>Title: <code>Placas</code> is displayed</li><li>Sub
+      text: <code>NMX-513</code> is displayed</li></ul>'
+    text4: null
+    display_order: 6
+  - column_name: custom_steps
+    id: 95164
+    case_id: 61921
+    text1: <p>Verify <code>Servicio y mantenimiento</code> card is displayed</p>
+    text2: null
+    text3: '<ul><li>Card is displayed with <strong>green icon</strong></li><li>Title:
+      <code>Servicio y mantenimiento</code> is displayed</li><li>Sub text: <code>Restan
+      18,000 km</code> is displayed</li></ul>'
+    text4: null
+    display_order: 7
+  - column_name: custom_steps
+    id: 95165
+    case_id: 61921
+    text1: <p>Verify <code>Garantía</code> card is displayed</p>
+    text2: null
+    text3: '<ul><li>Card is displayed with <strong>green icon</strong></li><li>Title:
+      <code>Garantía</code> is displayed</li><li>Sub text: <code>Tu garantía está
+      vigente</code> is displayed</li></ul>'
+    text4: null
+    display_order: 8
+  - column_name: custom_steps
+    id: 95166
+    case_id: 61921
+    text1: <p>Verify <code>Seguro</code> card is displayed</p>
+    text2: null
+    text3: '<ul><li>Card is displayed with <strong>green icon</strong></li><li>Title:
+      <code>Seguro</code> is displayed</li><li>Sub text: <code>Tu seguro está vigente</code>
+      is displayed</li></ul>'
+    text4: null
+    display_order: 9
+  - column_name: custom_steps
+    id: 95167
+    case_id: 61921
+    text1: <p>Verify <code>Controles</code> card is displayed</p>
+    text2: null
+    text3: '<ul><li>Card is displayed</li><li>Title: <code>Controles</code> is displayed</li><li>Sub
+      text: <code>Hace 1 hr - Bloqueado</code> is displayed</li></ul>'
+    text4: null
+    display_order: 10
+  - column_name: custom_steps
+    id: 95168
+    case_id: 61921
+    text1: <p>Verify <code>Clima</code> card is displayed</p>
+    text2: null
+    text3: '<ul><li>Card is displayed</li><li>Title: <code>Clima</code> is displayed</li><li>Sub
+      text: <code>Apagado</code> is displayed</li></ul>'
+    text4: null
+    display_order: 11
+  - column_name: custom_steps
+    id: 95169
+    case_id: 61921
+    text1: <p>Verify <code>Localizador de Mi Auto</code> card is displayed</p>
+    text2: null
+    text3: '<ul><li>Card is displayed</li><li>Title: <code>Localizador de Mi Auto</code>
+      is displayed</li><li>Sub text: <code>Hace 1 hr - 209 E Main St</code> is displayed</li></ul>'
+    text4: null
+    display_order: 12
+  - column_name: custom_steps
+    id: 95170
+    case_id: 61921
+    text1: <p>Verify <code>Alertas</code> card is displayed</p>
+    text2: null
+    text3: '<ul><li>Card is displayed</li><li>Title: <code>Alertas</code> is displayed</li></ul>'
+    text4: null
+    display_order: 13
+  - column_name: custom_steps
+    id: 95171
+    case_id: 61921
+    text1: <p>Verify <code>Conductor Adicional</code> card is displayed</p>
+    text2: null
+    text3: '<ul><li>Card is displayed</li><li>Title: <code>Conductor Adicional</code>
+      is displayed</li></ul>'
+    text4: null
+    display_order: 14
+  - column_name: custom_steps
+    id: 95172
+    case_id: 61921
+    text1: <p>Verify <code>Mis Fotos</code> card is displayed</p>
+    text2: null
+    text3: '<ul><li>Card is displayed</li><li>Title: <code>Mis Fotos</code> is displayed</li></ul>'
+    text4: null
+    display_order: 15
+  - column_name: custom_steps
+    id: 95173
+    case_id: 61921
+    text1: <p>Verify <code>Editar Tarjetas</code> CTA is displayed</p>
+    text2: null
+    text3: <ul><li><code>Editar Tarjetas</code> CTA link/button is displayed</li></ul>
+    text4: null
+    display_order: 16
+  - column_name: custom_steps
+    id: 95174
+    case_id: 61921
+    text1: <p>Tap <strong>Support icon</strong></p>
+    text2: null
+    text3: <ul><li>User is redirected to <code>Soporte</code> screen</li></ul>
+    text4: null
+    display_order: 17
+  - column_name: custom_steps
+    id: 95175
+    case_id: 61921
+    text1: <p>Tap vehicle nickname <code>QX80</code> (Garage Dropdown)</p>
+    text2: null
+    text3: '<ul><li><code>Seleccionar vehículo</code> modal opens with three vehicle
+      options: QX80 (Seleccionado), QX60, QX55</li><li>QX80 displays fuel level <code>165
+      km</code> and location <code>Franklin, TN</code></li><li>QX60 displays fuel
+      level <code>40 km</code> and location <code>Ciudad de Mexico, Ciudad...</code></li><li>QX55
+      displays fuel level <code>164 km</code> and location <code>Ciudad de Mexico,
+      Ciudad...</code></li></ul>'
+    text4: null
+    display_order: 18
+  - column_name: custom_steps
+    id: 95176
+    case_id: 61921
+    text1: <p>Tap <strong>Notification icon</strong></p>
+    text2: null
+    text3: <ul><li>User is redirected to <code>Centro de Notificaciones</code> screen</li></ul>
+    text4: null
+    display_order: 19
+  - column_name: custom_steps
+    id: 95177
+    case_id: 61921
+    text1: <p>Tap on the following elements to verify Demo Mode CTA alerts:</p><ul><li><code>Placas</code>
+      card</li><li><code>Servicio y mantenimiento</code> card</li><li><code>Garantía</code>
+      card</li><li><code>Seguro</code> card</li><li><code>Editar Tarjetas</code> CTA</li></ul>
+    text2: null
+    text3: '<ul><li>Each element tap displays modal with:</li><li>Title: <code>Modo
+      de demostración</code></li><li>Message: <code>No disponible en modo de demostración.</code></li><li><strong>OK
+      button</strong> is displayed to dismiss modal</li></ul>'
+    text4: null
+    display_order: 20
+  - column_name: custom_steps
+    id: 95178
+    case_id: 61921
+    text1: <p>Tap <strong>OK</strong> button on demo mode alert</p>
+    text2: null
+    text3: <ul><li>Modal is dismissed</li><li>User returns to Home Page</li></ul>
+    text4: null
+    display_order: 21
+  - column_name: custom_steps
+    id: 95179
+    case_id: 61921
+    text1: <p>Tap on the following cards and verify screen redirection:</p><ul><li><code>Campanas
+      de calidad</code> card</li><li><code>Estado del vehículo</code> card</li><li><code>Controles</code>
+      card</li><li><code>Clima</code> card</li><li><code>Localizador de Mi Auto</code>
+      card</li><li><code>Alertas</code> card</li><li><code>Conductor Adicional</code>
+      card</li><li><code>Mis Fotos</code> card</li></ul>
+    text2: null
+    text3: <ul><li><code>Campanas de calidad</code> card redirects to <code>Estado
+      del Vehículo</code> screen</li><li><code>Estado del vehículo</code> card redirects
+      to <code>Estado del Vehículo</code> screen</li><li><code>Controles</code> card
+      redirects to <code>Controles</code> screen</li><li><code>Clima</code> card redirects
+      to <code>Clima</code> screen</li><li><code>Localizador de Mi Auto</code> card
+      redirects to <code>Mapa</code> screen</li><li><code>Alertas</code> card redirects
+      to <code>Alertas</code> screen</li><li><code>Conductor Adicional</code> card
+      redirects to <code>Conductor Adicional</code> screen</li><li><code>Mis Fotos</code>
+      card redirects to <code>Mis Fotos</code> screen</li></ul>
+    text4: null
+    display_order: 22
+  - column_name: custom_steps
+    id: 95180
+    case_id: 61921
+    text1: <p>INFINITI - Tap on the <code>Vehicle Selector</code> dropdown and select
+      the <code>QX80</code> <strong>(AVK2)</strong></p>
+    text2: null
+    text3: <ul><li>Vehicle switches to <code>QX80</code> with AVK2 capabilities</li></ul>
+    text4: null
+    display_order: 23
+  - column_name: custom_steps
+    id: 95181
+    case_id: 61921
+    text1: <p>INFINITI - Tap on the <code>Vehicle Selector</code> dropdown and select
+      the <code>QX60</code> <strong>(AVK)</strong></p>
+    text2: null
+    text3: <ul><li>Vehicle switches to <code>QX60</code> with AVK capabilities</li></ul>
+    text4: null
+    display_order: 24
+  - column_name: custom_steps
+    id: 95182
+    case_id: 61921
+    text1: <p>INFINITI - Tap on the <code>Vehicle Selector</code> dropdown and select
+      the <code>QX55</code> <strong>(AVK)</strong></p>
+    text2: null
+    text3: <ul><li>Vehicle switches to <code>QX55</code> with AVK capabilities</li></ul>
+    text4: null
+    display_order: 25

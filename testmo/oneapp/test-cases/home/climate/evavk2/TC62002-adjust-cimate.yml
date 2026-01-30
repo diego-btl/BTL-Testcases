@@ -1,0 +1,32 @@
+testmo:
+  case_id: 62002
+  folder_id: 6778
+  project_id: 2
+  folder_path: home/climate/evavk2
+  folder_name_ui: EVAVK2
+  created_at: '2025-11-14 22:55:43.271142'
+  updated_at: '2025-11-14 23:04:15.236368'
+  last_sync: '2026-01-30T18:21:05.200838Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/62002
+metadata:
+  name: Adjust Cimate
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>Climate is turned on </p>
+  steps:
+  - column_name: custom_steps
+    id: 95534
+    case_id: 62002
+    text1: <p>Make changes to climate settings or temperature</p><p>Tap on Apply Changes</p>
+    text2: null
+    text3: <p>AdjustClimate is triggered</p><p>And polling requests are sent</p><p>you
+      see the following toasts </p><p>Initiating Adjustment in climate </p><p>Contacting
+      &lt;Year and model&gt; to to adjust climate </p><p>Climate Adjusted</p><p>The
+      Climate card on Home screen will reflect the set temperature IF the temperature
+      was adjusted</p>
+    text4: null
+    display_order: 1

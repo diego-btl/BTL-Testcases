@@ -1,0 +1,82 @@
+testmo:
+  case_id: 62077
+  folder_id: 6787
+  project_id: 2
+  folder_path: vehicle/schedule-service/create
+  folder_name_ui: Create
+  created_at: '2025-12-02 22:48:33.246852'
+  updated_at: '2026-01-20 21:18:43.679975'
+  last_sync: '2026-01-30T18:21:04.913167Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/62077
+metadata:
+  name: Create Schedule Service - Select Services
+  priority: 1
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is logged in with a vehicle and preferred dealer/retailer
+    with <code>nativeServiceBooking= true</code> is set</p>
+  steps:
+  - column_name: custom_steps
+    id: 96037
+    case_id: 62077
+    text1: <p>Tap on <code>Schedule Service</code> CTA from any entry point listed
+      above</p>
+    text2: null
+    text3: <ul><li>Screen title is <code>Select Services</code></li><li>Progress indicator
+      shows current step (Step 1 of 4)</li><li>Selected dealer/retailer card displays
+      at top with dealer/retailer name and chevron to modify</li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 96038
+    case_id: 62077
+    text1: <p>Verify <code>Selected Dealer/Retailer</code> card information is displayed</p>
+    text2: null
+    text3: <ul><li>Card shows dealer/retailer name correctly</li><li>Chevron icon
+      present to allow dealer/retailer change</li><li><code>Call Dealer/Retailer</code>
+      link is available below services list</li></ul>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 96039
+    case_id: 62077
+    text1: <p>Tap on any of the available services in the list</p>
+    text2: null
+    text3: <ul><li>Service checkbox is marked/selected with <strong>checkmark</strong></li><li><code>NEXT</code>
+      button becomes enabled (from disabled state)</li></ul>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 96040
+    case_id: 62077
+    text1: <p>Verify multiple services can be selected</p>
+    text2: null
+    text3: <ul><li>User can select multiple service checkboxes</li><li>All selected
+      services show <strong>checkmarks</strong></li><li><code>NEXT</code> button remains
+      enabled</li></ul>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 96041
+    case_id: 62077
+    text1: <p>Tap <code>NEXT</code> button with at least one service selected</p>
+    text2: null
+    text3: <ul><li>User proceeds to <code>Additional Information</code> screen</li><li>Selected
+      services are passed to next step</li></ul>
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 96042
+    case_id: 62077
+    text1: <p>Tap <code>Call Dealer</code> link (NISSAN) or <code>Call Retailer</code>
+      link (INFINITI)</p>
+    text2: null
+    text3: <ul><li>Phone number is retrieved from <code>VehiclePreferredDealer </code>query
+      phone field</li><li><strong>Android:</strong> Phone dialer opens with dealer/retailer
+      contact number</li><li><strong>iOS:</strong> Phone call drawer/sheet opens with
+      dealer/retailer contact number and Call/Cancel options</li></ul>
+    text4: null
+    display_order: 6

@@ -1,0 +1,44 @@
+testmo:
+  case_id: 62205
+  folder_id: 6818
+  project_id: 2
+  folder_path: vehicle/second-delivery/second-delivery-discovery-cta-display
+  folder_name_ui: Second Delivery - Discovery & CTA Display
+  created_at: '2025-12-19 17:18:11.585340'
+  updated_at: '2026-01-06 18:51:58.000168'
+  last_sync: '2026-01-30T18:21:04.221684Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/62205
+metadata:
+  name: Second Delivery - Card - Non-Prioritized
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>Feature Flag <code>EnableSecondDelivery</code> is set to
+    <code>true</code></li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 97033
+    case_id: 62205
+    text1: "<p>Mock <code>SecondDeliveryEligibility</code> with:</p><pre><code class=\"\
+      editor-plain language-plain code-block\">{\n  \"cta\": {\n    \"discover\":\
+      \ {\n      \"__typename\": \"SecondDeliveryDiscoverCTA\",\n      \"prioritized\"\
+      : false\n    },\n    \"daysSincePurchased\": 45\n  }\n}</code></pre><p>Login\
+      \ to app</p>"
+    text2: null
+    text3: <ul><li>Second Delivery Card is NOT displayed on Home screen</li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 97034
+    case_id: 62205
+    text1: <p>Navigate to Vehicle screen</p>
+    text2: null
+    text3: <ul><li>Second Delivery Card is displayed on Vehicle screen</li><li>Card
+      appears below other cards (not at top)</li><li>Card title shows <code>MyINFINITI
+      Expert</code> (Infiniti)</li><li>Card body shows <code>Discover more about your
+      {vehicle model}</code></li><li>Chevron (&gt;) icon displayed on right</li></ul>
+    text4: null
+    display_order: 2

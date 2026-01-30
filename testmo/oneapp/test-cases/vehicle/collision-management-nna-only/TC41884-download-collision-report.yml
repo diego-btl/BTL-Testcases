@@ -1,0 +1,48 @@
+testmo:
+  case_id: 41884
+  folder_id: 3800
+  project_id: 2
+  folder_path: vehicle/collision-management-nna-only
+  folder_name_ui: Collision Management - NNA only
+  created_at: '2025-06-09 23:46:14.288781'
+  updated_at: '2025-06-09 23:48:42.550920'
+  last_sync: '2026-01-30T18:21:05.885758Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/41884
+metadata:
+  name: Download Collision Report
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>A collision report has been generated successfully.</li><li>The
+    user is on the Collision Generated Report screen.</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 71983
+    case_id: 41884
+    text1: <p>Tap the Download Report CTA</p>
+    text2: null
+    text3: <p>A system dialog appears prompting the user to select a location to save
+      the generated report.</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 71984
+    case_id: 41884
+    text1: <p>In the system dialog, choose a save location on the mobile device (e.g.,
+      "Files" folder)</p>
+    text2: null
+    text3: <p>The user is able to choose the desired folder (e.g., Files)</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 71985
+    case_id: 41884
+    text1: <p> Tap Save</p>
+    text2: null
+    text3: <p>The save dialog closes, and the user remains on the Generated Report
+      screen.</p>
+    text4: null
+    display_order: 3

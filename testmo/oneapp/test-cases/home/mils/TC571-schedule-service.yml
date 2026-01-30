@@ -1,0 +1,32 @@
+testmo:
+  case_id: 571
+  folder_id: 50
+  project_id: 2
+  folder_path: home/mils
+  folder_name_ui: MILs
+  created_at: '2023-08-01 23:08:19.889103'
+  updated_at: '2025-10-11 13:44:05.171627'
+  last_sync: '2026-01-30T18:21:09.157166Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/571
+metadata:
+  name: Schedule Service
+  priority: 1
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has a MIL status indictor active</p>
+  steps:
+  - column_name: custom_steps
+    id: 740
+    case_id: 571
+    text1: <p>1. Tap on Schedule Service</p>
+    text2: null
+    text3: <p>1. User should see Dealer Details (if user has a preferred dealer and
+      native scheduling is false)<br /><br />User should see Select Services (if user
+      has a preferred dealer and native scheduling is true)<br /><br />User should
+      see Find a Dealer (if user does not have a preferred dealer)<br /><br />If FuelAutonomy/Battery
+      level are in low state (not charging), gas/charging station CTA will have priority</p>
+    text4: null
+    display_order: 1

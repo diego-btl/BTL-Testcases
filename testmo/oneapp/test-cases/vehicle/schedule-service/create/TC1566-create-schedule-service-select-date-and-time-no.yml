@@ -1,0 +1,29 @@
+testmo:
+  case_id: 1566
+  folder_id: 6787
+  project_id: 2
+  folder_path: vehicle/schedule-service/create
+  folder_name_ui: Create
+  created_at: '2023-08-28 20:13:24.246370'
+  updated_at: '2026-01-20 21:18:43.679975'
+  last_sync: '2026-01-30T18:21:08.024350Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/1566
+metadata:
+  name: Create Schedule Service - Select Date and Time - No Available Time Slots
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: User has selected at least one service and entered mileage if required
+  steps:
+  - column_name: custom_steps
+    id: 102374
+    case_id: 1566
+    text1: <p>Tap <code>NEXT</code> on <code>Additional Information</code> screen</p>
+    text2: null
+    text3: <ul><li>User should see <code>Select Date and Time</code> screen with messaging
+      that no time slots are available</li></ul>
+    text4: null
+    display_order: 1

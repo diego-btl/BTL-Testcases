@@ -1,0 +1,54 @@
+testmo:
+  case_id: 32151
+  folder_id: 4140
+  project_id: 6
+  folder_path: installation
+  folder_name_ui: Installation
+  created_at: '2025-04-01 17:50:43.371591'
+  updated_at: '2025-11-03 16:40:25.749660'
+  last_sync: '2026-01-30T18:20:46.046940Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/32151
+metadata:
+  name: Feature Flags
+  priority: 12
+  type: functional
+  status: active
+  estimate: 1680000000
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>App is installed</li><li>Add a breakpoint or map local to
+    the <code>Firebase Remote Config</code> call and modify true or false any feature
+    under a feature flag, e.g.</li></ul><ol><li><code>EnableWebviewLogin</code></li></ol>
+  steps:
+  - column_name: custom_steps
+    id: 94845
+    case_id: 32151
+    text1: <p>Open the app </p>
+    text2: null
+    text3: <p>The Feature Flag <strong>[FLAG_KEY]</strong> is listed and matches the
+      Firebase configuration value.</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 94846
+    case_id: 32151
+    text1: <p><strong>Mock the Feature Flag</strong> (set to <code>true</code> if
+      it was <code>false</code>, or to <code>false</code> if it was <code>true</code>)
+      and relaunch.</p>
+    text2: null
+    text3: <ul><li><strong>true →</strong> feature <strong>enabled</strong> and can
+      be accessed within the app.</li><li><strong>false →</strong> feature <strong>disabled</strong>
+      and <strong>hidden</strong>.</li></ul>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 94847
+    case_id: 32151
+    text1: <p><strong>Set an invalid value</strong> (neither <code>true</code> nor
+      <code>false</code>) and relaunch.</p>
+    text2: null
+    text3: <p>Feature defaults to <strong>false</strong> (disabled)</p>
+    text4: null
+    display_order: 3
+  notes: <ul><li>Check occurs on launch and foreground</li></ul>

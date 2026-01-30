@@ -1,0 +1,76 @@
+testmo:
+  case_id: 9012
+  folder_id: 411
+  project_id: 2
+  folder_path: home/additional-driver
+  folder_name_ui: Additional Driver
+  created_at: '2023-11-21 08:16:44.822142'
+  updated_at: '2024-10-17 17:57:34.769274'
+  last_sync: '2026-01-30T18:21:07.311671Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/9012
+metadata:
+  name: PD - AD List Screen - Pending - Cancel Invite - Failure/Error
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has an AVK2 vehicle and is PRIMARY_DRIVER</p><p>User has
+    a valid pending invitation</p><p>User is viewing pending invitation</p>
+  steps:
+  - column_name: custom_steps
+    id: 11615
+    case_id: 9012
+    text1: "<p>Mock an error for <code>InviteDriverStatus</code> [iOS] with the following:</p><pre><code\
+      \ class=\"editor-json language-json code-block\">{\n  \"data\": {\n    \"ownerInviteAction\"\
+      : {\n      \"__typename\": \"GeneralErrors\",\n      \"errorMessage\": \"UNEXPECTED\
+      \ ERROR : Owner profile data not found.\"\n    }\n  }\n}</code></pre><p>Different\
+      \ error types: </p><ul><li><code>GeneralErrors</code></li><li><code>DatabaseError</code></li><li><code>BrandError</code></li><li><code>TokenError</code></li><li><code>InvalidInviteIdError</code></li></ul><p>Note:\
+      \ can also use an HTTP error</p>"
+    text2: null
+    text3: null
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 11616
+    case_id: 9012
+    text1: <p>Tap on Cancel Invite</p>
+    text2: null
+    text3: <p>User should see <code>Cancel Invite?</code> modal with options - No/Yes</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 11617
+    case_id: 9012
+    text1: <p>Tap on No</p>
+    text2: null
+    text3: <p>User should see modal dismiss</p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 11618
+    case_id: 9012
+    text1: <p>Tap on Yes</p>
+    text2: null
+    text3: <p>User should see a loading spinner, then an <code>Failed to cancel invite</code>
+      modal with option Cancel/Retry</p>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 11619
+    case_id: 9012
+    text1: <p>Tap on Cancel</p>
+    text2: null
+    text3: <p>User should see the error modal dismiss and remain on the pending invitation
+      screen</p>
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 11620
+    case_id: 9012
+    text1: <p>Tap on Retry</p>
+    text2: null
+    text3: <p>User should see the same API call triggered again</p>
+    text4: null
+    display_order: 6

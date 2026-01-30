@@ -1,0 +1,84 @@
+testmo:
+  case_id: 61932
+  folder_id: 6755
+  project_id: 2
+  folder_path: home/charge/v1g-vehicle-to-grid
+  folder_name_ui: V1G - Vehicle-to-Grid
+  created_at: '2025-11-05 17:51:24.388154'
+  updated_at: '2026-01-18 17:51:37.495705'
+  last_sync: '2026-01-30T18:21:05.532061Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/61932
+metadata:
+  name: V1G - NOT_ENROLLED/CANCELLED
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<p>Nissan NNA and NCI only</p><p>EV or EV AVK2 only</p><p>PD only</p><p>"v1GMonitoredChargingAccountStatus":
+    "NOT_ENROLLED" or "CANCELLED"</p>'
+  steps:
+  - column_name: custom_steps
+    id: 95202
+    case_id: 61932
+    text1: <p>1. User is on the Optimize or Insights screen</p><p>2. Tap the 'Activate
+      Now' button</p>
+    text2: null
+    text3: "<p>1. V1GEnrollMonitoredChargingPlan APIs is called returning \"v1GMonitoredChargingAccountStatus\"\
+      : \"FAILED\"</p><pre><code class=\"editor-plain language-plain code-block\"\
+      >{\n  \"data\": {\n    \"v1GEnrollMonitoredChargingPlan\": {\n      \"__typename\"\
+      : \"V1GEnrollMonitoredChargingPlanResponse\",\n      \"data\": {\n        \"\
+      __typename\": \"V1GEnrollChargePlanData\",\n        \"v1GMonitoredChargingAccountStatus\"\
+      : \"FAILED\"\n      }\n    }\n  }\n}</code></pre><p>2. The modal 'Enrolling\
+      \ account failed' with 'Cancel' and 'Contact Support' buttons is displayed</p><figure\
+      \ class=\"image\"><img src=\"/attachments/view/8705\" alt=\"8705\" /></figure>"
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 95203
+    case_id: 61932
+    text1: <p>Tap 'Cancel' button</p>
+    text2: null
+    text3: <p>The modal is dismissed</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 95204
+    case_id: 61932
+    text1: <p>Tap 'Contact Support' button</p>
+    text2: null
+    text3: <p>The native app page is opened with prepopulation of the phone number
+      (ContactUs API <code>customerCare</code>)</p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 95205
+    case_id: 61932
+    text1: <p>1. User is on the Optimize or Insights screen</p><p>2. Tap the 'Activate
+      Now' button</p>
+    text2: null
+    text3: '<p>1. V1GEnrollMonitoredChargingPlan APIs is called returning  the "v1GMonitoredChargingAccountStatus":
+      "INACTIVE"/"ENROLLING"/"NOT_ENROLLED"/"CANCELLED"/"CLOSED" OR V1GEnrollMonitoredChargingPlan
+      API is failed</p><p>2. The SWW modal with ''Ok'' button is displayed</p>'
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 95206
+    case_id: 61932
+    text1: <p>Tap 'Ok' button</p>
+    text2: null
+    text3: <p>The modal is dismissed</p>
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 101330
+    case_id: 61932
+    text1: <p>Navigate back to the Status tab</p>
+    text2: null
+    text3: <p>If V1G status was changed from NOT_ENROLLED to INACTIVE/ENROLLING/ACTIVE/CANCELLED/FAILED
+      &gt; dismissible marketing message should be hidden</p><p>If V1G status was
+      changed from NOT_ENROLLED to CLOSED &gt; Optimize and Insights tabs should be
+      hidden</p>
+    text4: null
+    display_order: 6

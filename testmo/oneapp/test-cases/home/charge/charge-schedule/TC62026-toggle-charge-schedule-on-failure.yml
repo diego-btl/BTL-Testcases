@@ -1,0 +1,32 @@
+testmo:
+  case_id: 62026
+  folder_id: 6781
+  project_id: 2
+  folder_path: home/charge/charge-schedule
+  folder_name_ui: Charge Schedule
+  created_at: '2025-11-21 22:34:36.881130'
+  updated_at: '2025-11-21 22:38:51.665734'
+  last_sync: '2026-01-30T18:21:05.068060Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/62026
+metadata:
+  name: Toggle Charge Schedule ON - Failure
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has an EV/EV2</p><p>At least 1 charge schedule exists with
+    the toggle in disabled state</p><p>User is on the Manage EV screen </p>
+  steps:
+  - column_name: custom_steps
+    id: 95689
+    case_id: 62026
+    text1: <p>Tap the toggle ON for one of the created charge schedule</p>
+    text2: null
+    text3: '<p>1. The ToggleChargeSchedule API is triggered, sending "enable": true
+      in the request</p><p>2. The CheckChargeServiceRequest starts polling, returning
+      "status": "FAILED"</p><p>3. The failure toast ''Charge schedule failed to toggle''
+      is displayed</p><p>4. The toggle remains in the same state (disabled)</p>'
+    text4: null
+    display_order: 1

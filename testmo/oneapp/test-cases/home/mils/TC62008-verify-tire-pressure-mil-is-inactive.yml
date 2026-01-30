@@ -1,0 +1,43 @@
+testmo:
+  case_id: 62008
+  folder_id: 50
+  project_id: 2
+  folder_path: home/mils
+  folder_name_ui: MILs
+  created_at: '2025-11-17 22:35:40.941451'
+  updated_at: '2026-01-06 18:15:07.104641'
+  last_sync: '2026-01-30T18:21:05.159516Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/62008
+metadata:
+  name: Verify Tire Pressure MIL is inactive
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  steps:
+  - column_name: custom_steps
+    id: 95564
+    case_id: 62008
+    text1: <p>Mock <i><strong>VehicleDynamicData </strong></i>only<i><strong> </strong></i>with
+      <code>TIRE_PRESSURE=false</code> &gt; Call <code>VehicleDynamicData</code> api
+      &gt; Go to Home screen</p>
+    text2: null
+    text3: <p><strong>Verify: </strong></p><ul><li><strong>Tire Pressure MIL card</strong>
+      is <strong>not displayed</strong>.</li><li>Tire status cards are <strong>not
+      shown</strong></li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 95571
+    case_id: 62008
+    text1: <p>Mock <i><strong>VehicleDynamicData </strong></i>only<i><strong> </strong></i>with
+      <code>TIRE_PRESSURE=false</code> &gt; Call <code>VehicleDynamicData</code> api
+      &gt; Go to Vehicle screen</p>
+    text2: null
+    text3: <p><strong>Verify: </strong></p><ul><li><strong>Tire Pressure MIL card</strong>
+      is <strong>not displayed</strong>.</li><li>Tire status cards are <strong>not
+      shown</strong></li></ul>
+    text4: null
+    display_order: 2

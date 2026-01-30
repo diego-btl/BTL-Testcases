@@ -1,0 +1,33 @@
+testmo:
+  case_id: 24277
+  folder_id: 1453
+  project_id: 2
+  folder_path: vehicle/second-delivery
+  folder_name_ui: Second Delivery
+  created_at: '2024-10-18 14:33:37.715505'
+  updated_at: '2026-01-06 18:51:33.721783'
+  last_sync: '2026-01-30T18:21:06.870254Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/24277
+metadata:
+  name: SD - Create Appointment - Address Validation
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<p>Vehicle is eligible within the valid period from purchase.</p><p>In
+    the Firebase config &gt; <code>"EnableSecondDelivery": "true"</code></p>'
+  steps:
+  - column_name: custom_steps
+    id: 37845
+    case_id: 24277
+    text1: <ol><li>Enter an invalid address.</li><li>Submit the address.</li><li>Observe
+      validation prompt. </li><li>Correct the address and submit again.</li></ol>
+    text2: null
+    text3: <p>The app should prompt the user to update the address or schedule a virtual
+      appointment. Address validation errors should prevent progress.</p>
+    text4: null
+    display_order: 1
+  notes: '<ul><li>Account: natemie@btl.ca/Telematics123! - INF</li><li>Account: alansurenasd@btl.ca
+    / Nissan@123 - NIS</li></ul>'

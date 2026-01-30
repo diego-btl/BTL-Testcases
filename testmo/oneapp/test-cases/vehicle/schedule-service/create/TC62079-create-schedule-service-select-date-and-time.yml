@@ -1,0 +1,97 @@
+testmo:
+  case_id: 62079
+  folder_id: 6787
+  project_id: 2
+  folder_path: vehicle/schedule-service/create
+  folder_name_ui: Create
+  created_at: '2025-12-02 23:56:36.285007'
+  updated_at: '2026-01-20 21:18:43.679975'
+  last_sync: '2026-01-30T18:21:04.897611Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/62079
+metadata:
+  name: Create Schedule Service - Select Date and Time
+  priority: 1
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has entered service details and vehicle mileage on the <code>Additional
+    Information</code> screen and tapped <code>NEXT</code></p>
+  steps:
+  - column_name: custom_steps
+    id: 96050
+    case_id: 62079
+    text1: <p>Verify user arrives on <code>Select Date and Time</code> screen after
+      tapping <code>NEXT</code> from <code>Additional Information</code> screen</p>
+    text2: null
+    text3: <ul><li>Screen title is <code>Select Date and Time</code></li><li>Progress
+      indicator shows current step (Step 3 of 4)</li><li>Calendar with current month
+      displayed</li><li>Available dates are in <strong>enabled state</strong>; unavailable
+      dates are <strong>disabled</strong></li><li>At least 2 weeks worth of days are
+      displayed</li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 96051
+    case_id: 62079
+    text1: <p>Tap on <strong>left/right navigation arrows</strong> to navigate through
+      months</p>
+    text2: null
+    text3: <ul><li><code>ServiceAppointmentTimeSlots</code> API is called to fetch
+      available time slots for the new month</li><li>Calendar updates to show previous/next
+      month</li><li>Available dates are displayed in <strong>enabled state</strong></li><li>Unavailable
+      dates are <strong>disabled</strong></li></ul>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 96052
+    case_id: 62079
+    text1: <p>Tap on an available date (in <strong>enabled state</strong>)</p>
+    text2: null
+    text3: <ul><li>Date is selected and highlighted in <strong>blue</strong></li><li><code>Select
+      an Available Time</code> section displays below</li><li>Available time slots
+      for that date are displayed</li></ul>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 96053
+    case_id: 62079
+    text1: <p>Tap on an available time slot</p>
+    text2: null
+    text3: <ul><li>Time slot is selected and highlighted in <strong>blue</strong></li><li><code>NEXT</code>
+      button becomes <strong>enabled</strong></li></ul>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 96054
+    case_id: 62079
+    text1: <p>Verify <code>Optional Preferences</code> card is displayed below time
+      slots</p>
+    text2: null
+    text3: '<ul><li><code>Optional Preferences</code> card is displayed at bottom</li><li><code>Transportation:
+      --</code> field is displayed</li><li><code>Advisor: --</code> field is displayed</li><li><code>Add</code>
+      link is available to access full preferences screen</li></ul>'
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 96055
+    case_id: 62079
+    text1: <p>Tap <code>NEXT</code> button with date and time selected</p>
+    text2: null
+    text3: <ul><li>User proceeds to <code>Review Service Request</code> screen</li><li>Selected
+      date and time are passed to next step</li></ul>
+    text4: null
+    display_order: 6
+  - column_name: custom_steps
+    id: 96056
+    case_id: 62079
+    text1: <p>Tap <code>Call Dealer</code> link (NISSAN) or <code>Call Retailer</code>
+      link (INFINITI)</p>
+    text2: null
+    text3: <ul><li>Phone number is retrieved from <code>VehiclePreferredDealer </code>query
+      phone field</li><li><strong>Android:</strong> Phone dialer opens with dealer/retailer
+      contact number</li><li><strong>iOS:</strong> Phone call drawer/sheet opens with
+      dealer/retailer contact number and Call/Cancel options</li></ul>
+    text4: null
+    display_order: 7

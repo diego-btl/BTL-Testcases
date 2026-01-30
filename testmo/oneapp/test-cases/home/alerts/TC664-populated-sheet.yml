@@ -1,0 +1,19 @@
+testmo:
+  case_id: 664
+  folder_id: 70
+  project_id: 2
+  folder_path: home/alerts
+  folder_name_ui: Alerts
+  created_at: '2023-08-01 23:08:21.101851'
+  updated_at: '2025-07-29 16:14:45.895570'
+  last_sync: '2026-01-30T18:21:08.908788Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/664
+metadata:
+  name: Populated Sheet
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is on the Alerts sheet and has alerts set for their vehicle</p>

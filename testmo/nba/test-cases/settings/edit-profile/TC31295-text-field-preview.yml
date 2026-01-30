@@ -1,0 +1,39 @@
+testmo:
+  case_id: 31295
+  folder_id: 4011
+  project_id: 5
+  folder_path: settings/edit-profile
+  folder_name_ui: Edit Profile
+  created_at: '2025-03-11 16:44:37.964131'
+  updated_at: null
+  last_sync: '2026-01-30T18:20:38.115425Z'
+  url: https://bethinklabs.testmo.net/repositories/5/cases/31295
+metadata:
+  name: Text field Preview
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is in the edit profile flow</p>
+  steps:
+  - column_name: custom_steps
+    id: 51424
+    case_id: 31295
+    text1: <p>Modify <code>VehicleDataStatic</code> so data is returned in the <code>user</code>
+      section</p>
+    text2: null
+    text3: <p>Data that is returned for each field should be displayed as placeholder
+      text</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 51425
+    case_id: 31295
+    text1: <p>Modify <code>VehicleDataStatic</code> so no data is returned for the
+      <code>user</code> section</p>
+    text2: null
+    text3: <p>Text fields should be blank</p>
+    text4: null
+    display_order: 2

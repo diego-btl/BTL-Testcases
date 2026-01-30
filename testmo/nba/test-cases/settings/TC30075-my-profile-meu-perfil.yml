@@ -1,0 +1,108 @@
+testmo:
+  case_id: 30075
+  folder_id: 3766
+  project_id: 5
+  folder_path: settings
+  folder_name_ui: Settings
+  created_at: '2025-01-27 08:11:22.631196'
+  updated_at: '2025-03-17 18:17:20.417473'
+  last_sync: '2026-01-30T18:20:38.201303Z'
+  url: https://bethinklabs.testmo.net/repositories/5/cases/30075
+metadata:
+  name: My Profile - Meu Perfil
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  steps:
+  - column_name: custom_steps
+    id: 48985
+    case_id: 30075
+    text1: <p>User taps the <code>Meu Perfil</code> card </p>
+    text2: null
+    text3: <ul><li>User should be redirected to the <strong>"Meu Perfil"</strong>
+      screen, where their profile information is displayed.</li><li>The screen header
+      <strong>"Meu Perfil"</strong> should be visible at the top.</li><li>A back button
+      ("&lt;") should be visible in the <strong>top-left corner</strong> for navigation.</li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 48986
+    case_id: 30075
+    text1: null
+    text2: null
+    text3: <p>User should see a <code>Conta</code> section that shows:</p><ul><li><strong>CPF</strong>
+       displayed with only the first <strong>three</strong> digits visible (e.g.,
+      <code>419.***.***-**</code>).</li><li><strong>Senha</strong> is displayed as
+      masked (<code>●●●●●●●</code>).</li><li><p><strong>Senha</strong> card has a
+      <strong>right chevron (›)</strong> indicating navigation</p><p> </p></li></ul>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 48987
+    case_id: 30075
+    text1: <p>User taps on the <code>Senha</code> card</p>
+    text2: null
+    text3: <ul><li>The app should <strong>open the forgot password link</strong> retrieved
+      from the <strong>contactUs</strong> query <strong>in an external browser</strong>.</li><li>If
+      the <strong>contactUs query fails or the </strong><code><strong>forgotPassword</strong></code><strong>
+      field inside </strong><code><strong>contactUs</strong></code><strong> is empty
+      or null</strong>, the app should <strong>automatically open</strong> the fallback
+      URL in an <strong>external browser</strong>.</li></ul>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 48988
+    case_id: 30075
+    text1: null
+    text2: null
+    text3: '<p>User should see a <code>Informações de Contato</code> section that
+      shows:</p><ul><li><strong>An Edit button ("Editar")</strong> in the top-right
+      corner.</li><li><strong>Fields retrieved from the user object in </strong><code><strong>vehiclesStaticData</strong></code>,
+      displayed as follows:</li></ul><p><i><strong>Nome </strong></i></p><ul><li>The
+      <strong>Nome</strong> field should display the <strong>first and last name in
+      sequence</strong>.</li><li>The <strong>last name should be masked</strong>,
+      showing only the first two characters.</li><li><strong>Example:</strong> <code>"Carlos
+      Monteiro"</code> → <code>"Carlos Mo******"</code>.</li></ul><p><strong>Endereço</strong></p><ul><li>The
+      <strong>address1, address2, city, and state should be displayed together</strong>.<ul><li><code>address1</code>:
+      <strong>First 8 characters visible, the rest masked</strong> (e.g., <code>"Avenida
+      *****"</code>).</li><li><code>address2</code>: <strong>Fully masked</strong>
+      (<code>*********</code>).</li><li><code>city</code>: <strong>Displayed in full</strong>
+      (e.g., <code>"São Paulo"</code>).</li><li><code>state</code>: <strong>Displayed
+      in full</strong> (e.g., <code>"SP"</code>).</li></ul></li></ul><p><strong>Número
+      de Telefone</strong></p><ul><li>The <strong>mobile number should be masked based
+      on its length</strong>:<ul><li><strong>10-digit format:</strong> <code>(XX)
+      ****-XXXX</code> (e.g., <code>(11) 9***-1212</code>).</li><li><strong>11-digit
+      format:</strong> <code>(XX) * ****-XXXX</code> (e.g., <code>(11) 9 ****-1212</code>).</li></ul></li></ul><p><strong>Email</strong></p><ul><li>The
+      <strong>first two characters of the email should be visible</strong>, with the
+      rest of the local part masked.</li><li>The <strong>domain should be fully displayed</strong>.</li><li><strong>Example:</strong>
+      <code>"CMont123@yopmail.com"</code> → <code>"CM*****@yopmail.com"</code>.</li></ul>'
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 51225
+    case_id: 30075
+    text1: <p>User taps the <code>Back</code> button</p>
+    text2: null
+    text3: <p>User should be redirected to the <strong>"Ajustes"</strong> screen.</p>
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 51224
+    case_id: 30075
+    text1: <p>User taps on <code>Editar</code> button</p>
+    text2: null
+    text3: <p>User should be navigated to the Edit Profile flow</p>
+    text4: null
+    display_order: 6
+  - column_name: custom_steps
+    id: 48989
+    case_id: 30075
+    text1: <p>Modify the static call so one of the following is empty<br /><code>address1</code>,<code>address2</code>,<code>city</code>,<code>state</code></p>
+    text2: null
+    text3: <p>User should see the copy <code>*Edite suas infomações de contato para
+      completar seu cadastro</code></p>
+    text4: null
+    display_order: 7

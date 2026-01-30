@@ -1,0 +1,90 @@
+testmo:
+  case_id: 543
+  folder_id: 6800
+  project_id: 2
+  folder_path: demo-mode/vehicle
+  folder_name_ui: Vehicle
+  created_at: '2023-08-01 23:08:19.533637'
+  updated_at: '2026-01-13 21:22:09.976186'
+  last_sync: '2026-01-30T18:21:09.227948Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/543
+metadata:
+  name: Demo Mode - Vehicle Page
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  steps:
+  - column_name: custom_steps
+    id: 712
+    case_id: 543
+    text1: <p>Tap Vehicle in the bottom nav </p>
+    text2: null
+    text3: <p>User should see dummy data for three vehicles on INF and three vehicles
+      on NIS</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 9396
+    case_id: 543
+    text1: <p>Tap on the Vehicle Profile button</p>
+    text2: null
+    text3: <p>User should be navigated to Vehicle Profile screen and see dummy data
+      for all vehicles - INF and NIS</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 9397
+    case_id: 543
+    text1: <p>Tap any of the cards in the Vehicle Profile screen, except for <code>Remote
+      Data Wipe</code></p>
+    text2: null
+    text3: <p>User should see the demo mode alert modal</p>
+    text4: null
+    display_order: 3
+  - column_name: custom_steps
+    id: 21258
+    case_id: 543
+    text1: <p>Tap on <code>Remote Data Wipe</code></p>
+    text2: null
+    text3: <p>The user should be navigated to the <code>Remote Data Wipe</code> page</p>
+    text4: null
+    display_order: 4
+  - column_name: custom_steps
+    id: 21259
+    case_id: 543
+    text1: <p>While on the Page above, click on the <code>Delete Data</code> CTA</p>
+    text2: null
+    text3: <p>User should see the demo mode alert modal</p>
+    text4: null
+    display_order: 5
+  - column_name: custom_steps
+    id: 9398
+    case_id: 543
+    text1: <p>Return to the Vehicle Page and tap on the Schedule Service/Find a Dealer
+      buttons</p>
+    text2: null
+    text3: <p>User should be navigated to a Find a Dealer screen with no search results
+      screen</p>
+    text4: null
+    display_order: 6
+  - column_name: custom_steps
+    id: 9399
+    case_id: 543
+    text1: <p>Tap on the Service History button</p>
+    text2: null
+    text3: <p>User should see the demo mode alert modal</p>
+    text4: null
+    display_order: 7
+  - column_name: custom_steps
+    id: 9400
+    case_id: 543
+    text1: <p>Tap on the Est. Mileage card</p>
+    text2: null
+    text3: <p>User should see the demo mode alert modal</p>
+    text4: null
+    display_order: 8
+  notes: <p><strong>Battery Level card - </strong> Need to add <code>Enable V2L</code>
+    cases from Firebase </p>

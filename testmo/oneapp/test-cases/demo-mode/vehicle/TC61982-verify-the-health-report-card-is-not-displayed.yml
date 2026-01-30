@@ -1,0 +1,49 @@
+testmo:
+  case_id: 61982
+  folder_id: 6800
+  project_id: 2
+  folder_path: demo-mode/vehicle
+  folder_name_ui: Vehicle
+  created_at: '2025-11-11 21:12:40.091344'
+  updated_at: '2025-12-18 17:04:19.648859'
+  last_sync: '2026-01-30T18:21:05.342777Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/61982
+metadata:
+  name: Verify the Health report card is not displayed under the Vehicle profile screen
+  priority: 3
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  steps:
+  - column_name: custom_steps
+    id: 95428
+    case_id: 61982
+    text1: <p>Launch Demo mode &gt; Select LEAF Demo &gt; Tap on <strong>Vehicle</strong>
+      nav button &gt; Tap on <code>Vehicle Profile</code> cta</p>
+    text2: null
+    text3: <p>Verify <code>Vehicle Health Report</code> card is not shown under <strong>Vehicle
+      Profile</strong> screen.</p>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 95429
+    case_id: 61982
+    text1: <p>Launch Demo mode &gt; Select Rogue Platinum Demo &gt; Tap on <strong>Vehicle</strong>
+      nav button &gt; Tap on <code>Vehicle Profile</code> cta</p>
+    text2: null
+    text3: <p>Verify <code>Vehicle Health Report</code> card is not shown under <strong>Vehicle
+      Profile</strong> screen.</p>
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 95430
+    case_id: 61982
+    text1: <p>Launch Demo mode &gt; Select Rogue SV Demo &gt; Tap on <strong>Vehicle</strong>
+      nav button &gt; Tap on <code>Vehicle Profile</code> cta</p>
+    text2: null
+    text3: <p>Verify <code>Vehicle Health Report</code> card is not shown under <strong>Vehicle
+      Profile</strong> screen</p>
+    text4: null
+    display_order: 3

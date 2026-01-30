@@ -1,0 +1,57 @@
+testmo:
+  case_id: 62143
+  folder_id: 6797
+  project_id: 2
+  folder_path: vehicle/schedule-service/delete
+  folder_name_ui: Delete
+  created_at: '2025-12-11 22:22:18.073151'
+  updated_at: '2026-01-20 21:19:40.185318'
+  last_sync: '2026-01-30T18:21:04.752008Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/62143
+metadata:
+  name: Delete Service Request - Failure
+  priority: 1
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>User has one or more booked service appointments</li><li>User
+    is on <code>Upcoming Appointment</code> screen (direct or during edit flow)</li><li><code>CancelServiceAppointment</code>
+    mutation fails due to network or server error</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 96355
+    case_id: 62143
+    text1: <p>Tap <code>DELETE SERVICE REQUEST</code> button from <code>Upcoming Appointment</code>
+      screen (direct or during edit flow)</p>
+    text2: null
+    text3: '<ul><li>Confirmation modal appears with title: <code>Delete Service Request?</code></li><li>Modal
+      message: <code>Are you sure you want to delete your service request? You will
+      have to start over if you want to schedule another service.</code></li><li><strong>No,
+      continue</strong> button is displayed</li><li><strong>Yes, delete</strong> button
+      is displayed</li></ul>'
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 96356
+    case_id: 62143
+    text1: <p>On confirmation modal, tap <strong>Yes, delete</strong> button (when
+      <code>CancelServiceAppointment</code> mutation fails)</p>
+    text2: null
+    text3: '<ul><li>Error modal appears with title: <code>Failed to Delete Service
+      Request</code></li><li>Error message: <code>Sorry, something went wrong deleting
+      your service request. Please try again.</code></li><li><code>Ok</code> button
+      is displayed</li></ul>'
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 96357
+    case_id: 62143
+    text1: <p>Tap <code>Ok</code> button on error modal</p>
+    text2: null
+    text3: '<ul><li>Modal is dismissed</li><li>User remains on <code>Upcoming Appointment</code>
+      screen</li><li>Appointment is NOT deleted</li><li>If in edit flow: unsaved changes
+      remain intact</li></ul>'
+    text4: null
+    display_order: 3

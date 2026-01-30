@@ -1,0 +1,63 @@
+testmo:
+  case_id: 61749
+  folder_id: 6735
+  project_id: 6
+  folder_path: home-page/cards/credit/tradicional-closed
+  folder_name_ui: Tradicional - Closed
+  created_at: '2025-10-14 15:11:46.665160'
+  updated_at: '2025-10-14 22:29:23.701869'
+  last_sync: '2026-01-30T18:20:44.965291Z'
+  url: https://bethinklabs.testmo.net/repositories/6/cases/61749
+metadata:
+  name: View Closed Credit Screen and Disclaimer
+  priority: 1
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <ul><li>User is authenticated</li><li>A VIN is selected with <code>creditStatus
+    = closed</code> and <code>creditType = credit</code></li><li>App built with NMEX/Selectiviti
+    feature enabled</li></ul>
+  steps:
+  - column_name: custom_steps
+    id: 94422
+    case_id: 61749
+    text1: <ol><li>Launch the app</li><li>Select the relevant VIN</li><li>Tap on the
+      Credits card</li><li>Wait for Closed Credit screen</li></ol>
+    text2: null
+    text3: <ul><li>Greeting title displays <code>¡Felicidades &lt;NAME&gt;! Has concluido
+      tu arrendamiento</code> (or localized equivalent)</li><li>Subtext will show
+      &gt; <code>Si presentas algún inconveniente comunícate a:</code><ul><li>NIS
+      - <a href="mailto:atencion.cliente@nrfm.com.mx"><code>atencion.cliente@nrfm.com.mx</code></a></li><li>INF
+      - <a href="mailto:membershipexperience@nissan.com.mx"><code>membershipexperience@nissan.com.mx</code></a></li></ul></li><li>The
+      section <code>¿Cómo podemos ayudarte?</code> shows after the previous text</li><li>The
+      last section shows &gt; <code>Puedes consultar los Términos y condiciones en
+      relación a tu crédito</code><ul><li>INF - <a href="https://www.infinitifinance.mx/terminos-y-condiciones/infiniti">https://www.infinitifinance.mx/terminos-y-condiciones/infiniti</a></li><li>NIS
+      - <a href="https://www.nrfm.mx/terminos-y-condiciones">https://www.nrfm.mx/terminos-y-condiciones</a></li></ul></li></ul>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 94441
+    case_id: 61749
+    text1: <ol><li>Launch the app</li><li>Select the relevant VIN</li><li>Tap on the
+      Credits card</li><li>Wait for Closed Credit screen</li><li>Click the option
+      &gt; <code>¿Cómo obtener la factura de mi auto?</code></li></ol>
+    text2: null
+    text3: <ul><li>Greeting title displays <code>Carta finiquito y factura</code></li><li>Subtitle
+      displays <code>Firma de carta y entrega de la factura</code></li><li>Disclaimer
+      text shows:<ul><li><code>Liquida el monto total de tu crédito y espera 10 días
+      hábiles, recibirás un SMS para que acudas a tu distribuidor a recoger tu factura
+      y carta finiquito. El titular del crédito tendrá que presentarse con una identificación
+      oficial vigente.</code></li><li><code>Si no recibes el SMS en 10 días hábiles
+      contacta con Atención a clientes para recibir ayuda.</code></li></ul></li><li>The
+      section <code>¿Cómo podemos ayudarte?</code> shows after the previous text</li></ul>
+    text4: null
+    display_order: 2
+  notes: "<p>Figma Links: NIS Android, INF Android<br />Test Account: <a href=\"mailto:infinitiuser72@yopmail.com\"\
+    >infinitiuser72@yopmail.com</a> | N1iss4n123$<br />GraphQL Credit object example:</p><pre><code\
+    \ class=\"editor-plain language-plain code-block\">{\n  \"credit\": {\n    \"\
+    creditType\": \"credit\",\n    \"creditStatus\": \"closed\",\n    \"supportEmail\"\
+    : \"cacinfiniti@nrfm.com.mx\",\n    \"supportPhoneNumber\": \"+528005463464\"\
+    ,\n    \"termsAndConditions\": \"https://www.infinitifinance.mx/terminos-y-condiciones/infiniti\"\
+    \n  }\n}\n</code></pre>"

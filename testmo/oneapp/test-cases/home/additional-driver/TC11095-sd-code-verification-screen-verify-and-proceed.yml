@@ -1,0 +1,40 @@
+testmo:
+  case_id: 11095
+  folder_id: 411
+  project_id: 2
+  folder_path: home/additional-driver
+  folder_name_ui: Additional Driver
+  created_at: '2023-11-27 11:05:54.751146'
+  updated_at: '2025-08-21 19:21:14.411948'
+  last_sync: '2026-01-30T18:21:07.203997Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/11095
+metadata:
+  name: SD - Code Verification Screen - Verify and Proceed - Success
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User is logged into an account with a pending AD invite</p><p>User
+    is on the Code Verification screen</p><p>In order to receive the OTP code, you
+    will need to have mocked user own number in <code>VehiclesStaticData</code> and
+    <code>UserMobileNumber</code> or setting a breakpoint on <code>GenerateOTPForSharedDriver</code>
+    and modifying the request with your own number</p>
+  steps:
+  - column_name: custom_steps
+    id: 11720
+    case_id: 11095
+    text1: <p>Enter 5 digits (correct code) and tap on Verify and Proceed</p>
+    text2: null
+    text3: '<p>User should see a loading spinner, then redirected to the home screen
+      which updates (<code>VehiclesStaticData,VehicleDynamicData</code>, and all the
+      other API calls should be triggered) and shows a success toast for accepting
+      the invite</p><p>User should not see the AD Invite card unless there are other
+      pending invites</p><p>Note: Vehicle data won''t actually load because all AVK2
+      vehicles require an IVI (in vehicle infotainment) login before data starts flowing</p>'
+    text4: null
+    display_order: 1
+  notes: '<p>Note: Ensure that the phone number you add when you are going through
+    the AD flow is a valid one so you can receive the OTP. (It should show in the
+    DriverInvite API). </p>'

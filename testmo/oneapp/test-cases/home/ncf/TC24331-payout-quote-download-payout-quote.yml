@@ -1,0 +1,47 @@
+testmo:
+  case_id: 24331
+  folder_id: 3084
+  project_id: 2
+  folder_path: home/ncf
+  folder_name_ui: NCF
+  created_at: '2024-10-18 16:27:29.024209'
+  updated_at: '2024-11-30 00:16:30.915169'
+  last_sync: '2026-01-30T18:21:06.721064Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/24331
+metadata:
+  name: Payout Quote - Download Payout Quote
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>Login with an NCF account &gt; <a href="https://www.notion.so/bethinklabs/d0f8f58385a94c51ab27ce3ee1ef1e51?v=caf06428a7ac41aa96541666be242cd7">https://www.notion.so/bethinklabs/d0f8f58385a94c51ab27ce3ee1ef1e51?v=caf06428a7ac41aa96541666be242cd7</a></p>
+  steps:
+  - column_name: custom_steps
+    id: 37902
+    case_id: 24331
+    text1: <p>The users <code>customerType</code> is <code>PRIMARY</code> </p><ol><li>Login
+      into the app</li><li>In the Home page screen</li><li>Click over <strong>NCF
+      Account</strong> card</li><li>Open the <strong>NCF Account</strong> screen</li><li>Click
+      the option <strong>Get Payout</strong></li><li>Then taps on <strong>Download
+      Payout Quote</strong></li></ol>
+    text2: null
+    text3: '<p>The name and address of the Payout Letter PDF should match the <code>buyerType:
+      PRIMARY</code> in the <code>customers</code> array of <code>getAccountDetails</code></p>'
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 37903
+    case_id: 24331
+    text1: <p>The users <code>customerType</code> is <code>CO_SIGNER</code> </p><ol><li>Login
+      into the app</li><li>In the Home page screen</li><li>Click over <strong>NCF
+      Account</strong> card</li><li>Open the <strong>NCF Account</strong> screen</li><li>Click
+      the option <strong>Get Payout</strong></li><li>Then taps on <strong>Download
+      Payout Quote</strong></li></ol>
+    text2: null
+    text3: '<p>The name and address of the Payout Letter PDF should match the <code>buyerType:
+      CO_SIGNER</code> in the <code>customers</code> array of <code>getAccountDetails</code></p>'
+    text4: null
+    display_order: 2
+  notes: <p>Templates attached to the test case</p>

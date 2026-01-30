@@ -1,0 +1,60 @@
+testmo:
+  case_id: 62242
+  folder_id: 6821
+  project_id: 2
+  folder_path: vehicle/second-delivery/second-delivery-manage-appointment
+  folder_name_ui: Second Delivery - Manage Appointment
+  created_at: '2025-12-19 23:32:52.767428'
+  updated_at: '2026-01-06 18:52:39.690786'
+  last_sync: '2026-01-30T18:21:03.701504Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/62242
+metadata:
+  name: Second Delivery - Edit Appointment - Failure and Retry
+  priority: 1
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  steps:
+  - column_name: custom_steps
+    id: 97163
+    case_id: 62242
+    text1: "<p>Mock the <code>UpdateSecondDeliveryAppointment</code> mutation to return\
+      \ failure:</p><pre><code class=\"editor-plain language-plain code-block\">{\n\
+      \  \"data\": {\n    \"updateSecondDeliveryAppointment\": {\n      \"__typename\"\
+      : \"UpdateSecondDeliveryAppointmentUnknownErrorResponse\",\n      \"message\"\
+      : \"Failed to update appointment. Please try again later.\"\n    }\n  }\n}</code></pre><p>Tap\
+      \ <code>Save Changes</code> button</p>"
+    text2: null
+    text3: '<ul><li><code>UpdateSecondDeliveryAppointment</code> mutation is triggered</li><li>Error
+      modal is displayed on <code>Review</code> screen</li><li>Modal title: <code>Failed
+      to Book Appointment</code></li><li>Modal message: <code>Sorry, something went
+      wrong when booking your appointment. You can retry or call 1-844-471-1010 to
+      book over the phone.</code></li><li><code>Cancel</code> button is displayed</li><li><code>Retry</code>
+      button is displayed</li><li>Background is dimmed/overlayed</li><li>User remains
+      on <code>Review</code> screen</li></ul>'
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 97164
+    case_id: 62242
+    text1: <p>Tap <code>Retry</code> button</p>
+    text2: null
+    text3: '<ul><li><code>UpdateSecondDeliveryAppointment</code> mutation is triggered
+      again</li><li>If success: User is redirected to <code>Appointment Scheduled</code>
+      screen</li><li>If failure: Error modal is displayed again</li></ul>'
+    text4: null
+    display_order: 2
+  - column_name: custom_steps
+    id: 97165
+    case_id: 62242
+    text1: <p>Tap <code>Cancel</code> button (if error modal appears again)</p>
+    text2: null
+    text3: <ul><li>Modal is dismissed</li><li>User remains on <code>Review</code>
+      screen</li><li>All modified appointment data is preserved:<ul><li>Updated date
+      and time</li><li>Updated contact information</li><li>Updated special instructions</li></ul></li><li><code>Save
+      Changes</code> button remains enabled</li><li>User can attempt to save again
+      or navigate back</li></ul>
+    text4: null
+    display_order: 3

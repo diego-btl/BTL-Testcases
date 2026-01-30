@@ -1,0 +1,27 @@
+testmo:
+  case_id: 29851
+  folder_id: 3775
+  project_id: 2
+  folder_path: login-flow/browser-login
+  folder_name_ui: Browser Login
+  created_at: '2025-01-07 14:29:00.994845'
+  updated_at: '2025-01-07 20:36:40.083310'
+  last_sync: '2026-01-30T18:21:06.580253Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/29851
+metadata:
+  name: Feature flag enabled
+  priority: 1
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  steps:
+  - column_name: custom_steps
+    id: 48725
+    case_id: 29851
+    text1: <p>Go to Firebase Remote Config on Proxyman</p>
+    text2: null
+    text3: '<p>Verify "EnableBrowserLogin": "true".</p>'
+    text4: null
+    display_order: 1

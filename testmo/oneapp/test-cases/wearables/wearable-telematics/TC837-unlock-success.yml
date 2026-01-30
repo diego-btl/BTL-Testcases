@@ -1,0 +1,40 @@
+testmo:
+  case_id: 837
+  folder_id: 76
+  project_id: 2
+  folder_path: wearables/wearable-telematics
+  folder_name_ui: Wearable - Telematics
+  created_at: '2023-08-01 23:08:23.311321'
+  updated_at: '2025-09-19 21:22:28.968870'
+  last_sync: '2026-01-30T18:21:08.618433Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/837
+metadata:
+  name: Unlock - Success
+  priority: 12
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: <p>User has a vehicle that supports lock/unlock and is on the telematics
+    screen</p>
+  steps:
+  - column_name: custom_steps
+    id: 1006
+    case_id: 837
+    text1: <ol><li>Tap the Unlock button</li><li>Tap Yes</li></ol>
+    text2: null
+    text3: <ol><li>User should see a confirmation modal</li><li>Unlock command should
+      be sent and user should see modal dismiss itself.</li><li>User should see status
+      updates as the call is being made.</li><li>User should see the final lock status
+      when the call complete successfully</li></ol>
+    text4: null
+    display_order: 1
+  - column_name: custom_steps
+    id: 1158
+    case_id: 837
+    text1: <ol><li>Tap the Unlock button</li><li>Tap No</li></ol>
+    text2: null
+    text3: <p>The modal should be dismissed and command should not be sent</p>
+    text4: null
+    display_order: 2

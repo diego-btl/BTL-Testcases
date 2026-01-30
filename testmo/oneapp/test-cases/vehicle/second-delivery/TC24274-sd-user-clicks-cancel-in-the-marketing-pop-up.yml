@@ -1,0 +1,33 @@
+testmo:
+  case_id: 24274
+  folder_id: 1453
+  project_id: 2
+  folder_path: vehicle/second-delivery
+  folder_name_ui: Second Delivery
+  created_at: '2024-10-17 18:59:31.682770'
+  updated_at: '2024-10-18 14:32:45.768228'
+  last_sync: '2026-01-30T18:21:06.875879Z'
+  url: https://bethinklabs.testmo.net/repositories/2/cases/24274
+metadata:
+  name: SD - User clicks "Cancel" in the "Marketing Pop-up"
+  priority: 2
+  type: functional
+  status: active
+  automation: 'no'
+  tags: []
+test_case:
+  preconditions: '<p>Vehicle is eligible within the valid period from purchase &amp;
+    have a unverified user(QX80 - 9/QX80 10) and <code>"prioritized": true</code></p><p>In
+    the Firebase config &gt; <code>"EnableSecondDelivery": "true"</code></p>'
+  steps:
+  - column_name: custom_steps
+    id: 37842
+    case_id: 24274
+    text1: <ol><li>Login in the app</li><li>Go to the Vehicle screen</li><li>Click
+      <strong>"Cancel"</strong></li></ol>
+    text2: null
+    text3: <p>The apps should should dismiss the marketing pop-up and snooze it before
+      the 8 day </p>
+    text4: null
+    display_order: 1
+  notes: '<ul><li>Account: natemie@btl.ca/Telematics123!</li></ul>'
